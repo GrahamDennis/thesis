@@ -1,0 +1,190 @@
+%! program = pdflatex
+
+\documentclass[twoside,onecolumn,11pt,a4paper,final]{book}
+%\usepackage{cite} % sort multiple citations alphanumerically
+\usepackage[numbers,sort&compress]{natbib}
+%\usepackage{natbib}
+%\bibliographystyle{unsrt} 
+%\bibliographystyle{agsm}
+%\bibliographystyle{unsrtnat}
+\bibliographystyle{apsrev}
+
+%\usepackage[utf8x]{inputenc} % Any characters can be typed directly from the keyboard, eg éçñ
+%\usepackage[russian,australian]{babel}
+%\usepackage[russian]{babel}
+\usepackage{anuthesis}
+%\usepackage{fancyhdr}
+%\usepackage{epstopdf} % to include .eps graphics files with pdfLaTeX
+%\usepackage[T1,OT2,OT1]{fontenc}
+
+%\usepackage{courier}
+
+\usepackage[dvipsnames,usenames]{xcolor}
+\usepackage[final]{graphicx}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{amsfonts}
+
+%\usepackage{flafter}  % Don't place floats before their definition
+%\usepackage{unicode}
+
+\usepackage{textcomp} % provide lots of new symbols
+\usepackage{bm}  % Define \bm{} to use bold math fonts
+%\usepackage{setspace} % Useful for doublespacing for drafts
+\usepackage{relsize}
+
+%\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
+% \usepackage[activate]{pdfcprot}  % Turn on margin kerning (not in gwTeX)
+\usepackage{pdfsync}
+
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{units}
+
+%%% SECTION TITLE APPEARANCE
+%\usepackage{sectsty}
+%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+%\usepackage[titles]{tocloft} % Alter the style of the Table of Contents
+%\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+%\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+
+%\usepackage[draft]{showkeys} % show references in draft format
+\usepackage{ifthen}
+
+
+\usepackage{subfigure} % make it possible to include more than one captioned figure/table in a single float
+
+%\usepackage{notoccite}
+\usepackage{url}
+\usepackage[pdftex,bookmarks,colorlinks,breaklinks,pdfauthor=Graham Russell Dennis,pdftitle=Thesis blobs,final]{hyperref}  % PDF hyperlinks, with coloured links
+\definecolor{dullmagenta}{rgb}{0.4,0,0.4}   % #  660066
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
+%\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
+\usepackage{hypernat}
+% \usepackage{fancybox}
+% \fancyput(1cm ,1 cm)
+%   {\Huge\bfseries
+%       \textcolor{lightgray}{DRAFT\hspace{2cm}\today}
+%   }
+
+\usepackage{typedref}
+
+
+\renewcommand{\bottomfraction}{0.7}  
+
+\newcommand{\pdiff}[3][]{\ensuremath{\frac{\partial^{#1}{#2}}{\partial{#3}^{#1}}}}
+\newcommand{\diff}[3][]{\ensuremath{\frac{d^{#1}{#2}}{d{#3}^{#1}}}}
+
+\newcommand{\divg}{\ensuremath{\nabla\cdot}}
+\newcommand{\curl}{\ensuremath{\nabla\times}}
+\newcommand{\grad}{\ensuremath{\nabla}}
+
+\newcommand{\unitvec}[1]{\ensuremath{\hat{\vec{e}}_{#1}}}
+
+\newcommand{\ket}[1]{\ensuremath{\left|#1\right>}}
+\newcommand{\mean}[1]{\ensuremath{\big<#1\big>}}
+\newcommand{\bra}[1]{\ensuremath{\left<#1\right|}}
+\newcommand{\braket}[2]{\ensuremath{\left<#1|#2\right>}}
+\newcommand{\ketbra}[2]{\ensuremath{\left|#1\right>\!\!\left<#2\right|}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+\newcommand{\comm}[1]{\ensuremath{\big[#1\big]}}
+
+\DeclareMathOperator{\Tr}{Tr}
+
+\newcommand\relphantom[1]{\mathrel{\phantom{#1}}}
+
+\renewcommand\vec[1]{\ensuremath{\mathbf{#1}}}
+
+\newcommand{\nucl}[3]{
+ \ensuremath{
+ \phantom{\ensuremath{^{#1}_{#2}}}
+ \llap{\ensuremath{^{#1}}}
+ \llap{\ensuremath{_{\rule{0pt}{.75em}#2}}}
+ \mbox{#3}
+ }
+ }
+
+%\allowdisplaybreaks[1]
+
+%\newcommand\url[1]{\texttt{#1}}
+
+%\includeonly{derivation}
+
+%\includeonly{introduction}
+
+\begin{document}
+
+\pagenumbering{roman}  % first use Roman numerals for page numbers
+
+\begin{titlepage}
+\title{\textbf{\relsize{2}Untitled Thesis \#1}\\[2cm]
+        or: \emph{\relsize{2}Random Things I Did During My PhD at ANU.}}
+ \author{\textbf{Graham Russell Dennis}\\[6cm]
+ \includegraphics{ANU_PMS}\\[2cm]
+  \textbf{A thesis submitted for the degree of}\\
+  \textbf{Doctor of Philosophy} \\
+  \textbf{at The Australian National University}\\[1cm]}
+%  \date{\today}
+\maketitle
+ \end{titlepage}
+ 
+ \sloppy
+ 
+\chapter*{Declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+
+%This thesis is an account of research undertaken under the supervision of Dr.\ Matthew Hole between February 2005 and November 2005 at The Department of Theoretical Physics, Research School of Physical Sciences and Engineering, The Australian National University, Canberra, Australia.
+
+Except where acknowledged in the customary manner, the material 
+presented in this thesis is, to the best of my knowledge, original and 
+has not been submitted in whole or part for a degree in any 
+university.
+
+\vspace{20mm}  % vertical space
+
+\hspace{80mm}\rule{40mm}{.15mm}\par   % horizontal space, line, start new line
+\hspace{80mm} Graham Russell Dennis\par
+%\hspace{80mm} November 2005
+
+
+% include statements effectively insert the contents of the named file.
+% They are not necessary, but are useful for organising your work.
+% They always start a  new page.
+
+%\include{thanks}  % include the contents of the file thanks.tex
+
+%\include{abstract}  % include the file abstract.tex
+
+\tableofcontents
+%\listoffigures % makes a list of figures
+%\listoftables  % uncomment this if you have tables
+\cleardoublepage
+
+\pagenumbering{arabic} % switch to Arabic numerals for page numbers
+\setcounter{page}{1}  % set page number to 1
+
+%\include{introduction}
+
+%\include{LiteratureReview}
+
+\include{Peaks}
+
+
+%\include{Conclusion}
+%\appendix
+
+\bibliography{thesis}
+
+
+\end{document}

@@ -1,0 +1,61 @@
+\begin{thebibliography}{5}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Dall et~al.}(2009)\citenamefont{Dall, Byron, Truscott,
+  Dennis, Johnsson, and Hope}}]{Dall:2009}
+\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
+  \bibinfo{author}{\bibfnamefont{L.~J.} \bibnamefont{Byron}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
+  \bibinfo{pages}{011601(R)} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Bogoliubov}(1947)}]{Bogoliubov:1947}
+\bibinfo{author}{\bibfnamefont{N.~N.} \bibnamefont{Bogoliubov}},
+  \bibinfo{journal}{J. Phys. (Moscow)} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{23} (\bibinfo{year}{1947}).
+
+\bibitem[{\citenamefont{Fetter and Walecka}(1971)}]{FetterWalecka}
+\bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Fetter}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Walecka}},
+  \emph{\bibinfo{title}{{Quantum Theory of Many-Particle Systems}}}
+  (\bibinfo{publisher}{McGraw-Hill}, \bibinfo{address}{New York},
+  \bibinfo{year}{1971}).
+
+\bibitem[{\citenamefont{Stamper-Kurn et~al.}(1999)\citenamefont{Stamper-Kurn,
+  Chikkatur, G\"orlitz, Inouye, Gupta, Pritchard, and
+  Ketterle}}]{Stamper-Kurn:1999}
+\bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Stamper-Kurn}},
+  \bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Chikkatur}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{G\"orlitz}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Inouye}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Gupta}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{2876} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Zambelli et~al.}(2000)\citenamefont{Zambelli,
+  Pitaevskii, Stamper-Kurn, and Stringari}}]{Zambelli:2000}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Zambelli}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Pitaevskii}},
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Stamper-Kurn}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
+  \bibinfo{pages}{063608} (\bibinfo{year}{2000}).
+
+\end{thebibliography}

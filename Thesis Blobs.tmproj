@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Peaks.tex</string>
+	<string>anuthesis.sty</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
+			<string>anuthesis.sty</string>
+			<key>lastUsed</key>
+			<date>2009-02-16T00:46:08Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-02-06T03:19:14Z</date>
+			<date>2009-02-16T00:46:08Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-02-08T05:02:12Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-02-16T00:45:32Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -30,49 +36,64 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>97</integer>
 				<key>line</key>
-				<integer>123</integer>
+				<integer>150</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>171</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>105</integer>
+			<integer>151</integer>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>77</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>97</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>anuthesis.sty</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>64</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>34</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>74</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>44</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>77</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>64</integer>
 			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
+		<string>anuthesis.sty</string>
 		<string>Peaks.tex</string>
 	</array>
 	<key>shellVariables</key>
@@ -87,8 +108,8 @@
 		</dict>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<false/>
+	<true/>
 	<key>windowFrame</key>
-	<string>{{786, 35}, {800, 856}}</string>
+	<string>{{95, 65}, {800, 856}}</string>
 </dict>
 </plist>

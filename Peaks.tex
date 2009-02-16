@@ -59,7 +59,7 @@ We take as our system the two interacting states $m_F=1, 0$ neglecting the antit
     \hat{K} &\equiv \hat{H} - \sum_i \mu_i \hat{N}_i\\
             &= \sum_i \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu_i\right)\hat{\Psi}_i + \frac{1}{2} \sum_{i j} U_{i j}\int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j \hat{\Psi}_i,
 \end{align}
-where $\hat{H}$ is the usual Hamiltonian operator, $\hat{N}_i= \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_i$ is the number operator, $\mu_i$ is the chemical potential for the $m_F=i$ state, $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$.
+where $\hat{H}$ is the usual Hamiltonian operator, $\hat{N}_i= \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_i$ is the number operator, $\mu_i$ is the chemical potential for the $m_F=i$ state, $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$. In this Hamiltonian, the Rabi coupling between the $m_F$ levels has been neglected as it will be a perturbation to the system driving the temporal dynamics. Instead the aim here is to investigate the fundamental excitation modes of the system which the Rabi coupling will excite.
 
 The Bogoliubov approximation separates the highly-occupied zero-momentum groundstate mode from the fluctuations about that mode by defining deviation operators $\delta\hat{\Psi}_i = \hat{\Psi}_i - \mean{\hat{\Psi}_i}$ and then treating $\delta\hat{\Psi}_i$ as a small quantity. These fluctuation operators obey the boson commutation relations $\comm{\delta\hat{\Psi}_i(\mathbf{x}), \delta \hat{\Psi}_j^\dagger(\mathbf{x}')} = \delta_{i j} \delta(\mathbf{x}-\mathbf{x}')$. To simplify notation the expectation value of the atomic field will be written as $\mean{\hat{\Psi}_i} = \Psi_i$ where $\Psi_i$ can be taken to be real due to the phase symmetry of the grand canonical Hamiltonian $\hat{K}$.
 
@@ -129,17 +129,17 @@ where $\displaystyle\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}$ i
     E_+(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left[\varepsilon(\mathbf{k}) + 2 U (n_1 + n_0) \right]} \label{Peaks:EPlusSimple}\\
     E_-(\mathbf{k}) &= \varepsilon(\mathbf{k}), \label{Peaks:EMinusSimple}
 \end{align}
-where $E_+(\mathbf{k})$ is the usual Bogoliubov quasiparticle spectrum \citep{Bogoliubov:1947} with total density $n = n_1 + n_0$. The quasiparticle energy spectrum $E_-(\mathbf{k})$ is the same as that for a free particle; this energy eigenvalue corresponds to an excitation that does not change the total density $n$ and hence does not affect the nonlinear interaction energy. In the more general case where $\kappa \neq 1$, $E_+(\mathbf{k})$ should be interpreted as a maximal excitation of the total density while $E_-(\mathbf{k})$ should be interpreted as a minimal excitation.
+where $E_+(\mathbf{k})$ is the usual Bogoliubov quasiparticle spectrum \citep{Bogoliubov:1947} with total density $n = n_1 + n_0$. The quasiparticle energy spectrum $E_-(\mathbf{k})$ is the same as that for a free particle; this energy eigenvalue corresponds to an excitation that does not change the total density $n$ and hence does not affect the nonlinear interaction energy. In the more general case where $\kappa \neq 1$, $E_+(\mathbf{k})$ should be interpreted as a maximal excitation of the interaction energy while $E_-(\mathbf{k})$ should be interpreted as a minimal excitation.
 
-A plot of $E_\pm(\mathbf{k})$ is shown in \figureref{Peaks:QuasiparticleSpectrum} for the case of equal densities in the $m_F=1, 0$ states and all other parameters corresponding those for the Thomas-Fermi groundstate of the metastable Helium condensate (see \tableref{Peaks:ExperimentalParameters}). \figureref{Peaks:QuasiparticleSpectrum} demonstrates that this system contains quasiparticle excitations requiring negligible energy, but having finite momenta. The wavenumber corresponding to this resonance is
+A plot of $E_\pm(\mathbf{k})$ is shown in \figureref{Peaks:QuasiparticleSpectrum} for the case of equal densities in the $m_F=1, 0$ states and all other parameters corresponding those for the Thomas-Fermi groundstate of the metastable Helium condensate (see \tableref{Peaks:ExperimentalParameters}). An interesting feature of this plot is that it demonstrates that this system contains quasiparticle excitations ($E_-$) that require negligible energy, but have \emph{non-zero} momenta. The wavenumber corresponding to this resonance is
 \begin{align}
-    \abs{\mathbf{k}_\text{res}} &= \frac{1}{\hbar} \sqrt{2 M U \left[\sqrt{n_1^2 + 2(2 - \kappa)n_1 n_0 + \kappa^2 n_0^2} - (n_1 + \kappa n_0)\right]}. \label{Peaks:ResonantMomentum}
+    \abs{\mathbf{k}_\text{res}} &= \frac{1}{\hbar} \sqrt{2 M U \left[\sqrt{n_1^2 + 2(2 - \kappa)n_1 n_0 + \kappa^2 n_0^2} - (n_1 + \kappa n_0)\right]}. \label{Peaks:BogResonantWavenumber}
 \end{align}
-A contour plot of $\abs{\mathbf{k}_\text{res}}$ as a function of $\kappa$ and $\eta = n_1/(n_1 + n_0)$, the fraction of the total density in the $m_F=1$ state is given in \figureref{Peaks:ResonantMomentum}.
+\figureref{Peaks:ResonantMomentum} is a contour plot of $\abs{\mathbf{k}_\text{res}}/\tilde{k}$ as a function of $\kappa$ and $\displaystyle\eta = \frac{n_1}{n_1 + n_0}$, the fraction of the total density in the $m_F=1$ state, where the normalisation constant $\displaystyle\tilde{k}=  \frac{1}{\hbar}\sqrt{MU(n_1 + n_0)}$.
 
-\figureref{Peaks:QuasiparticleSpectrum,Peaks:ResonantMomentum} indicate that the $E_-$ excitations have the correct properties to cause the peaks in the experimental results in \figureref{Peaks:ExperimentalResults}(b). These excitations can be spontaneously formed with negligible energy, but to have significant momentum there must be significant density in the $m_F=0$ state, which requires high outcoupling Rabi-frequencies as indicated by the difference between \figureref{Peaks:ExperimentalResults}(a) and \figureref{Peaks:ExperimentalResults}(b) where the Rabi frequency was increased by an order of magnitude. This effect strongly depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as illustrated in \figureref{Peaks:ResonantMomentum}. For BECs using alkali atoms, $\kappa \approx 1$ preventing the effect from being observed as the resonant momentum would correspond to a wavelength larger than the Thomas-Fermi radius.
+\figureref{Peaks:QuasiparticleSpectrum,Peaks:ResonantMomentum} indicate that the $E_-$ quasiparticles have the correct properties to cause the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). Not only can these excitations be formed with negligible energy but non-zero momentum, but for this momentum to be large enough to have a corresponding wavelength smaller than either of the Thomas-Fermi radii, there must be significant density in the $m_F=0$ state. In the case of weak outcoupling Rabi frequencies as in \figureref{Peaks:ExperimentalResults}(a), the $m_F=0$ state will be negligibly occupied preventing the formation of these quasiparticles, hence causing no additional structure to be observed experimentally. For strong outcoupling as in \figureref{Peaks:ExperimentalResults}(b), the density will Rabi-flop between the $m_F=1$ and $m_F=0$ states causing there to be at various times significant density in the $m_F=0$ state that will enable the formation of high-momentum $E_-$ quasiparticles.  However, the largest possible momentum of these quasiparticles corresponds to a wavelength of the order of the Thomas-Fermi radius in the tight trapping dimension, but much smaller than the Thomas-Fermi radius in the weak-trapping dimension. Hence these quasiparticles can only be formed along the weak trapping dimension, eventually giving rise to the observed peaks. This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as illustrated in \figureref{Peaks:ResonantMomentum}. For BECs using alkali atoms, $\kappa \approx 1$ preventing the effect from being observed as the resonant momentum would correspond to a wavelength larger than the Thomas-Fermi radius.
 
-Although the spontaneous formation of quasiparticles with momentum $\hbar \mathbf{k}_\text{res}$ would conserve energy, it would not conserve momentum. Instead the energy-momentum resonance must be the spontaneous formation of \emph{two} quasiparticles with momentum $\pm \hbar \mathbf{k}_\text{res}$. Such processes are known to give rise to EPR entanglement between the excitations. This may lead to entanglement between atoms on opposing points of the cones in \figureref{Peaks:Schematic}, but due to the output dynamics and the vertical integration of the detection scheme, this would be difficult to measure. However, number difference squeezing between the opposing peaks should be far more robust.
+Although the spontaneous formation of quasiparticles with momentum $\hbar \mathbf{k}_\text{res}$ would conserve energy, it would not conserve momentum. Instead the energy-momentum resonance must be the spontaneous formation of \emph{two} quasiparticles with momentum $\pm \hbar \mathbf{k}_\text{res}$ such as by a four-wave mixing process. Such processes are known to give rise to EPR entanglement between the excitations. This may lead to entanglement between atoms on opposing points of the cones in \figureref{Peaks:Schematic}, but due to the output dynamics and the vertical integration of the detection scheme, this would be difficult to measure. However, number difference squeezing between the opposing peaks should be far more robust.
 
 \figureref{Peaks:QuasiparticleSpectrum} suggests that for $\abs{\mathbf{k}} < \abs{\mathbf{k}_\text{res}}$, $E_-(\mathbf{k})$ becomes imaginary, which is physically impossible as all energy eigenvalues are real. This energy `eigenvalue' becoming imaginary corresponds to a failing of the ansatz that the grand canonical Hamiltonian \eqref{Peaks:QuadraticKKSpace} can be diagonalised into the form \eqref{Peaks:DesiredQuadraticForm} where the operators $\hat{\Phi}_\pm^{(\dagger)}$ obey boson commutation relations. The grand canonical Hamiltonian can however be written in the form
 \begin{align}
@@ -148,11 +148,13 @@ Although the spontaneous formation of quasiparticles with momentum $\hbar \mathb
         & + \int_{\abs{\mathbf{k}}>\abs{\mathbf{k}_\text{res}}} d\mathbf{k}\, \left( E_+(\mathbf{k}) \hat{\Phi}_+^\dagger(\mathbf{k})\hat{\Phi}_+(\mathbf{k}) + E_-(\mathbf{k}) \hat{\Phi}_-^\dagger(\mathbf{k}) \hat{\Phi}_-(\mathbf{k})\right),
     \end{split}
 \end{align}
-where the $\hat{\Upsilon}_\pm(\mathbf{k})$ do not obey the boson commutation relations, but instead obey $\comm{\hat{\Upsilon}_+(\mathbf{k}), \hat{\Upsilon}_-(\mathbf{k}')} = i \delta(\mathbf{k}-\mathbf{k}')$. If the $E_\Upsilon(\mathbf{k})$ term were diagonalised it would be found that the eigenvalues are continuous and the eigenstates are unnormalisable, hence making it impossible to interpret these excitations as `quasiparticles'.
+where the $\hat{\Upsilon}_\pm(\mathbf{k})$ do not obey the boson commutation relations, but are Hermitian and instead obey $\comm{\hat{\Upsilon}_+(\mathbf{k}), \hat{\Upsilon}_-(\mathbf{k}')} = i \delta(\mathbf{k}-\mathbf{k}')$. If the $E_\Upsilon(\mathbf{k})$ term were diagonalised it would be found that the eigenvalues are continuous and the eigenstates are unnormalisable, hence making it impossible to interpret these excitations as `quasiparticles'.
+
+Verification that the $E_-$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation to be discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the neglect of the vacuum fluctuations which are critical to all spontaneous processes. Before discussing the full quantum field calculation, we will first consider a more simplistic model for the formation of the quasiparticles in order to arrive at a more qualitative understanding of the system.
 
 \begin{figure}[tbp]
     \centering
-        \includegraphics[height=3in]{QuasiparticleSpectrum}
+    \includegraphics[height=3in]{QuasiparticleSpectrum}
     \caption{Quasiparticle excitation spectrum for the metastable Helium experiment in the local density approximation. The condensate densities $n_i$ were taken to be equal, with the total density given by the central density of the Thomas-Fermi groundstate corresponding to the parameters given in \tableref{Peaks:ExperimentalParameters}. }
     \label{Peaks:QuasiparticleSpectrum}
 \end{figure}
@@ -161,15 +163,15 @@ where the $\hat{\Upsilon}_\pm(\mathbf{k})$ do not obey the boson commutation rel
 \begin{figure}[tbp]
     \centering
         \includegraphics[height=3in]{ResonantMomentum}
-    \caption{The resonant momentum $\abs{\mathbf{k}_\text{res}}$ (in arbitrary units) as a function of $\kappa$ and $\eta$ (see main text and \eqref{Peaks:ResonantMomentum}).}
+    \caption{The resonant momentum $\abs{\mathbf{k}_\text{res}}/\tilde{k}$ as a function of $\kappa$, the ratio of scattering lengths $\kappa = a_{11}/a_{00}$; and $\displaystyle \eta = \frac{n_1}{n_1+n_0}$, the fraction of the total density in the $m_F=1$ state (see main text and \eqref{Peaks:BogResonantWavenumber}). The normalisation constant $\displaystyle\tilde{k}=  \frac{1}{\hbar}\sqrt{MU(n_1 + n_0)}$. }
     \label{Peaks:ResonantMomentum}
 \end{figure}
 
 
 
-\section{Mean-field model}
+\section{Analytical mean-field model}
 
-A more qualitative understanding of the process discussed in the previous section can be obtained as follows.
+%A more qualitative understanding of the process discussed in the previous section can be obtained as follows.
 
 \begin{figure}
     \begin{center}
@@ -189,7 +191,7 @@ A more qualitative understanding of the process discussed in the previous sectio
     \end{center}
 \end{figure}
 
-The four-wave mixing process in this experiment occurs when stationary trapped and untrapped atoms collide producing pairs of atoms with oppositely-directed momenta in the weak trapping dimension as shown schematically in \figureref{Peaks:CollisionDiagram}(a). This is different to the usual four-wave mixing process where two atoms with nonzero kinetic energy collide conserving kinetic energy to scatter into different momentum modes. In this experiment two stationary atoms with \emph{zero} initial kinetic energy scatter into modes with \emph{nonzero} momentum. The source of this additional kinetic energy is  a reduction in the mean field interaction energy. As will be shown, in the case of equal scattering lengths the interaction energy either is unchanged by this collision or increases. However, He* has a reduced scattering length for 0--0 collisions as compared to 0--1 and 1--1 collisions, and the interaction energy is \emph{reduced} by the collision.
+The four-wave mixing process in this experiment occurs when stationary trapped and untrapped atoms collide producing superpositions of pairs of atoms with oppositely-directed momenta in the weak trapping dimension. In the terminology of the previous section it is two $E_-$ quasiparticles that are produced. Although superpositions of pairs of atoms will be produced, in this section we will simplify our considerations by only considering one component of this superposition as shown schematically in \figureref{Peaks:CollisionDiagram}(a). The four-wave mixing process producing these atom pairs is different to the usual four-wave mixing process where two atoms with nonzero kinetic energy collide conserving kinetic energy to scatter into different momentum modes. In this experiment two stationary atoms with \emph{zero} initial kinetic energy scatter into modes with \emph{non-zero} momentum. The source of this additional kinetic energy is  a reduction in the mean field interaction energy. As will be shown, in the case of equal scattering lengths the interaction energy either is unchanged by this collision or increases. However, He* has a reduced scattering length for 0--0 collisions as compared to 0--1 and 1--1 collisions, and the interaction energy is \emph{reduced} by the collision.
 
 To see how the interaction energy can be reduced as a result of this collision, consider the simple case of uniform, equal background fields $\Psi$ in the $m_F=1, 0$ internal states in the absence of a trapping potential. The $m_F=-1$ state is neglected as it has negligible density compared to the other states. After the collision, the mean field in each state $\Psi_i'$ is
 \begin{align}
@@ -239,11 +241,16 @@ Generalising this argument to consider different density backgrounds $\Psi_i$ fo
 %    \abs{\mathbf{k}} &= \frac{1}{\hbar} \sqrt{2 M U \abs{\psi'}^2(1-\kappa)}
     \abs{\mathbf{k}_\text{res}} &= \frac{1}{\hbar} \sqrt{2 M U \big(2 \abs{\Psi_1}\abs{\Psi_0} - \abs{\Psi_1}^2 - \kappa \abs{\Psi_0}^2\big)} \label{Peaks:ResonantWavenumber}.
 \end{align}
-The resonant momentum for the gratings in the numerical simulations of $\unit[1.2\times 10^6]{m}^{-1}$ is in excellent agreement with the result given by \eqref{Peaks:ResonantWavenumber} of $\unit[1.3\times 10^6]{m}^{-1}$.
+This is a different expression to that obtained in the previous section \eqref{Peaks:BogResonantWavenumber}, as in this section it has been assumed that there is an equal density in both $m_F=1, 0$ excitations, an assumption not made in the previous section.
 
+% The two expressions are equal when $\abs{\Psi_1}^2 = \kappa \abs{\Psi_0}^2$ corresponding to no disturbance of the total mean field experienced by the $m_F=0$ state
 
+%The resonant momentum for the gratings in the numerical simulations of $\unit[1.2\times 10^6]{m}^{-1}$ is in excellent agreement with the result given by \eqref{Peaks:ResonantWavenumber} of $\unit[1.3\times 10^6]{m}^{-1}$.
 
-\section{Calculating Momentum Flux Density at the Edge of a Simulation Region}
+\section{Full 3D calculation}
+\label{Peaks:3DCalculation}
+
+\subsection{Calculating Momentum Flux Density at the Edge of a Simulation Region}
 When simulating a process the calculation region must include all of the interesting dynamics, however, unless a technique is used for removing 
 
 without infinite calculational resources, a technique is required for 

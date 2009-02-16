@@ -23,30 +23,6 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01] \ProvidesPackage{anuthesis}
 [1996/11/04 v0.1 ANU Thesis Style (SB)]
 %%
-%% Declare options
-%%
-\DeclareOption{cm}{\def\thesisfont{cm}}
-\DeclareOption{lucida}{\def\thesisfont{lucida}}
-\DeclareOption{palatino}{\def\thesisfont{palatino}}
-\DeclareOption{times}{\def\thesisfont{times}}
-%%
-%% Default to computer modern
-%%
-\ExecuteOptions{cm}
-%%
-%% Check for non-default options
-%%
-\ProcessOptions
-%%
-%% Set up things for each of the different font options.
-%%
-\RequirePackage{ifthen}
-%\ifthenelse{\equal{\thesisfont}{cm}}{\DeclareFontShape{T1}{cmss}{bx}{sc}{<->ssub*cmr/m/sc}{}\RequirePackage{latexsym}\def\aboutthesis{Typeset in Computer Modern by \TeX\ and \LaTeXe{}.}}{}
-\ifthenelse{\equal{\thesisfont}{cm}}{\RequirePackage{latexsym}\def\aboutthesis{Typeset in Computer Modern by \TeX\ and \LaTeXe{}.}}{}
-\ifthenelse{\equal{\thesisfont}{lucida}}{\RequirePackage[nolucidascale]{lucbr}\renewcommand{\ttdefault}{hlct}\def\aboutthesis{Typeset in Lucida by \TeX\ and \LaTeXe{}.}}{}
-\ifthenelse{\equal{\thesisfont}{palatino}}{\RequirePackage{palatino}\def\aboutthesis{Typeset in Palatino by \TeX\ and \LaTeXe{}.}}{}
-\ifthenelse{\equal{\thesisfont}{times}}{\RequirePackage{mathptm}\RequirePackage{times}\def\aboutthesis{Typeset in Times by \TeX\ and \LaTeXe{}.}}{}
-%%
 %% Use English (Australian) style dates
 %%
 \def\today{\number\day\space\ifcase\month\or
@@ -57,10 +33,6 @@ July\or August\or September\or October\or November\or December\fi
   April\or May\or June\or July\or August\or September\or October\or
   November\or December\fi \space\number\year}
 %%
-%% This avoids a known clash with chemsym over the use of \S (otherwise
-%% defined as the section symbol).
-%%
-\let\Ss=\S
 %%
 %% Marginpars
 %%
@@ -160,7 +132,7 @@ July\or August\or September\or October\or November\or December\fi
 >\m@ne
 \fi ##1}}{}}\def\sectionmark##1{\markright
 {{\ifnum \c@secnumdepth >\z@
-{\upshape\Ss\thesection} \ \ \fi ##1}}}}
+{\upshape\S\thesection} \ \ \fi ##1}}}}
 \def\@rulehead#1{\hrule height0.425pt \vskip 14pt \Huge \sffamily\mdseries\upshape 
    #1 \vskip 14pt\hrule height0.425pt}
 \def\@makechapterhead#1{ { \parindent 0pt 

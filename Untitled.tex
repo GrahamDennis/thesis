@@ -1,6 +1,7 @@
 %! program = pdflatex
 
 \documentclass[twoside,onecolumn,11pt,a4paper,final]{book}
+\usepackage[activate={true,nocompatibility},final]{microtype}
 %\usepackage{cite} % sort multiple citations alphanumerically
 \usepackage[numbers,sort&compress]{natbib}
 %\usepackage{natbib}
@@ -24,7 +25,9 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\usepackage{amsfonts}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 
 %\usepackage{flafter}  % Don't place floats before their definition
 %\usepackage{unicode}
@@ -62,8 +65,6 @@
 \usepackage{ifthen}
 
 
-\usepackage{subfigure} % make it possible to include more than one captioned figure/table in a single float
-
 %\usepackage{notoccite}
 \usepackage{url}
 \usepackage[pdftex,bookmarks,colorlinks,breaklinks,pdfauthor=Graham Russell Dennis,pdftitle=Thesis blobs,final]{hyperref}  % PDF hyperlinks, with coloured links
@@ -71,7 +72,7 @@
 \definecolor{darkblue}{rgb}{0,0,0.4}
 \hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
 %\hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
-\usepackage{hypernat}
+%\usepackage{hypernat}
 % \usepackage{fancybox}
 % \fancyput(1cm ,1 cm)
 %   {\Huge\bfseries
@@ -95,8 +96,8 @@
 \newcommand{\ket}[1]{\ensuremath{\left|#1\right>}}
 \newcommand{\mean}[1]{\ensuremath{\big<#1\big>}}
 \newcommand{\bra}[1]{\ensuremath{\left<#1\right|}}
-\newcommand{\braket}[2]{\ensuremath{\left<#1|#2\right>}}
-\newcommand{\ketbra}[2]{\ensuremath{\left|#1\right>\!\!\left<#2\right|}}
+\newcommand{\braket}[2]{\ensuremath{\left<#1\middle|#2\right>}}
+\newcommand{\ketbra}[2]{\ensuremath{\left|#1\middle>\!\middle<#2\right|}}
 \newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
 \newcommand{\comm}[1]{\ensuremath{\big[#1\big]}}
 
@@ -117,18 +118,13 @@
 
 %\allowdisplaybreaks[1]
 
-%\newcommand\url[1]{\texttt{#1}}
-
-%\includeonly{derivation}
-
-%\includeonly{introduction}
-
 \begin{document}
 
 \pagenumbering{roman}  % first use Roman numerals for page numbers
 
 \begin{titlepage}
-\title{\textbf{\relsize{2}Untitled Thesis \#1}\\[2cm]
+\graphicspath{{Figures/TitlePage/}}
+\title{\includegraphics[width=10cm]{UntitledTitle}\\
         or: \emph{\relsize{2}Random Things I Did During My PhD at ANU.}}
  \author{\textbf{Graham Russell Dennis}\\[6cm]
  \includegraphics{ANU_PMS}\\[2cm]

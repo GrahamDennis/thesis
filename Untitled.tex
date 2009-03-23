@@ -15,10 +15,6 @@
 %\usepackage[russian]{babel}
 \usepackage{anuthesis}
 %\usepackage{fancyhdr}
-%\usepackage{epstopdf} % to include .eps graphics files with pdfLaTeX
-%\usepackage[T1,OT2,OT1]{fontenc}
-
-%\usepackage{courier}
 
 \usepackage[dvipsnames,usenames]{xcolor}
 \usepackage[final]{graphicx}
@@ -26,7 +22,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
-\usepackage[T1]{fontenc}
+\usepackage[T1,OT2,OT1]{fontenc}
 \usepackage{mathptmx}
 
 %\usepackage{flafter}  % Don't place floats before their definition
@@ -50,8 +46,8 @@
 \usepackage{units}
 
 %%% SECTION TITLE APPEARANCE
-%\usepackage{sectsty}
-%\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
 % (This matches ConTeXt defaults)
 
 %%% ToC APPEARANCE
@@ -80,7 +76,7 @@
 %   }
 
 \usepackage{typedref}
-
+%\refname{section}{}{S}
 
 \renewcommand{\bottomfraction}{0.7}  
 
@@ -102,6 +98,9 @@
 \newcommand{\comm}[1]{\ensuremath{\big[#1\big]}}
 
 \DeclareMathOperator{\Tr}{Tr}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
 
 \newcommand\relphantom[1]{\mathrel{\phantom{#1}}}
 
@@ -178,7 +177,8 @@ university.
 
 
 %\include{Conclusion}
-%\appendix
+\appendix
+\include{PeaksAppendix}
 
 \bibliography{thesis}
 

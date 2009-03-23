@@ -36,50 +36,30 @@ July\or August\or September\or October\or November\or December\fi
 %%
 %% Marginpars
 %%
-\def\marginlabel#1{\mbox{}\marginpar{\raggedright\hspace{0pt}#1}}
-\reversemarginpar
-\marginparwidth 25mm
+% \def\marginlabel#1{\mbox{}\marginpar{\raggedright\hspace{0pt}#1}}
+% \reversemarginpar
+% \marginparwidth 25mm
 %%
 %% Get section commands right.
 %%
-\renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                                   {\sffamily\mdseries\upshape\Large}}
-\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\sffamily\mdseries\upshape\large}}
-\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                   {\sffamily\mdseries\upshape\normalsize}}
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-                                    {3.25ex \@plus1ex \@minus.2ex}%
-                                    {-1em}%
-                                    {\sffamily\mdseries\upshape\normalsize}}
-\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
-                                       {3.25ex \@plus1ex \@minus .2ex}%
-                                       {-1em}%
-                                    {\sffamily\mdseries\upshape\normalsize}}
 %%
 %% Use Sans in chapter titles in toc
 %%
-\renewcommand*\l@chapter[2]{%
-  \ifnum \c@tocdepth >\m@ne
-    \addpenalty{-\@highpenalty}%
-    \vskip 1.0em \@plus\p@
-    \setlength\@tempdima{1.5em}%
-    \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
-      \leavevmode \bfseries
-      \advance\leftskip\@tempdima
-      \hskip -\leftskip
-      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
-      \penalty\@highpenalty
-    \endgroup
-  \fi}
+% \renewcommand*\l@chapter[2]{%
+%   \ifnum \c@tocdepth >\m@ne
+%     \addpenalty{-\@highpenalty}%
+%     \vskip 1.0em \@plus\p@
+%     \setlength\@tempdima{1.5em}%
+%     \begingroup
+%       \parindent \z@ \rightskip \@pnumwidth
+%       \parfillskip -\@pnumwidth
+%       \leavevmode \bfseries
+%       \advance\leftskip\@tempdima
+%       \hskip -\leftskip
+%       #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+%       \penalty\@highpenalty
+%     \endgroup
+%   \fi}
 %%
 %% Fix page style to do page numbers properly
 %%

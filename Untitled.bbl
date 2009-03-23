@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -57,5 +57,20 @@
   \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
   \bibinfo{pages}{063608} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
+  and \"Ohberg}}]{Leonhardt:2003}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Leonhardt}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kiss}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{{Walls} and Milburn}(1994)}]{WallsMilburn}
+\bibinfo{author}{\bibfnamefont{D.~F.} \bibnamefont{{Walls}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~J.} \bibnamefont{Milburn}},
+  \emph{\bibinfo{title}{{Quantum Optics}}}
+  (\bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{Berlin},
+  \bibinfo{year}{1994}).
 
 \end{thebibliography}

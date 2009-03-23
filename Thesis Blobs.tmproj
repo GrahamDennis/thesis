@@ -3,28 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>anuthesis.sty</string>
+	<string>Peaks.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>anuthesis.sty</string>
 			<key>lastUsed</key>
-			<date>2009-02-16T00:46:08Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-03-03T04:01:33Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>PeaksAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2009-03-03T04:05:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-02-16T00:46:08Z</date>
+			<date>2009-03-03T04:04:18Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-02-16T00:45:32Z</date>
+			<date>2009-03-03T04:05:35Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -36,65 +42,49 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>97</integer>
+				<integer>524</integer>
 				<key>line</key>
-				<integer>150</integer>
+				<integer>148</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>401</integer>
+			<key>firstVisibleLine</key>
+			<integer>140</integer>
+		</dict>
+		<key>PeaksAppendix.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>94</integer>
+				<key>line</key>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>151</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>22</integer>
 				<key>line</key>
-				<integer>97</integer>
+				<integer>180</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>101</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>anuthesis.sty</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>64</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>34</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>44</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>64</integer>
-			</dict>
+			<integer>141</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
-		<string>anuthesis.sty</string>
 		<string>Peaks.tex</string>
+		<string>PeaksAppendix.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -108,8 +98,8 @@
 		</dict>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{95, 65}, {800, 856}}</string>
+	<string>{{97, 19}, {800, 856}}</string>
 </dict>
 </plist>

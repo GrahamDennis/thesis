@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -169,18 +169,6 @@
   \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
   \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
 
-\bibitem[{\citenamefont{Bogoliubov}(1947)}]{Bogoliubov:1947}
-\bibinfo{author}{\bibfnamefont{N.~N.} \bibnamefont{Bogoliubov}},
-  \bibinfo{journal}{J. Phys. (Moscow)} \textbf{\bibinfo{volume}{11}},
-  \bibinfo{pages}{23} (\bibinfo{year}{1947}).
-
-\bibitem[{\citenamefont{Fetter and Walecka}(1971)}]{FetterWalecka}
-\bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Fetter}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Walecka}},
-  \emph{\bibinfo{title}{{Quantum Theory of Many-Particle Systems}}}
-  (\bibinfo{publisher}{McGraw-Hill}, \bibinfo{address}{New York},
-  \bibinfo{year}{1971}).
-
 \bibitem[{\citenamefont{Stamper-Kurn et~al.}(1999)\citenamefont{Stamper-Kurn,
   Chikkatur, G\"orlitz, Inouye, Gupta, Pritchard, and
   Ketterle}}]{Stamper-Kurn:1999}
@@ -204,6 +192,21 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
   \bibinfo{pages}{063608} (\bibinfo{year}{2000}).
 
+\bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
+\bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{81}},
+  \bibinfo{pages}{742} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Robins et~al.}(2001)\citenamefont{Robins, Zhang,
+  Ostrovskaya, and Kivshar}}]{Robins:2001kx}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{E.~A.} \bibnamefont{Ostrovskaya}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Y.~S.}
+  \bibnamefont{Kivshar}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{64}}, \bibinfo{pages}{021601}
+  (\bibinfo{year}{2001}).
+
 \bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
   and \"Ohberg}}]{Leonhardt:2003}
 \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Leonhardt}},
@@ -211,5 +214,10 @@
   \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
   \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Bogoliubov}(1947)}]{Bogoliubov:1947}
+\bibinfo{author}{\bibfnamefont{N.~N.} \bibnamefont{Bogoliubov}},
+  \bibinfo{journal}{J. Phys. (Moscow)} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{23} (\bibinfo{year}{1947}).
 
 \end{thebibliography}

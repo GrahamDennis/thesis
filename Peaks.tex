@@ -46,7 +46,7 @@ These peaks arise from two momentum-correlated cones of particles scattering out
     \toprule
     Parameter & Value\\
     \midrule
-    Condensate number & $N = 5\times 10^6$\\
+    Condensate number & $N = 2\times 10^6$\\
     Radial trapping frequency & $\omega_\rho = 2 \pi \times \unit[1020]{Hz}$\\
     Axial trapping frequency & $\omega_z = 2\pi \times \unit[55]{Hz}$\\
     Outcoupling Rabi frequency & $\Omega = 2\pi \times \unit[3]{kHz}$\\
@@ -59,49 +59,53 @@ These peaks arise from two momentum-correlated cones of particles scattering out
 
 % FIXME: Somewhere in the experimental results we need to state that the momentum of the excitation in the weak trapping dimension is larger than the momentum width in the weak trapping dimension suggesting that something significant is happening along that axis. 
 
-\section{Modulational stability analysis}
+\section{Semianalytic treatment}
 
 %While the argument in the previous section gives a qualitative explanation for the four-wave mixing process observed in He*, it is not entirely satisfying. In this section an approximate analytic expression for the excited modes of the He* system will be obtained and investigated using Bogoliubov stuff.
 
-The observed peaks in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis. The background halo between these peaks and the usual atom laser profile is the result of (at higher detunings resonant momentum will vary across surfaces, during this initial switch-on phase, a range of momenta are excited)\footnote{FIXME: Complete and correct this sentence.}. These effects are due to the differential scattering lengths of the Zeeman levels of He*.
+The observed peaks in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis.
+% The background halo between these peaks and the usual atom laser profile is the result of (at higher detunings resonant momentum will vary across surfaces, during this initial switch-on phase, a range of momenta are excited)\footnote{FIXME: Complete and correct this sentence.}.
+This effect is due to the significantly different scattering lengths between the Zeeman levels of He*. In a later section a full multimode quantum-field calculation will be discussed and its results presented, but it is enlightening to first consider a simplified model in which the energy spectrum (and stability) of small excitations to the condensate can be obtained.
 
-In this section, an approximative analysis will be performed to obtain the energy spectrum of small excitations to the condensate to determine the origin of the dynamical instability leading to the features observed in \figureref{Peaks:ExperimentalResults}. The first approximation to be made is the local density approximation \cite{Stamper-Kurn:1999,Zambelli:2000} in which the condensate is assumed to be homogenous. This approximation will hold if the excitations under consideration have wavelengths much smaller than the Thomas-Fermi radius. The local density approximation will hold for this system as the axial momentum of the features observed in \figureref{Peaks:ExperimentalResults} corresponds to an excitation wavelength of $\sim \unit[5.2]{\micro m}$ significantly smaller than the Thomas-Fermi radius in the axial direction of $z_\text{TF} = \unit[175]{\micro m}$.
+The simplified model to be considered is that of a homogenous spinor condensate consisting of two levels with Rabi oscillations coupling the two levels. The approximation that the condensate is homogenous (known as the local density approximation \cite{Stamper-Kurn:1999,Zambelli:2000}) is justified if the excitations under considerations have wavelengths much smaller than the Thomas-Fermi radius in that dimension. The local density approximation will hold for this system along the axial direction as the axial momentum of the features observed in \figureref{Peaks:ExperimentalResults} corresponds to an excitation wavelength of $\sim \unit[5]{\micro m}$, significantly smaller than the Thomas-Fermi radius in the axial direction of $z_\text{TF} = \unit[175]{\micro m}$. 
 
-The second approximation to be made is to neglect the antitrapped state $m_F=-1$. Any density in this state leaves the condensate very rapidly due to the combined effects of both the mean-field repulsion and the magnetic field gradient. A classical particle in the centre of the condensate under the influence of the same effective potential experienced by the $m_F=-1$ atoms would leave the condensate in $\sim \unit[80]{\micro s}$, significantly shorter than the inverse Rabi frequency of $\sim \unit[300]{\micro s}$.
+The second approximation made in this model is to neglect the antitrapped state $m_F=-1$. Any density in this state leaves the condensate very rapidly due to the combined effects of both the mean-field repulsion and the magnetic field gradient. A classical particle in the centre of the condensate under the influence of the same effective potential experienced by the $m_F=-1$ atoms would leave the condensate in $\sim \unit[80]{\micro s}$, significantly shorter than the inverse Rabi frequency of $\sim \unit[300]{\micro s}$.
 
-With these approximations made, the grand-canonical Hamiltonian $\displaystyle\protect{\hat{K} \equiv \hat{H} - \mu \sum_i \hat{N}_i}$ for this system is,
+With these approximations made, the Hamiltonian for this system is
 \begin{align}
-    \hat{K} &\equiv \hat{H} - \mu \sum_i \hat{N}_i\\
     \begin{split}
-            &= \sum_i \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i + \frac{1}{2} \sum_{i j} U_{i j}\int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j \hat{\Psi}_i\\
-            &\phantom{=} + \hbar \Omega \int d\mathbf{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0 + \hat{\Psi}_0^\dagger \hat{\Psi}_1\right),
+    \hat{H} &= \sum_i \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{} + \frac{1}{2} \sum_{i j} U_{i j}\int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{} \hat{\Psi}_i^{}\\
+            &\phantom{=} + \hbar \Omega \int d\mathbf{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
     \end{split}
 \end{align}
-where $\hat{H}$ is the usual Hamiltonian operator, $\displaystyle\hat{N}_i= \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_i$ is the number operator for the $m_F=i$ state, $\mu$ is the chemical potential, $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$. 
-
-The equations of motion corresponding to this Hamiltonian are,
+where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, and $\Omega$ is the Rabi frequency which is taken to be real. The equations of motion corresponding to this Hamiltonian are
 \begin{align}
     \begin{split}
-    i \hbar \frac{\partial}{\partial t} \hat{\Psi}_1 &= -\frac{\hbar^2 \nabla^2}{2M} \hat{\Psi}_1 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1 + \hat{\Psi}_0^\dagger \hat{\Psi}_0\right) \hat{\Psi}_1 + \hbar \Omega \hat{\Psi}_0 - \mu \hat{\Psi}_1,  \\
-    i \hbar \frac{\partial}{\partial t} \hat{\Psi}_0 &= -\frac{\hbar^2 \nabla^2}{2M} \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1 + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0 \right) \hat{\Psi}_0 + \hbar \Omega \hat{\Psi}_1 - \mu \hat{\Psi_0},
+    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{}\right) \hat{\Psi}_1^{} + \hbar \Omega \hat{\Psi}_0^{},  \\
+    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{} \right) \hat{\Psi}_0^{} + \hbar \Omega \hat{\Psi}_1^{},
     \label{Peaks:OperatorEquationsOfMotion}
     \end{split}
 \end{align}
-where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74 < 1}$\footnote{FIXME: Cite something.}, while for atoms like Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}. 
+where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
 
 \subsection{The dynamical steady-state}
 
-Typically stability analyses are performed about a stationary state \cite{Ho:1998,Robins:2001kx}, usually the ground state of the system. In this case, we wish to perform a stability analysis about the state in which all of the density is initially in the trapped state. Although this state is not stationary, it will be shown that it is periodic. This periodicity will enable a variation of the usual stability analysis to be performed in the next section.
+The excitation spectrum of a condensate can be obtained by approximating each field operator to be the a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion of the fluctuations themselves (see, for example \cite{Ho:1998}\footnote{FIXME: Probably need an earlier and/or better reference here.}). It is the latter approach that will be taken here, but with the difference that the state about which the linearisation procedure will take place is itself time-dependent.
 
-Within the local density approximation we can assume that the mean-field remains homogeneous, it will be only the excitations that have spatial dependence. The equations of motion for the mean-field then reduce to the following ordinary differential equations,
+The state that we wish to consider is that in which the $m_F=1$ level, representing the original trapped BEC, is initially populated while the $m_F=0$ level is initially unpopulated. Due Rabi oscillations this state is not stationary, however it will be shown that its motion is periodic.
+
+The method for diagonalising the evolution equations of the linearised fluctuations to obtain the excitation spectrum is the same method used to determine the stability of fixed points of systems of nonlinear ordinary differential equations. This method relies critically on the fact that it is a \emph{fixed} point about which the equations are linearised. Floquet's Theorem\footnote{FIXME: Cite some random ODE text.} allows the stability of \emph{periodic} solutions to be considered, and it is this theorem that will be used to determine the stability of the mean-field evolution. It now remains to be shown that this mean-field evolution is periodic.
+
+Within the local density approximation we can assume that the mean-field remains homogeneous; only the excitations will have spatial dependence. The equations of motion for the mean-field then reduce to the following ordinary differential equations,
 \begin{align}
     \begin{split}
-        i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0 - \mu \Psi_1,\\
-        i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1 - \mu \Psi_0.
+        i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0,\\
+        i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1.
     \end{split}
     \label{Peaks:MeanFieldEquationsOfMotion}
 \end{align}
-Although solving these equations for $\kappa \neq 1$ is an intractable problem, it can at least be shown that the solutions are periodic. These equations are essentially a modified form of the optical Bloch equations with a nonlinear term. This can seen by defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and considering the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$,
+
+Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are,
 \begin{align}
     \begin{split}
         \frac{d\rho_{10}}{dt} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
@@ -109,134 +113,23 @@ Although solving these equations for $\kappa \neq 1$ is an intractable problem, 
     \end{split}
     \label{Peaks:OpticalBlochEquations}
 \end{align}
-where $g = n U (1-\kappa)/\hbar$. As there is no loss in the system, the state of the system can be described by a point on the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The system is not free to move anywhere on this sphere as the Hamiltonian must be conserved by its motion.  As demonstrated in \figureref{Peaks:BlochSphere} this restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic.
+where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these equations will conserve the energy of the state. Up to an arbitrary constant, this energy is given by
+\begin{align}
+    E &= -\frac{1}{8}\hbar g(1 - w)^2 + 2 \hbar \Omega \Re\{\rho_{10}\}.
+    \label{Peaks:OpticalBlochEnergy}
+\end{align}
+The solutions to \eqref{Peaks:OpticalBlochEquations} are visualised in \figureref{Peaks:BlochSphere}.
+
+As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere.  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by the its motion. As demonstrated in \figureref{Peaks:BlochSphere} this further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. It is this periodicity that will enable a modified perturbation analysis to be performed in the following subsection.
 
 \begin{figure}[hbt]
     \centering
     \includegraphics[width=14cm]{BlochSpheres}
-    \caption{Pictorial \label{Peaks:BlochSphere}}
+    \caption{Bloch sphere representation of the evolution described by \eqref{Peaks:OpticalBlochEquations}. The upper figures (a) and (b) represent the case of the usual optical Bloch equations without any damping ($g/\Omega=0$), the lower figures (c) and (d) illustrate the effect of the nonlinear term in the evolution with $g/\Omega = 8$. The left figures (a) and (c) illustrate the Bloch sphere shaded with colour depending on the energy $E$ [see \eqref{Peaks:OpticalBlochEnergy}]. The system is constrained to move on lines of constant colour. Bands have been removed from these spheres for illustration purposes only. The right figures (b) and (d) are contour plots of the energy $E$ over the surface of the Bloch sphere.
+     \label{Peaks:BlochSphere}}
 \end{figure}
 
-
-The Bogoliubov approximation separates the highly-occupied zero-momentum groundstate mode from the fluctuations about that mode by defining deviation operators $\delta\hat{\Psi}_i = \hat{\Psi}_i - \mean{\hat{\Psi}_i}$ and then treating $\delta\hat{\Psi}_i$ as a small quantity. These fluctuation operators obey the boson commutation relations $\comm{\delta\hat{\Psi}_i(\mathbf{x}), \delta \hat{\Psi}_j^\dagger(\mathbf{x}')} = \delta_{i j} \delta(\mathbf{x}-\mathbf{x}')$. To simplify notation the expectation value of the atomic fields will be written as $\mean{\hat{\Psi}_i} = \Psi_i$.
-
-Making this replacement and keeping terms up to second order in the fluctuation operators gives
-\begin{align}
-    \begin{split}
-        \hat{K} =& -\sum_i \mu_i N_i^{(0)} + \frac{1}{2}\sum_{i j}U_{i j}\int d\mathbf{x} \abs{\Psi_i}^2\abs{\Psi_j}^2 + \sum_i \int d\mathbf{x}\, \delta\hat{\Psi}_i^\dagger \left( \frac{-\hbar^2 \nabla^2}{2M} - \mu\right)\delta\hat{\Psi}_i\\
-        &+ \sum_{i j} U_{i j} \int d\mathbf{x}\, \Big[\abs{\Psi_j}^2\delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_i + \Big(\Psi_i\Psi_j^*\delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_j + \frac{1}{2} \Psi_i \Psi_j\delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_j^\dagger + \frac{1}{2} \Psi_i^* \Psi_j^* \delta\hat{\Psi}_i \delta\hat{\Psi}_j \Big)\Big], \label{Peaks:ConstantAndQuadraticK}
-    \end{split}
-\end{align}
-where $N_i^{(0)}$ is the number of atoms in the condensate. There are no terms linear in $\delta\hat{\Psi}_i^{(\dagger)}$ in this expression as they are all of the form
-\begin{align}
-    \sum_i \int d\mathbf{x}\,  \bigg( \frac{-\hbar^2 \nabla^2}{2M}\Psi_i - \mu_i\Psi_i + \sum_j U_{i j} \abs{\Psi_j}^2\Psi_i\bigg) \delta \hat{\Psi}_i^\dagger,
-\end{align}
-where the term in parentheses is zero by assumption that the mean field $\Psi_i$ represents the ground state of the $m_F=i$ state with energy $\mu_i$. The constant terms in \eqref{Peaks:ConstantAndQuadraticK} only contribute a physically meaningless overall energy offset. The remaining quadratic terms in the grand canonical Hamiltonian are
-\begin{align}
-    \begin{split}
-        \hat{K}' =& \sum_i \int d\mathbf{x}\, \delta\hat{\Psi}_i^\dagger \left( \frac{-\hbar^2 \nabla^2}{2M} - \mu_i\right)\delta\hat{\Psi}_i\\
-        &+ \sum_{i j} U_{i j} \int d\mathbf{x}\, \Big[\Psi_j^2\delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_i + \Psi_i\Psi_j\Big(\delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_j +\frac{1}{2} \delta\hat{\Psi}_i^\dagger \delta\hat{\Psi}_j^\dagger +  \frac{1}{2}\delta\hat{\Psi}_i \delta\hat{\Psi}_j \Big)\Big].
-    \end{split}
-    \label{Peaks:QuadraticK}
-\end{align}
-
-Having assumed the condensate to be homogenous, the system is now translation-invariant and the grand-canonical Hamiltonian will take its simplest form in a Fourier basis. Performing the Fourier transform of \eqref{Peaks:QuadraticK} gives
-\begin{align}
-    \begin{split}
-        \hat{K}' =& \sum_i \int d\mathbf{k}\, \bigg(\frac{\hbar^2 \mathbf{k}^2}{2M} - \mu_i + \sum_j U_{ij} \Psi_j^2\bigg) \delta\hat{\Psi}_i^\dagger(\mathbf{k}) \delta\hat{\Psi}_i(\mathbf{k}) \\
-        &+ \sum_{i j} U_{i j}\Psi_i \Psi_j\int d\mathbf{k}\, \Big( \delta\hat{\Psi}_i^\dagger(\mathbf{k}) \delta\hat{\Psi}_j(\mathbf{k}) + \frac{1}{2}\delta\hat{\Psi}_i^\dagger(\mathbf{k}) \delta\hat{\Psi}_j^\dagger (-\mathbf{k}) + \frac{1}{2} \delta\hat{\Psi}_i(\mathbf{k}) \delta\hat{\Psi}_j(-\mathbf{k})\Big) .
-    \end{split}
-    \label{Peaks:QuadraticKKSpace}
-\end{align}
-
-In order to extract the quasiparticle excitation spectrum we wish to transform this quadratic Hamiltonian into the diagonal form
-\begin{align}
-    \hat{K}' &= \sum_n \int d\mathbf{q}\, \hbar \omega_n(\mathbf{q}) \hat{\Phi}_n^\dagger(\mathbf{q}) \hat{\Phi}_n(\mathbf{q}) \label{Peaks:DesiredQuadraticForm}
-\end{align}
-for some continuous variable $\mathbf{q}$, discrete index $n$ and field operators $\hat{\Phi}_n(\mathbf{q})$ satisfying the boson commutation relations. For single-component systems this is usually achieved by making the Bogoliubov transform
-\begin{align}
-    \hat{\Psi}(\mathbf{k}) &= u(\mathbf{k}) \hat{\Phi}(\mathbf{k}) - v(\mathbf{k}) \hat{\Phi}^\dagger(-\mathbf{k}), \label{Peaks:BogoliubovTransformation}
-\end{align}
-for some real functions $u(\mathbf{k})$, $v(\mathbf{k})$. It is not clear how this will proceed for multi-component systems particularly as it is expected that an individual quasiparticle excitation will include excitations in both internal states.
-
-Instead we proceed by following the procedure of \citep{Leonhardt:2003} and recasting the problem as an eigenvalue problem by considering the Heisenberg evolution equation for an arbitrary operator $\hat{Q}$,
-\begin{align}
-    i \hbar \frac{d \hat{Q}}{dt} &= -\comm{\hat{K}', \hat{Q}}. \label{Peaks:HeisenbergEvolution}
-\end{align}
-The operators $\hat{\Phi}_n(\mathbf{q})$ defined in \eqref{Peaks:DesiredQuadraticForm} evolve according to \eqref{Peaks:HeisenbergEvolution} as
-\begin{align}
-    i \hbar \frac{d \hat{\Phi}_n(\mathbf{q})}{dt} &= -\comm{\hat{K}', \hat{\Phi}_n(\mathbf{q})} = \hbar \omega_n(\mathbf{q}) \hat{\Phi}_n(\mathbf{q}).
-\end{align}
-Expanding the $\hat{\Phi}_n(\mathbf{q})$ in terms of the complete basis $\big\{\delta\hat{\Psi}_i(\mathbf{k}), \delta\hat{\Psi}_i^\dagger(\mathbf{k}): i \in \{0, 1\}, \mathbf{k} \in \mathbb{R}^3\big\}$ gives an eigenvalue problem with eigenvalue $\hbar \omega_n(\mathbf{q})$.  At first glance this appears to be an infinite dimensional eigenvalue problem due to the infinite range of $\mathbf{k}$. As can be seen from \eqref{Peaks:QuadraticKKSpace} however, the fields $\delta\hat{\Psi}_i^{(\dagger)}(\mathbf{k})$ only couple to  $\delta\hat{\Psi}_j^{(\dagger)}(-\mathbf{k})$ reducing the problem to a finite-dimensional eigenvalue problem for each $\mathbf{k}$. Further, evaluating the commutator in \eqref{Peaks:HeisenbergEvolution} for the deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$
-\begin{align}
-    \begin{split}
-        \comm{\hat{K}', \delta\hat{\Psi}_i(\mathbf{k})} =& -\bigg(\frac{\hbar^2 \mathbf{k}^2}{2M} - \mu_i + \sum_j U_{ij} \Psi_j^2\bigg) \delta\hat{\Psi}_i(\mathbf{k})\\
-        &- \sum_j U_{ij} \Psi_i \Psi_j \big(\delta\hat{\Psi}_j(\mathbf{k}) + \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\big)
-    \end{split}
-\end{align}
-shows that $\hat{\Phi}_n(\mathbf{k})$ can be written as a linear combination of $\big\{\delta\hat{\Psi}_i(\mathbf{k}), \delta\hat{\Psi}_i^\dagger(-\mathbf{k}) : i \in \{0, 1\}\big\}$ for each $\mathbf{k}$ reducing the problem to that of finding the eigenvalues of a $4\times 4$ matrix.
-
-Solving for the eigenvalues gives the quasiparticle spectrum $\hbar \omega_\pm(\mathbf{k})$ as
-\begin{align}
-    \hbar \omega_\pm(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})^2 + U \varepsilon(\mathbf{k}) (n_1 + \kappa n_0) \pm U \varepsilon(\mathbf{k})\sqrt{n_1^2 + 2 (2 - \kappa) n_1 n_0 + \kappa^2 n_0^2} },
-    \label{Peaks:QuasiparticleSpectrum}
-\end{align}
-where $\displaystyle\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}$ is the classical kinetic energy, $n_i=\abs{\Psi_i}^2$ is the mean-field density in the $m_F=i$ state, $U = U_{11} = U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\kappa \approx 0.74 < 1$ while for atoms like Rubidium in either the $F=1$ or $F=2$ manifolds, $\kappa = 1.0 \pm 0.1$\footnote{FIXME: Citations needed}.  In the limit that the ratio of the scattering lengths $\kappa$ approaches unity the quasiparticle spectrum becomes
-\begin{align}
-    \hbar \omega_+(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left[\varepsilon(\mathbf{k}) + 2 U (n_1 + n_0) \right]} \label{Peaks:EPlusSimple}\\
-    \hbar \omega_-(\mathbf{k}) &= \varepsilon(\mathbf{k}), \label{Peaks:EMinusSimple}
-\end{align}
-where $\hbar \omega_+(\mathbf{k})$ is the usual Bogoliubov quasiparticle spectrum \citep{Bogoliubov:1947} with total density $n = n_1 + n_0$. The quasiparticle energy spectrum $\hbar \omega_-(\mathbf{k})$ is the same as that for a free particle; this energy eigenvalue corresponds to an excitation that does not change the total density $n$ and hence does not affect the nonlinear interaction energy. In the more general case where $\kappa \neq 1$, the $\omega_+$ excitations should be interpreted as a maximal excitation of the interaction energy while the $\omega_-$ excitations should be interpreted as a minimal excitation.
-
-A plot of $\omega_\pm(\mathbf{k})$ is shown in \figureref{Peaks:QuasiparticleSpectrum} for the case of equal densities in the $m_F=1, 0$ states and all other parameters corresponding those for the Thomas-Fermi groundstate of the metastable Helium condensate (see \tableref{Peaks:ExperimentalParameters}). An interesting feature of this plot is that it demonstrates that this system contains quasiparticle excitations ($\omega_-$) that require negligible energy, but have \emph{non-zero} momenta. The momentum of excitations at this resonance is
-\begin{align}
-    \hbar \abs{\mathbf{k}_\text{res}} &= \sqrt{2 M U \left[\sqrt{n_1^2 + 2(2 - \kappa)n_1 n_0 + \kappa^2 n_0^2} - (n_1 + \kappa n_0)\right]}. \label{Peaks:BogResonantWavenumber}
-\end{align}
-
-
-For momentum with magnitude less than $\hbar \abs{\mathbf{k}_\text{res}}$ the `energy' eigenvalue $\hbar \omega_-(\mathbf{k})$ is purely imaginary; in this region the $\omega_-$ excitations are dynamically unstable \citep{Leonhardt:2003}. The non-zero imaginary component of $\omega_-$ indicates a failing of the ansatz that the grand canonical Hamiltonian \eqref{Peaks:QuadraticKKSpace} can be diagonalised into the form \eqref{Peaks:DesiredQuadraticForm}. Instead, for excitations with momentum of magnitude less than $\hbar\abs{\mathbf{k}_\text{res}}$ the grand canonical Hamiltonian contains an irreducible off-diagonal component. Using the procedure of \citep{Leonhardt:2003} the grand canonical Hamiltonian can be written in the form
-\begin{align}
-    \begin{split}
-        \hat{K}' =& \int_{\abs{\mathbf{k}}<\abs{\mathbf{k}_\text{res}}} d\mathbf{k}\, \left[ \hbar\omega_+(\mathbf{k}) \hat{\Phi}_+^\dagger(\mathbf{k})\hat{\Phi}_+(\mathbf{k}) + i\hbar \gamma_-(\mathbf{k}) \left( \hat{\Upsilon}_+(\mathbf{k}) \hat{\Upsilon}_-(\mathbf{k}) - \hat{\Upsilon}_+^\dagger(\mathbf{k}) \hat{\Upsilon}_-^\dagger(\mathbf{k})\right)\right] \\
-        & + \int_{\abs{\mathbf{k}}>\abs{\mathbf{k}_\text{res}}} d\mathbf{k}\, \left[ \hbar\omega_+(\mathbf{k}) \hat{\Phi}_+^\dagger(\mathbf{k})\hat{\Phi}_+(\mathbf{k}) + \hbar\omega_-(\mathbf{k}) \hat{\Phi}_-^\dagger(\mathbf{k}) \hat{\Phi}_-(\mathbf{k})\right],
-    \end{split}
-    \label{Peaks:HamiltonianFinal}
-\end{align}
-where the $\displaystyle\hat{\Upsilon}_\pm(\mathbf{k}) = \frac{1}{\sqrt{2}}\left(\hat{\Phi}_-(-\mathbf{k}) \pm \hat{\Phi}_-(\mathbf{k})\right)$ obey boson commutation relations for $\abs{\mathbf{k}} < \abs{\mathbf{k}_\text{res}}$ and $\gamma_-(\mathbf{k}) = \Im\{\omega_-(\mathbf{k})\}$. The application of this procedure and the forms of the operators $\hat{\Phi}_\pm(\mathbf{k})$ are detailed in \appendixref{PeaksAppendix}. As a summary of these calculations, the $\hat{\Phi}_\pm(\mathbf{k})$ are annihilation operators for excitations of momentum $\hbar\mathbf{k}$ with contributions from both internal states, and each of the $\hat{\Upsilon}_\pm(\mathbf{k})$ have equal-magnitude contributions from annihilation operators for excitations with momenta $+\hbar\mathbf{k}$ and $-\hbar \mathbf{k}$. An implication of these definitions is that the Hamiltonian \eqref{Peaks:HamiltonianFinal} does conserve momentum, although at first glance it may not appear to do so.
-
-The second term in the top line of the Hamiltonian \eqref{Peaks:HamiltonianFinal} is equivalent to that for the non-degenerate parametric amplifier \citep{WallsMilburn}, which is a model for the parametric down-conversion of light by a non-linear crystal. In parametric down-conversion, two EPR\footnote{FIXME: EPR entanglement will need to be defined somewhere} entangled photons are produced at frequencies $\omega_1$ and $\omega_2$ with growth rate $\gamma_-$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$. Analogously, in the case of the He* BEC discussed at the start of this chapter Hamiltonian \eqref{Peaks:HamiltonianFinal} will result in the spontaneous formation of EPR entangled pairs of excitations, one in each of the $\hat{\Upsilon}_\pm(\mathbf{k})$ modes. As will be shown, these spontaneously-formed $\hat{\Upsilon}_\pm$ quasiparticles are the origin of the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). %Although neither entanglement nor correlations could be measured in the experiment \dots  \emph{something about spontaneous formation of excitations being what is observed in the experiment.}
-
-\subsection{Discussion of the $\hat{\Upsilon}_\pm$ quasiparticles}
-
-\figureref{Peaks:ResonantMomentumGrowthRates} illustrates the important properties of the $\hat{\Upsilon}_\pm$ quasiparticles. \figureref{Peaks:ResonantMomentumGrowthRates}(a) is a contour plot of normalised resonant momentum $\abs{\mathbf{k}_\text{res}}/\tilde{k}$ as a function of the scattering length ratio $\kappa$ and $\displaystyle\eta = \frac{n_1}{n_1 + n_0}$, the fraction of the total density in the $m_F=1$ state, where the wavenumber normalisation constant is $\tilde{k} = \frac{1}{\hbar}\sqrt{MU(n_1 + n_0)}$.  \figureref{Peaks:ResonantMomentumGrowthRates}(b) is a contour plot of the normalised growth rate $\gamma_-/\tilde{\gamma}_-$ as a function of $\eta$ and $\abs{\mathbf{k}}/\tilde{k}$, where the scattering length ratio is that for He*, $\kappa = 0.74$, and the growth rate normalisation constant is $\tilde{\gamma}_- = \frac{1}{\hbar}U(n_1+n_0)$.
-
-\figureref{Peaks:QuasiparticleSpectrum,Peaks:ResonantMomentumGrowthRates} indicate that the $\hat{\Upsilon}_\pm$ quasiparticles have the correct qualitative properties to cause the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). These excitations can only be formed when the wavelength of the excitation is significantly smaller than either of the Thomas-Fermi radii or equivalently only for wavenumbers significantly greater than $k_z=\unit[3.6\times 10^4]{m}^{-1}$ in the weak trapping dimension and $k_\rho=\unit[6.7\times 10^5]{m}^{-1}$ in the tight trapping dimensions. 
-
-
-Not only can these excitations be formed with negligible energy but non-zero momentum, but for this momentum to be large enough to have a corresponding wavelength smaller than either of the Thomas-Fermi radii, there must be significant density in the $m_F=0$ state. In the case of weak outcoupling Rabi frequencies as in \figureref{Peaks:ExperimentalResults}(a), the $m_F=0$ state will be negligibly occupied preventing the formation of these quasiparticles, hence causing no additional structure to be observed experimentally. For strong outcoupling as in \figureref{Peaks:ExperimentalResults}(b), the density will Rabi-flop between the $m_F=1$ and $m_F=0$ states causing there to be at various times significant density in the $m_F=0$ state that will enable the formation of high-momentum $E_-$ quasiparticles.  However, the largest possible momentum of these quasiparticles corresponds to a wavelength of the order of the Thomas-Fermi radius in the tight trapping dimension, but much smaller than the Thomas-Fermi radius in the weak-trapping dimension. Hence these quasiparticles can only be formed along the weak trapping dimension, eventually giving rise to the observed peaks. This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as illustrated in \figureref{Peaks:ResonantMomentumGrowthRates}. For BECs using alkali atoms, $\kappa \approx 1$ preventing the effect from being observed as the resonant momentum would correspond to a wavelength larger than the Thomas-Fermi radius.
-
-Although the spontaneous formation of quasiparticles with momentum $\hbar \mathbf{k}_\text{res}$ would conserve energy, it would not conserve momentum. Instead the energy-momentum resonance must be the spontaneous formation of \emph{two} quasiparticles with momentum $\pm \hbar \mathbf{k}_\text{res}$ such as by a four-wave mixing process. Such processes are known to give rise to EPR entanglement between the excitations. This may lead to entanglement between atoms on opposing points of the cones in \figureref{Peaks:Schematic}, but due to the output dynamics and the vertical integration of the detection scheme, this would be difficult to measure. However, number difference squeezing between the opposing peaks should be far more robust.
-
-Verification that the $\hat{\Upsilon}\pm$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation to be discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the neglect of the vacuum fluctuations which are critical to all spontaneous processes. Before discussing the full quantum field calculation, we will first consider a more simplistic model for the formation of the quasiparticles in order to arrive at a more qualitative understanding of the system.
-
-\begin{figure}[tbp]
-    \centering
-    \includegraphics[height=3in]{QuasiparticleSpectrum}
-    \caption{Quasiparticle excitation spectrum for the metastable Helium experiment in the local density approximation. The condensate densities $n_i$ were taken to be equal, with the total density given by the central density of the Thomas-Fermi groundstate corresponding to the parameters given in \tableref{Peaks:ExperimentalParameters}. }
-    \label{Peaks:QuasiparticleSpectrum}
-\end{figure}
-
-
-\begin{figure}[tbp]
-    \centering
-        % \includegraphics[width=8cm]{ResonantMomentum}
-        % \includegraphics[width=8cm]{GrowthRates}
-        \includegraphics[width=14cm]{ResonantMomentumGrowthRates}
-    \caption{The resonant momentum $\abs{\mathbf{k}_\text{res}}/\tilde{k}$ as a function of $\kappa$, the ratio of scattering lengths $\kappa = a_{11}/a_{00}$; and $\displaystyle \eta = \frac{n_1}{n_1+n_0}$, the fraction of the total density in the $m_F=1$ state (see main text and \eqref{Peaks:BogResonantWavenumber}). The normalisation constant $\displaystyle\tilde{k}=  \frac{1}{\hbar}\sqrt{MU(n_1 + n_0)}$. }
-    \label{Peaks:ResonantMomentumGrowthRates}
-\end{figure}
-
-
+\subsection{Excitation spectrum}
 
 \section{Analytical mean-field model}
 

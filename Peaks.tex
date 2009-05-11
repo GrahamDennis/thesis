@@ -75,12 +75,12 @@ With these approximations made, the Hamiltonian for this system is
             &\phantom{=} + \hbar \Omega \int d\mathbf{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
     \end{split}
 \end{align}
-where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, and $\Omega$ is the Rabi frequency which is taken to be real. The equations of motion corresponding to this Hamiltonian are
+where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is the chemical potential which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
 \begin{subequations}
     \label{Peaks:OperatorEquationsOfMotion}
     \begin{align}
-    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{}\right) \hat{\Psi}_1^{} + \hbar \Omega \hat{\Psi}_0^{},  \\
-    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{} \right) \hat{\Psi}_0^{} + \hbar \Omega \hat{\Psi}_1^{},
+    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{}\right) \hat{\Psi}_1^{} + \hbar \Omega \hat{\Psi}_0^{} - \mu \hat{\Psi}_1^{},  \\
+    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{} \right) \hat{\Psi}_0^{} + \hbar \Omega \hat{\Psi}_1^{} - \mu \hat{\Psi}_0^{},
     \end{align}
 \end{subequations}
 where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
@@ -97,8 +97,8 @@ Within the local density approximation we can assume that the mean-field remains
 \begin{subequations}
     \label{Peaks:MeanFieldEquationsOfMotion}
     \begin{align}
-    i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0,\\
-    i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1.
+    i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0 - \mu \Psi_1,\\
+    i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1 - \mu \Psi_0.
     \end{align}
 \end{subequations}
 
@@ -132,7 +132,7 @@ The evolution of small perturbations about the mean-field dynamics of a condensa
 %These perturbations not only arise from experimental uncertainties, but are an  inescapable consequence of quantum mechanics due to the fluctuations of the vacuum itself.
 To determine the evolution of these excitations the mean-field dynamics must be separated from that of the excitations. To this aim we define the deviation operators $\delta\hat{\Psi}_i = \hat{\Psi}_i - \mean{\hat{\Psi}_i}$ and treat $\delta\hat{\Psi}_i$ as a small quantity. In this case the $\mean{\hat{\Psi}_i}=\Psi_i$ are themselves time dependent, obeying the equations for the mean-field, \eqref{Peaks:MeanFieldEquationsOfMotion}.
 
-The equations of motion for the deviation operators are obtained by replacing the field operators $\hat{\Psi}_i$ in the operator evolution equations \eqref{Peaks:OperatorEquationsOfMotion} and keeping only terms up to first order in the deviation operators. Applying this procedure and moving into a rotating frame to remove the global rotation in phase due to the chemical potential $\mu$ gives
+The equations of motion for the deviation operators are obtained by replacing the field operators $\hat{\Psi}_i$ in the operator evolution equations \eqref{Peaks:OperatorEquationsOfMotion} with $\Psi_i + \delta \hat{\Psi}_i$ and keeping only terms up to first order in the deviation operators. Applying this procedure gives
 \begin{subequations}
     \label{Peaks:DeviationOperatorsEvolutionXSpace}
     \begin{align}
@@ -153,16 +153,16 @@ Having assumed the condensate to be homogenous, the system is translation-invari
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial \delta \hat{\Psi}_1(\mathbf{k})}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\mathbf{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\mathbf{k})\right]\\
-                    & - \frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_1(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_0(\mathbf{k})- \mu \delta \hat{\Psi}_1(\mathbf{k}),
+                    & +\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_1(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_0(\mathbf{k})- \mu \delta \hat{\Psi}_1(\mathbf{k}),
         \end{split}\\
         \begin{split}
         i \hbar \frac{\partial \delta \hat{\Psi}_0(\mathbf{k})}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\mathbf{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\mathbf{k})\right]\\
-                    & -\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_0(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_1(\mathbf{k}) - \mu \delta\hat{\Psi}_0(\mathbf{k}).
+                    & +\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_0(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_1(\mathbf{k}) - \mu \delta\hat{\Psi}_0(\mathbf{k}).
         \end{split}
     \end{align}
 \end{subequations}
 
-In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\mathbf{k}),\, \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\right\}$, with the $\delta\hat{\Psi}_i^\dagger(-\mathbf{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
+In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\mathbf{k}),\, \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\mathbf{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
     i \hbar \frac{\partial \hat{\Upsilon}(\mathbf{k})}{\partial t} &= \mathcal{H}(\mathbf{k}) . \hat{\Upsilon}(\mathbf{k}),
 \end{align}
@@ -181,24 +181,36 @@ where
         -v_{11}^* & -\varepsilon(\mathbf{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
         u_{10} + \hbar \Omega & v_{10} & \varepsilon(\mathbf{k}) + q_0 - \mu & \kappa v_{00}\\
         -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\mathbf{k}) - q_0 + \mu
-    \end{pmatrix},
+    \end{pmatrix},\label{Peaks:HMatrix}
 \end{align}
 and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}}$.
 
-If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing to determine the stability and energy spectrum of $\mathcal{H}(\mathbf{k})$, in the next subsection the limit that all scattering lengths are equal will be considered, in which limit some familiar results can be recovered.
+If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next subsection the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 In the limit that all the scattering lengths are the same ($\kappa = 1$), the nonlinear term in \eqref{Peaks:MeanFieldEquationsOfMotion} only contributes to a rotation of the global phase of the spinor condensate. In this case the dynamics can be solved analytically and familiar excitation spectra recovered.
 
-The solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1$ is
-\begin{align}
-    \begin{split}
-        \Psi_1(t) &= \sqrt{n} \cos(\Omega t) e^{-i \mu t/\hbar},\\
-        \Psi_0(t) &= -i\sqrt{n} \sin(\Omega t) e^{-i \mu t/\hbar}.
-    \end{split}
+The general solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1$ is
+\begin{subequations}
     \label{Peaks:Kappa1MeanFieldSolution}
+    \begin{align}
+        \Psi_1(t) &= \cos(\Omega t) \Phi_+ + \sin(\Omega t) \Phi_-, \\
+        \Psi_0(t) &= -i\sin(\Omega t) \Phi_+ + i\cos(\Omega t) \Phi_-,
+    \end{align}
+\end{subequations}
+where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a basis change from $\Psi_i$ to $\Phi_\pm$. Performing this basis change for both the $\Psi_i$ and $\delta \hat{\Psi}_i$ yields a  matrix of precisely the same form as in \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ instead of the $\Psi_i$, and with $\Omega \rightarrow 0$. This new matrix $\mathcal{H}'(\mathbf{k})$ is now time-independent and can be diagonalised to give the eigenvalues
+\begin{subequations}
+    \label{Peaks:Kappa1Eigenvalues}
+    \begin{align}
+        E_\uparrow(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left(\varepsilon(\mathbf{k}) + 2 n U\right)},\\
+        E_\downarrow(\mathbf{k}) &= \varepsilon(\mathbf{k}),
+    \end{align}
+\end{subequations}
+where $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of these two eigenvalues. $E_\uparrow(\mathbf{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations to the total condensate density. The eigenvalue $E_\downarrow(\mathbf{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian as $\kappa = 1$. The Hamiltonian for the excitations can be written as
+\begin{align}
+    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\mathbf{k}\, E_i(\mathbf{k}) \hat{\Lambda}_i^\dagger(\mathbf{k}) \hat{\Lambda}_i(\mathbf{k}),
 \end{align}
-
+where the $\hat{\Lambda}_{\uparrow,\downarrow}(\mathbf{k})$ obey boson commutation relations. It is the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(\mathbf{k})$ that are the eigenvectors corresponding to the negatives of the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}.
 
 \section{Analytical mean-field model}
 % This section probably has to go.

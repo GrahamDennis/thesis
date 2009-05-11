@@ -56,9 +56,6 @@ These peaks arise from two momentum-correlated cones of particles scattering out
     \label{Peaks:ExperimentalParameters}
 \end{table}
 
-
-% FIXME: Somewhere in the experimental results we need to state that the momentum of the excitation in the weak trapping dimension is larger than the momentum width in the weak trapping dimension suggesting that something significant is happening along that axis. 
-
 \section{Semianalytic treatment}
 
 %While the argument in the previous section gives a qualitative explanation for the four-wave mixing process observed in He*, it is not entirely satisfying. In this section an approximate analytic expression for the excited modes of the He* system will be obtained and investigated using Bogoliubov stuff.
@@ -79,59 +76,132 @@ With these approximations made, the Hamiltonian for this system is
     \end{split}
 \end{align}
 where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, and $\Omega$ is the Rabi frequency which is taken to be real. The equations of motion corresponding to this Hamiltonian are
-\begin{align}
-    \begin{split}
+\begin{subequations}
+    \label{Peaks:OperatorEquationsOfMotion}
+    \begin{align}
     i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{}\right) \hat{\Psi}_1^{} + \hbar \Omega \hat{\Psi}_0^{},  \\
     i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{} \right) \hat{\Psi}_0^{} + \hbar \Omega \hat{\Psi}_1^{},
-    \label{Peaks:OperatorEquationsOfMotion}
-    \end{split}
-\end{align}
+    \end{align}
+\end{subequations}
 where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
 
 \subsection{The dynamical steady-state}
 
-The excitation spectrum of a condensate can be obtained by approximating each field operator to be the a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion of the fluctuations themselves (see, for example \cite{Ho:1998}\footnote{FIXME: Probably need an earlier and/or better reference here.}). It is the latter approach that will be taken here, but with the difference that the state about which the linearisation procedure will take place is itself time-dependent.
+The excitation spectrum of a condensate can be obtained by approximating each field operator to be a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion for the fluctuations themselves (see, for example \cite{Ho:1998}\footnote{FIXME: Probably need an earlier and/or better reference here.}). It is the latter approach that will be taken here, but with the difference that the mean-field about which the linearisation procedure will take place is itself time-dependent.
 
-The state that we wish to consider is that in which the $m_F=1$ level, representing the original trapped BEC, is initially populated while the $m_F=0$ level is initially unpopulated. Due Rabi oscillations this state is not stationary, however it will be shown that its motion is periodic.
+The mean-field state that we wish to consider is one that corresponds to the state of the BEC in the experiment. At $t=0$ all of the population in this state will be in the $m_F=1$ level, representing the original trapped BEC, while the $m_F=0$ atom laser level will be initially unpopulated. Rabi oscillations will transfer population between these two levels, and it will be shown that these oscillations are periodic.
 
 The method for diagonalising the evolution equations of the linearised fluctuations to obtain the excitation spectrum is the same method used to determine the stability of fixed points of systems of nonlinear ordinary differential equations. This method relies critically on the fact that it is a \emph{fixed} point about which the equations are linearised. Floquet's Theorem\footnote{FIXME: Cite some random ODE text.} allows the stability of \emph{periodic} solutions to be considered, and it is this theorem that will be used to determine the stability of the mean-field evolution. It now remains to be shown that this mean-field evolution is periodic.
 
 Within the local density approximation we can assume that the mean-field remains homogeneous; only the excitations will have spatial dependence. The equations of motion for the mean-field then reduce to the following ordinary differential equations,
-\begin{align}
-    \begin{split}
-        i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0,\\
-        i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1.
-    \end{split}
+\begin{subequations}
     \label{Peaks:MeanFieldEquationsOfMotion}
-\end{align}
+    \begin{align}
+    i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0,\\
+    i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1.
+    \end{align}
+\end{subequations}
 
-Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are,
-\begin{align}
-    \begin{split}
-        \frac{d\rho_{10}}{dt} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
-        \frac{d w}{dt} &= 2 i \Omega \left(\rho_{10}^{} - \rho_{10}^*\right),
-    \end{split}
+Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are
+\begin{subequations}
     \label{Peaks:OpticalBlochEquations}
-\end{align}
-where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these equations will conserve the energy of the state. Up to an arbitrary constant, this energy is given by
+    \begin{align}
+        \frac{d\rho_{10}}{dt} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
+        \frac{d w}{dt} &= -4 \Omega \Im\{\rho_{10}\},
+    \end{align}
+\end{subequations}
+where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these equations will conserve the energy of the state. Up to an arbitrary additive constant, this energy is given by
 \begin{align}
     E &= -\frac{1}{8}\hbar g(1 - w)^2 + 2 \hbar \Omega \Re\{\rho_{10}\}.
     \label{Peaks:OpticalBlochEnergy}
 \end{align}
 The solutions to \eqref{Peaks:OpticalBlochEquations} are visualised in \figureref{Peaks:BlochSphere}.
 
-As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere.  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by the its motion. As demonstrated in \figureref{Peaks:BlochSphere} this further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. It is this periodicity that will enable a modified perturbation analysis to be performed in the following subsection.
+As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by its motion. This further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. It is this periodicity that will enable the stability of the condensate to excitations to be determined.
 
-\begin{figure}[hbt]
+\begin{figure}
     \centering
     \includegraphics[width=14cm]{BlochSpheres}
     \caption{Bloch sphere representation of the evolution described by \eqref{Peaks:OpticalBlochEquations}. The upper figures (a) and (b) represent the case of the usual optical Bloch equations without any damping ($g/\Omega=0$), the lower figures (c) and (d) illustrate the effect of the nonlinear term in the evolution with $g/\Omega = 8$. The left figures (a) and (c) illustrate the Bloch sphere shaded with colour depending on the energy $E$ [see \eqref{Peaks:OpticalBlochEnergy}]. The system is constrained to move on lines of constant colour. Bands have been removed from these spheres for illustration purposes only. The right figures (b) and (d) are contour plots of the energy $E$ over the surface of the Bloch sphere.
      \label{Peaks:BlochSphere}}
 \end{figure}
 
-\subsection{Excitation spectrum}
+\subsection{Excitation dynamics}
+
+The evolution of small perturbations about the mean-field dynamics of a condensate define both the excitation spectrum of the condensate and its stability to perturbations. 
+%These perturbations not only arise from experimental uncertainties, but are an  inescapable consequence of quantum mechanics due to the fluctuations of the vacuum itself.
+To determine the evolution of these excitations the mean-field dynamics must be separated from that of the excitations. To this aim we define the deviation operators $\delta\hat{\Psi}_i = \hat{\Psi}_i - \mean{\hat{\Psi}_i}$ and treat $\delta\hat{\Psi}_i$ as a small quantity. In this case the $\mean{\hat{\Psi}_i}=\Psi_i$ are themselves time dependent, obeying the equations for the mean-field, \eqref{Peaks:MeanFieldEquationsOfMotion}.
+
+The equations of motion for the deviation operators are obtained by replacing the field operators $\hat{\Psi}_i$ in the operator evolution equations \eqref{Peaks:OperatorEquationsOfMotion} and keeping only terms up to first order in the deviation operators. Applying this procedure and moving into a rotating frame to remove the global rotation in phase due to the chemical potential $\mu$ gives
+\begin{subequations}
+    \label{Peaks:DeviationOperatorsEvolutionXSpace}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial \delta \hat{\Psi}_1}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1 + \Psi_1^2\delta\hat{\Psi}_1^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger + \Psi_0^*\Psi_1\delta\hat{\Psi}_0\right]\\
+                    & - \frac{\hbar^2}{2M}\nabla^2 \delta \hat{\Psi}_1 +\hbar \Omega\delta\hat{\Psi}_0- \mu \delta \hat{\Psi}_1,
+        \end{split}\\
+        \begin{split}
+        i \hbar \frac{\partial \delta \hat{\Psi}_0}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0 + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger + \Psi_1^*\Psi_0\delta\hat{\Psi}_1\right]\\
+                    & -\frac{\hbar^2}{2M}\nabla^2 \delta \hat{\Psi}_0 +\hbar \Omega\delta\hat{\Psi}_1 - \mu \delta\hat{\Psi}_0.
+        \end{split}
+    \end{align}
+\end{subequations}
+
+Having assumed the condensate to be homogenous, the system is translation-invariant and the evolution equations will take their simplest form in a Fourier basis. Performing the Fourier transform of \eqref{Peaks:DeviationOperatorsEvolutionXSpace} yields
+\begin{subequations}
+    \label{Peaks:DeviationOperatorsEvolutionKSpace}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial \delta \hat{\Psi}_1(\mathbf{k})}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\mathbf{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\mathbf{k})\right]\\
+                    & - \frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_1(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_0(\mathbf{k})- \mu \delta \hat{\Psi}_1(\mathbf{k}),
+        \end{split}\\
+        \begin{split}
+        i \hbar \frac{\partial \delta \hat{\Psi}_0(\mathbf{k})}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\mathbf{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\mathbf{k})\right]\\
+                    & -\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_0(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_1(\mathbf{k}) - \mu \delta\hat{\Psi}_0(\mathbf{k}).
+        \end{split}
+    \end{align}
+\end{subequations}
+
+In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\mathbf{k}),\, \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\right\}$, with the $\delta\hat{\Psi}_i^\dagger(-\mathbf{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
+\begin{align}
+    i \hbar \frac{\partial \hat{\Upsilon}(\mathbf{k})}{\partial t} &= \mathcal{H}(\mathbf{k}) . \hat{\Upsilon}(\mathbf{k}),
+\end{align}
+where
+\begin{align}
+    \hat{\Upsilon}(\mathbf{k}) &= 
+    \begin{pmatrix}
+        \delta\hat{\Psi}_1(\mathbf{k}) &
+        \delta\hat{\Psi}_1^\dagger(-\mathbf{k}) &
+        \delta\hat{\Psi}_0(\mathbf{k}) &
+        \delta\hat{\Psi}_0^\dagger(-\mathbf{k})
+    \end{pmatrix}^T,\\
+    \mathcal{H}(\mathbf{k}) &=
+    \begin{pmatrix}
+        \varepsilon(\mathbf{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
+        -v_{11}^* & -\varepsilon(\mathbf{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
+        u_{10} + \hbar \Omega & v_{10} & \varepsilon(\mathbf{k}) + q_0 - \mu & \kappa v_{00}\\
+        -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\mathbf{k}) - q_0 + \mu
+    \end{pmatrix},
+\end{align}
+and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}}$.
+
+If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing to determine the stability and energy spectrum of $\mathcal{H}(\mathbf{k})$, in the next subsection the limit that all scattering lengths are equal will be considered, in which limit some familiar results can be recovered.
+
+\subsection{Excitation spectra in the $\kappa = 1$ limit}
+In the limit that all the scattering lengths are the same ($\kappa = 1$), the nonlinear term in \eqref{Peaks:MeanFieldEquationsOfMotion} only contributes to a rotation of the global phase of the spinor condensate. In this case the dynamics can be solved analytically and familiar excitation spectra recovered.
+
+The solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1$ is
+\begin{align}
+    \begin{split}
+        \Psi_1(t) &= \sqrt{n} \cos(\Omega t) e^{-i \mu t/\hbar},\\
+        \Psi_0(t) &= -i\sqrt{n} \sin(\Omega t) e^{-i \mu t/\hbar}.
+    \end{split}
+    \label{Peaks:Kappa1MeanFieldSolution}
+\end{align}
+
 
 \section{Analytical mean-field model}
+% This section probably has to go.
 
 %A more qualitative understanding of the process discussed in the previous section can be obtained as follows.
 
@@ -139,7 +209,7 @@ As the evolution is purely Hamiltonian, the state can be described by a point on
     \begin{center}
         \includegraphics[width=8cm]{CollisionDiagram}
         \caption{Schematic diagram of density modulations produced by a collision
-                 between stationary $m=0$ and $m=1$ atoms. Upper figure (a)
+                 between stationary $m_F=0$ and $m_F=1$ atoms. Upper figure (a)
                  shows these stationary atoms scattering into oppositely-directed
                  momentum modes. Lower figure (b) shows the density grating formed
                  between the scattered atoms and the background of stationary atoms

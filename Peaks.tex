@@ -249,37 +249,47 @@ as is easily verified. The matrix solution $\bm{\Pi}(t)$ thus completely determi
 
 The eigenvalues of $\bm{Q}$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
 \begin{align}
+    \label{Peaks:MonodromyMatrix}
     \mathcal{M} &= \bm{\Pi}(T) = \exp(\bm{Q} T),
 \end{align}
-where $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate.
-
-The procedure to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is as follows:
-\begin{enumerate}
-    \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
-    \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform} and \sectionref{Peaks:ExperimentEigenvalues} for more details).
-    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $k = \abs{\bm{k}}$ to obtain the monodromy matrix $\mathcal{M}(k)$.
-    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(k)$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$.
-\end{enumerate}
-% While it may seem odd to have an enumerated list of steps here, I think it actually is clearer presented in this form. Where necessary, each step can then be expanded upon in detail.
+where $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate in order to determine the stability of the condensate to excitations.
 
 \subsection{Instabilities in the `Peaks' experiment}
 \label{Peaks:ExperimentEigenvalues}
-The procedure described in the previous section will now be used to determine the excitation spectrum and stability of the condensate to excitations for the parameters corresponding to the experiment detailed in \sectionref{Peaks:ExperimentalSetup}.
+
+The method outlined in the previous section for determining the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ requires knowledge of its period $T$, and hence the period of the mean field dynamics given by \eqref{Peaks:MeanFieldEquationsOfMotion}. Although this period cannot be determined analytically, it can be found numerically.
+
+It was shown in \sectionref{Peaks:MeanFieldPeriodicity} that up to a global phase rotation, the mean fields $\Psi_j(t)$ are periodic. Denoting this period $T$, the mean fields $\Psi_j(t)$ can be therefore written in the form
+\begin{align}
+    \label{Peaks:MeanFieldFourierDecomposition}
+    \Psi_j(t) = \sum_{n=-\infty}^\infty \alpha_{j,n} \exp\left[i 2\pi \left( n \nu_0 + \Delta\nu\right)t \right],
+\end{align}
+for some complex constants $\alpha_{j, n}$, fundamental frequency $\nu_0 = T^{-1}$, and frequency offset $\Delta \nu$. In this form, the $\Psi_j(t)$ are not truly periodic as $\Psi_j(T) = \exp(i\Delta \nu T)\Psi_j(0)$, but this frequency offset can be cancelled by an appropriate choice of the energy offset $\mu$ in \eqref{Peaks:InitialHamiltonian}.
+
+The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourierDecomposition} can be determined from the Fourier transform of $\Psi_j(t)$ which will have sharp peaks at the frequencies $n \nu_0 + \Delta \nu$ (see \figureref{Peaks:MeanFieldFourierTransform}). Choosing the energy offset $\mu=-h \nu$, the frequency offset in \eqref{Peaks:MeanFieldFourierDecomposition} can be cancelled making the $\Psi_j(t)$ with this energy offset exactly periodic with period $T$. \figureref{Peaks:MeanFieldFourierTransform} illustrates the Fourier transform of the numerical solutions for $\Psi_j(t)$ from which the period $T=\unit[150]{\micro{}s}$ and frequency offset $\Delta \nu = \unit[-1.78]{kHz}$ have been obtained.
+
+With the period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be determined. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, this need only be performed for a one-dimensional positive range of values for $k$. The solutions for the Floquet exponents $\xi_i(\bm{k}) = \gamma_i(\bm{k}) - i\omega(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}.
 
 
-
-
-This section will perform the final simulations, examine the results, compare to a 1D TW simulation for a homogenous trap. Then we will lead in to the next section on the full 3D calculation and the techniques involved. I may need to write a section on the absorbing boundary condition (for an earlier general theory chapter).
-
+In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is as follows:
 \begin{enumerate}
-    \item Simulation of the mean-field dynamics showing the Fourier-transformed results.
-    \item Identification of the period and energy offset $\mu$ from these results.
+    \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
+    \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
+    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$.
+    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$.
 \end{enumerate}
+% While it may seem odd to have an enumerated list of steps here, I think it actually is clearer presented in this form. Where necessary, each step can then be expanded upon in detail.
 
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{MeanFieldFourierTransform}
-    \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the calculated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion} for the centre of the condensate defined by the experimental parameters given in \tableref{Peaks:ExperimentalParameters}. The frequency $\nu_0$ is the inverse period of the system, and the choice of $\mu/h$ shown will cancel the global phase rotation. The parameters determined from this plot are $\nu_0 = \unit[6.65]{kHz}$, $\mu/h = \unit[1.78]{kHz}$. This gives the period to be $T=\unit[150]{\micro{}s}$.}
+    \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the calculated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion} for the centre of the condensate defined by the experimental parameters given in \tableref{Peaks:ExperimentalParameters}. The frequency $\nu_0$ is the inverse period of the system, and $\Delta\nu$ represents the global phase rotation. The parameters determined from this plot are $\nu_0 = \unit[6.65]{kHz}$, $\Delta\nu = \unit[-1.78]{kHz}$. This gives the period to be $T=\unit[150]{\micro{}s}$.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{CondensateEigenvalues}
+    \caption{\label{Peaks:CondensateEigenvalues}}
 \end{figure}
 
 The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to the instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}

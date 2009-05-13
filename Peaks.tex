@@ -56,7 +56,7 @@ These peaks arise from two momentum-correlated cones of particles scattering out
     \label{Peaks:ExperimentalParameters}
 \end{table}
 
-\section{Semianalytic treatment}
+\section{Condensate excitations in the perturbative regime}
 
 %While the argument in the previous section gives a qualitative explanation for the four-wave mixing process observed in He*, it is not entirely satisfying. In this section an approximate analytic expression for the excited modes of the He* system will be obtained and investigated using Bogoliubov stuff.
 
@@ -70,12 +70,13 @@ The second approximation made in this model is to neglect the antitrapped state 
 
 With these approximations made, the Hamiltonian for this system is
 \begin{align}
+    \label{Peaks:InitialHamiltonian}
     \begin{split}
     \hat{H} &= \sum_i \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{} + \frac{1}{2} \sum_{i j} U_{i j}\int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{} \hat{\Psi}_i^{}\\
             &\phantom{=} + \hbar \Omega \int d\mathbf{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
     \end{split}
 \end{align}
-where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is the chemical potential which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
+where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is an energy offset which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
 \begin{subequations}
     \label{Peaks:OperatorEquationsOfMotion}
     \begin{align}
@@ -86,6 +87,7 @@ where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a
 where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
 
 \subsection{The dynamical steady-state}
+\label{Peaks:MeanFieldPeriodicity}
 
 The excitation spectrum of a condensate can be obtained by approximating each field operator to be a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion for the fluctuations themselves (see, for example \cite{Ho:1998}\footnote{FIXME: Probably need an earlier and/or better reference here.}). It is the latter approach that will be taken here, but with the difference that the mean-field about which the linearisation procedure will take place is itself time-dependent.
 
@@ -117,7 +119,7 @@ where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these 
 \end{align}
 The solutions to \eqref{Peaks:OpticalBlochEquations} are visualised in \figureref{Peaks:BlochSphere}.
 
-As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by its motion. This further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. It is this periodicity that will enable the stability of the condensate to excitations to be determined.
+As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by its motion. This further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. Although this demonstrates that all physical expectation values are periodic, for the wavefunctions themselves to be periodic, the global phase rotation must be cancelled. This can be achieved by appropriate choice of the energy offset $\mu$. It is the periodicity of the wavefunctions $\Psi_i$ that will enable the stability of the condensate to excitations to be determined.
 
 \begin{figure}
     \centering
@@ -164,7 +166,8 @@ Having assumed the condensate to be homogenous, the system is translation-invari
 
 In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\mathbf{k}),\, \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\mathbf{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
-    i \hbar \frac{\partial \hat{\Upsilon}(\mathbf{k})}{\partial t} &= \mathcal{H}(\mathbf{k}) . \hat{\Upsilon}(\mathbf{k}),
+    \label{Peaks:DeviationOperatorsMatrixEvolution}
+    i \hbar \frac{\partial \hat{\Upsilon}(\mathbf{k})}{\partial t} &= \mathcal{H}(\mathbf{k}) \hat{\Upsilon}(\mathbf{k}),
 \end{align}
 where
 \begin{align}
@@ -185,7 +188,7 @@ where
 \end{align}
 and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}}$.
 
-If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next subsection the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
+If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 In the limit that all the scattering lengths are the same ($\kappa = 1$), the nonlinear term in \eqref{Peaks:MeanFieldEquationsOfMotion} only contributes to a rotation of the global phase of the spinor condensate. In this case the dynamics can be solved analytically and familiar excitation spectra recovered.
@@ -198,98 +201,86 @@ The general solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1
         \Psi_0(t) &= -i\sin(\Omega t) \Phi_+ + i\cos(\Omega t) \Phi_-,
     \end{align}
 \end{subequations}
-where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a basis change from $\Psi_i$ to $\Phi_\pm$. Performing this basis change for both the $\Psi_i$ and $\delta \hat{\Psi}_i$ yields a  matrix of precisely the same form as in \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ instead of the $\Psi_i$, and with $\Omega \rightarrow 0$. This new matrix $\mathcal{H}'(\mathbf{k})$ is now time-independent and can be diagonalised to give the eigenvalues
+for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a linear basis transformation from $\Psi_i$ to $\Phi_\pm$. Performing this change of basis for both the $\Psi_i$ and $\delta \hat{\Psi}_i$ yields a matrix of precisely the same form as in \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ instead of the $\Psi_i$, and with $\Omega \rightarrow 0$. This new matrix $\mathcal{H}'(\mathbf{k})$ is now time-independent and can be diagonalised to give the eigenvalues
 \begin{subequations}
     \label{Peaks:Kappa1Eigenvalues}
     \begin{align}
-        E_\uparrow(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left(\varepsilon(\mathbf{k}) + 2 n U\right)},\\
-        E_\downarrow(\mathbf{k}) &= \varepsilon(\mathbf{k}),
+        \hbar \omega_\uparrow(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left(\varepsilon(\mathbf{k}) + 2 n U\right)},\\
+        \hbar \omega_\downarrow(\mathbf{k}) &= \varepsilon(\mathbf{k}),
     \end{align}
 \end{subequations}
-where $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of these two eigenvalues. $E_\uparrow(\mathbf{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations to the total condensate density. The eigenvalue $E_\downarrow(\mathbf{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian as $\kappa = 1$. The Hamiltonian for the excitations can be written as
+where $\displaystyle\varepsilon(\mathbf{k}) = \frac{\hbar^2\mathbf{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\mathbf{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\mathbf{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
+
+The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is
 \begin{align}
-    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\mathbf{k}\, E_i(\mathbf{k}) \hat{\Lambda}_i^\dagger(\mathbf{k}) \hat{\Lambda}_i(\mathbf{k}),
+    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\mathbf{k}\, \hbar \omega_i(\mathbf{k}) \hat{\Lambda}_i^\dagger(\mathbf{k}) \hat{\Lambda}_i(\mathbf{k}),
 \end{align}
-where the $\hat{\Lambda}_{\uparrow,\downarrow}(\mathbf{k})$ obey boson commutation relations. It is the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(\mathbf{k})$ that are the eigenvectors corresponding to the negatives of the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}.
+where the $\hat{\Lambda}_{\uparrow,\downarrow}(\mathbf{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\mathbf{k})$.
 
-\section{Analytical mean-field model}
-% This section probably has to go.
+\subsection{Determining the instabilities of a condensate with temporal periodicity}
+% Not brilliant, but better than 'Instabilities in your condensate', which was the previous title.
 
-%A more qualitative understanding of the process discussed in the previous section can be obtained as follows.
+Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
+
+In the general case, the excitation spectrum cannot be obtained from the eigenvalues of the matrix $\mathcal{H}(\mathbf{k})$ in \eqref{Peaks:HMatrix} as the matrix's entries are  themselves time-dependent. However, due to the periodicity of the mean-field wavefunctions demonstrated in \sectionref{Peaks:MeanFieldPeriodicity}, the entries of $\mathcal{H}(\mathbf{k})$ are themselves periodic, which enables Floquet's theorem to be applied.
+
+Floquet's theorem proves that the matrix solution to the initial-value problem
+\begin{subequations}
+    \label{Peaks:FloquetMatrixIVP}
+    \begin{align}
+        \dot{\Pi}(t) &= A(t) \Pi(t),\\
+        \Pi(0) &= \mathbb{I},
+    \end{align}
+\end{subequations}
+where $\mathbb{I}$ is the $n \times n$ identity matrix and $A(t)$ a periodic $n \times n$ matrix with period $T$ can be written in the form
+\begin{align}
+    \Pi(t) = P(t) \exp(Q t),
+\end{align}
+for some constant matrix $Q$ and $P(t)$ a matrix function with period $T$ and $P(0) = \mathbb{I}$. The matrix solution $\Pi(t)$ is the general solution to the related linear system
+\begin{subequations}
+    \label{Peaks:FloquetVectorIVP}
+    \begin{align}
+        \dot{x}(t) &= A(t) x(t),\\
+        x(0) &= x_0,
+    \end{align}
+\end{subequations}
+as every solution $x(t)$ to this problem is given by
+\begin{align}
+    x(t) &= \Pi(t) x_0.
+\end{align}
+
+The eigenvalues of $Q$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
+\begin{align}
+    \mathcal{M} &= \Pi(T) = \exp(Q T),
+\end{align}
+where $P(T) = P(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\mathbf{k})$ that we wish to calculate.
+
+The procedure to find the Floquet exponents for $\mathcal{H}(\mathbf{k})$, and hence the stability of the condensate to excitations is as follows:
+\begin{enumerate}
+    \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
+    \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic\footnote{FIXME: Will need a graph to make this step clear.}.
+    \item Using the calculated period and chemical potential, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $k = \abs{\mathbf{k}}$ to obtain the monodromy matrix $\mathcal{M}(k)$.
+    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(k)$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$.
+\end{enumerate}
+% While it may seem odd to have an enumerated list of steps here, I think it actually is clearer presented in this form. Where necessary, each step can then be expanded upon in detail.
+
+\subsection{Instabilities in the `Peaks' experiment}
+The procedure described in the previous section will now be used to determine the excitation spectrum and stability of the condensate to excitations for the parameters corresponding to the experiment detailed in \sectionref{Peaks:ExperimentalSetup}.
+
+This section will perform the final simulations, examine the results, compare to a 1D TW simulation for a homogenous trap. Then we will lead in to the next section on the full 3D calculation and the techniques involved. I may need to write a section on the absorbing boundary condition (for an earlier general theory chapter).
+
+\begin{enumerate}
+    \item Simulation of the mean-field dynamics showing the Fourier-transformed results.
+    \item Identification of the period and energy offset $\mu$ from these results.
+\end{enumerate}
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=8cm]{CollisionDiagram}
-        \caption{Schematic diagram of density modulations produced by a collision
-                 between stationary $m_F=0$ and $m_F=1$ atoms. Upper figure (a)
-                 shows these stationary atoms scattering into oppositely-directed
-                 momentum modes. Lower figure (b) shows the density grating formed
-                 between the scattered atoms and the background of stationary atoms
-                 in their respective states. The horizontal dotted line shows the
-                 (assumed equal) background densities in both atomic states. The $x$
-                 coordinate is the weak trapping dimension. The reduced mean-field
-                 energy of this density grating compared to the initial uniform
-                 background enables the collision shown in (a) to occur (see main
-                 text).
-                 \label{Peaks:CollisionDiagram}}
-    \end{center}
+    \centering
+    \includegraphics[width=14cm]{MeanFieldFourierTransform}
+    \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the simulated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion}. The frequency $\nu_0$ is the inverse period of the physical state represented by the mean field, and $\mu/h$ is .}
 \end{figure}
 
-The four-wave mixing process in this experiment occurs when stationary trapped and untrapped atoms collide producing superpositions of pairs of atoms with oppositely-directed momenta in the weak trapping dimension. In the terminology of the previous section it is two $E_-$ quasiparticles that are produced. Although superpositions of pairs of atoms will be produced, in this section we will simplify our considerations by only considering one component of this superposition as shown schematically in \figureref{Peaks:CollisionDiagram}(a). The four-wave mixing process producing these atom pairs is different to the usual four-wave mixing process where two atoms with non-zero kinetic energy collide conserving kinetic energy to scatter into different momentum modes. In this experiment two stationary atoms with \emph{zero} initial kinetic energy scatter into modes with \emph{non-zero} momentum. The source of this additional kinetic energy is  a reduction in the mean field interaction energy. As will be shown, in the case of equal scattering lengths the interaction energy either is unchanged by this collision or increases. However, He* has a reduced scattering length for 0--0 collisions as compared to 0--1 and 1--1 collisions, and the interaction energy is \emph{reduced} by the collision.
-
-To see how the interaction energy can be reduced as a result of this collision, consider the simple case of uniform, equal background fields $\Psi$ in the $m_F=1, 0$ internal states in the absence of a trapping potential. The $m_F=-1$ state is neglected as it has negligible density compared to the other states. After the collision, the mean field in each state $\Psi_i'$ is
-\begin{align}
-    \Psi_1' &= \psi' + \delta \psi e^{i \mathbf{k} \cdot \mathbf{x}}   \label{Peaks:MFCollisionT}\\
-    \Psi_0' &= \psi' - \delta \psi e^{-i \mathbf{k} \cdot \mathbf{x}}, \label{Peaks:MFCollisionU}
-\end{align}
-where $\mathbf{k}$ is the wave-vector of the atoms after the collision, $\psi'$ is the mean field of the stationary atoms after the collision and $\delta \psi$ is the mean field of the atoms that have collided. These scattered atoms with momenta $\pm \hbar \mathbf{k}$ will interfere with the background stationary atoms in their respective states. This interference causes density gratings for both the trapped and untrapped internal states,
-\begin{align}
-    \abs{\Psi_1'}^2 &= \abs{\psi'}^2 + \abs{\delta \psi}^2 + 2 \psi'\delta\psi \cos (\mathbf{k}\cdot \mathbf{x})\\
-    \abs{\Psi_0'}^2 &= \abs{\psi'}^2 + \abs{\delta \psi}^2 - 2 \psi'\delta\psi \cos (\mathbf{k}\cdot \mathbf{x}).
-\end{align}
-As the number of atoms in each state is unchanged, the density of each state can be rewritten in terms of the original background mean field $\Psi$ of each state as
-\begin{align}
-    \abs{\Psi_1'}^2 &= \abs{\Psi}^2 + \varepsilon(\mathbf{x})\\
-    \abs{\Psi_0'}^2 &= \abs{\Psi}^2 - \varepsilon(\mathbf{x}),
-\end{align}
-where $\varepsilon(\mathbf{x}) = 2 \psi' \delta\psi \cos (\mathbf{k}\cdot\mathbf{x})$. 
-
-The mean field interaction energy after the collision will be
-\begin{align}
-    \mean{\hat{H}_\text{int}} &= \sum_{i j} U_{ij} \int d\mathbf{x}\, \mean{\hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j \hat{\Psi}_i}\\
-                              &= U \int d\mathbf{x}\, \left(\abs{\Psi_1'}^4 + \kappa \abs{\Psi_0'}^4 + 2 \abs{\Psi_1'}^2\abs{\Psi_0'}^2\right) \\
-                              &= U \int d\mathbf{x}\, \left[ (3+\kappa)\abs{\Psi}^4 + 2 (1 - \kappa) \varepsilon(\mathbf{x}) \abs{\Psi}^2 - (1 - \kappa) \varepsilon^2(\mathbf{x})\right],
-\end{align}
-where $U_{i j} = 4 \pi \hbar^2 a_{i j}/M$ is the nonlinear interaction strength, $a_{i j}$ is the s-wave scattering length between the internal states $i$ and $j$, $U=U_{1 1} = U_{1 0}$ and $\kappa = a_{0 0}/a_{1 1} < 1$. For atoms like Rubidium, $\kappa \approx 1$ and the interaction energy factorises to only depend on the total density, which is unchanged by the collision. However, for metastable Helium $\kappa < 1$ and the interaction energy has reduced as a result of the collision,
-\begin{align}
-    \Delta\mean{\hat{H}_\text{int}} &= U (1-\kappa) \int d\mathbf{x}\, \left[2 \abs{\psi'}^2\varepsilon(\mathbf{x}) - \varepsilon^2(\mathbf{x})\right] \label{Peaks:DeltaInteractionEnergy}
-\end{align}
-as the first term in this expression averages to zero over one period of the density grating, and the second term is always negative, indicating that the interaction energy has \emph{reduced} due to the scattering. 
-
-Performing the integral in \eqref{Peaks:DeltaInteractionEnergy} over some volume gives,
-\begin{align}
-    \Delta \mean{\hat{H}_\text{int}} &= -2 U (1-\kappa) \abs{\psi'}^2 N_\mathbf{k},
-\end{align}
-where $N_\mathbf{k}$ is the number of atoms in the integrated volume in the $m_F=1$ state with momentum $\hbar \mathbf{k}$. Due to conservation of energy, this reduced interaction energy must be balanced by the kinetic energy of the scattered atoms,
-\begin{align}
-    \mean{\hat{T}_1} + \mean{\hat{T}_0} + \Delta \mean{\hat{H}_\text{int}} &= 0 = (2 N_\mathbf{k}) \frac{\hbar^2 \mathbf{k}^2}{2 M} -2 U (1-\kappa) \abs{\psi'}^2 N_\mathbf{k}, \label{Peaks:SimpleEnergyConservation}
-\end{align}
-where $\hat{T}_i$ is the total kinetic energy operator of the $m_F=i$ state. The $2 N_\mathbf{k}$ term in this expression comes from the $N_\mathbf{k}$ atoms in the $m_F=1$ state with momentum $\hbar \mathbf{k}$ and the $N_\mathbf{k}$ atoms in the $m_F=0$ state with momentum $-\hbar \mathbf{k}$. Solving \eqref{Peaks:SimpleEnergyConservation} for the magnitude of the resonant wavenumber $\abs{\mathbf{k}}$ and neglecting the change in the condensate density so that $\abs{\psi'}^2\approx \abs{\Psi}^2$ gives
-\begin{align}
-    \abs{\mathbf{k}_\text{res}} &= \frac{1}{\hbar}\sqrt{2MU\abs{\Psi}^2\left(1-\kappa\right)}.
-\end{align}
-
-
-Generalising this argument to consider different density backgrounds $\Psi_i$ for the $m_F=1, 0$ states yields the wave number corresponding to the energy-momentum resonance of the scattered atoms as
-\begin{align}
-%    \abs{\mathbf{k}} &= \frac{1}{\hbar} \sqrt{2 M U \abs{\psi'}^2(1-\kappa)}
-    \abs{\mathbf{k}_\text{res}} &= \frac{1}{\hbar} \sqrt{2 M U \big(2 \abs{\Psi_1}\abs{\Psi_0} - \abs{\Psi_1}^2 - \kappa \abs{\Psi_0}^2\big)} \label{Peaks:ResonantWavenumber}.
-\end{align}
-This is a different expression to that obtained in the previous section \eqref{Peaks:BogResonantWavenumber}, as in this section it has been assumed that there is an equal density in both $m_F=1, 0$ excitations, an assumption not made in the previous section.
-
-% The two expressions are equal when $\abs{\Psi_1}^2 = \kappa \abs{\Psi_0}^2$ corresponding to no disturbance of the total mean field experienced by the $m_F=0$ state
-
-%The resonant momentum for the gratings in the numerical simulations of $\unit[1.2\times 10^6]{m}^{-1}$ is in excellent agreement with the result given by \eqref{Peaks:ResonantWavenumber} of $\unit[1.3\times 10^6]{m}^{-1}$.
+The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to he instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}

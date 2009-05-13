@@ -72,8 +72,8 @@ With these approximations made, the Hamiltonian for this system is
 \begin{align}
     \label{Peaks:InitialHamiltonian}
     \begin{split}
-    \hat{H} &= \sum_i \int d\mathbf{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{} + \frac{1}{2} \sum_{i j} U_{i j}\int d\mathbf{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{} \hat{\Psi}_i^{}\\
-            &\phantom{=} + \hbar \Omega \int d\mathbf{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
+    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{} \hat{\Psi}_i^{}\\
+            &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
     \end{split}
 \end{align}
 where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is an energy offset which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
@@ -154,41 +154,41 @@ Having assumed the condensate to be homogenous, the system is translation-invari
     \label{Peaks:DeviationOperatorsEvolutionKSpace}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial \delta \hat{\Psi}_1(\mathbf{k})}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\mathbf{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\mathbf{k})\right]\\
-                    & +\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_1(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_0(\mathbf{k})- \mu \delta \hat{\Psi}_1(\mathbf{k}),
+            i \hbar \frac{\partial \delta \hat{\Psi}_1(\bm{k})}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\bm{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\bm{k})\right]\\
+                    & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_1(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_0(\bm{k})- \mu \delta \hat{\Psi}_1(\bm{k}),
         \end{split}\\
         \begin{split}
-        i \hbar \frac{\partial \delta \hat{\Psi}_0(\mathbf{k})}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\mathbf{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\mathbf{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\mathbf{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\mathbf{k})\right]\\
-                    & +\frac{\hbar^2 \mathbf{k}^2}{2M} \delta \hat{\Psi}_0(\mathbf{k}) +\hbar \Omega\delta\hat{\Psi}_1(\mathbf{k}) - \mu \delta\hat{\Psi}_0(\mathbf{k}).
+        i \hbar \frac{\partial \delta \hat{\Psi}_0(\bm{k})}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\bm{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\bm{k})\right]\\
+                    & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_0(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_1(\bm{k}) - \mu \delta\hat{\Psi}_0(\bm{k}).
         \end{split}
     \end{align}
 \end{subequations}
 
-In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\mathbf{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\mathbf{k}),\, \delta\hat{\Psi}_j^\dagger(-\mathbf{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\mathbf{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
+In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\bm{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\bm{k}),\, \delta\hat{\Psi}_j^\dagger(-\bm{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\bm{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
     \label{Peaks:DeviationOperatorsMatrixEvolution}
-    i \hbar \frac{\partial \hat{\Upsilon}(\mathbf{k})}{\partial t} &= \mathcal{H}(\mathbf{k}) \hat{\Upsilon}(\mathbf{k}),
+    i \hbar \frac{\partial \hat{\Upsilon}(\bm{k})}{\partial t} &= \mathcal{H}(\bm{k}) \hat{\Upsilon}(\bm{k}),
 \end{align}
 where
 \begin{align}
-    \hat{\Upsilon}(\mathbf{k}) &= 
+    \hat{\Upsilon}(\bm{k}) &= 
     \begin{pmatrix}
-        \delta\hat{\Psi}_1(\mathbf{k}) &
-        \delta\hat{\Psi}_1^\dagger(-\mathbf{k}) &
-        \delta\hat{\Psi}_0(\mathbf{k}) &
-        \delta\hat{\Psi}_0^\dagger(-\mathbf{k})
+        \delta\hat{\Psi}_1(\bm{k}) &
+        \delta\hat{\Psi}_1^\dagger(-\bm{k}) &
+        \delta\hat{\Psi}_0(\bm{k}) &
+        \delta\hat{\Psi}_0^\dagger(-\bm{k})
     \end{pmatrix}^T,\\
-    \mathcal{H}(\mathbf{k}) &=
+    \mathcal{H}(\bm{k}) &=
     \begin{pmatrix}
-        \varepsilon(\mathbf{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
-        -v_{11}^* & -\varepsilon(\mathbf{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
-        u_{10} + \hbar \Omega & v_{10} & \varepsilon(\mathbf{k}) + q_0 - \mu & \kappa v_{00}\\
-        -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\mathbf{k}) - q_0 + \mu
+        \varepsilon(\bm{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
+        -v_{11}^* & -\varepsilon(\bm{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
+        u_{10} + \hbar \Omega & v_{10} & \varepsilon(\bm{k}) + q_0 - \mu & \kappa v_{00}\\
+        -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\bm{k}) - q_0 + \mu
     \end{pmatrix},\label{Peaks:HMatrix}
 \end{align}
-and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2M}}$.
+and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2M}}$.
 
-If the coefficients of the matrix $\mathcal{H}(\mathbf{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\mathbf{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
+If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 In the limit that all the scattering lengths are the same ($\kappa = 1$), the nonlinear term in \eqref{Peaks:MeanFieldEquationsOfMotion} only contributes to a rotation of the global phase of the spinor condensate. In this case the dynamics can be solved analytically and familiar excitation spectra recovered.
@@ -201,71 +201,73 @@ The general solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1
         \Psi_0(t) &= -i\sin(\Omega t) \Phi_+ + i\cos(\Omega t) \Phi_-,
     \end{align}
 \end{subequations}
-for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a linear basis transformation from $\Psi_i$ to $\Phi_\pm$. Performing this change of basis for both the $\Psi_i$ and $\delta \hat{\Psi}_i$ yields a matrix of precisely the same form as in \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ instead of the $\Psi_i$, and with $\Omega \rightarrow 0$. This new matrix $\mathcal{H}'(\mathbf{k})$ is now time-independent and can be diagonalised to give the eigenvalues
+for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a linear basis transformation from $\Psi_i$ to $\Phi_\pm$. Performing this change of basis for both the $\Psi_i$ and $\delta \hat{\Psi}_i$ yields a matrix of precisely the same form as in \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ instead of the $\Psi_i$, and with $\Omega \rightarrow 0$. This new matrix $\mathcal{H}'(\bm{k})$ is now time-independent and can be diagonalised to give the eigenvalues
 \begin{subequations}
     \label{Peaks:Kappa1Eigenvalues}
     \begin{align}
-        \hbar \omega_\uparrow(\mathbf{k}) &= \sqrt{\varepsilon(\mathbf{k})\left(\varepsilon(\mathbf{k}) + 2 n U\right)},\\
-        \hbar \omega_\downarrow(\mathbf{k}) &= \varepsilon(\mathbf{k}),
+        \hbar \omega_\uparrow(\bm{k}) &= \sqrt{\varepsilon(\bm{k})\left(\varepsilon(\bm{k}) + 2 n U\right)},\\
+        \hbar \omega_\downarrow(\bm{k}) &= \varepsilon(\bm{k}),
     \end{align}
 \end{subequations}
-where $\displaystyle\varepsilon(\mathbf{k}) = \frac{\hbar^2\mathbf{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\mathbf{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\mathbf{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
+where $\displaystyle\varepsilon(\bm{k}) = \frac{\hbar^2\bm{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\bm{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\bm{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
 
 The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is
 \begin{align}
-    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\mathbf{k}\, \hbar \omega_i(\mathbf{k}) \hat{\Lambda}_i^\dagger(\mathbf{k}) \hat{\Lambda}_i(\mathbf{k}),
+    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\bm{k}\, \hbar \omega_i(\bm{k}) \hat{\Lambda}_i^\dagger(\bm{k}) \hat{\Lambda}_i(\bm{k}),
 \end{align}
-where the $\hat{\Lambda}_{\uparrow,\downarrow}(\mathbf{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\mathbf{k})$.
+where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\bm{k})$.
 
 \subsection{Determining the instabilities of a condensate with temporal periodicity}
 % Not brilliant, but better than 'Instabilities in your condensate', which was the previous title.
 
 Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
 
-In the general case, the excitation spectrum cannot be obtained from the eigenvalues of the matrix $\mathcal{H}(\mathbf{k})$ in \eqref{Peaks:HMatrix} as the matrix's entries are  themselves time-dependent. However, due to the periodicity of the mean-field wavefunctions demonstrated in \sectionref{Peaks:MeanFieldPeriodicity}, the entries of $\mathcal{H}(\mathbf{k})$ are themselves periodic, which enables Floquet's theorem to be applied.
+In the general case, the excitation spectrum cannot be obtained from the eigenvalues of the matrix $\mathcal{H}(\bm{k})$ in \eqref{Peaks:HMatrix} as the matrix's entries are  themselves time-dependent. However, due to the periodicity of the mean-field wavefunctions demonstrated in \sectionref{Peaks:MeanFieldPeriodicity}, the entries of $\mathcal{H}(\bm{k})$ are themselves periodic, which enables Floquet's theorem to be applied.
 
 Floquet's theorem proves that the matrix solution to the initial-value problem
 \begin{subequations}
     \label{Peaks:FloquetMatrixIVP}
     \begin{align}
-        \dot{\Pi}(t) &= A(t) \Pi(t),\\
-        \Pi(0) &= \mathbb{I},
+        \frac{d\bm{\Pi}(t)}{dt} &= \bm{A}(t) \bm{\Pi}(t),\\
+        \bm{\Pi}(0) &= \mathbb{I},
     \end{align}
 \end{subequations}
-where $\mathbb{I}$ is the $n \times n$ identity matrix and $A(t)$ a periodic $n \times n$ matrix with period $T$ can be written in the form
+where $\mathbb{I}$ is the $n \times n$ identity matrix and $\bm{A}(t)$ a periodic $n \times n$ matrix with period $T$ can be written in the form
 \begin{align}
-    \Pi(t) = P(t) \exp(Q t),
+    \bm{\Pi}(t) = \bm{P}(t) \exp(\bm{Q} t),
 \end{align}
-for some constant matrix $Q$ and $P(t)$ a matrix function with period $T$ and $P(0) = \mathbb{I}$. The matrix solution $\Pi(t)$ is the general solution to the related linear system
-\begin{subequations}
+for some constant matrix $\bm{Q}$ and $\bm{P}(t)$ a matrix function with period $T$ and $\bm{P}(0) = \mathbb{I}$. The matrix solution $\bm{\Pi}(t)$ is the general solution to the related linear system
+\begin{align}
+    \frac{d\bm{x}(t)}{dt} &= \bm{A}(t) \bm{x}(t),
     \label{Peaks:FloquetVectorIVP}
-    \begin{align}
-        \dot{x}(t) &= A(t) x(t),\\
-        x(0) &= x_0,
-    \end{align}
-\end{subequations}
-as every solution $x(t)$ to this problem is given by
-\begin{align}
-    x(t) &= \Pi(t) x_0.
 \end{align}
-
-The eigenvalues of $Q$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
+for any initial condition $\bm{x}(0)$ where $\bm{x}(t)$ is a vector. Every solution $\bm{x}(t)$ to this problem can be written in terms of the matrix $\bm{\Pi}(t)$ as
 \begin{align}
-    \mathcal{M} &= \Pi(T) = \exp(Q T),
+    \bm{x}(t) &= \bm{\Pi}(t) \bm{x}(0),
 \end{align}
-where $P(T) = P(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\mathbf{k})$ that we wish to calculate.
+as is easily verified. The matrix solution $\bm{\Pi}(t)$ thus completely determines the behaviour of all solutions to \eqref{Peaks:FloquetVectorIVP}.
 
-The procedure to find the Floquet exponents for $\mathcal{H}(\mathbf{k})$, and hence the stability of the condensate to excitations is as follows:
+The eigenvalues of $\bm{Q}$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
+\begin{align}
+    \mathcal{M} &= \bm{\Pi}(T) = \exp(\bm{Q} T),
+\end{align}
+where $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate.
+
+The procedure to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is as follows:
 \begin{enumerate}
     \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
-    \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic\footnote{FIXME: Will need a graph to make this step clear.}.
-    \item Using the calculated period and chemical potential, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $k = \abs{\mathbf{k}}$ to obtain the monodromy matrix $\mathcal{M}(k)$.
+    \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform} and \sectionref{Peaks:ExperimentEigenvalues} for more details).
+    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $k = \abs{\bm{k}}$ to obtain the monodromy matrix $\mathcal{M}(k)$.
     \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(k)$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$.
 \end{enumerate}
 % While it may seem odd to have an enumerated list of steps here, I think it actually is clearer presented in this form. Where necessary, each step can then be expanded upon in detail.
 
 \subsection{Instabilities in the `Peaks' experiment}
+\label{Peaks:ExperimentEigenvalues}
 The procedure described in the previous section will now be used to determine the excitation spectrum and stability of the condensate to excitations for the parameters corresponding to the experiment detailed in \sectionref{Peaks:ExperimentalSetup}.
+
+
+
 
 This section will perform the final simulations, examine the results, compare to a 1D TW simulation for a homogenous trap. Then we will lead in to the next section on the full 3D calculation and the techniques involved. I may need to write a section on the absorbing boundary condition (for an earlier general theory chapter).
 
@@ -277,10 +279,10 @@ This section will perform the final simulations, examine the results, compare to
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{MeanFieldFourierTransform}
-    \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the simulated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion}. The frequency $\nu_0$ is the inverse period of the physical state represented by the mean field, and $\mu/h$ is .}
+    \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the calculated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion} for the centre of the condensate defined by the experimental parameters given in \tableref{Peaks:ExperimentalParameters}. The frequency $\nu_0$ is the inverse period of the system, and the choice of $\mu/h$ shown will cancel the global phase rotation. The parameters determined from this plot are $\nu_0 = \unit[6.65]{kHz}$, $\mu/h = \unit[1.78]{kHz}$. This gives the period to be $T=\unit[150]{\micro{}s}$.}
 \end{figure}
 
-The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to he instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}
+The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to the instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}

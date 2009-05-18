@@ -66,7 +66,7 @@ This effect is due to the significantly different scattering lengths between the
 
 The simplified model to be considered is that of a homogenous spinor condensate consisting of two levels with Rabi oscillations coupling the two levels. The approximation that the condensate is homogenous (known as the local density approximation \cite{Stamper-Kurn:1999,Zambelli:2000}) is justified if the excitations under considerations have wavelengths much smaller than the Thomas-Fermi radius in that dimension. The local density approximation will hold for this system along the axial direction as the axial momentum of the features observed in \figureref{Peaks:ExperimentalResults} corresponds to an excitation wavelength of $\sim \unit[5]{\micro m}$, significantly smaller than the Thomas-Fermi radius in the axial direction of $z_\text{TF} = \unit[175]{\micro m}$. 
 
-The second approximation made in this model is to neglect the antitrapped state $m_F=-1$. Any density in this state leaves the condensate very rapidly due to the combined effects of both the mean-field repulsion and the magnetic field gradient. A classical particle in the centre of the condensate under the influence of the same effective potential experienced by the $m_F=-1$ atoms would leave the condensate in $\sim \unit[80]{\micro s}$, significantly shorter than the inverse Rabi frequency of $\sim \unit[300]{\micro s}$.
+The second approximation made in this model is to neglect the antitrapped state $m_F=-1$. Any density in this state leaves the condensate very rapidly due to the combined effects of both the mean-field repulsion and the magnetic field gradient. A classical particle in the centre of the condensate under the influence of the same effective potential experienced by the $m_F=-1$ atoms would reach a momentum equal to the momentum width of the condensate (and hence no longer be able to couple to the stationary atoms in the middle of the condensate) in $\sim\unit[80]{\micro s}$, significantly shorter than the inverse Rabi frequency of $\sim \unit[300]{\micro s}$.
 
 With these approximations made, the Hamiltonian for this system is
 \begin{align}
@@ -167,18 +167,18 @@ Having assumed the condensate to be homogenous, the system is translation-invari
 In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\bm{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\bm{k}),\, \delta\hat{\Psi}_j^\dagger(-\bm{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\bm{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
     \label{Peaks:DeviationOperatorsMatrixEvolution}
-    i \hbar \frac{\partial \hat{\Upsilon}(\bm{k})}{\partial t} &= \mathcal{H}(\bm{k}) \hat{\Upsilon}(\bm{k}),
+    i \hbar \frac{\partial \hat{\bm{\Upsilon}}(\bm{k})}{\partial t} &= \mathcal{H}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}),
 \end{align}
 where
 \begin{align}
-    \hat{\Upsilon}(\bm{k}) &= 
+    \hat{\bm{\Upsilon}}(\bm{k}) &= 
     \begin{pmatrix}
         \delta\hat{\Psi}_1(\bm{k}) &
         \delta\hat{\Psi}_1^\dagger(-\bm{k}) &
         \delta\hat{\Psi}_0(\bm{k}) &
         \delta\hat{\Psi}_0^\dagger(-\bm{k})
     \end{pmatrix}^T,\\
-    \mathcal{H}(\bm{k}) &=
+    \mathcal{H}(\bm{k}) &= 
     \begin{pmatrix}
         \varepsilon(\bm{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
         -v_{11}^* & -\varepsilon(\bm{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
@@ -188,7 +188,7 @@ where
 \end{align}
 and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2M}}$.
 
-If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
+If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable\footnote{FIXME: Do these statements need more detail? Including it would detract from overall flow though.}. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 \label{Peaks:Kappa1Limit}
@@ -218,7 +218,7 @@ The Hamiltonian for the condensate excitations that corresponds to the eigenvalu
 \end{align}
 where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\bm{k})$.
 
-\subsection{Determining the instabilities of a condensate with temporal periodicity}
+\subsection{Floquet's theorem}
 % Not brilliant, but better than 'Instabilities in your condensate', which was the previous title.
 
 Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
@@ -253,9 +253,9 @@ The eigenvalues of $\bm{Q}$ are known as \emph{Floquet exponents} (or \emph{char
     \label{Peaks:MonodromyMatrix}
     \mathcal{M} &= \bm{\Pi}(T) = \exp(\bm{Q} T),
 \end{align}
-where $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The Floquet exponents $\xi_i$ can be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate in order to determine the stability of the condensate to excitations.
+as $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The existence and uniqueness of the solution to \eqref{Peaks:FloquetMatrixIVP} guarantees that $\bm{\Pi}(t)$ and hence $\mathcal{M}$ will be invertible. The Floquet exponents $\xi_i$ can therefore be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(\xi_i T)$. It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate in order to determine the stability of the condensate to excitations.
 
-\subsection{Instabilities in the `Peaks' experiment}
+\subsection{Determination of the dynamical instabilities}
 \label{Peaks:ExperimentEigenvalues}
 
 The method outlined in the previous section for determining the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ requires knowledge of its period $T$, and hence the period of the mean field dynamics given by \eqref{Peaks:MeanFieldEquationsOfMotion}. Although this period cannot be determined analytically, it can be found numerically.
@@ -277,28 +277,6 @@ The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourier
 
 The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, the solutions for the Floquet exponents $\xi_i(\bm{k}) = \gamma_i(\bm{k}) + i\omega(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}. 
 
-The temporal periodicity of the system implies that the imaginary components $\omega_i(\bm{k})$ of the Floquet exponents are only uniquely defined modulo $2\pi \nu_0$ (see \figureref{Peaks:CondensateEigenvalues}(a)). This is because any eigenvalue $\lambda$ of the monodromy matrix $\mathcal{M}(\bm{k})$ corresponds to infinitely many Floquet exponents,
-\begin{align}
-    \label{Peaks:AmbiguityFloquetExponent}
-    \lambda = \exp\left[\left(\gamma + i\omega + i 2 \pi n \nu_0\right)T\right] = \exp\left[\left(\gamma + i \omega\right)T\right].
-\end{align}
-This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
-
-Although one might like to associate the normalised eigenvectors of the system with boson annihilation operators for condensate quasiparticles as was done in \sectionref{Peaks:Kappa1Limit}, this cannot be done when the Floquet exponents have a nonzero real part $\gamma_i(\bm{k})$.
-
-The negative real parts of the Floquet exponents in \figureref{Peaks:CondensateEigenvalues}(b) for some values of $k$ might suggest that there should be modes with both exponential growth and exponential decay. However direct interpretation of the real parts of the Floquet exponents corresponding to growth rates for corresponding modes isn't possible as the corresponding eigenvectors do not obey boson commutation relations. To permit 
-
-to the Floquet exponents might suggest to one that there will be modes experiencing exponential decay. However direct interpretation of the Floquet exponents as 
-
-The direct interpretation of the values for $\gamma_i(\bm{k})$ must be handled with some care as the corresponding eigenvectors cannot be interpreted as annihilation or creation operators for condensate quasiparticles. To permit such an interpretation, linear combinations of the eigenvectors must be formed to enable the construction of a Hamiltonian that admits physical interpretation in terms of quasiparticles. This can be done \citep{Leonhardt:2003} giving a Hamiltonian of form
-\begin{align}
-    \begin{split}
-        \hat{H} =& \int d\bm{k}\, \hbar \omega(\bm{k}) \left(\hat{\Lambda}_\uparrow^\dagger(\bm{k})\hat{\Lambda}_\uparrow(\bm{k}) - \hat{\Lambda}_\downarrow^\dagger(\bm{k})\hat{\Lambda}_\downarrow(\bm{k}) \right)\\
-                &+ \int d \bm{k}\, i \hbar \gamma(\bm{k}) \left(\hat{\Lambda}_\uparrow(\bm{k})\hat{\Lambda}_\downarrow(\bm{k}) - \hat{\Lambda}_\uparrow^\dagger(\bm{k})\hat{\Lambda}_\downarrow^\dagger(\bm{k})\right).
-    \end{split}
-\end{align}
-
-
 \begin{figure}
     \centering
     \includegraphics[height=19cm]{CondensateEigenvalues}
@@ -309,16 +287,60 @@ The direct interpretation of the values for $\gamma_i(\bm{k})$ must be handled w
         Lower figure (c) shows the results of a 1D truncated Wigner simulation corresponding to the system under consideration in (a) and (b). The truncated Wigner simulation exhibits growth in the same modes predicted from the results of the perturbative analysis shown in (b). The truncated Wigner results shown are the average of 500 paths.}
 \end{figure}
 
+The temporal periodicity of the system implies that the imaginary components $\omega_i(\bm{k})$ of the Floquet exponents are only uniquely defined modulo $2\pi \nu_0$ (see \figureref{Peaks:CondensateEigenvalues}(a)). This is because any eigenvalue $\lambda$ of the monodromy matrix $\mathcal{M}(\bm{k})$ corresponds to infinitely many Floquet exponents,
+\begin{align}
+    \label{Peaks:AmbiguityFloquetExponent}
+    \lambda = \exp\left[\left(\gamma + i\omega + i 2 \pi n \nu_0\right)T\right] = \exp\left[\left(\gamma + i \omega\right)T\right].
+\end{align}
+This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
 
+The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these exponents a bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed which evolves as
+\begin{align}
+    \label{Peaks:DynamicalInstability}
+    \hat{\Lambda}(\pm\bm{k}, nT) &= e^{\pm i n\omega T} \left( \sinh(n\gamma T) \hat{\Lambda}^\dagger(\mp\bm{k}, 0) + \cosh(n\gamma T) \hat{\Lambda}(\pm\bm{k}, 0)\right),
+\end{align}
+where $n$ is a positive integer. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
 
-In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is as follows:
+\parasep
+
+In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is:
 \begin{enumerate}
     \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
     \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
     \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$.
     \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}).
 \end{enumerate}
-% While it may seem odd to have an enumerated list of steps here, I think it actually is clearer presented in this form. Where necessary, each step can then be expanded upon in detail.
+
+\subsection{Discussion of the dynamical instabilities}
+
+The evolution of the dynamical instability $\hat{\Lambda}(\bm{k})$ given by \eqref{Peaks:DynamicalInstability} is equivalent to that of the non-degenerate parametric amplifier \citep{WallsMilburn}, which is a model for the parametric down-conversion of light by a non-linear crystal. In parametric down-conversion, two EPR\footnote{FIXME: EPR entanglement will need to be defined somewhere} entangled photons are produced at frequencies $\omega_1$ and $\omega_2$ with growth rate $\gamma$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$. Analogously, in the case of the He* BEC discussed at the start of this chapter the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \bm{k})$ modes. As will be shown, these spontaneously-formed $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b).
+
+\figureref{Peaks:CondensateEigenvalues} indicates that the $\hat{\Lambda}(\bm{k})$ quasiparticles have the correct qualitative properties to cause the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). These excitations can only be formed when the wavelength of the excitation is significantly smaller than either of the Thomas-Fermi radii, or equivalently only for wavenumbers significantly greater than $k_z=\unit[3.6\times 10^4]{m}^{-1}$ in the weak trapping dimension and $k_\rho=\unit[6.7\times 10^5]{m}^{-1}$ in the tight trapping dimensions. 
+
+As a result, even the lowest significant dynamical instability in \figureref{Peaks:CondensateEigenvalues} located between $\unit[7.5 \times 10^5]{m}^{-1} < k < \unit[9 \times 10^5]{m}^{-1}$ has a wavelength too long for an excitation in the radial trapping direction to be formed.
+
+
+Not only can these excitations be formed with negligible energy but non-zero momentum, but for this momentum to be large enough to have a corresponding wavelength smaller than either of the Thomas-Fermi radii, there must be significant density in the $m_F=0$ state. In the case of weak outcoupling Rabi frequencies as in \figureref{Peaks:ExperimentalResults}(a), the $m_F=0$ state will be negligibly occupied preventing the formation of these quasiparticles, hence causing no additional structure to be observed experimentally. For strong outcoupling as in \figureref{Peaks:ExperimentalResults}(b), the density will Rabi-flop between the $m_F=1$ and $m_F=0$ states causing there to be at various times significant density in the $m_F=0$ state that will enable the formation of high-momentum $E_-$ quasiparticles.  However, the largest possible momentum of these quasiparticles corresponds to a wavelength of the order of the Thomas-Fermi radius in the tight trapping dimension, but much smaller than the Thomas-Fermi radius in the weak-trapping dimension. Hence these quasiparticles can only be formed along the weak trapping dimension, eventually giving rise to the observed peaks. This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as illustrated in \figureref{Peaks:ResonantMomentumGrowthRates}. For BECs using alkali atoms, $\kappa \approx 1$ preventing the effect from being observed as the resonant momentum would correspond to a wavelength larger than the Thomas-Fermi radius.
+
+Although the spontaneous formation of quasiparticles with momentum $\hbar \mathbf{k}_\text{res}$ would conserve energy, it would not conserve momentum. Instead the energy-momentum resonance must be the spontaneous formation of \emph{two} quasiparticles with momentum $\pm \hbar \mathbf{k}_\text{res}$ such as by a four-wave mixing process. Such processes are known to give rise to EPR entanglement between the excitations. This may lead to entanglement between atoms on opposing points of the cones in \figureref{Peaks:Schematic}, but due to the output dynamics and the vertical integration of the detection scheme, this would be difficult to measure. However, number difference squeezing between the opposing peaks should be far more robust.
+
+Verification that the $\hat{\Upsilon}\pm$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation to be discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the neglect of the vacuum fluctuations which are critical to all spontaneous processes. Before discussing the full quantum field calculation, we will first consider a more simplistic model for the formation of the quasiparticles in order to arrive at a more qualitative understanding of the system.
+
+
+
+It is to be observed that the hyperbolic trigonometric functions in \eqref{Peaks:DynamicalInstability} represent that the condensate has a dynamical instability corresponding to the mode $\hat{\Lambda}(\bm{k})$.
+
+The mode $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate due to its exponential growth. 
+
+The exponential growth in the mode $\hat{\Lambda}(\bm{k})$ 
+
+The mode $\hat{\Lambda}(\bm{k})$ therefore represents a dya
+
+
+This evolution has the same form as that for the non-degenerate parametric amplifier \citep{WallsMilburn}, which is known to generate EPR entanglement between the modes $\hat{\Lambda}(\pm \bm{k})$.
+
+
+Note that this is a dynamical instability; what we were looking for. Not only that, it is of a form that is known to generate EPR entanglement. The results agree with experiment.
 
 The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to the instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}
 

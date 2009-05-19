@@ -1,6 +1,6 @@
 \chapter{On the production of entangled beams from a metastable Helium BEC}
 \label{Peaks}
-\graphicspath{{Figures/Peaks/}}
+\graphicspath{{Figures/Peaks/}{Figures/Common/}}
 
 The results presented in this chapter have been published in \citet{Dall:2009}. All of the theoretical work in this paper except as noted in this chapter was my own work.
 
@@ -218,7 +218,7 @@ The Hamiltonian for the condensate excitations that corresponds to the eigenvalu
 \end{align}
 where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\bm{k})$.
 
-\subsection{Floquet's theorem}
+\subsection[Floquet's theorem]{Floquet's theorem\footnote{FIXME: Add a citation of a textbook here.}}
 % Not brilliant, but better than 'Instabilities in your condensate', which was the previous title.
 
 Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
@@ -294,12 +294,14 @@ The temporal periodicity of the system implies that the imaginary components $\o
 \end{align}
 This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
 
-The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these exponents a bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed which evolves as
+The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
 \begin{align}
     \label{Peaks:DynamicalInstability}
     \hat{\Lambda}(\pm\bm{k}, nT) &= e^{\pm i n\omega T} \left( \sinh(n\gamma T) \hat{\Lambda}^\dagger(\mp\bm{k}, 0) + \cosh(n\gamma T) \hat{\Lambda}(\pm\bm{k}, 0)\right),
 \end{align}
 where $n$ is a positive integer. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+
+The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:DynamicalInstability} only while the unstable modes have a small occupation compared to the condensate, and scattering between the unstable modes can be neglected. \figureref{Peaks:CondensateEigenvalues}(c) shows the results of a Truncated Wigner simulation of the Hamiltonian \eqref{Peaks:InitialHamiltonian}, which is in excellent agreement with the location of the dynamical instabilities as determined by the Floquet exponents [see \figureref{Peaks:CondensateEigenvalues}(b)]. For later times, there is an additional mode undergoing growth, $k \approx \unit[7.5\times 10^5]{m}^{-1}$. This mode is the result of scattering between the dynamical instabilities, a process neglected the perturbative approach taken in this section.
 
 \parasep
 
@@ -314,6 +316,8 @@ In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\b
 \subsection{Discussion of the dynamical instabilities}
 
 The evolution of the dynamical instability $\hat{\Lambda}(\bm{k})$ given by \eqref{Peaks:DynamicalInstability} is equivalent to that of the non-degenerate parametric amplifier \citep{WallsMilburn}, which is a model for the parametric down-conversion of light by a non-linear crystal. In parametric down-conversion, two EPR\footnote{FIXME: EPR entanglement will need to be defined somewhere} entangled photons are produced at frequencies $\omega_1$ and $\omega_2$ with growth rate $\gamma$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$. Analogously, in the case of the He* BEC discussed at the start of this chapter the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \bm{k})$ modes. As will be shown, these spontaneously-formed $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b).
+
+
 
 \figureref{Peaks:CondensateEigenvalues} indicates that the $\hat{\Lambda}(\bm{k})$ quasiparticles have the correct qualitative properties to cause the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). These excitations can only be formed when the wavelength of the excitation is significantly smaller than either of the Thomas-Fermi radii, or equivalently only for wavenumbers significantly greater than $k_z=\unit[3.6\times 10^4]{m}^{-1}$ in the weak trapping dimension and $k_\rho=\unit[6.7\times 10^5]{m}^{-1}$ in the tight trapping dimensions. 
 
@@ -342,7 +346,6 @@ This evolution has the same form as that for the non-degenerate parametric ampli
 
 Note that this is a dynamical instability; what we were looking for. Not only that, it is of a form that is known to generate EPR entanglement. The results agree with experiment.
 
-The following is taken verbatim from \citep{Leonhardt:2003}. \emph{Due to the instability of the condensate, pairs of elementary excitations are spontaneously generated at the rates $\gamma_n$, and so the noncondensed part grows at the expense of the condensate. Of course, the Hamiltonian describes the correct dynamics only for short times, as long as the growing excitations are still small compared with the condensate. Furthermore, the backaction of the noncondensed part onto the condensate ought to be taken into account, affecting the growth rates $\gamma_n$ and the frequencies $\omega_n$. The instability causes the condensate to dissolve. Nevertheless, the atoms may settle afterwards to constitute a new condensate with a stable macroscopic wave function, as happens in vortex nucleation.}
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}

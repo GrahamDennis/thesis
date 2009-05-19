@@ -1,5 +1,83 @@
-\chapter{Peaks Appendix}
+\chapter{Elementary excitations of temporally periodic Hamiltonians}
 \label{PeaksAppendix}
 \graphicspath{{Figures/PeaksAppendix/}{Figures/Common/}}
 
-Details of the peaks operators, requirements on eigenvalues. A similar discussion to \citep{Leonhardt:2003}.
+The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before \citep{Leonhardt:2003}. In this appendix, the methods discussed in \citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
+
+Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{FIXME: Probably need to add the argument that the Fourier transform must be of this form. It is simply a momentum conservation argument.},
+\begin{subequations}
+    \label{PeaksAppendix:MatrixOperatorEvolution}
+    \begin{align}
+        i \hbar \frac{\partial \hat{\bm{\Upsilon}}(\bm{k}, t)}{\partial t} &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t),\\
+        \hat{\bm{\Upsilon}}(\bm{k}, t) &= 
+        \begin{pmatrix}
+            \hat{\phi}_1(\bm{k}, t) &
+            \hat{\phi}_1^\dagger(-\bm{k}, t) &
+            \hat{\phi}_2(\bm{k}, t) &
+            \hat{\phi}_2^\dagger(-\bm{k}, t) &
+            \dots
+        \end{pmatrix}^T,
+    \end{align}
+\end{subequations}
+where the matrix $\mathcal{H}(\bm{k}, t)$ obeys
+\begin{align}
+        \mathcal{H}(\bm{k}, t+T) &= \mathcal{H}(\bm{k}, t),\\
+        \mathcal{H}(\bm{k}, t) &= \mathcal{H}(-\bm{k}, t),
+\end{align}
+where the last equality holds because $\hat{H}(t)$ is isotropic.
+
+If the Hamiltonian $\hat{H}(t)$ were not time-dependent, it could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\bm{k})$ and corresponding operators $\hat{Q}_j(\bm{k}, t)$ which would evolve as
+\begin{align}
+    \label{PeaksAppendix:ContinouousTimeEigenoperators}
+    i \hbar \frac{\partial \hat{Q}_j(\bm{k}, t)}{\partial t} &= \hbar \Omega_j(\bm{k}) \hat{Q}_j(\bm{k}, t),
+\end{align}
+where the $\hat{Q}_j(\bm{k}, t)$ need not obey boson commutation relations.
+
+In the case of a periodic matrix $\mathcal{H}(\bm{k}, t)$ it is instead the monodromy matrix $\mathcal{M}(\bm{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\bm{k})$ satisfies
+\begin{align}
+    \label{PeaksAppendix:MonodromyMatrix}
+    \hat{\bm{\Upsilon}}(\bm{k}, nT) &= \mathcal{M}(\bm{k})^n \hat{\bm{\Upsilon}}(\bm{k}, 0),
+\end{align}
+where $n$ is a positive integer. In place of \eqref{PeaksAppendix:ContinouousTimeEigenoperators} we seek the operators $\hat{Q}_j(\bm{k}, t)$ that obey
+\begin{align}
+    \label{PeaksAppendix:QOperatorEvolution}
+    \hat{Q}_j(\bm{k}, T) &= \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, 0),
+\end{align}
+where the $\hat{Q}_j(\bm{k}, t)$ are defined by
+\begin{align}
+    \label{PeaksAppendix:QOperatorDefinition}
+    \hat{Q}_j(\bm{k}, t) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, t),
+\end{align}
+for some vectors $\bm{c}_j(\bm{k})$, where $\bm{c}_j^\dagger(\bm{k})$ denotes the conjugate transpose. 
+
+Using definitions \eqref{PeaksAppendix:MonodromyMatrix}--\eqref{PeaksAppendix:QOperatorDefinition}, it follows that the $\lambda_j(\bm{k})$ and $\bm{c}_j^\dagger(\bm{k})$ are respectively the eigenvalues and left eigenvectors of $\mathcal{M}(\bm{k})$,
+\begin{align}
+    \hat{Q}_j(\bm{k}, T) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, T) = \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) = \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0) = \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, t).
+\end{align}
+
+The operators $\hat{Q}_j(\bm{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\bm{k}, t)$. As every operator in $\hat{\bm{\Upsilon}}(-\bm{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\bm{\Upsilon}}(\bm{k}, t)$, the $\hat{Q}_j^\dagger(\bm{k}, t)$ can be written as
+\begin{align}
+    \hat{Q}_j^\dagger(\bm{k}, t) &= \bm{d}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(-\bm{k}, t)
+\end{align}
+for some vectors $\bm{d}_j(\bm{k})$. It follows from \eqref{PeaksAppendix:QOperatorEvolution} that the $\hat{Q}_j^\dagger(\bm{k}, t)$ will obey
+\begin{align}
+    \hat{Q}_j^\dagger(\bm{k}, T) &= \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0).
+\end{align}
+
+The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as they are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\bm{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
+\begin{align}
+    \left[ \hat{Q}_i(\bm{k}, T),\, \hat{Q}_j^\dagger(\bm{k}, T) \right] &= \left[ \lambda_i(\bm{k}) \hat{Q}_i(\bm{k}, 0),\, \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0)\right]\\
+        &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
+        \label{PeaksAppendix:InvariantCommutator}
+\end{align}
+For \eqref{PeaksAppendix:InvariantCommutator} to be true, either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute.
+
+
+\section{References to this appendix:}
+
+The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
+\begin{align}
+    \label{Peaks:DynamicalInstability}
+    \hat{\Lambda}(\pm\bm{k}, nT) &= e^{\pm i n\omega T} \left( \sinh(n\gamma T) \hat{\Lambda}^\dagger(\mp\bm{k}, 0) + \cosh(n\gamma T) \hat{\Lambda}(\pm\bm{k}, 0)\right),
+\end{align}
+where $n$ is a positive integer. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.

@@ -58,11 +58,13 @@ These peaks arise from two momentum-correlated cones of particles scattering out
 
 \clearpage
 \section{Condensate excitations in the perturbative regime}
+\label{Peaks:PerturbativeApproach}
 %While the argument in the previous section gives a qualitative explanation for the four-wave mixing process observed in He*, it is not entirely satisfying. In this section an approximate analytic expression for the excited modes of the He* system will be obtained and investigated using Bogoliubov stuff.
 
-The observed peaks in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis.
+The observed peaks in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis. During outcoupling these excitations are accelerated along the tight trapping directions forming the momentum cones pictured in \figureref{Peaks:Schematic}. The detection process vertically integrates this momentum profile leading to the observed peaks in \figureref{Peaks:ExperimentalResults}.
 % The background halo between these peaks and the usual atom laser profile is the result of (at higher detunings resonant momentum will vary across surfaces, during this initial switch-on phase, a range of momenta are excited)\footnote{FIXME: Complete and correct this sentence.}.
-This effect is due to the significantly different scattering lengths between the Zeeman levels of He*. In a later section a full multimode quantum-field calculation will be discussed and its results presented, but it is enlightening to first consider a simplified model in which the energy spectrum (and stability) of small excitations to the condensate can be obtained.
+
+The dynamical instability is due to the significantly different scattering lengths between the Zeeman levels of He*. In a later section a full multimode quantum-field calculation will be discussed and its results presented, but it is enlightening to first consider a simplified model in which the energy spectrum (and stability) of small excitations to the condensate can be obtained.
 
 The simplified model to be considered is that of a homogenous spinor condensate consisting of two levels with Rabi oscillations coupling the two levels. The approximation that the condensate is homogenous (known as the local density approximation \cite{Stamper-Kurn:1999,Zambelli:2000}) is justified if the excitations under considerations have wavelengths much smaller than the Thomas-Fermi radius in that dimension. The local density approximation will hold for this system along the axial direction as the axial momentum of the features observed in \figureref{Peaks:ExperimentalResults} corresponds to an excitation wavelength of $\sim \unit[5]{\micro m}$, significantly smaller than the Thomas-Fermi radius in the axial direction of $z_\text{TF} = \unit[175]{\micro m}$. 
 
@@ -220,6 +222,7 @@ where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation r
 
 \subsection[Floquet's theorem]{Floquet's theorem\footnote{FIXME: Add a citation of a textbook here.}}
 % Not brilliant, but better than 'Instabilities in your condensate', which was the previous title.
+\label{Peaks:FloquetsTheorem}
 
 Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
 
@@ -305,7 +308,7 @@ The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:Dy
 
 \parasep
 
-In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is:
+In summary, the procedure used to find the Floquet exponents of $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is:
 \begin{enumerate}
     \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
     \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
@@ -315,37 +318,14 @@ In summary, the procedure used to find the Floquet exponents for $\mathcal{H}(\b
 
 \subsection{Discussion of the dynamical instabilities}
 
-The evolution of the dynamical instability $\hat{\Lambda}(\bm{k})$ given by \eqref{Peaks:DynamicalInstability} is equivalent to that of the non-degenerate parametric amplifier \citep{WallsMilburn}, which is a model for the parametric down-conversion of light by a non-linear crystal. In parametric down-conversion, two EPR\footnote{FIXME: EPR entanglement will need to be defined somewhere} entangled photons are produced at frequencies $\omega_1$ and $\omega_2$ with growth rate $\gamma$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$. Analogously, in the case of the He* BEC discussed at the start of this chapter the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \bm{k})$ modes. As will be shown, these spontaneously-formed $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b).
+The evolution of the dynamical instability $\hat{\Lambda}(\bm{k})$ given by \eqref{Peaks:DynamicalInstability} is equivalent to that of the non-degenerate parametric amplifier \citep{WallsMilburn}, which is a model for the parametric down-conversion of light by a non-linear crystal. In parametric down-conversion, two EPR\footnote{FIXME: EPR entanglement will need to be defined somewhere} entangled photons are produced at frequencies $\omega_1$ and $\omega_2$ with growth rate $\gamma$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$. Analogously, in the case of the He* BEC discussed at the start of this chapter the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \bm{k})$ modes. Although these modes will be entangled upon production, it does not necessarily follow that parts of the outcoupled atom laser will be entangled; the entangled $\hat{\Lambda}(\bm{k})$ modes are each superpositions of $m_F=1$ and $m_F=0$ states, but only the $m_F=0$ atoms can leave the condensate. However, if the $m_F=1$ components of the entangled modes are assumed to be outcoupled faster than the time to reverse their momenta ($\unit[9]{ms}$), then number difference squeezing between the atom laser components with opposite axial momenta may be observed.
 
+These excitations would not necessarily be expected to form along the tight trapping directions. Of the three most unstable modes in \figureref{Peaks:CondensateEigenvalues}, the shortest wavelength for these excitations is $\lambda \approx \unit[3]{\micro m}$ which is not significantly smaller than the Thomas-Fermi radius in this dimension of $\rho_\text{TF} = \unit[9.4]{\micro m}$. Hence the local density approximation will not be satisfied in this dimension. However, as the Thomas-Fermi radius in the axial dimension is $z_\text{TF} = \unit[175]{\micro m}$, the local density approximation will be a good approximation for describing the excitations along that dimension.
 
+This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as no instabilities were found in the $\kappa = 1$ limit (see \sectionref{Peaks:Kappa1Limit}). 
+Consequently, this effect would not be expected to be observed in atoms like $\nucl{87}{}{Rb}$.
 
-\figureref{Peaks:CondensateEigenvalues} indicates that the $\hat{\Lambda}(\bm{k})$ quasiparticles have the correct qualitative properties to cause the peak-like features in the experimental results in \figureref{Peaks:ExperimentalResults}(b). These excitations can only be formed when the wavelength of the excitation is significantly smaller than either of the Thomas-Fermi radii, or equivalently only for wavenumbers significantly greater than $k_z=\unit[3.6\times 10^4]{m}^{-1}$ in the weak trapping dimension and $k_\rho=\unit[6.7\times 10^5]{m}^{-1}$ in the tight trapping dimensions. 
-
-As a result, even the lowest significant dynamical instability in \figureref{Peaks:CondensateEigenvalues} located between $\unit[7.5 \times 10^5]{m}^{-1} < k < \unit[9 \times 10^5]{m}^{-1}$ has a wavelength too long for an excitation in the radial trapping direction to be formed.
-
-
-Not only can these excitations be formed with negligible energy but non-zero momentum, but for this momentum to be large enough to have a corresponding wavelength smaller than either of the Thomas-Fermi radii, there must be significant density in the $m_F=0$ state. In the case of weak outcoupling Rabi frequencies as in \figureref{Peaks:ExperimentalResults}(a), the $m_F=0$ state will be negligibly occupied preventing the formation of these quasiparticles, hence causing no additional structure to be observed experimentally. For strong outcoupling as in \figureref{Peaks:ExperimentalResults}(b), the density will Rabi-flop between the $m_F=1$ and $m_F=0$ states causing there to be at various times significant density in the $m_F=0$ state that will enable the formation of high-momentum $E_-$ quasiparticles.  However, the largest possible momentum of these quasiparticles corresponds to a wavelength of the order of the Thomas-Fermi radius in the tight trapping dimension, but much smaller than the Thomas-Fermi radius in the weak-trapping dimension. Hence these quasiparticles can only be formed along the weak trapping dimension, eventually giving rise to the observed peaks. This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as illustrated in \figureref{Peaks:ResonantMomentumGrowthRates}. For BECs using alkali atoms, $\kappa \approx 1$ preventing the effect from being observed as the resonant momentum would correspond to a wavelength larger than the Thomas-Fermi radius.
-
-Although the spontaneous formation of quasiparticles with momentum $\hbar \mathbf{k}_\text{res}$ would conserve energy, it would not conserve momentum. Instead the energy-momentum resonance must be the spontaneous formation of \emph{two} quasiparticles with momentum $\pm \hbar \mathbf{k}_\text{res}$ such as by a four-wave mixing process. Such processes are known to give rise to EPR entanglement between the excitations. This may lead to entanglement between atoms on opposing points of the cones in \figureref{Peaks:Schematic}, but due to the output dynamics and the vertical integration of the detection scheme, this would be difficult to measure. However, number difference squeezing between the opposing peaks should be far more robust.
-
-Verification that the $\hat{\Upsilon}\pm$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation to be discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the neglect of the vacuum fluctuations which are critical to all spontaneous processes. Before discussing the full quantum field calculation, we will first consider a more simplistic model for the formation of the quasiparticles in order to arrive at a more qualitative understanding of the system.
-
-
-
-It is to be observed that the hyperbolic trigonometric functions in \eqref{Peaks:DynamicalInstability} represent that the condensate has a dynamical instability corresponding to the mode $\hat{\Lambda}(\bm{k})$.
-
-The mode $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate due to its exponential growth. 
-
-The exponential growth in the mode $\hat{\Lambda}(\bm{k})$ 
-
-The mode $\hat{\Lambda}(\bm{k})$ therefore represents a dya
-
-
-This evolution has the same form as that for the non-degenerate parametric amplifier \citep{WallsMilburn}, which is known to generate EPR entanglement between the modes $\hat{\Lambda}(\pm \bm{k})$.
-
-
-Note that this is a dynamical instability; what we were looking for. Not only that, it is of a form that is known to generate EPR entanglement. The results agree with experiment.
-
+Verification that the $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation to be discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the absence of the vacuum fluctuations which are critical to all spontaneous processes.
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}

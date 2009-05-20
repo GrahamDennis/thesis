@@ -16,7 +16,7 @@ Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of 
             \hat{\phi}_2(\bm{k}, t) &
             \hat{\phi}_2^\dagger(-\bm{k}, t) &
             \dots
-        \end{pmatrix}^T,
+        \end{pmatrix}^\text{T},
     \end{align}
 \end{subequations}
 where the matrix $\mathcal{H}(\bm{k}, t)$ obeys
@@ -78,15 +78,51 @@ Generally, the Floquet exponents $\xi_i$ may have a non-zero real component. In 
 
 First, it is noted that if $\lambda_i(\bm{k})$ is an eigenvalue of $\mathcal{M}(\bm{k})$, then from \eqref{PeaksAppendix:QDaggerDefinition}--\eqref{PeaksAppendix:QDaggerEvolution} $\lambda_i^*(\bm{k})$ must be an eigenvalue of $\mathcal{M}(-\bm{k})$. However, from the reflection symmetry of $\mathcal{H}(\bm{k})$ defined by \eqref{PeaksAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\bm{k}) = \mathcal{M}(\bm{k})$ and hence $\lambda_i^*(\bm{k})$ must also be an eigenvalue of $\mathcal{M}(\bm{k})$.
 
-Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ form a complete basis, for every operator there must be at least one other operator with which it does not commute. From \eqref{PeaksAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\bm{k})$ is an eigenvalue,   ${\lambda_i^*(\bm{k})}^{-1}$ must also be an eigenvalue.
+Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ form a complete basis over the same space as the $\hat{\phi}_i^{(\dagger)}(\bm{k}, t)$ which themselves do not all commute, for every operator $\hat{Q}_i(\bm{k}, t)$ there must be at least one other operator with which it does not commute. From \eqref{PeaksAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\bm{k})$ is an eigenvalue,   ${\lambda_i^*(\bm{k})}^{-1}$ must also be an eigenvalue.
 
+Combining these two requirements gives a consistency condition for the eigenvalues of $\mathcal{M}(\bm{k})$: if $\lambda$ is an eigenvalue, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ must all be eigenvalues. These conditions can be met using 1, 2 or 4 distinct eigenvalues of $\mathcal{M}(\bm{k})$.
 
+For the degenerate case in which all of $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are equal, the eigenvalue $\lambda = \pm 1$. The corresponding Floquet exponent is $\xi = 0$ or $\xi = i \pi\nu_0$ where $\displaystyle \nu_0 = T^{-1}$. This is not an interesting case and does not occur in \figureref{Peaks:CondensateEigenvalues}.
 
-\section{References to this appendix}
+There are two ways that two distinct eigenvalues can be used to satisfy the consistency condition for the eigenvalues. The first possibility is that $\lambda = {\lambda^*}^{-1}$ (with $\lambda^*$ being the second eigenvalue). In this case the Floquet exponents are $\xi = \pm i \omega$. In this case, the operators corresponding to the eigenvalues are bosonic annihilation or creation operators as shown above. The second possibility is that $\lambda = \lambda^*$ (with $\lambda^{-1}$ being the second eigenvalue). In this case the Floquet exponents are $\xi = \pm \gamma$ or $\xi = \pm \gamma + i \pi \nu_0$. This situation is seen in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[1.5 \times 10^6]{m}^{-1}$ and $k \approx \unit[2.25 \times 10^6]{m}^{-1}$.
 
-The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
+The final possibility is that four distinct eigenvalues are used to satisfy the consistency condition. In this case the four eigenvalues $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are different and the corresponding Floquet exponents are $\xi = \pm \gamma + i \omega$ and $\xi' = \pm \gamma - i\omega$. It is this situation that occurs in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[0.75 \times 10^6]{m}^{-1}$.
+
+In summary, the Floquet exponents with nonzero real parts come in pairs $\xi(\bm{k}) = \pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the operators corresponding to these pairs of exponents bosonic annihilation and creation operators can be constructed.
+
+Consider the eigenvalues $\displaystyle \lambda = e^{r + i \phi}$ and $\displaystyle \lambda' = e^{-r + i\phi}$, and the corresponding operators $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$. From these operators we define the following two operators which will respectively be shown to be bosonic annihilation and creation operators,
 \begin{align}
-    \label{Peaks:DynamicalInstability}
-    \hat{\Lambda}(\pm\bm{k}, nT) &= e^{\pm i n\omega T} \left( \sinh(n\gamma T) \hat{\Lambda}^\dagger(\mp\bm{k}, 0) + \cosh(n\gamma T) \hat{\Lambda}(\pm\bm{k}, 0)\right),
+    \hat{\Lambda}_1(\bm{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t)\right),\\
+    \hat{\Lambda}_2(\bm{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, t) - \hat{Q}'(\bm{k}, t)\right).
 \end{align}
-where $n$ is a positive integer. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+As $\lambda \lambda'^* = 1$, $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'^\dagger(\bm{k}, t)$ will not commute. By appropriate rescaling of the operators, we can define their commutator to be
+\begin{align}
+    \left[ \hat{Q}(\bm{k}, t),\, \hat{Q}'^\dagger(\bm{k}, t) \right] &= 1.
+\end{align}
+This choice then defines the value of the other nonzero commutator,
+\begin{align}
+    \left[ \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) \right] &= 1.
+\end{align}
+
+From these two commutators it can then be shown that $\hat{\Lambda}_1(\bm{k}, t)$ obeys the commutation relations appropriate for an annihilation operator, while $\hat{\Lambda}_2(\bm{k}, t)$ obeys the commutation relations for a creation operator. For example,
+\begin{align}
+    \left[\hat{\Lambda}_1(\bm{k}, t),\, \hat{\Lambda}_1^\dagger(\bm{k}, t) \right] &= \frac{1}{2} \left[ \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) + \hat{Q}'^\dagger(\bm{k}, t)\right] = 1.
+\end{align}
+
+Defining $\hat{\Lambda}_1'(-\bm{k}, t) = \hat{\Lambda}_2^\dagger(\bm{k}, t)$, the evolution of the operators $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(\bm{k}, t)$ can now be determined. $\hat{\Lambda}_1(\bm{k}, t)$ evolves as
+\begin{align}
+    \hat{\Lambda}_1(\bm{k}, nT) &= \frac{1}{\sqrt{2}} \left(\hat{Q}(\bm{k}, nT) + \hat{Q}'(\bm{k}, nT) \right) \\
+        &= \frac{1}{\sqrt{2}} \left( e^{nr + i n\phi} \hat{Q}(\bm{k}, 0) + e^{-nr + i n \phi}\hat{Q}'(\bm{k}, 0)\right) \\
+        \begin{split}
+            &=  e^{i n \phi} \left[ \frac{1}{2}\left( e^{nr} - e^{-nr}\right)\frac{1}{\sqrt{2}}\left(\hat{Q}(\bm{k}, 0) - \hat{Q}'(\bm{k}, 0) \right) \right.\\
+            &\relphantom{=}\left. + \frac{1}{2} \left( e^{nr} + e^{-nr}\right)\frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, 0) + \hat{Q}'(\bm{k}, 0)\right)\right]
+        \end{split}\\
+        &= e^{i n \omega T} \left( \sinh(n\gamma T) \hat{\Lambda}_1'^\dagger(-\bm{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1(\bm{k}, 0)\right), \label{PeaksAppendix:LambdaOperatorEvolution}
+\end{align}
+where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\bm{k}, t)$ can be shown to evolve as
+\begin{align}
+    \hat{\Lambda}_1'(\bm{k}, nT) &= e^{-i n \omega T} \left( \sinh(n \gamma T) \hat{\Lambda}_1^\dagger(-\bm{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1'(\bm{k}, 0)\right). \label{PeaksAppendix:LambdaPrimeOperatorEvolution}
+\end{align}
+The evolution represented by \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric oscillator \citep{WallsMilburn} which is known to generate EPR entanglement between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
+
+Finally, note that $\hat{\Lambda}_1(\bm{k}, t) = \hat{\Lambda}_1'(\bm{k}, t)$ in the case that the $\lambda$, $\lambda'$ eigenvalues are part of a set of only two distinct eigenvalues, while the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(\bm{k}, t)$ will be different if the eigenvalues are part of a set of four distinct eigenvalues.

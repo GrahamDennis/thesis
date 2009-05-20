@@ -179,7 +179,7 @@ where
         \delta\hat{\Psi}_1^\dagger(-\bm{k}) &
         \delta\hat{\Psi}_0(\bm{k}) &
         \delta\hat{\Psi}_0^\dagger(-\bm{k})
-    \end{pmatrix}^T,\\
+    \end{pmatrix}^\text{T},\\
     \mathcal{H}(\bm{k}) &= 
     \begin{pmatrix}
         \varepsilon(\bm{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
@@ -298,11 +298,14 @@ The temporal periodicity of the system implies that the imaginary components $\o
 This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
 
 The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
-\begin{align}
+\begin{subequations}
     \label{Peaks:DynamicalInstability}
-    \hat{\Lambda}(\pm\bm{k}, nT) &= e^{\pm i n\omega T} \left( \sinh(n\gamma T) \hat{\Lambda}^\dagger(\mp\bm{k}, 0) + \cosh(n\gamma T) \hat{\Lambda}(\pm\bm{k}, 0)\right),
-\end{align}
-where $n$ is a positive integer. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+    \begin{align}
+        \hat{\Lambda}(\bm{k}, nT) &= e^{i n\omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}'^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}(\bm{k}, 0)\right),\\
+        \hat{\Lambda}'(\bm{k}, nT) &= e^{-i n \omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}'(\bm{k}, 0)\right),
+    \end{align}
+\end{subequations}
+where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances discussed in \appendixref{PeaksAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
 
 The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:DynamicalInstability} only while the unstable modes have a small occupation compared to the condensate, and scattering between the unstable modes can be neglected. \figureref{Peaks:CondensateEigenvalues}(c) shows the results of a Truncated Wigner simulation of the Hamiltonian \eqref{Peaks:InitialHamiltonian}, which is in excellent agreement with the location of the dynamical instabilities as determined by the Floquet exponents [see \figureref{Peaks:CondensateEigenvalues}(b)]. For later times, there is an additional mode undergoing growth, $k \approx \unit[7.5\times 10^5]{m}^{-1}$. This mode is the result of scattering between the dynamical instabilities, a process neglected the perturbative approach taken in this section.
 

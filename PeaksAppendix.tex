@@ -22,7 +22,7 @@ Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of 
 where the matrix $\mathcal{H}(\bm{k}, t)$ obeys
 \begin{align}
         \mathcal{H}(\bm{k}, t+T) &= \mathcal{H}(\bm{k}, t),\\
-        \mathcal{H}(\bm{k}, t) &= \mathcal{H}(-\bm{k}, t),
+        \mathcal{H}(\bm{k}, t) &= \mathcal{H}(-\bm{k}, t), \label{PeaksAppendix:HReflectionSymmetry}
 \end{align}
 where the last equality holds because $\hat{H}(t)$ is isotropic.
 
@@ -57,10 +57,12 @@ Using definitions \eqref{PeaksAppendix:MonodromyMatrix}--\eqref{PeaksAppendix:QO
 
 The operators $\hat{Q}_j(\bm{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\bm{k}, t)$. As every operator in $\hat{\bm{\Upsilon}}(-\bm{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\bm{\Upsilon}}(\bm{k}, t)$, the $\hat{Q}_j^\dagger(\bm{k}, t)$ can be written as
 \begin{align}
+    \label{PeaksAppendix:QDaggerDefinition}
     \hat{Q}_j^\dagger(\bm{k}, t) &= \bm{d}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(-\bm{k}, t)
 \end{align}
 for some vectors $\bm{d}_j(\bm{k})$. It follows from \eqref{PeaksAppendix:QOperatorEvolution} that the $\hat{Q}_j^\dagger(\bm{k}, t)$ will obey
 \begin{align}
+    \label{PeaksAppendix:QDaggerEvolution}
     \hat{Q}_j^\dagger(\bm{k}, T) &= \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0).
 \end{align}
 
@@ -70,10 +72,17 @@ The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as th
         &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
         \label{PeaksAppendix:InvariantCommutator}
 \end{align}
-For \eqref{PeaksAppendix:InvariantCommutator} to be true, either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute.
+For \eqref{PeaksAppendix:InvariantCommutator} to be true, either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{1}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = i \omega_i(\bm{k})$. Hence it is only for purely imaginary Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators.
+
+Generally, the Floquet exponents $\xi_i$ may have a non-zero real component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
+
+First, it is noted that if $\lambda_i(\bm{k})$ is an eigenvalue of $\mathcal{M}(\bm{k})$, then from \eqref{PeaksAppendix:QDaggerDefinition}--\eqref{PeaksAppendix:QDaggerEvolution} $\lambda_i^*(\bm{k})$ must be an eigenvalue of $\mathcal{M}(-\bm{k})$. However, from the reflection symmetry of $\mathcal{H}(\bm{k})$ defined by \eqref{PeaksAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\bm{k}) = \mathcal{M}(\bm{k})$ and hence $\lambda_i^*(\bm{k})$ must also be an eigenvalue of $\mathcal{M}(\bm{k})$.
+
+Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ form a complete basis, for every operator there must be at least one other operator with which it does not commute. From \eqref{PeaksAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\bm{k})$ is an eigenvalue,   ${\lambda_i^*(\bm{k})}^{-1}$ must also be an eigenvalue.
 
 
-\section{References to this appendix:}
+
+\section{References to this appendix}
 
 The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
 \begin{align}

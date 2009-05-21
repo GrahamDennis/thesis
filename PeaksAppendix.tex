@@ -4,7 +4,7 @@
 
 The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before \citep{Leonhardt:2003}. In this appendix, the methods discussed in \citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
 
-Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{FIXME: Probably need to add the argument that the Fourier transform must be of this form. It is simply a momentum conservation argument.},
+Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{FIXME: May need to add the argument that the Fourier transform must be of this form. It is simply a momentum conservation argument.},
 \begin{subequations}
     \label{PeaksAppendix:MatrixOperatorEvolution}
     \begin{align}
@@ -125,4 +125,5 @@ where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\bm{k}, t)$ can be
 \end{align}
 The evolution represented by \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric oscillator \citep{WallsMilburn} which is known to generate EPR entanglement between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
 
-Finally, note that $\hat{\Lambda}_1(\bm{k}, t) = \hat{\Lambda}_1'(\bm{k}, t)$ in the case that the $\lambda$, $\lambda'$ eigenvalues are part of a set of only two distinct eigenvalues, while the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(\bm{k}, t)$ will be different if the eigenvalues are part of a set of four distinct eigenvalues.
+Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by uniqueness $\hat{\Lambda}_1'(\bm{k}, t) = \hat{\Lambda}_1(\bm{k}, t)$. In this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} consistent.
+

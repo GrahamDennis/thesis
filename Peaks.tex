@@ -126,7 +126,7 @@ As the evolution is purely Hamiltonian, the state can be described by a point on
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{BlochSpheres}
-    \caption{Bloch sphere representation of the evolution described by \eqref{Peaks:OpticalBlochEquations}. The upper figures (a) and (b) represent the case of the usual optical Bloch equations without any damping ($g/\Omega=0$), the lower figures (c) and (d) illustrate the effect of the nonlinear term in the evolution with $g/\Omega = 8$. The left figures (a) and (c) illustrate the Bloch sphere shaded with colour depending on the energy $E$ [see \eqref{Peaks:OpticalBlochEnergy}]. The system is constrained to move on lines of constant colour. Bands have been removed from these spheres for illustration purposes only. The right figures (b) and (d) are contour plots of the energy $E$ over the surface of the Bloch sphere.
+    \caption{Bloch sphere representation of the evolution described by \eqref{Peaks:OpticalBlochEquations}. The upper figures (a) and (b) represent the case of the usual optical Bloch equations with no damping ($g/\Omega=0$), the lower figures (c) and (d) illustrate the effect of the nonlinear term on the evolution with $g/\Omega = 8$. The left figures (a) and (c) illustrate the Bloch sphere coloured according to the energy $E$ [see \eqref{Peaks:OpticalBlochEnergy}]. The system is constrained to move on lines of constant colour. Bands have been removed from these spheres for illustration purposes only. The right figures (b) and (d) are contour plots of the energy $E$ over the surface of the Bloch sphere.
      \label{Peaks:BlochSphere}}
 \end{figure}
 
@@ -312,7 +312,7 @@ The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:Dy
 
 In summary, the procedure used to find the Floquet exponents of $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is:
 \begin{enumerate}
-    \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} for a long period of time $t \gg T$ where $T$ is the periodicity of the solution with $\mu=0$.
+    \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} with $\mu=0$ for a long period of time $t \gg T$ where $T$ is the periodicity of the solution.
     \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
     \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$.
     \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}).

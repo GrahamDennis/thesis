@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -233,5 +233,11 @@
   \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
   \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
+  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
+  (\bibinfo{year}{1989}).
 
 \end{thebibliography}

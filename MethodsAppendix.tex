@@ -1,0 +1,24 @@
+\chapter{Calculational methods}
+\label{MethodsAppendix}
+\graphicspath{{Figures/MethodsAppendix/}{Figures/Common/}}
+
+Some of this content may end up going into an introductory theory chapter. I'm thinking specifically of the absorbing boundary condition section. It seems odd to require the reading of an appendix in a chapter to be able to explain something. But for the moment, here it goes.
+
+\section{Absorbing boundaries for Schrödinger and GP equations}
+
+To solve any partial differential equation numerically, it must be restricted to a finite domain with boundary conditions imposed at the edges\footnote{This requirement can be avoided when the solution's asymptotic behaviour is known \emph{a priori}, however this case will not be encountered in this thesis.}. The choice of boundary conditions at the edges of the computational domain is an artificial one; while in many cases they permit physical interpretation, this interpretation does not usually correspond to the reality of the system under consideration. A strategy is therefore needed to limit the effect of the choice of boundary conditions on the solution.  In some cases the solution has finite extent (for example, a BEC in a harmonic trap) and is unaffected by the choice of boundary conditions.  This is not always the case, for example the Gross-Pitaevskii equations for an atom laser which are considered extensively in this thesis.  The solutions to these equations do not have finite extent and a strategy must be used to prevent the moving atom laser beam interacting with the artificial boundary conditions.
+
+A first simple strategy would be to choose the computational domain to be large enough such that no part of the atom laser beam will reach the edge of the domain over the time of interest. While an effective strategy, it can be computationally expensive.
+
+This strategy is particularly demanding in the presence of gravity. Under the influence of gravity, a classical particle starting from rest will travel a distance $d = \frac{1}{2}g t^2$ in a time $t$. Hence the size of the computational domain must increase as $t^2$. Additionally, the velocity of the classical particle increases as $v = gt$. The mean wavelength of the particle $\displaystyle \lambda = \frac{\hbar}{Mv}$ must then decrease as $t^{-1}$. To resolve the spatial dynamics of the atom laser, the step size between points must then decrease as $t^{-1}$. These two effects combine to give the scaling that the total number of spatial grid points required $N_\text{pts} \propto t^3$. Choices of uniform of variable spacing for the grid will only differ by an overall constant factor in the number of points required by this strategy; such choices do not change the overall scaling. A different strategy is needed.
+
+In many circumstances, it is the Bose-Einstein condensate and its interactions with the atom laser that are of interest. Once parts of the atom laser can no longer interact with the BEC, they may no longer be of interest to us. In these cases, a second strategy can be used.
+
+
+When simulating a process the calculation region must include all of the interesting dynamics, however, unless a technique is used for removing the product of 
+
+a different strategy is needed when it is the atom laser itself that we are interested in. This strategy will be discussed in the DropGP section.
+
+
+A useful reference here is \citep{Neuhasuer:1989}.
+

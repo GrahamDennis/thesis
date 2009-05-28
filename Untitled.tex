@@ -133,10 +133,19 @@
   at The Australian National University\\[1cm]}
 %  \date{\today}
 \maketitle
- \end{titlepage}
- 
- \sloppy
- 
+\end{titlepage}
+
+\sloppy
+
+% \thispagestyle{empty}
+% \newenvironment{dedication}
+%   {\cleardoublepage \thispagestyle{empty} \vspace*{\stretch{1}} \begin{center} \em}
+%   {\end{center} \vspace*{\stretch{3}} \clearpage}
+% \begin{dedication}
+% %Dedication goes here
+% \end{dedication}
+
+
 \chapter*{Declaration}
 \addcontentsline{toc}{chapter}{Declaration}
 
@@ -174,13 +183,17 @@ university.
 
 %\include{LiteratureReview}
 
+\include{BackgroundTheory}
+
+%\include{TransverseProfile}
+
 \include{Peaks}
 
 
 %\include{Conclusion}
 \appendix
 \include{PeaksAppendix}
-\include{MethodsAppendix}
+%\include{MethodsAppendix}
 
 \bibliography{thesis}
 

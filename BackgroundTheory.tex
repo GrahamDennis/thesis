@@ -12,20 +12,51 @@ With the exception of systems defined over a finite domain, the choice of bounda
 
 A first simple strategy would be to choose the computational domain to be large enough such that no part of the atom laser beam will reach the edge of the domain over the time of interest. While effective, this strategy can be computationally expensive and is particularly demanding in the presence of gravity. Under the influence of gravity a classical particle starting from rest will travel a distance $d = \frac{1}{2}g t^2$ in time $t$. Hence the size of the computational domain must increase as $t^2$. The spatial grid separation cannot remain constant however. As the velocity of the classical particle increases as $v = gt$, the mean wavelength of the particle $\displaystyle \lambda = \frac{\hbar}{Mv}$ must then decrease as $t^{-1}$.  To resolve the spatial dynamics of the atom laser, the step size between points must then decrease as $t^{-1}$. These two effects combine to give the scaling that the total number of spatial grid points required $N_\text{pts} \propto t^3$. Choices of uniform or variable spacing for the grid will only differ by an overall constant factor in the number of points required by this strategy; such choices cannot change the overall scaling. A different strategy is needed.
 
-In many circumstances, it is the Bose-Einstein condensate and its interactions with the atom laser that are of interest. Despite the remainder of the atom laser being of no interest, it is precisely this part of the atom laser that causes the scaling problem discussed above. In these cases, a second strategy to reduce the impact of the artificial boundary conditions can be used. This strategy adds an \emph{absorbing boundary layer} \citep{Kosloff:1986,Neuhasuer:1989,Ge:1998} between the domain of interest and the artificial boundary conditions. This absorbing boundary layer takes the form of a negative imaginary potential, which must be chosen to be deep enough to strongly attenuate any wave traversing it and smooth enough to make the probability of reflection negligible. 
+In many circumstances it is the Bose-Einstein condensate and the outcoupling process that produces the atom laser that are of interest. In such situations the remainder of the atom laser that can no longer directly interact with the BEC must be prevented from doing so as a result of its unphysical interactions with the artificial boundary conditions. The solution used in the aforementioned strategy was to continue to model the atom laser, however this is not necessary. An alternative solution is to remove this part of the atom laser from the simulation in a way that has no effect on the BEC and the outcoupling process. One strategy that takes this approach is to add an \emph{absorbing boundary layer} \citep{Kosloff:1986,Neuhasuer:1989} between the domain of interest and the artificial boundary conditions. This absorbing boundary layer takes the form of a negative imaginary potential, which must be chosen to be deep enough to strongly attenuate any wave traversing it and smooth enough to make the probability of reflection negligible. \figureref{BackgroundTheory:AbsorbingBoundarySchematic} illustrates this strategy.
 
 \begin{figure}
     \centering
     \includegraphics[width=8cm]{AbsorbingBoundarySchematic}
     \caption{
         \label{BackgroundTheory:AbsorbingBoundarySchematic}
-        Schematic diagram illustrating the use of an absorbing boundary layer.
+        Schematic diagram illustrating the use of an absorbing boundary layer. A right-travelling wave is incident on the absorbing boundary layer which is given by the potential $V(x) = -i V_I(x)$. The wave is attenuated as it crosses the absorbing boundary layer.
     }
 \end{figure}
 
-Consider the situation displayed in \figureref{BackgroundTheory:AbsorbingBoundarySchematic}
+An absorbing boundary layer of finite thickness can only be effective over a finite range of incident wavenumbers. Incident wavefunctions with large wavelengths (low wavenumbers) will be reflected from the absorbing boundary layer due to the rapid change in the potential over a wavelength. Incident wavenumbers with very short wavelengths (high wavenumbers) will be transmitted through the absorbing boundary layer due to the finite amount of time spent in the absorbing boundary layer by any given point on the phase-front. 
 
-To determine the range of momenta over which the absorbing boundary layer is effective we consider the following approximations. 
+Using an argument derived from that given by \citet{Neuhasuer:1989}, the approximate range of wavenumbers over which the absorbing boundary layer will be effective can be quantified by considering an incident wave of wavenumber $k$ on a potential $V(x) = -i V_I(x)$ of finite width $\Delta x$. 
+
+First consider transmission through the absorbing boundary layer. In a reference frame co-moving with the incident wave\footnote{Coordinate transformations for Schrödinger-type equations are discussed in more detail in \sectionref{TransverseProfile:DropGP}.}, the Schrödinger equation takes the form
+\begin{align}
+    \label{BackgroundTheory:AbsorbingBoundaryComovingFrame}
+    i \hbar \frac{\partial \psi(x, t)}{\partial t} & = \frac{-\hbar^2\left(\nabla - i k\right)^2}{2M} \psi(x, t) + \frac{\hbar^2 k^2}{2M} \psi(x, t) + V\left(x + \frac{\hbar k}{M}t\right)\psi(x, t).
+\end{align}
+For fast-moving waves, the change in the wavenumber as it propagates through the absorbing boundary layer will be negligible, and the first term on the RHS in \eqref{BackgroundTheory:AbsorbingBoundaryComovingFrame} can be neglected. Within this approximation, the solution to \eqref{BackgroundTheory:AbsorbingBoundaryComovingFrame} is
+\begin{align}
+    \psi(x, t) &= \exp\left[-i\frac{\hbar k^2}{2M} t -\frac{1}{\hbar} \int_{0}^t dt\, V_I\left(x + \frac{\hbar k}{M} t\right)\right]\psi(x, 0).
+\end{align}
+Defining $\overline{V_I}$ to be a representative value of $V_I(x)$ such that $\displaystyle\int_0^\infty dx\, V_I(x)\approx \overline{V_I} \Delta x$, after traversing the absorbing boundary the wavefunction's density is reduced to
+\begin{align}
+    \abs{\psi(x, \infty)}^2 &\approx \exp\left( \frac{-2M \overline{V_I} \Delta x}{\hbar^2 k} \right) \abs{\psi(x, 0)}^2.
+\end{align}
+For minimal transmission through the absorbing boundary layer, incident waves must satisfy
+\begin{align}
+    \label{BackgroundTheory:AbsorbingBoundaryMaximumK}
+    k \ll \frac{2 M \overline{V_I} \Delta x}{\hbar^2}.
+\end{align}
+
+The condition for minimal reflection from the absorbing boundary layer is that as the layer is traversed, the wavenumber of the incident wave changes negligibly over the scale of a wavelength.
+
+ \citet{Neuhasuer:1989} perform an approximate analysis of the effectiveness of an absorbing boundary layer by considering an incident wave of wavenumber $k$ on a potential $V(x) = -i V_I(x)$ of finite width $\Delta x$. They show the range of wavenumbers over which the absorbing boundary layer is effective to be
+\begin{align}
+    \label{BackgroundTheory:AbsorbingBoundaryKEffectiveRange}
+    \left( \frac{M \overline{V_I}}{\hbar^2 \Delta x}\right)^{\frac{1}{3}} \ll k \ll \frac{M \overline{V_I} \Delta x}{\hbar^2},
+\end{align}
+where $\overline{V_I}$ is a representative value of $V_I(x)$. Although cast in terms of the wavenumber, \eqref{BackgroundTheory:AbsorbingBoundaryKEffectiveRange} is equivalent to (26) in \citep{Neuhasuer:1989}, from which the preceding argument was derived.
+
+In this thesis, the abstract boundary conditions used most frequently will be periodic boundary conditions due to the effectiveness of the Fast Fourier Transform (FFT) algorithm that permits efficient transformation between the position basis and the spectral basis.
+
 
 
 A different strategy will be used in \chapterref{TransverseProfile} in which the spatial profile of the atom laser a large distance from the BEC is considered. In this situation the strategy discussed above cannot be used as it is precisely the behaviour of the atom laser far away from the BEC that is of interest. A third strategy that is appropriate for considering the behaviour of the atom laser far from the BEC is discussed in \sectionref{TransverseProfile:DropGP}.

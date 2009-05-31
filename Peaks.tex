@@ -74,16 +74,16 @@ With these approximations made, the Hamiltonian for this system is
 \begin{align}
     \label{Peaks:InitialHamiltonian}
     \begin{split}
-    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{} \hat{\Psi}_i^{}\\
-            &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{}\right),
+    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
+            &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right),
     \end{split}
 \end{align}
 where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the s-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is an energy offset which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
 \begin{subequations}
     \label{Peaks:OperatorEquationsOfMotion}
     \begin{align}
-    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{}\right) \hat{\Psi}_1^{} + \hbar \Omega \hat{\Psi}_0^{} - \mu \hat{\Psi}_1^{},  \\
-    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{} \right) \hat{\Psi}_0^{} + \hbar \Omega \hat{\Psi}_1^{} - \mu \hat{\Psi}_0^{},
+    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}}\right) \hat{\Psi}_1 + \hbar \Omega \hat{\Psi}_0 - \mu \hat{\Psi}_1,  \\
+    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \right) \hat{\Psi}_0 + \hbar \Omega \hat{\Psi}_1 - \mu \hat{\Psi}_0,
     \end{align}
 \end{subequations}
 where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
@@ -216,7 +216,7 @@ where $\displaystyle\varepsilon(\bm{k}) = \frac{\hbar^2\bm{k}^2}{2M}$, $n= \abs{
 
 The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is
 \begin{align}
-    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\bm{k}\, \hbar \omega_i(\bm{k}) \hat{\Lambda}_i^\dagger(\bm{k}) \hat{\Lambda}_i(\bm{k}),
+    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\bm{k}\, \hbar \omega_i(\bm{k}) \hat{\Lambda}_i^\dagger(\bm{k}) \hat{\Lambda}_i^{\phantom{\dagger}}(\bm{k}),
 \end{align}
 where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\bm{k})$.
 

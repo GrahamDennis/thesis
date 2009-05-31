@@ -11,9 +11,9 @@ Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of 
         i \hbar \frac{\partial \hat{\bm{\Upsilon}}(\bm{k}, t)}{\partial t} &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t),\\
         \hat{\bm{\Upsilon}}(\bm{k}, t) &= 
         \begin{pmatrix}
-            \hat{\phi}_1(\bm{k}, t) &
+            \hat{\phi}_1^{\phantom{\dagger}}(\bm{k}, t) &
             \hat{\phi}_1^\dagger(-\bm{k}, t) &
-            \hat{\phi}_2(\bm{k}, t) &
+            \hat{\phi}_2^{\phantom{\dagger}}(\bm{k}, t) &
             \hat{\phi}_2^\dagger(-\bm{k}, t) &
             \dots
         \end{pmatrix}^\text{T},
@@ -68,15 +68,15 @@ for some vectors $\bm{d}_j(\bm{k})$. It follows from \eqref{PeaksAppendix:QOpera
 
 The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as they are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\bm{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
 \begin{align}
-    \left[ \hat{Q}_i(\bm{k}, T),\, \hat{Q}_j^\dagger(\bm{k}, T) \right] &= \left[ \lambda_i(\bm{k}) \hat{Q}_i(\bm{k}, 0),\, \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0)\right]\\
-        &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
+    \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, T),\, \hat{Q}_j^\dagger(\bm{k}, T) \right] &= \left[ \lambda_i(\bm{k}) \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0)\right]\\
+        &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
         \label{PeaksAppendix:InvariantCommutator}
 \end{align}
-For \eqref{PeaksAppendix:InvariantCommutator} to be true, either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{1}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = i \omega_i(\bm{k})$. Hence it is only for purely imaginary Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators.
+For \eqref{PeaksAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{1}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = i \omega_i(\bm{k})$. Hence it is only for purely imaginary Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators.
 
-Generally, the Floquet exponents $\xi_i$ may have a non-zero real component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
+Generally the Floquet exponents $\xi_i$ may have a non-zero real component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
 
-First, it is noted that if $\lambda_i(\bm{k})$ is an eigenvalue of $\mathcal{M}(\bm{k})$, then from \eqref{PeaksAppendix:QDaggerDefinition}--\eqref{PeaksAppendix:QDaggerEvolution} $\lambda_i^*(\bm{k})$ must be an eigenvalue of $\mathcal{M}(-\bm{k})$. However, from the reflection symmetry of $\mathcal{H}(\bm{k})$ defined by \eqref{PeaksAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\bm{k}) = \mathcal{M}(\bm{k})$ and hence $\lambda_i^*(\bm{k})$ must also be an eigenvalue of $\mathcal{M}(\bm{k})$.
+First it is noted that if $\lambda_i(\bm{k})$ is an eigenvalue of $\mathcal{M}(\bm{k})$, then from \eqref{PeaksAppendix:QDaggerDefinition}--\eqref{PeaksAppendix:QDaggerEvolution} $\lambda_i^*(\bm{k})$ must be an eigenvalue of $\mathcal{M}(-\bm{k})$. However, from the reflection symmetry of $\mathcal{H}(\bm{k})$ defined by \eqref{PeaksAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\bm{k}) = \mathcal{M}(\bm{k})$ and hence $\lambda_i^*(\bm{k})$ must also be an eigenvalue of $\mathcal{M}(\bm{k})$.
 
 Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ form a complete basis over the same space as the $\hat{\phi}_i^{(\dagger)}(\bm{k}, t)$ which themselves do not all commute, for every operator $\hat{Q}_i(\bm{k}, t)$ there must be at least one other operator with which it does not commute. From \eqref{PeaksAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\bm{k})$ is an eigenvalue,   ${\lambda_i^*(\bm{k})}^{-1}$ must also be an eigenvalue.
 
@@ -106,7 +106,7 @@ This choice then defines the value of the other nonzero commutator,
 
 From these two commutators it can then be shown that $\hat{\Lambda}_1(\bm{k}, t)$ obeys the commutation relations appropriate for an annihilation operator, while $\hat{\Lambda}_2(\bm{k}, t)$ obeys the commutation relations for a creation operator. For example,
 \begin{align}
-    \left[\hat{\Lambda}_1(\bm{k}, t),\, \hat{\Lambda}_1^\dagger(\bm{k}, t) \right] &= \frac{1}{2} \left[ \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) + \hat{Q}'^\dagger(\bm{k}, t)\right] = 1.
+    \left[\hat{\Lambda}_1^{\phantom{\dagger}}(\bm{k}, t),\, \hat{\Lambda}_1^\dagger(\bm{k}, t) \right] &= \frac{1}{2} \left[ \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) + \hat{Q}'^\dagger(\bm{k}, t)\right] = 1.
 \end{align}
 
 Defining $\hat{\Lambda}_1'(-\bm{k}, t) = \hat{\Lambda}_2^\dagger(\bm{k}, t)$, the evolution of the operators $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(\bm{k}, t)$ can now be determined. $\hat{\Lambda}_1(\bm{k}, t)$ evolves as
@@ -125,5 +125,5 @@ where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\bm{k}, t)$ can be
 \end{align}
 The evolution represented by \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric oscillator \citep{WallsMilburn} which is known to generate EPR entanglement between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
 
-Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by uniqueness $\hat{\Lambda}_1'(\bm{k}, t) = \hat{\Lambda}_1(\bm{k}, t)$. In this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} consistent.
+Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by the uniqueness of the eigenvectors $\hat{\Lambda}_1'(\bm{k}, t) = \hat{\Lambda}_1(\bm{k}, t)$. For this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{PeaksAppendix:LambdaOperatorEvolution} and \eqref{PeaksAppendix:LambdaPrimeOperatorEvolution} consistent.
 

@@ -22,7 +22,7 @@
 			<key>filename</key>
 			<string>BackgroundTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-29T06:17:17Z</date>
+			<date>2009-05-31T02:19:16Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -36,13 +36,13 @@
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-28T07:50:43Z</date>
+			<date>2009-05-31T02:12:57Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>PeaksAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-28T07:50:18Z</date>
+			<date>2009-05-31T02:19:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -60,14 +60,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>36</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>36</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>250</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>21</integer>
+			<integer>19</integer>
 		</dict>
 		<key>MethodsAppendix.tex</key>
 		<dict>
@@ -88,44 +88,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>137</integer>
 				<key>line</key>
-				<integer>275</integer>
+				<integer>76</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>128</integer>
 			<key>firstVisibleLine</key>
-			<integer>265</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>21</integer>
-				<key>line</key>
-				<integer>275</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>27</integer>
-				<key>line</key>
-				<integer>275</integer>
-			</dict>
+			<integer>66</integer>
 		</dict>
 		<key>PeaksAppendix.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>253</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>127</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>93</integer>
+			<integer>91</integer>
 		</dict>
 		<key>TransverseProfile.tex</key>
 		<dict>
@@ -211,6 +195,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{17, 70}, {992, 900}}</string>
+	<string>{{731, 255}, {992, 900}}</string>
 </dict>
 </plist>

@@ -3,88 +3,199 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Peaks.tex</string>
+	<string>BackgroundTheory.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>anuthesis.sty</string>
 			<key>lastUsed</key>
-			<date>2009-03-03T04:01:33Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>PeaksAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2009-03-03T04:05:35Z</date>
+			<date>2009-03-24T00:02:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-03-03T04:04:18Z</date>
+			<date>2009-05-28T08:03:41Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>BackgroundTheory.tex</string>
+			<key>lastUsed</key>
+			<date>2009-05-29T06:17:17Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>TransverseProfile.tex</string>
+			<key>lastUsed</key>
+			<date>2009-05-29T06:17:17Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-03-03T04:05:35Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-05-28T07:50:43Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>PeaksAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2009-05-28T07:50:18Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>MethodsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2009-05-29T01:02:51Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>211</integer>
 	<key>metaData</key>
 	<dict>
+		<key>BackgroundTheory.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>36</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>250</integer>
+			<key>firstVisibleLine</key>
+			<integer>21</integer>
+		</dict>
+		<key>MethodsAppendix.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>310</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>524</integer>
+				<integer>27</integer>
 				<key>line</key>
-				<integer>148</integer>
+				<integer>275</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>401</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>140</integer>
+			<integer>265</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>275</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>27</integer>
+				<key>line</key>
+				<integer>275</integer>
+			</dict>
 		</dict>
 		<key>PeaksAppendix.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>94</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
+			<integer>93</integer>
+		</dict>
+		<key>TransverseProfile.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>28</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
 			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>22</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>180</integer>
+				<integer>146</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>101</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>141</integer>
+			<integer>106</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>139</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>146</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
+		<string>TransverseProfile.tex</string>
 		<string>Peaks.tex</string>
 		<string>PeaksAppendix.tex</string>
+		<string>MethodsAppendix.tex</string>
+		<string>BackgroundTheory.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -98,8 +209,8 @@
 		</dict>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<false/>
+	<true/>
 	<key>windowFrame</key>
-	<string>{{97, 19}, {800, 856}}</string>
+	<string>{{17, 70}, {992, 900}}</string>
 </dict>
 </plist>

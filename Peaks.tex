@@ -304,7 +304,7 @@ The normalised eigenvectors of the system are not always annihilation or creatio
         \hat{\Lambda}'(\bm{k}, nT) &= e^{-i n \omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}'(\bm{k}, 0)\right),
     \end{align}
 \end{subequations}
-where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances discussed in \appendixref{PeaksAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances as discussed in \appendixref{PeaksAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
 
 The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:DynamicalInstability} only while the unstable modes have a small occupation compared to the condensate, and scattering between the unstable modes can be neglected. \figureref{Peaks:CondensateEigenvalues}(c) shows the results of a truncated Wigner simulation of the Hamiltonian \eqref{Peaks:InitialHamiltonian}, which is in excellent agreement with the location of the dynamical instabilities as determined by the Floquet exponents [see \figureref{Peaks:CondensateEigenvalues}(b)]. For later times, there is an additional mode undergoing growth, $k \approx \unit[7.5\times 10^5]{m}^{-1}$. This mode is the result of scattering between the dynamical instabilities, a process neglected the perturbative approach taken in this section. 
 
@@ -331,7 +331,83 @@ Verification that the $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of t
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}
-In the previous section it was found that outcoupling from the He* BEC discussed in \sectionref{Peaks:ExperimentalSetup} results in the growth of unstable modes within the condensate. It was argued that these instabilities will be the cause of the observed structure in \figureref{Peaks:ExperimentalResults}. To verify this hypothesis, a multimode calculation of the entire BEC was performed, which is discussed in this section.
+In the previous section it was found that the process of outcoupling from the He* BEC discussed in \sectionref{Peaks:ExperimentalSetup} results in certain modes within the condensate becoming unstable. It was argued that these instabilities will be the original cause of the observed structure in \figureref{Peaks:ExperimentalResults}. To verify this hypothesis, a detailed numerical simulation of the experiment was performed.
+
+The master equation that describes the experiment described in \sectionref{Peaks:ExperimentalSetup} is given by
+\begin{align}
+    \label{Peaks:MasterEquation}
+    \frac{d \hat{\rho}}{d t} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{54}{5} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{\ket{0,0}} \right] \hat{\rho},
+\end{align}
+where $\displaystyle\hat{\Xi}_\ket{J, m_J}$ is the annihilation operator for the molecular $\displaystyle \text{He}^*_2$ state with total angular momentum $J$ and projection $m_J$, $\mathcal{D}[\hat{c}]\hat{\rho} \equiv \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and the second term on the RHS in \eqref{Peaks:MasterEquation} is due to Penning ionisation (refer to \sectionref{BackgroundTheory:Helium}) with $K^\text{(unpol)}_{^{4}\text{He}}$ the Penning ionisation rate for an unpolarised thermal sample of He* \citep{Stas:2006kx}. The Hamiltonian in \eqref{Peaks:MasterEquation} is given by
+\begin{align}
+    \label{Peaks:3DHamiltonian}
+    \begin{split}
+    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\bm{x})- \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \sum_{J, m_J} U_{J}\int d\bm{x}\, \hat{\Xi}_\ket{J, m_J}^\dagger \hat{\Xi}_\ket{J, m_J}^{\phantom{\dagger}}\\
+    \\
+            &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
+    \end{split}
+\end{align}
+$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $U_J = 4 \pi \hbar^2 a_J/M$ is the nonlinear interaction strength, and $a_J$ is the $s$-wave scattering length for the total angular momentum $J$ channel (refer to \sectionref{BackgroundTheory:Helium}). The molecular annihilation operator $\displaystyle \hat{\Xi}_\ket{J, m_J}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordon coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_\ket{J=0, m_J=0} = \frac{1}{\sqrt{6}} \left[ 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right]$.
+
+In the first instance, we wish to verify the results of the previous section within a fully three-dimensional model and determine the pattern that would be observed on the detector in this case. Although a similar system was solved with the GP equation in \sectionref{TransverseProfile:Helium} when the transverse profile of a He* atom laser was considered, it is not possible to solve the system corresponding to \eqref{Peaks:MasterEquation} with available computational infrastructure. The difference between these two systems is in the axial dimension.
+
+When modelling the transverse profile of the atom laser, the tight aspect ratio of the condensate meant that outcoupled atoms would be accelerated much more along the radial trapping directions than along the axial trapping direction. This permitted the use of a much larger spatial grid separation in the axial dimension than in the radial dimensions. In the present system it is expected that there will exist instabilities with momenta that correspond to a substantial fraction of that which the atom laser would have after leaving the condensate ($\sim \unit[2 \times 10^6]{m\textsuperscript{-1}}$ as compared to $\sim \unit[4 \times 10^6]{m\textsuperscript{-1}}$). In the present case the spatial grid separation in the axial dimension must be comparable to that used in the radial dimensions. Exacerbating this problem is that the tighter aspect ratio in the experiment described in this chapter requires this significantly smaller spatial grid separation be used over a larger range. To perform a simulation using a method similar to that used in \sectionref{TransverseProfile:Helium} approximately $\unit[500]{GiB}$ of memory would be needed to simply store the current state of the system. Additional approximations are necessary to render this system tractable.
+
+One of the most effective ways to reduce the size of a problem is by reducing its dimensionality.
+
+\hrule
+
+
+The first approximation that must be made is to reduce the dimensionality of the problem. 
+
+
+As noted in the previous section, a GP equation model corresponding to \eqref{Peaks:MasterEquation} will be unable to reproduce the instability as it is spontaneously-seeded. 
+
+
+
+Two options: 
+* Describe the Hamiltonian used in the paper, and risk it being noticed.
+    - Under review, this may be noticed, and if that occurs, it would lead to very, very bad things.
+* Use the other Hamiltonian and justify neglecting the mF=-1 state.
+    - The approximation will be noticed, and discussed. The question may be asked why I didn't try and not make this approximation.
+
+The direction of the previous section has been in the line of the two-level model. But it leaves it so open to questions being asked.
+Alternatively, I can solve *different* models for different reasons. I would then need to justify only using a two-level model for TW simulations, but can get away with a full 3D model for GP simulations. This appears to be the best approach.
+
+Must justify using only two levels for TW, but three for GP.
+This requires doing the TW and GP simulations again but using Hankel transforms.
+
+Method: 
+    2-level TW to see what the instabilities give rise to.
+    2-level TW at correct detuning to see what happens.
+    3-level GP at correct detuning for final results.
+This method requires a justification of 2-level for TW. A 2-level model can be justified in terms of checking what the previous analysis gives rise to, and then a full 3-level model could be discussed. In fact, we could discuss early on that the detuning doesn't correspond to the centre of the condensate (probably reference an earlier chapter), do a 2-level TW corresponding to that to see what happens, and then do 3-level TW and GP corresponding to the actual outcoupling position used in the experiment. That would then require justification of the link between the two phenomena. It's physics, it has to work. This justification must stand up to scrutiny by Craig and John. Oooh. I could even admit that the link isn't entirely solid. I could argue that the complicated dynamics would prevent any analytic determination of the behaviour, it could be the subject of future work to see if these bloody things are correlated.
+
+This then requires some motivation that the two phenomena are related. Something about the sweeping resonance crap I used before. One really good way of doing this would be by analogy. Some analogy with some other crap that is also produced in a similar way. The other possibility would be the initial outcoupling process leading to a resonance sweep. Initial dynamics. That must be it. Fourier arguments. I then need a density-dependent resonance. Three-levels. Complicated stuff. Wave hands.
+
+I can justify the 2-level. No I can't. It's bloody deterministic... Unless I include the proper noise due to the absorbing boundary and/or penning ionisation. Oooh. That could actually save my bacon.
+
+And it would actually be true. Neglect the Penning ionisation noise terms. Somewhere I must discuss the correct Master equation term for Penning ionisation. I'm guessing that's going to need to be in an earlier chapter that discusses the properties of Rubidium and Helium. And I should somewhere mention Lesa's work on building a dual-species Rubidium-Helium BEC.
+
+Semi-Implicit low-order algorithms to the rescue... Whether I actually calculate it that way or not... we'll see.
+
+Can I say things that went wrong? Things to avoid?
+
+I can even perform 2-level and 3-level GP simulations of the zero-detuning case. I just can't do a 3-level TW simulation there.
+
+So: start with the full master equation and work down from there as we go. The remaining question is how best to write that master equation.
+
+
+
+
+
+
+\begin{align}
+    K_{^{4}\text{He}}
+\end{align}
+
+a multimode calculation of the entire BEC was performed, which is discussed in this section.
+
 
 The Hamiltonian for the system that 
 
@@ -339,7 +415,6 @@ As the instabilities discussed in the previous section were seeded by vacuum flu
 
 For the same reasons mentioned at the start of \sectionref{Peaks:PerturbativeApproach}, the $m_F=-1$ state can be neglected. This approximation is only necessary for technical reasons, as the full 3D calculation requires excessive computational resources. The Hamiltonian under consideration is then the same as \eqref{Peaks:InitialHamiltonian} but with the addition of the state-dependent potentials $V_i(\bm{x})$,
 \begin{align}
-    \label{Peaks:InitialHamiltonian}
     \begin{split}
     \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\bm{x})- \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
             &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right).

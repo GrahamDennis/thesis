@@ -12,6 +12,18 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
+\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
+  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
+  (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
+  \bibinfo{journal}{Journal of Computational Physics}
+  \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
+
 \bibitem[{\citenamefont{Dall et~al.}(2009)\citenamefont{Dall, Byron, Truscott,
   Dennis, Johnsson, and Hope}}]{Dall:2009}
 \bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
@@ -215,6 +227,15 @@
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
 
+\bibitem[{\citenamefont{Stas et~al.}(2006)\citenamefont{Stas, McNamara,
+  Hogervorst, and Vassen}}]{Stas:2006kx}
+\bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
+
 \bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
   and \"Ohberg}}]{Leonhardt:2003}
 \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Leonhardt}},
@@ -222,23 +243,5 @@
   \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
   \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
-
-\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
-  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
-  (\bibinfo{year}{1989}).
-
-\bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
-  \bibinfo{journal}{Journal of Computational Physics}
-  \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
-
-\bibitem[{\citenamefont{Ge and Zhang}(1998)}]{Ge:1998}
-\bibinfo{author}{\bibfnamefont{J.-Y.} \bibnamefont{Ge}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~Z.~H.} \bibnamefont{Zhang}},
-  \bibinfo{journal}{The Journal of Chemical Physics}
-  \textbf{\bibinfo{volume}{108}}, \bibinfo{pages}{1429} (\bibinfo{year}{1998}).
 
 \end{thebibliography}

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>BackgroundTheory.tex</string>
+	<string>Peaks.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,33 +16,33 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-28T08:03:41Z</date>
+			<date>2009-06-02T08:54:47Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>BackgroundTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-31T02:19:16Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-06-02T10:24:24Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>TransverseProfile.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-29T06:17:17Z</date>
+			<date>2009-06-02T01:07:19Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-31T02:12:57Z</date>
+			<date>2009-06-02T10:24:24Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>PeaksAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-05-31T02:19:16Z</date>
+			<date>2009-06-02T02:12:43Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -60,14 +60,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>916</integer>
 				<key>line</key>
-				<integer>36</integer>
+				<integer>14</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>19</integer>
+			<integer>5</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>897</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>916</integer>
+				<key>line</key>
+				<integer>14</integer>
+			</dict>
 		</dict>
 		<key>MethodsAppendix.tex</key>
 		<dict>
@@ -88,14 +104,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>137</integer>
+				<integer>84</integer>
 				<key>line</key>
-				<integer>76</integer>
+				<integer>365</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>128</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>66</integer>
+			<integer>363</integer>
 		</dict>
 		<key>PeaksAppendix.tex</key>
 		<dict>
@@ -116,60 +132,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>28</integer>
+				<integer>32</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>5</integer>
-			</dict>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>71</integer>
 				<key>line</key>
-				<integer>146</integer>
+				<integer>129</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>106</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>139</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>146</integer>
-			</dict>
+			<integer>107</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -193,8 +177,8 @@
 		</dict>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{731, 255}, {992, 900}}</string>
+	<string>{{445, 128}, {992, 900}}</string>
 </dict>
 </plist>

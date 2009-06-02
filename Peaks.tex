@@ -347,18 +347,115 @@ where $\displaystyle\hat{\Xi}_\ket{J, m_J}$ is the annihilation operator for the
             &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
     \end{split}
 \end{align}
-$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $U_J = 4 \pi \hbar^2 a_J/M$ is the nonlinear interaction strength, and $a_J$ is the $s$-wave scattering length for the total angular momentum $J$ channel (refer to \sectionref{BackgroundTheory:Helium}). The molecular annihilation operator $\displaystyle \hat{\Xi}_\ket{J, m_J}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordon coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_\ket{J=0, m_J=0} = \frac{1}{\sqrt{6}} \left[ 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right]$.
+$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $U_J = 4 \pi \hbar^2 a_J/M$ is the nonlinear interaction strength, and $a_J$ is the $s$-wave scattering length for the total angular momentum $J$ channel\footnote{FIXME: Check this, there may be a factor of $2$ or $\sqrt{2}$ missing in the corresponding term in the Hamiltonian.} (refer to \sectionref{BackgroundTheory:Helium}). The molecular annihilation operator $\displaystyle \hat{\Xi}_\ket{J, m_J}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordon coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_\ket{J=0, m_J=0} = \frac{1}{\sqrt{6}} \left[ 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right]$.
 
 In the first instance, we wish to verify the results of the previous section within a fully three-dimensional model and determine the pattern that would be observed on the detector in this case. Although a similar system was solved with the GP equation in \sectionref{TransverseProfile:Helium} when the transverse profile of a He* atom laser was considered, it is not possible to solve the system corresponding to \eqref{Peaks:MasterEquation} with available computational infrastructure. The difference between these two systems is in the axial dimension.
 
-When modelling the transverse profile of the atom laser, the tight aspect ratio of the condensate meant that outcoupled atoms would be accelerated much more along the radial trapping directions than along the axial trapping direction. This permitted the use of a much larger spatial grid separation in the axial dimension than in the radial dimensions. In the present system it is expected that there will exist instabilities with momenta that correspond to a substantial fraction of that which the atom laser would have after leaving the condensate ($\sim \unit[2 \times 10^6]{m\textsuperscript{-1}}$ as compared to $\sim \unit[4 \times 10^6]{m\textsuperscript{-1}}$). In the present case the spatial grid separation in the axial dimension must be comparable to that used in the radial dimensions. Exacerbating this problem is that the tighter aspect ratio in the experiment described in this chapter requires this significantly smaller spatial grid separation be used over a larger range. To perform a simulation using a method similar to that used in \sectionref{TransverseProfile:Helium} approximately $\unit[500]{GiB}$ of memory would be needed to simply store the current state of the system. Additional approximations are necessary to render this system tractable.
+When modelling the transverse profile of the atom laser, the tight aspect ratio of the condensate meant that outcoupled atoms would be accelerated much more along the radial trapping directions than along the axial trapping direction. This permitted the use of a much larger spatial grid separation in the axial dimension than in the radial dimensions. In the present system it is expected that there will exist instabilities with momenta that correspond to a substantial fraction of that which the atom laser would have after leaving the condensate ($\sim \unit[2 \times 10^6]{m\textsuperscript{-1}}$ as compared to $\sim \unit[4 \times 10^6]{m\textsuperscript{-1}}$). In the present case the spatial grid separation in the axial dimension must be comparable to that used in the radial dimensions. Exacerbating this problem is that the tighter aspect ratio in the experiment described in this chapter requires this significantly smaller spatial grid separation be used over a larger range. To perform a simulation using a method similar to that used in \sectionref{TransverseProfile:Helium} approximately $\unit[500]{GiB}$ of memory would be needed to simply store the wavefunctions for the system. Additional approximations are necessary to make this system tractable.
 
-One of the most effective ways to reduce the size of a problem is by reducing its dimensionality.
+One of the most effective ways to reduce the size of a problem is by reducing its dimensionality. Although the master equation \eqref{Peaks:MasterEquation} possesses no continuous symmetries, near the BEC it is approximately cylindrically symmetric. The only term breaking this cylindrical symmetry is the gravitational potential $V_\text{grav}(\bm{x}) =- M \bm{g} \cdot \bm{x}$ where $\bm{g}$ is the gravitational field strength. While this term can be neglected over the region close to the BEC as it varies by only $10\%$ of the chemical potential of the BEC, it certainly cannot be neglected when considering the propagation of the atom laser onto the detector located $\unit[4]{cm}$ below. However, as discussed in \sectionref{TransverseProfile:Helium} the evolution of the atom laser in the region below the BEC is well described by free fall with the exception of fine-scale interference effects. In this chapter it is only the large-scale structure that is of interest, enabling a classical description for the atom laser to be used after it leaves the immediate vicinity of the condensate where the important dynamics will occur.
+
+To solve the system corresponding to the master equation \eqref{Peaks:MasterEquation}, a two-step method is used. First, the system will either be modelled with a GP equation or a Truncated Wigner method in a restricted cylindrical region enclosing the condensate using absorbing boundary layers (see \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the atom laser interacting with the artificial boundary conditions. Second, the momentum flux density leaving the simulation region (calculated using a method described in \sectionref{Peaks:AbsorbingBoundaryTricks}) is then propagated classically to determine the profile on the detector, which is located $\unit[4]{cm}$ below the BEC. This two-step procedure will permit the use of cylindrical symmetry to reduce the dimensionality of the computational domain while still considering the full three-dimensional behaviour of the system.
+
+\subsection{Choice of artificial boundary conditions}
+
+An appropriate representation of the solution on cylindrical domains is as a sum of Bessel functions as these are the eigenfunctions of the Laplacian operator in cylindrical coordinates. The use of this basis to solve the GP equation is described in \citep{Ronen:2006}. Although the Bessel function basis is arguably a better basis, the choice of boundary conditions is artificial and for the results presented in \citep{Dall:2009} a Fourier basis was used. Care must be taken when using a Fourier basis to avoid numerical instabilities due to the form of the Laplacian operator in cylindrical coordinates,
+\begin{align}
+    \nabla^2 u(r, z) &= \frac{\partial^2 u(r, z)}{\partial r^2} + \frac{1}{r}\frac{\partial u(r, z)}{\partial r} + \frac{\partial^2 u(r, z)}{\partial z^2}.
+\end{align}
+Specifically, the radial grid must be chosen to exclude the origin due to the apparent divergence in the $r^{-1}$ term in the Laplacian. Note that this is divergence is only apparent; for sufficiently well-behaved $u(r, z)$, $\nabla^2 u(r, z)$ will be continuous at the origin.
+
+We may then like to discuss the fact that the Bessel basis will be used for the results presented in this chapter/section. If we do say this, then we can say that the Fourier basis was used due to limitations of the tools. This problem has since been rectified (refer to appropriate appendix), and the results presented here differ negligibly from the results presented in the paper, but are used for demonstration purposes. Needs rephrasing.
+
+\subsection{Calculation of the momentum flux density}
+\label{Peaks:AbsorbingBoundaryTricks}
+
+As discussed previously, it is necessary to calculate the momentum flux density leaving the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. This technique must necessarily make use of the absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) as it is that which  removes density from the simulation region. In the following discussion the simpler case of a one-dimensional absorbing boundary layer will be considered before relating it to the present case of a cylindrically-symmetric absorbing boundary layer.
+
+Consider the following model of a simulation on a finite computational domain pictured in \figureref{Peaks:AbsorbingBoundaryLayerScattering}. A wave of wavenumber $k$ is incident from the left from within the computational domain on a symmetric absorbing boundary layer. Ideally the wave would be perfectly absorbed by the layer, but due to the finite depth and extent of the layer small fractions will be transmitted and reflected. We wish to calculate the change in the momentum distribution due to the presence of this layer in comparison to the rate at which probability would leave the computational domain in the absence of both the absorbing boundary layer and the artificial boundary conditions.
+
+The equation of motion for the momentum distribution is
+\begin{align}
+    \frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} &= 2 \Re\left\{ \psi^*(\bm{k}, t) \frac{\partial \psi(\bm{k}, t)}{\partial t}\right\}.
+\end{align}
+The contribution of the absorbing boundary layer is
+\begin{align}
+    \label{Peaks:MomentumFluxDensity}
+    \left.\frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} \right|_\text{abl}&=-\frac{2}{\hbar} \Re \left\{ \psi^*(\bm{k}, t) \mathcal{F}\left[ V_I(\bm{x}) \psi(\bm{x}, t)\right](\bm{k}) \right\},
+\end{align}
+where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. The information provided by this term will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer \eqref{Peaks:MomentumFluxDensity} would exactly match the rate at which probability leaves the computational domain, for an imperfect absorbing boundary layer \eqref{Peaks:MomentumFluxDensity} will include information about the change in momentum due to reflection from the boundary.
+
+
+\begin{figure}
+    \centering
+    \caption{\label{Peaks:AbsorbingBoundaryLayerScattering} FIXME: Absorbing boundary layer scattering.}
+\end{figure}
+
+
+
+
+In the perfect case the wave 
+
+Not all of the incident wave will be absorbed; some will be transmitted and some reflected, 
+
+
+Parts of the wave will be transmitted
+
+The wave will be partially transmitted through and partially reflected from this layer 
+
+Some fraction wave will be transmitted through the layer 
+
+The wave  then be transmitted through the layer with reduced amplitude
+
+
+It is assumed that 
+
+
+Reflection and transmission are distinguished 
+
+
+Consider the following idealised situation. A wave 
+
+
+Consider an wave of wavenumber $k$ incident from the left on an absorbing boundary layer. We wish to calculate the change in the momentum distribution due to the presence of this layer and compare this to the rate at which 
+
+
+
+
+
+
+
+
+
+
+
+We wish to calculate the change in the momentum distribution due to the presence of the absorbing boundary layer, and compare this to what would be expected 
+
+It is the change in the momentum
+
+
+Consider an incident wave with wavenumber $k$ incident from the left on an 
+
+As it is the change in the momentum distribution due to the presence of the absorbing boundary layer that we wish to determine, it is natural to consider its evolution,
+\begin{align}
+    \frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} &= 2 \Re\left\{ \psi^*(\bm{k}, t) \frac{\partial \psi(\bm{k}, t)}{\partial t}\right\}.
+\end{align}
+
+As a model for the absorbing boundary layer, we consider the situation of an incident wave of wavenumber $k$ incident from the left on an absorbing boundary layer 
+
+
+in order to approximate the dynamics near the condensate as cylindrically symmetric
+
+
+The artificial boundary condition appropriate for use on cylindrical domains is $\Psi_j=0$ outside 
+
+
+We need to discuss the artificial boundary conditions used. Mention that Fourier boundary conditions were used in the paper, which are less than optimal, but used due to the limitations of the tools at hand. That said, the results presented here use the Hankel transform (discussed in a numerical methods appendix) and differ negligibly (they bloody well better) from the results in the paper.
+
+We also need to discuss the method used to obtain the momentum flux density.
 
 \hrule
 
-
-The first approximation that must be made is to reduce the dimensionality of the problem. 
 
 
 As noted in the previous section, a GP equation model corresponding to \eqref{Peaks:MasterEquation} will be unable to reproduce the instability as it is spontaneously-seeded. 
@@ -424,7 +521,7 @@ For the same reasons mentioned at the start of \sectionref{Peaks:PerturbativeApp
 
 
 \subsection{Calculating Momentum Flux Density at the Edge of a Simulation Region}
-\label{Peaks:AbsorbingBoundaryTricks}
+%\label{Peaks:AbsorbingBoundaryTricks}
 
 
 

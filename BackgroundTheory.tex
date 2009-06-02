@@ -2,6 +2,10 @@
 \label{BackgroundTheory}
 \graphicspath{{Figures/BackgroundTheory/}{Figures/Common/}}
 
+\section{Phase-space methods}
+\label{BackgroundTheory:PhaseSpaceMethods}
+%Focus primarily on truncated Wigner.
+
 \section{Absorbing boundary layers for Schrödinger-type equations}
 \label{BackgroundTheory:AbsorbingBoundaryLayers}
 
@@ -29,6 +33,13 @@ An absorbing boundary layer of finite thickness can only be effective over a fin
     \left( \frac{M \overline{V_I}}{\hbar^2 \Delta x}\right)^{\frac{1}{3}} \ll k \ll \frac{4 M \overline{V_I} \Delta x}{\hbar^2},
 \end{align}
 where $\overline{V_I}$ is a representative value of $V_I(x)$. The maximum and minimum limits for the wavenumber are respectively due to the requirements of negligible transmission and reflection. Although cast in terms of the wavenumber, \eqref{BackgroundTheory:AbsorbingBoundaryKEffectiveRange} is equivalent to (26) in \citep{Neuhasuer:1989}. While not its purpose, \sectionref{Peaks:AbsorbingBoundaryTricks} demonstrates how to calculate the reflection and transmission coefficients as a function of wavenumber for arbitrary absorbing boundary conditions.
+
+The use of absorbing boundary layers must be slightly modified for use in phase-space methods such as those discussed in \sectionref{BackgroundTheory:PhaseSpaceMethods}. In these cases simply adding an absorbing boundary layer to the potential would lead to unphysical results as the absorbing potential would not discriminate between real particles in a mode and the virtual particles which represent the fundamental vacuum fluctuations inherent in the field. An appropriate way of handling this problem is to add a position-dependent loss term to the master equation of the form
+\begin{align}
+    \label{BackgroundTheory:PhaseSpaceAbsorbingBoundaryLayer}
+    \frac{d \hat{\rho}}{dt} &= \int d \bm{x}\, \frac{2}{\hbar}V_I(\bm{x})\mathcal{D}[\hat{\Psi}(\bm{x})]\hat{\rho},
+\end{align}
+where $\mathcal{D}$ is the usual decoherence superoperator. This master equation term leads to the same imaginary potential term in the equations of motion for the field operator with an additional noise term for Truncated Wigner and the Q function methods that restores the vacuum fluctuations that would otherwise be lost.
 
 \parasep
 

@@ -365,12 +365,55 @@ An appropriate representation of the solution on cylindrical domains is as a sum
 \end{align}
 Specifically, the radial grid must be chosen to exclude the origin due to the apparent divergence in the $r^{-1}$ term in the Laplacian. Note that this is divergence is only apparent; for sufficiently well-behaved $u(r, z)$, $\nabla^2 u(r, z)$ will be continuous at the origin.
 
-We may then like to discuss the fact that the Bessel basis will be used for the results presented in this chapter/section. If we do say this, then we can say that the Fourier basis was used due to limitations of the tools. This problem has since been rectified (refer to appropriate appendix), and the results presented here differ negligibly from the results presented in the paper, but are used for demonstration purposes. Needs rephrasing.
+We may then like to discuss the fact that the Bessel basis will be used for the results presented in this chapter/section. If we do say this, then we can say that the Fourier basis was used due to limitations of the tools. This problem has since been rectified (refer to appropriate appendix), and the results presented here differ negligibly from the results presented in the paper, but are used for demonstration purposes. FIXME: Needs rephrasing.
 
 \subsection{Calculation of the momentum flux density}
 \label{Peaks:AbsorbingBoundaryTricks}
 
-As discussed previously, it is necessary to calculate the momentum flux density leaving the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. This technique must necessarily make use of the absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) as it is that which  removes density from the simulation region. In the following discussion the simpler case of a one-dimensional absorbing boundary layer will be considered before relating it to the present case of a cylindrically-symmetric absorbing boundary layer.
+As discussed previously, it is necessary to calculate the momentum flux density leaving the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. This technique will necessarily make use of an absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the outgoing atom laser interacting with the artificial boundary conditions at the edge of the computational domain.  In the case of a perfect absorbing boundary layer the dynamics inside the `region of interest' (see \figureref{Peaks:AbsorbingBoundaryLayer}) will be exactly the same as the dynamics if the problem were solved on the infinite domain. We wish to calculate the momentum flux density $\Phi(\bm{k}, t)$ with which momentum leaves the region of interest. 
+
+
+The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
+\begin{align}
+    \frac{\partial \abs{\psi_\text{roi}(\bm{k}, t)}^2}{\partial t} &= 2 \Re \left\{ \psi_\text{roi}^*(\bm{k}, t) \frac{\partial \psi_\text{roi}(\bm{k}, t)}{\partial t} \right \},
+\end{align}
+where $\psi_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$ defined to be nonzero only within the region of interest.
+
+
+\begin{align}
+    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\psi(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
+    & = 2 \Re \left\{\frac{1}{(2 \pi)^{\frac{3}{2}}} \frac{i \hbar}{2 M} \psi^*(\bm{k}, t) \oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi(\bm{x}, t) + i \bm{k} \psi(\bm{x}, t)\Big] \cdot d \bm{a} \right\}
+\end{align}
+
+ We wish to calculate the momentum flux density $\Phi(\bm{k}, t)$ with which momentum
+
+layer (the `region of interest', see \figureref{Peaks:AbsorbingBoundaryLayer}) will be exactly the same as the dynamics if the problem were solved on the infinite domain.  
+
+
+We wish to calculate the rate 
+
+
+We wish to calculate the rate of 
+
+In the case of a perfect absorbing boundary layer
+
+
+In the case of a perfect absorbing boundary layer the computational domain can be decomposed into two regions: the `region of interest' in which the calculated dynamics are precisely the same as those if the problem were solved on the infinite domain
+
+
+
+
+Consider the 
+
+ We consider the situation illustrated in \figureref{Peaks:AbsorbingBoundaryLayer}
+
+
+
+
+
+
+
+ This technique must necessarily make use of the absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) as it is that which  removes density from the simulation region. In the following discussion the simpler case of a one-dimensional absorbing boundary layer will be considered before relating it to the present case of a cylindrically-symmetric absorbing boundary layer.
 
 Consider the following model of a simulation on a finite computational domain pictured in \figureref{Peaks:AbsorbingBoundaryLayerScattering}. A wave of wavenumber $k$ is incident from the left from within the computational domain on a symmetric absorbing boundary layer. Ideally the wave would be perfectly absorbed by the layer, but due to the finite depth and extent of the layer small fractions will be transmitted and reflected. We wish to calculate the change in the momentum distribution due to the presence of this layer in comparison to the rate at which probability would leave the computational domain in the absence of both the absorbing boundary layer and the artificial boundary conditions.
 
@@ -388,7 +431,7 @@ where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the func
 
 \begin{figure}
     \centering
-    \caption{\label{Peaks:AbsorbingBoundaryLayerScattering} FIXME: Absorbing boundary layer scattering.}
+    \caption{\label{Peaks:AbsorbingBoundaryLayer} FIXME: Absorbing boundary layer scattering.}
 \end{figure}
 
 

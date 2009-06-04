@@ -363,51 +363,85 @@ An appropriate representation of the solution on cylindrical domains is as a sum
 \begin{align}
     \nabla^2 u(r, z) &= \frac{\partial^2 u(r, z)}{\partial r^2} + \frac{1}{r}\frac{\partial u(r, z)}{\partial r} + \frac{\partial^2 u(r, z)}{\partial z^2}.
 \end{align}
-Specifically, the radial grid must be chosen to exclude the origin due to the apparent divergence in the $r^{-1}$ term in the Laplacian. Note that this is divergence is only apparent; for sufficiently well-behaved $u(r, z)$, $\nabla^2 u(r, z)$ will be continuous at the origin.
+Specifically, the radial grid must be chosen to exclude the origin due to the apparent divergence in the $r^{-1}$ term in the Laplacian. Note that this is divergence is not real; for sufficiently well-behaved $u(r, z)$, $\nabla^2 u(r, z)$ will be continuous at the origin.
 
 We may then like to discuss the fact that the Bessel basis will be used for the results presented in this chapter/section. If we do say this, then we can say that the Fourier basis was used due to limitations of the tools. This problem has since been rectified (refer to appropriate appendix), and the results presented here differ negligibly from the results presented in the paper, but are used for demonstration purposes. FIXME: Needs rephrasing.
 
 \subsection{Calculation of the momentum flux density}
 \label{Peaks:AbsorbingBoundaryTricks}
 
-As discussed previously, it is necessary to calculate the momentum flux density leaving the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. This technique will necessarily make use of an absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the outgoing atom laser interacting with the artificial boundary conditions at the edge of the computational domain.  In the case of a perfect absorbing boundary layer the dynamics inside the `region of interest' (see \figureref{Peaks:AbsorbingBoundaryLayer}) will be exactly the same as the dynamics if the problem were solved on the infinite domain. We wish to calculate the momentum flux density $\Phi(\bm{k}, t)$ with which momentum leaves the region of interest. 
+As discussed previously, it is necessary to calculate the momentum flux density leaving the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. The simulation will necessarily make use of an absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the outgoing atom laser interacting with the artificial boundary conditions at the edge of the computational domain.  In the case of a perfect absorbing boundary layer the dynamics inside the `region of interest' (see \figureref{Peaks:RegionOfInterest}) will be exactly the same as if the problem were solved on the infinite domain. We wish to calculate the momentum density flux $\Phi(\bm{k}, t)$ leaving the region of interest. 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=8cm]{RegionOfInterest}
+    \caption{\label{Peaks:RegionOfInterest} A snapshot of the total density from a GP simulation corresponding to the system under discussion in this chapter. It can be observed that the atom laser density is decaying within the computational region. The region of interest and absorbing boundary layer are marked. FIXME: Add figure.}
+\end{figure}
 
 The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
 \begin{align}
     \frac{\partial \abs{\psi_\text{roi}(\bm{k}, t)}^2}{\partial t} &= 2 \Re \left\{ \psi_\text{roi}^*(\bm{k}, t) \frac{\partial \psi_\text{roi}(\bm{k}, t)}{\partial t} \right \},
 \end{align}
-where $\psi_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$ defined to be nonzero only within the region of interest.
-
-
+where $\psi_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$ defined to be nonzero only within the region of interest. The equation of motion for $\psi_\text{roi}(\bm{k}, t)$ is
 \begin{align}
-    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\psi(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
-    & = 2 \Re \left\{\frac{1}{(2 \pi)^{\frac{3}{2}}} \frac{i \hbar}{2 M} \psi^*(\bm{k}, t) \oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi(\bm{x}, t) + i \bm{k} \psi(\bm{x}, t)\Big] \cdot d \bm{a} \right\}
+    \label{Peaks:PsikROIEquationOfMotion}
+    \frac{\partial \psi_\text{roi}(\bm{k}, t)}{\partial t} &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
+\end{align}
+where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. While the potential and interaction terms in \eqref{Peaks:PsikROIEquationOfMotion} redistribute momentum, it is only due to the kinetic term that momentum will leave the region of interest. To see that this is true, consider a Hamiltonian with no kinetic term. In this case the local phase of the wavefunction will rotate, but the density distribution will remain unchanged. Hence it will be the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} that will determine the momentum density flux leaving the region of interest.
+
+The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} can be evaluated to give the momentum density flux $\Phi(\bm{k}, t)$ leaving the region of interest in terms of a surface integral over the boundary of the region of interest,
+\begin{align}
+    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\psi_\text{roi}(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
+    & = -2 \Re \left\{ \frac{i \hbar}{2 M} \psi_\text{roi}^*(\bm{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi_\text{roi}(\bm{x}, t) + i \bm{k} \psi_\text{roi}(\bm{x}, t)\Big] \cdot d \bm{a} \right\}.
+    \label{Peaks:MomentumDensityFluxSurfaceIntegral}
+\end{align}
+The $\psi_\text{roi}(\bm{x}, t)$ and $\nabla\psi_\text{roi}(\bm{x}, t)$ terms to be evaluated at the boundary in \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} should be understood to be defined by the limit from the interior of the region of interest. While \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} is the most direct way of evaluating $\Phi(\bm{k}, t)$, it is a computationally inefficient method as it requires the calculation of a surface integral for every point $\bm{k}$ at which we wish to evaluate $\Phi(\bm{k}, t)$. 
+
+A more efficient method can be found by instead considering the evolution of the wavenumber density in the absorbing boundary layer (see \figureref{Peaks:RegionOfInterest}). The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves due to the negative imaginary potential. Neglecting the momentum-redistributing effects of the interaction term in the absorbing boundary layer\footnote{FIXME: This approximation can be described better. Something similar was done in \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}.}, the momentum flux density leaving the computational domain is also given by
+\begin{align}
+    \label{Peaks:MomentumDensityFlux}
+    \Phi(\bm{k}, t)&=\frac{2}{\hbar} \Re \left\{ \psi_\text{abl}^*(\bm{k}, t) \mathcal{F}'\left[ V_I(\bm{x}) \psi_\text{abl}(\bm{x}, t)\right](\bm{k}) \right\},
+\end{align}
+where $\mathcal{F}'$ is the appropriate Fourier-like transform that guarantees the artificial boundary conditions are satisfied, $\psi_\text{abl}(\bm{k}, t)$ is the $\mathcal{F}'$-transform of the restricted wavefunction $\psi_\text{abl}(\bm{x}, t)$ defined to be nonzero only within the absorbing boundary layer. For periodic boundary conditions, $\mathcal{F}'$ is the Fourier transform; for Dirichlet boundary conditions with the wavefunction set to zero on the boundary, it is the Fourier Sine transform; for Neumann boundary conditions with the derivative of the wavefunction set to zero, it is the Fourier Cosine transform. Equation \eqref{Peaks:MomentumDensityFlux} is a more efficient method of evaluating $\Phi(\bm{k}, t)$ than \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} as it only requires two Fourier-like transforms to evaluate $\Phi(\bm{k}, t)$ for all $\bm{k}$, instead of one surface integral \emph{for each} $\bm{k}$.
+
+The information provided by either \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} or \eqref{Peaks:MomentumDensityFlux} will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer $\Phi(\bm{k}, t)$ would exactly match the rate at which momentum density leaves the computational domain, for an imperfect absorbing boundary layer $\Phi(\bm{k}, t)$ will also include contributions from any reflection from or transmission through the boundary layer.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=8cm]{AbsorbingBoundaryLayerScattering}
+    \caption{\label{Peaks:AbsorbingBoundaryLayerScattering} FIXME: Absorbing boundary layer scattering.}
+\end{figure}
+
+As a demonstration of the efficacy of this method we consider a wave of wavenumber $k_0$ incident from the left on an imperfect absorbing boundary layer in a 1D computational domain (see \figureref{Peaks:AbsorbingBoundaryLayerScattering}), and compare $\Phi(k, t)$ to the result expected in the case of a perfect absorbing boundary layer of $\displaystyle \frac{\hbar k_0}{M}\delta(k - k_0) $. In this example $s$-wave scattering will be neglected.
+
+As a model for a number of different artificial boundary conditions we consider there to be \emph{no} artificial boundary condition at the edge of the computational domain, instead we consider it to be surrounded by an `auxiliary layer' in which there is a negative imaginary potential the reflection of that in the absorbing boundary layer. The negative imaginary potential is then symmetric about the edge of the computational domain. In the case of periodic boundary conditions, the auxiliary layer will correspond to the absorbing boundary layer on the other side of the computational domain in which it is assumed that the reflected negative imaginary potential is used. In the case of Dirichlet or Neumann boundary conditions in which respectively the wavefunction or its derivative is set to zero on the boundary, the auxiliary layer corresponds to the absorbing boundary layer reflected. In either of these latter two cases, the wavefunction for the actual artificial boundary conditions will be a linear combination of the wavefunction \emph{without} the artificial boundary conditions in the absorbing boundary layer and in the auxiliary layer. Specifically, in the case of Dirichlet boundary conditions in which the wavefunction is set to zero on the boundary, the wavefunction in the presence of the artificial boundary condition $\widetilde{\psi}(\bm{x})$ will be given by $\widetilde{\psi}(\bm{x}) = \psi(\bm{x}) - \psi(-\bm{x})$ where $\psi(\bm{x})$ is the wavefunction in the absence of the artificial boundary condition, and $x=0$ corresponds to the edge of the computational domain.
+
+To calculate $\Phi(k, t)$ from \eqref{Peaks:MomentumDensityFlux} it is necessary to know the solution $\psi(x)$ to the time-independent Schrödinger equation subject to the boundary conditions that there is an incident wave from the left with wavenumber $k_0$ and no incident wave from the right. Given two linearly independent solutions to the Schrödinger equation in the doubled absorbing boundary layer (the absorbing boundary layer / auxiliary layer region), $\psi(x)$ can be found by applying these boundary conditions. It now remains to obtain two linearly independent solutions to the time-independent Schrödinger equation within the doubled absorbing boundary layer.
+
+Solutions to the time-independent Schrödinger equation within the doubled absorbing boundary layer can be obtained with relative ease in one dimension as it is simply an ordinary differential equation,
+\begin{align}
+    -\frac{\hbar^2}{2M}\frac{d^2 \psi}{dx^2} + V(x) \psi(x) &= E(k_0) \psi(x) = \frac{\hbar^2 k_0^2}{2M} \psi(x),
+\end{align}
+which is equivalent to
+\begin{align}
+    \frac{d^2 \psi}{dx^2} &= \frac{2 M}{\hbar^2} V(x) \psi(x) - k_0^2 \psi(x).
+    \label{Peaks:1DTimeIndependentSchrodingerEquation}
 \end{align}
 
- We wish to calculate the momentum flux density $\Phi(\bm{k}, t)$ with which momentum
+Two linearly independent (but not necessarily orthogonal) solutions $\phi_1(x)$, $\phi_2(x)$ to \eqref{Peaks:1DTimeIndependentSchrodingerEquation} can be found by simply choosing two linearly independent initial conditions for \eqref{Peaks:1DTimeIndependentSchrodingerEquation} and numerically propagating the solutions through the potential $V(x) = -i V_I(x)$. Although the most direct technique, this method suffers from a numerical instability due to the solutions being of the form of an exponentially growing function and an exponentially decaying function. The instability is due to the exponentially growing component causing a loss of accuracy in the representation of the exponentially decaying component. This problem can be solved by recognising that the symmetry of $V_I(x)$ means that if $\psi(x)$ solves \eqref{Peaks:1DTimeIndependentSchrodingerEquation} on a symmetric domain about zero, then $\psi(-x)$ will also be a solution. This symmetry enables the use of $\phi_2(-x)$ as the second basis function which will almost certainly be of the form of an exponentially decaying function.
 
-layer (the `region of interest', see \figureref{Peaks:AbsorbingBoundaryLayer}) will be exactly the same as the dynamics if the problem were solved on the infinite domain.  
+Before determining the momentum density flux $\Phi(k)$, it is worth noting that once $\psi(x)$ has been determined using the aforementioned method for a range of incident wavenumbers $k_0$, the reflectance and transmittance of the doubled absorbing boundary layer can be determined from the squared amplitudes of the outgoing waves. The results of such a calculation for a typical absorbing boundary layer are shown in \figureref{Peaks:AbsorbingBoundaryLayerEffectiveness}.
 
-
-We wish to calculate the rate 
-
-
-We wish to calculate the rate of 
-
-In the case of a perfect absorbing boundary layer
-
-
-In the case of a perfect absorbing boundary layer the computational domain can be decomposed into two regions: the `region of interest' in which the calculated dynamics are precisely the same as those if the problem were solved on the infinite domain
+\begin{figure}
+    \centering
+    \includegraphics[width=8cm]{AbsorbingBoundaryLayerEffectiveness}
+    \caption{\label{Peaks:AbsorbingBoundaryLayerEffectiveness} The reflection $R$ and transmission $T$ coefficients from a typical absorbing boundary layer as a function of wavenumber. The potential used was $\displaystyle V_I(x) = \hbar \omega \cos^2\left( \frac{\pi x}{\Delta x} \right)$ where $\omega = \unit[5 \times 10^4]{rad.s\textsuperscript{-1}}$ and $\Delta x = \unit[5]{\micro m}$ is the size of the absorbing boundary layer. Also marked on this figure are the approximate lower and upper bounds of the effectiveness of the absorbing boundary layer as given by \eqref{BackgroundTheory:AbsorbingBoundaryKEffectiveRange}.}
+\end{figure}
 
 
 
-
-Consider the 
-
- We consider the situation illustrated in \figureref{Peaks:AbsorbingBoundaryLayer}
-
-
+\hrule
 
 
 
@@ -422,17 +456,8 @@ The equation of motion for the momentum distribution is
     \frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} &= 2 \Re\left\{ \psi^*(\bm{k}, t) \frac{\partial \psi(\bm{k}, t)}{\partial t}\right\}.
 \end{align}
 The contribution of the absorbing boundary layer is
-\begin{align}
-    \label{Peaks:MomentumFluxDensity}
-    \left.\frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} \right|_\text{abl}&=-\frac{2}{\hbar} \Re \left\{ \psi^*(\bm{k}, t) \mathcal{F}\left[ V_I(\bm{x}) \psi(\bm{x}, t)\right](\bm{k}) \right\},
-\end{align}
-where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. The information provided by this term will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer \eqref{Peaks:MomentumFluxDensity} would exactly match the rate at which probability leaves the computational domain, for an imperfect absorbing boundary layer \eqref{Peaks:MomentumFluxDensity} will include information about the change in momentum due to reflection from the boundary.
+where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. 
 
-
-\begin{figure}
-    \centering
-    \caption{\label{Peaks:AbsorbingBoundaryLayer} FIXME: Absorbing boundary layer scattering.}
-\end{figure}
 
 
 
@@ -504,73 +529,60 @@ We also need to discuss the method used to obtain the momentum flux density.
 As noted in the previous section, a GP equation model corresponding to \eqref{Peaks:MasterEquation} will be unable to reproduce the instability as it is spontaneously-seeded. 
 
 
+% 
+% Two options: 
+% * Describe the Hamiltonian used in the paper, and risk it being noticed.
+%     - Under review, this may be noticed, and if that occurs, it would lead to very, very bad things.
+% * Use the other Hamiltonian and justify neglecting the mF=-1 state.
+%     - The approximation will be noticed, and discussed. The question may be asked why I didn't try and not make this approximation.
+% 
+% The direction of the previous section has been in the line of the two-level model. But it leaves it so open to questions being asked.
+% Alternatively, I can solve *different* models for different reasons. I would then need to justify only using a two-level model for TW simulations, but can get away with a full 3D model for GP simulations. This appears to be the best approach.
+% 
+% Must justify using only two levels for TW, but three for GP.
+% This requires doing the TW and GP simulations again but using Hankel transforms.
+% 
+% Method: 
+%     2-level TW to see what the instabilities give rise to.
+%     2-level TW at correct detuning to see what happens.
+%     3-level GP at correct detuning for final results.
+% This method requires a justification of 2-level for TW. A 2-level model can be justified in terms of checking what the previous analysis gives rise to, and then a full 3-level model could be discussed. In fact, we could discuss early on that the detuning doesn't correspond to the centre of the condensate (probably reference an earlier chapter), do a 2-level TW corresponding to that to see what happens, and then do 3-level TW and GP corresponding to the actual outcoupling position used in the experiment. That would then require justification of the link between the two phenomena. It's physics, it has to work. This justification must stand up to scrutiny by Craig and John. Oooh. I could even admit that the link isn't entirely solid. I could argue that the complicated dynamics would prevent any analytic determination of the behaviour, it could be the subject of future work to see if these bloody things are correlated.
+% 
+% This then requires some motivation that the two phenomena are related. Something about the sweeping resonance crap I used before. One really good way of doing this would be by analogy. Some analogy with some other crap that is also produced in a similar way. The other possibility would be the initial outcoupling process leading to a resonance sweep. Initial dynamics. That must be it. Fourier arguments. I then need a density-dependent resonance. Three-levels. Complicated stuff. Wave hands.
+% 
+% I can justify the 2-level. No I can't. It's bloody deterministic... Unless I include the proper noise due to the absorbing boundary and/or penning ionisation. Oooh. That could actually save my bacon.
+% 
+% And it would actually be true. Neglect the Penning ionisation noise terms. Somewhere I must discuss the correct Master equation term for Penning ionisation. I'm guessing that's going to need to be in an earlier chapter that discusses the properties of Rubidium and Helium. And I should somewhere mention Lesa's work on building a dual-species Rubidium-Helium BEC.
+% 
+% Semi-Implicit low-order algorithms to the rescue... Whether I actually calculate it that way or not... we'll see.
+% 
+% Can I say things that went wrong? Things to avoid?
+% 
+% I can even perform 2-level and 3-level GP simulations of the zero-detuning case. I just can't do a 3-level TW simulation there.
+% 
+% So: start with the full master equation and work down from there as we go. The remaining question is how best to write that master equation.
+% 
+% 
+% 
+% 
+% 
+% 
+% \begin{align}
+%     K_{^{4}\text{He}}
+% \end{align}
+% 
+% a multimode calculation of the entire BEC was performed, which is discussed in this section.
+% 
+% 
+% The Hamiltonian for the system that 
+% 
+% As the instabilities discussed in the previous section were seeded by vacuum fluctuations, it will be expected that 
+% 
+% For the same reasons mentioned at the start of \sectionref{Peaks:PerturbativeApproach}, the $m_F=-1$ state can be neglected. This approximation is only necessary for technical reasons, as the full 3D calculation requires excessive computational resources. The Hamiltonian under consideration is then the same as \eqref{Peaks:InitialHamiltonian} but with the addition of the state-dependent potentials $V_i(\bm{x})$,
+% \begin{align}
+%     \begin{split}
+%     \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\bm{x})- \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
+%             &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right).
+%     \end{split}
+% \end{align}
 
-Two options: 
-* Describe the Hamiltonian used in the paper, and risk it being noticed.
-    - Under review, this may be noticed, and if that occurs, it would lead to very, very bad things.
-* Use the other Hamiltonian and justify neglecting the mF=-1 state.
-    - The approximation will be noticed, and discussed. The question may be asked why I didn't try and not make this approximation.
-
-The direction of the previous section has been in the line of the two-level model. But it leaves it so open to questions being asked.
-Alternatively, I can solve *different* models for different reasons. I would then need to justify only using a two-level model for TW simulations, but can get away with a full 3D model for GP simulations. This appears to be the best approach.
-
-Must justify using only two levels for TW, but three for GP.
-This requires doing the TW and GP simulations again but using Hankel transforms.
-
-Method: 
-    2-level TW to see what the instabilities give rise to.
-    2-level TW at correct detuning to see what happens.
-    3-level GP at correct detuning for final results.
-This method requires a justification of 2-level for TW. A 2-level model can be justified in terms of checking what the previous analysis gives rise to, and then a full 3-level model could be discussed. In fact, we could discuss early on that the detuning doesn't correspond to the centre of the condensate (probably reference an earlier chapter), do a 2-level TW corresponding to that to see what happens, and then do 3-level TW and GP corresponding to the actual outcoupling position used in the experiment. That would then require justification of the link between the two phenomena. It's physics, it has to work. This justification must stand up to scrutiny by Craig and John. Oooh. I could even admit that the link isn't entirely solid. I could argue that the complicated dynamics would prevent any analytic determination of the behaviour, it could be the subject of future work to see if these bloody things are correlated.
-
-This then requires some motivation that the two phenomena are related. Something about the sweeping resonance crap I used before. One really good way of doing this would be by analogy. Some analogy with some other crap that is also produced in a similar way. The other possibility would be the initial outcoupling process leading to a resonance sweep. Initial dynamics. That must be it. Fourier arguments. I then need a density-dependent resonance. Three-levels. Complicated stuff. Wave hands.
-
-I can justify the 2-level. No I can't. It's bloody deterministic... Unless I include the proper noise due to the absorbing boundary and/or penning ionisation. Oooh. That could actually save my bacon.
-
-And it would actually be true. Neglect the Penning ionisation noise terms. Somewhere I must discuss the correct Master equation term for Penning ionisation. I'm guessing that's going to need to be in an earlier chapter that discusses the properties of Rubidium and Helium. And I should somewhere mention Lesa's work on building a dual-species Rubidium-Helium BEC.
-
-Semi-Implicit low-order algorithms to the rescue... Whether I actually calculate it that way or not... we'll see.
-
-Can I say things that went wrong? Things to avoid?
-
-I can even perform 2-level and 3-level GP simulations of the zero-detuning case. I just can't do a 3-level TW simulation there.
-
-So: start with the full master equation and work down from there as we go. The remaining question is how best to write that master equation.
-
-
-
-
-
-
-\begin{align}
-    K_{^{4}\text{He}}
-\end{align}
-
-a multimode calculation of the entire BEC was performed, which is discussed in this section.
-
-
-The Hamiltonian for the system that 
-
-As the instabilities discussed in the previous section were seeded by vacuum fluctuations, it will be expected that 
-
-For the same reasons mentioned at the start of \sectionref{Peaks:PerturbativeApproach}, the $m_F=-1$ state can be neglected. This approximation is only necessary for technical reasons, as the full 3D calculation requires excessive computational resources. The Hamiltonian under consideration is then the same as \eqref{Peaks:InitialHamiltonian} but with the addition of the state-dependent potentials $V_i(\bm{x})$,
-\begin{align}
-    \begin{split}
-    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\bm{x})- \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
-            &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right).
-    \end{split}
-\end{align}
-
-
-
-\subsection{Calculating Momentum Flux Density at the Edge of a Simulation Region}
-%\label{Peaks:AbsorbingBoundaryTricks}
-
-
-
-
-Calculational complexity prevents performing a calculation in a three-dimensional Cartesian basis, requiring an assumption of symmetry in order to do blah-de-blah-de-blah. Then we talk about how to approximate the momentum flux density crossing the absorbing boundary layer. Then we calculate the time-independent solution to the absorbing boundary layer problem and then do a Fourier-transform to show that it gives us the results that we are looking for.
-
-
-
-limits the possibility of performing the calculation 

@@ -14,7 +14,7 @@ Using these existing sources of entangled pairs of atoms for interferometric exp
 \section{The metastable Helium `Peaks' experiment}
 \label{Peaks:ExperimentalSetup}
 
-The experimental setup for creating He* BEC has been reported elsewhere \citep{Dall:2007a}, and discussed earlier in this thesis (see \sectionref{He*Experiment}\footnote{FIXME: Correct this reference when this section is written}).
+The experimental setup for creating He* BEC has been reported elsewhere \citep{Dall:2007a}, and discussed earlier in this thesis (see \sectionref{He*Experiment}\footnote{FIXME: Correct this reference when this section is written}). The experiment discussed in this section was performed by \emph{Robert Dall}, \emph{Lesa Byron} and \emph{Andrew Truscott} at the Research School of Physics and Engineering, ANU.
 
 Starting from an almost pure BEC containing up to $5\times 10^6$ atoms an atom laser beam was created by using rf photons to spin flip the BEC atoms from the $m=1$ magnetically trapped state to the $m=0$ untrapped state.
 
@@ -296,7 +296,7 @@ The temporal periodicity of the system implies that the imaginary components $\o
 \end{align}
 This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
 
-The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{PeaksAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{PeaksAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
+The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{FloquetAppendix}, this is only true when the Floquet exponents are pure imaginary. When the Floquet exponents have a nonzero real component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{FloquetAppendix}, Floquet exponents with nonzero real parts come in pairs of the form $\pm \gamma(\bm{k}) + i \omega(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
 \begin{subequations}
     \label{Peaks:DynamicalInstability}
     \begin{align}
@@ -304,7 +304,7 @@ The normalised eigenvectors of the system are not always annihilation or creatio
         \hat{\Lambda}'(\bm{k}, nT) &= e^{-i n \omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}'(\bm{k}, 0)\right),
     \end{align}
 \end{subequations}
-where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances as discussed in \appendixref{PeaksAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances as discussed in \appendixref{FloquetAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
 
 The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:DynamicalInstability} only while the unstable modes have a small occupation compared to the condensate, and scattering between the unstable modes can be neglected. \figureref{Peaks:CondensateEigenvalues}(c) shows the results of a truncated Wigner simulation of the Hamiltonian \eqref{Peaks:InitialHamiltonian}, which is in excellent agreement with the location of the dynamical instabilities as determined by the Floquet exponents [see \figureref{Peaks:CondensateEigenvalues}(b)]. For later times, there is an additional mode undergoing growth, $k \approx \unit[7.5\times 10^5]{m}^{-1}$. This mode is the result of scattering between the dynamical instabilities, a process neglected the perturbative approach taken in this section. 
 
@@ -380,19 +380,19 @@ As discussed previously, it is necessary to calculate the momentum flux density 
 
 The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
 \begin{align}
-    \frac{\partial \abs{\psi_\text{roi}(\bm{k}, t)}^2}{\partial t} &= 2 \Re \left\{ \psi_\text{roi}^*(\bm{k}, t) \frac{\partial \psi_\text{roi}(\bm{k}, t)}{\partial t} \right \},
+    \frac{\partial \abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2}{\partial t} &= 2 \Re \left\{ \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{\partial \widetilde{\psi}_\text{roi}(\bm{k}, t)}{\partial t} \right \},
 \end{align}
-where $\psi_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$ defined to be nonzero only within the region of interest. The equation of motion for $\psi_\text{roi}(\bm{k}, t)$ is
+where $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$ defined to be nonzero only within the region of interest. The equation of motion for $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is
 \begin{align}
     \label{Peaks:PsikROIEquationOfMotion}
-    \frac{\partial \psi_\text{roi}(\bm{k}, t)}{\partial t} &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
+    \frac{\partial \widetilde{\psi}_\text{roi}(\bm{k}, t)}{\partial t} &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
 \end{align}
 where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. While the potential and interaction terms in \eqref{Peaks:PsikROIEquationOfMotion} redistribute momentum, it is only due to the kinetic term that momentum will leave the region of interest. To see that this is true, consider a Hamiltonian with no kinetic term. In this case the local phase of the wavefunction will rotate, but the density distribution will remain unchanged. Hence it will be the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} that will determine the momentum density flux leaving the region of interest.
 
 The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} can be evaluated to give the momentum density flux $\Phi(\bm{k}, t)$ leaving the region of interest in terms of a surface integral over the boundary of the region of interest,
 \begin{align}
-    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\psi_\text{roi}(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
-    & = -2 \Re \left\{ \frac{i \hbar}{2 M} \psi_\text{roi}^*(\bm{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi_\text{roi}(\bm{x}, t) + i \bm{k} \psi_\text{roi}(\bm{x}, t)\Big] \cdot d \bm{a} \right\}.
+    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
+    & = -2 \Re \left\{ \frac{i \hbar}{2 M} \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi_\text{roi}(\bm{x}, t) + i \bm{k} \psi_\text{roi}(\bm{x}, t)\Big] \cdot d \bm{A} \right\}.
     \label{Peaks:MomentumDensityFluxSurfaceIntegral}
 \end{align}
 The $\psi_\text{roi}(\bm{x}, t)$ and $\nabla\psi_\text{roi}(\bm{x}, t)$ terms to be evaluated at the boundary in \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} should be understood to be defined by the limit from the interior of the region of interest. While \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} is the most direct way of evaluating $\Phi(\bm{k}, t)$, it is a computationally inefficient method as it requires the calculation of a surface integral for every point $\bm{k}$ at which we wish to evaluate $\Phi(\bm{k}, t)$. 
@@ -400,45 +400,25 @@ The $\psi_\text{roi}(\bm{x}, t)$ and $\nabla\psi_\text{roi}(\bm{x}, t)$ terms to
 A more efficient method can be found by instead considering the evolution of the wavenumber density in the absorbing boundary layer (see \figureref{Peaks:RegionOfInterest}). The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves due to the negative imaginary potential. Neglecting the momentum-redistributing effects of the interaction term in the absorbing boundary layer\footnote{FIXME: This approximation can be described better. Something similar was done in \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}.}, the momentum flux density leaving the computational domain is also given by
 \begin{align}
     \label{Peaks:MomentumDensityFlux}
-    \Phi(\bm{k}, t)&=\frac{2}{\hbar} \Re \left\{ \psi_\text{abl}^*(\bm{k}, t) \mathcal{F}'\left[ V_I(\bm{x}) \psi_\text{abl}(\bm{x}, t)\right](\bm{k}) \right\},
+    \Phi(\bm{k}, t)&=\frac{2}{\hbar} \Re \left\{ \widetilde{\psi}_\text{abl}^*(\bm{k}, t) \mathcal{F}'\left[ V_I(\bm{x}) \psi_\text{abl}(\bm{x}, t)\right](\bm{k}) \right\},
 \end{align}
-where $\mathcal{F}'$ is the appropriate Fourier-like transform that guarantees the artificial boundary conditions are satisfied, $\psi_\text{abl}(\bm{k}, t)$ is the $\mathcal{F}'$-transform of the restricted wavefunction $\psi_\text{abl}(\bm{x}, t)$ defined to be nonzero only within the absorbing boundary layer. For periodic boundary conditions, $\mathcal{F}'$ is the Fourier transform; for Dirichlet boundary conditions with the wavefunction set to zero on the boundary, it is the Fourier Sine transform; for Neumann boundary conditions with the derivative of the wavefunction set to zero, it is the Fourier Cosine transform. Equation \eqref{Peaks:MomentumDensityFlux} is a more efficient method of evaluating $\Phi(\bm{k}, t)$ than \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} as it only requires two Fourier-like transforms to evaluate $\Phi(\bm{k}, t)$ for all $\bm{k}$, instead of one surface integral \emph{for each} $\bm{k}$.
+where $\mathcal{F}'$ is the appropriate Fourier-like transform that guarantees the artificial boundary conditions are satisfied, $\widetilde{\psi}_\text{abl}(\bm{k}, t)$ is the $\mathcal{F}'$-transform of the restricted wavefunction $\psi_\text{abl}(\bm{x}, t)$ defined to be nonzero only within the absorbing boundary layer. For periodic boundary conditions, $\mathcal{F}'$ is the Fourier transform; for Dirichlet boundary conditions with the wavefunction set to zero on the boundary, it is the Fourier Sine transform; for Neumann boundary conditions with the derivative of the wavefunction set to zero, it is the Fourier Cosine transform. Equation \eqref{Peaks:MomentumDensityFlux} is a more efficient method of evaluating $\Phi(\bm{k}, t)$ than \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} as it only requires two Fourier-like transforms to evaluate $\Phi(\bm{k}, t)$ for all $\bm{k}$, instead of one surface integral \emph{for each} $\bm{k}$.
 
-The information provided by either \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} or \eqref{Peaks:MomentumDensityFlux} will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer $\Phi(\bm{k}, t)$ would exactly match the rate at which momentum density leaves the computational domain, for an imperfect absorbing boundary layer $\Phi(\bm{k}, t)$ will also include contributions from any reflection from or transmission through the boundary layer.
+The information provided by either \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} or \eqref{Peaks:MomentumDensityFlux} will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer $\Phi(\bm{k}, t)$ would exactly match the rate at which momentum density leaves the computational domain, for an imperfect absorbing boundary layer $\Phi(\bm{k}, t)$ will also include contributions from any reflection from or transmission through the boundary layer. 
+
+An example calculation of $\Phi(\bm{k}, t)$ for a finite absorbing boundary layer is given in \sectionref{MethodsAppendix:MomentumDensityFluxExampleCalculation}. There it is demonstrated that $\Phi(\bm{k}, t)$ is an accurate method for determining the rate of loss of momentum density from a region of space for the same range of momenta for which the absorbing boundary layer is itself accurate.
+
+\parasep
+
+The full 3D simulations described in the remainder of this chapter use the method presented in this section to determine the momentum distribution of atoms that have left computational domain. Due to the use of cylindrical symmetry, the correct Fourier-like transform for use in \eqref{Peaks:MomentumDensityFlux} is the Hankel (or Bessel)
+
+This momentum distribution is then propagated classically to find the corresponding density distribution on the MCP detector below the condensate. This classical propagation was performed by \emph{Mattias Johnsson}.
 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=8cm]{AbsorbingBoundaryLayerScattering}
-    \caption{\label{Peaks:AbsorbingBoundaryLayerScattering} FIXME: Absorbing boundary layer scattering.}
-\end{figure}
+In the present 
 
-As a demonstration of the efficacy of this method we consider a wave of wavenumber $k_0$ incident from the left on an imperfect absorbing boundary layer in a 1D computational domain (see \figureref{Peaks:AbsorbingBoundaryLayerScattering}), and compare $\Phi(k, t)$ to the result expected in the case of a perfect absorbing boundary layer of $\displaystyle \frac{\hbar k_0}{M}\delta(k - k_0) $. In this example $s$-wave scattering will be neglected.
 
-As a model for a number of different artificial boundary conditions we consider there to be \emph{no} artificial boundary condition at the edge of the computational domain, instead we consider it to be surrounded by an `auxiliary layer' in which there is a negative imaginary potential the reflection of that in the absorbing boundary layer. The negative imaginary potential is then symmetric about the edge of the computational domain. In the case of periodic boundary conditions, the auxiliary layer will correspond to the absorbing boundary layer on the other side of the computational domain in which it is assumed that the reflected negative imaginary potential is used. In the case of Dirichlet or Neumann boundary conditions in which respectively the wavefunction or its derivative is set to zero on the boundary, the auxiliary layer corresponds to the absorbing boundary layer reflected. In either of these latter two cases, the wavefunction for the actual artificial boundary conditions will be a linear combination of the wavefunction \emph{without} the artificial boundary conditions in the absorbing boundary layer and in the auxiliary layer. Specifically, in the case of Dirichlet boundary conditions in which the wavefunction is set to zero on the boundary, the wavefunction in the presence of the artificial boundary condition $\widetilde{\psi}(\bm{x})$ will be given by $\widetilde{\psi}(\bm{x}) = \psi(\bm{x}) - \psi(-\bm{x})$ where $\psi(\bm{x})$ is the wavefunction in the absence of the artificial boundary condition, and $x=0$ corresponds to the edge of the computational domain.
-
-To calculate $\Phi(k, t)$ from \eqref{Peaks:MomentumDensityFlux} it is necessary to know the solution $\psi(x)$ to the time-independent Schrödinger equation subject to the boundary conditions that there is an incident wave from the left with wavenumber $k_0$ and no incident wave from the right. Given two linearly independent solutions to the Schrödinger equation in the doubled absorbing boundary layer (the absorbing boundary layer / auxiliary layer region), $\psi(x)$ can be found by applying these boundary conditions. It now remains to obtain two linearly independent solutions to the time-independent Schrödinger equation within the doubled absorbing boundary layer.
-
-Solutions to the time-independent Schrödinger equation within the doubled absorbing boundary layer can be obtained with relative ease in one dimension as it is simply an ordinary differential equation,
-\begin{align}
-    -\frac{\hbar^2}{2M}\frac{d^2 \psi}{dx^2} + V(x) \psi(x) &= E(k_0) \psi(x) = \frac{\hbar^2 k_0^2}{2M} \psi(x),
-\end{align}
-which is equivalent to
-\begin{align}
-    \frac{d^2 \psi}{dx^2} &= \frac{2 M}{\hbar^2} V(x) \psi(x) - k_0^2 \psi(x).
-    \label{Peaks:1DTimeIndependentSchrodingerEquation}
-\end{align}
-
-Two linearly independent (but not necessarily orthogonal) solutions $\phi_1(x)$, $\phi_2(x)$ to \eqref{Peaks:1DTimeIndependentSchrodingerEquation} can be found by simply choosing two linearly independent initial conditions for \eqref{Peaks:1DTimeIndependentSchrodingerEquation} and numerically propagating the solutions through the potential $V(x) = -i V_I(x)$. Although the most direct technique, this method suffers from a numerical instability due to the solutions being of the form of an exponentially growing function and an exponentially decaying function. The instability is due to the exponentially growing component causing a loss of accuracy in the representation of the exponentially decaying component. This problem can be solved by recognising that the symmetry of $V_I(x)$ means that if $\psi(x)$ solves \eqref{Peaks:1DTimeIndependentSchrodingerEquation} on a symmetric domain about zero, then $\psi(-x)$ will also be a solution. This symmetry enables the use of $\phi_2(-x)$ as the second basis function which will almost certainly be of the form of an exponentially decaying function.
-
-Before determining the momentum density flux $\Phi(k)$, it is worth noting that once $\psi(x)$ has been determined using the aforementioned method for a range of incident wavenumbers $k_0$, the reflectance and transmittance of the doubled absorbing boundary layer can be determined from the squared amplitudes of the outgoing waves. The results of such a calculation for a typical absorbing boundary layer are shown in \figureref{Peaks:AbsorbingBoundaryLayerEffectiveness}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=8cm]{AbsorbingBoundaryLayerEffectiveness}
-    \caption{\label{Peaks:AbsorbingBoundaryLayerEffectiveness} The reflection $R$ and transmission $T$ coefficients from a typical absorbing boundary layer as a function of wavenumber. The potential used was $\displaystyle V_I(x) = \hbar \omega \cos^2\left( \frac{\pi x}{\Delta x} \right)$ where $\omega = \unit[5 \times 10^4]{rad.s\textsuperscript{-1}}$ and $\Delta x = \unit[5]{\micro m}$ is the size of the absorbing boundary layer. Also marked on this figure are the approximate lower and upper bounds of the effectiveness of the absorbing boundary layer as given by \eqref{BackgroundTheory:AbsorbingBoundaryKEffectiveRange}.}
-\end{figure}
-
+$\Phi(\bm{k}, t)$
 
 
 \hrule
@@ -446,76 +426,6 @@ Before determining the momentum density flux $\Phi(k)$, it is worth noting that 
 
 
 
-
- This technique must necessarily make use of the absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) as it is that which  removes density from the simulation region. In the following discussion the simpler case of a one-dimensional absorbing boundary layer will be considered before relating it to the present case of a cylindrically-symmetric absorbing boundary layer.
-
-Consider the following model of a simulation on a finite computational domain pictured in \figureref{Peaks:AbsorbingBoundaryLayerScattering}. A wave of wavenumber $k$ is incident from the left from within the computational domain on a symmetric absorbing boundary layer. Ideally the wave would be perfectly absorbed by the layer, but due to the finite depth and extent of the layer small fractions will be transmitted and reflected. We wish to calculate the change in the momentum distribution due to the presence of this layer in comparison to the rate at which probability would leave the computational domain in the absence of both the absorbing boundary layer and the artificial boundary conditions.
-
-The equation of motion for the momentum distribution is
-\begin{align}
-    \frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} &= 2 \Re\left\{ \psi^*(\bm{k}, t) \frac{\partial \psi(\bm{k}, t)}{\partial t}\right\}.
-\end{align}
-The contribution of the absorbing boundary layer is
-where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. 
-
-
-
-
-
-In the perfect case the wave 
-
-Not all of the incident wave will be absorbed; some will be transmitted and some reflected, 
-
-
-Parts of the wave will be transmitted
-
-The wave will be partially transmitted through and partially reflected from this layer 
-
-Some fraction wave will be transmitted through the layer 
-
-The wave  then be transmitted through the layer with reduced amplitude
-
-
-It is assumed that 
-
-
-Reflection and transmission are distinguished 
-
-
-Consider the following idealised situation. A wave 
-
-
-Consider an wave of wavenumber $k$ incident from the left on an absorbing boundary layer. We wish to calculate the change in the momentum distribution due to the presence of this layer and compare this to the rate at which 
-
-
-
-
-
-
-
-
-
-
-
-We wish to calculate the change in the momentum distribution due to the presence of the absorbing boundary layer, and compare this to what would be expected 
-
-It is the change in the momentum
-
-
-Consider an incident wave with wavenumber $k$ incident from the left on an 
-
-As it is the change in the momentum distribution due to the presence of the absorbing boundary layer that we wish to determine, it is natural to consider its evolution,
-\begin{align}
-    \frac{\partial \abs{\psi(\bm{k}, t)}}{\partial t} &= 2 \Re\left\{ \psi^*(\bm{k}, t) \frac{\partial \psi(\bm{k}, t)}{\partial t}\right\}.
-\end{align}
-
-As a model for the absorbing boundary layer, we consider the situation of an incident wave of wavenumber $k$ incident from the left on an absorbing boundary layer 
-
-
-in order to approximate the dynamics near the condensate as cylindrically symmetric
-
-
-The artificial boundary condition appropriate for use on cylindrical domains is $\Psi_j=0$ outside 
 
 
 We need to discuss the artificial boundary conditions used. Mention that Fourier boundary conditions were used in the paper, which are less than optimal, but used due to the limitations of the tools at hand. That said, the results presented here use the Hankel transform (discussed in a numerical methods appendix) and differ negligibly (they bloody well better) from the results in the paper.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -243,6 +243,13 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Bohn}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
   \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Arfkey and Weber}(2001)}]{ArfkeyWeber}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{Arfkey}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.~J.} \bibnamefont{Weber}},
+  \emph{\bibinfo{title}{{Mathematical Methods for Physicists}}}
+  (\bibinfo{publisher}{Harcourt}, \bibinfo{address}{San Diego},
+  \bibinfo{year}{2001}), \bibinfo{edition}{5th} ed.
 
 \bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
   and \"Ohberg}}]{Leonhardt:2003}

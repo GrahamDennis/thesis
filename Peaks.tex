@@ -397,7 +397,7 @@ The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotio
 \end{align}
 The $\psi_\text{roi}(\bm{x}, t)$ and $\nabla\psi_\text{roi}(\bm{x}, t)$ terms to be evaluated at the boundary in \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} should be understood to be defined by the limit from the interior of the region of interest. While \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} is the most direct way of evaluating $\Phi(\bm{k}, t)$, it is a computationally inefficient method as it requires the calculation of a surface integral for every point $\bm{k}$ at which we wish to evaluate $\Phi(\bm{k}, t)$. 
 
-A more efficient method can be found by instead considering the evolution of the wavenumber density in the absorbing boundary layer (see \figureref{Peaks:RegionOfInterest}). The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves due to the negative imaginary potential. Neglecting the momentum-redistributing effects of the interaction term in the absorbing boundary layer\footnote{FIXME: This approximation can be described better. Something similar was done in \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}.}, the momentum flux density leaving the computational domain is also given by
+A more efficient method can be found by instead considering the evolution of the wavenumber density in the absorbing boundary layer (see \figureref{Peaks:RegionOfInterest}). The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves due to the negative imaginary potential. Assuming that the mean-field interaction energy of the wavefunction reaching the absorbing boundary layer is small compared to its kinetic energy, the momentum flux density leaving the region of interest is also given by
 \begin{align}
     \label{Peaks:MomentumDensityFlux}
     \Phi(\bm{k}, t)&=\frac{2}{\hbar} \Re \left\{ \widetilde{\psi}_\text{abl}^*(\bm{k}, t) \mathcal{F}'\left[ V_I(\bm{x}) \psi_\text{abl}(\bm{x}, t)\right](\bm{k}) \right\},
@@ -410,16 +410,21 @@ An example calculation of $\Phi(\bm{k}, t)$ for a finite absorbing boundary laye
 
 \parasep
 
-The full 3D simulations described in the remainder of this chapter use the method presented in this section to determine the momentum distribution of atoms that have left computational domain. Due to the use of cylindrical symmetry, the correct Fourier-like transform for use in \eqref{Peaks:MomentumDensityFlux} is the Hankel (or Bessel)
+The simulations described in the remainder of this chapter use the method presented in this section to determine the momentum distribution of atoms that have left computational domain. This momentum distribution is then propagated classically under gravity to find the corresponding density distribution on the MCP detector below the condensate. This classical propagation was performed by \emph{Mattias Johnsson}. Note that due to the use of cylindrical symmetry, the correct Fourier-like transform for use in \eqref{Peaks:MomentumDensityFlux} is the Hankel (or Bessel) transform \citep{ArfkeyWeber}.
 
-This momentum distribution is then propagated classically to find the corresponding density distribution on the MCP detector below the condensate. This classical propagation was performed by \emph{Mattias Johnsson}.
+\subsection{Next section}
+Things that need to be discussed:
+\begin{enumerate}
+    \item The Theorist's on-resonance case. This is important because it shows agreement with the Floquet exponents calculated in an earlier section.
+    \item In this case, we need to perform both TW and GP simulations demonstrating that the peaks are only observed in the TW case and they obey the usual stuff. At this point we need to say why we are only using a two-level model here. If the Hankel simulations are working, then we will use those for these results and also try a three-level (proper) version.
+    \item Experimentalist's on-resonance case. Show the detuning plot so that we know exactly what the difference is and why. Extra points may need to be calculated for that curve. Then show the GP and TW results in the appropriate limit. Here is where we need to argue about how things are related to one another.
+    \item Future work and conclude.
+\end{enumerate}
 
+Most of these sections can be written before the figures are available. The final figures can then be added as they are completed.
 
-In the present 
-
-
-$\Phi(\bm{k}, t)$
-
+\subsection{Theorist's on-resonance}
+\subsection{Experimentalist's on-resonance}
 
 \hrule
 

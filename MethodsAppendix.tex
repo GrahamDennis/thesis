@@ -69,3 +69,6 @@ where $\eta(k_0)$ is plotted in \figureref{MethodsAppendix:AbsorbingBoundaryLaye
 
 \section{Convolutions}
 Unrelated to thesis but important: When doing convolutions you must truncate the range of the interaction potential to prevent interacting with the `copies' of the density that you do want to interact with. This Fourier transform \emph{must} be calculated analytically. The range of the grid must also be such that the density is nonzero within a rectangular prism with side lengths $\frac{1}{2}$ that of the computational domain. This is to prevent the left part of the density interacting with the right part due to the wrap-around.
+\begin{align}
+    \mathcal{F}(f * g) &= \sqrt{2 \pi} \mathcal{F}(f) \mathcal{F}(g)
+\end{align}

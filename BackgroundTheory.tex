@@ -45,6 +45,8 @@ where $\mathcal{D}$ is the usual decoherence superoperator. This master equation
 
 In most of this thesis it is only the immediate vicinity of the BEC that is under consideration and absorbing boundary layers are used to restrict the computational domain to this region. One notable exception is \chapterref{TransverseProfile} in which the transverse profile of the atom laser a large distance from the BEC is considered. In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above. Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
+\section{Truncated Wigner}
+\label{BackgroundTheory:TruncatedWigner}
 \section{Rubidium}
 \label{BackgroundTheory:Rubidium}
 \section{Metastable Helium}
@@ -63,5 +65,49 @@ In most of this thesis it is only the immediate vicinity of the BEC that is unde
     \end{tabular}
     \caption{\label{BackgroundTheory:He*Parameters} Relevant parameters of metastable Helium.}
 \end{table}
+
+\subsection{Penning ionisation}
+The process is
+\begin{align}
+    \text{He}^* + \text{He}^* &\rightarrow \text{He} + \text{He}^+ + e^-.
+\end{align}
+As can be seen from \citet{Stas:2006kx}, at BEC temperatures it is essentially only the total hyperfine spin $S=0$ molecular state that undergoes Penning ionisation (PI). This molecular state is given by
+\begin{align}
+    \hat{\Xi}_\ket{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
+\end{align}
+
+Penning ionisation can be modelled as a coupling of the molecular state $\hat{\Xi}_\ket{S=0, m_S=0}$ to the vacuum. This kind of loss term will contribute a term to the master equation,
+\begin{align}
+    \label{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant}
+    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_\ket{S=0, m_S=0}\right] \hat{\rho},
+\end{align}
+where $\mathcal{D}$ is the usual decoherence superoperator, and $\gamma_\text{PI}$ is an as-yet unknown coefficient. This coefficient can be determined by matching the dynamics given by \eqref{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant} for an unpolarised MOT and comparing it to the result given in \citep{Stas:2006kx} of
+\begin{align}
+    \frac{d N_\text{ions}}{d t} &= K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, n^2(\bm{x}),
+\end{align}
+where $n(\bm{x})$ is the total density, and $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ \citep{Stas:2006kx}.
+
+The equation of motion for the expectation value of the total number of atoms is,
+\begin{align}
+    \label{BackgroundTheory:NEquationOfMotion}
+    \begin{split}
+        \frac{d \mean{\hat{N}}}{d t} &= - \gamma_\text{PI} \frac{2}{3}\int d \bm{x}\, \left(4 \mean{\hat{\Psi}_{-1}^\dagger \hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\hat{\Psi}_{-1}^{\phantom{\dagger}}} + \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}}\right)\\
+        &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \bm{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
+    \end{split}
+\end{align}
+For a thermal state, the second two terms in \eqref{BackgroundTheory:NEquationOfMotion} will be zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{n}}^2$. This gives the equation of motion for the total number of atoms in a thermal sample to be
+\begin{align}
+    \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \bm{x}\, \left(2 n_1(\bm{x}) n_{-1}(\bm{x}) + n_0^2(\bm{x})\right).
+\end{align}
+For an unpolarised thermal sample, $\displaystyle n_j(\bm{x}) = \frac{1}{3}n(\bm{x})$, and as two atoms are lost for each ion that is produced,
+\begin{align}
+    \frac{d N_\text{ion}}{dt} &= -\frac{1}{2} \left.\frac{d \mean{\hat{N}}}{dt}\right|_\text{thermal} = \frac{2}{9} \gamma_\text{PI} \int d \bm{x}\, n^2(\bm{x}).
+\end{align}
+Which gives $\displaystyle\gamma_\text{PI} = \frac{9}{2} K^\text{(unpol)}_{^4\text{He}}$ and the corresponding term in the master equation as
+\begin{align}
+    \label{BackgroundTheory:PenningIonisationMasterEquationTerm}
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_\ket{S=0, m_S=0}\right] \hat{\rho}.
+\end{align}
+
 % Using an argument derived from that given by \citet{Neuhasuer:1989}, the approximate range of wavenumbers over which the absorbing boundary layer will be effective can be quantified by considering an incident wave of wavenumber $k$ on a potential $V(x) = -i V_I(x)$ of finite width $\Delta x$. As it is the efficacy of the absorbing boundary layer that is under consideration, it will be assumed that the potential is zero everywhere. The results of these calculations will then apply in terms of the wavenumber of the wave as it is incident on the absorbing boundary layer provided the physical potential changes negligibly over the scale of the absorbing boundary layer. It will also be assumed that the mean-field interactions of the atom laser are small compared to the kinetic energy and can be neglected.\footnote{FIXME: Paragraph needs rewrite.}
 

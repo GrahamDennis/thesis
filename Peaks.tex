@@ -336,9 +336,9 @@ In the previous section it was found that the process of outcoupling from the He
 The master equation that describes the experiment described in \sectionref{Peaks:ExperimentalSetup} is given by
 \begin{align}
     \label{Peaks:MasterEquation}
-    \frac{d \hat{\rho}}{d t} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{27}{5} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{\ket{0,0}} \right] \hat{\rho},
+    \frac{d \hat{\rho}}{d t} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{9}{2} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{\ket{0,0}} \right] \hat{\rho},
 \end{align}
-where $\displaystyle\hat{\Xi}_\ket{S, m_S}$ is the annihilation operator for the molecular $\displaystyle \text{He}^*_2$ state with total hyperfine spin $S$ and projection $m_S$, $\mathcal{D}[\hat{c}]\hat{\rho} \equiv \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and the second term on the RHS in \eqref{Peaks:MasterEquation} is due to Penning ionisation (refer to \sectionref{BackgroundTheory:Helium}) with $K^\text{(unpol)}_{^{4}\text{He}}$ the Penning ionisation rate for an unpolarised thermal sample of He* \citep{Stas:2006kx}. The Hamiltonian in \eqref{Peaks:MasterEquation} is given by
+where $\displaystyle\hat{\Xi}_\ket{S, m_S}$ is the annihilation operator for the molecular $\displaystyle \text{He}^*_2$ state with total hyperfine spin $S$ and projection $m_S$, $\mathcal{D}[\hat{c}]\hat{\rho} \equiv \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and the second term on the RHS in \eqref{Peaks:MasterEquation} is due to Penning ionisation\footnote{The reason for the difference between the $\displaystyle \frac{54}{5}$ factor in \citet{Dall:2009} and \eqref{Peaks:MasterEquation} is a difference of a factor of $\sqrt{2}$ in the definitions of $\hat{\Psi}_{J=0}^{\text{(mol)}}$ in \citep{Dall:2009} and $\displaystyle\hat{\Xi}_\ket{S=0, m_S=0}$ here, and a calculational error of the order of 20\% in \citep{Dall:2009}.} (refer to \sectionref{BackgroundTheory:Helium}) with $K^\text{(unpol)}_{^{4}\text{He}}$ the Penning ionisation rate for an unpolarised thermal sample of He* \citep{Stas:2006kx}. The Hamiltonian in \eqref{Peaks:MasterEquation} is given by
 \begin{align}
     \label{Peaks:3DHamiltonian}
     \begin{split}
@@ -347,13 +347,15 @@ where $\displaystyle\hat{\Xi}_\ket{S, m_S}$ is the annihilation operator for the
             &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
     \end{split}
 \end{align}
-$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The molecular annihilation operator $\displaystyle \hat{\Xi}_\ket{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_\ket{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left[ 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right]$.
+$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The molecular annihilation operator $\displaystyle \hat{\Xi}_\ket{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_\ket{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right)$.
 
 In the first instance, we wish to verify the results of the previous section within a fully three-dimensional model and determine the pattern that would be observed on the detector in this case. Although a similar system was solved with the GP equation in \sectionref{TransverseProfile:Helium} when the transverse profile of a He* atom laser was considered, it is not possible to solve the system corresponding to \eqref{Peaks:MasterEquation} with available computational infrastructure. The difference between these two systems is in the axial dimension.
 
 When modelling the transverse profile of the atom laser, the tight aspect ratio of the condensate meant that outcoupled atoms would be accelerated much more along the radial trapping directions than along the axial trapping direction. This permitted the use of a much larger spatial grid separation in the axial dimension than in the radial dimensions. In the present system it is expected that there will exist instabilities with momenta that correspond to a substantial fraction of that which the atom laser would have after leaving the condensate ($\sim \unit[2 \times 10^6]{m\textsuperscript{-1}}$ as compared to $\sim \unit[4 \times 10^6]{m\textsuperscript{-1}}$). In the present case the spatial grid separation in the axial dimension must be comparable to that used in the radial dimensions. Exacerbating this problem is that the tighter aspect ratio in the experiment described in this chapter requires this significantly smaller spatial grid separation be used over a larger range. To perform a simulation using a method similar to that used in \sectionref{TransverseProfile:Helium} approximately $\unit[500]{GiB}$ of memory would be needed to simply store the wavefunctions for the system. Additional approximations are necessary to make this system tractable.
 
 One of the most effective ways to reduce the size of a problem is by reducing its dimensionality. Although the master equation \eqref{Peaks:MasterEquation} possesses no continuous symmetries, near the BEC it is approximately cylindrically symmetric. The only term breaking this cylindrical symmetry is the gravitational potential $V_\text{grav}(\bm{x}) =- M \bm{g} \cdot \bm{x}$ where $\bm{g}$ is the gravitational field strength. While this term can be neglected over the region close to the BEC as it varies by only $10\%$ of the chemical potential of the BEC, it certainly cannot be neglected when considering the propagation of the atom laser onto the detector located $\unit[4]{cm}$ below. However, as discussed in \sectionref{TransverseProfile:Helium} the evolution of the atom laser in the region below the BEC is well described by free fall with the exception of fine-scale interference effects. In this chapter it is only the large-scale structure that is of interest, enabling a classical description for the atom laser to be used after it leaves the immediate vicinity of the condensate where the important dynamics will occur.
+
+Another demonstration of the validity of the assumption of cylindrical symmetry is that the gravitational sag of the centre of the condensate from the centre of the trap is only $\unit[0.2]{\micro m}$, which is small compared to the Thomas-Fermi radius in the tight trapping dimensions of $r_\text{TF} = \unit[9.4]{\micro m}$. Consequently, atoms will be repelled from the condensate almost symmetrically. Such a situation was observed earlier in \sectionref{TransverseProfile:Helium}.
 
 To solve the system corresponding to the master equation \eqref{Peaks:MasterEquation}, a two-step method is used. First, the system will either be modelled with a GP equation or a Truncated Wigner method in a restricted cylindrical region enclosing the condensate using absorbing boundary layers (see \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the atom laser interacting with the artificial boundary conditions. Second, the momentum flux density leaving the simulation region (calculated using a method described in \sectionref{Peaks:AbsorbingBoundaryTricks}) is then propagated classically to determine the profile on the detector, which is located $\unit[4]{cm}$ below the BEC. This two-step procedure will permit the use of cylindrical symmetry to reduce the dimensionality of the computational domain while still considering the full three-dimensional behaviour of the system.
 
@@ -375,7 +377,7 @@ As discussed previously, it is necessary to calculate the momentum flux density 
 \begin{figure}
     \centering
     \includegraphics[width=8cm]{RegionOfInterest}
-    \caption{\label{Peaks:RegionOfInterest} A snapshot of the total density from a GP simulation corresponding to the system under discussion in this chapter. It can be observed that the atom laser density is decaying within the computational region. The region of interest and absorbing boundary layer are marked. FIXME: Add figure.}
+    \caption{\label{Peaks:RegionOfInterest} A snapshot of the total density from a GP simulation corresponding to the system under discussion in this chapter. It can be observed that the atom laser density is decaying within the absorbing boundary layer. The region of interest and absorbing boundary layer are marked. The region of interest is the entire computational domain except for the absorbing boundary layer. The absorbing boundary layer has a width of $\unit[5]{\micro m}$.}
 \end{figure}
 
 The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
@@ -412,37 +414,37 @@ An example calculation of $\Phi(\bm{k}, t)$ for a finite absorbing boundary laye
 
 The simulations described in the remainder of this chapter use the method presented in this section to determine the momentum distribution of atoms that have left computational domain. This momentum distribution is then propagated classically under gravity to find the corresponding density distribution on the MCP detector below the condensate. This classical propagation was performed by \emph{Mattias Johnsson}. Note that due to the use of cylindrical symmetry, the correct Fourier-like transform for use in \eqref{Peaks:MomentumDensityFlux} is the Hankel (or Bessel) transform \citep{ArfkeyWeber}.
 
-\subsection{Next section}
-Things that need to be discussed:
-\begin{enumerate}
-    \item The Theorist's on-resonance case. This is important because it shows agreement with the Floquet exponents calculated in an earlier section.
-    \item In this case, we need to perform both TW and GP simulations demonstrating that the peaks are only observed in the TW case and they obey the usual stuff. At this point we need to say why we are only using a two-level model here. If the Hankel simulations are working, then we will use those for these results and also try a three-level (proper) version.
-    \item Experimentalist's on-resonance case. Show the detuning plot so that we know exactly what the difference is and why. Extra points may need to be calculated for that curve. Then show the GP and TW results in the appropriate limit. Here is where we need to argue about how things are related to one another.
-    \item Future work and conclude.
-\end{enumerate}
+% \subsection{Next section}
+% Things that need to be discussed:
+% \begin{enumerate}
+%     \item The Theorist's on-resonance case. This is important because it shows agreement with the Floquet exponents calculated in an earlier section.
+%     \item In this case, we need to perform both TW and GP simulations demonstrating that the peaks are only observed in the TW case and they obey the usual stuff. At this point we need to say why we are only using a two-level model here. If the Hankel simulations are working, then we will use those for these results and also try a three-level (proper) version.
+%     \item Experimentalist's on-resonance case. Show the detuning plot so that we know exactly what the difference is and why. Extra points may need to be calculated for that curve. Then show the GP and TW results in the appropriate limit. Here is where we need to argue about how things are related to one another.
+%     \item Future work and conclude.
+% \end{enumerate}
+% 
+% Most of these sections can be written before the figures are available. The final figures can then be added as they are completed.
 
-Most of these sections can be written before the figures are available. The final figures can then be added as they are completed.
+\subsection{Equations of motion}
 
-\subsection{Theorist's on-resonance}
-
-We now consider the case of outcoupling from the centre of the BEC. This is the case that corresponds most closely to that considered in \sectionref{Peaks:PerturbativeApproach}. We begin first by considering the GP equations that correspond to the master equation \eqref{Peaks:MasterEquation},
+Having described the calculational techniques that will be used, we will now turn to the description of the Gross-Pitaevskii and Truncated Wigner equations that were used to model the experiment. The GP equations that correspond to the master equation \eqref{Peaks:MasterEquation} are
 \begin{subequations}
     \label{Peaks:3DGPEquations}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial \Psi_1}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\bm{x}) - i V_I(\bm{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_1 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 - \abs{\Psi_{-1}}^2 \right) \Psi_1 + c_2 \Psi_{-1}^*\Psi_0^2 \\
-            & \relphantom{=} - i \hbar\frac{27}{15}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
+            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial \Psi_0}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(-\hbar \Delta - i V_I(\bm{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_0 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_0 + 2 c_2 \Psi_{0}^*\Psi_1\Psi_{-1} \\
-            & \relphantom{=} - i \hbar\frac{27}{15}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
+            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial \Psi_{-1}}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\bm{x}) - 2 \hbar \Delta - i V_I(\bm{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_{-1} + c_2\left(-\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_{-1} + c_2 \Psi_{1}^*\Psi_0^2 \\
-            & \relphantom{=} - i \hbar\frac{27}{15}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
+            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
         \end{split}
     \end{align}
 \end{subequations}
@@ -451,21 +453,28 @@ where $\displaystyle V_\text{trap}(\bm{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 
 The Truncated Wigner equations corresponding to the master equation \eqref{Peaks:MasterEquation} are very similar to \eqref{Peaks:3DGPEquations} but with the addition of noise-correction terms,
 \begin{align}
     \label{Peaks:3DTWEquations}
-    \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{TW} &= \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{GP} - \left(2 c_0 + c_2 - i \hbar \frac{27}{15}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\Psi_j + i\sqrt{\frac{\hbar V_I(\bm{x})}{2}} \xi_j(\bm{x}),
+    \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{TW} &= \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{GP} - \left(2 c_0 + c_2 - i \hbar \frac{9}{2}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\Psi_j + i\sqrt{\frac{\hbar V_I(\bm{x})}{2}} \xi_j(\bm{x}),
 \end{align}
-where $\Delta V$ is the volume element (here the Gaussian quadrature weight \citep{Ronen:2006}), and $\xi_j(\bm{x})$ are independent time- and spatially-dependent complex Gaussian noises with variance $\displaystyle \left(dt\, \Delta V\right)^{-1}$. Note that \eqref{Peaks:3DTWEquations} are the same in Itô or Stratonovich form. In obtaining \eqref{Peaks:3DTWEquations}, both the second and third order derivatives of the Fokker-Planck equation corresponding to the Penning ionisation term have been neglected. This is because Penning ionisation is a small loss process and we are not so much worried about the loss of noise that will result. On the other hand, the absorbing boundary layer will remove much of the high-momentum noise quickly, and a process is needed to restore that to make sure that the process occurs\footnote{Evaluate the Penning loss curve and display.}\footnote{FIXME: Clean up paragraph}.
+where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight \citep{Ronen:2006}), and $\xi_j(\bm{x})$ are independent time- and spatially-dependent complex Gaussian noises with variance $\displaystyle \left(dt\, \Delta V\right)^{-1}$. The $\Delta V^{-1}$ term in \eqref{Peaks:3DTWEquations} corrects for the virtual particles that are added to the initial state (refer to \sectionref{BackgroundTheory:TruncatedWigner}), while the time-dependent noise term corrects for the virtual particles that would otherwise be removed by the absorbing boundary layer. Note that \eqref{Peaks:3DTWEquations} is the same in Itô or Stratonovich form.
 
-There is a corresponding correction term to \eqref{Peaks:MomentumDensityFlux},
-\begin{align}
-    \left. \Phi(\bm{k}, t) \right|_\text{TW} &= \left. \Phi(\bm{k}, t) \right|_\text{GP} + 2 \Re \left\{ \widetilde{\psi}_\text{abl}^*(\bm{k}, t) \mathcal{F}'\left[\sqrt{\frac{V_I(\bm{x})}{2 \hbar}} \xi(\bm{x}) \right](\bm{k})\right\},
-\end{align}
-where the appropriate noise $\xi(\bm{x})$ is used corresponding to the state whose momentum density flux is being calculated.
+In obtaining \eqref{Peaks:3DTWEquations}, both the second and third order derivatives of the Fokker-Planck equation corresponding to the Penning ionisation term have been neglected\footnote{FIXME: Justify this. Possibly add a Penning loss curve to help.}. 
+This is because Penning ionisation is a small loss process and we are not so much worried about the loss of noise that will result. On the other hand, the absorbing boundary layer will remove much of the high-momentum noise quickly, and a process is needed to restore that to make sure that the process occurs.
 
-The figure corresponding to the GP equations will have no visible excitations in any of the levels. (Classical) Green's functions would be the best method for doing the propagation.
+In an ideal world, the work would be over once a set of equations has been derived that can model a system. Unfortunately, technical considerations often limit which problems are and are not feasible to solve. In this case, although the GP equations given in \eqref{Pekas:3DGPEquations} can be solved in a couple of days on a supercomputer, \eqref{Peaks:3DTWEquations} represents a much more challenging problem. Not only do these equations need to be solved a large number of times ($N_\text{paths} \gtrsim 100$) for different initial conditions, but only lower-order algorithms can be used to solve stochastic differential equations than can be used for deterministic differential equations. This problem is exacerbated by the $\Psi_{-1}$ state which, due to the antitrapping potential, has a kinetic energy $\sim 40$ times larger than the $\Psi_{0}$ atoms at the edge of the computational domain $\unit[60]{\micro m}$ away from the centre of the condensate in the radial direction. The computational domain cannot be restricted to be tighter due to the requirement that the mean-field energy of the $\Psi_{0}$ atoms be negligible compared to their kinetic energy for the absorbing boundary layer to be effective. While it is for these practical reasons that we must neglect the $\Psi_{-1}$ state, we are physically justified in doing so by the same arguments given at the start of \sectionref{Peaks:PerturbativeApproach}.
 
-Somewhere in here we need to justify the absence of the 3rd level. Oooh. 3rd level moves rapidly. It requires shorter time steps. Blah-de-blah-de-blah.
+In the next sections the behaviour of the atom laser in the cases of outcoupling from the centre of the condensate (resonant outcoupling) and outcoupling from a detuned surface where the atom laser flux is maximised are considered.
 
-In an ideal world, the work would be over once a set of equations has been derived that can model a system. Unfortunately, technical considerations are a fact of every day life that must be considered when determining what problems can and cannot be solved. In this case, although the GP equations given in \eqref{Peaks:3DGPEquations} can be solved in a reasonable amount of time on a supercomputer, \eqref{Peaks:3DTWEquations} represents a much more challenging problem. Not only do these equations need to be solved a large number of times ($N_\text{paths} \gtrsim 100$) for different initial conditions, but lower-order algorithms are necessitated to solve stochastic differential equations than can be used with deterministic differential equations. This problem is exacerbated by the $\Psi_{-1}$ state which, due to the antitrapping potential, reaches significantly larger velocities over the computational domain than either the $\Psi_0$ or $\Psi_1$ states hence requiring smaller time steps. For these reasons it is necessary to neglect the $\Psi_{-1}$ state for the TW equations and only simulate a handful of paths.
+\subsection{Resonant outcoupling}
+
+The case that corresponds most closely with that of the homogeneous condensate considered in \sectionref{Peaks:PerturbativeApproach} is that of outcoupling from the centre of the condensate ($\Delta = 0$). The outcoupling surface in this case is restricted to just the centre of the condensate as the gravitational sag is only $y_\text{sag} = \unit[0.2]{\micro m}$, much smaller than the Thomas-Fermi radius in the radial direction of $r_\text{TF} = \unit[9.4]{\micro m}$. Consequently, stuff will happen. And the sky will rain ice cream.
+
+In the centre of the condensate, the outcoupling will be resonant and as the density is a local maximum, the local density gradient is zero. Finally as the gravitational sag is only $y_\text{sag} = \unit[0.2]{\micro m}$, the outcoupling surface is much smaller than the Thomas-Fermi radius in the radial direction of $r_\text{TF} = \unit[9.4]{\micro m}$ meaning that the outcoupling will only occur over the centre of the condensate where the density is approximately constant.
+
+The sag is only $\unit[0.2]{\micro m}$. The Thomas-Fermi radius in the radial direction is $r_\text{TF} = \unit[9.4]{\micro m}$.
+
+Outcoupling from the centre of the condensate ($\Delta = 0$) corresponds most closely with the case of the homogeneous condensate considered in \sectionref{Peaks:PerturbativeApproach}. 
+
+Intended outcomes of this section: Further verification of the results given in \sectionref{Peaks:PerturbativeApproach}, including verification that the GP is unable to reproduce the results.
 
 \begin{figure}
     \centering
@@ -477,7 +486,12 @@ We need to discuss the results to say that the unstable modes predicted by the w
 
 \subsection{Experimentalist's on-resonance}
 
-Although the results shown in \figureref{Peaks:TheoryZeroDetuningResults} are highly suggestive that the experimental observations in \sectionref{Peaks:ExperimentalResults} are caused by the unstable modes discussed in \sectionref{Peaks:PerturbativeApproach}, the experimental situation corresponding to the results pictured in \figureref{Peaks:ExperimentalResults} were not observed when outcoupling from the centre of the condensate. Instead the outcoupling position corresponded to the detuning at which the atom laser flux is maximal. Because of blah-blah-blah, this will be detuned somewhat. To calibrate this information, we need to perform 3D GP simulations outcoupling the atom laser to compare flux. Results are shown in blah. As you can see, the detuning must be about blah.
+Although the results shown in \figureref{Peaks:TheoryZeroDetuningResults} are highly suggestive that the experimental observations in \sectionref{Peaks:ExperimentalSetup} are caused by the unstable modes discussed in \sectionref{Peaks:PerturbativeApproach}, the experimental situation corresponding to the results pictured in \figureref{Peaks:ExperimentalResults} were not observed when outcoupling from the centre of the condensate. Instead the outcoupling position corresponded to the detuning at which the atom laser flux is maximal. Because of blah-blah-blah, this will be detuned somewhat. To calibrate this information, we need to perform 3D GP simulations outcoupling the atom laser to compare flux. Results are shown in blah. As you can see, the detuning must be about blah.
+
+\subsection{Entangled beams?}
+Discuss the prospect of entangled beams, work down to correlated beams. Specifically, number-difference correlations. Can't be shown to be true or false given the current results. Limited by stuff, but ultimately, not that interesting. A basic comparison to the colliding-condensates experiments. Squeezing has been proposed in similar kinds of systems. Such experiments must take care to avoid the instabilities discussed in the earlier section.
+
+\section{Summary}
 
 \hrule
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -23,6 +23,15 @@
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
   \bibinfo{journal}{Journal of Computational Physics}
   \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Stas et~al.}(2006)\citenamefont{Stas, McNamara,
+  Hogervorst, and Vassen}}]{Stas:2006kx}
+\bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Dall et~al.}(2009)\citenamefont{Dall, Byron, Truscott,
   Dennis, Johnsson, and Hope}}]{Dall:2009}
@@ -227,15 +236,6 @@
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
 
-\bibitem[{\citenamefont{Stas et~al.}(2006)\citenamefont{Stas, McNamara,
-  Hogervorst, and Vassen}}]{Stas:2006kx}
-\bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
-  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
-  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
-  \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
-
 \bibitem[{\citenamefont{Ronen et~al.}(2006)\citenamefont{Ronen, Bortolotti, and
   Bohn}}]{Ronen:2006}
 \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ronen}},
@@ -244,12 +244,25 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
   \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
 
-\bibitem[{\citenamefont{Arfkey and Weber}(2001)}]{ArfkeyWeber}
+\bibitem[{\citenamefont{Arfkey and Weber}(2005)}]{ArfkeyWeber}
 \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{Arfkey}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{H.~J.} \bibnamefont{Weber}},
   \emph{\bibinfo{title}{{Mathematical Methods for Physicists}}}
   (\bibinfo{publisher}{Harcourt}, \bibinfo{address}{San Diego},
-  \bibinfo{year}{2001}), \bibinfo{edition}{5th} ed.
+  \bibinfo{year}{2005}), \bibinfo{edition}{6th} ed.
+
+\bibitem[{\citenamefont{R{\"u}melin}(1982)}]{Ruemelin:1982}
+\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{R{\"u}melin}},
+  \bibinfo{journal}{SIAM Journal on Numerical Analysis}
+  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{604} (\bibinfo{year}{1982}).
+
+\bibitem[{\citenamefont{Burrage et~al.}(2004)\citenamefont{Burrage, Burrage,
+  and Tian}}]{Burrage:2004}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burrage}},
+  \bibinfo{author}{\bibfnamefont{P.~M.} \bibnamefont{Burrage}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tian}},
+  \bibinfo{journal}{Proc. R. Soc. London A} \textbf{\bibinfo{volume}{460}},
+  \bibinfo{pages}{373} (\bibinfo{year}{2004}).
 
 \bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
   and \"Ohberg}}]{Leonhardt:2003}

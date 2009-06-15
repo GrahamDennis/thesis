@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{31}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -236,13 +236,11 @@
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
 
-\bibitem[{\citenamefont{Ronen et~al.}(2006)\citenamefont{Ronen, Bortolotti, and
-  Bohn}}]{Ronen:2006}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ronen}},
-  \bibinfo{author}{\bibfnamefont{D.~C.~E.} \bibnamefont{Bortolotti}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Bohn}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
-  \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
+\bibitem[{\citenamefont{Boyd}(2000)}]{Boyd:2000}
+\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Boyd}},
+  \emph{\bibinfo{title}{{Chebyshev and Fourier Spectral Methods}}}
+  (\bibinfo{publisher}{Dover}, \bibinfo{year}{2000}), \bibinfo{edition}{2nd}
+  ed.
 
 \bibitem[{\citenamefont{Arfkey and Weber}(2005)}]{ArfkeyWeber}
 \bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{Arfkey}} \bibnamefont{and}
@@ -250,6 +248,14 @@
   \emph{\bibinfo{title}{{Mathematical Methods for Physicists}}}
   (\bibinfo{publisher}{Harcourt}, \bibinfo{address}{San Diego},
   \bibinfo{year}{2005}), \bibinfo{edition}{6th} ed.
+
+\bibitem[{\citenamefont{Ronen et~al.}(2006)\citenamefont{Ronen, Bortolotti, and
+  Bohn}}]{Ronen:2006}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ronen}},
+  \bibinfo{author}{\bibfnamefont{D.~C.~E.} \bibnamefont{Bortolotti}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Bohn}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
+  \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{R{\"u}melin}(1982)}]{Ruemelin:1982}
 \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{R{\"u}melin}},

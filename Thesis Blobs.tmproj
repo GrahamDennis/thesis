@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Peaks.tex</string>
+	<string>MethodsAppendix.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,27 +16,25 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-08T07:42:21Z</date>
+			<date>2009-06-15T00:05:33Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>BackgroundTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-09T04:11:41Z</date>
+			<date>2009-06-11T01:31:52Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>TransverseProfile.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-07T04:02:41Z</date>
+			<date>2009-06-10T06:32:13Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-09T05:34:12Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-06-15T07:14:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -48,7 +46,15 @@
 			<key>filename</key>
 			<string>MethodsAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-09T05:34:12Z</date>
+			<date>2009-06-15T07:14:07Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ToolsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2009-06-15T05:31:22Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -60,14 +66,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>45</integer>
+				<integer>132</integer>
 				<key>line</key>
-				<integer>59</integer>
+				<integer>78</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>497</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>34</integer>
+			<integer>63</integer>
 		</dict>
 		<key>FloquetAppendix.tex</key>
 		<dict>
@@ -88,28 +94,42 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>24</integer>
+				<integer>943</integer>
 				<key>line</key>
-				<integer>72</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>47</integer>
+			<integer>6</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>497</integer>
+				<integer>40</integer>
 				<key>line</key>
-				<integer>475</integer>
+				<integer>471</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>636</integer>
+			<integer>633</integer>
 			<key>firstVisibleLine</key>
-			<integer>455</integer>
+			<integer>466</integer>
+		</dict>
+		<key>ToolsAppendix.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>84</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>TransverseProfile.tex</key>
 		<dict>
@@ -130,14 +150,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>23</integer>
-				<key>line</key>
 				<integer>22</integer>
+				<key>line</key>
+				<integer>199</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>156</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -148,6 +168,7 @@
 		<string>Peaks.tex</string>
 		<string>FloquetAppendix.tex</string>
 		<string>MethodsAppendix.tex</string>
+		<string>ToolsAppendix.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -163,6 +184,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<false/>
 	<key>windowFrame</key>
-	<string>{{290, 15}, {992, 900}}</string>
+	<string>{{355, 71}, {992, 900}}</string>
 </dict>
 </plist>

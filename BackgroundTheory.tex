@@ -67,27 +67,40 @@ In most of this thesis it is only the immediate vicinity of the BEC that is unde
 \end{table}
 
 \subsection{Penning ionisation}
-The process is
-\begin{align}
-    \text{He}^* + \text{He}^* &\rightarrow \text{He} + \text{He}^+ + e^-.
-\end{align}
-As can be seen from \citet{Stas:2006kx}, at BEC temperatures it is essentially only the total hyperfine spin $S=0$ molecular state that undergoes Penning ionisation (PI). This molecular state is given by
-\begin{align}
-    \hat{\Xi}_\ket{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
-\end{align}
 
-Penning ionisation can be modelled therefore as a coupling of the molecular state $\hat{\Xi}_\ket{S=0, m_S=0}$ to a vacuum reservoir. This kind of loss term will contribute a term to the master equation,
+The primary attraction of creating Bose-Einstein condensates of metastable helium atoms is that their large internal energy ($\unit[20]{eV}$) enables single-atom detection with high spatial (\micro m) and temporal resolution (ns). However, this large internal energy can be released when two metastable helium atoms collide resulting in Penning ionisation (PI),
+\begin{align}
+    \label{BackgroundTheory:PenningIonisation}
+    \text{He}^* + \text{He}^* & \rightarrow \left\{
+        \begin{matrix}
+            \text{He}^+ + \text{He} + e^-\\
+            \text{He}_2^+ + e^-
+        \end{matrix}\right.
+\end{align}
+While this process dominates for unpolarised cold samples such as magneto-optical traps \citep{Bardou:1992}, it does not prohibit the formation of Bose-Einstein condensates as the process is suppressed by five orders of magnitude \citep{Shlyapnikov:1994} in polarised samples.  This suppression is due to conservation of angular momentum. While the reactants each have a total angular momentum $s=1$, giving their combined total angular momentum as either $S=0$ or $S=2$ (assuming $s$-wave collisions), the products each have total angular momentum $s=\frac{1}{2}$ (in the case of $\text{He}^+$, $e^-$ and $\text{He}_2^+$) or $s=0$ (for $\text{He}$), giving the total angular momentum of the products as either $S=0$ or $S=1$. Hence spin polarised states having $S=2$, $m_S=\pm2$ will not be directly able to undergo the process \eqref{BackgroundTheory:PenningIonisation}.
+
+In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be prevented from directly undergoing Penning ionisation. As collisions with nonzero relative angular momentum can be neglected at BEC temperatures \citep{Venturi:2000,Stas:2006kx} (due to the atoms having insufficient energy to penetrate the centrifugal barrier), it is only the $S=0$ quasimolecule state that undergoes Penning ionisation.
+
+In this section the appropriate master equation terms for modelling Penning ionisation are obtained. In doing the ionisation of the $S=2$ quasimolecule states is neglected as the rate constant is 5 orders of magnitude smaller than that for the $S=0$ quasimolecule states at BEC temperatures.
+
+Expressed in terms of the atomic states $\hat{\Psi}_i$ in the $F=1$ total angular momentum manifold where $i$ is the angular momentum project, the quasimolecule state that undergoes Penning ionisation is given by
+\begin{align}
+    \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
+\end{align}
+As the Penning ionisation process is highly exothermic (the combined internal energy of the two atoms exceeds the ionisation energy of $\text{He}$ by $\unit[15]{eV}$), the products will exit the $\text{He}^*$ sample rapidly. The process is therefore well approximated by considering the $S=0$ quasimolecule state to be coupled to a vacuum reservoir with the appropriate rate. Such a coupling contributes the usual kind of loss term to the master equation,
 \begin{align}
     \label{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant}
-    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_\ket{S=0, m_S=0}\right] \hat{\rho},
+    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
 \end{align}
-where $\mathcal{D}$ is the usual decoherence superoperator, and $\gamma_\text{PI}$ is an as-yet unknown coefficient. This coefficient can be determined by matching the dynamics given by \eqref{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant} for an unpolarised MOT and comparing it to the result given in \citep{Stas:2006kx} of
+where $\mathcal{D}$ is the usual decoherence superoperator, and $\gamma_\text{PI}$ is an as-yet unknown coefficient.
+
+The unknown coefficient $\gamma_\text{PI}$ can be determined by matching the dynamics given by \eqref{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant} for an unpolarised MOT and comparing it to the result given in \citep{Stas:2006kx} of
 \begin{align}
     \frac{d N_\text{ions}}{d t} &= K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, n^2(\bm{x}),
 \end{align}
-where $n(\bm{x})$ is the total density, and $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ \citep{Stas:2006kx}.
+where $n(\bm{x})$ is the total density, $dN_\text{ions}/dt$ is the rate of ion production and $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ at BEC temperatures \citep{Stas:2006kx}.
 
-The equation of motion for the expectation value of the total number of atoms is,
+From the master equation \eqref{BackgroundTheory:PenningIonisationMasterEquationTermArbitraryConstant}, the equation of motion for the expectation value of the total number of atoms can be obtained
 \begin{align}
     \label{BackgroundTheory:NEquationOfMotion}
     \begin{split}
@@ -95,18 +108,18 @@ The equation of motion for the expectation value of the total number of atoms is
         &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \bm{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
     \end{split}
 \end{align}
-For a thermal state, the second two terms in \eqref{BackgroundTheory:NEquationOfMotion} will be zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{n}}^2$. This gives the equation of motion for the total number of atoms in a thermal sample to be
+For a thermal state, the last pair of terms in \eqref{BackgroundTheory:NEquationOfMotion} are zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{n}}^2$. In terms of the number densities in each state $n_j(\bm{x})$, the equation of motion for the total number of atoms in a thermal sample is
 \begin{align}
     \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \bm{x}\, \left(2 n_1(\bm{x}) n_{-1}(\bm{x}) + n_0^2(\bm{x})\right).
 \end{align}
-For an unpolarised thermal sample, $\displaystyle n_j(\bm{x}) = \frac{1}{3}n(\bm{x})$, and as two atoms are lost for each ion that is produced,
+In an unpolarised sample the three internal states are equally occupied $\displaystyle n_j(\bm{x}) = \frac{1}{3}n(\bm{x})$, and as two atoms are lost for each ion that is produced the ion production rate is
 \begin{align}
     \frac{d N_\text{ion}}{dt} &= -\frac{1}{2} \left.\frac{d \mean{\hat{N}}}{dt}\right|_\text{thermal} = \frac{2}{9} \gamma_\text{PI} \int d \bm{x}\, n^2(\bm{x}).
 \end{align}
-Which gives $\displaystyle\gamma_\text{PI} = \frac{9}{2} K^\text{(unpol)}_{^4\text{He}}$ and the corresponding term in the master equation as
+This gives the constant $\displaystyle\gamma_\text{PI} = \frac{9}{2} K^\text{(unpol)}_{^4\text{He}}$ and the corresponding term in the master equation as
 \begin{align}
     \label{BackgroundTheory:PenningIonisationMasterEquationTerm}
-    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_\ket{S=0, m_S=0}\right] \hat{\rho}.
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho}.
 \end{align}
 
 % Using an argument derived from that given by \citet{Neuhasuer:1989}, the approximate range of wavenumbers over which the absorbing boundary layer will be effective can be quantified by considering an incident wave of wavenumber $k$ on a potential $V(x) = -i V_I(x)$ of finite width $\Delta x$. As it is the efficacy of the absorbing boundary layer that is under consideration, it will be assumed that the potential is zero everywhere. The results of these calculations will then apply in terms of the wavenumber of the wave as it is incident on the absorbing boundary layer provided the physical potential changes negligibly over the scale of the absorbing boundary layer. It will also be assumed that the mean-field interactions of the atom laser are small compared to the kinetic energy and can be neglected.\footnote{FIXME: Paragraph needs rewrite.}

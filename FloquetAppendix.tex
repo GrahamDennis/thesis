@@ -26,12 +26,12 @@ where the matrix $\mathcal{H}(\bm{k}, t)$ obeys
 \end{align}
 where the last equality holds because $\hat{H}(t)$ is isotropic.
 
-If the Hamiltonian $\hat{H}(t)$ were not time-dependent, it could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\bm{k})$ and corresponding operators $\hat{Q}_j(\bm{k}, t)$ which would evolve as
+If the Hamiltonian $\hat{H}(t)$ were not time-dependent, $\mathcal{H}(\bm{k}, t)$ could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\bm{k})$ and corresponding operators $\hat{Q}_j(\bm{k}, t)$ which would evolve as
 \begin{align}
     \label{FloquetAppendix:ContinouousTimeEigenoperators}
     i \hbar \frac{\partial \hat{Q}_j(\bm{k}, t)}{\partial t} &= \hbar \Omega_j(\bm{k}) \hat{Q}_j(\bm{k}, t),
 \end{align}
-where the $\hat{Q}_j(\bm{k}, t)$ need not obey boson commutation relations.
+where the $\hat{Q}_j(\bm{k}, t)$ need not obey boson commutation relations. The real parts of the eigenvalues of $\mathcal{H}(\bm{k}, t)$ would give the excitation spectrum of the Hamiltonian $\hat{H}(t)$ with non-zero imaginary components giving the growth rates of the corresponding unstable mode.
 
 In the case of a periodic matrix $\mathcal{H}(\bm{k}, t)$ it is instead the monodromy matrix $\mathcal{M}(\bm{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\bm{k})$ satisfies
 \begin{align}
@@ -52,8 +52,12 @@ for some vectors $\bm{c}_j(\bm{k})$, where $\bm{c}_j^\dagger(\bm{k})$ denotes th
 
 Using definitions \eqref{FloquetAppendix:MonodromyMatrix}--\eqref{FloquetAppendix:QOperatorDefinition}, it follows that the $\lambda_j(\bm{k})$ and $\bm{c}_j^\dagger(\bm{k})$ are respectively the eigenvalues and left eigenvectors of $\mathcal{M}(\bm{k})$,
 \begin{align}
-    \hat{Q}_j(\bm{k}, T) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, T) = \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) = \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0) = \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, t).
+    \hat{Q}_j(\bm{k}, T) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, T) = \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) \\
+    \hat{Q}_j(\bm{k}, T) &= \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, 0) = \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0)\\
+    \implies \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) &= \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0) \label{FloquetAppendix:LeftEigenvectorWithOperator}\\
+    \implies \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) &= \lambda_j(\bm{k}) \bm{c}_j^\dagger(\bm{k}), \label{FloquetAppendix:LeftEigenvector}
 \end{align}
+where \eqref{FloquetAppendix:LeftEigenvector} follows from \eqref{FloquetAppendix:LeftEigenvectorWithOperator} as the components of $\hat{\bm{\Upsilon}}(\bm{k}, 0)$ are linearly independent operators.
 
 The operators $\hat{Q}_j(\bm{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\bm{k}, t)$. As every operator in $\hat{\bm{\Upsilon}}(-\bm{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\bm{\Upsilon}}(\bm{k}, t)$, the $\hat{Q}_j^\dagger(\bm{k}, t)$ can be written as
 \begin{align}
@@ -72,7 +76,7 @@ The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as th
         &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
         \label{FloquetAppendix:InvariantCommutator}
 \end{align}
-For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{1}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = i \omega_i(\bm{k})$. Hence it is only for purely imaginary Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators.
+For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{1}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = i \omega_i(\bm{k})$. Hence it is only for purely imaginary Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\bm{k}, t)$ is time-independent the Floquet exponents $\xi(\bm{k})$ are related to the eigenvalues $\Omega(\bm{k})$ of $\mathcal{H}(\bm{k}, t)$ by $\displaystyle \xi(\bm{k}) = -\frac{i}{\hbar} \Omega(\bm{k})$. Hence the imaginary component of the Floquet exponents are related to the excitation spectrum and non-zero real components are related to the existence of instabilities.
 
 Generally the Floquet exponents $\xi_i$ may have a non-zero real component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
 

@@ -45,6 +45,11 @@ where $\mathcal{D}$ is the usual decoherence superoperator. This master equation
 
 In most of this thesis it is only the immediate vicinity of the BEC that is under consideration and absorbing boundary layers are used to restrict the computational domain to this region. One notable exception is \chapterref{TransverseProfile} in which the transverse profile of the atom laser a large distance from the BEC is considered. In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above. Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
+\section{Symmetry-breaking and all that}
+\label{BackgroundTheory:SymmetryBreaking}
+
+Quantum-mechanics is \emph{linear}. If my system is in the state $\displaystyle \hat{\rho} = \sum_i P_i \ketbra{\Psi_i}{\Psi_i}$, then I can simply consider the evolution of each of the $\displaystyle \rho_i = \ketbra{\Psi_i}{\Psi_i}$ \emph{individually} and then construct the weighted average for any expectation value that I'm interested in $\mean{\hat{O}} = \sum_i P_i \bra{\Psi_i}\hat{O}\ket{\Psi_i}$. Hence, the problem of `there is no mean field' is meaningless, as we can never measure the quantity $\mean{\hat{\Psi}}$, it is only ever number-conserving operators that are physically meaningful for atoms. Because of all this, the state $\hat{\rho} = \ketbra{\Psi}{\Psi}$ where $\ket{\Psi}$ is a coherent state is physically \emph{indistinguishable} from the state $\displaystyle \hat{\rho} = \frac{1}{2\pi}\int d\phi\, \ketbra{\Psi e^{i\phi}}{\Psi e^{i\phi}}$. Hence I can make my damned mean-field approximation if I want to.
+
 \section{Truncated Wigner}
 \label{BackgroundTheory:TruncatedWigner}
 \section{Rubidium}
@@ -58,8 +63,8 @@ In most of this thesis it is only the immediate vicinity of the BEC that is unde
     \toprule
     Parameter & Value\\
     \midrule
-    Molecular $S=0$ scattering length & $a_{S=0}=\unit[9.46]{nm}$\\
-    Molecular $S=2$ scattering length & $a_{S=2}=\unit[7.51]{nm}$\\
+    Quasimolecule $S=0$ scattering length & $a_{S=0}=\unit[9.46]{nm}$\\
+    Quasimolecule $S=2$ scattering length & $a_{S=2}=\unit[7.51]{nm}$\\
     Penning ionisation rate & $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}}$\\
     \bottomrule
     \end{tabular}
@@ -77,13 +82,13 @@ The primary attraction of creating Bose-Einstein condensates of metastable heliu
             \text{He}_2^+ + e^-
         \end{matrix}\right.
 \end{align}
-While this process dominates for unpolarised cold samples such as magneto-optical traps \citep{Bardou:1992}, it does not prohibit the formation of Bose-Einstein condensates as the process is suppressed by five orders of magnitude \citep{Shlyapnikov:1994} in polarised samples.  This suppression is due to conservation of angular momentum. While the reactants each have a total angular momentum $s=1$, giving their combined total angular momentum as either $S=0$ or $S=2$ (assuming $s$-wave collisions), the products each have total angular momentum $s=\frac{1}{2}$ (in the case of $\text{He}^+$, $e^-$ and $\text{He}_2^+$) or $s=0$ (for $\text{He}$), giving the total angular momentum of the products as either $S=0$ or $S=1$. Hence spin polarised states having $S=2$, $m_S=\pm2$ will not be directly able to undergo the process \eqref{BackgroundTheory:PenningIonisation}.
+While this process dominates for unpolarised cold samples such as magneto-optical traps \citep{Bardou:1992}, it does not prohibit the formation of Bose-Einstein condensates as the process is suppressed by five orders of magnitude \citep{Shlyapnikov:1994} in polarised samples.  This suppression is due to conservation of angular momentum. While the reactants each have a total angular momentum $s=1$, giving their combined total angular momentum as either $S=0$ or $S=2$ (assuming $s$-wave collisions), the products each have total angular momentum $s=\frac{1}{2}$ (in the case of $\text{He}^+$, $e^-$ and $\text{He}_2^+$) or $s=0$ (for $\text{He}$), giving the total angular momentum of the products as either $S=0$ or $S=1$. Hence spin polarised states having $S=2$, $m_S=\pm2$ cannot directly undergo the process \eqref{BackgroundTheory:PenningIonisation}.
 
 In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be prevented from directly undergoing Penning ionisation. As collisions with nonzero relative angular momentum can be neglected at BEC temperatures \citep{Venturi:2000,Stas:2006kx} (due to the atoms having insufficient energy to penetrate the centrifugal barrier), it is only the $S=0$ quasimolecule state that undergoes Penning ionisation.
 
-In this section the appropriate master equation terms for modelling Penning ionisation are obtained. In doing the ionisation of the $S=2$ quasimolecule states is neglected as the rate constant is 5 orders of magnitude smaller than that for the $S=0$ quasimolecule states at BEC temperatures.
+In the remainder of this section, the appropriate master equation terms for modelling Penning ionisation are derived. In doing so, the ionisation of the $S=2$ quasimolecule states is neglected as the corresponding rate constant is 5 orders of magnitude smaller than that for the $S=0$ quasimolecule state at BEC temperatures.
 
-Expressed in terms of the atomic states $\hat{\Psi}_i$ in the $F=1$ total angular momentum manifold where $i$ is the angular momentum project, the quasimolecule state that undergoes Penning ionisation is given by
+Expressed in terms of the atomic states $\hat{\Psi}_i$ in the $F=1$ total angular momentum manifold where $i$ is the angular momentum project, the $S=0$ quasimolecule state that undergoes Penning ionisation is given by
 \begin{align}
     \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
 \end{align}
@@ -108,7 +113,7 @@ From the master equation \eqref{BackgroundTheory:PenningIonisationMasterEquation
         &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \bm{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
     \end{split}
 \end{align}
-For a thermal state, the last pair of terms in \eqref{BackgroundTheory:NEquationOfMotion} are zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{n}}^2$. In terms of the number densities in each state $n_j(\bm{x})$, the equation of motion for the total number of atoms in a thermal sample is
+For a thermal state, the last pair of terms in \eqref{BackgroundTheory:NEquationOfMotion} are zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{a}^\dagger \hat{a}}^2$. In terms of the number densities in each state $n_j(\bm{x}) = \mean{\hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}}}$, the equation of motion for the total number of atoms in a thermal sample is
 \begin{align}
     \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \bm{x}\, \left(2 n_1(\bm{x}) n_{-1}(\bm{x}) + n_0^2(\bm{x})\right).
 \end{align}

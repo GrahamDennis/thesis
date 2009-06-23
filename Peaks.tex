@@ -56,12 +56,97 @@ These peaks arise from two momentum-correlated cones of particles scattering out
     \label{Peaks:ExperimentalParameters}
 \end{table}
 
-\clearpage
+\section{Overview of Bogoliubov theory}
+\label{Peaks:ElementaryExcitations}
+
+The observed features in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate. The unstable modes are identified in the next section in which the excitation spectrum of the condensate is obtained. In this section an overview of the relevant theory for obtaining the excitation spectrum of the condensate and determining its stability is given.
+
+The problem is to determine the response of the condensate to small fluctuations about the mean-field. Typically the condensate is stable to such fluctuations and the energy spectrum of these excitations can be determined. In the case that the condensate is dynamically unstable some modes will undergo exponential growth, which is identified as a generalised `energy spectrum' containing nonzero imaginary components. As a concrete example of the techniques demonstrated in this section, we consider a single-component condensate described by the Hamiltonian
+\begin{align}
+    \label{Peaks:ElementaryExcitationsExampleHamiltonian}
+    \hat{H} &= \int d \bm{x}\, \hat{\Psi}^\dagger \left( -\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + \frac{1}{2} U \hat{\Psi}^\dagger \hat{\Psi} - \mu \right) \hat{\Psi},
+\end{align}
+where an arbitrary energy offset $\mu$ has been included. This term is introduced for calculational reasons and has no physical influence on the Hamiltonian as any physical Hamiltonian is number-conserving\footnote{FIXME: Someone is going to complain about that explanation. But I'm not fixing it until someone complains.}. For the case of calculating the excitation spectrum of a ground state, the arbitrary energy offset $\mu$ will be identified as the condensate chemical potential.
+
+The principal idea in finding the excitation spectrum of \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} is to take advantage of the usefulness of the Gross-Pitaevskii equation in describing the mean-field of the condensate to enable the quantum-mechanical fluctuations about the mean-field to be considered. To this end the deviation operator $\delta \hat{\Psi} = \hat{\Psi} - \mean{\hat{\Psi}}$ is defined, which is to be treated as a small quantity. The Hamiltonian \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} can then be expanded in powers of $\delta \hat{\Psi}$,
+\begin{align}
+    \label{Peaks:HamiltonianPowerSeriesExpansion}
+    \hat{H} &= \hat{H}_0 + \hat{H}_1 + \hat{H}_2 + \hat{H}_3 + \hat{H}_4.
+\end{align}
+The excitation spectrum of the Hamiltonian $\hat{H}$ is then approximately given by the eigenvalue spectrum of the lowest order nonzero term in \eqref{Peaks:HamiltonianPowerSeriesExpansion}.
+
+The zeroth order term in \eqref{Peaks:HamiltonianPowerSeriesExpansion}
+\begin{align}
+    \hat{H}_0 &= \int d \bm{x}\, \mean{\hat{\Psi}}^* \left( -\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + \frac{1}{2} U \big|\mean{\hat{\Psi}}\big|^2 - \mu \right) \mean{\hat{\Psi}}
+\end{align}
+is simply a constant and represents the total energy of the unexcited mean-field. The first order term is of the form
+\begin{align}
+    \hat{H}_1 &= \int d \bm{x}\, \delta \hat{\Psi}^\dagger \left(i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} \right)  + \int d \bm{x}\, \left(i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} \right)^* \delta \hat{\Psi},
+\end{align}
+where the mean-field $\mean{\hat{\Psi}}$ evolves as
+\begin{align}
+    i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + U \big| \mean{\hat{\Psi}}\big|^2 - \mu \right) \mean{\hat{\Psi}}.
+\end{align}
+The first order term $\hat{H}_1$ does not affect the evolution of the deviation operator
+\begin{align}
+    i \hbar \frac{\partial \hat{\Psi}}{\partial t} &= \comm{\hat{\Psi}, \hat{H}}\\
+    i \hbar \frac{\partial \delta{\hat{\Psi}}}{\partial t} + i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} &= \comm{\mean{\hat{\Psi}}, \hat{H}} + \comm{\delta\hat{\Psi}, \hat{H}}\\
+    i \hbar \frac{\partial \delta \hat{\Psi}}{\partial t} &= \comm{\delta \hat{\Psi}, \hat{H}} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
+    &= \comm{\delta \hat{\Psi}, \hat{H}_1} + \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
+    &= i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}+ \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
+    &= \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4}.
+\end{align}
+The first physically important term in \eqref{Peaks:HamiltonianPowerSeriesExpansion} is
+\begin{align}
+    \begin{split}
+        \hat{H}_2 &= \int d \bm{x}\, \delta \hat{\Psi}^\dagger \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + 2 U\big|\mean{\hat{\Psi}}\big|^2 -\mu \right)\delta\hat{\Psi}\\
+         &\relphantom{=} + \frac{1}{2} U\int d \bm{x}\, \left(\mean{\hat{\Psi}}\mean{\hat{\Psi}} \delta \hat{\Psi}^\dagger\delta \hat{\Psi}^\dagger  +  \mean{\hat{\Psi}}^*\mean{\hat{\Psi}}^* \delta \hat{\Psi} \,\delta \hat{\Psi}\right).
+    \end{split}
+\end{align}
+As the deviation operator $\delta \hat{\Psi}$ is small in some sense compared to the mean field $\mean{\hat{\Psi}}$, the higher-order contributions $\hat{H}_3$ and $\hat{H}_4$ to the total Hamiltonian can then be neglected compared to $\hat{H}_2$. The excitation spectrum of the condensate about the mean field $\mean{\hat{\Psi}}$ is then given by the energy spectrum of $\hat{H}_2$.
+
+To avoid directly solving the infinite dimensional eigenvalue problem $\hat{H}_2 \ket{\Psi} = E \ket{\Psi}$ for the condensate excitation spectrum, it is desired to apply a linear transformation to $\hat{H}_2$ that will diagonalise it in the form
+\begin{align}
+    \label{Peaks:QuadraticHamiltonianAnsatz}
+    \hat{H}_2 &= \sum_i \hbar \omega_i \hat{\Lambda}_i^\dagger \hat{\Lambda}_i^{\phantom{\dagger}},
+\end{align}
+for some boson annihilation operators $\hat{\Lambda}_i$ and real frequencies $\omega_i$. In this form, the Hamiltonian can be simply interpreted as representing a set of modes with energies $\hbar \omega_i$, which is the condensate excitation spectrum. The eigenvalues of $\hat{H}_2$ can also be identified as $\{n \hbar \omega_i : n > 0 \}$. It is not possible in general to transform $\hat{H}_2$ into the form \eqref{Peaks:QuadraticHamiltonianAnsatz} if the Hamiltonian possesses any instabilities \citep{Leonhardt:2003}, however one frequently considers the excitation spectrum of the ground state which is stable by definition and in this case such a transformation is always possible.
+
+In the general case, we look for the operators $\hat{\Lambda}_i$ satisfying
+\begin{align}
+    \label{Peaks:ElementaryExcitationsEvolution}
+    i \hbar \frac{\partial \hat{\Lambda}_i}{\partial t} &= \comm{\hat{\Lambda}_i, \hat{H}_2 } = - \hbar \omega_i \hat{\Lambda}_i
+\end{align}
+where $\omega_i$ is real if and only if $\hat{\Lambda}_i$ is a boson annihilation operator \citep{Leonhardt:2003}. In the case that $\omega_i$ is complex, boson annihilation operators can be constructed from the $\hat{\Lambda}_i$ as discussed in \appendixref{FloquetAppendix}. Hence $\hbar\omega_i$ can be considered to be a generalised energy spectrum of the condensate where nonzero imaginary components correspond to dynamical instabilities of the condensate. Note that although the eigenvalues of $\hat{H}_2$ must be real as it is hermitian, the eigenvalues of \eqref{Peaks:ElementaryExcitationsEvolution} need not be real. For example, the Hamiltonian for degenerate parametric amplification $\hat{H} = \hbar\chi \left(\hat{a}\hat{a} + \hat{a}^\dagger \hat{a}^\dagger \right)$ is hermitian but its eigenvalues in \eqref{Peaks:ElementaryExcitationsEvolution} are pure imaginary. In this case the occupation of the mode $\hat{a}$ undergoes exponential growth. The case of complex eigenvalues $\omega_i$ is discussed further in \sectionref{Peaks:ExperimentEigenvalues} and \appendixref{FloquetAppendix}.
+
+Equation \eqref{Peaks:ElementaryExcitationsEvolution} is most easily solved by expanding the $\hat{\Lambda}_i$ in a complete, linearly independent basis $\{\hat{\Upsilon}_j\}$ such that $\hat{\Lambda}_i = \bm{c}_i^\dagger \hat{\bm{\Upsilon}}$ where $\bm{c}_i$ is a complex vector, $\bm{c}_i^\dagger$ denotes the conjugate-transpose, and $\hat{\bm{\Upsilon}}$ is the column vector formed by the complete basis $\{\hat{\Upsilon}_j\}$. As the Hamiltonian $\hat{H}_2$ is quadratic, its commutator with every operator $\hat{\Upsilon}_j$ will be linear in the operators $\{\hat{\Upsilon}_j\}$. Defining the complex matrix $\mathcal{H}$ to represent this relationship as
+\begin{align}
+    \label{Peaks:ScriptHRelationshipToHamiltonian}
+    \sum_k \mathcal{H}_{jk} \hat{\Upsilon}_k &= \comm{\hat{\Upsilon}_j, \hat{H}_2}
+\end{align}
+permits \eqref{Peaks:ElementaryExcitationsEvolution} to be recast as an eigenvalue problem in $\mathcal{H}$,
+\begin{align}
+    \comm{\bm{c}_i^\dagger \hat{\bm{\Upsilon}}, \hat{H}_2} &= \bm{c}_i^\dagger \mathcal{H} \hat{\bm{\Upsilon}} = - \hbar \omega_i \bm{c}_i^\dagger \hat{\bm{\Upsilon}}, \label{Peaks:ElementaryExcitationsEigenvalueProblemWithOperators}\\
+    \implies \bm{c}_i^\dagger \mathcal{H} &= - \hbar \omega_i \bm{c}_i^\dagger \label{Peaks:ElementaryExcitationsEigenvalueProblem}
+\end{align}
+where the last line follows as the components of $\hat{\bm{\Upsilon}}$ are linearly independent. If the mean-field $\mean{\hat{\Psi}}$ is time-independent, then the matrix $\mathcal{H}$ will also be time-independent and \eqref{Peaks:ElementaryExcitationsEigenvalueProblem} represents an eigenvalue problem for the left eigenvectors $\bm{c}_i^\dagger$ and eigenvalues $-\hbar \omega_i$ of the matrix $\mathcal{H}$. If the mean-field $\mean{\hat{\Psi}}$ simply evolves due to a global phase rotation, this can be cancelled by appropriate choice of the arbitrary energy offset $\mu$ making $\mathcal{H}$ time-independent.  In the case of the condensate ground state, that offset will be the chemical potential of the condensate. The eigenvalues $\{\hbar \omega_i\}$ then represent the generalised excitation spectrum of the condensate about the mean field, which was to be determined. 
+
+It is important to note that for the eigenvalues of $\mathcal{H}$ to determine the solution to \eqref{Peaks:ElementaryExcitationsEvolution} the matrix $\mathcal{H}$ must be constant. In the next section these techniques will be generalised to the case of a \emph{periodic} mean-field in which the time-dependence of the matrix $\mathcal{H}$ cannot be removed by any analytic transformation.
+
+In the case of a homogenous condensate ($V(\bm{x}) = 0$) the matrix $\mathcal{H}$ can be diagonalised analytically to give the condensate excitation spectrum as
+\begin{align}
+    \hbar \omega(\bm{k}) &= \sqrt{\varepsilon(\bm{k})\left(\varepsilon(\bm{k}) + 2 n U \right)},
+    \label{Peaks:BogoliubovSpectrum}
+\end{align}
+where $\bm{k}$ is the wavevector, $\displaystyle \varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2 M}$ is the free-particle energy spectrum and $n = \big|\mean{\hat{\Psi}} \big|^2$ is the condensate density. Equation~\eqref{Peaks:BogoliubovSpectrum} is known as the Bogoliubov energy spectrum \citep{Bogoliubov:1947}.
+
+The interested reader is referred to the review paper by \citet{Ozeri:2005} for further details about Bogoliubov theory in Bose-Einstein condensates.
+
 \section{Condensate excitations in the perturbative regime}
 \label{Peaks:PerturbativeApproach}
 %While the argument in the previous section gives a qualitative explanation for the four-wave mixing process observed in He*, it is not entirely satisfying. In this section an approximate analytic expression for the excited modes of the He* system will be obtained and investigated using Bogoliubov stuff.
 
-The observed features in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis. During outcoupling these excitations are accelerated along the tight trapping directions forming the momentum cones pictured in \figureref{Peaks:Schematic}. The detection process vertically integrates this momentum profile leading to the observed peaks in \figureref{Peaks:ExperimentalResults}.
+The observed features in the atom laser profile presented in \sectionref{Peaks:ExperimentalSetup} are caused by a dynamical instability in the condensate that causes the formation of momentum excitations in a narrow range of momenta along the weak trapping axis. During outcoupling these excitations are accelerated along the tight trapping directions forming the momentum cones pictured in \figureref{Peaks:Schematic}. The detection process vertically integrates this momentum profile leading to the observed peaks in \figureref{Peaks:ExperimentalResults}.
 % The background halo between these peaks and the usual atom laser profile is the result of (at higher detunings resonant momentum will vary across surfaces, during this initial switch-on phase, a range of momenta are excited)\footnote{FIXME: Complete and correct this sentence.}.
 
 The dynamical instability is due to the significantly different scattering lengths between the Zeeman levels of He*. In a later section a full multimode quantum-field calculation will be discussed and its results presented, but it is enlightening to first consider a simplified model in which the energy spectrum (and stability) of small excitations to the condensate can be obtained.
@@ -91,11 +176,11 @@ where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in t
 \subsection{The dynamical steady-state}
 \label{Peaks:MeanFieldPeriodicity}
 
-The excitation spectrum of a condensate can be obtained by approximating each field operator to be a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion for the fluctuations themselves (see, for example \cite{Ho:1998}\footnote{FIXME: Probably need an earlier and/or better reference here.}). It is the latter approach that will be taken here, but with the difference that the mean-field about which the linearisation procedure will take place is itself time-dependent.
+The excitation spectrum of a condensate can be obtained by approximating each field operator to be a c-number (the mean-field) plus a small fluctuation term, and then either diagonalising the Hamiltonian \cite{Bogoliubov:1947,FetterWalecka} or diagonalising the linearised equations of motion for the fluctuations themselves (see \sectionref{Peaks:ElementaryExcitations}). It is the latter approach that will be taken here, but with the difference that the mean-field about which the linearisation procedure will take place is itself \emph{time-dependent}.
 
 The mean-field state that we wish to consider is one that corresponds to the state of the BEC in the experiment. At $t=0$ all of the population in this state will be in the $m_F=1$ level, representing the original trapped BEC, while the $m_F=0$ atom laser level will be initially unpopulated. Rabi oscillations will transfer population between these two levels, and it will be shown that these oscillations are periodic.
 
-The method for diagonalising the evolution equations of the linearised fluctuations to obtain the excitation spectrum is the same method used to determine the stability of fixed points of systems of nonlinear ordinary differential equations. This method relies critically on the fact that it is a \emph{fixed} point about which the equations are linearised. Floquet's Theorem \citep{Nayfeh:1995} allows the stability of \emph{periodic} solutions to be considered, and it is this theorem that will be used to determine the stability of the mean-field evolution. It will now be shown that this mean-field evolution is periodic.
+The method for diagonalising the evolution equations of the linearised fluctuations to obtain the excitation spectrum is the same method used to determine the stability of fixed points of systems of nonlinear ordinary differential equations. As mentioned in the previous section, this method relies critically on the fact that it is a stationary solution about which the equations are linearised. Floquet's Theorem \citep{Nayfeh:1995} allows the stability of \emph{periodic} solutions to be considered, and it is this theorem that will be used to determine the stability of the condensate about these mean-field dynamics. It will now be shown that the mean-field evolution of \eqref{Peaks:OperatorEquationsOfMotion} is periodic.
 
 Within the local density approximation we can assume that the mean-field remains homogeneous; only the excitations will have spatial dependence. The equations of motion for the mean-field then reduce to the following ordinary differential equations,
 \begin{subequations}
@@ -106,7 +191,7 @@ Within the local density approximation we can assume that the mean-field remains
     \end{align}
 \end{subequations}
 
-Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are
+Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic up to a global phase rotation, and exactly periodic for appropriate choice of the arbitrary energy offset $\mu$. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are
 \begin{subequations}
     \label{Peaks:OpticalBlochEquations}
     \begin{align}
@@ -121,7 +206,7 @@ where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these 
 \end{align}
 The solutions to \eqref{Peaks:OpticalBlochEquations} are visualised in \figureref{Peaks:BlochSphere}.
 
-As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by its motion. This further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. Although this demonstrates that all physical expectation values are periodic, for the wavefunctions themselves to be periodic, the global phase rotation must be cancelled. This can be achieved by appropriate choice of the energy offset $\mu$. It is the periodicity of the wavefunctions $\Psi_i$ that will enable the stability of the condensate to excitations to be determined.
+As the evolution is purely Hamiltonian, the state can be described by a point on the surface of the Bloch sphere (see \figureref{Peaks:BlochSphere}).  The state is however not completely free to move on this sphere as the Hamiltonian must be conserved by its motion. This further restricts the system's motion to closed lines on the surface of the Bloch sphere, therefore requiring the system's motion to be periodic. Although this demonstrates that all physical expectation values are periodic as they must be independent of the global phase\footnote{It is the invariance of the Hamiltonian and hence all observables to a global phase rotation $\hat{\Psi} \rightarrow \hat{\Psi}e^{i \phi}$ that guarantees the conservation of atom number by Noether's theorem \citep{Noether:1918}.}, the global phase rotation must be cancelled. This can be achieved by appropriate choice of the energy offset $\mu$. It is the periodicity of the wavefunctions $\Psi_i$ that will enable the stability of the condensate to excitations to be determined.
 
 \begin{figure}
     \centering
@@ -190,7 +275,9 @@ where
 \end{align}
 and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2M}}$.
 
-If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the real parts of the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable\footnote{FIXME: Do these statements need more detail? Including it would detract from overall flow though.}. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
+Note that the matrix $\mathcal{H}(\bm{k})$ is not the Hamiltonian, but is related to it by \eqref{Peaks:ScriptHRelationshipToHamiltonian}. As a consequence, although it will be shown later that in some circumstances $\mathcal{H}(\bm{k})$ contains complex eigenvalues and is hence not hermitian this in no way conflicts with the requirement that the Hamiltonian $\hat{H}$ must be hermitian and only have real eigenvalues.
+
+If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 \label{Peaks:Kappa1Limit}
@@ -214,7 +301,7 @@ for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n
 \end{subequations}
 where $\displaystyle\varepsilon(\bm{k}) = \frac{\hbar^2\bm{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\bm{k})$ is the usual Bogoliubov spectrum \citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\bm{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
 
-The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is
+The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is (refer to \sectionref{Peaks:ElementaryExcitations})
 \begin{align}
     \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\bm{k}\, \hbar \omega_i(\bm{k}) \hat{\Lambda}_i^\dagger(\bm{k}) \hat{\Lambda}_i^{\phantom{\dagger}}(\bm{k}),
 \end{align}
@@ -260,14 +347,14 @@ as $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The existence and uniqueness of the sol
 \subsection{Determination of the dynamical instabilities}
 \label{Peaks:ExperimentEigenvalues}
 
-The method outlined in the previous section for determining the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ requires knowledge of its period $T$, and hence the period of the mean field dynamics given by \eqref{Peaks:MeanFieldEquationsOfMotion}. Although this period cannot be determined analytically, it can be found numerically.
+The method outlined in the previous section for determining the Floquet exponents of the system \eqref{Peaks:DeviationOperatorsMatrixEvolution} requires knowledge of its period $T$, and hence the period of the mean field dynamics given by \eqref{Peaks:MeanFieldEquationsOfMotion}. Although this period cannot be determined analytically, it can be found numerically.
 
-It was shown in \sectionref{Peaks:MeanFieldPeriodicity} that up to a global phase rotation, the mean fields $\Psi_j(t)$ are periodic. The mean fields $\Psi_j(t)$ can be therefore written in the form
+It was shown in \sectionref{Peaks:MeanFieldPeriodicity} that up to a global phase rotation, the mean fields $\Psi_j(t)$ are periodic. The mean fields $\Psi_j(t)$ can be therefore written in the form\footnote{FIXME: explain the provenance of $\Delta \nu$}
 \begin{align}
     \label{Peaks:MeanFieldFourierDecomposition}
     \Psi_j(t) = \sum_{n=-\infty}^\infty \alpha_{j,n} \exp\left[i 2\pi \left( n \nu_0 + \Delta\nu\right)t \right],
 \end{align}
-for some complex constants $\alpha_{j, n}$, fundamental frequency $\nu_0 = T^{-1}$, and frequency offset $\Delta \nu$. In this form, the $\Psi_j(t)$ are not exactly periodic as $\Psi_j(T) = \exp(i\Delta \nu T)\Psi_j(0)$, but this frequency offset can be cancelled by an appropriate choice of the energy offset $\mu$ in \eqref{Peaks:InitialHamiltonian}.
+for some complex constants $\alpha_{j, n}$, fundamental frequency $\nu_0 = T^{-1}$, and frequency offset $\Delta \nu$. In this form, the $\Psi_j(t)$ are not exactly periodic as $\Psi_j(T) = \exp(i\Delta \nu T)\Psi_j(0)$, but this frequency offset can be cancelled by an appropriate choice of the energy offset $\mu = 2\pi\hbar \Delta \nu$ in \eqref{Peaks:InitialHamiltonian}.
 
 The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourierDecomposition} can be determined from the Fourier transform of $\Psi_j(t)$ which will have sharp peaks at the frequencies $n \nu_0 + \Delta \nu$ (see \figureref{Peaks:MeanFieldFourierTransform}). Choosing the energy offset $\mu=-h \nu$, the frequency offset in \eqref{Peaks:MeanFieldFourierDecomposition} can be cancelled making the $\Psi_j(t)$ with this energy offset exactly periodic with period $T$. \figureref{Peaks:MeanFieldFourierTransform} illustrates the Fourier transform of the numerical solutions for $\Psi_j(t)$ for a Rabi frequency of $\Omega = 2 \pi \times \unit[3]{kHz}$ from which the period $T=\unit[150]{\micro{}s}$ and frequency offset $\Delta \nu = \unit[-1.78]{kHz}$ have been obtained.
 
@@ -277,7 +364,9 @@ The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourier
     \caption{\label{Peaks:MeanFieldFourierTransform} Temporal Fourier transform of the calculated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion} for the centre of the condensate defined by the experimental parameters given in \tableref{Peaks:ExperimentalParameters}. The frequency $\nu_0$ is the inverse period of the system, and $\Delta\nu$ represents the global phase rotation. From the data in this figure the values $\nu_0 = \unit[6.65]{kHz}$ and $\Delta\nu = \unit[-1.78]{kHz}$ can be determined, giving the period as $T=\unit[150]{\micro{}s}$.}
 \end{figure}
 
-The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, the solutions for the Floquet exponents $\xi_i(\bm{k}) = \gamma_i(\bm{k}) + i\omega(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}. 
+The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, the solutions for the Floquet exponents $\xi(\bm{k}) = \gamma(\bm{k}) + i\omega(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}.
+
+In the limit that the mean-field is time-independent (a degenerate case of periodicity), the Floquet exponents $\xi(\bm{k})$ are related to the eigenvalues $\lambda(\bm{k})$ of the matrix $\mathcal{H}$ by $\xi(\bm{k}) = \frac{-i}{\hbar} \lambda(\bm{k})$. It was previously stated that eigenvalues of $\mathcal{H}$ with nonzero imaginary components would be unstable, it should therefore be understood that this situation corresponds to having a nonzero \emph{real} component of the Floquet exponent $\xi(\bm{k})$.
 
 \begin{figure}
     \centering
@@ -314,8 +403,8 @@ In summary, the procedure used to find the Floquet exponents of $\mathcal{H}(\bm
 \begin{enumerate}
     \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} with $\mu=0$ for a long period of time $t \gg T$ where $T$ is the periodicity of the solution.
     \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
-    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$.
-    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}).
+    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$. In this calculation the matrix $\bm{A}(t)$ in \eqref{Peaks:FloquetMatrixIVP} is $\displaystyle -\frac{i}{\hbar}\mathcal{H}(\bm{k}, t)$.
+    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(\xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}). The imaginary parts of these Floquet exponents gives the energy spectrum, with nonzero real parts giving the growth rate for the corresponding instability.
 \end{enumerate}
 
 \subsection{Discussion of the dynamical instabilities}
@@ -328,6 +417,9 @@ This effect also depends on the scattering length for collisions between $m_F=0$
 Consequently, this effect would not be expected to be observed in atoms like $\nucl{87}{}{Rb}$.
 
 Verification that the $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation, which is discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles formed via a spontaneous four-wave mixing process indicate that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the absence of the vacuum fluctuations which are critical to all spontaneous processes.
+
+It should be remarked at this point that if this behaviour was to be used to produce EPR entanglement, one would want to perform an experiment in the blah parameter regime.
+
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}

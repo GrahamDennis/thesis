@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{36}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -182,7 +182,7 @@
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Modugno}},
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Inguscio}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Modugno}},
-  \bibinfo{journal}{Physical Review Letters} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
   \bibinfo{pages}{080405} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Gustavsson et~al.}(2008)\citenamefont{Gustavsson,
@@ -215,6 +215,28 @@
   \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
   \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
 
+\bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
+  and \"Ohberg}}]{Leonhardt:2003}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Leonhardt}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kiss}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Bogoliubov}(1947)}]{Bogoliubov:1947}
+\bibinfo{author}{\bibfnamefont{N.~N.} \bibnamefont{Bogoliubov}},
+  \bibinfo{journal}{J. Phys. (Moscow)} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{23} (\bibinfo{year}{1947}).
+
+\bibitem[{\citenamefont{Ozeri et~al.}(2005)\citenamefont{Ozeri, Katz,
+  Steinhauer, and Davidson}}]{Ozeri:2005}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ozeri}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Steinhauer}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Davidson}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{187} (\bibinfo{year}{2005}).
+
 \bibitem[{\citenamefont{Stamper-Kurn et~al.}(1999)\citenamefont{Stamper-Kurn,
   Chikkatur, G\"orlitz, Inouye, Gupta, Pritchard, and
   Ketterle}}]{Stamper-Kurn:1999}
@@ -243,11 +265,6 @@
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{81}},
   \bibinfo{pages}{742} (\bibinfo{year}{1998}).
 
-\bibitem[{\citenamefont{Bogoliubov}(1947)}]{Bogoliubov:1947}
-\bibinfo{author}{\bibfnamefont{N.~N.} \bibnamefont{Bogoliubov}},
-  \bibinfo{journal}{J. Phys. (Moscow)} \textbf{\bibinfo{volume}{11}},
-  \bibinfo{pages}{23} (\bibinfo{year}{1947}).
-
 \bibitem[{\citenamefont{Fetter and Walecka}(1971)}]{FetterWalecka}
 \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Fetter}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Walecka}},
@@ -260,6 +277,11 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Balachandran}},
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Noether}(1918)}]{Noether:1918}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Noether}},
+  \bibinfo{journal}{Gott. Nachr} pp. \bibinfo{pages}{235--257}
+  (\bibinfo{year}{1918}).
 
 \bibitem[{\citenamefont{Boyd}(2000)}]{Boyd:2000}
 \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Boyd}},
@@ -294,13 +316,5 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tian}},
   \bibinfo{journal}{Proc. R. Soc. London A} \textbf{\bibinfo{volume}{460}},
   \bibinfo{pages}{373} (\bibinfo{year}{2004}).
-
-\bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
-  and \"Ohberg}}]{Leonhardt:2003}
-\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Leonhardt}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kiss}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{\"Ohberg}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
-  \bibinfo{pages}{033602} (\bibinfo{year}{2003}).
 
 \end{thebibliography}

@@ -59,16 +59,16 @@ These peaks arise from two momentum-correlated cones of particles scattering out
 \section{Overview of Bogoliubov theory}
 \label{Peaks:ElementaryExcitations}
 
-The observed features in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate. The unstable modes are identified in the next section in which the excitation spectrum of the condensate is obtained. In this section an overview of the relevant theory for obtaining the excitation spectrum of the condensate and determining its stability is given.
+The observed features in the atom laser profile presented in the previous section are caused by a dynamical instability in the condensate. The modes which are dynamically unstable are identified in the next section in which the excitation spectrum of the condensate is obtained. In this section an overview is given of the Bogoliubov theory which is used to obtain the excitation spectrum of the condensate and to determine its stability.
 
-The problem is to determine the response of the condensate to small fluctuations about the mean-field. Typically the condensate is stable to such fluctuations and the energy spectrum of these excitations can be determined. In the case that the condensate is dynamically unstable some modes will undergo exponential growth, which is identified as a generalised `energy spectrum' containing nonzero imaginary components. As a concrete example of the techniques demonstrated in this section, we consider a single-component condensate described by the Hamiltonian
+The problem is to determine the response of the condensate to small fluctuations about the mean-field. Typically the condensate is stable to such fluctuations, and their energy spectrum determines the phase and group velocities of the excitations.  In the case that the condensate is dynamically unstable some modes will undergo exponential growth, which corresponds to the generalised energy spectrum containing nonzero imaginary components. As a concrete example of the techniques demonstrated in this section, we consider a single-component condensate described by the Hamiltonian
 \begin{align}
     \label{Peaks:ElementaryExcitationsExampleHamiltonian}
     \hat{H} &= \int d \bm{x}\, \hat{\Psi}^\dagger \left( -\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + \frac{1}{2} U \hat{\Psi}^\dagger \hat{\Psi} - \mu \right) \hat{\Psi},
 \end{align}
-where an arbitrary energy offset $\mu$ has been included. This term is introduced for calculational reasons and has no physical influence on the Hamiltonian as any physical Hamiltonian is number-conserving\footnote{FIXME: Someone is going to complain about that explanation. But I'm not fixing it until someone complains.}. For the case of calculating the excitation spectrum of a ground state, the arbitrary energy offset $\mu$ will be identified as the condensate chemical potential.
+where an arbitrary energy offset $\mu$ has been included. This term is introduced for calculational reasons and has no physical influence on the Hamiltonian\footnote{The energy offset cannot affect any expectation values as particle-number is conserved and the influence of the energy offset is just a different physically meaningless energy offset for each total number.}. For the case of calculating the excitation spectrum of a ground state, the arbitrary energy offset $\mu$ will be identified as the condensate chemical potential.
 
-The principal idea in finding the excitation spectrum of \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} is to take advantage of the usefulness of the Gross-Pitaevskii equation in describing the mean-field of the condensate to enable the quantum-mechanical fluctuations about the mean-field to be considered. To this end the deviation operator $\delta \hat{\Psi} = \hat{\Psi} - \mean{\hat{\Psi}}$ is defined, which is to be treated as a small quantity. The Hamiltonian \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} can then be expanded in powers of $\delta \hat{\Psi}$,
+The principal idea in finding the excitation spectrum of \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} is to take advantage of the usefulness of the Gross-Pitaevskii equation in describing the mean-field of the condensate to enable the quantum-mechanical fluctuations about the mean-field to be considered. To this end the deviation operator $\delta \hat{\Psi} = \hat{\Psi} - \mean{\hat{\Psi}}$ is defined, and considered to be a small quantity\footnote{Although most easily understood in terms of spontaneously-broken symmetry (refer to \sectionref{BackgroundTheory:SymmetryBreaking}), this argument is true in general because the Hamiltonian $\hat{H}$ is unchanged by the global gauge transformation $\hat{\Psi}\mapsto\hat{\Psi}e^{i\phi}$. The results of the following calculation are therefore independent of the choice of $\phi$.}. The Hamiltonian \eqref{Peaks:ElementaryExcitationsExampleHamiltonian} can then be expanded in powers of $\delta \hat{\Psi}$,
 \begin{align}
     \label{Peaks:HamiltonianPowerSeriesExpansion}
     \hat{H} &= \hat{H}_0 + \hat{H}_1 + \hat{H}_2 + \hat{H}_3 + \hat{H}_4.
@@ -85,15 +85,15 @@ is simply a constant and represents the total energy of the unexcited mean-field
 \end{align}
 where the mean-field $\mean{\hat{\Psi}}$ evolves as
 \begin{align}
-    i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + U \big| \mean{\hat{\Psi}}\big|^2 - \mu \right) \mean{\hat{\Psi}}.
+    i \hbar \frac{\partial}{\partial t}\mean{\hat{\Psi}} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + U \big| \mean{\hat{\Psi}}\big|^2 - \mu \right) \mean{\hat{\Psi}}.
 \end{align}
 The first order term $\hat{H}_1$ does not affect the evolution of the deviation operator
 \begin{align}
-    i \hbar \frac{\partial \hat{\Psi}}{\partial t} &= \comm{\hat{\Psi}, \hat{H}}\\
-    i \hbar \frac{\partial \delta{\hat{\Psi}}}{\partial t} + i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t} &= \comm{\mean{\hat{\Psi}}, \hat{H}} + \comm{\delta\hat{\Psi}, \hat{H}}\\
-    i \hbar \frac{\partial \delta \hat{\Psi}}{\partial t} &= \comm{\delta \hat{\Psi}, \hat{H}} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
-    &= \comm{\delta \hat{\Psi}, \hat{H}_1} + \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
-    &= i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}+ \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial \mean{\hat{\Psi}}}{\partial t}\\
+    i \hbar \frac{\partial }{\partial t}\hat{\Psi} &= \comm{\hat{\Psi}, \hat{H}}\\
+    i \hbar \frac{\partial }{\partial t}\delta{\hat{\Psi}} + i \hbar \frac{\partial }{\partial t}\mean{\hat{\Psi}} &= \comm{\mean{\hat{\Psi}}, \hat{H}} + \comm{\delta\hat{\Psi}, \hat{H}}\\
+    i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi} &= \comm{\delta \hat{\Psi}, \hat{H}} - i \hbar \frac{\partial }{\partial t} \mean{\hat{\Psi}}\\
+    &= \comm{\delta \hat{\Psi}, \hat{H}_1} + \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial }{\partial t}\mean{\hat{\Psi}}\\
+    &= i \hbar \frac{\partial }{\partial t}\mean{\hat{\Psi}} + \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4} - i \hbar \frac{\partial }{\partial t}\mean{\hat{\Psi}}\\
     &= \comm{\delta \hat{\Psi}, \hat{H}_2 + \hat{H}_3 + \hat{H}_4}.
 \end{align}
 The first physically important term in \eqref{Peaks:HamiltonianPowerSeriesExpansion} is
@@ -115,7 +115,7 @@ for some boson annihilation operators $\hat{\Lambda}_i$ and real frequencies $\o
 In the general case, we look for the operators $\hat{\Lambda}_i$ satisfying
 \begin{align}
     \label{Peaks:ElementaryExcitationsEvolution}
-    i \hbar \frac{\partial \hat{\Lambda}_i}{\partial t} &= \comm{\hat{\Lambda}_i, \hat{H}_2 } = - \hbar \omega_i \hat{\Lambda}_i
+    i \hbar \frac{\partial }{\partial t}\hat{\Lambda}_i &= \comm{\hat{\Lambda}_i, \hat{H}_2 } = - \hbar \omega_i \hat{\Lambda}_i
 \end{align}
 where $\omega_i$ is real if and only if $\hat{\Lambda}_i$ is a boson annihilation operator \citep{Leonhardt:2003}. In the case that $\omega_i$ is complex, boson annihilation operators can be constructed from the $\hat{\Lambda}_i$ as discussed in \appendixref{FloquetAppendix}. Hence $\hbar\omega_i$ can be considered to be a generalised energy spectrum of the condensate where nonzero imaginary components correspond to dynamical instabilities of the condensate. Note that although the eigenvalues of $\hat{H}_2$ must be real as it is hermitian, the eigenvalues of \eqref{Peaks:ElementaryExcitationsEvolution} need not be real. For example, the Hamiltonian for degenerate parametric amplification $\hat{H} = \hbar\chi \left(\hat{a}\hat{a} + \hat{a}^\dagger \hat{a}^\dagger \right)$ is hermitian but its eigenvalues in \eqref{Peaks:ElementaryExcitationsEvolution} are pure imaginary. In this case the occupation of the mode $\hat{a}$ undergoes exponential growth. The case of complex eigenvalues $\omega_i$ is discussed further in \sectionref{Peaks:ExperimentEigenvalues} and \appendixref{FloquetAppendix}.
 
@@ -167,8 +167,8 @@ where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a
 \begin{subequations}
     \label{Peaks:OperatorEquationsOfMotion}
     \begin{align}
-    i \hbar \frac{\partial \hat{\Psi}_1}{\partial t}  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}}\right) \hat{\Psi}_1 + \hbar \Omega \hat{\Psi}_0 - \mu \hat{\Psi}_1,  \\
-    i \hbar \frac{\partial \hat{\Psi}_0}{\partial t} &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \right) \hat{\Psi}_0 + \hbar \Omega \hat{\Psi}_1 - \mu \hat{\Psi}_0,
+    i \hbar \frac{\partial }{\partial t}\hat{\Psi}_1  &= -\frac{\hbar^2}{2M}\nabla^2 \hat{\Psi}_1  + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}}\right) \hat{\Psi}_1 + \hbar \Omega \hat{\Psi}_0 - \mu \hat{\Psi}_1,  \\
+    i \hbar \frac{\partial }{\partial t}\hat{\Psi}_0 &= -\frac{\hbar^2}{2M} \nabla^2 \hat{\Psi}_0 + U \left(\hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}} + \kappa \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \right) \hat{\Psi}_0 + \hbar \Omega \hat{\Psi}_1 - \mu \hat{\Psi}_0,
     \end{align}
 \end{subequations}
 where $U=U_{11}=U_{10}$ and $\kappa = U_{00}/U_{11}$. For metastable Helium in the $F=1$ manifold, $\protect{\kappa \approx 0.74}$\footnote{FIXME: Cite something.}, while for Rubidium in the $F=1$ manifold, $\kappa \approx 1.01$ \cite{Ho:1998}\footnote{FIXME: A more recent reference might be useful.}. 
@@ -186,8 +186,8 @@ Within the local density approximation we can assume that the mean-field remains
 \begin{subequations}
     \label{Peaks:MeanFieldEquationsOfMotion}
     \begin{align}
-    i \hbar \frac{d \Psi_1}{dt} &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0 - \mu \Psi_1,\\
-    i \hbar \frac{d \Psi_0}{dt} &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1 - \mu \Psi_0.
+    i \hbar \frac{d }{dt}\Psi_1 &= U\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2\right)\Psi_1 + \hbar \Omega \Psi_0 - \mu \Psi_1,\\
+    i \hbar \frac{d }{dt}\Psi_0 &= U\left(\abs{\Psi_1}^2 + \kappa \abs{\Psi_0}^2\right)\Psi_0 + \hbar \Omega \Psi_1 - \mu \Psi_0.
     \end{align}
 \end{subequations}
 
@@ -195,8 +195,8 @@ Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is
 \begin{subequations}
     \label{Peaks:OpticalBlochEquations}
     \begin{align}
-        \frac{d\rho_{10}}{dt} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
-        \frac{d w}{dt} &= -4 \Omega \Im\{\rho_{10}\},
+        \frac{d}{dt}\rho_{10} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
+        \frac{d }{dt}w &= -4 \Omega \Im\{\rho_{10}\},
     \end{align}
 \end{subequations}
 where $g = n U (1-\kappa)/\hbar$. As the evolution is purely Hamiltonian, these equations will conserve the energy of the state. Up to an arbitrary additive constant, the energy per particle is given by
@@ -226,11 +226,11 @@ The equations of motion for the deviation operators are obtained by replacing th
     \label{Peaks:DeviationOperatorsEvolutionXSpace}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial \delta \hat{\Psi}_1}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1 + \Psi_1^2\delta\hat{\Psi}_1^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger + \Psi_0^*\Psi_1\delta\hat{\Psi}_0\right]\\
+            i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi}_1 =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1 + \Psi_1^2\delta\hat{\Psi}_1^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger + \Psi_0^*\Psi_1\delta\hat{\Psi}_0\right]\\
                     & - \frac{\hbar^2}{2M}\nabla^2 \delta \hat{\Psi}_1 +\hbar \Omega\delta\hat{\Psi}_0- \mu \delta \hat{\Psi}_1,
         \end{split}\\
         \begin{split}
-        i \hbar \frac{\partial \delta \hat{\Psi}_0}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0 + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger + \Psi_1^*\Psi_0\delta\hat{\Psi}_1\right]\\
+        i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi}_0 =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0 + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger + \Psi_1^*\Psi_0\delta\hat{\Psi}_1\right]\\
                     & -\frac{\hbar^2}{2M}\nabla^2 \delta \hat{\Psi}_0 +\hbar \Omega\delta\hat{\Psi}_1 - \mu \delta\hat{\Psi}_0.
         \end{split}
     \end{align}
@@ -241,11 +241,11 @@ Having assumed the mean-field to be homogenous, the evolution equations are spat
     \label{Peaks:DeviationOperatorsEvolutionKSpace}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial \delta \hat{\Psi}_1(\bm{k})}{\partial t} =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\bm{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\bm{k})\right]\\
+            i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi}_1(\bm{k}) =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\bm{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\bm{k})\right]\\
                     & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_1(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_0(\bm{k})- \mu \delta \hat{\Psi}_1(\bm{k}),
         \end{split}\\
         \begin{split}
-        i \hbar \frac{\partial \delta \hat{\Psi}_0(\bm{k})}{\partial t} =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\bm{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\bm{k})\right]\\
+        i \hbar \frac{\partial}{\partial t} \delta \hat{\Psi}_0(\bm{k}) =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\bm{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\bm{k})\right]\\
                     & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_0(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_1(\bm{k}) - \mu \delta\hat{\Psi}_0(\bm{k}).
         \end{split}
     \end{align}
@@ -254,7 +254,7 @@ Having assumed the mean-field to be homogenous, the evolution equations are spat
 In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\bm{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\bm{k}),\, \delta\hat{\Psi}_j^\dagger(-\bm{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\bm{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
     \label{Peaks:DeviationOperatorsMatrixEvolution}
-    i \hbar \frac{\partial \hat{\bm{\Upsilon}}(\bm{k})}{\partial t} &= \mathcal{H}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}),
+    i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}) &= \mathcal{H}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}),
 \end{align}
 where
 \begin{align}
@@ -318,7 +318,7 @@ Floquet's theorem proves that the matrix solution to the initial-value problem
 \begin{subequations}
     \label{Peaks:FloquetMatrixIVP}
     \begin{align}
-        \frac{d\bm{\Pi}(t)}{dt} &= \bm{A}(t) \bm{\Pi}(t),\\
+        \frac{d}{dt}\bm{\Pi}(t) &= \bm{A}(t) \bm{\Pi}(t),\\
         \bm{\Pi}(0) &= \mathbb{I},
     \end{align}
 \end{subequations}
@@ -328,7 +328,7 @@ where $\mathbb{I}$ is the $n \times n$ identity matrix and $\bm{A}(t)$ a periodi
 \end{align}
 for some constant matrix $\bm{Q}$ and $\bm{P}(t)$ a matrix function with period $T$ and $\bm{P}(0) = \mathbb{I}$. The matrix solution $\bm{\Pi}(t)$ is the general solution to the related linear system
 \begin{align}
-    \frac{d\bm{x}(t)}{dt} &= \bm{A}(t) \bm{x}(t),
+    \frac{d}{dt}\bm{x}(t) &= \bm{A}(t) \bm{x}(t),
     \label{Peaks:FloquetVectorIVP}
 \end{align}
 for any initial condition $\bm{x}(0)$ where $\bm{x}(t)$ is a vector. Every solution $\bm{x}(t)$ to this problem can be written in terms of the matrix $\bm{\Pi}(t)$ as
@@ -349,7 +349,7 @@ as $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The existence and uniqueness of the sol
 
 The method outlined in the previous section for determining the Floquet exponents of the system \eqref{Peaks:DeviationOperatorsMatrixEvolution} requires knowledge of its period $T$, and hence the period of the mean field dynamics given by \eqref{Peaks:MeanFieldEquationsOfMotion}. Although this period cannot be determined analytically, it can be found numerically.
 
-It was shown in \sectionref{Peaks:MeanFieldPeriodicity} that up to a global phase rotation, the mean fields $\Psi_j(t)$ are periodic. The mean fields $\Psi_j(t)$ can be therefore written in the form\footnote{FIXME: explain the provenance of $\Delta \nu$}
+It was shown in \sectionref{Peaks:MeanFieldPeriodicity} that up to a global phase rotation $\displaystyle f(T) = e^{i 2\pi \Delta \nu T}f(0)$, the mean fields $\Psi_j(t)$ are periodic. The mean fields $\Psi_j(t)$ can be therefore written in the form
 \begin{align}
     \label{Peaks:MeanFieldFourierDecomposition}
     \Psi_j(t) = \sum_{n=-\infty}^\infty \alpha_{j,n} \exp\left[i 2\pi \left( n \nu_0 + \Delta\nu\right)t \right],
@@ -366,7 +366,7 @@ The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourier
 
 The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, the solutions for the Floquet exponents $\xi(\bm{k}) = \gamma(\bm{k}) + i\omega(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}.
 
-In the limit that the mean-field is time-independent (a degenerate case of periodicity), the Floquet exponents $\xi(\bm{k})$ are related to the eigenvalues $\lambda(\bm{k})$ of the matrix $\mathcal{H}$ by $\xi(\bm{k}) = \frac{-i}{\hbar} \lambda(\bm{k})$. It was previously stated that eigenvalues of $\mathcal{H}$ with nonzero imaginary components would be unstable, it should therefore be understood that this situation corresponds to having a nonzero \emph{real} component of the Floquet exponent $\xi(\bm{k})$.
+In the limit that the mean-field is time-independent (a degenerate case of periodicity), the Floquet exponents $\xi(\bm{k})$ are related to the eigenvalues $\lambda(\bm{k})$ of the matrix $\mathcal{H}$ by $\xi(\bm{k}) = \frac{-i}{\hbar} \lambda(\bm{k})$. It was previously stated that eigenvalues of $\mathcal{H}(\bm{k})$ with nonzero imaginary components would be unstable, this therefore corresponds to having a nonzero \emph{real} component of the Floquet exponent $\xi(\bm{k})$.
 
 \begin{figure}
     \centering
@@ -428,7 +428,7 @@ In the previous section it was found that the process of outcoupling from the He
 The master equation that describes the experiment described in \sectionref{Peaks:ExperimentalSetup} is given by
 \begin{align}
     \label{Peaks:MasterEquation}
-    \frac{d \hat{\rho}}{d t} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{9}{2} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{S=0,m_S=0} \right] \hat{\rho},
+    \frac{d }{d t}\hat{\rho} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{9}{2} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{S=0,m_S=0} \right] \hat{\rho},
 \end{align}
 where $\displaystyle\hat{\Xi}_{S, m_S}$ is the annihilation operator for the quasimolecular state with total hyperfine spin $S$ and projection $m_S$, $\mathcal{D}[\hat{c}]\hat{\rho} \equiv \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and the second term on the RHS in \eqref{Peaks:MasterEquation} is due to Penning ionisation\footnote{The reason for the difference between the $\displaystyle \frac{54}{5}$ factor in \citet{Dall:2009} and \eqref{Peaks:MasterEquation} is a difference of a factor of $\sqrt{2}$ in the definitions of $\hat{\Psi}_{J=0}^{\text{(mol)}}$ in \citep{Dall:2009} and $\displaystyle\hat{\Xi}_\ket{S=0, m_S=0}$ here, and a calculational error of the order of 20\% in \citep{Dall:2009}.} (refer to \sectionref{BackgroundTheory:Helium}) with $K^\text{(unpol)}_{^{4}\text{He}}$ the Penning ionisation rate for an unpolarised thermal sample of He* \citep{Stas:2006kx}. The Hamiltonian in \eqref{Peaks:MasterEquation} is given by
 \begin{align}
@@ -464,7 +464,7 @@ In this chapter it is desired to make use of the cylindrical symmetry of the sys
 
 Although the Bessel basis is arguably a more useful basis for cylindrically-symmetric problems, the choice of boundary conditions is artificial and for the results presented in \citep{Dall:2009} a Fourier basis was used on a domain symmetric about the origin. When using a Fourier basis for cylindrical coordinates, care must be taken due to the form of the Laplacian operator,
 \begin{align}
-    \nabla^2 u(r, z) &= \frac{\partial^2 u(r, z)}{\partial r^2} + \frac{1}{r}\frac{\partial u(r, z)}{\partial r} + \frac{\partial^2 u(r, z)}{\partial z^2}.
+    \nabla^2 u(r, z) &= \left(\frac{\partial^2 }{\partial r^2} + \frac{1}{r}\frac{\partial }{\partial r} + \frac{\partial^2 }{\partial z^2}\right)u(r, z).
 \end{align}
 In particular, the radial grid must be chosen to exclude the origin due to the apparent divergence in the $r^{-1}$ term in the Laplacian. Note that this is divergence is not real; for sufficiently well-behaved $u(r, z)$, $\nabla^2 u(r, z)$ will be continuous at the origin.
 
@@ -483,18 +483,18 @@ As discussed previously, it is necessary to calculate the momentum density that 
 
 The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
 \begin{align}
-    \frac{\partial \abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2}{\partial t} &= 2 \Re \left\{ \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{\partial \widetilde{\psi}_\text{roi}(\bm{k}, t)}{\partial t} \right \},
+    \frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2 &= 2 \Re \left\{ \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{\partial }{\partial t}\widetilde{\psi}_\text{roi}(\bm{k}, t) \right \},
 \end{align}
 where $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$, which is defined to be nonzero only within the region of interest. The equation of motion for $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is
 \begin{align}
     \label{Peaks:PsikROIEquationOfMotion}
-    \frac{\partial \widetilde{\psi}_\text{roi}(\bm{k}, t)}{\partial t} &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
+    \frac{\partial}{\partial t} \widetilde{\psi}_\text{roi}(\bm{k}, t) &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
 \end{align}
 where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. While the potential and interaction terms in \eqref{Peaks:PsikROIEquationOfMotion} redistribute momentum, it is only due to the kinetic term that momentum will leave the region of interest. To see that this is true, consider a Hamiltonian with no kinetic term. In this case the local phase of the wavefunction will rotate, but the density distribution will remain unchanged. Hence it will be the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} that will determine the momentum density flux leaving the region of interest.
 
 The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} can be evaluated to give the momentum density flux $\Phi(\bm{k}, t)$ leaving the region of interest in terms of a surface integral over the boundary of the region of interest,
 \begin{align}
-    \Phi(\bm{k}, t) & = -\frac{\partial \abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2}{\partial t}\bigg|_\text{kinetic}\\
+    \Phi(\bm{k}, t) & = -\frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2\bigg|_\text{kinetic}\\
     & = -2 \Re \left\{ \frac{i \hbar}{2 M} \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi_\text{roi}(\bm{x}, t) + i \bm{k} \psi_\text{roi}(\bm{x}, t)\Big] \cdot d \bm{A} \right\}.
     \label{Peaks:MomentumDensityFluxSurfaceIntegral}
 \end{align}
@@ -533,17 +533,17 @@ Having described the calculational techniques that will be used, we will now tur
     \label{Peaks:3DGPEquations}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial \Psi_1}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\bm{x}) - i V_I(\bm{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
+            i \hbar \frac{\partial }{\partial t}\Psi_1 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\bm{x}) - i V_I(\bm{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_1 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 - \abs{\Psi_{-1}}^2 \right) \Psi_1 + c_2 \Psi_{-1}^*\Psi_0^2 \\
             & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial \Psi_0}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(\hbar \Delta - i V_I(\bm{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
+            i \hbar \frac{\partial }{\partial t}\Psi_0 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(\hbar \Delta - i V_I(\bm{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_0 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_0 + 2 c_2 \Psi_{0}^*\Psi_1\Psi_{-1} \\
             & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial \Psi_{-1}}{\partial t} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\bm{x}) + 2 \hbar \Delta - i V_I(\bm{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
+            i \hbar \frac{\partial }{\partial t}\Psi_{-1} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\bm{x}) + 2 \hbar \Delta - i V_I(\bm{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_{-1} + c_2\left(-\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_{-1} + c_2 \Psi_{1}^*\Psi_0^2 \\
             & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
         \end{split}
@@ -554,7 +554,7 @@ where $\displaystyle V_\text{trap}(\bm{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 
 The Truncated Wigner equations corresponding to the master equation \eqref{Peaks:MasterEquation} are very similar to \eqref{Peaks:3DGPEquations} but with the addition of noise-correction terms,
 \begin{align}
     \label{Peaks:3DTWEquations}
-    \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{TW} &= \left. i \hbar \frac{\partial \Psi_j}{\partial t}\right|_\text{GP} - \left(2 c_0 + c_2 - i \hbar \frac{9}{2}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\Psi_j + i\sqrt{\frac{\hbar V_I(\bm{x})}{2}} \xi_j(\bm{x}),
+    \left. i \hbar \frac{\partial }{\partial t}\Psi_j\right|_\text{TW} &= \left. i \hbar \frac{\partial }{\partial t}\Psi_j\right|_\text{GP} - \left(2 c_0 + c_2 - i \hbar \frac{9}{2}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\Psi_j + i\sqrt{\frac{\hbar V_I(\bm{x})}{2}} \xi_j(\bm{x}),
 \end{align}
 where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as those that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight \citep{Ronen:2006}), and $\xi_j(\bm{x})$ are independent time- and spatially-dependent complex Gaussian noises with variance $\displaystyle \left(dt\, \Delta V\right)^{-1}$. The $\Delta V^{-1}$ term in \eqref{Peaks:3DTWEquations} corrects for the virtual particles that are added to the initial state (refer to \sectionref{BackgroundTheory:TruncatedWigner}), while the time-dependent noise term corrects for the virtual particles that would otherwise be removed by the absorbing boundary layer. Note that \eqref{Peaks:3DTWEquations} is the same in Itô or Stratonovich form.
 

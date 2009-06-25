@@ -8,7 +8,7 @@ Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of 
 \begin{subequations}
     \label{FloquetAppendix:MatrixOperatorEvolution}
     \begin{align}
-        i \hbar \frac{\partial \hat{\bm{\Upsilon}}(\bm{k}, t)}{\partial t} &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t),\\
+        i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}, t) &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t),\\
         \hat{\bm{\Upsilon}}(\bm{k}, t) &= 
         \begin{pmatrix}
             \hat{\phi}_1^{\phantom{\dagger}}(\bm{k}, t) &
@@ -29,7 +29,7 @@ where the last equality holds because $\hat{H}(t)$ is isotropic.
 If the Hamiltonian $\hat{H}(t)$ were not time-dependent, $\mathcal{H}(\bm{k}, t)$ could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\bm{k})$ and corresponding operators $\hat{Q}_j(\bm{k}, t)$ which would evolve as
 \begin{align}
     \label{FloquetAppendix:ContinouousTimeEigenoperators}
-    i \hbar \frac{\partial \hat{Q}_j(\bm{k}, t)}{\partial t} &= \hbar \Omega_j(\bm{k}) \hat{Q}_j(\bm{k}, t),
+    i \hbar \frac{\partial }{\partial t}\hat{Q}_j(\bm{k}, t) &= \hbar \Omega_j(\bm{k}) \hat{Q}_j(\bm{k}, t),
 \end{align}
 where the $\hat{Q}_j(\bm{k}, t)$ need not obey boson commutation relations. The real parts of the eigenvalues of $\mathcal{H}(\bm{k}, t)$ would give the excitation spectrum of the Hamiltonian $\hat{H}(t)$ with non-zero imaginary components giving the growth rates of the corresponding unstable mode.
 

@@ -439,7 +439,7 @@ where $\displaystyle\hat{\Xi}_{S, m_S}$ is the annihilation operator for the qua
             &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
     \end{split}
 \end{align}
-$\displaystyle \hat{\Psi}_i(\bm{x})$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The quasimolecular annihilation operator $\displaystyle \hat{\Xi}_{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right)$.
+$\displaystyle \hat{\Psi}_i$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The quasimolecular annihilation operator $\displaystyle \hat{\Xi}_{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients \citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right)$.
 
 In the first instance, we wish to verify the results of the previous section within a fully three-dimensional model and determine the pattern that would be observed on the detector in this case. Although a similar system was solved with the GP equation in \sectionref{TransverseProfile:Helium} when the transverse profile of a He* atom laser was considered, it is not possible to solve the system corresponding to \eqref{Peaks:MasterEquation} with available computational infrastructure. The difference between these two systems is in the axial dimension.
 
@@ -535,31 +535,44 @@ Having described the calculational techniques that will be used, we will now tur
         \begin{split}
             i \hbar \frac{\partial }{\partial t}\Psi_1 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\bm{x}) - i V_I(\bm{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_1 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 - \abs{\Psi_{-1}}^2 \right) \Psi_1 + c_2 \Psi_{-1}^*\Psi_0^2 \\
-            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
+            & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial }{\partial t}\Psi_0 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(\hbar \Delta - i V_I(\bm{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_0 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_0 + 2 c_2 \Psi_{0}^*\Psi_1\Psi_{-1} \\
-            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
+            & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial }{\partial t}\Psi_{-1} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\bm{x}) + 2 \hbar \Delta - i V_I(\bm{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_{-1} + c_2\left(-\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_{-1} + c_2 \Psi_{1}^*\Psi_0^2 \\
-            & \relphantom{=} - i \hbar\frac{9}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
+            & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
         \end{split}
     \end{align}
 \end{subequations}
-where $\displaystyle V_\text{trap}(\bm{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 + \omega_z^2 z^2 \right)$ is the trapping potential, $\hbar \Delta$ is the detuning in energy of the resonant outcoupling surface from the centre of the condensate, $c_0 = (g_0 + 2 g_2)/3$, $c_2 = (g_2 - g_0)/3$, where $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}).
+where $\displaystyle V_\text{trap}(\bm{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 + \omega_z^2 z^2 \right)$ is the trapping potential, $\hbar \Delta$ is the detuning in energy of the resonant outcoupling surface from the centre of the condensate, $c_0 = (g_0 + 2 g_2)/3$, $c_2 = (g_2 - g_0)/3$, where $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). A derivation of the scattering and Penning ionisation terms in \eqref{Peaks:3DGPEquations} is given in \sectionref{DerivationsAppendix:PeaksGPEquationsOfMotion}\footnote{FIXME: I don't like that this derivation would be separated from the derivation of the master equation term in \sectionref{BackgroundTheory:PenningIonisation}.}.
 
-The Truncated Wigner equations corresponding to the master equation \eqref{Peaks:MasterEquation} are very similar to \eqref{Peaks:3DGPEquations} but with the addition of noise-correction terms,
+The Truncated Wigner equations corresponding to the master equation \eqref{Peaks:MasterEquation} are very similar to \eqref{Peaks:3DGPEquations} but with the addition of noise-correction terms. In Stratonovich form, the equations of motion for the stochastic wavefunctions are
+% See MolecularScattering.nb for the derivation of the Penning ionisation terms
 \begin{align}
     \label{Peaks:3DTWEquations}
-    \left. i \hbar \frac{\partial }{\partial t}\Psi_j\right|_\text{TW} &= \left. i \hbar \frac{\partial }{\partial t}\Psi_j\right|_\text{GP} - \left(2 c_0 + c_2 - i \hbar \frac{9}{2}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\Psi_j + i\sqrt{\frac{\hbar V_I(\bm{x})}{2}} \xi_j(\bm{x}),
+    \begin{split}
+        (S) \left. i \hbar \,d\bm{\Psi}\right|_\text{TW} &= \left. i \hbar \frac{\partial }{\partial t}\bm{\Psi}\right|_\text{GP} dt - \left(2 c_0 + c_2 - i \hbar \frac{9}{4}K^\text{(unpol)}_{^4\text{He}}\right)\frac{1}{\Delta V}\bm{\Psi}\, dt\\
+        &\relphantom{=} + \frac{i}{2}\sqrt{\hbar V_I(\bm{x})} \,d\bm{W}(\bm{x}) + \sqrt{3 K^\text{(unpol)}_{^4\text{He}}}
+        \begin{pmatrix}
+            \Psi_{-1}^*\\
+            \Psi_0^*\\
+            \Psi_1^*
+        \end{pmatrix} dW_p(\bm{x}),
+    \end{split}
 \end{align}
-where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as those that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight \citep{Ronen:2006}), and $\xi_j(\bm{x})$ are independent time- and spatially-dependent complex Gaussian noises with variance $\displaystyle \left(dt\, \Delta V\right)^{-1}$. The $\Delta V^{-1}$ term in \eqref{Peaks:3DTWEquations} corrects for the virtual particles that are added to the initial state (refer to \sectionref{BackgroundTheory:TruncatedWigner}), while the time-dependent noise term corrects for the virtual particles that would otherwise be removed by the absorbing boundary layer. Note that \eqref{Peaks:3DTWEquations} is the same in Itô or Stratonovich form.
+where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as those that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight \citep{Ronen:2006}), $\bm{\Psi} = \left(\Psi_1, \Psi_0, \Psi_{-1} \right)^T$ and $d \bm{W}(\bm{x}) = \big(dW_1(\bm{x}), dW_0(\bm{x}), dW_{-1}(\bm{x})\big)^T$ and $dW_p(\bm{x})$ are the complex Gaussian noises satisfying
+\begin{align}
+    \overline{dW_i(\bm{x})\, dW_j(\bm{x}')} &= 0 \\
+    \overline{dW_i(\bm{x})\, dW_j^*(\bm{x}')} &= \frac{1}{\Delta V}\delta_{ij}\delta_{\bm{x},\bm{x}'}\,dt, \label{Peaks:ComplexNoiseExpectationValue}
+\end{align}
+where $\overline{(\cdot)}$ denotes the expectation value taken with respect to the noises. The usual spatial Dirac delta function in \eqref{Peaks:ComplexNoiseExpectationValue} has been replaced by a Kronecker delta function scaled by the inverse volume element due to the discrete nature of the computational grid.
 
-In obtaining \eqref{Peaks:3DTWEquations}, both the second and third order derivatives of the Fokker-Planck equation corresponding to the Penning ionisation term have been neglected\footnote{FIXME: Justify this. Possibly add a Penning loss curve to help.}. 
-This is because Penning ionisation is a small loss process and we are not so much worried about the loss of noise that will result. On the other hand, the absorbing boundary layer will remove much of the high-momentum noise quickly, and a process is needed to restore that to make sure that the process occurs.
+The additional terms given by \eqref{Peaks:3DTWEquations} can be interpreted in the following way, the $\Delta V^{-1}$ term corrects for the additional `virtual' particles added to the initial state of the stochastic wavefunctions (refer to \sectionref{BackgroundTheory:TruncatedWigner}), the $d \bm{W}$ term corrects for the loss of virtual particles due to the absorbing boundary layer and the $dW_p$ term does similarly for virtual particles lost due to Penning ionisation. A derivation of the Penning ionisation noise term in \eqref{Peaks:3DTWEquations} is given in \sectionref{DerivationsAppendix:PeaksTWEquationsOfMotion}\footnote{FIXME: I do need to do this, don't I?}.
 
 In an ideal world, our job would be done once a set of equations has been derived that can model a system. Unfortunately, technical considerations often limit which problems are and are not feasible to solve. In this case, although the GP equations given in \eqref{Peaks:3DGPEquations} can be solved in a couple of days on a supercomputer, \eqref{Peaks:3DTWEquations} represents a much more challenging problem. Not only do these equations need to be solved a large number of times ($N_\text{paths} \gtrsim 100$) for different initial conditions, but algorithms for solving stochastic differential equations are limited to a lower order\footnote{For example, Runge-Kutta type algorithms are limited to a one-step error of $\displaystyle O(\Delta t^\frac{3}{2})$ \citep{Ruemelin:1982}. Algorithms using higher-order moments of the noises are able to achieve a global error of $\displaystyle O(\Delta t)$ \citep{Burrage:2004}.} than those that can be used for deterministic differential equations hence  significantly smaller time steps are required for solving stochastic differential equations. This problem is mainly due to the $\Psi_{-1}$ state which, due to the antitrapping potential, has a kinetic energy $\sim 40$ times larger than the $\Psi_{0}$ atoms at the edge of the computational domain $\unit[60]{\micro m}$ away from the centre of the condensate in the radial direction. The computational domain cannot be restricted to be tighter due to the requirement that the mean-field energy of the $\Psi_{0}$ atoms be negligible compared to their kinetic energy for the absorbing boundary layer to be effective. While it is for these practical reasons that we must neglect the $\Psi_{-1}$ state, we are physically justified in doing so by the same arguments given at the start of \sectionref{Peaks:PerturbativeApproach}.
 

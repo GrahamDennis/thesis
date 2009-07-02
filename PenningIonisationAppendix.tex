@@ -1,0 +1,54 @@
+\chapter{Penning ionisation in metastable condensates}
+\label{PenningIonisationAppendix}
+\graphicspath{{Figures/PenningIonisationAppendix/}{Figures/Common/}}
+
+In this appendix a derivation of the master equation, Gross-Pitaevskii and Truncated Wigner terms for Penning ionisation (refer to \sectionref{BackgroundTheory:PenningIonisation}) are given. In the following derivation, the ionisation of the $S=2$ quasimolecule states are neglected as the corresponding rate constant is 5 orders of magnitude smaller than that for the $S=0$ quasimolecule state at BEC temperatures \citep{Shlyapnikov:1994}.
+
+\section{Penning ionisation master equation}
+\label{PenningIonisationAppendix:MasterEquation}
+
+As the Penning ionisation process is highly exothermic (the combined internal energy of the two atoms exceeds the ionisation energy of $\text{He}$ by $\unit[15]{eV}$), the products will exit the $\text{He}^*$ sample rapidly. The process is therefore well approximated by considering the $S=0$ quasimolecule state to be coupled to a vacuum reservoir. As it is only the behaviour of the condensate in which we are interested and the reservoir can be considered to be Markovian, the reservoir's evolution may be traced over yielding the usual kind of loss term for the master equation (see for example \citep[Chapter 8]{Scully}),
+\begin{align}
+    \label{PenningIonisationAppendix:MasterEquationTermArbitraryConstant}
+    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
+\end{align}
+where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho}\hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $\gamma_\text{PI}$ is a positive rate constant. The $\hat{\Xi}_{S=0, m_S=0}$ quasimolecule state can be expressed in terms of the atomic fields $\hat{\Psi}_j$ in the $F=1$ total angular momentum manifold as
+\begin{align}
+    \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
+\end{align}
+
+The unknown coefficient $\gamma_\text{PI}$ in \eqref{PenningIonisationAppendix:MasterEquationTermArbitraryConstant} can be determined by matching the dynamics given by \eqref{PenningIonisationAppendix:MasterEquationTermArbitraryConstant} for an unpolarised thermal cloud and comparing it to the result given in \citep{Stas:2006kx} of
+\begin{align}
+    \frac{d N_\text{ions}}{d t} &= K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, n(\bm{x})^2,
+\end{align}
+where $n(\bm{x})$ is the total density, $dN_\text{ions}/dt$ is the rate of ion production and $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ at BEC temperatures \citep{Stas:2006kx}.
+
+From the master equation \eqref{PenningIonisationAppendix:MasterEquationTermArbitraryConstant}, the equation of motion for the expectation value of the total number of atoms can be obtained
+\begin{align}
+    \label{PenningIonisationAppendix:NEquationOfMotion}
+    \begin{split}
+        \frac{d \mean{\hat{N}}}{d t} &= - \gamma_\text{PI} \frac{2}{3}\int d \bm{x}\, \left(4 \mean{\hat{\Psi}_{-1}^\dagger \hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\hat{\Psi}_{-1}^{\phantom{\dagger}}} + \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}}\right)\\
+        &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \bm{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
+    \end{split}
+\end{align}
+For a thermal state, the last pair of terms in \eqref{PenningIonisationAppendix:NEquationOfMotion} are zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{a}^\dagger \hat{a}}^2$. In terms of the number densities in each state $n_j(\bm{x}) = \mean{\hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}}}$, the equation of motion for the total number of atoms in a thermal sample is
+\begin{align}
+    \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \bm{x}\, \left(2 n_1(\bm{x}) n_{-1}(\bm{x}) + n_0^2(\bm{x})\right).
+\end{align}
+In an unpolarised sample the three internal states are equally occupied $\displaystyle n_j(\bm{x}) = \frac{1}{3}n(\bm{x})$, and as two atoms are lost for each ion that is produced the ion production rate is
+\begin{align}
+    \frac{d N_\text{ion}}{dt} &= -\frac{1}{2} \left.\frac{d \mean{\hat{N}}}{dt}\right|_\text{thermal} = \frac{2}{9} \gamma_\text{PI} \int d \bm{x}\, n^2(\bm{x}).
+\end{align}
+This gives the constant $\displaystyle\gamma_\text{PI} = \frac{9}{2} K^\text{(unpol)}_{^4\text{He}}$ and the corresponding term in the master equation as
+\begin{align}
+    \label{PenningIonisation:MasterEquationTerm}
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho}.
+\end{align}
+
+\section{Gross-Pitaevskii Penning ionisation terms}
+\label{PenningIonisationAppendix:GP}
+
+Now we go and derive the GP equation terms from the evolution of the expectation values of the various operators.
+
+\section{Truncated Wigner Penning ionisation terms}
+\label{PenningIonisationAppendix:TW}

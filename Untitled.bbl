@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{42}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -333,5 +333,23 @@
   \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
   \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
   University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Gardiner}(2004)}]{GardinerHSM}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \emph{\bibinfo{title}{{Handbook of Stochastic Methods}}}, Springer Series in
+  Synergetics (\bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
+  \bibinfo{year}{2004}), \bibinfo{edition}{3rd} ed.
+
+\bibitem[{\citenamefont{Gardiner and Zoller}(2004)}]{GardinerQN}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
+  \emph{\bibinfo{title}{{Quantum Noise}}}, Springer Series in Synergetics
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2004}), \bibinfo{edition}{3rd}
+  ed.
+
+\bibitem[{\citenamefont{Polkovnikov}(2003)}]{Polkovnikov:2003}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
+  \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
 
 \end{thebibliography}

@@ -52,6 +52,8 @@ Quantum-mechanics is \emph{linear}. If my system is in the state $\displaystyle 
 
 \section{Truncated Wigner}
 \label{BackgroundTheory:TruncatedWigner}
+We must talk about the initial state noise being interpreted as `virtual' particles. The exact number required due to the vacuum energy of the harmonic oscillator.
+Operator correspondences must be described here.
 \section{Rubidium}
 \label{BackgroundTheory:Rubidium}
 \section{Metastable Helium}
@@ -65,7 +67,7 @@ Quantum-mechanics is \emph{linear}. If my system is in the state $\displaystyle 
     \midrule
     Quasimolecule $S=0$ scattering length & $a_{S=0}=\unit[9.46]{nm}$\\
     Quasimolecule $S=2$ scattering length & $a_{S=2}=\unit[7.51]{nm}$\\
-    Penning ionisation rate & $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}}$\\
+    Penning ionisation rate & $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}}$\\
     \bottomrule
     \end{tabular}
     \caption{\label{BackgroundTheory:He*Parameters} Relevant parameters of metastable Helium.}
@@ -89,9 +91,9 @@ In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be pr
 
 As derived in \sectionref{PenningIonisationAppendix:MasterEquation} the master equation term describing Penning ionisation is
 \begin{align}
-    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} K^\text{(unpol)}_{^4\text{He}} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
 \end{align}
-where $K^\text{(unpol)}_{^4\text{He}} = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$ \citep{Stas:2006kx}, and the $S=0$ quasimolecule state that undergoes Penning ionisation is given by
+where $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$ \citep{Stas:2006kx}, and the $S=0$ quasimolecule state that undergoes Penning ionisation is given by
 \begin{align}
     \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
 \end{align}

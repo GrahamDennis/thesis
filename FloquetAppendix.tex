@@ -4,11 +4,11 @@
 
 The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before \citep{Leonhardt:2003}. In this appendix, the methods discussed in \citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
 
-Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{FIXME: May need to add the argument that the Fourier transform must be of this form. It is simply a momentum conservation argument.},
+Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\bm{k}, t)$, $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\dagger}(-\bm{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\bm{k}, t)$. Consequently the terms $\hat{\phi}_j(-\bm{k}, t)$ and $\hat{\phi}_j^\dagger(\bm{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
 \begin{subequations}
     \label{FloquetAppendix:MatrixOperatorEvolution}
     \begin{align}
-        i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}, t) &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t),\\
+        i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}, t) &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t), \label{FloquetAppendix:UpsilonEquationOfMotion}\\
         \hat{\bm{\Upsilon}}(\bm{k}, t) &= 
         \begin{pmatrix}
             \hat{\phi}_1^{\phantom{\dagger}}(\bm{k}, t) &

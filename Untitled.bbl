@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{47}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -293,6 +293,26 @@
 \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Noether}},
   \bibinfo{journal}{Gott. Nachr} pp. \bibinfo{pages}{235--257}
   (\bibinfo{year}{1918}).
+
+\bibitem[{\citenamefont{Shirley}(1965)}]{Shirley:1965}
+\bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Shirley}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{138}},
+  \bibinfo{pages}{B979} (\bibinfo{year}{1965}).
+
+\bibitem[{\citenamefont{Hanggi}(1998)}]{Hanggi:1998}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Hanggi}},
+  \bibinfo{journal}{Physics Reports} \textbf{\bibinfo{volume}{304}},
+  \bibinfo{pages}{229} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Garrison}(1999)}]{Garrison:1999}
+\bibinfo{author}{\bibfnamefont{J.~C.} \bibnamefont{Garrison}},
+  \bibinfo{journal}{American Journal of Physics} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{196} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Moulton}(1958)}]{Moulton:1958}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Moulton}},
+  \emph{\bibinfo{title}{Differential Equations}} (\bibinfo{publisher}{MacMillan
+  Company}, \bibinfo{address}{New York}, \bibinfo{year}{1958}).
 
 \bibitem[{\citenamefont{Boyd}(2000)}]{Boyd:2000}
 \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Boyd}},

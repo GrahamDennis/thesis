@@ -1,11 +1,40 @@
-\chapter{Calculational methods}
+\chapter{Random derivations and calculations}
 \label{MethodsAppendix}
 \graphicspath{{Figures/MethodsAppendix/}{Figures/Common/}}
-
 
 %Some content goes here.
 
 % Perhaps this appendix might be called `technical details' or the like. And then we could cover things to keep an eye out for when doing simulations. Things like running off the edge of k-space causing phantom reflections, imaginary time algorithms. I could imagine quite a summary of techniques being possible.
+\section{Proof of the periodicity of the nonlinear optical Bloch equations}
+\label{MethodsAppendix:OpticalBlochPeriodicityProof}
+In this section a proof is given of the periodicity of the solutions to the nonlinear optical Bloch equations considered in \sectionref{Peaks:MeanFieldPeriodicity} which described the dynamics of the mean field of a two-level homogeneous condensate in the case that the scattering lengths for the two levels are not equal. We restate the nonlinear optical Bloch equations \eqref{Peaks:OpticalBlochEquations} here for convenience,
+\begin{subequations}
+    \label{Peaks:OpticalBlochEquations}
+    \begin{align}
+        \frac{d}{dt}\rho_{10} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
+        \frac{d }{dt}w &= -4 \Omega \Im\{\rho_{10}\},
+    \end{align}
+\end{subequations}
+where $\rho_{10}$ is the off-diagonal element of the density matrix, and $w = \rho_{11} - \rho_{00}$.
+
+FIXME: I'm not going to write out the entire bloody proof here just yet as I want to finish \chapterref{Peaks}. But here is a summary to jog my memory.
+\begin{enumerate}
+    \item We need to discard the possibilities of attractors, limit cycles and saddle points.
+    \item Derive the equations of motion for the $(\theta, \phi)$ coordinates as this basis has the dimension of the phase-space.
+    \begin{align}
+        \frac{d \theta}{dt} &= 2 \Omega \sin\phi\\
+        \frac{d \phi}{dt} &= 2 \Omega \cos\phi \cot\theta - \frac{1}{2} g (1-\cos\theta)
+    \end{align}
+    \item Note that these equations can be written in the form
+    \begin{align}
+        \dot{\bm{r}} &= \frac{2}{\hbar} \hat{\bm{r}} \times \nabla E,
+    \end{align}
+    where the hat indicates a unit vector, not an operator. Using a mild extension to the argument given in \citep[Theorem 1.14]{Ye-Yan-qian:1984} it is then shown that limit cycles are impossible. Make sure that it is noted that this only works because the phase-space is two-dimensional.
+    \item Solve for the stationary points of the equations above and use the tan-half substitution to obtain the solution expressed as roots of a polynomial. As $\sin\phi=0$, let $\cos\phi=1$ and let $\theta \in [-\pi, \pi]$ to cover the range of solutions. This makes things a bit simpler.
+    \item Obtain the linearised equations about an arbitrary stationary point, use the tan-half substitution again to use the polynomial obtained before to show that the eigenvalues must be purely imaginary. This shows that we don't have saddle points or attractors of any form. All stationary points are centres.
+    \item Profit!?
+\end{enumerate}
+
 
 \section{Example calculation of the momentum density flux}
 \label{MethodsAppendix:MomentumDensityFluxExampleCalculation}

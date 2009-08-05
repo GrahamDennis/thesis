@@ -52,6 +52,13 @@
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{55, 0}</string>
+				<string>{-21, -16}</string>
+				<string>{21, 16}</string>
+				<string>{8.16101, -16.4069}</string>
+			</array>
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
@@ -61,13 +68,16 @@
 			<integer>279</integer>
 			<key>Points</key>
 			<array>
-				<string>{1618, 479}</string>
-				<string>{1530.73, 528.61}</string>
+				<string>{1368, 468}</string>
+				<string>{1516, 470}</string>
+				<string>{1514.84, 516.407}</string>
 			</array>
 			<key>Style</key>
 			<dict>
 				<key>stroke</key>
 				<dict>
+					<key>Bezier</key>
+					<true/>
 					<key>Color</key>
 					<dict>
 						<key>b</key>
@@ -79,40 +89,12 @@
 					</dict>
 					<key>HeadArrow</key>
 					<string>FilledArrow</string>
+					<key>LineType</key>
+					<integer>1</integer>
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
 					<real>2</real>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{1516, 457}, {215, 18}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>ID</key>
-			<integer>278</integer>
-			<key>ImageID</key>
-			<integer>51</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
 				</dict>
 			</dict>
 		</dict>
@@ -309,7 +291,7 @@
 			<key>Points</key>
 			<array>
 				<string>{1204, 479}</string>
-				<string>{1116.73, 528.611}</string>
+				<string>{1116.73, 528.61}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -335,7 +317,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1102, 457}, {215, 18}}</string>
+			<string>{{1147, 457}, {215, 18}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -16113,7 +16095,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-07-23 17:14:48 +1000</string>
+	<string>2009-07-24 17:19:37 +1000</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -16203,7 +16185,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{759, 303}, {1257, 548}}</string>
+		<string>{{875, 351}, {1257, 548}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

@@ -1,4 +1,4 @@
-\begin{thebibliography}{49}
+\begin{thebibliography}{48}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -299,12 +299,6 @@
   (\bibinfo{publisher}{McGraw-Hill}, \bibinfo{address}{New York},
   \bibinfo{year}{1971}).
 
-\bibitem[{\citenamefont{Nayfeh and Balachandran}(1995)}]{Nayfeh:1995}
-\bibinfo{author}{\bibfnamefont{A.~H.} \bibnamefont{Nayfeh}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Balachandran}},
-  \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
-  Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
-
 \bibitem[{\citenamefont{Shirley}(1965)}]{Shirley:1965}
 \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Shirley}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{138}},
@@ -336,8 +330,8 @@
   (\bibinfo{publisher}{Dover}, \bibinfo{year}{2000}), \bibinfo{edition}{2nd}
   ed.
 
-\bibitem[{\citenamefont{Arfkey and Weber}(2005)}]{ArfkeyWeber}
-\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{Arfkey}} \bibnamefont{and}
+\bibitem[{\citenamefont{Arfken and Weber}(2005)}]{ArfkenWeber}
+\bibinfo{author}{\bibfnamefont{G.~B.} \bibnamefont{Arfken}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{H.~J.} \bibnamefont{Weber}},
   \emph{\bibinfo{title}{{Mathematical Methods for Physicists}}}
   (\bibinfo{publisher}{Harcourt}, \bibinfo{address}{San Diego},
@@ -353,8 +347,8 @@
 
 \bibitem[{\citenamefont{R{\"u}melin}(1982)}]{Ruemelin:1982}
 \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{R{\"u}melin}},
-  \bibinfo{journal}{SIAM Journal on Numerical Analysis}
-  \textbf{\bibinfo{volume}{19}}, \bibinfo{pages}{604} (\bibinfo{year}{1982}).
+  \bibinfo{journal}{SIAM J. Numer. Anal.} \textbf{\bibinfo{volume}{19}},
+  \bibinfo{pages}{604} (\bibinfo{year}{1982}).
 
 \bibitem[{\citenamefont{Burrage et~al.}(2004)\citenamefont{Burrage, Burrage,
   and Tian}}]{Burrage:2004}

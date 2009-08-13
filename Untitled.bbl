@@ -1,4 +1,4 @@
-\begin{thebibliography}{53}
+\begin{thebibliography}{54}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -12,17 +12,17 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
-  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
-  (\bibinfo{year}{1989}).
-
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
   \bibinfo{journal}{Journal of Computational Physics}
   \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
+  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
+  (\bibinfo{year}{1989}).
 
 \bibitem[{\citenamefont{Leggett and Sols}(1991)}]{Leggett:1991fj}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}} \bibnamefont{and}
@@ -54,6 +54,12 @@
   \bibnamefont{Reynolds}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{3247} (\bibinfo{year}{1994}).
 
+\bibitem[{\citenamefont{Venturi and Whittingham}(2000)}]{Venturi:2000}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Venturi}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{I.~B.} \bibnamefont{Whittingham}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
+  \bibinfo{pages}{060703} (\bibinfo{year}{2000}).
+
 \bibitem[{\citenamefont{Stas et~al.}(2006)\citenamefont{Stas, McNamara,
   Hogervorst, and Vassen}}]{Stas:2006kx}
 \bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
@@ -62,12 +68,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
-
-\bibitem[{\citenamefont{Venturi and Whittingham}(2000)}]{Venturi:2000}
-\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Venturi}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{I.~B.} \bibnamefont{Whittingham}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
-  \bibinfo{pages}{060703} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Dall et~al.}(2009)\citenamefont{Dall, Byron, Truscott,
   Dennis, Johnsson, and Hope}}]{Dall:2009}
@@ -232,6 +232,11 @@
   \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
   (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
+\bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{307} (\bibinfo{year}{2001}).
+
 \bibitem[{\citenamefont{Ozeri et~al.}(2005)\citenamefont{Ozeri, Katz,
   Steinhauer, and Davidson}}]{Ozeri:2005}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ozeri}},
@@ -240,11 +245,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Davidson}},
   \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{77}},
   \bibinfo{pages}{187} (\bibinfo{year}{2005}).
-
-\bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
-\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
-  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
-  \bibinfo{pages}{307} (\bibinfo{year}{2001}).
 
 \bibitem[{\citenamefont{Proukakis and Jackson}(2008)}]{Proukakis:2008}
 \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}}
@@ -370,18 +370,23 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
   \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
 
-\bibitem[{\citenamefont{R{\"u}melin}(1982)}]{Ruemelin:1982}
-\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{R{\"u}melin}},
-  \bibinfo{journal}{SIAM J. Numer. Anal.} \textbf{\bibinfo{volume}{19}},
-  \bibinfo{pages}{604} (\bibinfo{year}{1982}).
-
-\bibitem[{\citenamefont{Burrage et~al.}(2004)\citenamefont{Burrage, Burrage,
-  and Tian}}]{Burrage:2004}
+\bibitem[{\citenamefont{Burrage et~al.}(1997)\citenamefont{Burrage, Burrage,
+  and Belward}}]{Burrage:1997}
 \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burrage}},
-  \bibinfo{author}{\bibfnamefont{P.~M.} \bibnamefont{Burrage}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Tian}},
-  \bibinfo{journal}{Proc. R. Soc. London A} \textbf{\bibinfo{volume}{460}},
-  \bibinfo{pages}{373} (\bibinfo{year}{2004}).
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Burrage}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Belward}},
+  \bibinfo{journal}{BIT Numerical Mathematics} \textbf{\bibinfo{volume}{37}},
+  \bibinfo{pages}{771} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{R{\"o}{\ss}ler}(2007)}]{Rosler:2007}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{R{\"o}{\ss}ler}},
+  \bibinfo{journal}{BIT Numerical Mathematics} \textbf{\bibinfo{volume}{47}},
+  \bibinfo{pages}{657} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{R{\"o}{\ss}ler}(2009)}]{Rosler:2009}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{R{\"o}{\ss}ler}},
+  \bibinfo{journal}{SIAM Journal on Numerical Analysis}
+  \textbf{\bibinfo{volume}{47}}, \bibinfo{pages}{1713} (\bibinfo{year}{2009}).
 
 \bibitem[{\citenamefont{Robins et~al.}(2005)\citenamefont{Robins, Morrison,
   Hope, and Close}}]{Robins:2005uq}

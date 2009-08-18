@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>BackgroundTheory.tex</string>
+	<string>FloquetAppendix.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,45 +16,63 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-16T00:39:24Z</date>
+			<date>2009-08-17T07:27:47Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>LiteratureReview.tex</string>
+			<key>lastUsed</key>
+			<date>2009-07-09T07:10:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>BackgroundTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-18T01:09:58Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2009-07-09T07:09:43Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>TransverseProfile.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-10T06:32:13Z</date>
+			<date>2009-08-05T06:26:36Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-18T01:09:58Z</date>
+			<date>2009-08-17T07:27:42Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>KineticTheory.tex</string>
+			<key>lastUsed</key>
+			<date>2009-08-12T04:21:33Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>FloquetAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-07T04:27:21Z</date>
+			<date>2009-08-17T07:27:47Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>PenningIonisationAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2009-08-17T06:55:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>MethodsAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-16T00:25:10Z</date>
+			<date>2009-08-17T06:22:29Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>ToolsAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-06-15T05:31:22Z</date>
+			<date>2009-07-24T04:15:11Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -66,23 +84,53 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>318</integer>
+				<integer>29</integer>
 				<key>line</key>
-				<integer>110</integer>
+				<integer>2</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>95</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>96</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
 		</dict>
 		<key>FloquetAppendix.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>85</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>154</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>132</integer>
+		</dict>
+		<key>KineticTheory.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>56</integer>
+				<key>line</key>
+				<integer>2</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -94,49 +142,65 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>943</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>6</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>318</integer>
 				<key>line</key>
-				<integer>58</integer>
+				<integer>419</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>405</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>308</integer>
+				<key>line</key>
+				<integer>419</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>318</integer>
+				<key>line</key>
+				<integer>419</integer>
+			</dict>
+		</dict>
+		<key>PenningIonisationAppendix.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>193</integer>
+				<key>line</key>
+				<integer>87</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>903</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>382</integer>
+			<integer>114</integer>
 		</dict>
 		<key>ToolsAppendix.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>84</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>TransverseProfile.tex</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>32</integer>
+				<integer>345</integer>
 				<key>line</key>
 				<integer>8</integer>
 			</dict>
@@ -150,23 +214,24 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>22</integer>
+				<integer>103</integer>
 				<key>line</key>
-				<integer>199</integer>
+				<integer>132</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>21</integer>
+			<integer>80</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
 		<string>BackgroundTheory.tex</string>
-		<string>TransverseProfile.tex</string>
 		<string>Peaks.tex</string>
+		<string>KineticTheory.tex</string>
 		<string>FloquetAppendix.tex</string>
+		<string>PenningIonisationAppendix.tex</string>
 		<string>MethodsAppendix.tex</string>
 		<string>ToolsAppendix.tex</string>
 	</array>
@@ -182,8 +247,8 @@
 		</dict>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<false/>
+	<true/>
 	<key>windowFrame</key>
-	<string>{{355, 71}, {992, 900}}</string>
+	<string>{{315, 128}, {992, 900}}</string>
 </dict>
 </plist>

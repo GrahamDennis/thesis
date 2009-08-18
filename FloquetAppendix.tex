@@ -2,7 +2,9 @@
 \label{FloquetAppendix}
 \graphicspath{{Figures/FloquetAppendix/}{Figures/Common/}}
 
-The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before \citep{Leonhardt:2003}. In this appendix, the methods discussed in \citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
+\section{Evolution of the excitations}
+\label{FloquetAppendix:Evolution}
+The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before \citep{Leonhardt:2003}. In this section, the methods discussed in \citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
 
 Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\bm{k}, t)$, $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\dagger}(-\bm{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\bm{k}, t)$. Consequently the terms $\hat{\phi}_j(-\bm{k}, t)$ and $\hat{\phi}_j^\dagger(\bm{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
 \begin{subequations}
@@ -76,7 +78,7 @@ The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as th
         &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
         \label{FloquetAppendix:InvariantCommutator}
 \end{align}
-For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{i}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = \omega_i(\bm{k})$. Hence it is only for purely real Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\bm{k}, t)$ is time-independent the Floquet exponents $\xi(\bm{k})$ are equal to the eigenvalues $\Omega(\bm{k})$ of $\mathcal{H}(\bm{k}, t)$. Hence the real component of the Floquet exponents are related to the excitation spectrum and non-zero imaginary components are related to the existence of instabilities.
+For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{i}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = \omega_i(\bm{k})$. Hence it is only for purely real Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\bm{k}, t)$ is time-independent, the Floquet exponents $\xi(\bm{k})$ are equal to the eigenvalues $\Omega(\bm{k})$ of $\mathcal{H}(\bm{k}, t)$. Hence the real components of the Floquet exponents are related to the excitation spectrum and non-zero imaginary components are related to the existence of instabilities.
 
 Generally the Floquet exponents $\xi_i$ may have a non-zero imaginary component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
 
@@ -127,7 +129,36 @@ where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\bm{k}, t)$ can be
 \begin{align}
     \hat{\Lambda}_1'(\bm{k}, nT) &= e^{-i n \omega T} \left( \sinh(n \gamma T) \hat{\Lambda}_1^\dagger(-\bm{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1'(\bm{k}, 0)\right). \label{FloquetAppendix:LambdaPrimeOperatorEvolution}
 \end{align}
-The evolution represented by \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric oscillator \citep{WallsMilburn} which generates EPR entanglement between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
+The evolution represented by \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric down-conversion \citep{WallsMilburn} which generates EPR entanglement (see next section) between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
 
 Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by the uniqueness of the eigenvectors $\hat{\Lambda}_1'(\bm{k}, t) = \hat{\Lambda}_1(\bm{k}, t)$. For this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} consistent.
+
+\section{EPR entanglement of unstable excitations}
+\label{FloquetAppendix:EPREntanglement}
+
+EPR entanglement exists between two states when a measurement of either of two canonically conjugate observables of state 1 permits the value of corresponding observables of state 2 to be inferred with a high degree of certainty. This `high degree of certainty' must be such that the difference between the inferred and measured values for the observables of state 2 are smaller than the corresponding Heisenberg uncertainty limit. In the case of the quadrature operators
+\begin{align}
+    \hat{X}_j^\theta = \hat{a}_j^{\phantom{\dagger}} e^{i \theta} + \hat{a}_j^\dagger e^{-i \theta} \quad (j = 1,\, 2).
+\end{align}
+the Heisenberg uncertainty limit for the conjugate observables $\hat{X}_2^\phi$, $\hat{X}_2^{\phi + \pi/2}$ is
+\begin{align}
+    V\big(\hat{X}_2^\phi\big) V\big(\hat{X}_2^{\phi + \pi/2}\big) &\geq 1,
+\end{align}
+where $V(\hat{X})$ denotes the variance of the observable $\hat{X}$. The condition for EPR entanglement between states 1 and 2 is therefore
+\begin{align}
+    V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) V\big(\hat{X}_2^{\phi + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &< 1,
+\end{align}
+where $V(\hat{X} | \hat{Y})$ denotes the conditional variance of $\hat{X}$ given a measurement of the observable $\hat{Y}$. For perfect EPR entanglement, a measurement of $\hat{X}_1^{\theta}$ will enable the outcome of a measurement of $\hat{X}_2^\phi$ to be predicted with certainty; in this case $V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) \rightarrow 0$. For more detail about EPR entanglement see, for example, \citep{WallsMilburn}. We follow the discussion in \citep[\S 5.2.3]{WallsMilburn} in the remainder of this section.
+
+The highest correlation between $\hat{X}_1^\theta$ and $\hat{X}_2^\phi$ will exist when the conditional expectation $\mathbb{E}\big[\hat{X}_2^\phi\big| \hat{X}_1^\theta\big] = \pm\hat{X}_1^\theta$. For simplicity, we choose the `+' sign. In this case the conditional variances above become
+\begin{align}
+    V(\theta, \phi) &\equiv V\big(\hat{X}_2^\phi \big| \hat{X}_1^{\theta}\big) = \big<\big(\hat{X}_2^\phi - \hat{X}_1^\theta\big)^2\big>.
+\end{align}
+
+For the case of the unstable modes described by \eqref{FloquetAppendix:LambdaOperatorEvolution}--\eqref{FloquetAppendix:LambdaPrimeOperatorEvolution}, these variances are minimised by the choice $\theta = -\phi$. At time $t = n T > 0$, the states $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ are EPR-entangled,
+\begin{align}
+    V\big(\hat{X}_2^{-\theta} \big| \hat{X}_1^{\theta}\big)V\big(\hat{X}_2^{-\theta + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &= e^{-4 \gamma t} < 1.
+\end{align}
+
+
 

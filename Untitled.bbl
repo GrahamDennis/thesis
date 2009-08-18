@@ -1,4 +1,4 @@
-\begin{thebibliography}{54}
+\begin{thebibliography}{53}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -428,12 +428,5 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
   \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
-
-\bibitem[{\citenamefont{{Ye Yan-qian}}(1986)}]{Ye-Yan-qian:1984}
-\bibinfo{author}{\bibnamefont{{Ye Yan-qian}}}, \emph{\bibinfo{title}{{Theory of
-  Limit Cycles}}}, vol.~\bibinfo{volume}{66} of
-  \emph{\bibinfo{series}{Translations of mathematical monographs}}
-  (\bibinfo{publisher}{American Mathematical Society}, \bibinfo{year}{1986}),
-  \bibinfo{edition}{2nd} ed.
 
 \end{thebibliography}

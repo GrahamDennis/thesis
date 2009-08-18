@@ -53,7 +53,7 @@ Comparing \eqref{PenningIonisationAppendix:ThermalSampleStas} and \eqref{Penning
 \section{Gross-Pitaevskii Penning ionisation terms}
 \label{PenningIonisationAppendix:GP}
 
-The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} are obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system can be expressed as a tensor product of coherent states\footnote{As discussed in \sectionref{BackgroundTheory:SymmetryBreaking} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi}\underset{\bm{x}}{\otimes} \ketbra{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}$.} $\displaystyle\hat{\rho} = \underset{\bm{x}}{\otimes} \ketbra{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}$.
+The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} can be obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system can be expressed as a tensor product of coherent states\footnote{As discussed in \sectionref{BackgroundTheory:SymmetryBreaking} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi}\underset{\bm{x}}{\otimes} \ketbra{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}$.} $\displaystyle\hat{\rho} = \underset{\bm{x}}{\otimes} \ketbra{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}$.
 
 Using the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm}, the equations of motion for the expectation values of the atomic fields are
 \begin{align}
@@ -75,17 +75,17 @@ The Penning ionisation terms in \eqref{Peaks:3DGPEquations} are obtained applyin
 The Truncated Wigner terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} are very similar to the GP equation terms with an additional term to correct for the loss due to Penning ionisation of the `virtual' particles added to the initial state. Applying the operator correspondences for the Wigner distribution described in \sectionref{BackgroundTheory:TruncatedWigner} to \eqref{PenningIonisationAppendix:MasterEquationTerm} and truncating third order derivatives yields the functional Fokker-Planck equation
 \begin{align}
     \begin{split}
-    \frac{\partial}{\partial t} W(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^*\right\}_i) &= \int d \bm{x} \Bigg\{ -\frac{3}{2}\Kunpol\bigg[\frac{\delta}{\delta \Psi_1}\left(-2 \abs{\Psi_{-1}}^2\Psi_1 +\Psi_{-1}^*\Psi_0\Psi_0  + \delta(0) \Psi_1\right)\\
+    \frac{\partial}{\partial t} W(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^*\right\}) &= \int d \bm{x} \Bigg\{ -\frac{3}{2}\Kunpol\bigg[\frac{\delta}{\delta \Psi_1}\left(-2 \abs{\Psi_{-1}}^2\Psi_1 +\Psi_{-1}^*\Psi_0\Psi_0  + \delta(0) \Psi_1\right)\\
     &\relphantom{=} +\frac{\delta}{\delta \Psi_0}\left(2 \Psi_0^* \Psi_1 \Psi_{-1}  - \abs{\Psi_0}^2 \Psi_0 + \delta(0) \Psi_0\right)\\
     &\relphantom{=} +\frac{\delta}{\delta \Psi_{-1}}\left(- 2 \abs{\Psi_1}^2 \Psi_{-1} + \Psi_1^* \Psi_0 \Psi_0  + \delta(0) \Psi_{-1}\right) + \text{h.c.} \bigg]\\
     &\relphantom{=} + 3 \Kunpol \bigg[\frac{\delta}{\delta \Psi_1^{\phantom{*}}} \frac{\delta}{\delta \Psi_1^*}\left(\abs{\Psi_{-1}}^2 - \frac{1}{2} \delta(0)\right) + \frac{\delta}{\delta \Psi_0^{\phantom{*}}} \frac{\delta}{\delta \Psi_0^*}\left(\abs{\Psi_0}^2 - \frac{1}{2} \delta(0)\right) \\
     &\relphantom{=} + \frac{\delta}{\delta \Psi_{-1}^{\phantom{*}}} \frac{\delta}{\delta \Psi_{-1}^*} \left(\abs{\Psi_1}^2 - \frac{1}{2}\delta(0)\right)\bigg] \\
     &\relphantom{=} +3 \Kunpol\bigg[\frac{\delta}{\delta \Psi_1^{\phantom{*}}}\frac{\delta}{\delta \Psi_{-1}^*}\Psi_{-1}^*\Psi_{1}^{\phantom{*}}  - \frac{\delta}{\delta \Psi_{1}^{\phantom{*}}}\frac{\delta}{\delta \Psi_0^*}\Psi_{-1}^* \Psi_0^{\phantom{*}} \\
-    &\relphantom{=} - \frac{\delta}{\delta \Psi_0^{\phantom{*}}}\frac{\delta}{\delta \Psi_{-1}^*} \Psi_0^* \Psi_1^{\phantom{*}} + \text{h.c.} \bigg]\Bigg\}W(\left\{\Psi_i^{\phantom{*}}, \Psi_i^* \right\}_i),
+    &\relphantom{=} - \frac{\delta}{\delta \Psi_0^{\phantom{*}}}\frac{\delta}{\delta \Psi_{-1}^*} \Psi_0^* \Psi_1^{\phantom{*}} + \text{h.c.} \bigg]\Bigg\}W(\left\{\Psi_i^{\phantom{*}}, \Psi_i^* \right\}),
     \end{split}
     \label{PenningIonisationAppendix:FunctionalFokkerPlanckEquation}
 \end{align}
-where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin.
+where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin. While the $\delta(0)$ terms are pathological, they will later be approximated on a computational grid by $\Delta V^{-1}$ where $\Delta V$ is the local volume element.
 
 \subsection{Fokker-Planck and stochastic differential equations}
 The tremendous advantage of transforming a master equation into a Fokker-Planck equation is that under certain conditions, a Fokker-Planck equation may be unravelled as a stochastic differential equation. Expectation values can be calculated as averages of appropriate quantities over \emph{independent} realisations of a stochastic differential equation, which is requires significantly less computational effort\footnote{FIXME: Cite something or write something elsewhere and reference it.}. In the general case it is desired to unravel the Fokker-Planck equation
@@ -115,7 +115,7 @@ The microscopic view is an alternative approach which is useful when two equival
 As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is local in the position basis, the $\bm{D}$ and $\bm{B}$ matrices can be constructed independently at each spatial position. Discretising \eqref{PenningIonisationAppendix:FunctionalFokkerPlanckEquation} onto a computational grid (this implies the replacement $\delta(0) \rightarrow \Delta V^{-1}$ where $\Delta V$ is the local volume element), the $\bm{D}$ matrix at position $\bm{x}$ is
 \begin{align}
     \begin{split}
-        \bm{D}(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^* \right\}_i, t) &= 3 \Kunpol
+        \bm{D}(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^* \right\}, t) &= 3 \Kunpol
         \begin{pmatrix}
             \abs{\Psi_{-1}}^2 & - \Psi_{-1}^* \Psi_0^{\phantom{*}} & \Psi_{-1}^* \Psi_{1}^{\phantom{*}} & 0 & 0 & 0 \\
             - \Psi_{0}^* \Psi_{-1}^{\phantom{*}} & \abs{\Psi_{0}}^2 & - \Psi_{0}^*\Psi_1^{\phantom{*}} & 0 & 0 & 0 \\
@@ -134,7 +134,7 @@ The matrix $\bm{D}$ in \eqref{PenningIonisationAppendix:DMatrix} contains negati
 
 Neglecting the $\Delta V^{-1}$ term the eigenvalues of $\bm{D}$ are positive or zero, and the matrix $\bm{D}$ can be written in the form $\bm{B}\bm{B}^\dagger$ where
 \begin{align}
-    \bm{B}(\left\{\Psi_i^{\phantom{*}}, \Psi_i^*\right\}_i, t) &= \sqrt{\frac{3 \Kunpol}{2}}
+    \bm{B}(\left\{\Psi_i^{\phantom{*}}, \Psi_i^*\right\}, t) &= \sqrt{\frac{3 \Kunpol}{2}}
     \begin{pmatrix}
         \Psi_{-1}^* & i \Psi_{-1}^* \\
         -\Psi_0^* & -i \Psi_0^* \\

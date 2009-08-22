@@ -136,29 +136,28 @@ Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators corresp
 \section{EPR entanglement of unstable excitations}
 \label{FloquetAppendix:EPREntanglement}
 
-EPR entanglement exists between two states when a measurement of either of two canonically conjugate observables of state 1 permits the value of corresponding observables of state 2 to be inferred with a high degree of certainty. This `high degree of certainty' must be such that the difference between the inferred and measured values for the observables of state 2 are smaller than the corresponding Heisenberg uncertainty limit. In the case of the quadrature operators
+EPR entanglement exists between two states when, for two conjugate observables of state 2, a measurement of one can be inferred with a high degree of certainty from a measurement on state 1. This `high degree of certainty' must be such that the differences between the inferred and measured quantities are smaller than the Heisenberg uncertainty limit for the conjugate observables. In the case of the quadrature operators
 \begin{align}
-    \hat{X}_j^\theta = \hat{a}_j^{\phantom{\dagger}} e^{i \theta} + \hat{a}_j^\dagger e^{-i \theta} \quad (j = 1,\, 2).
+    \hat{X}_j^\theta = \hat{a}_j^{\phantom{\dagger}} e^{i \theta} + \hat{a}_j^\dagger e^{-i \theta} \quad (j = 1,\, 2),
 \end{align}
-the Heisenberg uncertainty limit for the conjugate observables $\hat{X}_2^\phi$, $\hat{X}_2^{\phi + \pi/2}$ is
+where $\hat{a}_j$ are bosonic annihilation operators, the Heisenberg uncertainty limit for the conjugate observables $\hat{X}_2^\phi$, $\hat{X}_2^{\phi + \frac{\pi}{2}}$ is
 \begin{align}
-    V\big(\hat{X}_2^\phi\big) V\big(\hat{X}_2^{\phi + \pi/2}\big) &\geq 1,
+    V\big(\hat{X}_2^\phi\big) V\big(\hat{X}_2^{\phi + \frac{\pi}{2}}\big) &\geq 1,
 \end{align}
 where $V(\hat{X})$ denotes the variance of the observable $\hat{X}$. The condition for EPR entanglement between states 1 and 2 is therefore
 \begin{align}
-    V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) V\big(\hat{X}_2^{\phi + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &< 1,
+    V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) V\big(\hat{X}_2^{\phi + \frac{\pi}{2}} \big| \hat{X}_1^{\theta'}\big) &< 1, \label{FloquetAppendix:EPRCondition}
 \end{align}
-where $V(\hat{X} | \hat{Y})$ denotes the conditional variance of $\hat{X}$ given a measurement of the observable $\hat{Y}$. For perfect EPR entanglement, a measurement of $\hat{X}_1^{\theta}$ will enable the outcome of a measurement of $\hat{X}_2^\phi$ to be predicted with certainty; in this case $V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) \rightarrow 0$. For more detail about EPR entanglement see, for example, \citep{WallsMilburn}. We follow the discussion in \citep[\S 5.2.3]{WallsMilburn} in the remainder of this section.
+where $\hat{X}_1^\theta$ and $\hat{X}_1^{\theta'}$ are arbitrary quadrature observables on state 1, and $V(\hat{X} | \hat{Y})$ denotes the conditional variance of $\hat{X}$ given a measurement of the observable $\hat{Y}$. For perfect EPR entanglement, the outcome of a measurement of $\hat{X}_2^\phi$ can be predicted with certainty from a measurement of $\hat{X}_1^\theta$ (for some $\theta$); in this case $V\big(\hat{X}_2^\phi \big| \hat{X}_1^\theta\big) \rightarrow 0$. For more detail about EPR entanglement see, for example, \citep{WallsMilburn}.
 
 The highest correlation between $\hat{X}_1^\theta$ and $\hat{X}_2^\phi$ will exist when the conditional expectation $\mathbb{E}\big[\hat{X}_2^\phi\big| \hat{X}_1^\theta\big] = \pm\hat{X}_1^\theta$. For simplicity, we choose the `+' sign. In this case the conditional variances above become
 \begin{align}
     V(\theta, \phi) &\equiv V\big(\hat{X}_2^\phi \big| \hat{X}_1^{\theta}\big) = \big<\big(\hat{X}_2^\phi - \hat{X}_1^\theta\big)^2\big>.
 \end{align}
 
-For the case of the unstable modes described by \eqref{FloquetAppendix:LambdaOperatorEvolution}--\eqref{FloquetAppendix:LambdaPrimeOperatorEvolution}, these variances are minimised by the choice $\theta = -\phi$. At time $t = n T > 0$, the states $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ are EPR-entangled,
+For the case of the unstable modes described by \eqref{FloquetAppendix:LambdaOperatorEvolution}--\eqref{FloquetAppendix:LambdaPrimeOperatorEvolution}, these variances are minimised by the choice $\theta = -\phi$. At time $t = n T > 0$, the EPR-criterion \eqref{FloquetAppendix:EPRCondition} for the modes $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ is
 \begin{align}
-    V\big(\hat{X}_2^{-\theta} \big| \hat{X}_1^{\theta}\big)V\big(\hat{X}_2^{-\theta + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &= e^{-4 \gamma t} < 1.
+    V\big(\hat{X}_2^{-\theta} \big| \hat{X}_1^{\theta}\big)V\big(\hat{X}_2^{-\theta + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &= K^2 e^{-4 \gamma t}, \label{FloquetAppendix:GrowingCorrelations}
 \end{align}
-
-
+where $K$ is a constant of order $O\left(1+\abs{\alpha}^2  +\abs{\alpha'}^2\right)$, with $\mean{\hat{\Lambda}_1(\bm{k}, t=0)} = \alpha$ and $\mean{\hat{\Lambda}_1'(-\bm{k}, t=0)} = \alpha'$. Note that $K=1$ if the $\hat{\Lambda}_1^{(\prime)}$ are initially in the vacuum state. For sufficiently large times \eqref{FloquetAppendix:GrowingCorrelations} is less than 1 indicating that the modes $\hat{\Lambda}_1^{(\prime)}$ are EPR-entangled. This is true both for the case where the $\hat{\Lambda}_1^{(\prime)}$ are spontaneously-seeded (as in \figureref{Peaks:ResonantOutcouplingProcess}), and for the more general case in which the $\hat{\Lambda}_1^{(\prime)}$ are seeded by (potentially-different) coherent states.
 

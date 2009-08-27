@@ -4,7 +4,7 @@
 
 Pumping an atom laser, just like pumping an optical laser, is a necessarily irreversible process. In quantum mechanics, irreversibility enters through the coupling of a system to a large number of modes, known as a reservoir. Although, as quantum mechanics is symmetric under time-reversal, any process can be reversed by an appropriate unitary operation, such an operation can become impractical due to the large number of modes involved making such processes irreversible for all intents and purposes.
 
-There are two choices of reservoir to provide the necessary irreversibility in pumping an atom laser: the electromagnetic and atomic modes. The former was considered in the previous chapter; the latter is the subject of this chapter. The results presented in this chapter have been submitted for publication\footnote{FIXME: Do this.}. The results and analysis presented in \sectionref{KineticTheory:Results} of this chapter was my own work. The model presented in \sectionref{KineticTheory:Model} is based on prior work \citep{Davis:2000vn,Bijlsma:2000}. The derivation of the three-body loss term in \sectionref{KineticTheory:3BodyLoss} and the code the results in this chapter are based on are the work of \emph{Matthew Davis}.
+There are two choices of reservoir to provide the necessary irreversibility in pumping an atom laser: the electromagnetic and atomic modes. The former was considered in the previous chapter; the latter is the subject of this chapter. The results presented in this chapter have been submitted for publication\footnote{FIXME: Do this.}. The results and analysis presented in \sectionref{KineticTheory:Results} of this chapter was my own work. The model presented in \sectionref{KineticTheory:Model} is based on prior work \citep{Davis:2000vn,Bijlsma:2000}. The derivation of the three-body loss term in \sectionref{MethodsAppendix:QKT3BodyLoss} and the code the results in this chapter are based on are the work of \emph{Matthew Davis}.
 
 \section{Motivation}
 
@@ -26,13 +26,13 @@ Sequential reloading of a target BEC was achieved using optical tweezers \citep{
 \begin{figure}
     \centering
         \includegraphics[width=10cm]{QKTScheme}
-    \caption{Schematic of the experimental setup.}
+    \caption{Schematic of the experimental setup. FIXME: Caption.}
     \label{KineticTheory:QKTScheme}
 \end{figure}
 
-The proposed scheme for a pumped atom laser is illustrated in \figureref{KineticTheory:QKTScheme}. Bose-enhanced scattering between the thermal atoms and the condensate drives atoms irreversibly into the condensate when one of the scattered atoms has enough energy to cross the evaporation surface and be removed from the thermal cloud. The thermal cloud is continuously replenished from a source of atoms at some temperature $T$. The atom laser is produced by large momentum-transfer Raman outcoupling from the condensate to minimise the loss from the atom laser as it traverses the evaporation surface\footnote{An alternative configuration would be to place the evaporation surface \emph{above} the thermal cloud, however the magnetic trap would need to be weak enough for the evaporation surface to be a large distance away from the centre of the magnetic trap. For a trapping frequency of $\omega = 2\pi \times \unit[100]{Hz}$ in the vertical direction, the separation between the centre of the condensate and the centre of the magnetic trap is $y_\text{sag} = \unit[25]{\micro m}$. In such traps, typical condensate sizes are $y_\text{TF} \sim \unit[10]{\micro m}$, not giving much space between the condensate and the thermal cloud. The effectiveness of the evaporation surface is reduced as its size is reduced. For this reason the evaporation surface in \figureref{KineticTheory:QKTScheme} has been pictured below the thermal cloud. FIXME: Rewrite last part of this footnote.}. Using large momentum-transfer Raman outcoupling also minimises the losses from the thermal cloud due to the outcoupling process itself.
+The proposed scheme for a pumped atom laser is illustrated in \figureref{KineticTheory:QKTScheme}. Bose-enhanced scattering between the thermal atoms and the condensate drives atoms into the condensate. This process becomes irreversible when one of the scattered atoms has enough energy to cross the evaporation surface and be removed from the thermal cloud. The thermal cloud is continuously replenished from a source of atoms at some temperature $T$. The atom laser is produced by large momentum-transfer Raman outcoupling from the condensate to minimise the loss from the atom laser as it traverses the evaporation surface\footnote{An alternative configuration would be to place the evaporation surface \emph{above} the thermal cloud, however the magnetic trap would need to be weak enough for the evaporation surface to be a large distance away from the centre of the magnetic trap. For a trapping frequency of $\omega = 2\pi \times \unit[100]{Hz}$ in the vertical direction, the separation between the centre of the condensate and the centre of the magnetic trap is $y_\text{sag} = \unit[25]{\micro m}$. In such traps, typical condensate sizes are $y_\text{TF} \sim \unit[10]{\micro m}$, not giving much space between the condensate and the thermal cloud. The effectiveness of the evaporation surface is reduced as its size is reduced. For this reason the evaporation surface in \figureref{KineticTheory:QKTScheme} has been pictured below the thermal cloud. FIXME: Rewrite last part of this footnote.}. Using large momentum-transfer Raman outcoupling also minimises the losses from the thermal cloud due to the outcoupling process itself.
 
-In order to have net gain into the BEC mode while adding uncondensed atoms to the trap, the system must not be allowed to reach thermal equilibrium. If the thermal cloud is replenished from a source and the radio frequency `scalpel' that produces the forced evaporation is tuned so that atoms of energy $E_\text{cut}$ and higher are rapidly and continually removed from the trap, then the condensate will continually experience gain and loss as though it was in the middle of an evaporative step. As $E_\text{cut}$ is lowered, a larger fraction of the scattering processes that leave atoms in the condensate mode become irreversible. This suggests that there must be some value of $E_\text{cut}$ for which the condensate experiences net gain. What is not clear is whether the net gain can proceed efficiently, i.e. on a timescale much shorter than other losses from the condensate. Lowering $E_\text{cut}$ also reduces the total number of thermal atoms present. In the limit that $E_\text{cut}$ reaches the condensate energy, there will be no background gas at all, and the condensate cannot experience net gain. We therefore expect that for a given set of parameters, there will be an optimal value for $E_\text{cut}$ that maximises the net gain, which may or may not be positive. In order to examine this issue, we have employed quantum kinetic theory (QKT) \citep{Gardiner:1997tz,Jaksch:1997ug,Gardiner:1998wx,Jaksch:1998sj,Gardiner:2000ug,Lee:2000vs,Davis:2000vn}, which has been effective in describing the growth of condensates \citep{Davis:2000vn}.
+FIXME: Rewrite this paragraph as it starts with a statement that seems empty. In order to have net gain into the BEC mode while adding uncondensed atoms to the trap, the system must not be allowed to reach thermal equilibrium. If the thermal cloud is replenished from a source and the radio frequency `scalpel' that produces the forced evaporation is tuned so that atoms of energy $\varepsilon_\text{cut}$ and higher are rapidly and continually removed from the trap, then the condensate will continually experience gain and loss as though it was in the middle of an evaporative step. As $\varepsilon_\text{cut}$ is lowered, a larger fraction of the scattering processes that leave atoms in the condensate mode become irreversible. This suggests that there must be some value of $\varepsilon_\text{cut}$ for which the condensate experiences net gain. What is not clear is whether the net gain can proceed efficiently, i.e. on a timescale much shorter than other losses from the condensate. Lowering $\varepsilon_\text{cut}$ also reduces the total number of thermal atoms present. In the limit that $\varepsilon_\text{cut}$ reaches the condensate energy, there will be no background gas at all, and the condensate cannot experience net gain. We therefore expect that for a given set of parameters, there will be an optimal value for $\varepsilon_\text{cut}$ that maximises the net gain, which may or may not be positive. In order to examine this issue, we have employed quantum kinetic theory (QKT) \citep{Gardiner:1997tz,Jaksch:1997ug,Gardiner:1998wx,Jaksch:1998sj,Gardiner:2000ug,Lee:2000vs,Davis:2000vn}, which has been effective in describing the growth of condensates \citep{Davis:2000vn}.
 
 
 \section{Model}
@@ -40,30 +40,52 @@ In order to have net gain into the BEC mode while adding uncondensed atoms to th
 
 \begin{figure}
     \centering
-        \includegraphics[width=10cm]{QKTModel}
-    \caption{Schematic of the theoretical model.}
+        \includegraphics[width=10cm]{QKTModel2}
+    \caption{Schematic of the theoretical model. FIXME: Caption.}
     \label{KineticTheory:QKTModel}
 \end{figure}
 
-The starting point of QKT is to treat separately the condensed and thermal components of the system in \figureref{KineticTheory:QKTScheme}. The condensate is assumed to be an adiabatically-evolving Thomas-Fermi condensate fully described by the number of atoms in the condensate $N_0(t)$. The thermal cloud is assumed to be a classical gas described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$. The time-dependence of the density of states comes from the inclusion of the effect of the Hartree-Fock mean field of the condensate. The density of states is then fully determined by the trap geometry and the condensate number $N_0(t)$.
+The theoretical model described in this section is an extension of the kinetic model described in \citet{Bijlsma:2000}, which has been successfully used to describe condensate growth. In this section, the model presented in \citep{Bijlsma:2000} is extended to include the replenishment and outcoupling processes illustrated in \figureref{KineticTheory:QKTScheme}. The effect of three-body recombination (the dominant loss process in typical BEC experiments\footnote{FIXME: Cite something.}) is also included. As will be shown later, the inclusion of three-body loss is crucial obtaining a realistic model of the proposed experiment.
 
-Following the method described in \citet{Bijlsma:2000}, the dynamics of the system are given by
-\begin{subequations}
-    \begin{align}
-        \frac{d N_0}{d t} &= \left.\frac{d N_0}{d t}\right|_\text{thermal--condensate} + \left.\frac{d N_0}{d t}\right|_\text{3-body loss} + \left.\frac{d N_0}{d t}\right|_\text{outcoupling},\\
-        \begin{split}
-            \frac{\partial (\rho f)}{\partial t} &= \left.\frac{\partial (\rho f)}{\partial t}\right|_\text{thermal--thermal} + \left. \frac{\partial (\rho f)}{\partial t}\right|_\text{thermal--condensate} + \left.\frac{\partial (\rho f)}{\partial t}\right|_\text{3-body loss}\\
-            &\relphantom{=} + \left. \frac{\partial (\rho f)}{\partial t}\right|_\text{redistribution} + \left. \frac{\partial (\rho f)}{\partial t}\right|_\text{replenishment}.
-        \end{split}
-    \end{align}
-\end{subequations}
+The starting point of QKT is to treat separately the thermal and condensed components of the system in \figureref{KineticTheory:QKTScheme}. The condensate is assumed to be adiabatically-evolving and well-described by a Thomas-Fermi distribution. The condensate dynamics are then fully described by the number of atoms in the condensate $N_0(t)$. The thermal cloud is assumed to be well described within the Hartree-Fock approximation as being single particles in the effective potential of the harmonic trap plus condensate mean field. This thermal cloud is then described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$. The time-dependence of the density of states comes from the inclusion of the effect of the mean field of the condensate on the thermal atoms. The density of states is then fully determined by the trap geometry and the condensate number $N_0(t)$.
 
+The equations of motion for the model can be written in the following form, separating the contributions of the processes involved,
+\begin{align}
+    \frac{d N_0}{d t} =\begin{split}
+        &\relphantom{+}\left. \frac{d N_0}{d t}\right|_\text{thermal--condensate} \\
+        &+\left. \frac{d N_0}{d t}\right|_\text{3-body loss} \\
+        &+\left. \frac{d N_0}{d t}\right|_\text{outcoupling}
+    \end{split},
+    & \frac{\partial (\rho g)}{\partial t} = \begin{split}
+        &\relphantom{+}\left. \frac{\partial (\rho g)}{\partial t}\right|_\text{thermal--thermal} \\
+        &+\left. \frac{\partial (\rho g)}{\partial t}\right|_\text{thermal--condensate} \\
+        &+\left. \frac{\partial (\rho g)}{\partial t}\right|_\text{3-body loss} \\
+        &+\left. \frac{\partial (\rho g)}{\partial t}\right|_\text{replenishment} \\
+        &+\left. \frac{\partial (\rho g)}{\partial t}\right|_\text{redistribution}
+    \end{split},
+    \label{KineticTheory:EvolutionEquations}
+\end{align}
+where the subscripts `thermal--thermal' and `thermal--condensate' denote collisional processes between atoms in the corresponding states (\figureref{KineticTheory:ProcessDiagrams}(a) and (b), respectively), the subscript `3-body loss' indicates the contribution due to three-body recombination processes, the subscript `replenishment' indicates the contribution due to the replenishment of the thermal cloud (\figureref{KineticTheory:ProcessDiagrams}(d)), the subscript `outcoupling' indicates the contribution due to outcoupling from the condensate to form the atom laser (\figureref{KineticTheory:ProcessDiagrams}(e)), and the subscript `redistribution' indicates the contribution due to the redistribution of energy levels due to changes in the mean-field of the condensate. 
 
+\begin{figure}
+    \centering
+    \includegraphics[width=14cm]{ProcessDiagrams}
+    \caption{Schematic of the primary processes involved in the evolution of the model described in \eqref{KineticTheory:EvolutionEquations}. The bottom rectangle represents the condensate at $\varepsilon = \mu(t)$. FIXME: Caption.}
+    \label{KineticTheory:ProcessDiagrams}
+\end{figure}
 
+Derivations of the `thermal--thermal', `thermal--condensate' and `redistribution' terms in \eqref{KineticTheory:EvolutionEquations} are given in \citep{Bijlsma:2000}. The outcoupling process from the condensate is modelled as a simple linear loss process with corresponding rate constant $\gamma$,
+\begin{align}
+    \left.\frac{d N_0}{d t}\right|_\text{outcoupling} &= - \gamma N_0.
+\end{align}
+The thermal cloud is modelled as being continuously replenished from a source that provides a constant flux $\Phi$ of atoms at a temperature $T$. For simplicity it is assumed that each energy level $\varepsilon$ in the source is coupled directly to the level in the thermal cloud with energy $\varepsilon + \mu(t)$, i.e. the lowest energy level of the source ($\varepsilon=0$) is coupled directly to the lowest energy level in the trap ($\varepsilon = \mu(t)$). This simple model gives the form of the contribution due to replenishment as
+\begin{align}
+    \left. \frac{\partial \big(\rho(\varepsilon, t) g(\varepsilon, t))}{\partial t} \right|_\text{replenishment} &= \Phi \rho_0(\varepsilon - \mu(t)) g_T(\varepsilon - \mu(t)),
+\end{align}
+where $\rho_0(\varepsilon)$ is the density of states in the absence of a condensate, and $g_T(\varepsilon)$ is the Bose-Einstein energy distribution at temperature $T$. The derivation of the contributions to \eqref{KineticTheory:EvolutionEquations} due to three body loss were performed by \emph{Matthew Davis}, and are covered in \sectionref{MethodsAppendix:QKT3BodyLoss}.
+%While this is perhaps an unreasonable assumption, it means that we can easily determine the steady state of the system.
 
-
-
-In obtaining this model a number of assumptions are made:
+FIXME: Write and clean up this paragraph. In obtaining this model a number of assumptions are made:
 \begin{enumerate}[(i)]
     \item Ergodic
     \item Adiabatic evolution of the condensate. This also applies at the evaporation cutoff.
@@ -72,32 +94,27 @@ In obtaining this model a number of assumptions are made:
 \end{enumerate}
 These approximations are discussed at length in a comprehensive review article \citep{Proukakis:2008} in which the QKT formalism is referred to as the `ZNG' theory.
 
-
-The fundamental starting point of quantum kinetic theory is the treatment of the thermal component in terms of a classical phase-space 
-
-The fun
-
-The quantum kinetic theory treats the thermal and condensed components separately. 
-
-
-The fundamental starting point of QKT is the division of energy space in the trap into two regimes. Below $E_R$ there is a low energy regime that includes the condensate and low-lying excitations of the condensate, and above it the gas is treated by a classical kinetic theory. Initially $E_R$ is chosen arbitrarily, but when it is sufficiently high the results become independent of this division. Our model therefore has four important energy levels: $\mu$, the chemical potential of the replenished background gas; $\mu_0$, the chemical potential of the ground state of the BEC; $E_R$, the cutoff between the quantum description of the gas; and $E_\text{cut}$, the maximum energy of a trapped atom. These levels are shown schematically in blah.
-
-Following the method of blah, we collect the quantum states between $\mu(0)$ and $E_R$ into bins such that...
-
-The numerical method we use is based on that described in \citep{Bijlsma:2000}
-
-% \section{Quantum Kinetic Theory Model}
-% \label{KineticTheory:Model}
-% In the model section we will describe the equations and state them. There will be no derivation, with the exception of the three-body loss terms. The equations are derived in sufficient detail in \citep{Bijlsma:2000}. Code, and three-body loss terms derivation performed by \emph{Matthew Davis}.
-
-\subsection{Derivation of the three-body loss term}
-\label{KineticTheory:3BodyLoss}
+The computer code used to solve \eqref{KineticTheory:EvolutionEquations} was written by \emph{Matthew Davis}.
 
 \section{Results}
 \label{KineticTheory:Results}
 This is my contribution. Example simulations demonstrating time-dependence of the distributions, the dependence on $\eta$. Behaviour (and simple model) in the absence of three-body loss and why this is both obvious and unrealistic. Behaviour (and simple model in high-temperature limit) in the presence of three-body loss.
 
 Joe has suggested that we not rely on the high-temperature limit, but I would really, really like to have that in.
+
+We need a plan for the story that goes in this chapter. This story, and the accompanying graphs are what will be needed to construct the poster for FINESS.
+
+Somewhere we list the full parameters of the model, $T$, $\Phi$, $\gamma$ and $\varepsilon_\text{cut} = \eta k_B T$.
+
+\subsection{Typical results and parameter dependence}
+Here we illustrate the time-dependence of a typical solution, and consider the dependence on each parameter. The dependence on most are trivial; only $\eta$ is non-trivial.
+
+
+\subsection{Behaviour in the absence of three-body loss}
+We have a simple model in this case. This model demonstrates that increasing the number of atoms without loss leads to an unbounded increase in the condensation temperature. I'm tempted to not include this discussion in full detail as the entire argument can be given rather concisely just referring to critical temperature, etc.
+
+
+\subsection{Behaviour in the presence of three-body loss}
 
 \section{Conclusion}
 Thermal sources must be close to degenerate to be useful. 

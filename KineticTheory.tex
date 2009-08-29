@@ -45,9 +45,13 @@ FIXME: Rewrite this paragraph as it starts with a statement that seems empty. In
     \label{KineticTheory:QKTModel}
 \end{figure}
 
-The theoretical model described in this section is an extension of the kinetic model described in \citet{Bijlsma:2000}, which has been successfully used to describe condensate growth. In this section, the model presented in \citep{Bijlsma:2000} is extended to include the replenishment and outcoupling processes illustrated in \figureref{KineticTheory:QKTScheme}. The effect of three-body recombination (the dominant loss process in typical BEC experiments\footnote{FIXME: Cite something.}) is also included. As will be shown later, the inclusion of three-body loss is crucial obtaining a realistic model of the proposed experiment.
+The theoretical model described in this section is an extension of the kinetic model of \citet{Bijlsma:2000}, which was successfully used to study condensate growth in an experiment in which a cloud of thermal atoms just above condensation temperature were shock-cooled below transition \citep{Miesner:1998}. After the shock-cooling the atoms were left to equilibrate, the condensate formation being driven by the same collisional processes that would drive condensate growth in the proposed pumped atom laser experiment described in the previous section. To fully describe this proposed experiment, the kinetic model of \citeauthor{Bijlsma:2000} must be modified to include the effects of the replenishment and outcoupling processes illustrated in \figureref{KineticTheory:QKTScheme}. 
 
-The starting point of QKT is to treat separately the thermal and condensed components of the system in \figureref{KineticTheory:QKTScheme}. The condensate is assumed to be adiabatically-evolving and well-described by a Thomas-Fermi distribution. The condensate dynamics are then fully described by the number of atoms in the condensate $N_0(t)$. The thermal cloud is assumed to be well described within the Hartree-Fock approximation as being single particles in the effective potential of the harmonic trap plus condensate mean field. This thermal cloud is then described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$. The time-dependence of the density of states comes from the inclusion of the effect of the mean field of the condensate on the thermal atoms. The density of states is then fully determined by the trap geometry and the condensate number $N_0(t)$.
+Another important process that must be included in the model is three-body recombination (the dominant loss process in typical BEC experiments\footnote{FIXME: Cite something.}). In the absence of this process, there would be no need to evaporate to form a condensate. As the condensation temperature $T_C$ is proportional to $N^{\frac{1}{3}}$, the condensate \emph{fraction} increases as the total number of trapped atoms increases. In fact, once a condensate forms the thermal cloud would cease to grow and each atom added to the trap would increase the equilibrium condensate number by one\footnote{As the condensation temperature is proportional to $N^{\frac{1}{3}}$, and the condensate fraction in a harmonic trap is $\displaystyle \frac{N_0}{N} = 1 - \left(\frac{T}{T_C}\right)^3$ for $T < T_C$, the number of atoms in the condensate is given by $N_0 = N - \alpha T^3$ for some constant $\alpha$ depending on the trap geometry (negative condensate numbers correspond to $T > T_C$).}. The reason that this is not a feasible method of achieving condensation is that the number of atoms at room temperature required to form a condensate in a typical magnetic trap is $N \sim 10^{30}$. The density at the centre of such a trap that the timescale for particle loss due to three-body loss would be of the order of (FIXME: insert timescale)! Any realistic model of a pumped atom laser must therefore include the effect of three-body recombination.
+
+\parasep
+
+The starting point of kinetic model presented here is to treat separately the thermal and condensed components of the system in \figureref{KineticTheory:QKTScheme}. The condensate is assumed to be adiabatically-evolving and well-described by a Thomas-Fermi distribution. The condensate dynamics are then fully described by the number condensed atoms $N_0(t)$. The thermal cloud is assumed to be well described within the Hartree-Fock approximation as comprised of single particles in the effective potential of the harmonic trap plus condensate mean field. This thermal cloud is then described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$. The time-dependence of the density of states comes from the inclusion of the effect of the mean field of the condensate on the thermal atoms. The density of states is then fully determined by the trap geometry and the condensate number $N_0(t)$.
 
 The equations of motion for the model can be written in the following form, separating the contributions of the processes involved,
 \begin{align}
@@ -65,7 +69,7 @@ The equations of motion for the model can be written in the following form, sepa
     \end{split},
     \label{KineticTheory:EvolutionEquations}
 \end{align}
-where the subscripts `thermal--thermal' and `thermal--condensate' denote collisional processes between atoms in the corresponding states (\figureref{KineticTheory:ProcessDiagrams}(a) and (b), respectively), the subscript `3-body loss' indicates the contribution due to three-body recombination processes, the subscript `replenishment' indicates the contribution due to the replenishment of the thermal cloud (\figureref{KineticTheory:ProcessDiagrams}(d)), the subscript `outcoupling' indicates the contribution due to outcoupling from the condensate to form the atom laser (\figureref{KineticTheory:ProcessDiagrams}(e)), and the subscript `redistribution' indicates the contribution due to the redistribution of energy levels due to changes in the mean-field of the condensate. 
+where the subscripts `thermal--thermal' and `thermal--condensate' denote collisional processes between atoms in the corresponding states (\figureref{KineticTheory:ProcessDiagrams}(a) and (b), respectively), the subscript `3-body loss' indicates the contribution due to three-body recombination processes, the subscript `replenishment' indicates the contribution due to the replenishment of the thermal cloud (\figureref{KineticTheory:ProcessDiagrams}(d)), the subscript `outcoupling' indicates the contribution due to outcoupling from the condensate to form the atom laser (\figureref{KineticTheory:ProcessDiagrams}(e)), and the subscript `redistribution' indicates the contribution due to the redistribution of energy levels due to changes in the mean-field of the condensate (\figureref{KineticTheory:ProcessDiagrams}(c)). It is assumed that atoms with energy greater than the evaporative energy cut-off $\varepsilon_\text{cut}$ are removed from the system sufficiently quickly that it can be assumed that $g(\varepsilon > \varepsilon_\text{cut}) = 0$.
 
 \begin{figure}
     \centering
@@ -78,7 +82,7 @@ Derivations of the `thermal--thermal', `thermal--condensate' and `redistribution
 \begin{align}
     \left.\frac{d N_0}{d t}\right|_\text{outcoupling} &= - \gamma N_0.
 \end{align}
-The thermal cloud is modelled as being continuously replenished from a source that provides a constant flux $\Phi$ of atoms at a temperature $T$. For simplicity it is assumed that each energy level $\varepsilon$ in the source is coupled directly to the level in the thermal cloud with energy $\varepsilon + \mu(t)$, i.e. the lowest energy level of the source ($\varepsilon=0$) is coupled directly to the lowest energy level in the trap ($\varepsilon = \mu(t)$). This simple model gives the form of the contribution due to replenishment as
+The thermal cloud is modelled as being continuously replenished from a source that provides a constant flux $\Phi$ of atoms at a temperature $T$. For simplicity it is assumed that each energy level $\varepsilon$ in the source is coupled directly to the level in the thermal cloud with energy $\varepsilon + \mu(t)$\footnote{FIXME: $\mu(t)$ has not been defined.}, i.e. the lowest energy level of the source ($\varepsilon=0$) is coupled directly to the lowest energy level in the trap ($\varepsilon = \mu(t)$). This simple model gives the form of the contribution due to replenishment as
 \begin{align}
     \left. \frac{\partial \big(\rho(\varepsilon, t) g(\varepsilon, t))}{\partial t} \right|_\text{replenishment} &= \Phi \rho_0(\varepsilon - \mu(t)) g_T(\varepsilon - \mu(t)),
 \end{align}
@@ -91,6 +95,7 @@ FIXME: Write and clean up this paragraph. In obtaining this model a number of as
     \item Adiabatic evolution of the condensate. This also applies at the evaporation cutoff.
     \item Neglect of the anomalous density
     \item Energy scales are such that all non-condensate excitations are particle-like not phonon-like (use of Hartree-Fock mean-field).
+    \item Evaporation occurs on a time-scale faster than collisions.
 \end{enumerate}
 These approximations are discussed at length in a comprehensive review article \citep{Proukakis:2008} in which the QKT formalism is referred to as the `ZNG' theory.
 
@@ -98,7 +103,7 @@ The computer code used to solve \eqref{KineticTheory:EvolutionEquations} was wri
 
 \section{Results}
 \label{KineticTheory:Results}
-This is my contribution. Example simulations demonstrating time-dependence of the distributions, the dependence on $\eta$. Behaviour (and simple model) in the absence of three-body loss and why this is both obvious and unrealistic. Behaviour (and simple model in high-temperature limit) in the presence of three-body loss.
+This is my contribution. Example simulations demonstrating time-dependence of the distributions, the dependence on $\eta$. Behaviour (and simple model in high-temperature limit) in the presence of three-body loss.
 
 Joe has suggested that we not rely on the high-temperature limit, but I would really, really like to have that in.
 

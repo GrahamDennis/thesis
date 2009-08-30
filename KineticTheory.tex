@@ -81,19 +81,27 @@ where the subscripts `thermal--thermal' and `thermal--condensate' denote collisi
 Derivations of the `thermal--thermal', `thermal--condensate' and `redistribution' terms in \eqref{KineticTheory:EvolutionEquations} are given in \citep{Bijlsma:2000}. The outcoupling process from the condensate is modelled as a simple linear loss process with corresponding rate constant $\gamma$,
 \begin{align}
     \left.\frac{d N_0}{d t}\right|_\text{outcoupling} &= - \gamma N_0.
+    \label{KineticTheory:OutcouplingProcess}
 \end{align}
 The thermal cloud is modelled as being continuously replenished from a source that provides a constant flux $\Phi$ of atoms at a temperature $T$. For simplicity it is assumed that each energy level $\varepsilon$ in the source is coupled directly to the level in the thermal cloud with energy $\varepsilon + \mu(t)$\footnote{FIXME: $\mu(t)$ has not been defined.}, i.e. the lowest energy level of the source ($\varepsilon=0$) is coupled directly to the lowest energy level in the trap ($\varepsilon = \mu(t)$). This simple model gives the form of the contribution due to replenishment as
 \begin{align}
-    \left. \frac{\partial \big(\rho(\varepsilon, t) g(\varepsilon, t))}{\partial t} \right|_\text{replenishment} &= \Phi \rho_0(\varepsilon - \mu(t)) g_T(\varepsilon - \mu(t)),
+    \left. \frac{\partial \big(\rho(\varepsilon, t) g(\varepsilon, t))}{\partial t} \right|_\text{replenishment} &= \Gamma \rho_0(\varepsilon - \mu(t)) g_T(\varepsilon - \mu(t)),
+    \label{KineticTheory:ReplenishmentProcess}
 \end{align}
-where $\rho_0(\varepsilon)$ is the density of states in the absence of a condensate, and $g_T(\varepsilon)$ is the Bose-Einstein energy distribution at temperature $T$. The derivation of the contributions to \eqref{KineticTheory:EvolutionEquations} due to three body loss were performed by \emph{Matthew Davis}, and are covered in \sectionref{MethodsAppendix:QKT3BodyLoss}.
+where $\rho_0(\varepsilon)$ is the density of states in the absence of a condensate, $g_T(\varepsilon)$ is the Bose-Einstein energy distribution at temperature $T$, and $\Gamma$ is a rate constant such that
+\begin{align}
+    \Gamma \int_0^\infty \rho_0(\varepsilon) g_T(\varepsilon)\, d\varepsilon = \Phi,
+    \label{KineticTheory:GammaPhiRelation}
+\end{align}
+where the integral is defined over all energies as $\Phi$ is defined to be the \emph{total} flux of atoms from the source before evaporation. The derivation of the contributions to \eqref{KineticTheory:EvolutionEquations} due to three body loss were performed by \emph{Matthew Davis}, and are covered in \sectionref{MethodsAppendix:QKT3BodyLoss}.
 %While this is perhaps an unreasonable assumption, it means that we can easily determine the steady state of the system.
 
 FIXME: Write and clean up this paragraph. In obtaining this model a number of assumptions are made:
 \begin{enumerate}[(i)]
     \item Ergodic
     \item Adiabatic evolution of the condensate. This also applies at the evaporation cutoff.
-    \item Neglect of the anomalous density
+    \item Neglect of the anomalous density.
+    \item Neglect of the thermal density in the effect on the condensate profile and the density of states.
     \item Energy scales are such that all non-condensate excitations are particle-like not phonon-like (use of Hartree-Fock mean-field).
     \item Evaporation occurs on a time-scale faster than collisions.
 \end{enumerate}
@@ -111,15 +119,76 @@ We need a plan for the story that goes in this chapter. This story, and the acco
 
 Somewhere we list the full parameters of the model, $T$, $\Phi$, $\gamma$ and $\varepsilon_\text{cut} = \eta k_B T$.
 
-\subsection{Typical results and parameter dependence}
-Here we illustrate the time-dependence of a typical solution, and consider the dependence on each parameter. The dependence on most are trivial; only $\eta$ is non-trivial.
+\subsection{Typical results and parameter studies}
+Here we illustrate the time-dependence of a typical solution, and consider the dependence on each parameter. The dependence on most are trivial; only $\eta$ is non-trivial. Awaiting supercomputer results.
 
 
-\subsection{Behaviour in the absence of three-body loss}
-We have a simple model in this case. This model demonstrates that increasing the number of atoms without loss leads to an unbounded increase in the condensation temperature. I'm tempted to not include this discussion in full detail as the entire argument can be given rather concisely just referring to critical temperature, etc.
+
+\subsection{Behaviour in the high-temperature limit}
+Although it would be possible to create a pumped atom laser by combining condensates in a manner similar to the experiment by \citet{Chikkatur:2002qa}, such an atom laser would have significantly reduced phase-stability unless the replenishment process were essentially continuous. However, to replenish a condensate by collisional interactions with a continuous source of condensed atoms, the replenishment source would itself need to have many of the desired properties of a pumped atom laser! Instead, it would be preferable to use a source \emph{above} condensation temperature for replenishment.
+
+We consider now the experimentally-relevant limit of replenishing the thermal cloud using a high-flux thermal source of atoms. For such sources, two simplifications are possible. First, for temperatures greater than $T_C$ the Bose-Einstein energy distribution of the source $g_T(\varepsilon)$ is well approximated by the Boltzmann distribution $g_T(\varepsilon) \approx \zeta e^{-\beta \varepsilon}$ for some constant $\zeta$, and $\beta = \left(k_B T\right)^{-1}$. Secondly, for high temperature sources the optimum evaporation cut-off $\varepsilon_\text{cut}$ will be much smaller than the characteristic energy of the source $k_B T$, and hence $\displaystyle \eta = \frac{\varepsilon_\text{cut}}{k_B T} \ll 1$.  From these simplifications it can be seen that the energy distribution below the evaporation cut-off is well described by the single parameter $\zeta$ as $g_T(\varepsilon \leq \varepsilon_\text{cut}) \approx \zeta$.
+
+At this point, no overall simplification has occurred as we have simply rewritten the temperature dependence of the atomic source in terms of the parameter $\zeta$. However, as the energy distribution of the atomic source only has influence through \eqref{KineticTheory:ReplenishmentProcess}, the dynamics of the system will only be affected by the properties of the atomic source through the combined quantity $K = \Gamma \zeta$. An expression for $K$ directly in terms of relevant experimental quantities can be obtained by using the definition \eqref{KineticTheory:GammaPhiRelation},
+\begin{align}
+    \Phi &= \Gamma \int_0^\infty \rho_0(\varepsilon) g_T(\varepsilon)\, d\varepsilon\\
+    &= \Gamma \int_0^\infty \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3} \zeta e^{-\beta \varepsilon}\, d\varepsilon\\
+    &= \Gamma \zeta \frac{1}{2 (\hbar \overline{\omega})^3} \int_0^\infty \varepsilon^2 e^{-\beta \varepsilon}\, d\varepsilon\\
+    &= \left(\frac{k_B T}{\hbar \overline{\omega}}\right)^3 \Gamma \zeta\\
+    K &= \Gamma \zeta = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3
+\end{align}
+where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies, and $\displaystyle\rho_0(\varepsilon) = \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3}$ is the density of states in a harmonic trap in the absence of a condensate.
+
+In the limit of high-temperature atomic sources, we have reduced the four variables $(\Phi, T, \varepsilon_\text{cut}, \gamma)$ required to define the model \eqref{KineticTheory:EvolutionEquations} down to three $(K, \varepsilon_\text{cut}, \gamma)$. Of these three, our main interest is in the dependence of the system on the properties of the atomic source through $K$. As the dependence on the coupling rate is well understood and the results would not be expected to differ qualitatively for different values of $\gamma$, it is appropriate to choose a representative value (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus on the remaining two quantities. 
+
+As discussed in the previous section, there is an optimal choice for the evaporation cut-off $\varepsilon_\text{cut}$. In an experiment, the exact dependence on $\varepsilon_\text{cut}$ wouldn't be of primary importance, one would attempt to operate at the optimum value of $\varepsilon_\text{cut}$ to obtain the largest equilibrium condensate number. 
 
 
-\subsection{Behaviour in the presence of three-body loss}
+
+Of these three, the dependence on the outcoupling rate is well understood and the results would not be expected to differ substantially for different values of $\gamma$. As our primary 
+
+
+Of these three, our main interest is in the dependence of the system to the properties of the atomic source through $K$. As the dependence on the coupling rate is well understood and the results would not be expected to differ qualitatively for different values of $\gamma$, it is appropriate to choose a representative value (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus
+
+
+Of these three, the dependence on the outcoupling rate is well understood and the results would not be expected to differ substantially for different values of $\gamma$. Our primary interest is in the 
+
+no qualitative differences would be expected for diff
+
+
+
+There are a number of high-flux atomic sources that have been developed both for the production of BEC and, more recently, in the consideration of atom-interferometry using cold thermal atomic beams. Such `cold' atomic sources range from Zeeman slowers, MOT's, LVIS configurations, etc. The aim of this chapter is to examine the feasibility of the use of such thermal atomic sources in the production of high-flux continuous, degenerate atomic sources. Studying this limit
+
+Creating
+
+The most experimentally interesting case
+
+The most experimentally rele
+
+
+Talk about various high-flux atomic sources that could be used. If it weren't for three-body loss, it wouldn't much matter and we could just do whatever. But. 
+
+
+The limit that is of the greatest experimental relevance is that of replenishing a condensate with high-flux sources well above condensation temperature.
+
+high-flux sources
+
+
+To facilitate extracting useful information from this model, we consider the experimentally relevant limit of high-flux replenishment sources far above condensation temperature. Although a complete analytic model cannot be obtained in this limit, we can recognise an equivalence between difference sources. For such high-temperature sources, the Bose-Einstein distribution is well approximated by the Boltzmann distribution $g_B(\varepsilon) = A e^{-\beta\varepsilon}$ for some constant $A$, and $\beta = \left(k_B T\right)^{-1}$. For such high-temperature sources, the optimum choice of the evaporation cut-off $\varepsilon_\text{cut}$ will be small compared to stuff. This will mean that $\eta$ will be small. If $g_B(\varepsilon_\text{cut}) = A e^{-\eta} \approx g_B(0)$, then the thermal source is completely described by the parameter $K=\Phi A$.
+
+
+
+
+In the limit of a reservoir of high-temperature atoms, we can make some useful statements and comparisons.
+
+
+In the limit of high-temperature 
+
+
+This is the main contribution of the paper. We study the behaviour in the high temperature limit, obtain a simple model, verify the model and then compare against experiment.
+
+
+
 
 \section{Conclusion}
 Thermal sources must be close to degenerate to be useful. 

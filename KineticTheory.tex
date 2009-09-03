@@ -129,31 +129,37 @@ Although it would be possible to create a pumped atom laser by combining condens
 
 We consider now the experimentally-relevant limit of replenishing the thermal cloud using a high-flux thermal source of atoms. For such sources, two simplifications are possible. First, for temperatures greater than $T_C$ the Bose-Einstein energy distribution of the source $g_T(\varepsilon)$ is well approximated by the Boltzmann distribution $g_T(\varepsilon) \approx \zeta e^{-\beta \varepsilon}$ for some constant $\zeta$, and $\beta = \left(k_B T\right)^{-1}$. Secondly, for high temperature sources the optimum evaporation cut-off $\varepsilon_\text{cut}$ will be much smaller than the characteristic energy of the source $k_B T$, and hence $\displaystyle \eta = \frac{\varepsilon_\text{cut}}{k_B T} \ll 1$.  From these simplifications it can be seen that the energy distribution below the evaporation cut-off is well described by the single parameter $\zeta$ as $g_T(\varepsilon \leq \varepsilon_\text{cut}) \approx \zeta$.
 
-At this point, no overall simplification has occurred as we have simply rewritten the temperature dependence of the atomic source in terms of the parameter $\zeta$. However, as the energy distribution of the atomic source only has influence through \eqref{KineticTheory:ReplenishmentProcess}, the dynamics of the system will only be affected by the properties of the atomic source through the combined quantity $K = \Gamma \zeta$. An expression for $K$ directly in terms of relevant experimental quantities can be obtained by using the definition \eqref{KineticTheory:GammaPhiRelation},
+At this point, no overall simplification has occurred as we have simply rewritten the temperature dependence of the atomic source in terms of the parameter $\zeta$. However, as the energy distribution of the atomic source only appears in \eqref{KineticTheory:ReplenishmentProcess}, its only influence on the system dynamics will be through the combined quantity $\kappa = \Gamma \zeta$. An expression for $\kappa$ directly in terms of relevant experimental quantities can be obtained by using the definition \eqref{KineticTheory:GammaPhiRelation},
 \begin{align}
     \Phi &= \Gamma \int_0^\infty \rho_0(\varepsilon) g_T(\varepsilon)\, d\varepsilon\\
     &= \Gamma \int_0^\infty \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3} \zeta e^{-\beta \varepsilon}\, d\varepsilon\\
     &= \Gamma \zeta \frac{1}{2 (\hbar \overline{\omega})^3} \int_0^\infty \varepsilon^2 e^{-\beta \varepsilon}\, d\varepsilon\\
     &= \left(\frac{k_B T}{\hbar \overline{\omega}}\right)^3 \Gamma \zeta\\
-    K &= \Gamma \zeta = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3
+    \kappa &= \Gamma \zeta = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3
 \end{align}
-where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies, and $\displaystyle\rho_0(\varepsilon) = \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3}$ is the density of states in a harmonic trap in the absence of a condensate.
+where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies, and $\displaystyle\rho_0(\varepsilon) = \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3}$ is the density of states in a harmonic trap in the absence of a condensate \citep{PethickSmith}.
 
-In the limit of high-temperature atomic sources, we have reduced the four variables $(\Phi, T, \varepsilon_\text{cut}, \gamma)$ required to define the model \eqref{KineticTheory:EvolutionEquations} down to three $(K, \varepsilon_\text{cut}, \gamma)$. Of these three, our main interest is in the dependence of the system on the properties of the atomic source through $K$. As the dependence on the coupling rate is well understood and the results would not be expected to differ qualitatively for different values of $\gamma$, it is appropriate to choose a representative value (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus on the remaining two quantities. 
+The quantity $\kappa$ is a figure-of-merit for the thermal source. It quantifies the qualitative behaviour already known: for the same atomic flux $\Phi$, a source with a lower temperature will result in a larger condensate (FIXME: see some figure); and for the same temperature, a source with a higher atomic flux will also result in a larger condensate (FIXME: see some other figure). Our interest is in determining what values of $\kappa$ are necessary to produce a pumped atom laser, and whether such values are achievable.
 
-As discussed in the previous section, there is an optimal choice for the evaporation cut-off $\varepsilon_\text{cut}$. In an experiment, the exact dependence on $\varepsilon_\text{cut}$ wouldn't be of primary importance, one would attempt to operate at the optimum value of $\varepsilon_\text{cut}$ to obtain the largest equilibrium condensate number. 
+For the limit of high-temperature atomic sources, we have reduced the four variables $(\Phi, T, \varepsilon_\text{cut}, \gamma)$ required to define the model \eqref{KineticTheory:EvolutionEquations} down to three $(\kappa, \varepsilon_\text{cut}, \gamma)$. Of these three, our main interest is in the dependence of the system on the properties of the atomic source through $\kappa$. In contrast, the dependence of the equilibrium condensate number on the outcoupling rate $\gamma$ is well understood and the results would not be expected to change qualitatively with $\gamma$. It is therefore appropriate to choose a representative value for the outcoupling rate (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus on the remaining two quantities.
 
+As discussed in the previous section, there is an optimal choice for the evaporation cut-off $\varepsilon_\text{cut}$. Our interest here is in the best-case scenario: for a given thermal source, what is the largest condensate we can produce? To examine this question and to verify that $\kappa$ does fully describe the properties of the thermal source in the appropriate limit we have performed a parameter scan of the model \eqref{KineticTheory:EvolutionEquations} for a range of fluxes $\Phi$ and temperatures $T$ of the atomic source, for each combination determining the optimum evaporative cut $\varepsilon_\text{cut}$ to give the largest steady-state condensate number. The results of this parameter study are displayed in \figureref{KineticTheory:FigureOfMerit}.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm]{FigureOfMerit}
+    \caption{FIXME: Figure caption. Plot of equilibrium $N_0$ against $\kappa$ for $\eta < 0.1$ (black), $0.1 < \eta < 0.5$ (red) and $\eta > 0.5$ (blue). Or something like that.}
+    \label{KineticTheory:FigureOfMerit}
+\end{figure}
 
-Of these three, the dependence on the outcoupling rate is well understood and the results would not be expected to differ substantially for different values of $\gamma$. As our primary 
+\begin{figure}
+    \centering
+    \includegraphics[width=7cm]{CondensateFraction}
+    \caption{FIXME: Figure caption. Plot of equilibrium condensate fraction against $\kappa$ for the usual suspects.}
+    \label{KineticTheory:CondensateFraction}
+\end{figure}
 
-
-Of these three, our main interest is in the dependence of the system to the properties of the atomic source through $K$. As the dependence on the coupling rate is well understood and the results would not be expected to differ qualitatively for different values of $\gamma$, it is appropriate to choose a representative value (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus
-
-
-Of these three, the dependence on the outcoupling rate is well understood and the results would not be expected to differ substantially for different values of $\gamma$. Our primary interest is in the 
-
-no qualitative differences would be expected for diff
+and to verify that $\kappa$ does fully describe the properties of the thermal source in the appropriate limit we have performed a parameter scan over the space $(\Phi, T, \varepsilon_\text{cut})$, choosing $\gamma = \unit[0.3]{s\textsuperscript{-1}}$ as noted above.
 
 
 

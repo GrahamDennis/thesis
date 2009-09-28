@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{71}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -560,6 +560,17 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~E.}
   \bibnamefont{Wieman}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{79}}, \bibinfo{pages}{337} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{S{\"o}ding et~al.}(1999)\citenamefont{S{\"o}ding,
+  Gu{\'e}ry-Odelin, Desbiolles, Chevy, Inamori, and Dalibard}}]{Soding:1999}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{S{\"o}ding}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Desbiolles}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Chevy}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Inamori}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}},
+  \bibinfo{journal}{Applied Physics B: Lasers and Optics}
+  \textbf{\bibinfo{volume}{69}}, \bibinfo{pages}{257} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
 \bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}

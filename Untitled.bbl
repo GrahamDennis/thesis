@@ -1,4 +1,4 @@
-\begin{thebibliography}{68}
+\begin{thebibliography}{70}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -493,6 +493,11 @@
   \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{063608}
   (\bibinfo{year}{2000}).
 
+\bibitem[{\citenamefont{Gardiner}(1997)}]{Gardiner:1997kx}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{1414} (\bibinfo{year}{1997}).
+
 \bibitem[{\citenamefont{{Gardiner} and {Zoller}}(1997)}]{Gardiner:1997tz}
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
@@ -544,6 +549,17 @@
   \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
   \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{279}},
   \bibinfo{pages}{1005} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Burt et~al.}(1997)\citenamefont{Burt, Ghrist, Myatt,
+  Holland, Cornell, and Wieman}}]{Burt:1997fk}
+\bibinfo{author}{\bibfnamefont{E.~A.} \bibnamefont{Burt}},
+  \bibinfo{author}{\bibfnamefont{R.~W.} \bibnamefont{Ghrist}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Myatt}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Holland}},
+  \bibinfo{author}{\bibfnamefont{E.~A.} \bibnamefont{Cornell}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~E.}
+  \bibnamefont{Wieman}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{79}}, \bibinfo{pages}{337} (\bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
 \bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}

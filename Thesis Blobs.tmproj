@@ -16,7 +16,7 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-08-27T04:39:18Z</date>
+			<date>2009-09-28T01:35:51Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -40,7 +40,7 @@
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-08-27T08:53:49Z</date>
+			<date>2009-09-28T01:35:59Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -52,7 +52,7 @@
 			<key>filename</key>
 			<string>KineticTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-08-30T03:01:31Z</date>
+			<date>2009-09-28T01:35:59Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -118,14 +118,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>123</integer>
+				<integer>1321</integer>
 				<key>line</key>
-				<integer>105</integer>
+				<integer>36</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>879</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>71</integer>
+			<integer>28</integer>
 		</dict>
 		<key>MethodsAppendix.tex</key>
 		<dict>
@@ -176,29 +176,29 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>94</integer>
 				<key>line</key>
-				<integer>40</integer>
+				<integer>424</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>261</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>25</integer>
+			<integer>417</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>77</integer>
 				<key>line</key>
-				<integer>34</integer>
+				<integer>424</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>94</integer>
 				<key>line</key>
-				<integer>40</integer>
+				<integer>424</integer>
 			</dict>
 		</dict>
 		<key>PenningIonisationAppendix.tex</key>
@@ -241,7 +241,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>16</integer>
+			<integer>97</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -270,6 +270,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{533, 57}, {992, 900}}</string>
+	<string>{{476, 128}, {992, 900}}</string>
 </dict>
 </plist>

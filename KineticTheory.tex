@@ -58,7 +58,7 @@ The starting point of the kinetic model presented here is to treat separately th
 
 The condensed component is assumed to be a quantum fluid obeying a Gross-Pitaevskii-type equation, however we make a further approximation and assume that the condensate is sufficiently occupied that it has a Thomas-Fermi profile.  The condensate dynamics are then fully described by the number of condensed atoms $N_0(t)$.
 
-The thermal cloud is assumed to be well described within the Hartree-Fock approximation as comprised of particle-like excitations moving in the effective potential of the harmonic trap plus condensate mean field.  To reduce the dimensionality of the full phase-space distribution function for the thermal cloud $f(\bm{r}, \bm{p}, t)$, it is assumed that the system is ergodic, i.e.  that all points in the phase space having the same energy are equally probable.  Under this approximation, the thermal cloud is then described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$.  The assumption of ergodicity has been shown in the past to give good agreement with experiment when asymmetric spatial or momentum dynamics are not significant \citep{Bijlsma:2000,Davis:2000vn}.  Note that the time-dependence of the density of states $\rho(\varepsilon, t)$ comes from the contribution of the condensate mean field to the effective potential experienced by the thermal atoms.
+The thermal cloud is assumed to be well described within the Hartree-Fock approximation \citep[Chapter 8]{PethickSmith} as comprised of particle-like excitations moving in the effective potential of the harmonic trap plus condensate mean field.  To reduce the dimensionality of the full phase-space distribution function for the thermal cloud $f(\bm{r}, \bm{p}, t)$, it is assumed that the system is ergodic, i.e.  that all points in the phase space having the same energy are equally probable.  Under this approximation, the thermal cloud is then described by its energy distribution function $g(\varepsilon, t)$ and the density of states $\rho(\varepsilon, t)$.  The assumption of ergodicity has been shown in the past to give good agreement with experiment when asymmetric spatial or momentum dynamics are not significant \citep{Bijlsma:2000,Davis:2000vn}.  Note that the time-dependence of the density of states $\rho(\varepsilon, t)$ comes from the contribution of the condensate mean field to the effective potential experienced by the thermal atoms.
 
 
 As the model presented here is very similar to that presented in \citep{Bijlsma:2000} with some additional terms, a derivation of the common terms is omitted. As a summary, the derivation proceeds by taking a semiclassical Boltzmann equation for the phase-space distribution function of the thermal cloud $f(\bm{r}, \bm{p}, t)$ including collisional terms and using the ergodic approximation to obtain an equation of motion for the energy distribution function $g(\varepsilon, t)$. This equation is self-consistently matched with a Gross-Pitaevskii equation for the condensate before making the Thomas-Fermi approximation to obtain an equation of motion for the number of condensed atoms $N_0(t)$. An example application of this method to derive the appropriate terms for three-body loss is given in \sectionref{MethodsAppendix:QKT3BodyLoss}. Further, a detailed discussion of this theory is given in the review article \citep{Proukakis:2008}.
@@ -112,38 +112,34 @@ where $\Phi$ is the flux of atoms from the source \emph{before} evaporation.  Th
 
 \parasep
 
-We summarise here the approximations made in obtaining the model \eqref{KineticTheory:EvolutionEquations}:
+We summarise here the approximations made in obtaining the kinetic model \eqref{KineticTheory:EvolutionEquations}:
 \begin{enumerate}[(i)]
-    \item Ergodic
-    \item Adiabatic evolution of the condensate. This also applies at the evaporation cutoff.
-    \item Neglect of the anomalous density.
-    \item Neglect of the thermal density in the effect on the condensate profile and the density of states.
-    \item Energy scales are such that all non-condensate excitations are particle-like not phonon-like (use of Hartree-Fock mean-field).
-    \item Evaporation occurs on a time-scale faster than collisions.
+    \item The energy scale of the thermal cloud is large enough that all excitations are particle-like and not collective excitations such as phonons. Phonon-like excitations are only important for particle energies $\varepsilon \lesssim 2\mu(t)$ \citep[\S 8.3.1]{PethickSmith}. Hence, we require the that the energy scale for the thermal cloud $\varepsilon_\text{cut}$ be much larger than $\mu(t)$.
+    \item The phase-space distribution of the thermal cloud is ergodic and hence is purely a function of energy. This assumption is true at equilibrium, however it needs some justification when used in non-equilibrium scenarios. In this case, asymmetric behaviour of the condensate is not expected in either position or momentum space 
+    \item The condensate density is sufficiently large that it is well-described by a Thomas-Fermi profile. This approximation is justified as it is only the large-condensate limit that is of interest as a large condensate will be necessary for the production of a high-flux atom laser in this scheme. In making this approximation, the effects of both the normal and anomalous densities of the thermal cloud on the condensate have also been neglected.
+    \item Evaporation occurs on a time-scale faster than collisions. This is the usual requirement during evaporation to condensation, and so should be satisfied in the proposed experiment.
 \end{enumerate}
-These approximations are discussed at length in a comprehensive review article \citep{Proukakis:2008} in which the QKT formalism is referred to as the `ZNG' theory.
 
-The computer code used to solve \eqref{KineticTheory:EvolutionEquations} was written by \emph{Matthew Davis}.
+The computer code used to solve the kinetic model \eqref{KineticTheory:EvolutionEquations} was written by \emph{Matthew Davis}. The results and analysis presented in the remainder of this chapter are my own work.
 
 \section{Results}
 \label{KineticTheory:Results}
-This is my contribution. Example simulations demonstrating time-dependence of the distributions, the dependence on $\eta$. Behaviour (and simple model in high-temperature limit) in the presence of three-body loss.
 
-Joe has suggested that we not rely on the high-temperature limit, but I would really, really like to have that in.
+For a given trap geometry, the model is fully described by the flux of replenishment atoms $\Phi$, the temperature $T$ of those atoms, the outcoupling rate from the condensate $\gamma$, and the energy of the evaporative cut $\varepsilon_\text{cut}$. In the first instance it is useful to examine the results of the model for some `typical' parameter values and the dependence of the model on each of the parameters.
 
-We need a plan for the story that goes in this chapter. This story, and the accompanying graphs are what will be needed to construct the poster for FINESS.
-
-Somewhere we list the full parameters of the model, $T$, $\Phi$, $\gamma$ and $\varepsilon_\text{cut} = \eta k_B T$.
+Our numerical simulations are based on a trap and conditions similar to that of \citep{Kohl:2002}, who precooled a cloud of $\nucl{87}{}{Rb}$ atoms to an initial temperature greater than the critical temperature, before performing evaporative cooling to study condensate growth. The trapping parameters used were $\omega_\rho = \unit[2 \pi \times 110]{Hz}$ and $\omega_z = \unit[2\pi \times 14]{Hz}$.
 
 \subsection{Typical results and parameter studies}
-Here we illustrate the time-dependence of a typical solution, and consider the dependence on each parameter. The dependence on most are trivial; only $\eta$ is non-trivial. Awaiting supercomputer results.
+\label{KineticTheory:ParameterStudies}
+
+Here we illustrate the time-dependence of a typical solution, and consider the dependence on each parameter. The dependence on most are trivial; only $\varepsilon_\text{cut}$ is non-trivial. Awaiting supercomputer results.
 
 
 
 \subsection{Behaviour in the high-temperature limit}
 Although it would be possible to create a pumped atom laser by combining condensates in a manner similar to the experiment by \citet{Chikkatur:2002qa}, such an atom laser would have significantly reduced phase-stability unless the replenishment process were essentially continuous. However, to replenish a condensate by collisional interactions with a continuous source of condensed atoms, the replenishment source would itself need to have many of the desired properties of a pumped atom laser! Instead, it would be preferable to use a source \emph{above} condensation temperature for replenishment.
 
-We consider now the experimentally-relevant limit of replenishing the thermal cloud using a high-flux thermal source of atoms. For such sources, two simplifications are possible. First, for temperatures greater than $T_C$ the Bose-Einstein energy distribution of the source $g_T(\varepsilon)$ is well approximated by the Boltzmann distribution $g_T(\varepsilon) \approx \zeta e^{-\beta \varepsilon}$ for some constant $\zeta$, and $\beta = \left(k_B T\right)^{-1}$. Secondly, for high temperature sources the optimum evaporation cut-off $\varepsilon_\text{cut}$ will be much smaller than the characteristic energy of the source $k_B T$, and hence $\displaystyle \eta = \frac{\varepsilon_\text{cut}}{k_B T} \ll 1$.  From these simplifications it can be seen that the energy distribution below the evaporation cut-off is well described by the single parameter $\zeta$ as $g_T(\varepsilon \leq \varepsilon_\text{cut}) \approx \zeta$.
+We consider now the experimentally-relevant limit of replenishing the thermal cloud using a high-flux thermal source of atoms. For such sources, two simplifications are possible. First, for temperatures greater than $T_c$ the Bose-Einstein energy distribution of the source $g_T(\varepsilon)$ is well approximated by the Boltzmann distribution $g_T(\varepsilon) \approx \zeta e^{-\beta \varepsilon}$ for some constant $\zeta$, and $\beta = \left(k_B T\right)^{-1}$. Secondly, for high temperature sources the optimum evaporation cut-off $\varepsilon_\text{cut}$ will be much smaller than the characteristic energy of the source $k_B T$, and hence $\displaystyle \eta = \frac{\varepsilon_\text{cut}}{k_B T} \ll 1$.  From these simplifications it can be seen that the energy distribution below the evaporation cut-off is well described by the single parameter $\zeta$ as $g_T(\varepsilon \leq \varepsilon_\text{cut}) \approx \zeta$.
 
 At this point, no overall simplification has occurred as we have simply rewritten the temperature dependence of the atomic source in terms of the parameter $\zeta$. However, as the energy distribution of the atomic source only appears in \eqref{KineticTheory:ReplenishmentProcess}, its only influence on the system dynamics will be through the combined quantity $\kappa = \Gamma \zeta$. An expression for $\kappa$ directly in terms of relevant experimental quantities can be obtained by using the definition \eqref{KineticTheory:GammaPhiRelation},
 \begin{align}

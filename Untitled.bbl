@@ -1,4 +1,4 @@
-\begin{thebibliography}{71}
+\begin{thebibliography}{72}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -571,6 +571,17 @@
   \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}},
   \bibinfo{journal}{Applied Physics B: Lasers and Optics}
   \textbf{\bibinfo{volume}{69}}, \bibinfo{pages}{257} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{K{\"o}hl et~al.}(2002)\citenamefont{K{\"o}hl, Davis,
+  Gardiner, H{\"a}nsch, and Esslinger}}]{Kohl:2002}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Davis}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{88}},
+  \bibinfo{pages}{080402} (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
 \bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}

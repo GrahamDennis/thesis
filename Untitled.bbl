@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{74}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -493,6 +493,11 @@
   \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{063608}
   (\bibinfo{year}{2000}).
 
+\bibitem[{\citenamefont{Proukakis}(2003)}]{Proukakis:2003}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}},
+  \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{13}},
+  \bibinfo{pages}{527} (\bibinfo{year}{2003}).
+
 \bibitem[{\citenamefont{Gardiner}(1997)}]{Gardiner:1997kx}
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
@@ -582,6 +587,16 @@
   \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{88}},
   \bibinfo{pages}{080402} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Press et~al.}(2007)\citenamefont{Press, Teukolsky,
+  Vetterling, and Flannery}}]{NumericalRecipes}
+\bibinfo{author}{\bibfnamefont{W.~H.} \bibnamefont{Press}},
+  \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Teukolsky}},
+  \bibinfo{author}{\bibfnamefont{W.~T.} \bibnamefont{Vetterling}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.~P.}
+  \bibnamefont{Flannery}}, \emph{\bibinfo{title}{Numerical Recipes}}
+  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2007}),
+  \bibinfo{edition}{3rd} ed.
 
 \bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
 \bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}

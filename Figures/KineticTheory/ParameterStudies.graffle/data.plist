@@ -72,6 +72,42 @@
 	<array>
 		<dict>
 			<key>Bounds</key>
+			<string>{{672.75, 255.5}, {8.25, 8.25}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>1210</integer>
+			<key>Shape</key>
+			<string>VerticalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0</string>
+						<key>g</key>
+						<string>0</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>TextRelativeArea</key>
+			<string>{{0.1, 0.15}, {0.8, 0.7}}</string>
+			<key>VFlip</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Bounds</key>
 			<string>{{194.25, 259.875}, {8.25, 8.25}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
@@ -552,7 +588,7 @@
 			<key>ID</key>
 			<integer>1179</integer>
 			<key>ImageID</key>
-			<integer>8</integer>
+			<integer>25</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -685,9 +721,10 @@
 	<key>HPages</key>
 	<integer>2</integer>
 	<key>ImageCounter</key>
-	<integer>25</integer>
+	<integer>26</integer>
 	<key>ImageLinkBack</key>
 	<array>
+		<dict/>
 		<dict/>
 		<dict/>
 		<dict/>
@@ -3435,7 +3472,6 @@
 			<key>version</key>
 			<string>A</string>
 		</dict>
-		<dict/>
 		<dict>
 			<key>ApplicationURL</key>
 			<string>http://ktd.club.fr/programmation/latexit.php</string>
@@ -5138,6 +5174,7 @@
 	</array>
 	<key>ImageList</key>
 	<array>
+		<string>image25.eps</string>
 		<string>image24.eps</string>
 		<string>image20.eps</string>
 		<string>image19.eps</string>
@@ -5147,7 +5184,6 @@
 		<string>image13.pdf</string>
 		<string>image11.pdf</string>
 		<string>image10.pdf</string>
-		<string>image8.eps</string>
 		<string>image7.pdf</string>
 		<string>image4.pdf</string>
 		<string>image3.pdf</string>
@@ -5189,7 +5225,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-10-07 17:54:35 +1100</string>
+	<string>2009-10-08 12:00:18 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -5274,7 +5310,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1105, 731}}</string>
+		<string>{{13, 52}, {1105, 731}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
@@ -5282,7 +5318,7 @@
 			<array>
 				<string>Canvas 1</string>
 				<real>1</real>
-				<real>8</real>
+				<real>4</real>
 			</array>
 		</array>
 	</dict>

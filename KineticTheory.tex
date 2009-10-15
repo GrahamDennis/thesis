@@ -24,6 +24,8 @@ Past work: \citet{Proukakis:2003}.
 
 FIXME: Something about the fact that one of the distinguishing aspects of this work is the inclusion of three-body loss, as it has been omitted in previous models. While that may be adequate for treatments of the process of condensation, it is inadequate for any treatment of the creation of a pumped atom laser (as will be later argued).
 
+The distinguishing feature of the present work is\dots
+
 \section{Scheme}
 \label{KineticTheory:Scheme}
 
@@ -185,11 +187,20 @@ At this point, no overall simplification has occurred as we have simply rewritte
     &= \Gamma \int_0^\infty \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3} \zeta e^{-\beta \varepsilon}\, d\varepsilon\\
     &= \Gamma \zeta \frac{1}{2 (\hbar \overline{\omega})^3} \int_0^\infty \varepsilon^2 e^{-\beta \varepsilon}\, d\varepsilon\\
     &= \left(\frac{k_B T}{\hbar \overline{\omega}}\right)^3 \Gamma \zeta\\
-    \kappa &\equiv \Gamma \zeta = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3
+    \kappa &\equiv \Gamma \zeta = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3 \label{KineticTheory:KappaDefinition}
 \end{align}
 where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies, and $\displaystyle\rho_0(\varepsilon) = \frac{\varepsilon^2}{2 (\hbar \overline{\omega})^3}$ is the density of states in a harmonic trap in the absence of a condensate \citep{PethickSmith}.
 
-The quantity $\kappa$ is a figure-of-merit for the thermal source.  It quantifies the qualitative behaviour already known: for the same atomic flux $\Phi$, a source with a lower temperature will result in a larger condensate (\figureref{KineticTheory:ParameterStudies}(b)); and for the same temperature, a source with a higher atomic flux will also result in a larger condensate (\figureref{KineticTheory:ParameterStudies}(a)).  The figure-of-merit $\kappa$ also describes exactly how a trade-off between the flux and temperature of the replenishment source will affect the equilibrium condensate number.  If two sources with different fluxes and temperatures have the same value of $\kappa$, then the equilibrium condensate number produced by the two sources will be the same (assuming the high-temperature limit applies to both sources).  Our interest is in determining what values of $\kappa$ are necessary to produce a pumped atom laser, and whether such values are achievable.
+We term $\kappa$ the \emph{phase-space flux} of the source as it is directly related to the rate at which the phase-space density of the thermal source is delivered.  For a trap of $N$ thermal atoms at temperature $T$, the peak phase-space density $\varpi$ is \citep[Chapter 2]{PethickSmith}
+\begin{align}
+    \varpi &= N \left(\frac{\hbar \overline{\omega}}{k_B T} \right)^3.
+\end{align}
+If these $N$ atoms are delivered over a time $\tau$ providing a flux $\Phi = N/\tau$ the peak phase-space flux is
+\begin{align}
+    \frac{\varpi}{\tau} &= \frac{N}{\tau}\left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3 = \Phi \left(\frac{\hbar \overline{\omega}}{k_B T}\right)^3 \equiv \kappa.
+\end{align}
+
+The phase-space flux $\kappa$ is a figure-of-merit for the thermal source.  It quantifies the qualitative behaviour already known: for the same atomic flux $\Phi$, a source with a lower temperature will result in a larger condensate (\figureref{KineticTheory:ParameterStudies}(b)); and for the same temperature, a source with a higher atomic flux will also result in a larger condensate (\figureref{KineticTheory:ParameterStudies}(a)).  The phase-space flux also describes exactly how a trade-off between the flux and temperature of the replenishment source will affect the equilibrium condensate number.  If two sources with different fluxes and temperatures have the same value phase-space flux, then the equilibrium condensate number produced by the two sources will be the same (assuming the high-temperature limit applies to both sources).  Our interest is in determining what values of $\kappa$ are necessary to produce a pumped atom laser, and whether such values are achievable.
 
 For the limit of high-temperature atomic sources, we have reduced the four variables $(\Phi, T, \varepsilon_\text{cut}, \gamma)$ required to define the model \eqref{KineticTheory:EvolutionEquations} down to three $(\kappa, \varepsilon_\text{cut}, \gamma)$. Of these three, our main interest is in the dependence of the system on the properties of the atomic source through $\kappa$. In contrast, the dependence of the equilibrium condensate number on the outcoupling rate $\gamma$ is simple (see \figureref{KineticTheory:ParameterStudies}(d)) and the results would not be expected to change qualitatively with $\gamma$. It is therefore appropriate to choose a representative value for the outcoupling rate (here $\gamma = \unit[0.3]{s\textsuperscript{-1}}$) and focus on the remaining two quantities.
 
@@ -198,63 +209,63 @@ As discussed in the previous section, there is an optimal choice for the evapora
 \begin{figure}
     \centering
     \includegraphics[width=15cm]{FigureOfMerit}
-    \caption{Plot of equilibrium condensate properties as a function of the figure-of-merit for the replenishment source $\kappa$. Figures (a) and (b) plot the equilibrium condensate number on different scales. Figure (c) plots the equilibrium condensate fraction $N_0/N$.  The results of the parameter scan are broken up into three groups (the black circles, red triangles and blue crosses) based on the extent to which the high-temperature limit discussed in this section applies to the results. The circled point with the arrow pointing to it corresponds to a simulation of the parameters for the last source in \tableref{KineticTheory:ExperimentalSources}, which has $\kappa= \unit[1.1\times 10^{-2}]{s\textsuperscript{-1}}$ (see main text).}
+    \caption{Plot of equilibrium condensate properties as a function of the phase-space flux for the replenishment source $\kappa$. Figures (a) and (b) plot the equilibrium condensate number on different scales. Figure (c) plots the equilibrium condensate fraction $N_0/N$.  The results of the parameter scan are broken up into three groups (the black circles, red triangles and blue crosses) based on the extent to which the high-temperature limit discussed in this section applies to the results. The circled point with the arrow pointing to it corresponds to a simulation of the parameters for the last source in \tableref{KineticTheory:ExperimentalSources}, which has $\kappa= \unit[1.1\times 10^{-2}]{s\textsuperscript{-1}}$ (see main text).}
     \label{KineticTheory:FigureOfMerit}
 \end{figure}
 
 The results illustrated in \figureref{KineticTheory:FigureOfMerit} are separated into three groups based on the ratio $\varepsilon_\text{cut}/(k_B T)$.  The first group marked by black circles have $\varepsilon_\text{cut}/(k_B T) < 0.1$, and are the results for which the high-temperature limit can be considered to be a good approximation (satisfying the requirement $\varepsilon_\text{cut} \ll k_B T$) and $\kappa$ completely determines the properties of the replenishment source.  For this group of results, any equilibrium property of the system should appear to be a single (not necessarily straight) line when plotted as a function of $\kappa$.  The results in \figureref{KineticTheory:FigureOfMerit} demonstrate that these results can be viewed as a single function of $\kappa$.  The second group marked by red triangles have $0.1 \leq \varepsilon_\text{cut}/(k_B T) < 0.5$, and can be considered to be the results for which the high-temperature limit is almost a good approximation.  These results are reasonably close to the results of the first group, however there is a greater deviation for a given value of $\kappa$ indicating that the results can be almost seen as purely a function of $\kappa$. All remaining results fall into the third group for which $\varepsilon_\text{cut}/(k_B T) \geq 0.5$.  It can be seen that these points correspond to a broad range of equilibria for a given value of $\kappa$ indicating that the replenishment source cannot be described by $\kappa$ alone.
 %  The origin of the distinct separation of the blue points from the red points in \figureref{KineticTheory:FigureOfMerit}(a) and \figureref{KineticTheory:FigureOfMerit}(b) is due to the use of a reduced sample of points in the three-dimensional parameter scan ($\Phi$, $T$, $\varepsilon_\text{cut}$) were used to limit the computational complexity of sampling a three-dimensional space spanning several orders of magnitude.
 
-The first two panels of \figureref{KineticTheory:FigureOfMerit} both display the equilibrium condensate number as a function of the figure-of-merit $\kappa$.  \figureref{KineticTheory:FigureOfMerit}(a) uses a log-log scale to highlight the behaviour for small and large values of $\kappa$, while \figureref{KineticTheory:FigureOfMerit}(b) uses a linear-linear scale to demonstrate that the black circles lying on a single line in (a) is not simply an artefact of plotting the results using a logarithmic scale.  Finally, \figureref{KineticTheory:FigureOfMerit}(c) displays the equilibrium condensate fraction as a function of $\kappa$.
+The first two panels of \figureref{KineticTheory:FigureOfMerit} both display the equilibrium condensate number as a function of the phase-space flux $\kappa$.  \figureref{KineticTheory:FigureOfMerit}(a) uses a log-log scale to highlight the behaviour for small and large values of $\kappa$, while \figureref{KineticTheory:FigureOfMerit}(b) uses a linear-linear scale to demonstrate that the black circles lying on a single line in (a) is not simply an artefact of plotting the results using a logarithmic scale.  Finally, \figureref{KineticTheory:FigureOfMerit}(c) displays the equilibrium condensate fraction as a function of $\kappa$.
 
-\figureref{KineticTheory:FigureOfMerit}(a) and (b) demonstrate that it would be possible to produce atom lasers with respectable condensate numbers $N_0 \gtrsim 10^5$ (corresponding to atom laser fluxes of $\gtrsim\unit[3\times 10^4]{atoms/s}$ for the outcoupling rate $\gamma = \unit[0.3]{s\textsuperscript{-1}}$ chosen) by using replenishment sources that have a figure-of-merit $\kappa \gtrsim \unit[10^{-3}]{s\textsuperscript{-1}}$.  To determine if this is experimentally feasible, the properties of a range of existing atomic sources are detailed in \tableref{KineticTheory:ExperimentalSources} and the corresponding values of the figure-of-merit $\kappa$ calculated.
+\figureref{KineticTheory:FigureOfMerit}(a) and (b) demonstrate that it would be possible to produce atom lasers with respectable condensate numbers $N_0 \gtrsim 10^5$ (corresponding to atom laser fluxes of $\gtrsim\unit[3\times 10^4]{atoms/s}$ for the outcoupling rate $\gamma = \unit[0.3]{s\textsuperscript{-1}}$ chosen) by using replenishment sources that have a phase-space flux $\kappa \gtrsim \unit[10^{-3}]{s\textsuperscript{-1}}$.  To determine if this is experimentally feasible, the properties of a range of experimental atomic sources are detailed in \tableref{KineticTheory:ExperimentalSources} and the corresponding values of the phase-space flux $\kappa$ calculated.
 
 \begin{table}
     \begin{minipage}{\textwidth}
         \renewcommand{\footnoterule}{}
         \centering
-        \begin{tabular}{ p{5.3625cm} c c c r}
+        \begin{tabular}{ p{3.8cm} c c c r}
         \toprule
-        & Atomic flux  & Temperature & Figure-of-merit &\\
-        Source &  $\Phi$ & $T$ & $\kappa$ & \\
+         & Atomic flux   & Temperature  & Phase-space flux  &\\
+        Atomic source &  $\Phi$  &  $T$ &  $\kappa$ &\\
         \midrule
-        BECs in dipole traps\footnote{This atomic source is intrinsically pulsed, and is listed for purposes of comparison only.} & $\unit[10^5]{s\textsuperscript{-1}}$ & $<\unit[1]{\micro K}$ & $>\unit[1.9\times 10^{-3}]{s\textsuperscript{-1}}$ & \citep{Chikkatur:2002qa} \\
-        2D\textsuperscript{+}-MOT & $\unit[9\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[38]{mK}$\footnote{In keeping with the best-case scenario investigation being performed, this temperature assumes that the mean velocity of the atoms can be reduced to zero without affecting the distribution. This could be achieved, for example, by firing the source vertically below the condensate and taking the atoms from the mean turning point.} & $\unit[3 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Dieckmann:1998} \\
-        2D\textsuperscript{+}-MOT & $\unit[2\times 10^{10}]{s\textsuperscript{-1}}$ & $\unit[42]{mK}$\textsuperscript{\emph{b}} & $\unit[5 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Chaudhuri:2006} \\
-        MM-MOT & $\unit[10^9]{s\textsuperscript{-1}}$ & $\unit[61]{\micro K}$\textsuperscript{\emph{b}} & $\unit[8 \times 10^{-5}]{s\textsuperscript{-1}}$ & \citep{Cren:2002rt}\\
-        LVIS & $\unit[5\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[25]{mK}$\textsuperscript{\emph{b}} & $\unit[6 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Lu:1996} \\
-        Zeeman slower & $\unit[3.2\times 10^{12}]{s\textsuperscript{-1}}$ & $\unit[32]{mK}$\textsuperscript{\emph{b}} & $\unit[2\times10^{-9}]{s\textsuperscript{-1}}$ & \citep{Slowe:2005} \\
-        3D-MOT loaded from Zeeman slower & $\unit[2\times 10^{10}]{s\textsuperscript{-1}}$ & $\unit[500]{\micro K}$ & $\unit[3\times 10^{-6}]{s\textsuperscript{-1}}$ & \citep{Streed:2006}\\
-        Magnetic guide loaded from 3D-MOT & $\unit[7\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[400]{\micro K}$\textsuperscript{\emph{b}} & $\unit[2\times 10^{-6}]{s\textsuperscript{-1}}$ & \citep{Lahaye:2004}\\
-        3D-MOT loaded from 2D\textsuperscript{+}-MOT & $\unit[3\times 10^8]{s\textsuperscript{-1}}$ & $\unit[8]{\micro K}$ & $\unit[1.1\times 10^{-2}]{s\textsuperscript{-1}}$ & \citep{Muller:2007}\\
+        BECs in dipole traps & $\unit[10^5]{s\textsuperscript{-1}}$ ($\unit[55]{mHz}$)\footnote{This source is pulsed, and the flux is the mean flux over one cycle with the repetition rate listed in parentheses.}\footnote{This repetition rate it too low for this source to be useful (see main text). It is listed for purposes of comparison only.} & $<\unit[1]{\micro K}$ & $>\unit[1.9\times 10^{-3}]{s\textsuperscript{-1}}$ & \citep{Chikkatur:2002qa} \\
+        2D\textsuperscript{+}-MOT & $\unit[9\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[38]{mK}$\footnote{In keeping with the best-case scenario investigation being performed, this temperature assumes that the mean velocity of the atoms can be reduced to zero without affecting the distribution. This could be achieved, for example, by firing the source vertically below the main pumped atom laser experiment and taking the atoms from the mean turning point.}\footnote{The dominant contribution to this temperature is the spread in the longitudinal velocities of the atoms.} & $\unit[3 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Dieckmann:1998} \\
+        2D\textsuperscript{+}-MOT & $\unit[2\times 10^{10}]{s\textsuperscript{-1}}$ & $\unit[42]{mK}$\textsuperscript{\emph{cd}} & $\unit[5 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Chaudhuri:2006} \\
+        MM-MOT & $\unit[10^9]{s\textsuperscript{-1}}$ & $\unit[61]{\micro K}$\textsuperscript{\emph{c}} & $\unit[8 \times 10^{-5}]{s\textsuperscript{-1}}$ & \citep{Cren:2002rt}\\
+        LVIS & $\unit[5\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[25]{mK}$\textsuperscript{\emph{cd}} & $\unit[6 \times 10^{-12}]{s\textsuperscript{-1}}$ & \citep{Lu:1996} \\
+        Zeeman slower & $\unit[3.2\times 10^{12}]{s\textsuperscript{-1}}$ & $\unit[32]{mK}$\textsuperscript{\emph{cd}} & $\unit[2\times10^{-9}]{s\textsuperscript{-1}}$ & \citep{Slowe:2005} \\
+        Magnetic guide loaded from 3D-MOT & $\unit[7\times 10^{9}]{s\textsuperscript{-1}}$ & $\unit[400]{\micro K}$\textsuperscript{\emph{c}} & $\unit[2\times 10^{-6}]{s\textsuperscript{-1}}$ & \citep{Lahaye:2004}\\
+        3D-MOT loaded from Zeeman slower & $\unit[2\times 10^{10}]{s\textsuperscript{-1}}$ ($\unit[0.5]{Hz}$)\textsuperscript{\emph{a}} & $\unit[500]{\micro K}$ & $\unit[3\times 10^{-6}]{s\textsuperscript{-1}}$ & \citep{Streed:2006}\\
+        3D-MOT loaded from 2D\textsuperscript{+}-MOT & $\unit[3\times 10^8]{s\textsuperscript{-1}}$ ($\unit[3]{Hz}$)\textsuperscript{\emph{a}} & $\unit[8]{\micro K}$ & $\unit[1.1\times 10^{-2}]{s\textsuperscript{-1}}$ & \citep{Muller:2007}\\
         \bottomrule
         \end{tabular}
     \end{minipage}
-    \caption{Values of relevant quantities for experimental sources. The values are obtained from the papers referenced. FIXME: I need more experimental sources in this table.}
+    \caption{Relevant properties of selected experimental cold atomic sources. The phase-space flux $\kappa$ is evaluated from the atomic flux and temperature values listed using \eqref{KineticTheory:KappaDefinition}.}
     \label{KineticTheory:ExperimentalSources}
 \end{table}
 
+The first source listed in \tableref{KineticTheory:ExperimentalSources} is the experiment by \citet{Chikkatur:2002qa} that merged independently produced BECs in optical dipole traps that was discussed earlier.  This experiment is certainly not in the high-temperature limit however it has been included for comparison purposes.  Of the remaining sources listed in \tableref{KineticTheory:ExperimentalSources}, most are many orders of magnitude away from being useful potential sources for a pumped atom laser.  The fluxes obtainable from these sources are unable to compensate for their higher temperatures as an increase of three-orders of magnitude in flux is necessary to compensate for an increase of a single order of magnitude in temperature (see \eqref{KineticTheory:KappaDefinition}).  Only the last atomic source satisfies the requirement $\kappa \gtrsim \unit[10^{-3}]{s\textsuperscript{-3}}$.  This experiment by \citet{Muller:2007} is one of the sources in a dual atom interferometer designed for the precision measurement of accelerations and rotations \citep{Muller:2009}.  A direct simulation has been performed for the parameters of this source, and the results are marked by a circle with an arrow pointing to it in \figureref{KineticTheory:FigureOfMerit}.  
 
-\hrule
+The equilibrium condensate number for the source of \citet{Muller:2007} is $N_0 = \unit[5 \times 10^5]{atoms}$, which would be a sufficiently large condensate to serve as a stable phase-reference for a produced atom laser were it a pure BEC.  However, the equilibrium condensate fraction for this source is only 10\%.  With 90\% of the atoms in the thermal cloud, one cannot help but suspect that the significant thermal fluctuations would rule out the use of any atom laser produced by this source for interferometric use, which was the original motivation for the production of a continuous laser.  However, previous theoretical work investigating the transfer of statistics from a trapped (quasi-)condensate to an atom laser found that using high-momentum kick Raman outcoupling such as that proposed in the scheme presented here can filter some of these fluctuations causing the atom laser to have a larger coherence length than the condensate from which it was produced \citep{Proukakis:2003}.  
 
-There are a number of high-flux atomic sources that have been developed both for the production of BEC and, more recently, in the consideration of atom-interferometry using cold thermal atomic beams. Such `cold' atomic sources range from Zeeman slowers, MOT's, LVIS configurations, etc. The aim of this chapter is to examine the feasibility of the use of such thermal atomic sources in the production of high-flux continuous, degenerate atomic sources. Studying this limit
+It is not possible to investigate the transfer of statistics from the trapped component to the atom laser within the present model due to the simplifying assumption that it is only the condensate mode that is outcoupled to form the atom laser.  A more detailed three-dimensional model taking into account the full spatial dependence of the Raman outcoupling process would be necessary to fully determine the feasibility of using an atomic source such as that described by \citet{Muller:2007} in the production of a truly continuous pumped atom laser.
 
-
-To facilitate extracting useful information from this model, we consider the experimentally relevant limit of high-flux replenishment sources far above condensation temperature. Although a complete analytic model cannot be obtained in this limit, we can recognise an equivalence between difference sources. For such high-temperature sources, the Bose-Einstein distribution is well approximated by the Boltzmann distribution $g_B(\varepsilon) = A e^{-\beta\varepsilon}$ for some constant $A$, and $\beta = \left(k_B T\right)^{-1}$. For such high-temperature sources, the optimum choice of the evaporation cut-off $\varepsilon_\text{cut}$ will be small compared to stuff. This will mean that $\eta$ will be small. If $g_B(\varepsilon_\text{cut}) = A e^{-\eta} \approx g_B(0)$, then the thermal source is completely described by the parameter $K=\Phi A$.
-
-
-
-
-In the limit of a reservoir of high-temperature atoms, we can make some useful statements and comparisons.
-
-
-In the limit of high-temperature 
-
-
-This is the main contribution of the paper. We study the behaviour in the high temperature limit, obtain a simple model, verify the model and then compare against experiment.
+%The equilibrium condensate number for the source of \citet{Muller:2007} is $N_0 = \unit[5 \times 10^5]{atoms}$, which is a sufficiently large condensate to serve as a stable phase-reference for the produced atom laser.  However, the equilibrium condensate fraction is a mere 10\%.  This number is concerning as with 90\% of the atoms in the thermal cloud, it would be expected that there would be significant thermal fluctuations on any atom laser extracted.  Although the transfer of thermal fluctuations cannot be investigated in the kinetic model presented here, it seems reasonable to believe that thermal fluctuations would dominate the linewidth of the atom laser produced.  \figureref{KineticTheory:FigureOfMerit}(c) suggests that the situation won't be significantly improved if the atomic flux were increased by an order of magnitude. In this case with $\kappa \sim 10^{-1}$, the condensate fraction would have only increased to 20\%.  The temperature of the source cannot be reduced greatly either as at $T=\unit[8]{\micro K}$, it is not very far above the condensation temperature of the system of $T_c=\unit[1.2]{\micro K}$ for each $N=10^8$ atom pulse.
 
 
 
+%Although this source is not quite in the high-temperature limit (the optimum evaporation cut-off is $\varepsilon_\text{cut} = 0.42 k_B T$)
 
-\section{Conclusion}
-Thermal sources must be close to degenerate to be useful. And even then they aren't that useful.
+
+\section{Conclusions and Outlook}
+
+The purpose of this chapter has been to investigate the feasibility of producing a continuously pumped atom laser driven by evaporation and collisions with a cloud of thermal atoms.  The method here has been to investigate the best-case scenario in which the replenishment process introduces no additional heating to the trapped thermal component beyond that due to bringing the replenishing atoms into contact with the thermal cloud.  With these caveats in mind, the results of this chapter are promising: using an existing experimental source \citep{Muller:2007} it appears possible to produce steady-state condensates with large atom number ($\sim 5\times 10^5$ atoms) using the scheme presented in \sectionref{KineticTheory:Scheme}.  Could the atomic flux of this source be increased by an order of magnitude, the condensate number produced by this scheme could be pushed to $5\times 10^6$ atoms.  
+
+Ultimately it is not the size of the condensate that we are interested in, but the atom flux of the atom laser produced and its coherence length.  The former goal will certainly be improved by larger equilibrium condensate sizes, however the atom laser itself will be useless unless its coherence length is sufficiently larger than that of cold thermal sources to offset its necessarily reduced atom flux.  It is by no means clear from the present work whether the atom laser produced from the atomic source of \citet{Muller:2007} will have a sufficiently large coherence length to be useful.  To investigate this point it will be necessary to not make the assumption of ergodicity and to include the full spatial dependence of the Raman outcoupler.  This can be achieved through using a more general kinetic theory such as the so-called `ZNG theory' \citep{Zaremba:1999,Proukakis:2008} or the Stochastic Projected Gross-Pitaevskii equation (SPGPE) \citep{Blakie:2008a}.
+
+One thing is certainly clear from the results presented here: the replenishment source for a collisionally-pumped atom laser must be close to degeneracy. It is simply not realistic to compensate for higher temperatures with a sufficiently increased flux.
+
+% The author is cautiously optimistic about the promise of atom lasers replenished directly from thermal sources. Though this is not the only option for the production of a continuous atom laser.  Optical pumping, discussed in \chapterref{OpticalPumping} is another option, as is evaporation of an atomic beam in a magnetic guide \citep{Mandonnet:2000lr,Lahaye:2004,Lahaye:2005uq}.
+
+

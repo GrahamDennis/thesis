@@ -1,4 +1,4 @@
-\begin{thebibliography}{81}
+\begin{thebibliography}{84}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -669,6 +669,37 @@
   \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ertmer}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{76}},
   \bibinfo{pages}{063611} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{M{\"u}ller et~al.}(2009)\citenamefont{M{\"u}ller,
+  Gilowski, Zaiser, Berg, Schubert, Wendrich, Ertmer, and Rasel}}]{Muller:2009}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{M{\"u}ller}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Gilowski}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Zaiser}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Berg}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Schubert}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Wendrich}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ertmer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.~M.} \bibnamefont{Rasel}},
+  \bibinfo{journal}{Eur. Phys. J. D} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{273} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Zaremba et~al.}(1999)\citenamefont{Zaremba, Nikuni, and
+  Griffin}}]{Zaremba:1999}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Nikuni}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Griffin}},
+  \bibinfo{journal}{Journal of Low Temperature Physics}
+  \textbf{\bibinfo{volume}{116}}, \bibinfo{pages}{277} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Blakie et~al.}(2008)\citenamefont{Blakie, Bradley,
+  {Davis}, {Ballagh}, and {Gardiner}}}]{Blakie:2008a}
+\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Blakie}},
+  \bibinfo{author}{\bibfnamefont{A.~S.} \bibnamefont{Bradley}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{{Davis}}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{{Ballagh}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
+  \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
+  \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
 \bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}

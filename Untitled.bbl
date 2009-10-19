@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{86}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -493,11 +493,6 @@
   \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{063608}
   (\bibinfo{year}{2000}).
 
-\bibitem[{\citenamefont{Proukakis}(2003)}]{Proukakis:2003}
-\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}},
-  \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{13}},
-  \bibinfo{pages}{527} (\bibinfo{year}{2003}).
-
 \bibitem[{\citenamefont{Gardiner}(1997)}]{Gardiner:1997kx}
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
@@ -683,6 +678,11 @@
   \bibinfo{journal}{Eur. Phys. J. D} \textbf{\bibinfo{volume}{53}},
   \bibinfo{pages}{273} (\bibinfo{year}{2009}).
 
+\bibitem[{\citenamefont{Proukakis}(2003)}]{Proukakis:2003}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}},
+  \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{13}},
+  \bibinfo{pages}{527} (\bibinfo{year}{2003}).
+
 \bibitem[{\citenamefont{Zaremba et~al.}(1999)\citenamefont{Zaremba, Nikuni, and
   Griffin}}]{Zaremba:1999}
 \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}},
@@ -724,5 +724,15 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
   \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
+\bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{89}},
+  \bibinfo{pages}{140402} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Wick}(1950)}]{Wick:1950}
+\bibinfo{author}{\bibfnamefont{G.~C.} \bibnamefont{Wick}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{268} (\bibinfo{year}{1950}).
 
 \end{thebibliography}

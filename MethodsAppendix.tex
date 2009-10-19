@@ -154,10 +154,10 @@ The dominant density-dependent loss process in Bose-Einstein condensates is thre
 
 Three-body loss (or three-body recombination) is the process in which three atoms collide forming a bound dimer with the third necessary to ensure both energy and momentum conservation.  The binding energy is sufficient to give the products of a three-body recombination process sufficient kinetic energy to rapidly escape the trap.  Three-body loss is then well-described by the master equation term
 \begin{align}
-    \left. \frac{d \hat{\rho}}{d t}\right|_\text{3-body loss} &= \frac{L_3}{3} \int d \bm{x} \,\mathcal{D} \left[ \hat{\Psi}^3(\bm{x}) \right] \hat{\rho},
+    \left. \frac{d \hat{\rho}}{d t}\right|_\text{3-body loss} &= \frac{1}{3}L_3 \int d \bm{x} \,\mathcal{D} \left[ \hat{\Psi}^3(\bm{x}) \right] \hat{\rho},
     \label{MethodsAppendix:ThreeBodyLossMasterEquationTerm}
 \end{align}
-where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho} \hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c}\hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $L_3$ is the three-body recombination loss rate constant.  This equation, first derived by \citep{Jack:2002} has the familiar form of a decoherence superoperator with the state undergoing loss as the argument (cf. \sectionref{PenningIonisationAppendix:MasterEquation}). %This is a reasonable approximation as three-body recombination couples the state $\hat{\Psi}^3$ to a state that is rapidly depopulated.
+where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho} \hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c}\hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ \citep{Burt:1997fk} is the three-body recombination loss rate constant.  This equation, first derived by \citep{Jack:2002} has the familiar form of a decoherence superoperator with the state undergoing loss as the argument (cf. \sectionref{PenningIonisationAppendix:MasterEquation}). %This is a reasonable approximation as three-body recombination couples the state $\hat{\Psi}^3$ to a state that is rapidly depopulated.
 
 The loss rate of atoms from the system due to three-body loss is readily obtained from \eqref{MethodsAppendix:ThreeBodyLossMasterEquationTerm} as
 \begin{align}
@@ -235,7 +235,7 @@ where the contributions due to the terms involving only one or two thermal atoms
 \end{align}
 where the contributions due to the terms involving only one or two condensate atoms have been multiplied by $1/3$ and $2/3$ respectively.
 
-The value of the three-body loss rate constant used in \chapterref{KineticTheory} was that obtained by \citet{Burt:1997fk} of $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ (denoted $K_3^{c}$ in that work).
+% The value of the three-body loss rate constant used in \chapterref{KineticTheory} was that obtained by \citet{Burt:1997fk} of $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ (denoted $K_3^{c}$ in that work).
 
 
 

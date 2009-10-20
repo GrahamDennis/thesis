@@ -1,4 +1,4 @@
-\begin{thebibliography}{86}
+\begin{thebibliography}{91}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -289,6 +289,15 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
   \bibinfo{pages}{063608} (\bibinfo{year}{2000}).
 
+\bibitem[{\citenamefont{Leo et~al.}(2001)\citenamefont{Leo, Venturi,
+  Whittingham, and Babb}}]{Leo:2001}
+\bibinfo{author}{\bibfnamefont{P.~J.} \bibnamefont{Leo}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Venturi}},
+  \bibinfo{author}{\bibfnamefont{I.~B.} \bibnamefont{Whittingham}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Babb}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{64}},
+  \bibinfo{pages}{042710} (\bibinfo{year}{2001}).
+
 \bibitem[{\citenamefont{van Kempen et~al.}(2002)\citenamefont{van Kempen,
   Kokkelmans, Heinzen, and Verhaar}}]{Kempen:2002}
 \bibinfo{author}{\bibfnamefont{E.~G.~M.} \bibnamefont{van Kempen}},
@@ -343,6 +352,28 @@
 \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Moulton}},
   \emph{\bibinfo{title}{Differential Equations}} (\bibinfo{publisher}{MacMillan
   Company}, \bibinfo{address}{New York}, \bibinfo{year}{1958}).
+
+\bibitem[{\citenamefont{Einstein et~al.}(1935)\citenamefont{Einstein, Podolsky,
+  and Rosen}}]{Einstein:1935}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Podolsky}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Rosen}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{47}},
+  \bibinfo{pages}{777} (\bibinfo{year}{1935}).
+
+\bibitem[{\citenamefont{Aspect et~al.}(1982)\citenamefont{Aspect, Dalibard, and
+  Roger}}]{Aspect:1982uq}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Roger}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{49}},
+  \bibinfo{pages}{1804} (\bibinfo{year}{1982}).
+
+\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
+\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
+  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
+  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
 \bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},
@@ -701,11 +732,24 @@
   \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
   \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
 
-\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
-\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
-  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
-  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
+\bibitem[{\citenamefont{Norrie et~al.}(2006{\natexlab{a}})\citenamefont{Norrie,
+  Ballagh, and Gardiner}}]{Norrie:2006vn}
+\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
+  \bibnamefont{Gardiner}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043617}
+  (\bibinfo{year}{2006}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Norrie et~al.}(2006{\natexlab{b}})\citenamefont{Norrie,
+  Ballagh, Gardiner, and Bradley}}]{Norrie:2006kx}
+\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~S.}
+  \bibnamefont{Bradley}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043618}
+  (\bibinfo{year}{2006}{\natexlab{b}}).
 
 \bibitem[{\citenamefont{Gardiner}(2004)}]{GardinerHSM}
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},

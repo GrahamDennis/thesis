@@ -1,4 +1,4 @@
-\begin{thebibliography}{93}
+\begin{thebibliography}{95}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -85,6 +85,12 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
   \bibinfo{pages}{011601(R)} (\bibinfo{year}{2009}).
 
+\bibitem[{\citenamefont{Pu and Meystre}(2000)}]{Pu:2000}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Pu}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Meystre}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
+  \bibinfo{pages}{3987} (\bibinfo{year}{2000}).
+
 \bibitem[{\citenamefont{Duan et~al.}(2000)\citenamefont{Duan, S{\o}rensen,
   Cirac, and Zoller}}]{Duan:2000}
 \bibinfo{author}{\bibfnamefont{L.-M.} \bibnamefont{Duan}},
@@ -93,12 +99,6 @@
   \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
   \bibinfo{pages}{3991} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{Pu and Meystre}(2000)}]{Pu:2000}
-\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Pu}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Meystre}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
-  \bibinfo{pages}{3987} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Anderson et~al.}(1995)\citenamefont{Anderson, Ensher,
   Matthews, Wieman, and Cornell}}]{Anderson:1995vn}
@@ -264,9 +264,8 @@
 \bibitem[{\citenamefont{Proukakis and Jackson}(2008)}]{Proukakis:2008}
 \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}}
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Jackson}},
-  \bibinfo{journal}{Journal of Physics B: Atomic, Molecular and Optical
-  Physics} \textbf{\bibinfo{volume}{41}}, \bibinfo{pages}{203002 (66pp)}
-  (\bibinfo{year}{2008}).
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{41}},
+  \bibinfo{pages}{203002 (66pp)} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Leonhardt et~al.}(2003)\citenamefont{Leonhardt, Kiss,
   and \"Ohberg}}]{Leonhardt:2003}
@@ -355,12 +354,12 @@
 
 \bibitem[{\citenamefont{Hanggi}(1998)}]{Hanggi:1998}
 \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Hanggi}},
-  \bibinfo{journal}{Physics Reports} \textbf{\bibinfo{volume}{304}},
+  \bibinfo{journal}{Phys. Rep.} \textbf{\bibinfo{volume}{304}},
   \bibinfo{pages}{229} (\bibinfo{year}{1998}).
 
 \bibitem[{\citenamefont{Garrison}(1999)}]{Garrison:1999}
 \bibinfo{author}{\bibfnamefont{J.~C.} \bibnamefont{Garrison}},
-  \bibinfo{journal}{American Journal of Physics} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{journal}{Am. J. Phys.} \textbf{\bibinfo{volume}{67}},
   \bibinfo{pages}{196} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Moulton}(1958)}]{Moulton:1958}
@@ -518,9 +517,24 @@
   \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aghajani-Talesh}},
   \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Griesmaier}},
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
-  \bibinfo{journal}{Journal of Physics B: Atomic, Molecular and Optical
-  Physics} \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{F77}
-  (\bibinfo{year}{2007}).
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{40}},
+  \bibinfo{pages}{F77} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Barrett et~al.}(2001)\citenamefont{Barrett, Sauer, and
+  Chapman}}]{Barrett:2001}
+\bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{Barrett}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Sauer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Chapman}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{87}},
+  \bibinfo{pages}{010404} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Savage et~al.}(1998)\citenamefont{Savage, Ruostekoski,
+  and Walls}}]{Savage:1998nx}
+\bibinfo{author}{\bibfnamefont{C.~M.} \bibnamefont{Savage}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Ruostekoski}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~F.} \bibnamefont{Walls}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{57}},
+  \bibinfo{pages}{3805} (\bibinfo{year}{1998}).
 
 \bibitem[{\citenamefont{Bijlsma et~al.}(2000)\citenamefont{Bijlsma, Zaremba,
   and Stoof}}]{Bijlsma:2000}

@@ -20,11 +20,125 @@ The two possibilities for reservoirs to supply the irreversibility necessary for
 
 Previous work on light-BEC interactions. Rayleigh/Raman superradiance, EIT, CARL, and the rest of that list that I had.
 
-\hrule
 
-Joe believes the best way forward is to tie down my intro and conclusion and then go from there.  Or perhaps equivalently, to write out dot points for each section to help keep me on track during the writing process.  At this level I would need to decide what was in and what was out.
+\section{Pumping mechanism}
 
-\section{Scheme}
+\begin{figure}
+    \centering
+    \includegraphics[width=14cm]{LambdaModel}
+    \caption{FIXME: This is not a caption. Comparison of considered atom laser pumping scheme (a) and typical optical laser pumping scheme (b).\label{OpticalPumping:LambdaModel}}
+\end{figure}
+
+The optical pumping process under investigation in this chapter is illustrated in \figureref{OpticalPumping:LambdaModel}(a).  In this process atoms in the source mode are driven by a laser into an excited state from which they can decay into the lasing mode (the condensate).  Although there is no laser driving this second transition ($\ket{3}\leftrightarrow\ket{2}$), the decay of atoms into the lasing mode is not spontaneous emission in the usual sense.  The emission process is \emph{atomically}-stimulated by the large occupation of the lasing mode in the same way that the transition may be \emph{optically}-stimulated even in the absence of any population in the atomic state into which the atom decays.
+
+The final decay of an atom into the lasing mode in \figureref{OpticalPumping:LambdaModel} resembles standard \emph{optical} laser schemes [see \figureref{OpticalPumping:LambdaModel}(b)] in which the roles of atoms and light are reversed.  In an optical laser an atom in the excited state is stimulated to emit into the ground state by the resonant photons in the laser cavity.  Once the atom has emitted, it decays rapidly into other internal states with rate $\gamma$ significantly limiting reabsorption from the $\ket{g}$ state.  A similar process occurs in the proposed optical pumping scheme in which the photon emitted as the atom decays  leaves the system rapidly preventing reabsorption.  The loss of photons from the system is represented by the decay of the optical mode with rate $\gamma$ in \figureref{OpticalPumping:LambdaModel}(a).
+
+This similarity between the proposed atom laser pumping mechanism and the usual optical laser pumping mechanism is clearly illustrated by considering the Hamiltonian coupling the excited and ground atomic states in \figureref{OpticalPumping:LambdaModel}
+\begin{align}
+    \hat{H} &= \hbar \epsilon \left(\hat{a}_e^\dagger \hat{a}_g \hat{a}_\text{ph} + \hat{a}_g^\dagger \hat{a}_\text{ph}^\dagger \hat{a}_e  \right),
+    \label{OpticalPumping:TwoLevelAtomHamiltonian}
+\end{align}
+where $\epsilon$ is a real coupling constant, the $\hat{a}_e$, $\hat{a}_g$, and $\hat{a}_\text{ph}$ are annihilation operators for the atomic excited state, atomic ground state and photon mode respectively.  The rotating wave approximation has been made in obtaining this Hamiltonian, assuming that the optical mode is not detuned from the atomic transition by a large fraction of the frequency difference between the two states.  
+
+The Hamiltonian \eqref{OpticalPumping:TwoLevelAtomHamiltonian} describes both the atom- and optical-laser pumping mechanisms, the difference in the mechanisms being in the occupations of the various states.  If the system is initially in a state with $N_e$ atoms in the atomic excited state, $N_g$ atoms in the atomic ground state and $N_\text{ph}$ photons in the optical mode, the amplitude for an atom in the excited state to emit a photon is
+\begin{align}
+    \bra{N_e-1, N_g + 1, N_\text{ph} + 1} \hat{H} \ket{N_e, N_g, N_\text{ph}} &= \hbar \epsilon \sqrt{N_g+1} \sqrt{N_\text{ph}+1} \sqrt{N_e}.
+\end{align}
+This emission process can therefore be stimulated either by photons ($N_\text{ph} > 0$) or by atoms ($N_\text{g} > 0$).  It would also be possible for the emission to be stimulated by both photons \emph{and} atoms, although in this case the amplitude for the absorption process would be non-zero
+\begin{align}
+    \bra{N_e+1, N_g - 1, N_\text{ph} - 1} \hat{H} \ket{N_e, N_g, N_\text{ph}} &= \hbar \epsilon \sqrt{N_e+1} \sqrt{N_\text{ph}} \sqrt{N_g}.
+\end{align}
+It is for this reason that it is desirable in an optical laser to have $N_g \approx 0$, and in the proposed atom laser pumping scheme to have $N_\text{ph} \approx 0$.
+
+Variations of the atom laser pumping scheme presented in \figureref{OpticalPumping:LambdaModel}(a) have been proposed before (FIXME: cite stuff) for the production of BEC without the use of collisional evaporation and its consequent losses.  There are two difficulties with these schemes, the first is that only a small fraction of the 
+
+
+
+
+
+There have been two difficulties with these schemes, the first is that only a small fraction of the 
+
+
+The atom laser pumping scheme presented in \figureref{OpticalPumping:LambdaModel}(a) has been proposed before (FIXME: cite stuff) for the production of BEC without collisional evaporation and its consequent losses.  There are two difficulties with these schemes, the first is that 
+
+
+using `all-optical' means\footnote{Originally this additionally meant without using a collisional evaporation process, however more recently `all-optical BEC' has included the use of collisional evaporation in optical traps \citep{Barrett:2001}.} using thermal atoms in the source mode.  
+
+
+There are two difficulties with these schemes, the first is that 
+
+
+Two difficulties with this, firstly reabsorption (also an issue here that will be discussed at length later) and the Franck-Condon factor
+
+
+
+
+Now it would be appropriate to talk about this mechanism having been proposed before.
+
+
+
+
+As the optical transition between the excited atomic state and the lasing mode is not driven by a laser, the phase of the photons emitted is determined by the relative phase between the source and lasing modes; the direction of population transfer does not depend on the phase difference between these two modes.  Indeed, provided the emitted photons left the system sufficiently quickly the proposed pumping mechanism could also transfer thermal atoms in the source mode to the lasing mode the random phase differences between these modes being carried away by the emitted photons.
+
+
+
+The emitted photons in the optical pumping mechanism 
+
+
+
+
+As the optical transition between the 
+
+
+The direction of the population transfer between the source mode and the lasing mode does not depend on the relative phase between the two 
+
+in the absence of collisions
+
+The population transfer between the source mode and the lasing mode does not depend on 
+
+
+Phase difference between the source and lasing mode. The present scheme does not require coherent atoms, discuss differences.
+
+Need to discuss past, similar proposed pumping mechanisms.  At the moment, the proposal is very similar to that considered previously by others.  The main difference being that a coherent source is being considered.  Discuss how this is a significant difference.
+
+
+
+The interchangeability of atomic 
+
+
+Something about the use of coherent atomic source implying that we cannot simply treat the Bose-stimulation as an accelerated spontaneous emission.  Though this only occurs in the detuned case.  Not true, also occurs in the resonant case. Only becomes obvious in a multimode model.
+
+FIXME:  We need a note here about retaining the effects of coherence.
+
+
+
+The primary difference between the present work and that which has come before is the use of coherent atoms as the source driving the pumping mechanism.  While this is certainly not ideal, it is not unrealistic provided that the pumping mechanism is independent of the phase difference between the source and lasing modes (unlike the work of \citep{Savage:1998nx}).
+
+
+
+
+The pumping mechanism under investigation in this chapter is illustrated in \figureref{OpticalPumping:LambdaModel} and bears some similarity to EIT, Raman outcoupling, and Rayleigh/Raman superradiance.  In this mechanism, a coherent sample of atoms in the source mode are driven by an optical field into an excited state from which they can decay into the target mode.  The decay of atoms into the target mode cannot simply be viewed as a spontaneous emission process, as the target mode contains a macroscopic occupation.  Stuff and nonsense.
+
+
+Similar mechanisms have been proposed before (FIXME: Add citations, see Santos:2001ve and Savage:1998nx).
+
+a coherent sample of atoms in a source mode are optically excited into 
+
+
+The pumping mechanism under investigation in this chapter is illustrated in \figureref{OpticalPumping:LambdaModel} and is very similar to EIT, Raman outcoupling, and Rayleigh/Raman superradiance.  
+
+
+Reabsorption of spontaneously emitted light.  Go with Simon's plan.  There is basically no other way around it.  Say in what limit the approximation is valid.  Point out that this topic will be revisited at the end of the chapter.  More sophisticated treatments are necessary to consider the case of thermal atoms for the source. 
+
+
+The scheme for a pumped atom laser is illustrated in ...
+
+
+
+
+
+We revisit this discussion of spontaneous emission towards the end of the chapter (FIXME: Insert reference once the section is written).
+
 
 Use an optical transition to drive atoms into the target condensate.  You might initially think that this process is spontaneous emission and therefore not coherent, but the process is stimulated emission.  It's just that it is stimulated \emph{atomically}, not optically.  This is a really cool idea.  We can talk about the equivalence of these two different simulation mechanisms, and how you can have both simultaneously.  It's all in the amplitudes for the processes.  Part of the issue is how to get the atoms into the excited state to be able to do the entire transfer process coherently.  STIRAP-type transitions are an obvious possibility.  The trouble becomes that to operate STIRAP continuously, the timing of the pulses must translate to the spatial shape of the `pulses'.  This implies $0 \hbar k$.
 
@@ -35,6 +149,7 @@ In the experimental realisation of the scheme, there are two alternative geometr
 We note at this point one important point: what about the resonant emitted photons (if they are resonant)?
 
 \section{The continuous pumping experiment}
+\label{OpticalPumping:ContinuousExperiment}
 
 The experiment was performed by \emph{Nick Robins}, \emph{Cristina Figl} and \emph{Matthew Jeppesen}.
 
@@ -43,18 +158,14 @@ Describe that delicate, fragile experiment that produced some positive results. 
 Two condensates, outcoupling from the upper condensate to form a freely-propagating atom laser in the $F=2$, $m_F=0$ state.  The atoms in this atom laser then absorb a photon and emit one (in which direction) being stimulated by the lower condensate.  Simultaneous with this pumping mechanism, one can outcouple from the lower condensate.  The net effect is a quasi-continuously pumped atom laser.  Not exactly a continuously-pumped atom laser, but the pumping mechanism is a significant part of the process, and this experiment represents a significant step forward.
 
 \section{Simple single-mode model}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=8cm]{LambdaModel}
-    \caption{FIXME: This is not a caption. \label{OpticalPumping:LambdaModel}}
-\end{figure}
+\label{OpticalPumping:SingleModeModel}
 
 This is the simple model that exhibits the Quantum Zeno effect, multiple equilibrium states and a bunch of other interesting physics.  We have to motivate the driving term for the optical field, but other than that, the system is fairly well behaved.  Using this model it can be shown that the pumping should work in both the resonant and detuned cases.  Note that one of the things that this model does not consider is the loss of atoms before they reach the region in which they overlap with the target condensate. Neither can this model represent STIRAP-type processes. Unless you model them in a temporal domain, but STIRAP is well understood anyway.
 
 The model is a simple $\Lambda$-type scheme, but where one of the optical fields is `spontaneous'.
 
-\section{1D model}
+\section{Multimode model (in 1D)}
+\label{OpticalPumping:MultimodeModel}
 
 The 1D model is based on the Maxwell-Schrödinger equations.  One of the technical difficulties is the fact that we must be able to solve in the case that light is travelling in opposite directions simultaneously.  It is not an issue analytically, the equations are well-defined.  The trouble is solving the system self-consistently.  The equations as posed are stiff and are best treated by implicit algorithms, but the best we have are half-arsed semi-implicit algorithms. Better yet would be to use a finite-element method and treat the cross-propagation properly, but I'm lazy.  The other issue is that the frequency of the light is usually known \emph{a priori}.  That is not the case for at least one of the modes in this system.  We therefore need to use some fancy tricks in order to get around that issue.  However, any detunings should not be too large.
 

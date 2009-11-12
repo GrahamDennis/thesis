@@ -1,4 +1,4 @@
-\begin{thebibliography}{95}
+\begin{thebibliography}{107}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -519,6 +519,105 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
   \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{40}},
   \bibinfo{pages}{F77} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Olshan'ii et~al.}(1996)\citenamefont{Olshan'ii, Castin,
+  and Dalibard}}]{Olshanii:1996}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshan'ii}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, in
+  \emph{\bibinfo{booktitle}{{Proceedings of the 12th International Conference
+  on Laser Spectroscopy}}}, edited by
+  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Inguscio}},
+  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Allegrini}},
+  \bibnamefont{and} \bibinfo{editor}{\bibfnamefont{A.}~\bibnamefont{Lasso}}
+  (\bibinfo{organization}{World Scientific}, \bibinfo{address}{Singapore},
+  \bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Janicke and Wilkens}(1996)}]{Janicke:1996}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
+  \bibinfo{journal}{EPL (Europhysics Letters)} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{561} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Spreeuw et~al.}(1995)\citenamefont{Spreeuw, Pfau,
+  Janicke, and Wilkens}}]{Spreeuw:1995}
+\bibinfo{author}{\bibfnamefont{R.~J.~C.} \bibnamefont{Spreeuw}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{32}},
+  \bibinfo{pages}{469} (\bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Cirac and Lewenstein}(1996)}]{Cirac:1996rr}
+\bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{2466} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Cirac et~al.}(1996)\citenamefont{Cirac, Lewenstein, and
+  Zoller}}]{Cirac:1996}
+\bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
+  \bibinfo{journal}{EPL (Europhysics Letters)} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{647} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Santos et~al.}(2000)\citenamefont{Santos, Idziaszek,
+  Cirac, and Lewenstein}}]{Santos:2000}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Idziaszek}},
+  \bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{33}},
+  \bibinfo{pages}{4131} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Castin et~al.}(1998)\citenamefont{Castin, Cirac, and
+  Lewenstein}}]{Castin:1998}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}},
+  \bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{5305} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Cirac et~al.}(1994)\citenamefont{Cirac, Lewenstein, and
+  Zoller}}]{Cirac:1994}
+\bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{50}},
+  \bibinfo{pages}{3409} (\bibinfo{year}{1994}).
+
+\bibitem[{\citenamefont{Vengalattore et~al.}(2003)\citenamefont{Vengalattore,
+  Rooijakkers, Conroy, and Prentiss}}]{Vengalattore:2003}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Vengalattore}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Rooijakkers}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Conroy}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prentiss}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{063412} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Wolf et~al.}(2000)\citenamefont{Wolf, Oliver, and
+  Weiss}}]{Wolf:2000}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Wolf}},
+  \bibinfo{author}{\bibfnamefont{S.~J.} \bibnamefont{Oliver}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~S.} \bibnamefont{Weiss}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
+  \bibinfo{pages}{4249} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Santos et~al.}(2001)\citenamefont{Santos, Floegel,
+  Pfau, and Lewenstein}}]{Santos:2001ve}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Floegel}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{63}},
+  \bibinfo{pages}{063408} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Santos and Lewenstein}(1999)}]{Santos:1999qf}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{60}},
+  \bibinfo{pages}{3851} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Barrett et~al.}(2001)\citenamefont{Barrett, Sauer, and
   Chapman}}]{Barrett:2001}

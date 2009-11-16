@@ -1,4 +1,4 @@
-\begin{thebibliography}{107}
+\begin{thebibliography}{106}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -84,21 +84,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
   \bibinfo{pages}{011601(R)} (\bibinfo{year}{2009}).
-
-\bibitem[{\citenamefont{Pu and Meystre}(2000)}]{Pu:2000}
-\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Pu}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Meystre}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
-  \bibinfo{pages}{3987} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{Duan et~al.}(2000)\citenamefont{Duan, S{\o}rensen,
-  Cirac, and Zoller}}]{Duan:2000}
-\bibinfo{author}{\bibfnamefont{L.-M.} \bibnamefont{Duan}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{S{\o}rensen}},
-  \bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
-  \bibinfo{pages}{3991} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Anderson et~al.}(1995)\citenamefont{Anderson, Ensher,
   Matthews, Wieman, and Cornell}}]{Anderson:1995vn}
@@ -536,7 +521,7 @@
 \bibitem[{\citenamefont{Janicke and Wilkens}(1996)}]{Janicke:1996}
 \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
-  \bibinfo{journal}{EPL (Europhysics Letters)} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{35}},
   \bibinfo{pages}{561} (\bibinfo{year}{1996}).
 
 \bibitem[{\citenamefont{Spreeuw et~al.}(1995)\citenamefont{Spreeuw, Pfau,
@@ -559,7 +544,7 @@
 \bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}},
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
-  \bibinfo{journal}{EPL (Europhysics Letters)} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{35}},
   \bibinfo{pages}{647} (\bibinfo{year}{1996}).
 
 \bibitem[{\citenamefont{Santos et~al.}(2000)\citenamefont{Santos, Idziaszek,
@@ -618,6 +603,14 @@
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{60}},
   \bibinfo{pages}{3851} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Floegel et~al.}(2001)\citenamefont{Floegel, Santos, and
+  Lewenstein}}]{Floegel:2001}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Floegel}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{54}},
+  \bibinfo{pages}{279} (\bibinfo{year}{2001}).
 
 \bibitem[{\citenamefont{Barrett et~al.}(2001)\citenamefont{Barrett, Sauer, and
   Chapman}}]{Barrett:2001}

@@ -7,7 +7,7 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGrafflePro</string>
-		<string>138.9.0.117994</string>
+		<string>138.12.0.121252</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -74,11 +74,32 @@
 			<key>Class</key>
 			<string>LineGraphic</string>
 			<key>ID</key>
+			<integer>34</integer>
+			<key>Points</key>
+			<array>
+				<string>{105.5, 400.5}</string>
+				<string>{417.5, 417.5}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
 			<integer>32</integer>
 			<key>Points</key>
 			<array>
-				<string>{349.5, 446.5}</string>
-				<string>{417.5, 284.125}</string>
+				<string>{368, 450}</string>
+				<string>{412, 272}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -95,7 +116,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{331.459, 447.693}, {31, 15}}</string>
+			<string>{{347.354, 451.527}, {31, 15}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -103,7 +124,7 @@
 			<key>ImageID</key>
 			<integer>13</integer>
 			<key>Rotation</key>
-			<real>4.5</real>
+			<real>3.0999999046325684</real>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -385,7 +406,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{435.952, 353.302}, {65, 22}}</string>
+					<string>{{440.452, 350.302}, {65, 22}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -393,7 +414,7 @@
 					<key>ImageID</key>
 					<integer>4</integer>
 					<key>Rotation</key>
-					<real>293</real>
+					<real>283.79998779296875</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -425,7 +446,7 @@
 					<key>ImageID</key>
 					<integer>3</integer>
 					<key>Rotation</key>
-					<real>4.5</real>
+					<real>3.0999999046325684</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -4732,7 +4753,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-10-07 11:47:51 +1100</string>
+	<string>2009-11-16 14:25:15 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -4817,15 +4838,15 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{119.5, 143}, {497.5, 382.5}}</string>
+		<string>{{0, 0}, {995, 765}}</string>
 		<key>Zoom</key>
-		<real>2</real>
+		<real>1</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
+				<real>1</real>
 				<real>2</real>
-				<real>8</real>
 			</array>
 		</array>
 	</dict>

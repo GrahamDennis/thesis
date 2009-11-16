@@ -84,14 +84,14 @@ Although the evolution equations for the kinetic model \eqref{KineticTheory:Evol
 \begin{align}
     V_\text{eff}(\bm{r}, t) &= V_\text{trap}(\bm{r}) + 2 g n_c(\bm{r}, t), \label{MethodsAppendix:QKTEffectivePotential}
 \end{align}
-where $V_\text{trap}(\bm{r})$ is the potential due to the magnetic trap, $g = 4\pi \hbar^2 a/m$, $a$ is the \emph{s}-wave scattering length and $n_c(\bm{r}, t)$ is the condensate density which was assumed to follow a Thomas-Fermi distribution in \chapterref{KineticTheory}.  Note that the `2' in the above expression is the full Hartree-Fock mean field experienced by the thermal atoms (see \eqref{Peaks:ThermalParticleEnergySpectrum}, or \citep[Chapter 8]{PethickSmith} for further details) which is twice the mean-field repulsion experienced by condensate atoms.  This is essentially due to the thermal atoms being distinguishable from the condensate atoms, while the condensate atoms are indistinguishable from one another.
+where $V_\text{trap}(\bm{r})$ is the potential due to the magnetic trap, $g = 4\pi \hbar^2 a/m$, $a$ is the \emph{s}-wave scattering length and $n_c(\bm{r}, t)$ is the condensate density which was assumed to follow a Thomas-Fermi distribution in \chapterref{KineticTheory}.  Note that the `2' in the above expression is the full Hartree-Fock mean field experienced by the thermal atoms (see \eqref{Peaks:ThermalParticleEnergySpectrum}, or~\citep[Chapter 8]{PethickSmith} for further details) which is twice the mean-field repulsion experienced by condensate atoms.  This is essentially due to the thermal atoms being distinguishable from the condensate atoms, while the condensate atoms are indistinguishable from one another.
 
 The density of states in the presence of the effective potential \eqref{MethodsAppendix:QKTEffectivePotential} is given by
 \begin{align}
     \rho(\varepsilon, t) &= \int \frac{d \bm{r}\, d \bm{p}}{(2\pi \hbar)^3} \,\delta\left(\varepsilon - V_\text{eff}(\bm{r}, t) - \bm{p}^2/2 m\right).
     \label{MethodsAppendix:DensityOfStatesDefinition}
 \end{align}
-The integrals are performed in \citep{Bijlsma:2000} giving the following result in terms of the shifted energy coordinate (Eqs.~49 and 50 in \citep{Bijlsma:2000})
+The integrals are performed in~\citep{Bijlsma:2000} giving the following result in terms of the shifted energy coordinate (Eqs.~49 and 50 in~\citep{Bijlsma:2000})
 \begin{align}
     \overline{\rho}(\overline{\varepsilon}, t) &= \frac{2}{\pi \hbar \overline{\omega}} \left[I_-(\overline{\varepsilon}) + I_+(\overline{\varepsilon})\right],
 \end{align}
@@ -100,14 +100,14 @@ where the functions $I_\pm(\overline{\varepsilon})$ are
     I_-(\overline{\varepsilon}) &= \left.\frac{u_-^3 x}{4} - \frac{a_- u_- x}{8} - \frac{a_-^2}{8}\ln(x + u_-)\right|_{x=\sqrt{\max\{0, -a_-\}}}^{x=\sqrt{2\mu/\hbar \overline{\omega}}}, \label{MethodsAppendix:QKTIMinus}\\
     I_+(\overline{\varepsilon}) &= \left.- \frac{u_+^3 x}{4} + \frac{a_+ u_+ x}{8} + \frac{a_+^2}{8} \arcsin\left(\frac{x}{\sqrt{a_+}}\right)\right|_{x=\sqrt{2\mu/\hbar\overline{\omega}}}^{x=\sqrt{a_+}}, \label{MethodsAppendix:QKTIPlus}
 \end{align}
-with $a_\pm = 2(\overline{\varepsilon}\pm \mu)/\hbar\overline{\omega}$, and $u_\pm = \sqrt{a_\pm \mp x^2}$. Note that there is a minor typo in \citet{Bijlsma:2000}, the lower limit of $I_-(\overline{\varepsilon})$ is given as $x=\sqrt{\max\{0, a_-\}}$, while it should read $x=\sqrt{\max\{0, -a_-\}}$ as in \eqref{MethodsAppendix:QKTIMinus}.
+with $a_\pm = 2(\overline{\varepsilon}\pm \mu)/\hbar\overline{\omega}$, and $u_\pm = \sqrt{a_\pm \mp x^2}$. Note that there is a minor typo in~\citet{Bijlsma:2000}, the lower limit of $I_-(\overline{\varepsilon})$ is given as $x=\sqrt{\max\{0, a_-\}}$, while it should read $x=\sqrt{\max\{0, -a_-\}}$ as in \eqref{MethodsAppendix:QKTIMinus}.
 
 \subsection{Collision and energy-redistribution in Quantum Kinetic Theory}
 \label{MethodsAppendix:QKTOtherTerms}
 
-The forms of the collision and energy-redistribution terms of the kinetic model described in \chapterref{KineticTheory} were omitted there for sake of clarity as their derivation was not part of the work presented there.  A full derivation of these terms is given in \citep{Bijlsma:2000,Proukakis:2008}.
+The forms of the collision and energy-redistribution terms of the kinetic model described in \chapterref{KineticTheory} were omitted there for sake of clarity as their derivation was not part of the work presented there.  A full derivation of these terms is given in~\citep{Bijlsma:2000,Proukakis:2008}.
 
-The contribution due to thermal--thermal collisions is given in Eq.~26 of \citep{Bijlsma:2000} and has the form
+The contribution due to thermal--thermal collisions is given in Eq.~26 of~\citep{Bijlsma:2000} and has the form
 \begin{align}
     \begin{split}
         \left. \frac{\partial\big(\overline{\rho}(\overline{\varepsilon}_1, t) \overline{g}(\overline{\varepsilon}_1, t)\big)}{\partial t}\right|_\text{thermal--thermal} &= \frac{m^3 g^2}{2 \pi^3 \hbar^7} \int d\overline{\varepsilon}_2 \int d\overline{\varepsilon}_3 \int d\overline{\varepsilon}_4 \,\overline{\rho}(\overline{\varepsilon}_\text{min}, t)\\
@@ -117,7 +117,7 @@ The contribution due to thermal--thermal collisions is given in Eq.~26 of \citep
 \end{align}
 where $\overline{\varepsilon}_\text{min}$ is the minimum of the $\overline{\varepsilon}_i$, and $\overline{g}_i = \overline{g}(\overline{\varepsilon}_i, t)$. 
 
-The contribution due to thermal--condensate collisions is given by Eq.~53 and Eq.~58--60 of \citep{Bijlsma:2000} and has the form
+The contribution due to thermal--condensate collisions is given by Eq.~53 and Eq.~58--60 of~\citep{Bijlsma:2000} and has the form
 \begin{align}
     \begin{split}
         \left. \frac{\partial\big(\overline{\rho}(\overline{\varepsilon}_1, t) \overline{g}(\overline{\varepsilon}_1, t)\big)}{\partial t}\right|_\text{thermal--condensate} &= \frac{m^3 g^2}{2 \pi^3 \hbar^7} \int d \overline{\varepsilon}_2 \int d\overline{\varepsilon}_3 \int d\overline{\varepsilon}_4 \,\delta(\overline{\varepsilon}_2 - \overline{\varepsilon}_3 - \overline{\varepsilon}_4)\\
@@ -135,7 +135,7 @@ The corresponding contribution to the evolution of the condensate number is simp
 \end{align}
 
 
-Finally, the contribution due to energy redistribution is (Eqs.~32 and 52 in \citep{Bijlsma:2000})
+Finally, the contribution due to energy redistribution is (Eqs.~32 and 52 in~\citep{Bijlsma:2000})
 \begin{align}
     \left. \frac{\partial\big(\overline{\rho}(\overline{\varepsilon}_1, t) \overline{g}(\overline{\varepsilon}_1, t)\big)}{\partial t}\right|_\text{redistribution} &= - \frac{\partial \big( \overline{\rho}_\text{w} \overline{g}\big)}{\partial \overline{\varepsilon}},
     \label{MethodsAppendix:QKTRedistributionEvolution}
@@ -150,14 +150,14 @@ where the functions $I_\pm(\overline{\varepsilon})$ are given in \eqref{MethodsA
 \subsection{Three-body loss in Quantum Kinetic Theory}
 \label{MethodsAppendix:QKT3BodyLoss}
 
-The dominant density-dependent loss process in Bose-Einstein condensates is three-body loss \citep{Burt:1997fk,Soding:1999}. In \chapterref{KineticTheory} it was argued that three-body loss was an important process in the operation of the pumped atom laser scheme proposed there.  The following derivation of the three-body loss contribution to the kinetic model \eqref{KineticTheory:EvolutionEquations} was performed by \emph{Matthew Davis} and is presented for completeness.
+The dominant density-dependent loss process in Bose-Einstein condensates is three-body loss~\citep{Burt:1997fk,Soding:1999}. In \chapterref{KineticTheory} it was argued that three-body loss was an important process in the operation of the pumped atom laser scheme proposed there.  The following derivation of the three-body loss contribution to the kinetic model \eqref{KineticTheory:EvolutionEquations} was performed by \emph{Matthew Davis} and is presented for completeness.
 
 Three-body loss (or three-body recombination) is the process in which three atoms collide forming a bound dimer with the third necessary to ensure both energy and momentum conservation.  The binding energy is sufficient to give the products of a three-body recombination process sufficient kinetic energy to rapidly escape the trap.  Three-body loss is then well-described by the master equation term
 \begin{align}
     \left. \frac{d \hat{\rho}}{d t}\right|_\text{3-body loss} &= \frac{1}{3}L_3 \int d \bm{x} \,\mathcal{D} \left[ \hat{\Psi}^3(\bm{x}) \right] \hat{\rho},
     \label{MethodsAppendix:ThreeBodyLossMasterEquationTerm}
 \end{align}
-where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho} \hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c}\hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ \citep{Burt:1997fk} is the three-body recombination loss rate constant.  This equation, first derived by \citep{Jack:2002} has the familiar form of a decoherence superoperator with the state undergoing loss as the argument (cf. \sectionref{PenningIonisationAppendix:MasterEquation}). %This is a reasonable approximation as three-body recombination couples the state $\hat{\Psi}^3$ to a state that is rapidly depopulated.
+where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho} \hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c}\hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$~\citep{Burt:1997fk} is the three-body recombination loss rate constant.  This equation, first derived by~\citep{Jack:2002} has the familiar form of a decoherence superoperator with the state undergoing loss as the argument (cf. \sectionref{PenningIonisationAppendix:MasterEquation}). %This is a reasonable approximation as three-body recombination couples the state $\hat{\Psi}^3$ to a state that is rapidly depopulated.
 
 The loss rate of atoms from the system due to three-body loss is readily obtained from \eqref{MethodsAppendix:ThreeBodyLossMasterEquationTerm} as
 \begin{align}
@@ -177,7 +177,7 @@ Performing the substitution described, \eqref{MethodsAppendix:ThreeBodyLossNumbe
 \end{align}
 where $n_c(\bm{r}) = \abs{\Psi(\bm{r})}^2$ is the condensate density.
 
-The non-condensate density is given by $n_T(\bm{r}) = \mean{\delta\hat{\Psi}^\dagger(\bm{r}) \delta\hat{\Psi}(\bm{r})}$.  As thermal states are Gaussian, the higher-order expectation values in the previous expression may be simplified by the application of Wick's theorem \citep{Wick:1950} giving
+The non-condensate density is given by $n_T(\bm{r}) = \mean{\delta\hat{\Psi}^\dagger(\bm{r}) \delta\hat{\Psi}(\bm{r})}$.  As thermal states are Gaussian, the higher-order expectation values in the previous expression may be simplified by the application of Wick's theorem~\citep{Wick:1950} giving
 \begin{align}
     \mean{\delta\hat{\Psi}^\dagger(\bm{r})^2 \delta\hat{\Psi}(\bm{r})^2} &= 2 [n_T(\bm{r})]^2, \\
     \mean{\delta\hat{\Psi}^\dagger(\bm{r})^3 \delta\hat{\Psi}(\bm{r})^3} &= 6 [n_T(\bm{r})]^3.
@@ -235,14 +235,14 @@ where the contributions due to the terms involving only one or two thermal atoms
 \end{align}
 where the contributions due to the terms involving only one or two condensate atoms have been multiplied by $1/3$ and $2/3$ respectively.
 
-% The value of the three-body loss rate constant used in \chapterref{KineticTheory} was that obtained by \citet{Burt:1997fk} of $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ (denoted $K_3^{c}$ in that work).
+% The value of the three-body loss rate constant used in \chapterref{KineticTheory} was that obtained by~\citet{Burt:1997fk} of $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$ (denoted $K_3^{c}$ in that work).
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \section{Convolutions}
-% Unrelated to thesis but important: When doing convolutions you must truncate the range of the interaction potential to prevent interacting with the `copies' of the density that you do want to interact with. This Fourier transform \emph{must} be calculated analytically. The range of the grid must also be such that the density is nonzero within a rectangular prism with side lengths $\frac{1}{2}$ that of the computational domain. This is to prevent the left part of the density interacting with the right part due to the wrap-around \citep{Ronen:2006}.
+% Unrelated to thesis but important: When doing convolutions you must truncate the range of the interaction potential to prevent interacting with the `copies' of the density that you do want to interact with. This Fourier transform \emph{must} be calculated analytically. The range of the grid must also be such that the density is nonzero within a rectangular prism with side lengths $\frac{1}{2}$ that of the computational domain. This is to prevent the left part of the density interacting with the right part due to the wrap-around~\citep{Ronen:2006}.
 % \begin{align}
 %     \mathcal{F}(f * g) &= \sqrt{2 \pi} \mathcal{F}(f) \mathcal{F}(g)
 % \end{align}

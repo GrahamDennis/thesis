@@ -22,6 +22,7 @@ Previous work on light-BEC interactions. Rayleigh/Raman superradiance, EIT, CARL
 
 
 \section{Pumping mechanism}
+\label{OpticalPumping:PumpingMechanism}
 
 \begin{figure}
     \centering
@@ -131,9 +132,64 @@ These two different processes are examined in greater detail theoretically in \s
 \section{Simple single-mode model}
 \label{OpticalPumping:SingleModeModel}
 
-This is the simple model that exhibits the Quantum Zeno effect, multiple equilibrium states and a bunch of other interesting physics.  We have to motivate the driving term for the optical field, but other than that, the system is fairly well behaved.  Using this model it can be shown that the pumping should work in both the resonant and detuned cases.  Note that one of the things that this model does not consider is the loss of atoms before they reach the region in which they overlap with the target condensate. Neither can this model represent STIRAP-type processes. Unless you model them in a temporal domain, but STIRAP is well understood anyway.
+We begin our theoretical investigation of the pumping mechanism behind the previously-described experiment by considering the simplest-possible model, a single-mode mean-field approximation to the process illustrated in \figureref{OpticalPumping:LambdaModel}(a).  The equations of motion for this model are
+\begin{subequations}
+    \label{OpticalPumping:SingleModeModel}
+    \begin{align}
+        \frac{d}{dt} c_\text{source} &= -i \Omega^* c_\text{excited} \\
+        \frac{d }{dt}c_\text{excited} &= -i \Omega c_\text{source} -i g \alpha c_\text{lasing} - i \Delta c_\text{excited} - \frac{\Gamma}{2} c_\text{excited}\\
+        \frac{d }{dt}c_\text{lasing} &= -i g^* \alpha^* c_\text{excited} \\
+        \frac{d }{dt}\alpha &= -i g^* c_\text{lasing}^* c_\text{excited} - \frac{\gamma}{2} \alpha,
+    \end{align} 
+\end{subequations}
+where $c_\text{source}$, $c_\text{lasing}$ and $c_\text{excited}$ are the amplitudes of the source $\ket{1}$, lasing $\ket{2}$ and excited $\ket{3}$ modes respectively, $\Omega$ is the complex Rabi frequency due to the pumping laser coupling the source and excited modes with detuning $\Delta$, $\alpha$ is the amplitude of the optical mode into which the excited atoms emit when decaying into the lasing mode and $g$ is the complex coupling constant for this transition.  The optical mode $\alpha$ will decay as photons propagate away from the system.  This process is modelled phenomenologically with a loss rate $\gamma$ from the optical mode $\alpha$.  The spontaneous decay of the excited state into modes other than the lasing mode occurs at a rate $\Gamma$.  It has been assumed that the pumping laser is sufficiently strong to be negligibly absorbed.  This assumption is relaxed in \sectionref{OpticalPumping:MultimodeModel}.  The evolution equations \eqref{OpticalPumping:SingleModeModel} are given in a rotating frame in which the energy difference between the source, excited and lasing modes have been appropriately removed.
 
-The model is a simple $\Lambda$-type scheme, but where one of the optical fields is `spontaneous'.
+In deriving \eqref{OpticalPumping:SingleModeModel} it has been assumed that atoms that undergo spontaneous decay from the excited mode will have no further impact upon the system.  In particular this means that the absorption of photons in the $\alpha$ mode by atoms in modes other than the lasing mode has been neglected.  The absorption of these photons by the lasing mode is, however, retained.  As discussed in \sectionref{OpticalPumping:PumpingMechanism} this is a valid approximation in the boson accumulation regime in which an excited atom is significantly more likely to decay into lasing mode than into any other mode.
+
+The long-term dynamics of \eqref{OpticalPumping:SingleModeModel} will determine the usefulness of the process as a pumping mechanism.  The fast-timescale behaviour of this system can therefore be eliminated.  By far the fastest process in the system is the decay of the photons in the $\alpha$ mode as they leave the system.  The time taken for a photon to cross the width of a typical condensate ($\sim\unit[10]{\micro m}$) is $\sim\unit[10^{-13}]{s}$, giving $\gamma \sim \unit[10^{13}]{s\textsuperscript{-1}}$.  By comparison, the spontaneous decay rate of the excited mode is $\Gamma \sim \unit[10^8]{s\textsuperscript{-1}}$ for the $F'=1$ manifold of \nucl{87}{}{Rb}.  As the $\alpha$ mode reaches a quasistationary value on the fastest timescale in the system ($\gamma$), it can be adiabatically eliminated and replaced with its quasistationary limit,
+\begin{align}
+    \alpha & \approx -\frac{2 i g^*}{\gamma} c_\text{lasing}^* c_\text{excited}. \label{OpticalPumping:Alpha}
+\end{align}
+
+We next assume that the pump laser is driving the atoms in the weak-field regime, $\Omega \ll \max\left(\Delta, \Gamma\right)$.  In this limit, the excited mode $c_\text{excited}$ evolves on a more rapid timescale than either the source or lasing modes.  The excited mode may therefore also be adiabatically eliminated and replaced with its long-term average
+\begin{align}
+    c_\text{excited} &\approx \frac{-i \Omega c_\text{source}}{\frac{1}{2}\Gamma + 2 \frac{\abs{g}^2}{\gamma} N_\text{lasing} + i \Delta}, \label{OpticalPumping:CExcited}
+\end{align}
+where $N_\text{lasing} = \abs{c_\text{lasing}}^2$ is the number of atoms in the lasing mode.
+
+With these two adiabatic eliminations made, the rate equations for the populations of the remaining two modes are obtained by substituting \eqref{OpticalPumping:Alpha} and \eqref{OpticalPumping:CExcited} into \eqref{OpticalPumping:SingleModeModel} giving
+\begin{subequations}
+    \label{OpticalPumping:SingleModeRateEquations}
+    \begin{align}
+        \frac{d}{dt} N_\text{source} &= - \frac{\abs{\Omega}^2 \left(\Gamma + \Gamma'\right)}{\abs{\frac{1}{2}(\Gamma + \Gamma') + i \Delta}^2} N_\text{source}\\
+        \frac{d}{dt} N_\text{lasing} &= \frac{\Gamma'}{\Gamma + \Gamma'} \left( - \frac{d}{dt} N_\text{source}\right),
+    \end{align}
+\end{subequations}
+where $\displaystyle \Gamma' = 4 \frac{\abs{g}^2}{\gamma} N_\text{lasing}$ is the rate constant with which atoms in the excited mode decay into the lasing mode.
+
+The efficiency of the transfer of atoms in the pumping process is $\Gamma'/(\Gamma + \Gamma')$, which behaves as expected: as the occupation of the lasing mode $N_\text{lasing}$ is increased, the efficiency increases due to bosonic stimulation.  What is perhaps not expected is the behaviour of the transfer \emph{rate}.  In the limit of large detuning, $\Delta \gg \Gamma + \Gamma'$, the rate of atom transfer is
+\begin{align}
+    -\frac{d}{dt} N_\text{source} &\approx \frac{\abs{\Omega}^2}{\Delta^2} \left(\Gamma + \Gamma'\right) N_\text{source},
+\end{align}
+which increases as the lasing mode population increases (due to increasing $\Gamma'$).  In the limit of small detuning however ($\Delta \ll \Gamma + \Gamma'$) very different behaviour is obtained
+\begin{align}
+    -\frac{d}{dt} N_\text{source} &\approx 4 \frac{\abs{\Omega}^2}{\Gamma + \Gamma'} N_\text{source}, \label{OpticalPumping:SingleModePumpingRateZeroDetuning}
+\end{align}
+which \emph{decreases} as the lasing mode population increases.  This behaviour is due to the depletion of the excited state as $\Gamma'$ increases.  In the limit of small detuning, spontaneous and stimulated decay are the fastest processes reducing the occupation of the excited state, hence increasing those rates will reduce the overall population of the excited state.  In this limit as the excited state population decreases proportional to the square of these rates
+\begin{align}
+    N_\text{excited} &\approx 4 \frac{\abs{\Omega}^2}{(\Gamma + \Gamma')^2} N_\text{source},
+\end{align}
+the overall rate of atom transfer is suppressed as these processes occur on faster timescales.  In the opposite limit of large detuning, the spontaneous and stimulated decay processes are a perturbation on the Rabi-flopping process which populates the excited state.  In this limit the excited state population is independent of the spontaneous and stimulated emission rates
+\begin{align}
+    N_\text{excited} &\approx \frac{\abs{\Omega}^2}{\Delta^2} N_\text{source},
+\end{align}
+and the overall atom transfer rate into the lasing mode can be Bose-enhanced.
+
+\parasep
+
+The simple model developed in this section can be applied to the continuous pumping experiment described in \sectionref{OpticalPumping:ContinuousExperiment} to give a limit for the efficiency of the `$2 \hbar k$' momentum-transfer process.  In this process falling atoms outcoupled from the upper condensate reach a momentum of $2\hbar k$ vertically downwards before absorbing a pump photon of momentum $\hbar k$ from below and emitting a photon of similar momentum directed downwards to decay into the lasing mode.  If it is assumed that the intensity of the pump mode is approximately constant throughout the system, then the rate of transfer of atoms into the lasing mode cannot be faster than the rate of spontaneous emission while the source atoms are not momentum-resonant with the lasing mode\footnote{When the source atoms are not momentum-resonant with the lasing mode, it is equivalent to their being no photons in the lasing mode.  In this case, $\Gamma'=0$ and from \eqref{OpticalPumping:SingleModePumpingRateZeroDetuning} it can be seen that the spontaneous emission rate must be greater than the transfer rate into the condensate.}.  An upper bound for the efficiency of the `$2 \hbar k$' momentum-transfer process should therefore be given by the ratio of the time for which the source atoms are momentum-resonant with the condensate ($\sim\unit[100]{\micro s}$, see \sectionref{OpticalPumping:ContinuousExperiment}) to the fall time for the atoms to that point ($\sim\unit[1]{ms}$).  As the upper bound for this process $\sim 10\%$ is lower than the observed efficiency $\sim 35\%$, either the transfer of atoms into the lasing mode must significantly reduce the intensity of the pump mode, or it must be the `$0 \hbar k$' process that operates in the continuous pumping experiment.  The argument used to obtain an upper bound for the efficiency of the `$2 \hbar k$' momentum-transfer process does not apply to the `$0 \hbar k$' momentum-transfer process in which atoms outcoupled from the upper condensate can be immediately pumped into the lower condensate.
+
+The simple model considered in this section does not take into account the behaviour of the emitted photons in the $\alpha$ mode as they traverse the source and/or lasing modes as they leave the system.  The investigation of this and other multimode effects is the subject of the next section and will be shown to lead to modifications of the behaviour described by the simple single-mode model.
 
 \section{Multimode model (in 1D)}
 \label{OpticalPumping:MultimodeModel}

@@ -7,7 +7,7 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGrafflePro</string>
-		<string>137.11.0.108132</string>
+		<string>138.12.0.121252</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -51,7 +51,7 @@
 		<string>Generic Gray Profile</string>
 		<key>rgbDigest</key>
 		<data>
-		S1ZP0uM2Ga2OskvYGL1VAQ==
+		ABKXFaloT3/6b5ImdilamQ==
 		</data>
 		<key>rgbName</key>
 		<string>Generic RGB Profile</string>
@@ -152,7 +152,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{377.991, 117}, {157, 25}}</string>
+			<string>{{409.982, 175}, {157, 25}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -526,14 +526,14 @@
 			<integer>1</integer>
 			<key>Points</key>
 			<array>
-				<string>{17.5, 294.5}</string>
-				<string>{100, 302}</string>
-				<string>{180.5, 306.5}</string>
-				<string>{247.5, 308}</string>
-				<string>{294, 308}</string>
-				<string>{357, 306}</string>
-				<string>{437, 302}</string>
-				<string>{519.5, 294}</string>
+				<string>{17.5, 136.491}</string>
+				<string>{100, 143.991}</string>
+				<string>{180.5, 148.491}</string>
+				<string>{247.5, 149.991}</string>
+				<string>{294, 149.991}</string>
+				<string>{357, 147.991}</string>
+				<string>{437, 143.991}</string>
+				<string>{519.5, 135.991}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -586,7 +586,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{338, 313}, {212, 26}}</string>
+			<string>{{12, 100.21}, {212, 26}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -4315,7 +4315,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-08-27 15:01:57 +1000</string>
+	<string>2009-11-23 15:41:17 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -4400,7 +4400,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-31, -76}, {621, 731}}</string>
+		<string>{{31, -40}, {621, 731}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>ActiveLayerIndex</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGrafflePro</string>
-		<string>137.11.0.108132</string>
+		<string>138.12.0.121252</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -51,7 +51,7 @@
 		<string>Generic Gray Profile</string>
 		<key>rgbDigest</key>
 		<data>
-		S1ZP0uM2Ga2OskvYGL1VAQ==
+		ABKXFaloT3/6b5ImdilamQ==
 		</data>
 		<key>rgbName</key>
 		<string>Generic RGB Profile</string>
@@ -71,10 +71,383 @@
 	<key>GraphicsList</key>
 	<array>
 		<dict>
+			<key>Bounds</key>
+			<string>{{299.517, 650.017}, {29, 18}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>575</integer>
+			<key>ImageID</key>
+			<integer>4</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{217.517, 631.017}, {23, 20}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>574</integer>
+			<key>ImageID</key>
+			<integer>3</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{215.517, 700.017}, {24, 20}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>573</integer>
+			<key>ImageID</key>
+			<integer>2</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>407</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Points</key>
+			<array>
+				<string>{316.517, 668.017}</string>
+				<string>{270.517, 684.017}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>572</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Points</key>
+			<array>
+				<string>{233.517, 725.017}</string>
+				<string>{265.517, 687.017}</string>
+			</array>
+			<key>Rotation</key>
+			<real>292.09622192382812</real>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>571</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Points</key>
+			<array>
+				<string>{213.267, 643.017}</string>
+				<string>{263.517, 683.017}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{244.517, 662.017}, {43.5, 43.5}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>405</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Cloud</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0</string>
+						<key>g</key>
+						<string>1</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+					<key>FillType</key>
+					<integer>3</integer>
+					<key>GradientColor</key>
+					<dict>
+						<key>b</key>
+						<string>0</string>
+						<key>g</key>
+						<string>0</string>
+						<key>r</key>
+						<string>1</string>
+					</dict>
+					<key>MiddleFraction</key>
+					<real>0.51587307453155518</real>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{204.017, 741.017}, {128, 17}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>570</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.501961</string>
+						<key>g</key>
+						<string>0.25098</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>569</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Points</key>
+			<array>
+				<string>{188.517, 674.017}</string>
+				<string>{188.517, 619.017}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{180.517, 683.017}, {17, 17}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>568</integer>
+			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{204.017, 572.017}, {128, 186}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>ID</key>
+			<integer>567</integer>
+			<key>Layer</key>
+			<integer>0</integer>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Color</key>
+					<dict>
+						<key>a</key>
+						<string>0.02</string>
+						<key>b</key>
+						<string>0.501961</string>
+						<key>g</key>
+						<string>0.25098</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+					<key>FillType</key>
+					<integer>2</integer>
+					<key>GradientAngle</key>
+					<real>90</real>
+					<key>GradientColor</key>
+					<dict>
+						<key>a</key>
+						<string>0.75</string>
+						<key>b</key>
+						<string>0.501961</string>
+						<key>g</key>
+						<string>0.25098</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>557</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{636, 258.333}</string>
@@ -96,6 +469,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>556</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{636, 203.25}</string>
@@ -117,6 +492,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>555</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{631.875, 225.25}</string>
@@ -140,6 +517,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>554</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{554.667, 236.333}</string>
@@ -167,6 +546,8 @@
 			<integer>553</integer>
 			<key>ImageID</key>
 			<integer>17</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -197,6 +578,8 @@
 			<integer>542</integer>
 			<key>ImageID</key>
 			<integer>15</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -703,6 +1086,8 @@
 			</array>
 			<key>ID</key>
 			<integer>524</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -713,6 +1098,8 @@
 			<integer>545</integer>
 			<key>ImageID</key>
 			<integer>14</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -744,6 +1131,8 @@
 			</array>
 			<key>ID</key>
 			<integer>546</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{534, 461.983}</string>
@@ -782,6 +1171,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>547</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -819,6 +1210,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>548</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -852,6 +1245,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>549</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{403, 386}</string>
@@ -878,6 +1273,8 @@
 			<key>ID</key>
 			<integer>550</integer>
 			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Layer</key>
 			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
@@ -907,6 +1304,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>551</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -961,6 +1360,8 @@
 			<integer>430</integer>
 			<key>ImageID</key>
 			<integer>10</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1213,6 +1614,8 @@
 			</array>
 			<key>ID</key>
 			<integer>388</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1221,6 +1624,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>398</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1254,6 +1659,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>399</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{71, 153}</string>
@@ -1280,6 +1687,8 @@
 			<key>ID</key>
 			<integer>400</integer>
 			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Layer</key>
 			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
@@ -1309,6 +1718,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>401</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1363,6 +1774,8 @@
 			<integer>493</integer>
 			<key>ImageID</key>
 			<integer>12</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1615,6 +2028,8 @@
 			</array>
 			<key>ID</key>
 			<integer>494</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>Bounds</key>
@@ -1623,6 +2038,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>504</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1656,6 +2073,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>505</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{274.5, 153}</string>
@@ -1682,6 +2101,8 @@
 			<key>ID</key>
 			<integer>506</integer>
 			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Layer</key>
 			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
@@ -1711,6 +2132,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>507</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1765,6 +2188,8 @@
 			<integer>475</integer>
 			<key>ImageID</key>
 			<integer>13</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -1793,6 +2218,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>476</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -1833,6 +2260,8 @@
 			</array>
 			<key>ID</key>
 			<integer>477</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 441}</string>
@@ -1871,6 +2300,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>478</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -1911,6 +2342,8 @@
 			</array>
 			<key>ID</key>
 			<integer>479</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 414}</string>
@@ -1949,6 +2382,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>480</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -1989,6 +2424,8 @@
 			</array>
 			<key>ID</key>
 			<integer>481</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 387}</string>
@@ -2027,6 +2464,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>482</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -2067,6 +2506,8 @@
 			</array>
 			<key>ID</key>
 			<integer>483</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 360}</string>
@@ -2105,6 +2546,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>484</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -2145,6 +2588,8 @@
 			</array>
 			<key>ID</key>
 			<integer>485</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 333}</string>
@@ -2183,6 +2628,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>486</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Circle</string>
 			<key>Style</key>
@@ -2223,6 +2670,8 @@
 			</array>
 			<key>ID</key>
 			<integer>487</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{308, 306}</string>
@@ -2261,6 +2710,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>488</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -2294,6 +2745,8 @@
 			<string>LineGraphic</string>
 			<key>ID</key>
 			<integer>489</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Points</key>
 			<array>
 				<string>{138, 386}</string>
@@ -2320,6 +2773,8 @@
 			<key>ID</key>
 			<integer>490</integer>
 			<key>ImageID</key>
+			<integer>1</integer>
+			<key>Layer</key>
 			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
@@ -2349,6 +2804,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>491</integer>
+			<key>Layer</key>
+			<integer>1</integer>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -8847,6 +9304,16 @@
 			<key>Lock</key>
 			<string>NO</string>
 			<key>Name</key>
+			<string>Layer 1</string>
+			<key>Print</key>
+			<string>NO</string>
+			<key>View</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Lock</key>
+			<string>NO</string>
+			<key>Name</key>
 			<string>Result layer</string>
 			<key>Print</key>
 			<string>YES</string>
@@ -8876,7 +9343,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-08-27 20:35:40 +1000</string>
+	<string>2009-11-26 11:46:08 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -8947,7 +9414,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{530, 23}, {797, 947}}</string>
+		<string>{{-1134, 0}, {797, 900}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -8961,15 +9428,15 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{593.125, 173.5}, {81, 97.25}}</string>
+		<string>{{20, 0}, {648, 731}}</string>
 		<key>Zoom</key>
-		<real>8</real>
+		<real>1</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>8</real>
 				<real>1</real>
+				<real>8</real>
 			</array>
 		</array>
 	</dict>

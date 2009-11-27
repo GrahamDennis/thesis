@@ -194,6 +194,38 @@ The simple model considered in this section does not take into account the behav
 \section{Multimode model (in 1D)}
 \label{OpticalPumping:MultimodeModel}
 
+A multimode model for the pumping mechanism considered in this chapter can be obtained by consideration of the Hamiltonian describing the system dynamics.  
+
+
+
+Here we need to describe the general system of equations, the Maxwell-Schrödinger equations.  Describe how they are solved, and then apply them to various systems. Screw the usual method, let's go from the Hamiltonian:
+
+\begin{align}
+    \begin{split}
+        \hat{H} &= \sum_j \int d \bm{x}\, \hat{\Psi}_j^\dagger(\bm{x}) \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_j(\bm{x}) \right] \hat{\Psi}_j(\bm{x}) + \sum_\lambda \int d \bm{k}\, \hbar c \abs{\bm{k}} \hat{\Phi}_\lambda^\dagger(\bm{k}) \hat{\Phi}_\lambda(\bm{k}) \\
+        &\relphantom{=}- \int d \bm{x}\, \hat{\bm{d}}(\bm{x}) \cdot \hat{\bm{E}}(\bm{x})
+    \end{split}
+\end{align}
+
+\begin{align}
+    \hat{\bm{E}}(\bm{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \left[\bm{u}(\bm{k}, \lambda) \left(\frac{\hbar \omega_{\bm{k}}}{2\varepsilon_0} \right)^{\frac{1}{2}} \hat{\Phi}_\lambda(\bm{k}) e^{i \bm{k} \cdot \bm{x}} + \text{h.c.}\right],
+\end{align}
+where $\bm{u}(\bm{k}, \lambda)$ is a unit vector for the corresponding polarisation, $\hat{\Phi}_\lambda(\bm{k})$ is the photon annihilation operator in momentum space for the $\lambda$ polarisation, $\lambda = \pm 1$.
+
+It is important to note that the above Hamiltonian essentially retains spontaneous emission.
+
+We can approximate the above expression in the slowly-varying envelope (SVE) approximation
+\begin{align}
+    \hat{\bm{E}}(\bm{x}) &\approx \sum_\lambda \frac{1}{(2\pi)^{3/2}} \left(\frac{\hbar k_\gamma c}{2\varepsilon_0} \right)^{\frac{1}{2}} \int d \bm{k}\, \left[\bm{u}_\lambda \hat{\Phi}_\lambda(\bm{k}) e^{i \bm{k} \cdot \bm{x}} + \text{h.c.}\right],
+\end{align}
+
+\subsection{Two overlapping condensates model}
+
+\subsection{Atom laser model}
+
+\subsection{3-level model}
+
+\subsection{5-level model}
 The 1D model is based on the Maxwell-Schrödinger equations.  One of the technical difficulties is the fact that we must be able to solve in the case that light is travelling in opposite directions simultaneously.  It is not an issue analytically, the equations are well-defined.  The trouble is solving the system self-consistently.  The equations as posed are stiff and are best treated by implicit algorithms, but the best we have are half-arsed semi-implicit algorithms. Better yet would be to use a finite-element method and treat the cross-propagation properly, but I'm lazy.  The other issue is that the frequency of the light is usually known \emph{a priori}.  That is not the case for at least one of the modes in this system.  We therefore need to use some fancy tricks in order to get around that issue.  However, any detunings should not be too large.
 
 Apart from the Maxwell part of the system of equations, everything else is fairly standard.  Except of course for the 1D reduction itself.  We'll call it a `central-line' approximation.

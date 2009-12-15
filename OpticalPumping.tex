@@ -139,7 +139,7 @@ We begin our theoretical investigation of the pumping mechanism behind the previ
         \frac{d}{dt} c_\text{source} &= -i \Omega^* c_\text{excited} \\
         \frac{d }{dt}c_\text{excited} &= -i \Omega c_\text{source} -i g \alpha c_\text{lasing} - i \Delta c_\text{excited} - \frac{\Gamma}{2} c_\text{excited}\\
         \frac{d }{dt}c_\text{lasing} &= -i g^* \alpha^* c_\text{excited} \\
-        \frac{d }{dt}\alpha &= -i g^* c_\text{lasing}^* c_\text{excited} - \frac{\gamma}{2} \alpha,
+        \frac{d }{dt}\alpha &= -i g^* c_\text{lasing}^* c_\text{excited}^{\phantom{*}} - \frac{\gamma}{2} \alpha,
     \end{align} 
 \end{subequations}
 where $c_\text{source}$, $c_\text{lasing}$ and $c_\text{excited}$ are the amplitudes of the source $\ket{1}$, lasing $\ket{2}$ and excited $\ket{3}$ modes respectively, $\Omega$ is the complex Rabi frequency due to the pumping laser coupling the source and excited modes with detuning $\Delta$, $\alpha$ is the amplitude of the optical mode into which the excited atoms emit when decaying into the lasing mode and $g$ is the complex coupling constant for this transition.  The optical mode $\alpha$ will decay as photons propagate away from the system.  This process is modelled phenomenologically with a loss rate $\gamma$ from the optical mode $\alpha$.  The spontaneous decay of the excited state into modes other than the lasing mode occurs at a rate $\Gamma$.  It has been assumed that the pumping laser is sufficiently strong to be negligibly absorbed.  This assumption is relaxed in \sectionref{OpticalPumping:MultimodeModel}.  The evolution equations \eqref{OpticalPumping:SingleModeModel} are given in a rotating frame in which the energy difference between the source, excited and lasing modes have been appropriately removed.
@@ -191,8 +191,85 @@ The simple model developed in this section can be applied to the continuous pump
 
 The simple model considered in this section does not take into account the behaviour of the emitted photons in the $\alpha$ mode as they traverse the source and/or lasing modes as they leave the system.  The investigation of this and other multimode effects is the subject of the next section and will be shown to lead to modifications of the behaviour described by the simple single-mode model.
 
-\section{Multimode model (in 1D)}
+\section{Multimode model}
 \label{OpticalPumping:MultimodeModel}
+
+The multimode model we use in this chapter to describe the interaction of the BEC with light is similar to the Maxwell-Schrödinger equations \citep{Zobay:2005,Zobay:2006}, however we pursue an alternate derivation here beginning with the Hamiltonian for the system,
+\begin{align}
+    \hat{H} &= \hat{H}_\text{atoms} + \hat{H}_\text{light} + \hat{H}_\text{atoms--light}, \\
+    \begin{split}
+        \hat{H}_\text{atoms} &= \sum_j \int d \bm{x}\, \hat{\Psi}_j^\dagger(\bm{x}) \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_j(\bm{x}) \right] \hat{\Psi}_j(\bm{x}) \\
+        &\relphantom{=} + U \sum_{ij}\int d \bm{x}\, \hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}_j^\dagger(\bm{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\bm{x}) \hat{\Psi}_i^{\phantom{\dagger}}(\bm{x}),
+    \end{split}\\
+    \hat{H}_\text{light} &= \sum_\lambda \int d \bm{k}\, \hbar c \abs{\bm{k}} \hat{\Phi}_\lambda^\dagger(\bm{k}) \hat{\Phi}_\lambda(\bm{k}), \\
+    \hat{H}_\text{atoms--light} &= - \int d \bm{x}\, \hat{\bm{d}}(\bm{x}) \cdot \hat{\bm{E}}(\bm{x}),
+    \label{OpticalPumping:AtomLightHamiltonian}
+\end{align}
+where $\hat{\Psi}_j(\bm{x})$ is the atomic field operator for the internal atomic state $j$, $\hat{\Phi}_\lambda(\bm{k})$ is the field operator for photons of polarisation $\lambda$, the atomic dipole operator is
+\begin{align}
+    \hat{\bm{d}}(\bm{x}) &= \sum_{ij}\bm{d}_{ij} \hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\bm{x}),
+\end{align}
+where $\bm{d}_{ij} = e\left<i\middle|\bm{r}\middle|j\right>$ is the dipole matrix element for the atomic transition $i \leftrightarrow j$ (which may all be chosen to be real if we restrict ourselves to a single electronic transition such as the alkali D$_2$ line considered in this chapter\footnote{FIXME: Cite something.}), and the electric field operator is given by
+\begin{align}
+    \hat{\bm{E}}(\bm{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \left[\bm{u}_\lambda(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2\varepsilon_0} \right)^{\frac{1}{2}} \hat{\Phi}_\lambda(\bm{k}) e^{i \bm{k} \cdot \bm{x}} + \text{h.c.}\right],
+\end{align}
+where $\bm{u}_\lambda(\bm{k})$ is the electric polarisation unit vector for polarisation $\lambda$.
+
+The Hamiltonian \eqref{OpticalPumping:AtomLightHamiltonian} describes the full dynamics of the system including the spontaneous decay of excited atomic levels due to coupling to empty photon modes.  In a semiclassical model, this spontaneous emission process can be approximated by including the exponential decay of the excited atomic levels.  In order to obtain a semiclassical mean-field model, we first derive the Heisenberg evolution equations for the operators
+
+\begin{subequations}
+    \label{OpticalPumping:HeisenbergEvolution}
+    \begin{align}
+        i \hbar \frac{\partial}{\partial t} \hat{\Psi}_j(\bm{x}) &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V_j(\bm{x}) + U\sum_i\hat{\Psi}_i^\dagger(\bm{x})\hat{\Psi}_i^{\phantom{\dagger}}(\bm{x})\right)\hat{\Psi}_j(\bm{x}) - \sum_{i} \bm{d}_{ij} \cdot \hat{\bm{E}}(\bm{x}) \hat{\Psi}_i(\bm{x}),\\
+        i \hbar \frac{\partial}{\partial t} \hat{\Phi}_\lambda(\bm{k}) &= \hbar c \abs{\bm{k}} \hat{\Phi}_\lambda(\bm{k}) - \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{k}) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \hat{\bm{d}}(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right).
+    \end{align}
+\end{subequations}
+
+In applying the mean-field approximation to \eqref{OpticalPumping:HeisenbergEvolution}, the spontaneous emission process induced by vacuum fluctuations will be neglected.  This contribution can be reintroduced in the form of a loss process to atoms in internal excited states.  Due to the mean-field approximation, these atoms must necessarily be assumed to be lost from the system.  The contribution due to spontaneous emission will be reintroduced at a later stage, we omit it for the present.
+
+Applying the mean-field approximation to \eqref{OpticalPumping:HeisenbergEvolution} yields identical equations with the operator hats omitted.  The next step is to make the rotating wave approximation by denoting $\bm{E}(\bm{x}) = \bm{E}_+(\bm{x}) + \bm{E}_-(\bm{x}) = \bm{E}_+^{\phantom{*}}(\bm{x}) + \bm{E}_+^*(\bm{x})$.  However, in order to clarify the application of the RWA, we must separate the atomic states $j$ into ground (hereafter denoted without a prime as $\Psi_j(\bm{x})$) and excited (denoted with a prime as $\Psi'_j(\bm{x})$).
+
+\begin{subequations}
+    \label{OpticalPumping:MeanFieldRWAEvolution}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2\right) \Psi_j(\bm{x}) \\
+            &\relphantom{=}- \sum_i \bm{d}_{ij} \cdot \left[ \sum_\lambda \frac{1}{(2\pi)^{3/2}}\int d \bm{k}\, \bm{u}_\lambda^*(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi_\lambda^*(\bm{k}) \Psi'_i(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right]
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi'_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2\right) \Psi'_j(\bm{x}) \\
+            &\relphantom{=}- \sum_i \bm{d}_{ij} \cdot \left[ \sum_\lambda \frac{1}{(2\pi)^{3/2}}\int d \bm{k}\, \bm{u}_\lambda(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Psi^*_i(\bm{x}) \Phi_\lambda(\bm{k})  e^{i \bm{k} \cdot \bm{x}} \right]
+        \end{split}\\
+        i \hbar \frac{\partial}{\partial t} \Phi_\lambda(\bm{k}) &= \hbar c \abs{\bm{k}} \Phi_\lambda(\bm{k}) - \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{k}) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \sum_{ij}\bm{d}_{ij} \Psi^*_i(\bm{x}) \Psi'_j(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right).
+    \end{align}
+\end{subequations}
+where the mean-field of the excited atoms has been neglected.  Hooray.  Next we separate the electric field and apply the SVE approximation. So we then have a bunch of $\Phi_{\bm{k}_0,\lambda}(\bm{k})$'s, each centred around a $\bm{k}_0$. At this point we approximate the $\omega_{\bm{k}}\approx \omega_{\bm{k}_0}$ also the time and phase variation must be removed at this point, requiring the removal of appropriate terms from the atomic fields.  Then we reduce to 1D, allowing us to inverse fourier transform the $\Phi_{\bm{k}_0, \lambda}(\bm{k})$.  Finally we neglect retardation effects to remove the time derivatives.  Then we have our 1D multimode Maxwell-Schrödinger equations.  Oh, and we need to re-introduce loss.  Then we can adiabatically eliminate the excited states to obtain our model of the system.  As if that is not complicated.
+
+This spontaneous emission process can be approximated by including the decay of the excited levels in a 
+
+This spontaneous emission process is well-described
+
+
+This spontaneous emission process is well-described by the 
+
+
+
+To approximate this system we will treat the electric field as having a finite number of highly-occupied contributions with the remaining electric field modes causing the spontaneous decay of all excited atomic levels.  The spontaneous decay will be introduced in the usual way at a later stage; we continue focusing on the photon modes.
+
+
+
+The multimode model we use in this chapter to describe the interaction of the BEC with the optical fields is similar to the Maxwell-Schrödinger equations \citep{Zobay:2005,Zobay:2006}, however we pursue a different derivation here beginning with / starting from the Hamiltonian for the system.
+
+
+from consideration o the Hamiltonian describing the atoms, light and their interaction.  Perhaps a different lead-in.
+
+The multimode model describing the interaction of atoms and light 
+
+
+A multimode model for the pumping mechanism considered in this chapter can be obtained by consideration of the Hamiltonian describing the atoms, light and their interaction.
+
+
+
 
 A multimode model for the pumping mechanism considered in this chapter can be obtained by consideration of the Hamiltonian describing the system dynamics.  
 

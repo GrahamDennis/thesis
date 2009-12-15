@@ -1,4 +1,4 @@
-\begin{thebibliography}{105}
+\begin{thebibliography}{107}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -625,6 +625,18 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~E.}
   \bibnamefont{Wieman}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{78}}, \bibinfo{pages}{586} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Zobay and Nikolopoulos}(2005)}]{Zobay:2005}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Zobay}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{041604} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Zobay and Nikolopoulos}(2006)}]{Zobay:2006}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Zobay}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{013620} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
   Zaremba, and Stoof}}]{Bijlsma:2000}

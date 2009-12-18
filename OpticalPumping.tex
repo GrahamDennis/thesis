@@ -200,18 +200,18 @@ The multimode model we use in this chapter to describe the interaction of the BE
     \begin{align}
         \hat{H} &= \hat{H}_\text{atoms} + \hat{H}_\text{light} + \hat{H}_\text{atoms--light}, \\
         \begin{split}
-            \hat{H}_\text{atoms} &= \sum_j \int d \bm{x}\, \hat{\Psi}_j^\dagger(\bm{x}) \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_j(\bm{x}) \right] \hat{\Psi}_j(\bm{x}) \\
+            \hat{H}_\text{atoms} &= \sum_i \int d \bm{x}\, \hat{\Psi}_i^\dagger(\bm{x}) \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_i(\bm{x}) \right] \hat{\Psi}_i(\bm{x}) \\
             &\relphantom{=} + U \sum_{ij}\int d \bm{x}\, \hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}_j^\dagger(\bm{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\bm{x}) \hat{\Psi}_i^{\phantom{\dagger}}(\bm{x}),
         \end{split}\\
         \hat{H}_\text{light} &= \sum_\lambda \int d \bm{k}\, \hbar c \abs{\bm{k}} \hat{\Phi}_\lambda^\dagger(\bm{k}) \hat{\Phi}_\lambda(\bm{k}), \\
         \hat{H}_\text{atoms--light} &= - \int d \bm{x}\, \hat{\bm{d}}(\bm{x}) \cdot \hat{\bm{E}}(\bm{x}), \label{OpticalPumping:AtomLightCouplingHamiltonian}
     \end{align}
 \end{subequations}
-where $\hat{\Psi}_j(\bm{x})$ is the atomic field operator for the internal atomic state $j$, $\hat{\Phi}_\lambda(\bm{k})$ is the field operator for photons of polarisation $\lambda$, the atomic dipole operator is
+where $\hat{\Psi}_i(\bm{x})$ is the atomic field operator for the internal atomic state $i$, $\hat{\Phi}_\lambda(\bm{k})$ is the field operator for photons of polarisation $\lambda$, the atomic dipole operator is
 \begin{align}
     \hat{\bm{d}}(\bm{x}) &= \sum_{ij}\bm{d}_{ij} \hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\bm{x}),
 \end{align}
-where $\bm{d}_{ij} = e\left<i\middle|\bm{r}\middle|j\right>$ is the dipole matrix element for the atomic transition $i \leftrightarrow j$ (which may all be chosen to be real if we restrict ourselves to a single electronic transition such as the alkali D$_2$ line considered in this chapter\footnote{FIXME: Cite something.  Or explain the reason.  Basically, it's because what matters is the reduced matrix element $\left<J\middle\|e \bm{r} \middle\|J'\right>$, with everything else just Clebsch-Gordan coefficients multiplied by this matrix element.  This one matrix element may be chosen real simply by absorbing the phase into the electric field.}), and the electric field operator is given by
+where $\bm{d}_{ij} = -e\left<i\middle|\bm{r}\middle|j\right> = \bm{d}^*_{ji}$ is the dipole matrix element for the atomic transition $i \leftrightarrow j$, and the electric field operator is given by
 \begin{align}
     \hat{\bm{E}}(\bm{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \left[\bm{u}_\lambda(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2\varepsilon_0} \right)^{\frac{1}{2}} \hat{\Phi}_\lambda(\bm{k}) e^{i \bm{k} \cdot \bm{x}} + \text{h.c.}\right],
 \end{align}
@@ -225,7 +225,7 @@ In order to obtain a semiclassical mean-field model, we first derive the Heisenb
 \begin{subequations}
     \label{OpticalPumping:HeisenbergEvolution}
     \begin{align}
-        i \hbar \frac{\partial}{\partial t} \hat{\Psi}_j(\bm{x}) &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V_j(\bm{x}) + U\sum_i\hat{\Psi}_i^\dagger(\bm{x})\hat{\Psi}_i^{\phantom{\dagger}}(\bm{x})\right)\hat{\Psi}_j(\bm{x}) - \sum_{i} \bm{d}_{ij} \cdot \hat{\bm{E}}(\bm{x}) \hat{\Psi}_i(\bm{x}),\\
+        i \hbar \frac{\partial}{\partial t} \hat{\Psi}_i(\bm{x}) &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V_i(\bm{x}) + U\sum_j\hat{\Psi}_j^\dagger(\bm{x})\hat{\Psi}_j^{\phantom{\dagger}}(\bm{x})\right)\hat{\Psi}_i(\bm{x}) - \sum_{j} \bm{d}_{ij} \cdot \hat{\bm{E}}(\bm{x}) \hat{\Psi}_j(\bm{x}),\\
         i \hbar \frac{\partial}{\partial t} \hat{\Phi}_\lambda(\bm{k}) &= \hbar c \abs{\bm{k}} \hat{\Phi}_\lambda(\bm{k}) - \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{k}) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \hat{\bm{d}}(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right).
     \end{align}
 \end{subequations}
@@ -237,75 +237,90 @@ Our next approximation is to neglect the fast-rotating parts of the atom--light 
     \bm{E}_+(\bm{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \bm{u}_\lambda(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi_\lambda(\bm{k}) e^{i \bm{k} \cdot \bm{x}},\\
     \bm{E}^{\phantom{*}}_-(\bm{x}) &= \bm{E}_+^*(\bm{x}) = \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \bm{u}^*_\lambda(\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi^*_\lambda(\bm{k}) e^{-i \bm{k} \cdot \bm{x}},
 \end{align}
-where $\bm{E}_+(\bm{x})$ contains the positive frequency terms rotating as $e^{-i \omega_{\bm{k}} t}$, and $\bm{E}_-(\bm{x})$ contains the negative frequency terms $e^{i \omega_{\bm{k}} t}$.  In order to clarify the application of the RWA, we must separate the atomic states $j$ into ground [hereafter denoted without a prime, $\Psi_j(\bm{x})$] and excited [denoted with a prime, $\Psi'_j(\bm{x})$] states.  The RWA is equivalent to retaining only the energy-conserving terms $\hat{\bm{E}}_+^\dagger(\bm{x})\hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}'_j(\bm{x})$ (and their Hermitian-conjugates) of the atom--light coupling Hamiltonian \eqref{OpticalPumping:AtomLightCouplingHamiltonian}.  
+where $\bm{E}_+(\bm{x})$ contains the positive frequency terms rotating as $e^{-i \omega_{\bm{k}} t}$, and $\bm{E}_-(\bm{x})$ contains the negative frequency terms $e^{i \omega_{\bm{k}} t}$.  In order to clarify the application of the RWA, we must separate the atomic states $j$ into ground [hereafter denoted without a prime, $\Psi_i(\bm{x})$] and excited [denoted with a primed index, $\Psi_{i'}(\bm{x})$] states.  The RWA is equivalent to retaining only the energy-conserving terms $\hat{\bm{E}}_+^\dagger(\bm{x})\hat{\Psi}_i^\dagger(\bm{x}) \hat{\Psi}_{j'}(\bm{x})$ (and their Hermitian-conjugates) of the atom--light coupling Hamiltonian \eqref{OpticalPumping:AtomLightCouplingHamiltonian}.  
 
 Making the rotating wave approximation, the equations of motion for the mean-field become
 \begin{subequations}
     \label{OpticalPumping:MeanFieldRWAEvolution}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2\right) \Psi_j(\bm{x})\\
-            &\relphantom{=} - \sum_i \bm{d}_{ij} \cdot \bm{E}_+^*(\bm{x}) \Psi'_i(\bm{x})
+            i \hbar \frac{\partial}{\partial t} \Psi_i(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\bm{x}) + U \sum_j \abs{\Psi_j(\bm{x})}^2\right) \Psi_i(\bm{x})\\
+            &\relphantom{=} - \sum_{j'} \bm{d}_{ij'} \cdot \bm{E}_+^*(\bm{x}) \Psi_{j'}(\bm{x})
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi'_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2 - \frac{i\hbar \Gamma}{2}\right) \Psi'_j(\bm{x})\\
-            &\relphantom{=} - \sum_i \bm{d}_{ij} \cdot \bm{E}_+(\bm{x}) \Psi_i(\bm{x}) 
+            i \hbar \frac{\partial}{\partial t} \Psi_{i'}(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\bm{x}) + U \sum_j \abs{\Psi_j(\bm{x})}^2 - \frac{i\hbar \Gamma}{2}\right) \Psi_{i'}(\bm{x})\\
+            &\relphantom{=} - \sum_j \bm{d}_{i'j} \cdot \bm{E}_+(\bm{x}) \Psi_j(\bm{x}) 
         \end{split}\\
-        i \hbar \frac{\partial}{\partial t} \Phi_\lambda(\bm{k}) &= \hbar c \abs{\bm{k}} \Phi_\lambda(\bm{k}) - \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{k}) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \sum_{ij}\bm{d}_{ij} \Psi^*_i(\bm{x}) \Psi'_j(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right). \label{OpticalPumping:MeanFieldPhotonRWAEvolution}
+        i \hbar \frac{\partial}{\partial t} \Phi_\lambda(\bm{k}) &= \hbar c \abs{\bm{k}} \Phi_\lambda(\bm{k}) - \left(\frac{\hbar \omega_{\bm{k}}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{k}) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \sum_{ij'}\bm{d}_{ij'} \Psi^*_i(\bm{x}) \Psi_{j'}(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right). \label{OpticalPumping:MeanFieldPhotonRWAEvolution}
     \end{align}
 \end{subequations}
 where the damping of the excited atoms due to spontaneous emission at a rate $\Gamma$ has been included, and the density of the excited atoms has been neglected in the $s$-wave interaction term.
 
-Our next approximation is to recognise that most of the photon modes will be empty; the photon field will only be nonzero near a finite set of wavenumbers $\{\bm{q}_n\}$.  In the case of the experiment described in \sectionref{OpticalPumping:ContinuousExperiment}, only those modes excited by the optical pumping laser or emitted as atoms undergo stimulated transitions into the target condensate will be occupied.  There will also be some small range of wavenumbers occupied around each of these due to spatial variations in the strength of these fields.  If we assume that the spatial envelope of each of these occupied modes varies on a length scale much larger than the wavelength (the slowly-varying envelope approximation), then only modes within $\delta k \ll \abs{\bm{q_n}}$ will be significantly occupied.
+Our next approximation is to recognise that most of the photon modes will be empty; the photon field will only be nonzero near a finite set of wavenumbers $\bm{q}_n$ (for corresponding polarisations $\lambda_n$).  In the case of the experiment described in \sectionref{OpticalPumping:ContinuousExperiment}, only those modes excited by the optical pumping laser or emitted as atoms undergo stimulated transitions into the target condensate will be occupied.  There will also be some small range of wavenumbers occupied around each of these due to spatial variations in the strength of these fields.  If we assume that the spatial envelope of each of these occupied modes varies on a length scale much larger than the wavelength (the slowly-varying envelope approximation), then only modes within $\delta k \ll \abs{\bm{q_n}}$ will be significantly occupied.
 
 If the occupied photon modes $\bm{q}_n$ are sufficiently separated, the photon and electric field may be decomposed as
 \begin{align}
-    \Phi_\lambda(\bm{k}) &= \sum_n \Phi_{\lambda,\bm{q}_n}(\bm{k}), \\
-    \bm{E}_+(\bm{x}) &= \sum_q \bm{E}_{+,\bm{q}_n}(\bm{x}).
+    \Phi_\lambda(\bm{k}) &= \sum_n \delta_{\lambda, \lambda_n} \Phi_{\lambda_n,\bm{q}_n}(\bm{k}), \\
+    \bm{E}_+(\bm{x}) &= \sum_n \bm{E}_{+,\bm{q}_n}(\bm{x}),
 \end{align}
+where $\delta_{ij}$ is the Kronecker delta.
 
 Making an approximation, the electric field components can now be written as
 \begin{align}
-    \bm{E}_{+, \bm{q}_n}(\bm{x}) &= \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \bm{u}_{\lambda_n} (\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2\varepsilon_0}\right) \Phi_{\lambda_n, \bm{q}_n}(\bm{k}) e^{i \bm{k}\cdot \bm{x}}\\
+    \bm{E}_{+, \bm{q}_n}(\bm{x}) &= \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \bm{u}_{\lambda_n} (\bm{k}) \left(\frac{\hbar \omega_{\bm{k}}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \bm{q}_n}(\bm{k}) e^{i \bm{k}\cdot \bm{x}}\\
     &\approx \frac{1}{(2\pi)^{3/2}} \int d \bm{k}\, \bm{u}_{\lambda_n}(\bm{q}_n) \left( \frac{\hbar \omega_{\bm{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \bm{q}_n}(\bm{k}) e^{i \bm{k}\cdot \bm{x}}\\
-   &= \bm{u}_{\lambda_n}(\bm{q}_n) \left( \frac{\hbar \omega_{\bm{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \bm{q}_n} (\bm{x}),
+   &= \bm{u}_{\lambda_n}(\bm{q}_n) \left( \frac{\hbar \omega_{\bm{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \bm{q}_n} (\bm{x}) \\
+   &= \bm{u}_{\lambda_n}(\bm{q}_n) E_{+, \bm{q}_n}(\bm{x})
 \end{align}
-where $\Phi_{\lambda_n, \bm{q}_n}(\bm{x})$ is the inverse Fourier-transform of $\Phi_{\lambda_n, \bm{q}_n}(\bm{k})$.
+where $\Phi_{\lambda_n, \bm{q}_n}(\bm{x})$ is the inverse Fourier-transform of $\Phi_{\lambda_n, \bm{q}_n}(\bm{k})$, and $E_{+, \bm{q}_n}(\bm{x})$ is
+\begin{align}
+    E_{+, \bm{q}_n}(\bm{x}) &= \left( \frac{\hbar \omega_{\bm{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \bm{q}_n}(\bm{x}).
+\end{align}
 
-To obtain separate dynamical equations for each of the $\Phi_{\lambda, \bm{q}_n}(\bm{k})$ the contribution of the atomic coupling terms of \eqref{OpticalPumping:MeanFieldPhotonRWAEvolution} to the evolution of $\Phi_\lambda(\bm{k})$ must be split amongst the evolution equations for the $\Phi_{\lambda, \bm{q}_n}(\bm{k})$.  In the case that each atomic transition is only energy resonant with a single optical mode $\bm{q}_n$, the splitting is obvious.  It could also be the case that two or more optical modes may be energy resonant with a single atomic transition; this case is more complicated.  If the two resonant optical modes are $\pm \bm{q}_n$ (most common case, consider Bragg reflection of a laser by a condensate), then the contribution of the atomic modes can be filtered using a projector.
+To obtain separate dynamical equations for each of the $\Phi_{\lambda_n, \bm{q}_n}(\bm{k})$ the contribution of the atomic coupling terms of \eqref{OpticalPumping:MeanFieldPhotonRWAEvolution} to the evolution of $\Phi_\lambda(\bm{k})$ must be split amongst the evolution equations for the $\Phi_{\lambda_n, \bm{q}_n}(\bm{k})$.  In the case that each atomic transition is only energy resonant with a single optical mode $\bm{q}_n$, the splitting is obvious.  It could also be the case that two or more optical modes may be energy resonant with a single atomic transition; this case is more complicated.  If the two resonant optical modes are $\pm \bm{q}_n$ (most common case, consider Bragg reflection of a laser by a condensate), then the contribution of the atomic modes can be filtered using a projector.
 
 The new equations become
 \begin{subequations}
     \label{OpticalPumping:MeanFieldRWAEvolutionSeparatedOpticalFields}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2\right) \Psi_j(\bm{x})\\
-            &\relphantom{=} - \sum_{i,n} \bm{d}_{ij} \cdot \bm{E}_{+,\bm{q}_n}^*(\bm{x}) \Psi'_i(\bm{x})
+            i \hbar \frac{\partial}{\partial t} \Psi_i(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\bm{x}) + U \sum_j \abs{\Psi_j(\bm{x})}^2\right) \Psi_i(\bm{x})\\
+            &\relphantom{=} - \sum_{j',n} \bm{d}_{ij'} \cdot \bm{u}^*_{\lambda_n}(\bm{q}_n) {E}_{+,\bm{q}_n}^*(\bm{x}) \Psi_{j'}(\bm{x})
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi'_j(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_j(\bm{x}) + U \sum_i \abs{\Psi_i(\bm{x})}^2 - \frac{i\hbar \Gamma}{2}\right) \Psi'_j(\bm{x})\\
-            &\relphantom{=} - \sum_{i,n} \bm{d}_{ij} \cdot \bm{E}_{+,\bm{q}_n}(\bm{x}) \Psi_i(\bm{x}) 
+            i \hbar \frac{\partial}{\partial t} \Psi_{i'}(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\bm{x}) + U \sum_j \abs{\Psi_j(\bm{x})}^2 - \frac{i\hbar \Gamma}{2}\right) \Psi_{i'}(\bm{x})\\
+            &\relphantom{=} - \sum_{j,n} \bm{d}_{i'j} \cdot \bm{u}_{\lambda_n}(\bm{q}_n) {E}_{+,\bm{q}_n}(\bm{x}) \Psi_{j}(\bm{x}) 
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Phi_{\lambda, \bm{q}_n}(\bm{k}) &= \hbar c \abs{\bm{k}} \Phi_{\lambda,\bm{q}_n}(\bm{k}) \\
-            &\relphantom{=} - \theta(\bm{q}_n \cdot \bm{k}) \left(\frac{\hbar \omega_{\bm{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_\lambda^*(\bm{q}_n) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \sum_{\{i,j\}\in T_n}\bm{d}_{ij} \Psi^*_i(\bm{x}) \Psi'_j(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right).
+            i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \bm{q}_n}(\bm{k}) &= \hbar c \abs{\bm{k}} \Phi_{\lambda_n,\bm{q}_n}(\bm{k}) \\
+            &\relphantom{=} - \left(\frac{\hbar \omega_{\bm{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_{\lambda_n}^*(\bm{q}_n) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \bm{x}\, \sum_{\{i,j'\}\in T_n}\bm{d}_{ij'} \Psi^*_i(\bm{x}) \Psi_{j'}(\bm{x}) e^{-i \bm{k} \cdot \bm{x}} \right).
         \end{split}
     \end{align}
 \end{subequations}
-where the Heaviside step function $\theta(x)$ restricts stuff, oh and we have made a couple of approximations in the last equation similar to those made earlier.
+where we have made a couple of approximations in the last equation similar to those made earlier. Also, the above equation for $\Phi_{\lambda_n, \bm{q}_n}$ may only be nonzero for $\bm{q}_n \cdot \bm{k} > 0$
 While it may seem that we have unnecessarily complicated the problem by separating one equation (two really) for the optical field into many for each significantly occupied mode, this complication will enable the use of significant simplifications later.
 
 Perhaps we don't need the step function above, we could simply say that the $\Phi_{\lambda, \bm{q}_n}(\bm{k})$ may only be non-zero for $\bm{q}_n \cdot \bm{k} > 0$.  Perhaps a simpler method.
 
-We should now be able to do an inverse Fourier transform. We can once we approximate $\abs{\bm{k}} \approx \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \bm{k}$. Then we obtain
+We should now be able to do an inverse Fourier transform. We can once we approximate $\abs{\bm{k}} \approx \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \bm{k}$,
 \begin{align}
-    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda, \bm{q}_n}(\bm{x}) &= -i \hbar c \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \nabla \Phi_{\lambda, \bm{q}_n}(\bm{x}) - \left(\frac{\hbar \omega_{\bm{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_{\lambda}^*(\bm{q}_n) \cdot \sum_{\{i,j\} \in T_n} \bm{d}_{ij} \Psi^*_i(\bm{x}) \Psi'_j(\bm{x})
+    \abs{\bm{k}} &= \abs{\bm{q}_n + \delta \bm{k}}\\
+    &\approx \sqrt{\abs{\bm{q}_n}^2 + 2 \bm{q}_n \cdot \delta \bm{k}} = \abs{\bm{q}_n} \sqrt{1 + \frac{2 \bm{q}_n \cdot \delta \bm{k}}{\abs{\bm{q}_n}^2}}\\
+    &\approx \abs{\bm{q}_n} + \frac{\bm{q}_n \cdot \delta \bm{k}}{\abs{\bm{q}_n}} = \abs{\bm{q}_n} + \frac{\bm{q}_n \cdot \left(\bm{k} - \bm{q}_n\right)}{\abs{\bm{q}_n}}\\
+    &= \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \bm{k}
 \end{align}
-Hooray.  We have made an approximation in here because we haven't correctly projected the atomic source term in the above equation.  However, the contributions will be $2 \bm{q}_n$ out of resonance, and so will average to zero over half a wavelength. Note that the above equation without the source term is the transport equation in the direction of ${\bm{q}_n}$ with speed $c$.  Next we turn it into a propagation equation for the electric field $\bm{E}_{+,\bm{q}_n}$,
+ Then we obtain
 \begin{align}
-    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \bm{q}_n} (\bm{x}) &= - \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \nabla E_{+, \bm{q}_n}(\bm{x}) + i \frac{\hbar \abs{\bm{q}_n}}{2 \varepsilon_0} \bm{u}^*_{\lambda_n}(\bm{q}_n) \cdot \sum_{\{i,j\}\in T_n} \frac{\bm{d}_{ij}}{\hbar} \Psi^*_i(\bm{x}) \Psi'_j(\bm{x})
+    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \bm{q}_n}(\bm{x}) &= -i \hbar c \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \nabla \Phi_{\lambda_n, \bm{q}_n}(\bm{x}) - \left(\frac{\hbar \omega_{\bm{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \bm{u}_{\lambda_n}^*(\bm{q}_n) \cdot \sum_{\{i,j'\} \in T_n} \bm{d}_{ij'} \Psi^*_i(\bm{x}) \Psi_{j'}(\bm{x})
 \end{align}
-we need to define $\bm{E}_{+, \bm{q}_n} = \bm{u}_{\lambda_n}(\bm{q}_n) E_{+, \bm{q}_n}$ and probably earlier.
+Hooray.  We have made an approximation in here because we haven't correctly projected the atomic source term in the above equation.  However, the contributions will be $2 \bm{q}_n$ out of resonance, and so will average to zero over half a wavelength. Note that the above equation without the source term is the transport equation in the direction of ${\bm{q}_n}$ with speed $c$.  Next we turn it into a propagation equation for the electric field ${E}_{+,\bm{q}_n}$,
+\begin{align}
+    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \bm{q}_n} (\bm{x}) &= - \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \nabla E_{+, \bm{q}_n}(\bm{x}) + i \frac{\hbar \abs{\bm{q}_n}}{2 \varepsilon_0} \bm{u}^*_{\lambda_n}(\bm{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\bm{d}_{ij'}}{\hbar} \Psi^*_i(\bm{x}) \Psi_{j'}(\bm{x})
+\end{align}
+
+Next we need to move into appropriate rotating frames for all states.  That means including possible detunings. For the excited states, that's well-defined.  What about for the lower states too?  What is required in order to be able to go into these appropriate rotating frames is that all photons coupling to a given excited state all couple to essentially the same detuning.  This is guaranteed in our system because only one set of photons are supplied to the system.  The others are generated spontaneously.  The other way to go into an appropriate rotating frame is to define all detunings relative to an original level (but we still need consistency on all photons coupling a given level).  How does all of this mix with RF outcoupling and the associated detunings?
+
+Rotate as $\Psi_{i} = \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}$, $\Psi_{i'} = \widetilde{\Psi}_{i'} e^{-i (\omega_{i'} - \Delta_{i'})t}$, $E_{+,\bm{q}_n} = \widetilde{E}_{+, \bm{q}_n} e^{-i \omega_{\bm{q}_n}t}$.
 
 I can't say anything about ${\pi\slashed{\pi}}\bar{\pi}$ We need to be able to separate the optical field equation of motion.  I suspect that means that we need to assign $\left(i, j\right)$ pairs to $\bm{q}_i$ values.  There is also a question about sign... i.e. what is the distinction between $\pm \bm{q}_i$?
 

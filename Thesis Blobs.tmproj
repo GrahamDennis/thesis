@@ -46,7 +46,7 @@
 			<key>filename</key>
 			<string>OpticalPumping.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-16T23:59:21Z</date>
+			<date>2009-12-24T08:46:10Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -146,14 +146,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>219</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>322</integer>
+				<integer>327</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>297</integer>
+			<integer>325</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
@@ -253,6 +253,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{441, 108}, {992, 900}}</string>
+	<string>{{292, 0}, {978, 832}}</string>
 </dict>
 </plist>

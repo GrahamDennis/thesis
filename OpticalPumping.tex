@@ -320,7 +320,49 @@ Hooray.  We have made an approximation in here because we haven't correctly proj
 
 Next we need to move into appropriate rotating frames for all states.  That means including possible detunings. For the excited states, that's well-defined.  What about for the lower states too?  What is required in order to be able to go into these appropriate rotating frames is that all photons coupling to a given excited state all couple to essentially the same detuning.  This is guaranteed in our system because only one set of photons are supplied to the system.  The others are generated spontaneously.  The other way to go into an appropriate rotating frame is to define all detunings relative to an original level (but we still need consistency on all photons coupling a given level).  How does all of this mix with RF outcoupling and the associated detunings?
 
-Rotate as $\Psi_{i} = \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}$, $\Psi_{i'} = \widetilde{\Psi}_{i'} e^{-i (\omega_{i'} - \Delta_{i'})t}$, $E_{+,\bm{q}_n} = \widetilde{E}_{+, \bm{q}_n} e^{-i \omega_{\bm{q}_n}t}$.
+Rotate as $\Psi_{i} = \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}$, $\Psi_{i'} = \widetilde{\Psi}_{i'} e^{-i (\omega_{i'} - \Delta_{i'})t}$, $E_{+,\bm{q}_n} = \widetilde{E}_{+, \bm{q}_n} e^{-i \omega_{\bm{q}_n}t}$. Spatial phase rotation for the electric fields? --- No.
+
+\begin{subequations}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\bm{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\bm{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\bm{x})\\
+            &\relphantom{=} - \sum_{j',n} \bm{d}_{ij'} \cdot \bm{u}^*_{\lambda_n}(\bm{q}_n) \widetilde{E}_{+,\bm{q}_n}^*(\bm{x}) \widetilde{\Psi}_{j'}(\bm{x}) e^{-i (\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) - \omega_{\bm{q}_n})t}
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_{i'}(\bm{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\bm{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\bm{x})}^2 - \frac{i\hbar \Gamma}{2} - \hbar \omega_{i'} + \hbar \Delta_{i'}\right) \widetilde{\Psi}_{i'}(\bm{x})\\
+            &\relphantom{=} - \sum_{j,n} \bm{d}_{i'j} \cdot \bm{u}_{\lambda_n}(\bm{q}_n) \widetilde{E}_{+,\bm{q}_n}(\bm{x}) \widetilde{\Psi}_{j}(\bm{x})  e^{-i (\omega_{j} - \Delta_j - (\omega_{i'} - \Delta_{i'}) + \omega_{\bm{q}_n})t}
+        \end{split}\\
+        \begin{split}
+          \frac{1}{c} \frac{\partial}{\partial t} \widetilde{E}_{+, \bm{q}_n} (\bm{x}) &= - \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \nabla \widetilde{E}_{+, \bm{q}_n}(\bm{x}) + i \abs{\bm{q}_n} \widetilde{E}_{+, \bm{q}_n}(\bm{x})\\
+          &\relphantom{=} + i \frac{\hbar \abs{\bm{q}_n}}{2 \varepsilon_0} \bm{u}^*_{\lambda_n}(\bm{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\bm{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i(\bm{x}) \widetilde{\Psi}_{j'}(\bm{x}) e^{-i (\omega_{j'} - \Delta_{j'} -\omega_i + \Delta_i - \omega_{\bm{q}_n})t}
+        \end{split}
+    \end{align}
+\end{subequations}
+
+$\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\bm{q}_n} \forall \; \{i, j'\} \in T_n$? 
+
+The frame transformation we wish to make is
+\begin{align}
+  \bm{x}' &= \bm{x} \\
+  t' &= t - \frac{1}{c} \frac{\bm{q}_n \cdot \bm{x}}{\abs{\bm{q}_n}} 
+\end{align}
+This means that
+\begin{align}
+  \frac{\partial}{\partial t} &= \frac{\partial }{\partial t'}\\
+  \nabla_{\bm{x}} &= \left(\nabla_{\bm{x}} t'\right) \frac{\partial }{\partial t'} + \nabla_{\bm{x}'}\\
+  &= - \frac{1}{c} \frac{\bm{q}_n}{\abs{\bm{q}_n}}\frac{\partial}{\partial t'} + \nabla_{\bm{x}'}
+\end{align}
+This gives our equation for $\widetilde{E}_{+, \bm{q}_n}$ as
+\begin{align}
+  \begin{split}
+    \frac{1}{c} \frac{\partial}{\partial t'} \widetilde{E}_{+, \bm{q}_n} (\bm{x}', t') &= - \frac{\bm{q}_n}{\abs{\bm{q}_n}} \cdot \left(- \frac{1}{c} \frac{\bm{q}_n}{ \abs{\bm{q}_n}} \frac{\partial}{\partial t'} + \nabla_{\bm{x}'} \right) \widetilde{E}_{+, \bm{q}_n}(\bm{x}', t') + i \abs{\bm{q}_n} \widetilde{E}_{+, \bm{q}_n}(\bm{x}', t')\\
+    &\relphantom{=} + i \frac{\hbar \abs{\bm{q}_n}}{2 \varepsilon_0} \bm{u}^*_{\lambda_n}(\bm{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\bm{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left[\bm{x}', t(\bm{x}', t')\right] \widetilde{\Psi}_{j'}\left(\bm{x}', t(\bm{x}', t')\right)
+  \end{split}
+\end{align}
+
+
+
+Then we do a frame transform for each $\bm{q}_n$.  Really only works for one... how can we justify this for each and every direction (in our case, just two).
 
 I can't say anything about ${\pi\slashed{\pi}}\bar{\pi}$ We need to be able to separate the optical field equation of motion.  I suspect that means that we need to assign $\left(i, j\right)$ pairs to $\bm{q}_i$ values.  There is also a question about sign... i.e. what is the distinction between $\pm \bm{q}_i$?
 
@@ -334,7 +376,7 @@ Steps remaining:
     \item Adiabatic elimination
 \end{itemize}
 
-Hooray.  Next we separate the electric field and apply the SVE approximation. So we then have a bunch of $\Phi_{\bm{k}_0,\lambda}(\bm{k})$'s, each centred around a $\bm{k}_0$. At this point we approximate the $\omega_{\bm{k}}\approx \omega_{\bm{k}_0}$ also the time and phase variation must be removed at this point, requiring the removal of appropriate terms from the atomic fields.  Then we reduce to 1D, allowing us to inverse fourier transform the $\Phi_{\bm{k}_0, \lambda}(\bm{k})$.  Finally we neglect retardation effects to remove the time derivatives.  Then we have our 1D multimode Maxwell-Schrödinger equations.  Oh, and we need to re-introduce loss.  Then we can adiabatically eliminate the excited states to obtain our model of the system.  As if that is not complicated.
+Hooray.  Next we separate the electric field and apply the SVE approximation. So we then have a bunch of $\Phi_{\bm{k}_0,\lambda}(\bm{k})$'s, each centred around a $\bm{k}_0$. At this point we approximate the $\omega_{\bm{k}}\approx \omega_{\bm{k}_0}$ also the time and phase variation must be removed at this point, requiring the removal of appropriate terms from the atomic fields.  Then we reduce to 1D, allowing us to inverse Fourier transform the $\Phi_{\bm{k}_0, \lambda}(\bm{k})$.  Finally we neglect retardation effects to remove the time derivatives.  Then we have our 1D multimode Maxwell-Schrödinger equations.  Oh, and we need to re-introduce loss.  Then we can adiabatically eliminate the excited states to obtain our model of the system.  As if that is not complicated.
 
 This spontaneous emission process can be approximated by including the decay of the excited levels in a 
 

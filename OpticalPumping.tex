@@ -302,20 +302,20 @@ While it may seem that we have unnecessarily complicated the problem by separati
 
 Perhaps we don't need the step function above, we could simply say that the $\Phi_{\lambda, \vect{q}_n}(\vect{k})$ may only be non-zero for $\vect{q}_n \cdot \vect{k} > 0$.  Perhaps a simpler method.
 
-We should now be able to do an inverse Fourier transform. We can once we approximate $\abs{\vect{k}} \approx \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \vect{k}$,
+We should now be able to do an inverse Fourier transform. We can once we approximate $\abs{\vect{k}} \approx \unitvec{q}_n \cdot \vect{k}$ (where we use the notation $\unitvec{x}$ for the unit vector in the direction of \vect{x} to avoid confusion with the use of hats to denote operators),
 \begin{align}
     \abs{\vect{k}} &= \abs{\vect{q}_n + \delta \vect{k}}\\
     &\approx \sqrt{\abs{\vect{q}_n}^2 + 2 \vect{q}_n \cdot \delta \vect{k}} = \abs{\vect{q}_n} \sqrt{1 + \frac{2 \vect{q}_n \cdot \delta \vect{k}}{\abs{\vect{q}_n}^2}}\\
-    &\approx \abs{\vect{q}_n} + \frac{\vect{q}_n \cdot \delta \vect{k}}{\abs{\vect{q}_n}} = \abs{\vect{q}_n} + \frac{\vect{q}_n \cdot \left(\vect{k} - \vect{q}_n\right)}{\abs{\vect{q}_n}}\\
-    &= \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \vect{k}
+    &\approx \abs{\vect{q}_n} + \unitvec{q}_n \cdot \delta \vect{k} = \abs{\vect{q}_n} + \unitvec{q}_n \cdot \left(\vect{k} - \vect{q}_n\right)\\
+    &= \unitvec{q}_n \cdot \vect{k}
 \end{align}
- Then we obtain
+Then we obtain
 \begin{align}
-    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) &= -i \hbar c \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \nabla \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) - \left(\frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \vect{u}_{\lambda_n}^*(\vect{q}_n) \cdot \sum_{\{i,j'\} \in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
+    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) &= -i \hbar c \unitvec{q}_n \cdot \nabla \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) - \left(\frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \vect{u}_{\lambda_n}^*(\vect{q}_n) \cdot \sum_{\{i,j'\} \in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
 \end{align}
 Hooray.  We have made an approximation in here because we haven't correctly projected the atomic source term in the above equation.  However, the contributions will be $2 \vect{q}_n$ out of resonance, and so will average to zero over half a wavelength. Note that the above equation without the source term is the transport equation in the direction of ${\vect{q}_n}$ with speed $c$.  Next we turn it into a propagation equation for the electric field ${E}_{+,\vect{q}_n}$,
 \begin{align}
-    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \vect{q}_n} (\vect{x}) &= - \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \nabla E_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \vect{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
+    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla E_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \vect{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
 \end{align}
 
 Next we need to move into appropriate rotating frames for all states.  That means including possible detunings. For the excited states, that's well-defined.  What about for the lower states too?  What is required in order to be able to go into these appropriate rotating frames is that all photons coupling to a given excited state all couple to essentially the same detuning.  This is guaranteed in our system because only one set of photons are supplied to the system.  The others are generated spontaneously.  The other way to go into an appropriate rotating frame is to define all detunings relative to an original level (but we still need consistency on all photons coupling a given level).  How does all of this mix with RF outcoupling and the associated detunings?
@@ -344,22 +344,28 @@ $\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall
 The frame transformation we wish to make is
 \begin{align}
   \vect{x}' &= \vect{x} \\
-  t' &= t - \frac{1}{c} \frac{\vect{q}_n \cdot \vect{x}}{\abs{\vect{q}_n}} 
+  t' &= t - \frac{1}{c} \unitvec{q}_n \cdot \vect{x}
 \end{align}
 This means that
 \begin{align}
   \frac{\partial}{\partial t} &= \frac{\partial }{\partial t'}\\
   \nabla_{\vect{x}} &= \left(\nabla_{\vect{x}} t'\right) \frac{\partial }{\partial t'} + \nabla_{\vect{x}'}\\
-  &= - \frac{1}{c} \frac{\vect{q}_n}{\abs{\vect{q}_n}}\frac{\partial}{\partial t'} + \nabla_{\vect{x}'}
+  &= - \frac{1}{c} \unitvec{q}_n\frac{\partial}{\partial t'} + \nabla_{\vect{x}'}
 \end{align}
 This gives our equation for $\widetilde{E}_{+, \vect{q}_n}$ as
 \begin{align}
   \begin{split}
-    \frac{1}{c} \frac{\partial}{\partial t'} \widetilde{E}_{+, \vect{q}_n} (\vect{x}', t') &= - \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \left(- \frac{1}{c} \frac{\vect{q}_n}{ \abs{\vect{q}_n}} \frac{\partial}{\partial t'} + \nabla_{\vect{x}'} \right) \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t') + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t')\\
+    \frac{1}{c} \frac{\partial}{\partial t'} \widetilde{E}_{+, \vect{q}_n} (\vect{x}', t') &= - \unitvec{q}_n \cdot \left(- \frac{1}{c} \unitvec{q}_n \frac{\partial}{\partial t'} + \nabla_{\vect{x}'} \right) \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t') + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t')\\
     &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \vect{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left[\vect{x}', t(\vect{x}', t')\right] \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right)
   \end{split}
 \end{align}
-
+which simplifies to
+\begin{align}
+  \begin{split}
+    \frac{1}{c} \frac{\partial}{\partial t'} \widetilde{E}_{+, \vect{q}_n} (\vect{x}', t') &= - \unitvec{q}_n \cdot \left(- \frac{1}{c} \unitvec{q}_n \frac{\partial}{\partial t'} + \nabla_{\vect{x}'} \right) \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t') + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t')\\
+    &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \vect{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left[\vect{x}', t(\vect{x}', t')\right] \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right)
+  \end{split}
+\end{align}
 
 
 Then we do a frame transform for each $\vect{q}_n$.  Really only works for one... how can we justify this for each and every direction (in our case, just two).

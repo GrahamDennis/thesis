@@ -37,7 +37,7 @@ where $\overline{V_I}$ is a representative value of $V_I(x)$. The maximum and mi
 The use of absorbing boundary layers must be slightly modified for use in phase-space methods such as those discussed in \sectionref{BackgroundTheory:PhaseSpaceMethods}. In these cases simply adding an absorbing boundary layer to the potential would lead to unphysical results as the absorbing potential would not discriminate between real particles in a mode and the virtual particles which represent the fundamental vacuum fluctuations inherent in the field. An appropriate way of handling this problem is to add a position-dependent loss term to the master equation of the form
 \begin{align}
     \label{BackgroundTheory:PhaseSpaceAbsorbingBoundaryLayer}
-    \frac{d \hat{\rho}}{dt} &= \int d \bm{x}\, \frac{2}{\hbar}V_I(\bm{x})\mathcal{D}[\hat{\Psi}(\bm{x})]\hat{\rho},
+    \frac{d \hat{\rho}}{dt} &= \int d \vect{x}\, \frac{2}{\hbar}V_I(\vect{x})\mathcal{D}[\hat{\Psi}(\vect{x})]\hat{\rho},
 \end{align}
 where $\mathcal{D}$ is the usual decoherence superoperator. This master equation term leads to the same imaginary potential term in the equations of motion for the field operator with an additional noise term for Truncated Wigner and the Q function methods that restores the vacuum fluctuations that would otherwise be lost.
 
@@ -91,7 +91,7 @@ In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be pr
 
 As derived in \sectionref{PenningIonisationAppendix:MasterEquation} the master equation term describing Penning ionisation is
 \begin{align}
-    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \vect{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
 \end{align}
 where $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$~\citep{Stas:2006kx}, and the $S=0$ quasimolecule state that undergoes Penning ionisation is given by
 \begin{align}

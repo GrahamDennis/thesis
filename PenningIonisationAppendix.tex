@@ -10,7 +10,7 @@ In this appendix a derivation of the master equation, Gross-Pitaevskii and Trunc
 Penning ionisation is a highly exothermic process. The combined internal energy of the two atoms exceeds the ionisation energy of $\text{He}$ by $\unit[15]{eV}$. Hence the products of the Penning ionisation reaction will exit the $\text{He}^*$ sample rapidly. Penning ionisation is therefore well approximated by considering the ionising $S=0$ quasimolecule state to be coupled to a vacuum reservoir. As it is only the behaviour of the condensate in which we are interested and the coupling between the condensate and the reservoir will be weak and irreversible, the reservoir's evolution may be traced over to yield the usual kind of loss term for the master equation (see for example~\citep[Chapter 8]{Scully}),
 \begin{align}
     \label{PenningIonisationAppendix:MasterEquationTermArbitraryConstant}
-    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
+    \left.\frac{d \hat{\rho}}{d t}\right|_\text{PI} &= \gamma_\text{PI} \int d \vect{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
 \end{align}
 where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho}\hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $\gamma_\text{PI}$ is a positive rate constant. The $\hat{\Xi}_{S=0, m_S=0}$ quasimolecule state can be expressed in terms of the atomic fields $\hat{\Psi}_j$ in the $F=1$ total angular momentum manifold as
 \begin{align}
@@ -21,43 +21,43 @@ which follows from the appropriate Clebsch-Gordan coefficients~\citep{Ho:1998}.
 
 The unknown coefficient $\gamma_\text{PI}$ can be determined by matching the dynamics given by the master equation \eqref{PenningIonisationAppendix:MasterEquationTermArbitraryConstant} for an unpolarised thermal cloud and comparing it to the result given in~\citep{Stas:2006kx},
 \begin{align}
-    \frac{d N_\text{ions}}{d t} &= \Kunpol \int d \bm{x}\, n(\bm{x})^2,
+    \frac{d N_\text{ions}}{d t} &= \Kunpol \int d \vect{x}\, n(\vect{x})^2,
     \label{PenningIonisationAppendix:ThermalSampleStas}
 \end{align}
-where $n(\bm{x})$ is the total density, $dN_\text{ions}/dt$ is the rate of ion production and $\Kunpol = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ at BEC temperatures~\citep{Stas:2006kx}.
+where $n(\vect{x})$ is the total density, $dN_\text{ions}/dt$ is the rate of ion production and $\Kunpol = \unit[7.7 \times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ at BEC temperatures~\citep{Stas:2006kx}.
 
 For each ion that is produced, two atoms will be lost from the sample (refer to \eqref{BackgroundTheory:PenningIonisation}). We therefore consider the equation of motion for the rate of loss of atoms from a thermal sample governed by master equation \eqref{PenningIonisationAppendix:MasterEquationTermArbitraryConstant},
 \begin{align}
     \label{PenningIonisationAppendix:NEquationOfMotion}
     \begin{split}
-        \frac{d \mean{\hat{N}}}{d t} &= - \gamma_\text{PI} \frac{2}{3}\int d \bm{x}\, \left(4 \mean{\hat{\Psi}_{-1}^\dagger \hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\hat{\Psi}_{-1}^{\phantom{\dagger}}} + \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}}\right)\\
-        &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \bm{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
+        \frac{d \mean{\hat{N}}}{d t} &= - \gamma_\text{PI} \frac{2}{3}\int d \vect{x}\, \left(4 \mean{\hat{\Psi}_{-1}^\dagger \hat{\Psi}_1^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\hat{\Psi}_{-1}^{\phantom{\dagger}}} + \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}}\right)\\
+        &\relphantom{=} + \gamma_\text{PI} \frac{4}{3}\int d \vect{x}\, \left( \mean{\hat{\Psi}_1^\dagger \hat{\Psi}_{-1}^\dagger \hat{\Psi}_0^{\phantom{\dagger}} \hat{\Psi}_0^{\phantom{\dagger}}} +  \mean{\hat{\Psi}_0^\dagger \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}} \hat{\Psi}_{-1}^{\phantom{\dagger}}} \right).
     \end{split}
 \end{align}
-For a thermal state, the last pair of terms in \eqref{PenningIonisationAppendix:NEquationOfMotion} are each zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{a}^\dagger \hat{a}}^2$. The equation of motion for the total number of atoms can then be written in terms of the number densities in each state $n_j(\bm{x}) = \mean{\hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}}}$,
+For a thermal state, the last pair of terms in \eqref{PenningIonisationAppendix:NEquationOfMotion} are each zero, and $\mean{\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}} = 2 \mean{\hat{a}^\dagger \hat{a}}^2$. The equation of motion for the total number of atoms can then be written in terms of the number densities in each state $n_j(\vect{x}) = \mean{\hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}}}$,
 \begin{align}
-    \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \bm{x}\, \left(2 n_1(\bm{x}) n_{-1}(\bm{x}) + n_0^2(\bm{x})\right).
+    \left.\frac{d \mean{\hat{N}}}{dt} \right|_\text{thermal} &= - \gamma_\text{PI} \frac{4}{3} \int d \vect{x}\, \left(2 n_1(\vect{x}) n_{-1}(\vect{x}) + n_0^2(\vect{x})\right).
 \end{align}
 In an unpolarised sample the three internal states are equally occupied, and as two atoms are lost for each ion that is produced the ion production rate is
 \begin{align}
-    \frac{d N_\text{ion}}{dt} &= -\frac{1}{2} \left.\frac{d \mean{\hat{N}}}{dt}\right|_\text{thermal} = \frac{2}{9} \gamma_\text{PI} \int d \bm{x}\, n^2(\bm{x}),
+    \frac{d N_\text{ion}}{dt} &= -\frac{1}{2} \left.\frac{d \mean{\hat{N}}}{dt}\right|_\text{thermal} = \frac{2}{9} \gamma_\text{PI} \int d \vect{x}\, n^2(\vect{x}),
     \label{PenningIonisationAppendix:ThermalSampleMasterEquation}
 \end{align}
-where $n(\bm{x}) = \frac{1}{3}n_j(\bm{x})$ is the total number density.
+where $n(\vect{x}) = \frac{1}{3}n_j(\vect{x})$ is the total number density.
 Comparing \eqref{PenningIonisationAppendix:ThermalSampleStas} and \eqref{PenningIonisationAppendix:ThermalSampleMasterEquation}  gives the rate constant $\displaystyle\gamma_\text{PI} = \frac{9}{2} \Kunpol$ and the corresponding term in the master equation to be
 \begin{align}
     \label{PenningIonisationAppendix:MasterEquationTerm}
-    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \bm{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho}.
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \vect{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho}.
 \end{align}
 
 \section{Gross-Pitaevskii Penning ionisation terms}
 \label{PenningIonisationAppendix:GP}
 
-The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} can be obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system can be expressed as a tensor product of coherent states\footnote{As discussed in \sectionref{BackgroundTheory:SymmetryBreaking} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi}\underset{\bm{x}}{\otimes} \ketbra{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}{e^{i\phi}\Psi_1(\bm{x}), e^{i\phi}\Psi_0(\bm{x}), e^{i\phi}\Psi_{-1}(\bm{x})}$.} $\displaystyle\hat{\rho} = \underset{\bm{x}}{\otimes} \ketbra{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}{\Psi_1(\bm{x}), \Psi_0(\bm{x}), \Psi_{-1}(\bm{x})}$.
+The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} can be obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system can be expressed as a tensor product of coherent states\footnote{As discussed in \sectionref{BackgroundTheory:SymmetryBreaking} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi}\underset{\vect{x}}{\otimes} \ketbra{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}$.} $\displaystyle\hat{\rho} = \underset{\vect{x}}{\otimes} \ketbra{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}$.
 
 Using the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm}, the equations of motion for the expectation values of the atomic fields are
 \begin{align}
-    \left.\frac{\partial}{\partial t} \mean{\hat{\Psi}_j}\right|_\text{PI} &= \Tr\left\{\hat{\Psi}_j \left.\frac{d\hat{\rho}}{dt}\right|_\text{PI}\right\} = \frac{9}{2} \Kunpol \Tr\left\{\hat{\Psi}_j \int d \bm{x}' \mathcal{D}\left[\hat{\Xi}_{S=0, m_S=0}(\bm{x}')\right] \hat{\rho} \right\}
+    \left.\frac{\partial}{\partial t} \mean{\hat{\Psi}_j}\right|_\text{PI} &= \Tr\left\{\hat{\Psi}_j \left.\frac{d\hat{\rho}}{dt}\right|_\text{PI}\right\} = \frac{9}{2} \Kunpol \Tr\left\{\hat{\Psi}_j \int d \vect{x}' \mathcal{D}\left[\hat{\Xi}_{S=0, m_S=0}(\vect{x}')\right] \hat{\rho} \right\}
 \end{align}
 \begin{subequations}
     \begin{align}
@@ -75,7 +75,7 @@ The Penning ionisation terms in \eqref{Peaks:3DGPEquations} are obtained applyin
 The Truncated Wigner terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} are very similar to the GP equation terms with an additional term to correct for the loss due to Penning ionisation of the `virtual' particles added to the initial state. Applying the operator correspondences for the Wigner distribution described in \sectionref{BackgroundTheory:TruncatedWigner} to \eqref{PenningIonisationAppendix:MasterEquationTerm} and truncating third order derivatives yields the functional Fokker-Planck equation
 \begin{align}
     \begin{split}
-    \frac{\partial}{\partial t} W(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^*\right\}) &= \int d \bm{x} \Bigg\{ -\frac{3}{2}\Kunpol\bigg[\frac{\delta}{\delta \Psi_1}\left(-2 \abs{\Psi_{-1}}^2\Psi_1 +\Psi_{-1}^*\Psi_0\Psi_0  + \delta(0) \Psi_1\right)\\
+    \frac{\partial}{\partial t} W(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^*\right\}) &= \int d \vect{x} \Bigg\{ -\frac{3}{2}\Kunpol\bigg[\frac{\delta}{\delta \Psi_1}\left(-2 \abs{\Psi_{-1}}^2\Psi_1 +\Psi_{-1}^*\Psi_0\Psi_0  + \delta(0) \Psi_1\right)\\
     &\relphantom{=} +\frac{\delta}{\delta \Psi_0}\left(2 \Psi_0^* \Psi_1 \Psi_{-1}  - \abs{\Psi_0}^2 \Psi_0 + \delta(0) \Psi_0\right)\\
     &\relphantom{=} +\frac{\delta}{\delta \Psi_{-1}}\left(- 2 \abs{\Psi_1}^2 \Psi_{-1} + \Psi_1^* \Psi_0 \Psi_0  + \delta(0) \Psi_{-1}\right) + \text{h.c.} \bigg]\\
     &\relphantom{=} + 3 \Kunpol \bigg[\frac{\delta}{\delta \Psi_1^{\phantom{*}}} \frac{\delta}{\delta \Psi_1^*}\left(\abs{\Psi_{-1}}^2 - \frac{1}{2} \delta(0)\right) + \frac{\delta}{\delta \Psi_0^{\phantom{*}}} \frac{\delta}{\delta \Psi_0^*}\left(\abs{\Psi_0}^2 - \frac{1}{2} \delta(0)\right) \\
@@ -85,37 +85,37 @@ The Truncated Wigner terms corresponding to the master equation \eqref{PenningIo
     \end{split}
     \label{PenningIonisationAppendix:FunctionalFokkerPlanckEquation}
 \end{align}
-where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin. While the $\delta(0)$ terms are pathological, they will later be approximated on a computational grid by $\Delta V^{-1}$ where $\Delta V$ is the local volume element\footnote{An alternative treatment of the Truncated Wigner method can be used~\citep{Norrie:2006vn,Norrie:2006kx} in which it is assumed from the beginning a restricted basis is being used.  In this alternative treatment the Dirac delta function $\delta(\bm{x})$ is replaced by a truncated version $\delta_\mathcal{P}(\bm{x})$ which is contained within the restricted basis. This is a formalisation of the discretisation process later used in which $\delta(0)$ is replaced by $\Delta V^{-1}$.  The two methods are essentially equivalent.}.
+where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin. While the $\delta(0)$ terms are pathological, they will later be approximated on a computational grid by $\Delta V^{-1}$ where $\Delta V$ is the local volume element\footnote{An alternative treatment of the Truncated Wigner method can be used~\citep{Norrie:2006vn,Norrie:2006kx} in which it is assumed from the beginning a restricted basis is being used.  In this alternative treatment the Dirac delta function $\delta(\vect{x})$ is replaced by a truncated version $\delta_\mathcal{P}(\vect{x})$ which is contained within the restricted basis. This is a formalisation of the discretisation process later used in which $\delta(0)$ is replaced by $\Delta V^{-1}$.  The two methods are essentially equivalent.}.
 
 \subsection{Fokker-Planck and stochastic differential equations}
 The tremendous advantage of transforming a master equation into a Fokker-Planck equation is that under certain conditions, a Fokker-Planck equation may be unravelled as a stochastic differential equation. Expectation values can be calculated as averages of appropriate quantities over \emph{independent} realisations of a stochastic differential equation, which is requires significantly less computational resources. In the general case it is desired to unravel the Fokker-Planck equation
 \begin{align}
-    \frac{\partial}{\partial t}F(\bm{\alpha}, t) &= - \sum_j \frac{\partial}{\partial \alpha_j} A_j(\bm{\alpha}, t) F(\bm{\alpha}, t) + \frac{1}{2} \sum_{j, k} \frac{\partial}{\partial \alpha_j^{\phantom{*}}} \frac{\partial}{\partial \alpha_k^*} D_{j,k}(\bm{\alpha}, t) F(\bm{\alpha}, t) \label{PenningIonisationAppendix:GeneralFokkerPlanckEquation}
+    \frac{\partial}{\partial t}F(\vect{\alpha}, t) &= - \sum_j \frac{\partial}{\partial \alpha_j} A_j(\vect{\alpha}, t) F(\vect{\alpha}, t) + \frac{1}{2} \sum_{j, k} \frac{\partial}{\partial \alpha_j^{\phantom{*}}} \frac{\partial}{\partial \alpha_k^*} D_{j,k}(\vect{\alpha}, t) F(\vect{\alpha}, t) \label{PenningIonisationAppendix:GeneralFokkerPlanckEquation}
 \end{align}
 in terms of the Stratonovich stochastic differential equation
 \begin{align}
-    d \alpha_i &= A_i(\bm{\alpha}, t) - \frac{1}{2} \sum_{j, k} B_{k, j}(\bm{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\bm{\alpha}, t) + \sum_j B_{i,j}(\bm{\alpha}, t) d W_j(t), \label{PenningIonisationAppendix:GeneralStratonovichSDE}
+    d \alpha_i &= A_i(\vect{\alpha}, t) - \frac{1}{2} \sum_{j, k} B_{k, j}(\vect{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\vect{\alpha}, t) + \sum_j B_{i,j}(\vect{\alpha}, t) d W_j(t), \label{PenningIonisationAppendix:GeneralStratonovichSDE}
 \end{align}
-where the matrix $\bm{B}(\bm{\alpha}, t)$ is defined by
+where the matrix $\vect{B}(\vect{\alpha}, t)$ is defined by
 \begin{align}
-    \bm{D}(\bm{\alpha}, t) &= \bm{B}(\bm{\alpha}, t) \bm{B}^\dagger(\bm{\alpha}, t),
+    \vect{D}(\vect{\alpha}, t) &= \vect{B}(\vect{\alpha}, t) \vect{B}^\dagger(\vect{\alpha}, t),
 \end{align}
 and the Wiener increments $d W_j(t)$ are independent real Gaussian random variables with zero mean satisfying
 \begin{align}
     \overline{d W_i(t) dW_j(t')} = \delta_{i j}\delta(t - t').
 \end{align}
-This decomposition is guaranteed when the matrix $\bm{D}(\bm{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation} and \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
+This decomposition is guaranteed when the matrix $\vect{D}(\vect{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation} and \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
 
 The unravelling of a Fokker-Planck equation in terms of a stochastic differential equation can be physically interpreted as the macroscopic and microscopic views of the same process. For example, a Fokker-Planck equation can be used to model the distribution of positions and velocities of particles in a gas (macroscopic view) and the corresponding stochastic differential equation would describe the path taken by a single particle (microscopic view). The macroscopic view is useful in situations in which the equations of motion for the moments of the distribution form a closed system of equations (such as those describing an ideal gas). Frequently however the equations of motion are not closed with that for each moment depending on a higher-order moment (for example \eqref{PenningIonisationAppendix:GPTerms}) and an assumption must be made to close the system of equations (in the case of \eqref{PenningIonisationAppendix:GPTerms} that the system remains in a coherent state). 
 
-The microscopic view is an alternative approach which is useful when two equivalent conditions are met. The first is that it is only a finite set of moments of the distribution that are of interest, and not the distribution itself. The second is that the motion of the particles are independent of one another (although they may depend on moments of the distribution). That the particles' motions are independent is equivalent to the eigenvalues of $\bm{D}$ being nonnegative. Positive eigenvalues of $\bm{D}$ can be physically interpreted as corresponding to a diffusion process which microscopically takes the form of Brownian motion. Negative eigenvalues however correspond to \emph{negative} diffusion, a highly singular process in which particles tend to drift toward one another\footnote{It should be noted that the existence of negative eigenvalues for the matrix $\bm{D}$ does not imply that the \emph{solution} to the Fokker-Planck equation is singular. A good example of this is the equation of motion for the Q function~\citep{Scully} of the anharmonic oscillator which is periodic in time yet the corresponding $\bm{D}$ matrix has positive and negative eigenvalues of equal magnitude.}. In this case the evolution of one realisation of \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} will depend on the local \emph{distribution}, violating the conditions stated above. One solution to this problem is increase the dimensionality of the Fokker-Planck equation and use the additional freedom given by the auxiliary dimensions to ensure that motion in the larger space is purely diffusive (this approach is taken with Positive-P~\citep{GardinerQN}). 
+The microscopic view is an alternative approach which is useful when two equivalent conditions are met. The first is that it is only a finite set of moments of the distribution that are of interest, and not the distribution itself. The second is that the motion of the particles are independent of one another (although they may depend on moments of the distribution). That the particles' motions are independent is equivalent to the eigenvalues of $\vect{D}$ being nonnegative. Positive eigenvalues of $\vect{D}$ can be physically interpreted as corresponding to a diffusion process which microscopically takes the form of Brownian motion. Negative eigenvalues however correspond to \emph{negative} diffusion, a highly singular process in which particles tend to drift toward one another\footnote{It should be noted that the existence of negative eigenvalues for the matrix $\vect{D}$ does not imply that the \emph{solution} to the Fokker-Planck equation is singular. A good example of this is the equation of motion for the Q function~\citep{Scully} of the anharmonic oscillator which is periodic in time yet the corresponding $\vect{D}$ matrix has positive and negative eigenvalues of equal magnitude.}. In this case the evolution of one realisation of \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} will depend on the local \emph{distribution}, violating the conditions stated above. One solution to this problem is increase the dimensionality of the Fokker-Planck equation and use the additional freedom given by the auxiliary dimensions to ensure that motion in the larger space is purely diffusive (this approach is taken with Positive-P~\citep{GardinerQN}). 
 
 \subsection{Truncated Wigner stochastic differential equation terms}
 
-As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is local in the position basis, the $\bm{D}$ and $\bm{B}$ matrices can be constructed independently at each spatial position. Discretising \eqref{PenningIonisationAppendix:FunctionalFokkerPlanckEquation} onto a computational grid (this implies the replacement $\delta(0) \rightarrow \Delta V^{-1}$ where $\Delta V$ is the local volume element), the $\bm{D}$ matrix at position $\bm{x}$ is
+As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is local in the position basis, the $\vect{D}$ and $\vect{B}$ matrices can be constructed independently at each spatial position. Discretising \eqref{PenningIonisationAppendix:FunctionalFokkerPlanckEquation} onto a computational grid (this implies the replacement $\delta(0) \rightarrow \Delta V^{-1}$ where $\Delta V$ is the local volume element), the $\vect{D}$ matrix at position $\vect{x}$ is
 \begin{align}
     \begin{split}
-        \bm{D}(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^* \right\}, t) &= 3 \Kunpol
+        \vect{D}(\left\{ \Psi_i^{\phantom{*}}, \Psi_i^* \right\}, t) &= 3 \Kunpol
         \begin{pmatrix}
             \abs{\Psi_{-1}}^2 & - \Psi_{-1}^* \Psi_0^{\phantom{*}} & \Psi_{-1}^* \Psi_{1}^{\phantom{*}} & 0 & 0 & 0 \\
             - \Psi_{0}^* \Psi_{-1}^{\phantom{*}} & \abs{\Psi_{0}}^2 & - \Psi_{0}^*\Psi_1^{\phantom{*}} & 0 & 0 & 0 \\
@@ -128,13 +128,13 @@ As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is l
     \end{split}
     \label{PenningIonisationAppendix:DMatrix}
 \end{align}
-where $\mathbb{I}$ is the identity matrix, and the rows of the matrix $\bm{D}$ are constructed from the derivatives in the order: $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$, $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, and the columns from the derivatives in the order: $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$ (see \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation}).
+where $\mathbb{I}$ is the identity matrix, and the rows of the matrix $\vect{D}$ are constructed from the derivatives in the order: $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$, $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, and the columns from the derivatives in the order: $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$ (see \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation}).
 
-The matrix $\bm{D}$ in \eqref{PenningIonisationAppendix:DMatrix} contains negative eigenvalues due to the $\Delta V^{-1}$ term that corrects for the `virtual' particles added to the initial state of the Wigner function (refer to \sectionref{BackgroundTheory:TruncatedWigner}). At positions where the field is highly occupied this will be a small correction and can safely be neglected compared to the local density. Inevitably there will be some positions within the computational domain at which the field will be negligibly occupied and the $\Delta V^{-1}$ term cannot be neglected. At such positions however the Penning ionisation process itself will be negligible\footnote{For the simulation grids used in \chapterref{Peaks}, the relevant timescale is $\sim \unit[1]{s}$ which is much longer than the simulated time of $\sim \unit[10]{ms}$.}. Although in this case the approximation is unjustified for a system undergoing only Penning ionisation, it is justified in the system under consideration in \chapterref{Peaks} in which other processes occur on significantly shorter timescales.
+The matrix $\vect{D}$ in \eqref{PenningIonisationAppendix:DMatrix} contains negative eigenvalues due to the $\Delta V^{-1}$ term that corrects for the `virtual' particles added to the initial state of the Wigner function (refer to \sectionref{BackgroundTheory:TruncatedWigner}). At positions where the field is highly occupied this will be a small correction and can safely be neglected compared to the local density. Inevitably there will be some positions within the computational domain at which the field will be negligibly occupied and the $\Delta V^{-1}$ term cannot be neglected. At such positions however the Penning ionisation process itself will be negligible\footnote{For the simulation grids used in \chapterref{Peaks}, the relevant timescale is $\sim \unit[1]{s}$ which is much longer than the simulated time of $\sim \unit[10]{ms}$.}. Although in this case the approximation is unjustified for a system undergoing only Penning ionisation, it is justified in the system under consideration in \chapterref{Peaks} in which other processes occur on significantly shorter timescales.
 
-Neglecting the $\Delta V^{-1}$ term the eigenvalues of $\bm{D}$ are positive or zero, and the matrix $\bm{D}$ can be written in the form $\bm{B}\bm{B}^\dagger$ where
+Neglecting the $\Delta V^{-1}$ term the eigenvalues of $\vect{D}$ are positive or zero, and the matrix $\vect{D}$ can be written in the form $\vect{B}\vect{B}^\dagger$ where
 \begin{align}
-    \bm{B}(\left\{\Psi_i^{\phantom{*}}, \Psi_i^*\right\}, t) &= \sqrt{\frac{3 \Kunpol}{2}}
+    \vect{B}(\left\{\Psi_i^{\phantom{*}}, \Psi_i^*\right\}, t) &= \sqrt{\frac{3 \Kunpol}{2}}
     \begin{pmatrix}
         \Psi_{-1}^* & i \Psi_{-1}^* \\
         -\Psi_0^* & -i \Psi_0^* \\

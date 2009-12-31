@@ -17,7 +17,7 @@
 
 As a demonstration of the efficacy of the method described in \sectionref{Peaks:AbsorbingBoundaryTricks} for determining the rate of loss of momentum density from a region of space, we consider a wave of wavenumber $k_0$ incident from the left on an imperfect absorbing boundary layer in a 1D computational domain (see \figureref{MethodsAppendix:AbsorbingBoundaryLayerScattering}), and compare $\Phi(k, t)$ (refer to \eqref{Peaks:MomentumDensityFlux}) to the result expected in the case of a perfect absorbing boundary layer of $\displaystyle \frac{\hbar k_0}{M}\delta(k - k_0)$. In this example $s$-wave scattering will be neglected. As the computational domain in this example is effectively infinite, the wavefunction used in the evaluation of \eqref{Peaks:MomentumDensityFlux} will be restricted to be nonzero only in the absorbing boundary layer to demonstrate the finite momentum resolution obtainable from this method due to the (except in this example) finite extent of the computational domain.
 
-As a model for a number of different artificial boundary conditions we consider there to be \emph{no} artificial boundary condition at the edge of the computational domain, and instead it to be surrounded by an `auxiliary layer' in which there is a negative imaginary potential the reflection of that in the absorbing boundary layer. The negative imaginary potential is then symmetric about the edge of the computational domain. In the case of periodic boundary conditions, the auxiliary layer will correspond to the absorbing boundary layer on the other side of the computational domain in which it is assumed that the reflected negative imaginary potential is used. In the case of Dirichlet or Neumann boundary conditions in which respectively the wavefunction or its derivative is set to zero on the boundary, the auxiliary layer corresponds to the absorbing boundary layer reflected. In either of these latter two cases, the wavefunction for the actual artificial boundary conditions will be a linear combination of the wavefunction \emph{without} the artificial boundary conditions in the absorbing boundary layer and in the auxiliary layer. Specifically, in the case of Dirichlet boundary conditions in which the wavefunction is set to zero on the boundary, the wavefunction in the presence of the artificial boundary condition $\psi_\text{abc}(\bm{x})$ will be given by $\psi_\text{abc}(\bm{x}) = \psi(\bm{x}) - \psi(-\bm{x})$ where $\psi(\bm{x})$ is the wavefunction in the absence of the artificial boundary condition, and $x=0$ corresponds to the edge of the computational domain.
+As a model for a number of different artificial boundary conditions we consider there to be \emph{no} artificial boundary condition at the edge of the computational domain, and instead it to be surrounded by an `auxiliary layer' in which there is a negative imaginary potential the reflection of that in the absorbing boundary layer. The negative imaginary potential is then symmetric about the edge of the computational domain. In the case of periodic boundary conditions, the auxiliary layer will correspond to the absorbing boundary layer on the other side of the computational domain in which it is assumed that the reflected negative imaginary potential is used. In the case of Dirichlet or Neumann boundary conditions in which respectively the wavefunction or its derivative is set to zero on the boundary, the auxiliary layer corresponds to the absorbing boundary layer reflected. In either of these latter two cases, the wavefunction for the actual artificial boundary conditions will be a linear combination of the wavefunction \emph{without} the artificial boundary conditions in the absorbing boundary layer and in the auxiliary layer. Specifically, in the case of Dirichlet boundary conditions in which the wavefunction is set to zero on the boundary, the wavefunction in the presence of the artificial boundary condition $\psi_\text{abc}(\vect{x})$ will be given by $\psi_\text{abc}(\vect{x}) = \psi(\vect{x}) - \psi(-\vect{x})$ where $\psi(\vect{x})$ is the wavefunction in the absence of the artificial boundary condition, and $x=0$ corresponds to the edge of the computational domain.
 
 To calculate $\Phi(k, t)$ from \eqref{Peaks:MomentumDensityFlux} it is necessary to know the solution $\psi(x)$ to the time-independent Schrödinger equation subject to the boundary conditions that there is an incident wave from the left with wavenumber $k_0$ and no incident wave from the right. Given two linearly independent solutions to the Schrödinger equation in the doubled absorbing boundary layer (the absorbing boundary layer / auxiliary layer region), $\psi(x)$ can be found by applying these boundary conditions. It now remains to obtain two linearly independent solutions to the time-independent Schrödinger equation within the doubled absorbing boundary layer.
 
@@ -82,13 +82,13 @@ where a bar over a function is used to indicate that it is defined in terms of t
 
 Although the evolution equations for the kinetic model \eqref{KineticTheory:EvolutionEquations} are written in terms of the product of the density of states $\rho(\varepsilon, t)$ and the energy distribution function $g(\varepsilon, t)$, it will be necessary to separately determine the energy distribution function to evaluate the collisional contributions given in the following section. To extract the energy distribution function it is necessary to have an explicit expression for the density of states for the thermal cloud. This density of states is not simply the same as that for a harmonic trap as the thermal modes will experience a mean-field repulsion due to the condensate mode. The effective potential experienced by the thermal atoms is
 \begin{align}
-    V_\text{eff}(\bm{r}, t) &= V_\text{trap}(\bm{r}) + 2 g n_c(\bm{r}, t), \label{MethodsAppendix:QKTEffectivePotential}
+    V_\text{eff}(\vect{r}, t) &= V_\text{trap}(\vect{r}) + 2 g n_c(\vect{r}, t), \label{MethodsAppendix:QKTEffectivePotential}
 \end{align}
-where $V_\text{trap}(\bm{r})$ is the potential due to the magnetic trap, $g = 4\pi \hbar^2 a/m$, $a$ is the \emph{s}-wave scattering length and $n_c(\bm{r}, t)$ is the condensate density which was assumed to follow a Thomas-Fermi distribution in \chapterref{KineticTheory}.  Note that the `2' in the above expression is the full Hartree-Fock mean field experienced by the thermal atoms (see \eqref{Peaks:ThermalParticleEnergySpectrum}, or~\citep[Chapter 8]{PethickSmith} for further details) which is twice the mean-field repulsion experienced by condensate atoms.  This is essentially due to the thermal atoms being distinguishable from the condensate atoms, while the condensate atoms are indistinguishable from one another.
+where $V_\text{trap}(\vect{r})$ is the potential due to the magnetic trap, $g = 4\pi \hbar^2 a/m$, $a$ is the \emph{s}-wave scattering length and $n_c(\vect{r}, t)$ is the condensate density which was assumed to follow a Thomas-Fermi distribution in \chapterref{KineticTheory}.  Note that the `2' in the above expression is the full Hartree-Fock mean field experienced by the thermal atoms (see \eqref{Peaks:ThermalParticleEnergySpectrum}, or~\citep[Chapter 8]{PethickSmith} for further details) which is twice the mean-field repulsion experienced by condensate atoms.  This is essentially due to the thermal atoms being distinguishable from the condensate atoms, while the condensate atoms are indistinguishable from one another.
 
 The density of states in the presence of the effective potential \eqref{MethodsAppendix:QKTEffectivePotential} is given by
 \begin{align}
-    \rho(\varepsilon, t) &= \int \frac{d \bm{r}\, d \bm{p}}{(2\pi \hbar)^3} \,\delta\left(\varepsilon - V_\text{eff}(\bm{r}, t) - \bm{p}^2/2 m\right).
+    \rho(\varepsilon, t) &= \int \frac{d \vect{r}\, d \vect{p}}{(2\pi \hbar)^3} \,\delta\left(\varepsilon - V_\text{eff}(\vect{r}, t) - \vect{p}^2/2 m\right).
     \label{MethodsAppendix:DensityOfStatesDefinition}
 \end{align}
 The integrals are performed in~\citep{Bijlsma:2000} giving the following result in terms of the shifted energy coordinate (Eqs.~49 and 50 in~\citep{Bijlsma:2000})
@@ -123,11 +123,11 @@ The contribution due to thermal--condensate collisions is given by Eq.~53 and Eq
         \left. \frac{\partial\big(\overline{\rho}(\overline{\varepsilon}_1, t) \overline{g}(\overline{\varepsilon}_1, t)\big)}{\partial t}\right|_\text{thermal--condensate} &= \frac{m^3 g^2}{2 \pi^3 \hbar^7} \int d \overline{\varepsilon}_2 \int d\overline{\varepsilon}_3 \int d\overline{\varepsilon}_4 \,\delta(\overline{\varepsilon}_2 - \overline{\varepsilon}_3 - \overline{\varepsilon}_4)\\
         &\relphantom{=}\times\left[ \delta(\overline{\varepsilon}_1 - \overline{\varepsilon}_2) - \delta(\overline{\varepsilon}_1 - \overline{\varepsilon}_3) - \delta(\overline{\varepsilon}_1- \overline{\varepsilon}_4)\right]\\
         &\relphantom{=} \times \left[(1+\overline{g}_2)\overline{g}_3 \overline{g}_4 - \overline{g}_2 (1+\overline{g}_3)(1+\overline{g}_4) \right]\\
-        &\relphantom{=}\times  \int_{\overline{U}_\text{eff}(\bm{r}, t) \leq \overline{U}_-} d \bm{r}\, n_c(\bm{r}, t),
+        &\relphantom{=}\times  \int_{\overline{U}_\text{eff}(\vect{r}, t) \leq \overline{U}_-} d \vect{r}\, n_c(\vect{r}, t),
     \end{split}
     \label{MethodsAppendix:QKTRhoGThermalCondensateEvolution}
 \end{align}
-where $\displaystyle \overline{U}_- = \frac{2}{3}\left[(\overline{\varepsilon}_3 + \overline{\varepsilon}_4)-\sqrt{\overline{\varepsilon}_3^2 - \overline{\varepsilon}_3 \overline{\varepsilon}_4 + \overline{\varepsilon}_4^2}\right]$, and $\overline{U}_\text{eff}(\bm{r}, t) = U_\text{eff}(\bm{r}, t) - \mu(t)$.
+where $\displaystyle \overline{U}_- = \frac{2}{3}\left[(\overline{\varepsilon}_3 + \overline{\varepsilon}_4)-\sqrt{\overline{\varepsilon}_3^2 - \overline{\varepsilon}_3 \overline{\varepsilon}_4 + \overline{\varepsilon}_4^2}\right]$, and $\overline{U}_\text{eff}(\vect{r}, t) = U_\text{eff}(\vect{r}, t) - \mu(t)$.
 The corresponding contribution to the evolution of the condensate number is simply
 \begin{align}
     \left. \frac{d N_0}{d t}\right|_\text{thermal--condensate} &= - \int d\overline{\varepsilon} \,\left. \frac{\partial\big(\overline{\rho}(\overline{\varepsilon}, t) \overline{g}(\overline{\varepsilon}, t)\big)}{\partial t}\right|_\text{thermal--condensate}.
@@ -154,14 +154,14 @@ The dominant density-dependent loss process in Bose-Einstein condensates is thre
 
 Three-body loss (or three-body recombination) is the process in which three atoms collide forming a bound dimer with the third necessary to ensure both energy and momentum conservation.  The binding energy is sufficient to give the products of a three-body recombination process sufficient kinetic energy to rapidly escape the trap.  Three-body loss is then well-described by the master equation term
 \begin{align}
-    \left. \frac{d \hat{\rho}}{d t}\right|_\text{3-body loss} &= \frac{1}{3}L_3 \int d \bm{x} \,\mathcal{D} \left[ \hat{\Psi}^3(\bm{x}) \right] \hat{\rho},
+    \left. \frac{d \hat{\rho}}{d t}\right|_\text{3-body loss} &= \frac{1}{3}L_3 \int d \vect{x} \,\mathcal{D} \left[ \hat{\Psi}^3(\vect{x}) \right] \hat{\rho},
     \label{MethodsAppendix:ThreeBodyLossMasterEquationTerm}
 \end{align}
 where $\mathcal{D}[\hat{c}]\hat{\rho} = \hat{c}\hat{\rho} \hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c}\hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and $L_3 = \unit[5.8\times 10^{-30}]{cm\textsuperscript{6}s\textsuperscript{-1}}$~\citep{Burt:1997fk} is the three-body recombination loss rate constant.  This equation, first derived by~\citep{Jack:2002} has the familiar form of a decoherence superoperator with the state undergoing loss as the argument (cf. \sectionref{PenningIonisationAppendix:MasterEquation}). %This is a reasonable approximation as three-body recombination couples the state $\hat{\Psi}^3$ to a state that is rapidly depopulated.
 
 The loss rate of atoms from the system due to three-body loss is readily obtained from \eqref{MethodsAppendix:ThreeBodyLossMasterEquationTerm} as
 \begin{align}
-    \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  \Tr\left\{\int d \bm{r}\,\hat{\Psi}^\dagger(\bm{r})\hat{\Psi}(\bm{r}) \left.\frac{d \hat{\rho}}{dt}\right|_\text{3-body loss} \right\} = - L_3 \int d \bm{r}\, \mean{\hat{\Psi}^\dagger(\bm{r})^3 \hat{\Psi}(\bm{r})^3}.
+    \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  \Tr\left\{\int d \vect{r}\,\hat{\Psi}^\dagger(\vect{r})\hat{\Psi}(\vect{r}) \left.\frac{d \hat{\rho}}{dt}\right|_\text{3-body loss} \right\} = - L_3 \int d \vect{r}\, \mean{\hat{\Psi}^\dagger(\vect{r})^3 \hat{\Psi}(\vect{r})^3}.
     \label{MethodsAppendix:ThreeBodyLossNumberLossRate}
 \end{align}
 
@@ -170,29 +170,29 @@ To separate the contributions to \eqref{MethodsAppendix:ThreeBodyLossNumberLossR
 Performing the substitution described, \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate} becomes
 \begin{align}
     \begin{split}
-        \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \bm{r}\, \Big\{[n_c(\bm{r})]^3 + 9 [n_c(\bm{r})]^2 \mean{\delta\hat{\Psi}^\dagger(\bm{r}) \delta\hat{\Psi}(\bm{r})}\\
-        &\relphantom{=-L_3 \int d \bm{r}\,\Big\{} + 9 n_c(\bm{r}) \mean{\delta\hat{\Psi}^\dagger(\bm{r})^2 \delta\hat{\Psi}(\bm{r})^2} + \mean{\delta\hat{\Psi}^\dagger(\bm{r})^3 \delta\hat{\Psi}(\bm{r})^3}\Big\},
+        \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \vect{r}\, \Big\{[n_c(\vect{r})]^3 + 9 [n_c(\vect{r})]^2 \mean{\delta\hat{\Psi}^\dagger(\vect{r}) \delta\hat{\Psi}(\vect{r})}\\
+        &\relphantom{=-L_3 \int d \vect{r}\,\Big\{} + 9 n_c(\vect{r}) \mean{\delta\hat{\Psi}^\dagger(\vect{r})^2 \delta\hat{\Psi}(\vect{r})^2} + \mean{\delta\hat{\Psi}^\dagger(\vect{r})^3 \delta\hat{\Psi}(\vect{r})^3}\Big\},
     \end{split}
     \label{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDeviationOperators}
 \end{align}
-where $n_c(\bm{r}) = \abs{\Psi(\bm{r})}^2$ is the condensate density.
+where $n_c(\vect{r}) = \abs{\Psi(\vect{r})}^2$ is the condensate density.
 
-The non-condensate density is given by $n_T(\bm{r}) = \mean{\delta\hat{\Psi}^\dagger(\bm{r}) \delta\hat{\Psi}(\bm{r})}$.  As thermal states are Gaussian, the higher-order expectation values in the previous expression may be simplified by the application of Wick's theorem~\citep{Wick:1950} giving
+The non-condensate density is given by $n_T(\vect{r}) = \mean{\delta\hat{\Psi}^\dagger(\vect{r}) \delta\hat{\Psi}(\vect{r})}$.  As thermal states are Gaussian, the higher-order expectation values in the previous expression may be simplified by the application of Wick's theorem~\citep{Wick:1950} giving
 \begin{align}
-    \mean{\delta\hat{\Psi}^\dagger(\bm{r})^2 \delta\hat{\Psi}(\bm{r})^2} &= 2 [n_T(\bm{r})]^2, \\
-    \mean{\delta\hat{\Psi}^\dagger(\bm{r})^3 \delta\hat{\Psi}(\bm{r})^3} &= 6 [n_T(\bm{r})]^3.
+    \mean{\delta\hat{\Psi}^\dagger(\vect{r})^2 \delta\hat{\Psi}(\vect{r})^2} &= 2 [n_T(\vect{r})]^2, \\
+    \mean{\delta\hat{\Psi}^\dagger(\vect{r})^3 \delta\hat{\Psi}(\vect{r})^3} &= 6 [n_T(\vect{r})]^3.
 \end{align}
 Substituting these expressions back into \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDeviationOperators} yields
 \begin{align}
-    \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \bm{r}\, [n_c(\bm{r})]^3 + 9 [n_c(\bm{r})]^2 n_T(\bm{r}) + 18 n_c(\bm{r}) [n_T(\bm{r})]^2 + 6 [n_T(\bm{r})]^3.
+    \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \vect{r}\, [n_c(\vect{r})]^3 + 9 [n_c(\vect{r})]^2 n_T(\vect{r}) + 18 n_c(\vect{r}) [n_T(\vect{r})]^2 + 6 [n_T(\vect{r})]^3.
     \label{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities}
 \end{align}
 
-The evaluation of this loss rate requires the evaluation of the condensate and thermal densities.  The condensate density $n_c(\bm{r})$ is fully determined by the condensate occupation $N_0(t)$ within the Thomas-Fermi approximation that has already been made elsewhere in the derivation of the kinetic model.  The first term of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} only involves the condensate density and may be evaluated analytically
+The evaluation of this loss rate requires the evaluation of the condensate and thermal densities.  The condensate density $n_c(\vect{r})$ is fully determined by the condensate occupation $N_0(t)$ within the Thomas-Fermi approximation that has already been made elsewhere in the derivation of the kinetic model.  The first term of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} only involves the condensate density and may be evaluated analytically
 \begin{align}
     \frac{d N_0}{dt} &= - L_3 \frac{15^{4/5}}{168 \pi^2} \left(\frac{m \overline{\omega}}{\hbar \sqrt{a}} \right)^{12/5} N_0^{9/5}.
 \end{align}
-The remaining terms of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} require an expression for the thermal density $n_T(\bm{r})$, which can be obtained from the energy distribution function $g(\varepsilon)$ and the density of states $\rho(\varepsilon)$.
+The remaining terms of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} require an expression for the thermal density $n_T(\vect{r})$, which can be obtained from the energy distribution function $g(\varepsilon)$ and the density of states $\rho(\varepsilon)$.
 
 The total number of thermal atoms $N_T$ can be written as
 \begin{align}
@@ -201,35 +201,35 @@ The total number of thermal atoms $N_T$ can be written as
 \end{align}
 where the density of states is defined by \eqref{MethodsAppendix:DensityOfStatesDefinition}.  Substituting this into \eqref{MethodsAppendix:NThermalDefinition} and rearranging the order of integrals gives
 \begin{align}
-    N_T &= \int d \bm{r}\, \int d\varepsilon\, \rho(\varepsilon, \bm{r}) g(\varepsilon),
+    N_T &= \int d \vect{r}\, \int d\varepsilon\, \rho(\varepsilon, \vect{r}) g(\varepsilon),
     \label{MethodsAppendix:NThermalInTermsOfRhoER}
 \end{align}
 where we have defined
 \begin{align}
-    \rho(\varepsilon, \bm{r}) &= \int d \bm{p}\, \delta\left(\varepsilon - V_\text{eff}(\bm{r}, t) - \bm{p}^2/2m\right) = \frac{m^{3/2}}{\sqrt{2} \pi^2 \hbar^3} \sqrt{\varepsilon - V_\text{eff}(\bm{r})}.
+    \rho(\varepsilon, \vect{r}) &= \int d \vect{p}\, \delta\left(\varepsilon - V_\text{eff}(\vect{r}, t) - \vect{p}^2/2m\right) = \frac{m^{3/2}}{\sqrt{2} \pi^2 \hbar^3} \sqrt{\varepsilon - V_\text{eff}(\vect{r})}.
 \end{align}
 The thermal density can be identified from \eqref{MethodsAppendix:NThermalInTermsOfRhoER}
 \begin{align}
-    n_T(\bm{r}) &= \int d\varepsilon\, \rho(\varepsilon, \bm{r}) g(\varepsilon).
+    n_T(\vect{r}) &= \int d\varepsilon\, \rho(\varepsilon, \vect{r}) g(\varepsilon).
     \label{MethodsAppendix:nThermalInTermsOfRhoER}
 \end{align}
 
-The remaining terms of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} can now be expressed in terms of the energy distribution function $g(\varepsilon)$ and the density of states $\rho(\varepsilon)$ by substituting \eqref{MethodsAppendix:nThermalInTermsOfRhoER} for one of the factors of $n_T(\bm{r})$ in each term
+The remaining terms of \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities} can now be expressed in terms of the energy distribution function $g(\varepsilon)$ and the density of states $\rho(\varepsilon)$ by substituting \eqref{MethodsAppendix:nThermalInTermsOfRhoER} for one of the factors of $n_T(\vect{r})$ in each term
 \begin{align}
-    -L_3 \int d \bm{r}\, 9 [n_c(\bm{r})]^2 n_T(\bm{r}) &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \bm{r}\, 9 \rho(\varepsilon, \bm{r}) [n_c(\bm{r})]^2, \label{MethodsAppendix:Condensate2Thermal1}\\
-    -L_3 \int d \bm{r}\, 18 n_c(\bm{r}) [n_T(\bm{r})]^2 &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \bm{r}\, 18 \rho(\varepsilon, \bm{r}) n_c(\bm{r}) n_T(\bm{r}), \label{MethodsAppendix:Condensate1Thermal2}\\
-    -L_3 \int d \bm{r}\, 6 [n_T(\bm{r})]^3 &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \bm{r}\, 6 \rho(\varepsilon, \bm{r}) [n_T(\bm{r})]^2. \label{MethodsAppendix:Condensate0Thermal3}
+    -L_3 \int d \vect{r}\, 9 [n_c(\vect{r})]^2 n_T(\vect{r}) &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \vect{r}\, 9 \rho(\varepsilon, \vect{r}) [n_c(\vect{r})]^2, \label{MethodsAppendix:Condensate2Thermal1}\\
+    -L_3 \int d \vect{r}\, 18 n_c(\vect{r}) [n_T(\vect{r})]^2 &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \vect{r}\, 18 \rho(\varepsilon, \vect{r}) n_c(\vect{r}) n_T(\vect{r}), \label{MethodsAppendix:Condensate1Thermal2}\\
+    -L_3 \int d \vect{r}\, 6 [n_T(\vect{r})]^3 &= - L_3 \int d\varepsilon\, g(\varepsilon) \int d \vect{r}\, 6 \rho(\varepsilon, \vect{r}) [n_T(\vect{r})]^2. \label{MethodsAppendix:Condensate0Thermal3}
 \end{align}
 From these expressions the rate of loss of atoms of energy $\varepsilon$ from the distribution can be identified
 \begin{align}
-    \left.\frac{\partial\big(\rho(\varepsilon) g(\varepsilon)\big)}{\partial t}\right|_\text{3-body loss} &= -L_3 \int d \bm{r}\, \rho(\varepsilon, \bm{r}) g(\varepsilon) \left\{ 3 [n_c(\bm{r})]^2 + 12 n_c(\bm{r}) n_T(\bm{r}) + 6 [n_T(\bm{r})]^2 \right\},
+    \left.\frac{\partial\big(\rho(\varepsilon) g(\varepsilon)\big)}{\partial t}\right|_\text{3-body loss} &= -L_3 \int d \vect{r}\, \rho(\varepsilon, \vect{r}) g(\varepsilon) \left\{ 3 [n_c(\vect{r})]^2 + 12 n_c(\vect{r}) n_T(\vect{r}) + 6 [n_T(\vect{r})]^2 \right\},
     \label{MethodsAppendix:QKT3BodyLossDistributionEvolution}
 \end{align}
 where the contributions due to the terms involving only one or two thermal atoms have been multiplied by $1/3$ and $2/3$ respectively to share appropriately the total loss.  The corresponding term for the condensate number evolution is
 \begin{align}
     \begin{split}
         \left. \frac{d N_0}{dt} \right|_\text{3-body loss} &= - L_3 \frac{15^{4/5}}{168 \pi^2} \left(\frac{m \overline{\omega}}{\hbar \sqrt{a}} \right)^{12/5} N_0^{9/5}\\
-        &\relphantom{=} - L_3 \int d\varepsilon \int d \bm{r}\, \rho(\varepsilon, \bm{r}) g(\varepsilon) \left\{6 [n_c(\bm{r})]^2 + 6 n_c(\bm{r}) n_T(\bm{r}) \right\},
+        &\relphantom{=} - L_3 \int d\varepsilon \int d \vect{r}\, \rho(\varepsilon, \vect{r}) g(\varepsilon) \left\{6 [n_c(\vect{r})]^2 + 6 n_c(\vect{r}) n_T(\vect{r}) \right\},
     \end{split}
     \label{MethodsAppendix:QKT3BodyLossCondensateEvolution}
 \end{align}

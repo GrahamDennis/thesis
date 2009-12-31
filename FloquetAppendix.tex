@@ -6,87 +6,87 @@
 \label{FloquetAppendix:Evolution}
 The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before~\citep{Leonhardt:2003}. In this section, the methods discussed in~\citep{Leonhardt:2003} will be applied to the case of temporally periodic but spatially homogeneous and isotropic Hamiltonians. One such Hamiltonian is obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} considered in \sectionref{Peaks:PerturbativeApproach} about the time-dependent (but periodic) mean-field.
 
-Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\bm{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\bm{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\bm{k}, t)$, $\hat{\phi}_i^\dagger(\bm{k}, t) \hat{\phi}_j^{\dagger}(-\bm{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\bm{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\bm{k}, t)$. Consequently the terms $\hat{\phi}_j(-\bm{k}, t)$ and $\hat{\phi}_j^\dagger(\bm{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
+Consider a general quadratic Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\vect{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\vect{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\vect{k}, t)$, $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\dagger}(-\vect{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\vect{k}, t)$. Consequently the terms $\hat{\phi}_j(-\vect{k}, t)$ and $\hat{\phi}_j^\dagger(\vect{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
 \begin{subequations}
     \label{FloquetAppendix:MatrixOperatorEvolution}
     \begin{align}
-        i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}, t) &= \mathcal{H}(\bm{k}, t) \hat{\bm{\Upsilon}}(\bm{k}, t), \label{FloquetAppendix:UpsilonEquationOfMotion}\\
-        \hat{\bm{\Upsilon}}(\bm{k}, t) &= 
+        i \hbar \frac{\partial }{\partial t}\hat{\vect{\Upsilon}}(\vect{k}, t) &= \mathcal{H}(\vect{k}, t) \hat{\vect{\Upsilon}}(\vect{k}, t), \label{FloquetAppendix:UpsilonEquationOfMotion}\\
+        \hat{\vect{\Upsilon}}(\vect{k}, t) &= 
         \begin{pmatrix}
-            \hat{\phi}_1^{\phantom{\dagger}}(\bm{k}, t) &
-            \hat{\phi}_1^\dagger(-\bm{k}, t) &
-            \hat{\phi}_2^{\phantom{\dagger}}(\bm{k}, t) &
-            \hat{\phi}_2^\dagger(-\bm{k}, t) &
+            \hat{\phi}_1^{\phantom{\dagger}}(\vect{k}, t) &
+            \hat{\phi}_1^\dagger(-\vect{k}, t) &
+            \hat{\phi}_2^{\phantom{\dagger}}(\vect{k}, t) &
+            \hat{\phi}_2^\dagger(-\vect{k}, t) &
             \dots
         \end{pmatrix}^\text{T},
     \end{align}
 \end{subequations}
-where the matrix $\mathcal{H}(\bm{k}, t)$ obeys
+where the matrix $\mathcal{H}(\vect{k}, t)$ obeys
 \begin{align}
-        \mathcal{H}(\bm{k}, t+T) &= \mathcal{H}(\bm{k}, t),\\
-        \mathcal{H}(\bm{k}, t) &= \mathcal{H}(-\bm{k}, t), \label{FloquetAppendix:HReflectionSymmetry}
+        \mathcal{H}(\vect{k}, t+T) &= \mathcal{H}(\vect{k}, t),\\
+        \mathcal{H}(\vect{k}, t) &= \mathcal{H}(-\vect{k}, t), \label{FloquetAppendix:HReflectionSymmetry}
 \end{align}
 where the last equality holds because $\hat{H}(t)$ is isotropic.
 
-If the Hamiltonian $\hat{H}(t)$ were not time-dependent, $\mathcal{H}(\bm{k}, t)$ could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\bm{k})$ and corresponding operators $\hat{Q}_j(\bm{k}, t)$ which would evolve as
+If the Hamiltonian $\hat{H}(t)$ were not time-dependent, $\mathcal{H}(\vect{k}, t)$ could be diagonalised to find the (potentially complex) eigenvalues $\Omega_j(\vect{k})$ and corresponding operators $\hat{Q}_j(\vect{k}, t)$ which would evolve as
 \begin{align}
     \label{FloquetAppendix:ContinouousTimeEigenoperators}
-    i \hbar \frac{\partial }{\partial t}\hat{Q}_j(\bm{k}, t) &= \hbar \Omega_j(\bm{k}) \hat{Q}_j(\bm{k}, t),
+    i \hbar \frac{\partial }{\partial t}\hat{Q}_j(\vect{k}, t) &= \hbar \Omega_j(\vect{k}) \hat{Q}_j(\vect{k}, t),
 \end{align}
-where the $\hat{Q}_j(\bm{k}, t)$ need not obey boson commutation relations. The real parts of the eigenvalues of $\mathcal{H}(\bm{k}, t)$ would give the excitation spectrum of the Hamiltonian $\hat{H}(t)$ with non-zero imaginary components giving the growth rates of the corresponding unstable mode.
+where the $\hat{Q}_j(\vect{k}, t)$ need not obey boson commutation relations. The real parts of the eigenvalues of $\mathcal{H}(\vect{k}, t)$ would give the excitation spectrum of the Hamiltonian $\hat{H}(t)$ with non-zero imaginary components giving the growth rates of the corresponding unstable mode.
 
-In the case of a periodic matrix $\mathcal{H}(\bm{k}, t)$ it is instead the monodromy matrix $\mathcal{M}(\bm{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\bm{k})$ satisfies
+In the case of a periodic matrix $\mathcal{H}(\vect{k}, t)$ it is instead the monodromy matrix $\mathcal{M}(\vect{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\vect{k})$ satisfies
 \begin{align}
     \label{FloquetAppendix:MonodromyMatrix}
-    \hat{\bm{\Upsilon}}(\bm{k}, nT) &= \mathcal{M}(\bm{k})^n \hat{\bm{\Upsilon}}(\bm{k}, 0),
+    \hat{\vect{\Upsilon}}(\vect{k}, nT) &= \mathcal{M}(\vect{k})^n \hat{\vect{\Upsilon}}(\vect{k}, 0),
 \end{align}
-where $n$ is a positive integer. In place of \eqref{FloquetAppendix:ContinouousTimeEigenoperators} we seek the operators $\hat{Q}_j(\bm{k}, t)$ that obey
+where $n$ is a positive integer. In place of \eqref{FloquetAppendix:ContinouousTimeEigenoperators} we seek the operators $\hat{Q}_j(\vect{k}, t)$ that obey
 \begin{align}
     \label{FloquetAppendix:QOperatorEvolution}
-    \hat{Q}_j(\bm{k}, T) &= \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, 0),
+    \hat{Q}_j(\vect{k}, T) &= \lambda_j(\vect{k}) \hat{Q}_j(\vect{k}, 0),
 \end{align}
-where the $\hat{Q}_j(\bm{k}, t)$ are defined by
+where the $\hat{Q}_j(\vect{k}, t)$ are defined by
 \begin{align}
     \label{FloquetAppendix:QOperatorDefinition}
-    \hat{Q}_j(\bm{k}, t) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, t),
+    \hat{Q}_j(\vect{k}, t) &= \vect{c}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, t),
 \end{align}
-for some vectors $\bm{c}_j(\bm{k})$, where $\bm{c}_j^\dagger(\bm{k})$ denotes the conjugate transpose. 
+for some vectors $\vect{c}_j(\vect{k})$, where $\vect{c}_j^\dagger(\vect{k})$ denotes the conjugate transpose. 
 
-Using definitions \eqref{FloquetAppendix:MonodromyMatrix}--\eqref{FloquetAppendix:QOperatorDefinition}, it follows that the $\lambda_j(\bm{k})$ and $\bm{c}_j^\dagger(\bm{k})$ are respectively the eigenvalues and left eigenvectors of $\mathcal{M}(\bm{k})$,
+Using definitions \eqref{FloquetAppendix:MonodromyMatrix}--\eqref{FloquetAppendix:QOperatorDefinition}, it follows that the $\lambda_j(\vect{k})$ and $\vect{c}_j^\dagger(\vect{k})$ are respectively the eigenvalues and left eigenvectors of $\mathcal{M}(\vect{k})$,
 \begin{align}
-    \hat{Q}_j(\bm{k}, T) &= \bm{c}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, T) = \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) \\
-    \hat{Q}_j(\bm{k}, T) &= \lambda_j(\bm{k}) \hat{Q}_j(\bm{k}, 0) = \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0)\\
-    \implies \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}, 0) &= \lambda_j(\bm{k}) \bm{c}_j^\dagger \hat{\bm{\Upsilon}}(\bm{k}, 0) \label{FloquetAppendix:LeftEigenvectorWithOperator}\\
-    \implies \bm{c}_j^\dagger(\bm{k}) \mathcal{M}(\bm{k}) &= \lambda_j(\bm{k}) \bm{c}_j^\dagger(\bm{k}), \label{FloquetAppendix:LeftEigenvector}
+    \hat{Q}_j(\vect{k}, T) &= \vect{c}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, T) = \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0) \\
+    \hat{Q}_j(\vect{k}, T) &= \lambda_j(\vect{k}) \hat{Q}_j(\vect{k}, 0) = \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0)\\
+    \implies \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0) &= \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0) \label{FloquetAppendix:LeftEigenvectorWithOperator}\\
+    \implies \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) &= \lambda_j(\vect{k}) \vect{c}_j^\dagger(\vect{k}), \label{FloquetAppendix:LeftEigenvector}
 \end{align}
-where \eqref{FloquetAppendix:LeftEigenvector} follows from \eqref{FloquetAppendix:LeftEigenvectorWithOperator} as the components of $\hat{\bm{\Upsilon}}(\bm{k}, 0)$ are linearly independent operators.
+where \eqref{FloquetAppendix:LeftEigenvector} follows from \eqref{FloquetAppendix:LeftEigenvectorWithOperator} as the components of $\hat{\vect{\Upsilon}}(\vect{k}, 0)$ are linearly independent operators.
 
-The operators $\hat{Q}_j(\bm{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\bm{k}, t)$. As every operator in $\hat{\bm{\Upsilon}}(-\bm{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\bm{\Upsilon}}(\bm{k}, t)$, the $\hat{Q}_j^\dagger(\bm{k}, t)$ can be written as
+The operators $\hat{Q}_j(\vect{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\vect{k}, t)$. As every operator in $\hat{\vect{\Upsilon}}(-\vect{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\vect{\Upsilon}}(\vect{k}, t)$, the $\hat{Q}_j^\dagger(\vect{k}, t)$ can be written as
 \begin{align}
     \label{FloquetAppendix:QDaggerDefinition}
-    \hat{Q}_j^\dagger(\bm{k}, t) &= \bm{d}_j^\dagger(\bm{k}) \hat{\bm{\Upsilon}}(-\bm{k}, t)
+    \hat{Q}_j^\dagger(\vect{k}, t) &= \vect{d}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(-\vect{k}, t)
 \end{align}
-for some vectors $\bm{d}_j(\bm{k})$. It follows from \eqref{FloquetAppendix:QOperatorEvolution} that the $\hat{Q}_j^\dagger(\bm{k}, t)$ will obey
+for some vectors $\vect{d}_j(\vect{k})$. It follows from \eqref{FloquetAppendix:QOperatorEvolution} that the $\hat{Q}_j^\dagger(\vect{k}, t)$ will obey
 \begin{align}
     \label{FloquetAppendix:QDaggerEvolution}
-    \hat{Q}_j^\dagger(\bm{k}, T) &= \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0).
+    \hat{Q}_j^\dagger(\vect{k}, T) &= \lambda_j^*(\vect{k}) \hat{Q}_j^\dagger(\vect{k}, 0).
 \end{align}
 
-The commutators of the $\hat{Q}_j^{(\dagger)}(\bm{k}, t)$ will be constant as they are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\bm{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
+The commutators of the $\hat{Q}_j^{(\dagger)}(\vect{k}, t)$ will be constant as they are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\vect{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
 \begin{align}
-    \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, T),\, \hat{Q}_j^\dagger(\bm{k}, T) \right] &= \left[ \lambda_i(\bm{k}) \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \lambda_j^*(\bm{k}) \hat{Q}_j^\dagger(\bm{k}, 0)\right]\\
-        &= \lambda_i(\bm{k}) \lambda_j^*(\bm{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\bm{k}, 0),\, \hat{Q}_j^\dagger(\bm{k}, 0)\right].
+    \left[ \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, T),\, \hat{Q}_j^\dagger(\vect{k}, T) \right] &= \left[ \lambda_i(\vect{k}) \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, 0),\, \lambda_j^*(\vect{k}) \hat{Q}_j^\dagger(\vect{k}, 0)\right]\\
+        &= \lambda_i(\vect{k}) \lambda_j^*(\vect{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, 0),\, \hat{Q}_j^\dagger(\vect{k}, 0)\right].
         \label{FloquetAppendix:InvariantCommutator}
 \end{align}
-For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\bm{k}) \lambda_j^*(\bm{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\bm{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\bm{k})}^{-1} = \lambda_i(\bm{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\bm{k}) = \frac{i}{T} \ln \lambda_i(\bm{k})$, this requirement becomes $\xi_i(\bm{k}) = \omega_i(\bm{k})$. Hence it is only for purely real Floquet exponents that the eigenvalues of $\mathcal{M}(\bm{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\bm{k}, t)$ is time-independent, the Floquet exponents $\xi(\bm{k})$ are equal to the eigenvalues $\Omega(\bm{k})$ of $\mathcal{H}(\bm{k}, t)$. Hence the real components of the Floquet exponents are related to the excitation spectrum and non-zero imaginary components are related to the existence of instabilities.
+For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\vect{k}) \lambda_j^*(\vect{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\vect{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\vect{k})}^{-1} = \lambda_i(\vect{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\vect{k}) = \frac{i}{T} \ln \lambda_i(\vect{k})$, this requirement becomes $\xi_i(\vect{k}) = \omega_i(\vect{k})$. Hence it is only for purely real Floquet exponents that the eigenvalues of $\mathcal{M}(\vect{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\vect{k}, t)$ is time-independent, the Floquet exponents $\xi(\vect{k})$ are equal to the eigenvalues $\Omega(\vect{k})$ of $\mathcal{H}(\vect{k}, t)$. Hence the real components of the Floquet exponents are related to the excitation spectrum and non-zero imaginary components are related to the existence of instabilities.
 
-Generally the Floquet exponents $\xi_i$ may have a non-zero imaginary component. In this case the $\hat{Q}_i(\bm{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\bm{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\bm{k})$.
+Generally the Floquet exponents $\xi_i$ may have a non-zero imaginary component. In this case the $\hat{Q}_i(\vect{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\vect{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\vect{k})$.
 
-First it is noted that if $\lambda_i(\bm{k})$ is an eigenvalue of $\mathcal{M}(\bm{k})$, then from \eqref{FloquetAppendix:QDaggerDefinition}--\eqref{FloquetAppendix:QDaggerEvolution} $\lambda_i^*(\bm{k})$ must be an eigenvalue of $\mathcal{M}(-\bm{k})$. However, from the reflection symmetry of $\mathcal{H}(\bm{k})$ defined by \eqref{FloquetAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\bm{k}) = \mathcal{M}(\bm{k})$ and hence $\lambda_i^*(\bm{k})$ must also be an eigenvalue of $\mathcal{M}(\bm{k})$.
+First it is noted that if $\lambda_i(\vect{k})$ is an eigenvalue of $\mathcal{M}(\vect{k})$, then from \eqref{FloquetAppendix:QDaggerDefinition}--\eqref{FloquetAppendix:QDaggerEvolution} $\lambda_i^*(\vect{k})$ must be an eigenvalue of $\mathcal{M}(-\vect{k})$. However, from the reflection symmetry of $\mathcal{H}(\vect{k})$ defined by \eqref{FloquetAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\vect{k}) = \mathcal{M}(\vect{k})$ and hence $\lambda_i^*(\vect{k})$ must also be an eigenvalue of $\mathcal{M}(\vect{k})$.
 
-Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\bm{k}, t)$ form a complete basis over the same space as the $\hat{\phi}_i^{(\dagger)}(\bm{k}, t)$ which themselves do not all commute, for every operator $\hat{Q}_i(\bm{k}, t)$ there must be at least one other operator with which it does not commute. From \eqref{FloquetAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\bm{k})$ is an eigenvalue,   ${\lambda_i^*(\bm{k})}^{-1}$ must also be an eigenvalue.
+Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\vect{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\vect{k}, t)$ form a complete basis over the same space as the $\hat{\phi}_i^{(\dagger)}(\vect{k}, t)$ which themselves do not all commute, for every operator $\hat{Q}_i(\vect{k}, t)$ there must be at least one other operator with which it does not commute. From \eqref{FloquetAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\vect{k})$ is an eigenvalue,   ${\lambda_i^*(\vect{k})}^{-1}$ must also be an eigenvalue.
 
-Combining these two requirements gives a consistency condition for the eigenvalues of $\mathcal{M}(\bm{k})$: if $\lambda$ is an eigenvalue, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ must all be eigenvalues. These conditions can be met using 1, 2 or 4 distinct eigenvalues of $\mathcal{M}(\bm{k})$.
+Combining these two requirements gives a consistency condition for the eigenvalues of $\mathcal{M}(\vect{k})$: if $\lambda$ is an eigenvalue, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ must all be eigenvalues. These conditions can be met using 1, 2 or 4 distinct eigenvalues of $\mathcal{M}(\vect{k})$.
 
 For the degenerate case in which all of $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are equal, the eigenvalue $\lambda = \pm 1$. The corresponding Floquet exponent is $\xi = 0$ or $\xi = \pi\nu_0$ where $\displaystyle \nu_0 = T^{-1}$. This is not an interesting case and does not occur in \figureref{Peaks:CondensateEigenvalues}.
 
@@ -94,44 +94,44 @@ There are two ways that two distinct eigenvalues can be used to satisfy the cons
 
 The final possibility is that four distinct eigenvalues are used to satisfy the consistency condition. In this case the four eigenvalues $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are different and the corresponding Floquet exponents are $\xi = \omega \pm i\gamma$ and $\xi' = -\omega \pm i\gamma$. It is this situation that occurs in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[0.75 \times 10^6]{m}^{-1}$.
 
-In summary, the Floquet exponents with nonzero real parts come in pairs $\xi(\bm{k}) = \omega(\bm{k}) \pm i\gamma(\bm{k})$. From the operators corresponding to these pairs of exponents bosonic annihilation and creation operators can be constructed.
+In summary, the Floquet exponents with nonzero real parts come in pairs $\xi(\vect{k}) = \omega(\vect{k}) \pm i\gamma(\vect{k})$. From the operators corresponding to these pairs of exponents bosonic annihilation and creation operators can be constructed.
 
-Consider the eigenvalues $\displaystyle \lambda = e^{r + i \phi}$ and $\displaystyle \lambda' = e^{-r + i\phi}$, and the corresponding operators $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$. From these operators we define the following two operators which will respectively be shown to be bosonic annihilation and creation operators,
+Consider the eigenvalues $\displaystyle \lambda = e^{r + i \phi}$ and $\displaystyle \lambda' = e^{-r + i\phi}$, and the corresponding operators $\hat{Q}(\vect{k}, t)$ and $\hat{Q}'(\vect{k}, t)$. From these operators we define the following two operators which will respectively be shown to be bosonic annihilation and creation operators,
 \begin{align}
-    \hat{\Lambda}_1(\bm{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t)\right),\\
-    \hat{\Lambda}_2(\bm{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, t) - \hat{Q}'(\bm{k}, t)\right).
+    \hat{\Lambda}_1(\vect{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\vect{k}, t) + \hat{Q}'(\vect{k}, t)\right),\\
+    \hat{\Lambda}_2(\vect{k}, t) &= \frac{1}{\sqrt{2}} \left( \hat{Q}(\vect{k}, t) - \hat{Q}'(\vect{k}, t)\right).
 \end{align}
-As $\lambda \lambda'^* = 1$, $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'^\dagger(\bm{k}, t)$ will not commute. By appropriate rescaling of the operators, we can define their commutator to be
+As $\lambda \lambda'^* = 1$, $\hat{Q}(\vect{k}, t)$ and $\hat{Q}'^\dagger(\vect{k}, t)$ will not commute. By appropriate rescaling of the operators, we can define their commutator to be
 \begin{align}
-    \left[ \hat{Q}(\bm{k}, t),\, \hat{Q}'^\dagger(\bm{k}, t) \right] &= 1.
+    \left[ \hat{Q}(\vect{k}, t),\, \hat{Q}'^\dagger(\vect{k}, t) \right] &= 1.
 \end{align}
 This choice defines the value of the other nonzero commutator,
 \begin{align}
-    \left[ \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) \right] &= 1.
+    \left[ \hat{Q}'(\vect{k}, t),\, \hat{Q}^\dagger(\vect{k}, t) \right] &= 1.
 \end{align}
 
-From these two commutators it can then be shown that $\hat{\Lambda}_1(\bm{k}, t)$ obeys the commutation relations appropriate for an annihilation operator, while $\hat{\Lambda}_2(\bm{k}, t)$ obeys the commutation relations for a creation operator. For example,
+From these two commutators it can then be shown that $\hat{\Lambda}_1(\vect{k}, t)$ obeys the commutation relations appropriate for an annihilation operator, while $\hat{\Lambda}_2(\vect{k}, t)$ obeys the commutation relations for a creation operator. For example,
 \begin{align}
-    \left[\hat{\Lambda}_1^{\phantom{\dagger}}(\bm{k}, t),\, \hat{\Lambda}_1^\dagger(\bm{k}, t) \right] &= \frac{1}{2} \left[ \hat{Q}(\bm{k}, t) + \hat{Q}'(\bm{k}, t),\, \hat{Q}^\dagger(\bm{k}, t) + \hat{Q}'^\dagger(\bm{k}, t)\right] = 1.
+    \left[\hat{\Lambda}_1^{\phantom{\dagger}}(\vect{k}, t),\, \hat{\Lambda}_1^\dagger(\vect{k}, t) \right] &= \frac{1}{2} \left[ \hat{Q}(\vect{k}, t) + \hat{Q}'(\vect{k}, t),\, \hat{Q}^\dagger(\vect{k}, t) + \hat{Q}'^\dagger(\vect{k}, t)\right] = 1.
 \end{align}
 
-Defining $\hat{\Lambda}_1'(-\bm{k}, t) = \hat{\Lambda}_2^\dagger(\bm{k}, t)$, the evolution of the operators $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(\bm{k}, t)$ can now be determined. $\hat{\Lambda}_1(\bm{k}, t)$ evolves as
+Defining $\hat{\Lambda}_1'(-\vect{k}, t) = \hat{\Lambda}_2^\dagger(\vect{k}, t)$, the evolution of the operators $\hat{\Lambda}_1(\vect{k}, t)$ and $\hat{\Lambda}_1'(\vect{k}, t)$ can now be determined. $\hat{\Lambda}_1(\vect{k}, t)$ evolves as
 \begin{align}
-    \hat{\Lambda}_1(\bm{k}, nT) &= \frac{1}{\sqrt{2}} \left(\hat{Q}(\bm{k}, nT) + \hat{Q}'(\bm{k}, nT) \right) \\
-        &= \frac{1}{\sqrt{2}} \left( e^{nr + i n\phi} \hat{Q}(\bm{k}, 0) + e^{-nr + i n \phi}\hat{Q}'(\bm{k}, 0)\right) \\
+    \hat{\Lambda}_1(\vect{k}, nT) &= \frac{1}{\sqrt{2}} \left(\hat{Q}(\vect{k}, nT) + \hat{Q}'(\vect{k}, nT) \right) \\
+        &= \frac{1}{\sqrt{2}} \left( e^{nr + i n\phi} \hat{Q}(\vect{k}, 0) + e^{-nr + i n \phi}\hat{Q}'(\vect{k}, 0)\right) \\
         \begin{split}
-            &=  e^{i n \phi} \bigg[ \frac{1}{2}\left( e^{nr} - e^{-nr}\right)\frac{1}{\sqrt{2}}\left(\hat{Q}(\bm{k}, 0) - \hat{Q}'(\bm{k}, 0) \right) \\
-            &\relphantom{=e^{i n \phi}\bigg[} + \frac{1}{2} \left( e^{nr} + e^{-nr}\right)\frac{1}{\sqrt{2}} \left( \hat{Q}(\bm{k}, 0) + \hat{Q}'(\bm{k}, 0)\right)\bigg]
+            &=  e^{i n \phi} \bigg[ \frac{1}{2}\left( e^{nr} - e^{-nr}\right)\frac{1}{\sqrt{2}}\left(\hat{Q}(\vect{k}, 0) - \hat{Q}'(\vect{k}, 0) \right) \\
+            &\relphantom{=e^{i n \phi}\bigg[} + \frac{1}{2} \left( e^{nr} + e^{-nr}\right)\frac{1}{\sqrt{2}} \left( \hat{Q}(\vect{k}, 0) + \hat{Q}'(\vect{k}, 0)\right)\bigg]
         \end{split}\\
-        &= e^{i n \omega T} \left( \sinh(n\gamma T) \hat{\Lambda}_1'^\dagger(-\bm{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1(\bm{k}, 0)\right), \label{FloquetAppendix:LambdaOperatorEvolution}
+        &= e^{i n \omega T} \left( \sinh(n\gamma T) \hat{\Lambda}_1'^\dagger(-\vect{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1(\vect{k}, 0)\right), \label{FloquetAppendix:LambdaOperatorEvolution}
 \end{align}
-where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\bm{k}, t)$ can be shown to evolve as
+where $n$ is a positive integer. Similarly, $\hat{\Lambda}_1'(\vect{k}, t)$ can be shown to evolve as
 \begin{align}
-    \hat{\Lambda}_1'(\bm{k}, nT) &= e^{-i n \omega T} \left( \sinh(n \gamma T) \hat{\Lambda}_1^\dagger(-\bm{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1'(\bm{k}, 0)\right). \label{FloquetAppendix:LambdaPrimeOperatorEvolution}
+    \hat{\Lambda}_1'(\vect{k}, nT) &= e^{-i n \omega T} \left( \sinh(n \gamma T) \hat{\Lambda}_1^\dagger(-\vect{k}, 0) + \cosh(n \gamma T) \hat{\Lambda}_1'(\vect{k}, 0)\right). \label{FloquetAppendix:LambdaPrimeOperatorEvolution}
 \end{align}
-The evolution represented by \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric down-conversion~\citep{WallsMilburn} which generates EPR entanglement (see next section) between the $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ modes.
+The evolution represented by \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} is the same as that for the non-degenerate parametric down-conversion~\citep{WallsMilburn} which generates EPR entanglement (see next section) between the $\hat{\Lambda}_1(\vect{k}, t)$ and $\hat{\Lambda}_1'(-\vect{k}, t)$ modes.
 
-Finally, if the $\hat{Q}(\bm{k}, t)$ and $\hat{Q}'(\bm{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by the uniqueness of the eigenvectors $\hat{\Lambda}_1'(\bm{k}, t) = \hat{\Lambda}_1(\bm{k}, t)$. For this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} consistent.
+Finally, if the $\hat{Q}(\vect{k}, t)$ and $\hat{Q}'(\vect{k}, t)$ operators correspond to only two distinct eigenvalues (i.e. $\lambda = \lambda^*$), then by the uniqueness of the eigenvectors $\hat{\Lambda}_1'(\vect{k}, t) = \hat{\Lambda}_1(\vect{k}, t)$. For this case $\displaystyle e^{i n\omega T} = \pm 1$, making \eqref{FloquetAppendix:LambdaOperatorEvolution} and \eqref{FloquetAppendix:LambdaPrimeOperatorEvolution} consistent.
 
 \section{EPR entanglement of unstable excitations}
 \label{FloquetAppendix:EPREntanglement}
@@ -155,9 +155,9 @@ The highest correlation between $\hat{X}_1^\theta$ and $\hat{X}_2^\phi$ will exi
     V(\theta, \phi) &\equiv V\big(\hat{X}_2^\phi \big| \hat{X}_1^{\theta}\big) = \big<\big(\hat{X}_2^\phi - \hat{X}_1^\theta\big)^2\big>.
 \end{align}
 
-For the case of the unstable modes described by \eqref{FloquetAppendix:LambdaOperatorEvolution}--\eqref{FloquetAppendix:LambdaPrimeOperatorEvolution}, these variances are minimised by the choice $\theta = -\phi$. At time $t = n T > 0$, the EPR-criterion \eqref{FloquetAppendix:EPRCondition} for the modes $\hat{\Lambda}_1(\bm{k}, t)$ and $\hat{\Lambda}_1'(-\bm{k}, t)$ is
+For the case of the unstable modes described by \eqref{FloquetAppendix:LambdaOperatorEvolution}--\eqref{FloquetAppendix:LambdaPrimeOperatorEvolution}, these variances are minimised by the choice $\theta = -\phi$. At time $t = n T > 0$, the EPR-criterion \eqref{FloquetAppendix:EPRCondition} for the modes $\hat{\Lambda}_1(\vect{k}, t)$ and $\hat{\Lambda}_1'(-\vect{k}, t)$ is
 \begin{align}
     V\big(\hat{X}_2^{-\theta} \big| \hat{X}_1^{\theta}\big)V\big(\hat{X}_2^{-\theta + \frac{\pi}{2}} \big| \hat{X}_1^{\theta - \frac{\pi}{2}}\big) &= K^2 e^{-4 \gamma t}, \label{FloquetAppendix:GrowingCorrelations}
 \end{align}
-where $K$ is a constant of order $O\left(1+\abs{\alpha}^2  +\abs{\alpha'}^2\right)$, with $\mean{\hat{\Lambda}_1(\bm{k}, t=0)} = \alpha$ and $\mean{\hat{\Lambda}_1'(-\bm{k}, t=0)} = \alpha'$. Note that $K=1$ if the $\hat{\Lambda}_1^{(\prime)}$ are initially in vacuum states. For sufficiently large times \eqref{FloquetAppendix:GrowingCorrelations} is less than 1 indicating that the modes $\hat{\Lambda}_1^{(\prime)}$ are EPR-entangled. This is true both for the case where the $\hat{\Lambda}_1^{(\prime)}$ are spontaneously-seeded (as in \figureref{Peaks:ResonantOutcouplingProcess}), and for the more general case in which the $\hat{\Lambda}_1^{(\prime)}$ are seeded by different coherent states.
+where $K$ is a constant of order $O\left(1+\abs{\alpha}^2  +\abs{\alpha'}^2\right)$, with $\mean{\hat{\Lambda}_1(\vect{k}, t=0)} = \alpha$ and $\mean{\hat{\Lambda}_1'(-\vect{k}, t=0)} = \alpha'$. Note that $K=1$ if the $\hat{\Lambda}_1^{(\prime)}$ are initially in vacuum states. For sufficiently large times \eqref{FloquetAppendix:GrowingCorrelations} is less than 1 indicating that the modes $\hat{\Lambda}_1^{(\prime)}$ are EPR-entangled. This is true both for the case where the $\hat{\Lambda}_1^{(\prime)}$ are spontaneously-seeded (as in \figureref{Peaks:ResonantOutcouplingProcess}), and for the more general case in which the $\hat{\Lambda}_1^{(\prime)}$ are seeded by different coherent states.
 

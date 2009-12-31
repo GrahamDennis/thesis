@@ -68,7 +68,7 @@ The observed features in the atom laser profile presented in the previous sectio
 The problem is to determine the response of the condensate to small fluctuations about the mean-field. Typically the condensate is stable to such fluctuations, and their energy spectrum determines the phase and group velocities of the excitations.  In the case that the condensate is dynamically unstable some modes will undergo exponential growth, which corresponds to the generalised energy spectrum containing nonzero imaginary components. As a concrete example of the techniques demonstrated in this section, we consider a single-component condensate described by the Hamiltonian
 \begin{align}
     \label{Peaks:ElementaryExcitationsExampleHamiltonian}
-    \hat{H} &= \int d \bm{x}\, \hat{\Psi}^\dagger \left( -\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + \frac{1}{2} U \hat{\Psi}^\dagger \hat{\Psi} - \mu \right) \hat{\Psi},
+    \hat{H} &= \int d \vect{x}\, \hat{\Psi}^\dagger \left( -\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + \frac{1}{2} U \hat{\Psi}^\dagger \hat{\Psi} - \mu \right) \hat{\Psi},
 \end{align}
 where an arbitrary energy offset $\mu$ has been included. This term is introduced for calculational reasons and has no physical influence on the Hamiltonian\footnote{The energy offset cannot affect any observable expectation values as although it contributes a different energy offset for states with different total number, these states are uncoupled due to the conservation of particle-number.}.
 
@@ -81,15 +81,15 @@ where $\hat{H}_n$ contains terms of order $(\delta\hat{\Psi})^n$. The excitation
 
 The zeroth order term in \eqref{Peaks:HamiltonianPowerSeriesExpansion}
 \begin{align}
-    \hat{H}_0 &= \int d \bm{x}\, \Psi^* \left( -\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + \frac{1}{2} U \big|\Psi\big|^2 - \mu \right) \Psi
+    \hat{H}_0 &= \int d \vect{x}\, \Psi^* \left( -\frac{\hbar^2 \nabla^2}{2M} + V(\vect{x}) + \frac{1}{2} U \big|\Psi\big|^2 - \mu \right) \Psi
 \end{align}
 is simply a constant and represents the total energy of the unexcited mean-field. The first order term is of the form
 \begin{align}
-    \hat{H}_1 &= \int d \bm{x}\, \delta \hat{\Psi}^\dagger \left(i \hbar \frac{\partial \Psi}{\partial t} \right)  + \int d \bm{x}\, \left(i \hbar \frac{\partial \Psi}{\partial t} \right)^* \delta \hat{\Psi},
+    \hat{H}_1 &= \int d \vect{x}\, \delta \hat{\Psi}^\dagger \left(i \hbar \frac{\partial \Psi}{\partial t} \right)  + \int d \vect{x}\, \left(i \hbar \frac{\partial \Psi}{\partial t} \right)^* \delta \hat{\Psi},
 \end{align}
 where the mean-field $\Psi$ evolves as
 \begin{align}
-    i \hbar \frac{\partial\Psi}{\partial t} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + U \big| \Psi\big|^2 - \mu \right) \Psi.
+    i \hbar \frac{\partial\Psi}{\partial t} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + U \big| \Psi\big|^2 - \mu \right) \Psi.
 \end{align}
 
 Although the first order term $\hat{H}_1$ is nonzero, it does not affect the evolution of the deviation operator:
@@ -106,8 +106,8 @@ As $\hat{H}_1$ does not occur in \eqref{Peaks:DeviationOperatorEvolution}, it do
 The first physically important term in \eqref{Peaks:HamiltonianPowerSeriesExpansion} is
 \begin{align}
     \begin{split}
-        \hat{H}_2 &= \int d \bm{x}\, \delta \hat{\Psi}^\dagger \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\bm{x}) + 2 U\big|\Psi\big|^2 -\mu \right)\delta\hat{\Psi}\\
-         &\relphantom{=} + \frac{1}{2} U\int d \bm{x}\, \left(\Psi^2 \delta \hat{\Psi}^\dagger\delta \hat{\Psi}^\dagger  +  (\Psi^*)^2 \delta \hat{\Psi} \,\delta \hat{\Psi}\right).
+        \hat{H}_2 &= \int d \vect{x}\, \delta \hat{\Psi}^\dagger \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + 2 U\big|\Psi\big|^2 -\mu \right)\delta\hat{\Psi}\\
+         &\relphantom{=} + \frac{1}{2} U\int d \vect{x}\, \left(\Psi^2 \delta \hat{\Psi}^\dagger\delta \hat{\Psi}^\dagger  +  (\Psi^*)^2 \delta \hat{\Psi} \,\delta \hat{\Psi}\right).
     \end{split}
     \label{Peaks:HamiltonianPowerSeriesQuadraticTerm}
 \end{align}
@@ -127,34 +127,34 @@ In the general case, we look for the operators $\hat{\Lambda}_i$ satisfying
 \end{align}
 where $\omega_i$ is real if and only if $\hat{\Lambda}_i$ is a boson annihilation operator~\citep{Leonhardt:2003}. In the case that $\omega_i$ is complex, boson annihilation operators can be constructed from the $\hat{\Lambda}_i$ as discussed in \appendixref{FloquetAppendix}. Hence $\hbar\omega_i$ can be considered to be a generalised energy spectrum of the condensate where nonzero imaginary components correspond to dynamical instabilities of the condensate. Note that although the eigenvalues of $\hat{H}_2$ must be real as it is Hermitian, the eigenvalues of \eqref{Peaks:ElementaryExcitationsEvolution} need not be real. For example, the Hamiltonian for degenerate parametric down-conversion $\hat{H} = \hbar\chi \left(\hat{a}\hat{a} + \hat{a}^\dagger \hat{a}^\dagger \right)$ is Hermitian but its eigenvalues in \eqref{Peaks:ElementaryExcitationsEvolution} are pure imaginary. In this case the occupation of the mode $\hat{a}$ undergoes exponential growth. The case of complex eigenvalues $\omega_i$ is discussed further in \sectionref{Peaks:ExperimentEigenvalues} and \appendixref{FloquetAppendix}.
 
-Equation \eqref{Peaks:ElementaryExcitationsEvolution} is most easily solved by expanding the $\hat{\Lambda}_i$ in a complete, linearly independent basis $\{\hat{\Upsilon}_j\}$ such that $\hat{\Lambda}_i = \bm{c}_i^\dagger \hat{\bm{\Upsilon}}$ where $\bm{c}_i$ is a complex vector, $\bm{c}_i^\dagger$ denotes the conjugate-transpose, and $\hat{\bm{\Upsilon}}$ is the column vector formed by the complete basis $\{\hat{\Upsilon}_j\}$. For the case of \eqref{Peaks:HamiltonianPowerSeriesQuadraticTerm}, an appropriate basis is $\{\hat{\Upsilon}_j\} = \{\delta\hat{\Psi}, \delta\hat{\Psi}^\dagger\}$. As the Hamiltonian $\hat{H}_2$ is quadratic, its commutator with every operator $\hat{\Upsilon}_j$ will be linear in the operators $\{\hat{\Upsilon}_j\}$. Defining the complex matrix $\mathcal{H}$ to represent this relationship as
+Equation \eqref{Peaks:ElementaryExcitationsEvolution} is most easily solved by expanding the $\hat{\Lambda}_i$ in a complete, linearly independent basis $\{\hat{\Upsilon}_j\}$ such that $\hat{\Lambda}_i = \vect{c}_i^\dagger \hat{\vect{\Upsilon}}$ where $\vect{c}_i$ is a complex vector, $\vect{c}_i^\dagger$ denotes the conjugate-transpose, and $\hat{\vect{\Upsilon}}$ is the column vector formed by the complete basis $\{\hat{\Upsilon}_j\}$. For the case of \eqref{Peaks:HamiltonianPowerSeriesQuadraticTerm}, an appropriate basis is $\{\hat{\Upsilon}_j\} = \{\delta\hat{\Psi}, \delta\hat{\Psi}^\dagger\}$. As the Hamiltonian $\hat{H}_2$ is quadratic, its commutator with every operator $\hat{\Upsilon}_j$ will be linear in the operators $\{\hat{\Upsilon}_j\}$. Defining the complex matrix $\mathcal{H}$ to represent this relationship as
 \begin{align}
     \label{Peaks:ScriptHRelationshipToHamiltonian}
     \sum_k \mathcal{H}_{jk} \hat{\Upsilon}_k &= \comm{\hat{\Upsilon}_j, \hat{H}_2}
 \end{align}
 permits \eqref{Peaks:ElementaryExcitationsEvolution} to be recast as an eigenvalue problem in $\mathcal{H}$,
 \begin{align}
-    \comm{\bm{c}_i^\dagger \hat{\bm{\Upsilon}}, \hat{H}_2} &= \bm{c}_i^\dagger \mathcal{H} \hat{\bm{\Upsilon}} = - \hbar \omega_i \bm{c}_i^\dagger \hat{\bm{\Upsilon}}, \label{Peaks:ElementaryExcitationsEigenvalueProblemWithOperators}\\
-    \implies \bm{c}_i^\dagger \mathcal{H} &= - \hbar \omega_i \bm{c}_i^\dagger \label{Peaks:ElementaryExcitationsEigenvalueProblem}
+    \comm{\vect{c}_i^\dagger \hat{\vect{\Upsilon}}, \hat{H}_2} &= \vect{c}_i^\dagger \mathcal{H} \hat{\vect{\Upsilon}} = - \hbar \omega_i \vect{c}_i^\dagger \hat{\vect{\Upsilon}}, \label{Peaks:ElementaryExcitationsEigenvalueProblemWithOperators}\\
+    \implies \vect{c}_i^\dagger \mathcal{H} &= - \hbar \omega_i \vect{c}_i^\dagger \label{Peaks:ElementaryExcitationsEigenvalueProblem}
 \end{align}
-where the last line follows as the components of $\hat{\bm{\Upsilon}}$ are linearly independent. If the mean-field $\Psi$ is time-independent, then the matrix $\mathcal{H}$ will also be time-independent and \eqref{Peaks:ElementaryExcitationsEigenvalueProblem} represents an eigenvalue problem for the left eigenvectors $\bm{c}_i^\dagger$ and eigenvalues $-\hbar \omega_i$ of the matrix $\mathcal{H}$. If the mean-field $\Psi$ simply evolves due to a global phase rotation, this can be cancelled by appropriate choice of the arbitrary energy offset $\mu$ making $\mathcal{H}$ time-independent.  In the case of the condensate ground state, that offset will be the chemical potential of the condensate. The eigenvalues $\{\hbar \omega_i\}$ then represent the generalised excitation spectrum of the condensate about the mean field, which was to be determined. 
+where the last line follows as the components of $\hat{\vect{\Upsilon}}$ are linearly independent. If the mean-field $\Psi$ is time-independent, then the matrix $\mathcal{H}$ will also be time-independent and \eqref{Peaks:ElementaryExcitationsEigenvalueProblem} represents an eigenvalue problem for the left eigenvectors $\vect{c}_i^\dagger$ and eigenvalues $-\hbar \omega_i$ of the matrix $\mathcal{H}$. If the mean-field $\Psi$ simply evolves due to a global phase rotation, this can be cancelled by appropriate choice of the arbitrary energy offset $\mu$ making $\mathcal{H}$ time-independent.  In the case of the condensate ground state, that offset will be the chemical potential of the condensate. The eigenvalues $\{\hbar \omega_i\}$ then represent the generalised excitation spectrum of the condensate about the mean field, which was to be determined. 
 
 It is important to note that for the eigenvalues of $\mathcal{H}$ to determine the solution to \eqref{Peaks:ElementaryExcitationsEvolution} the matrix $\mathcal{H}$ must be constant. In the next section these techniques will be generalised to the case of a \emph{periodic} mean-field in which the time-dependence of the matrix $\mathcal{H}$ cannot be removed by any analytic transformation.
 
-In the case of a homogenous condensate ($V(\bm{x}) = 0$) the matrix $\mathcal{H}$ can be diagonalised analytically to give the condensate excitation spectrum as
+In the case of a homogenous condensate ($V(\vect{x}) = 0$) the matrix $\mathcal{H}$ can be diagonalised analytically to give the condensate excitation spectrum as
 \begin{align}
-    \hbar \omega(\bm{k}) &= \sqrt{\varepsilon(\bm{k})\left(\varepsilon(\bm{k}) + 2 n U \right)},
+    \hbar \omega(\vect{k}) &= \sqrt{\varepsilon(\vect{k})\left(\varepsilon(\vect{k}) + 2 n U \right)},
     \label{Peaks:BogoliubovSpectrum}
 \end{align}
-where $\bm{k}$ is the wavevector, $\displaystyle \varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2 M}$ is the free-particle energy spectrum and $n = \big|\Psi \big|^2$ is the condensate density. Equation~\eqref{Peaks:BogoliubovSpectrum} is known as the Bogoliubov excitation spectrum~\citep{Bogoliubov:1947}.  
+where $\vect{k}$ is the wavevector, $\displaystyle \varepsilon(\vect{k}) = \frac{\hbar^2 \vect{k}^2}{2 M}$ is the free-particle energy spectrum and $n = \big|\Psi \big|^2$ is the condensate density. Equation~\eqref{Peaks:BogoliubovSpectrum} is known as the Bogoliubov excitation spectrum~\citep{Bogoliubov:1947}.  
 
 In the limit of large wavenumbers, the Bogoliubov excitation spectrum becomes
 \begin{align}
-    \hbar \omega(\bm{k}) &\approx \varepsilon(\bm{k}) + n U,
+    \hbar \omega(\vect{k}) &\approx \varepsilon(\vect{k}) + n U,
 \end{align}
-i.e. that of a free particle shifted by the mean field experienced by the rest of the condensate.  It is important to note that this spectrum is that of \emph{excitations} to the condensate, not of particles \emph{added} to the system with wavenumber $\bm{k}$.  The energy of a thermal particle added to the system will be given by the excitation spectrum \emph{plus} the chemical potential, i.e. the energy required to add an atom to the system $n U$.  In the limit of large wavenumbers the energy of a thermal particle is
+i.e. that of a free particle shifted by the mean field experienced by the rest of the condensate.  It is important to note that this spectrum is that of \emph{excitations} to the condensate, not of particles \emph{added} to the system with wavenumber $\vect{k}$.  The energy of a thermal particle added to the system will be given by the excitation spectrum \emph{plus} the chemical potential, i.e. the energy required to add an atom to the system $n U$.  In the limit of large wavenumbers the energy of a thermal particle is
 \begin{align}
-    E_\text{thermal}(\bm{k}) &\approx \varepsilon(\bm{k}) + 2 n U.
+    E_\text{thermal}(\vect{k}) &\approx \varepsilon(\vect{k}) + 2 n U.
     \label{Peaks:ThermalParticleEnergySpectrum}
 \end{align}
 Thermal particles therefore experience twice the mean-field experienced by the condensate.  This is because the thermal atoms can be distinguished from the atoms in the condensate, while the atoms in the condensate cannot be distinguished from one another.
@@ -177,8 +177,8 @@ With these approximations made, the Hamiltonian for this system is
 \begin{align}
     \label{Peaks:InitialHamiltonian}
     \begin{split}
-    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
-            &\phantom{=} + \hbar \Omega \int d\bm{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right),
+    \hat{H} &= \sum_i \int d\vect{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} - \mu\right)\hat{\Psi}_i^{\phantom{\dagger}} + \frac{1}{2} \sum_{i j} U_{i j}\int d\vect{x}\, \hat{\Psi}_i^\dagger \hat{\Psi}_j^\dagger \hat{\Psi}_j^{\phantom{\dagger}} \hat{\Psi}_i^{\phantom{\dagger}}\\
+            &\phantom{=} + \hbar \Omega \int d\vect{x}\, \left(\hat{\Psi}_1^\dagger \hat{\Psi}_0^{\phantom{\dagger}} + \hat{\Psi}_0^\dagger \hat{\Psi}_1^{\phantom{\dagger}}\right),
     \end{split}
 \end{align}
 where $U_{ij} = 4\pi \hbar^2 a_{ij}/M$ is the nonlinear interaction strength, $a_{ij}$ is the \emph{s}-wave scattering length between internal states $i$ and $j$, $\Omega$ is the Rabi frequency which is taken to be real, and $\mu$ is an energy offset which has been included to cancel the global phase rotation which would otherwise be present. The equations of motion corresponding to this Hamiltonian are
@@ -261,43 +261,43 @@ Having assumed the mean-field to be homogenous, the evolution equations are spat
     \label{Peaks:DeviationOperatorsEvolutionKSpace}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi}_1(\bm{k}) =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\bm{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\bm{k})\right]\\
-                    & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_1(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_0(\bm{k})- \mu \delta \hat{\Psi}_1(\bm{k}),
+            i \hbar \frac{\partial }{\partial t}\delta \hat{\Psi}_1(\vect{k}) =& U\left[ \left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2 \right)\delta \hat{\Psi}_1(\vect{k}) + \Psi_1^2\delta\hat{\Psi}_1^\dagger(-\vect{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_0^\dagger(-\vect{k}) + \Psi_0^*\Psi_1\delta\hat{\Psi}_0(\vect{k})\right]\\
+                    & +\frac{\hbar^2 \vect{k}^2}{2M} \delta \hat{\Psi}_1(\vect{k}) +\hbar \Omega\delta\hat{\Psi}_0(\vect{k})- \mu \delta \hat{\Psi}_1(\vect{k}),
         \end{split}\\
         \begin{split}
-        i \hbar \frac{\partial}{\partial t} \delta \hat{\Psi}_0(\bm{k}) =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\bm{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\bm{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\bm{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\bm{k})\right]\\
-                    & +\frac{\hbar^2 \bm{k}^2}{2M} \delta \hat{\Psi}_0(\bm{k}) +\hbar \Omega\delta\hat{\Psi}_1(\bm{k}) - \mu \delta\hat{\Psi}_0(\bm{k}).
+        i \hbar \frac{\partial}{\partial t} \delta \hat{\Psi}_0(\vect{k}) =& U\left[\left(2\kappa \abs{\Psi_0}^2 +\abs{\Psi_1}^2\right)\delta\hat{\Psi}_0(\vect{k}) + \kappa \Psi_0^2 \delta\hat{\Psi}_0^\dagger(-\vect{k}) + \Psi_1\Psi_0\delta\hat{\Psi}_1^\dagger(-\vect{k}) + \Psi_1^*\Psi_0\delta\hat{\Psi}_1(\vect{k})\right]\\
+                    & +\frac{\hbar^2 \vect{k}^2}{2M} \delta \hat{\Psi}_0(\vect{k}) +\hbar \Omega\delta\hat{\Psi}_1(\vect{k}) - \mu \delta\hat{\Psi}_0(\vect{k}).
         \end{split}
     \end{align}
 \end{subequations}
 
-In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\bm{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\bm{k}),\, \delta\hat{\Psi}_j^\dagger(-\bm{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\bm{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
+In this form, it is clear that the Fourier modes are almost completely decoupled from each other. Each deviation operator $\delta\hat{\Psi}_i(\vect{k})$ is only coupled to $\left\{\delta\hat{\Psi}_j(\vect{k}),\, \delta\hat{\Psi}_j^\dagger(-\vect{k})\right\}$, with each $\delta\hat{\Psi}_i^\dagger(-\vect{k})$ also only coupled to this same set. This can be exploited to write the equations \eqref{Peaks:DeviationOperatorsEvolutionKSpace} in matrix form as
 \begin{align}
     \label{Peaks:DeviationOperatorsMatrixEvolution}
-    i \hbar \frac{\partial }{\partial t}\hat{\bm{\Upsilon}}(\bm{k}) &= \mathcal{H}(\bm{k}) \hat{\bm{\Upsilon}}(\bm{k}),
+    i \hbar \frac{\partial }{\partial t}\hat{\vect{\Upsilon}}(\vect{k}) &= \mathcal{H}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}),
 \end{align}
 where
 \begin{align}
-    \hat{\bm{\Upsilon}}(\bm{k}) &= 
+    \hat{\vect{\Upsilon}}(\vect{k}) &= 
     \begin{pmatrix}
-        \delta\hat{\Psi}_1(\bm{k}) &
-        \delta\hat{\Psi}_1^\dagger(-\bm{k}) &
-        \delta\hat{\Psi}_0(\bm{k}) &
-        \delta\hat{\Psi}_0^\dagger(-\bm{k})
+        \delta\hat{\Psi}_1(\vect{k}) &
+        \delta\hat{\Psi}_1^\dagger(-\vect{k}) &
+        \delta\hat{\Psi}_0(\vect{k}) &
+        \delta\hat{\Psi}_0^\dagger(-\vect{k})
     \end{pmatrix}^\text{T},\\
-    \mathcal{H}(\bm{k}) &= 
+    \mathcal{H}(\vect{k}) &= 
     \begin{pmatrix}
-        \varepsilon(\bm{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
-        -v_{11}^* & -\varepsilon(\bm{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
-        u_{10} + \hbar \Omega & v_{10} & \varepsilon(\bm{k}) + q_0 - \mu & \kappa v_{00}\\
-        -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\bm{k}) - q_0 + \mu
+        \varepsilon(\vect{k}) + q_{1} - \mu & v_{11} & u_{01} + \hbar \Omega & v_{10}\\
+        -v_{11}^* & -\varepsilon(\vect{k}) - q_1 + \mu & -v_{10}^* & -u_{10} - \hbar \Omega\\
+        u_{10} + \hbar \Omega & v_{10} & \varepsilon(\vect{k}) + q_0 - \mu & \kappa v_{00}\\
+        -v_{10}^* & -u_{01} - \hbar \Omega & -\kappa v_{00}^* & -\varepsilon(\vect{k}) - q_0 + \mu
     \end{pmatrix},\label{Peaks:HMatrix}
 \end{align}
-and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\bm{k}) = \frac{\hbar^2 \bm{k}^2}{2M}}$.
+and $q_1 = U\left(2\abs{\Psi_1}^2+\abs{\Psi_0}^2\right)$, $q_0 = U\left(2\kappa \abs{\Psi_0}^2 + \abs{\Psi_1}^2\right)$, $u_{ij} = U\Psi_i^*\Psi_j$, $v_{ij} = U\Psi_i\Psi_j$, and $\displaystyle \protect{\varepsilon(\vect{k}) = \frac{\hbar^2 \vect{k}^2}{2M}}$.
 
-Note that the matrix $\mathcal{H}(\bm{k})$ is not the Hamiltonian, but is related to it by \eqref{Peaks:ScriptHRelationshipToHamiltonian}. As a consequence, although it will be shown later that in some circumstances $\mathcal{H}(\bm{k})$ contains complex eigenvalues and is hence not Hermitian, this in no way conflicts with the requirement that the Hamiltonian $\hat{H}$ must be Hermitian and only have real eigenvalues.
+Note that the matrix $\mathcal{H}(\vect{k})$ is not the Hamiltonian, but is related to it by \eqref{Peaks:ScriptHRelationshipToHamiltonian}. As a consequence, although it will be shown later that in some circumstances $\mathcal{H}(\vect{k})$ contains complex eigenvalues and is hence not Hermitian, this in no way conflicts with the requirement that the Hamiltonian $\hat{H}$ must be Hermitian and only have real eigenvalues.
 
-If the coefficients of the matrix $\mathcal{H}(\bm{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the eigenvalues of $\mathcal{H}(\bm{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable\footnote{This is true independent of the sign of the imaginary component as the eigenvalues come in pairs with opposite imaginary components. A full discussion of this issue is given in \appendixref{FloquetAppendix}.}. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
+If the coefficients of the matrix $\mathcal{H}(\vect{k})$ were not time-dependent, the excitation spectrum of the condensate could simply be obtained from the eigenvalues of $\mathcal{H}(\vect{k})$. Non-zero imaginary components for these eigenvalues would indicate the corresponding mode to be unstable\footnote{This is true independent of the sign of the imaginary component as the eigenvalues come in pairs with opposite imaginary components. A full discussion of this issue is given in \appendixref{FloquetAppendix}.}. Before continuing with the general case of $\kappa \neq 1$, in the next section the limit in which all scattering lengths are equal ($\kappa=1$) will be considered and some familiar results recovered.
 
 \subsection{Excitation spectra in the $\kappa = 1$ limit}
 \label{Peaks:Kappa1Limit}
@@ -311,59 +311,59 @@ The general solution to \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa = 1
         \Psi_0(t) &= -i\sin(\Omega t) \Phi_+ + i\cos(\Omega t) \Phi_-,
     \end{align}
 \end{subequations}
-for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a linear basis transformation from $\hat{\Psi}_i$ to $\hat{\Phi}_\pm$, which are the eigenvectors of the Rabi coupling term in \eqref{Peaks:InitialHamiltonian}. Performing this change of basis on the original Hamiltonian \eqref{Peaks:InitialHamiltonian} yields a Hamiltonian of the same form, but without the Rabi coupling term. The equations of motion for the deviation operators $\delta\hat{\Phi}_\pm$ therefore give a matrix of precisely the same form as \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ and $\delta\hat{\Phi}_\pm$ instead of the $\Psi_i$ and $\delta\hat{\Psi}_i$, and with $\Omega$ replaced by 0. This new matrix $\mathcal{H}'(\bm{k})$ is time-independent and can be diagonalised to give the eigenvalues
+for some complex constants $\Phi_\pm$, and where the chemical potential $\mu = n U$ has cancelled the global phase rotation. This solution can be viewed as a linear basis transformation from $\hat{\Psi}_i$ to $\hat{\Phi}_\pm$, which are the eigenvectors of the Rabi coupling term in \eqref{Peaks:InitialHamiltonian}. Performing this change of basis on the original Hamiltonian \eqref{Peaks:InitialHamiltonian} yields a Hamiltonian of the same form, but without the Rabi coupling term. The equations of motion for the deviation operators $\delta\hat{\Phi}_\pm$ therefore give a matrix of precisely the same form as \eqref{Peaks:HMatrix} but in terms of $\Phi_\pm$ and $\delta\hat{\Phi}_\pm$ instead of the $\Psi_i$ and $\delta\hat{\Psi}_i$, and with $\Omega$ replaced by 0. This new matrix $\mathcal{H}'(\vect{k})$ is time-independent and can be diagonalised to give the eigenvalues
 \begin{subequations}
     \label{Peaks:Kappa1Eigenvalues}
     \begin{align}
-        \hbar \omega_\uparrow(\bm{k}) &= \sqrt{\varepsilon(\bm{k})\left(\varepsilon(\bm{k}) + 2 n U\right)},\\
-        \hbar \omega_\downarrow(\bm{k}) &= \varepsilon(\bm{k}),
+        \hbar \omega_\uparrow(\vect{k}) &= \sqrt{\varepsilon(\vect{k})\left(\varepsilon(\vect{k}) + 2 n U\right)},\\
+        \hbar \omega_\downarrow(\vect{k}) &= \varepsilon(\vect{k}),
     \end{align}
 \end{subequations}
-where $\displaystyle\varepsilon(\bm{k}) = \frac{\hbar^2\bm{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\bm{k})$ is the usual Bogoliubov spectrum~\citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\bm{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
+where $\displaystyle\varepsilon(\vect{k}) = \frac{\hbar^2\vect{k}^2}{2M}$, $n= \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ and the remaining two eigenvalues are the negatives of \eqref{Peaks:Kappa1Eigenvalues}. $\hbar \omega_\uparrow(\vect{k})$ is the usual Bogoliubov spectrum~\citep{Bogoliubov:1947} corresponding to excitations in the total condensate density. The eigenvalue $\hbar \omega_\downarrow(\vect{k})$ is the free particle spectrum; this excitation only changes the relative densities of the two states without affecting the total density, hence not affecting the nonlinear term in the Hamiltonian \eqref{Peaks:InitialHamiltonian}.
 
 The Hamiltonian for the condensate excitations that corresponds to the eigenvalues \eqref{Peaks:Kappa1Eigenvalues} is (refer to \sectionref{Peaks:ElementaryExcitations})
 \begin{align}
-    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\bm{k}\, \hbar \omega_i(\bm{k}) \hat{\Lambda}_i^\dagger(\bm{k}) \hat{\Lambda}_i^{\phantom{\dagger}}(\bm{k}),
+    \hat{H} &= \sum_{i=\uparrow,\downarrow}\int d\vect{k}\, \hbar \omega_i(\vect{k}) \hat{\Lambda}_i^\dagger(\vect{k}) \hat{\Lambda}_i^{\phantom{\dagger}}(\vect{k}),
 \end{align}
-where the $\hat{\Lambda}_{\uparrow,\downarrow}(\bm{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\bm{k})$.
+where the $\hat{\Lambda}_{\uparrow,\downarrow}(\vect{k})$ obey boson commutation relations and are the corresponding normalised eigenvectors to the eigenvalues in \eqref{Peaks:Kappa1Eigenvalues}. The normalised eigenvectors for the negatives of those eigenvalues are the $\hat{\Lambda}_{\uparrow, \downarrow}^\dagger(-\vect{k})$.
 
 \subsection[Floquet's theorem]{Floquet's theorem~\citep[\S 3.2]{AppliedNonlinearDynamics}}
 \label{Peaks:FloquetsTheorem}
 
 Having considered the limit of equal scattering lengths, it now remains to determine the energy spectrum and condensate stability in the general case of $\kappa \neq 1$. Analytic results cannot be obtained in this limit, but numeric results corresponding to the experimental situation in \sectionref{Peaks:ExperimentalSetup} can be obtained.
 
-In the general case, the excitation spectrum cannot be obtained from the eigenvalues of the matrix $\mathcal{H}(\bm{k})$ in \eqref{Peaks:HMatrix} as the matrix's entries are themselves time-dependent. However, due to the periodicity of the mean-field wavefunctions demonstrated in \sectionref{Peaks:MeanFieldPeriodicity}, the entries of $\mathcal{H}(\bm{k})$ are themselves periodic, which enables Floquet's theorem to be applied.
+In the general case, the excitation spectrum cannot be obtained from the eigenvalues of the matrix $\mathcal{H}(\vect{k})$ in \eqref{Peaks:HMatrix} as the matrix's entries are themselves time-dependent. However, due to the periodicity of the mean-field wavefunctions demonstrated in \sectionref{Peaks:MeanFieldPeriodicity}, the entries of $\mathcal{H}(\vect{k})$ are themselves periodic, which enables Floquet's theorem to be applied.
 
 Floquet's theorem proves that the matrix solution to the initial-value problem
 \begin{subequations}
     \label{Peaks:FloquetMatrixIVP}
     \begin{align}
-        \frac{d}{dt}\bm{\Pi}(t) &= \bm{A}(t) \bm{\Pi}(t),\\
-        \bm{\Pi}(0) &= \mathbb{I},
+        \frac{d}{dt}\vect{\Pi}(t) &= \vect{A}(t) \vect{\Pi}(t),\\
+        \vect{\Pi}(0) &= \mathbb{I},
     \end{align}
 \end{subequations}
-where $\mathbb{I}$ is the $n \times n$ identity matrix and $\bm{A}(t)$ a periodic $n \times n$ matrix with period $T$ can be written in the form
+where $\mathbb{I}$ is the $n \times n$ identity matrix and $\vect{A}(t)$ a periodic $n \times n$ matrix with period $T$ can be written in the form
 \begin{align}
-    \bm{\Pi}(t) = \bm{P}(t) \exp(-i\bm{Q} t),
+    \vect{\Pi}(t) = \vect{P}(t) \exp(-i\vect{Q} t),
     \label{Peaks:FloquetSolution}
 \end{align}
-for some constant matrix\footnote{There are differing definitions of the matrix $\bm{Q}$. While it is usual in quantum mechanics literature~\citep{Shirley:1965,Hanggi:1998,Garrison:1999} to define \eqref{Peaks:FloquetSolution} with the $-i$ in the exponent,  in mathematics literature~\citep{Moulton:1958,AppliedNonlinearDynamics} the $-i$ is omitted.} $\bm{Q}$ and $\bm{P}(t)$ a matrix of periodic functions with period $T$ and $\bm{P}(0) = \mathbb{I}$. The matrix solution $\bm{\Pi}(t)$ is the general solution to the related linear system
+for some constant matrix\footnote{There are differing definitions of the matrix $\vect{Q}$. While it is usual in quantum mechanics literature~\citep{Shirley:1965,Hanggi:1998,Garrison:1999} to define \eqref{Peaks:FloquetSolution} with the $-i$ in the exponent,  in mathematics literature~\citep{Moulton:1958,AppliedNonlinearDynamics} the $-i$ is omitted.} $\vect{Q}$ and $\vect{P}(t)$ a matrix of periodic functions with period $T$ and $\vect{P}(0) = \mathbb{I}$. The matrix solution $\vect{\Pi}(t)$ is the general solution to the related linear system
 \begin{align}
-    \frac{d}{dt}\bm{x}(t) &= \bm{A}(t) \bm{x}(t),
+    \frac{d}{dt}\vect{x}(t) &= \vect{A}(t) \vect{x}(t),
     \label{Peaks:FloquetVectorIVP}
 \end{align}
-for any initial condition $\bm{x}(0)$ where $\bm{x}(t)$ is a vector. Every solution $\bm{x}(t)$ to this problem can be written in terms of the matrix $\bm{\Pi}(t)$ as
+for any initial condition $\vect{x}(0)$ where $\vect{x}(t)$ is a vector. Every solution $\vect{x}(t)$ to this problem can be written in terms of the matrix $\vect{\Pi}(t)$ as
 \begin{align}
-    \bm{x}(t) &= \bm{\Pi}(t) \bm{x}(0),
+    \vect{x}(t) &= \vect{\Pi}(t) \vect{x}(0),
 \end{align}
-as is easily verified. The matrix solution $\bm{\Pi}(t)$ thus completely determines the behaviour of all solutions to \eqref{Peaks:FloquetVectorIVP}.
+as is easily verified. The matrix solution $\vect{\Pi}(t)$ thus completely determines the behaviour of all solutions to \eqref{Peaks:FloquetVectorIVP}.
 
-The eigenvalues of $\bm{Q}$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
+The eigenvalues of $\vect{Q}$ are known as \emph{Floquet exponents} (or \emph{characteristic exponents}) and determine the long-term growth or decay of the solutions to \eqref{Peaks:FloquetVectorIVP}. These eigenvalues can be obtained from the \emph{monodromy matrix},
 \begin{align}
     \label{Peaks:MonodromyMatrix}
-    \mathcal{M} &= \bm{\Pi}(T) = \exp(-i\bm{Q} T),
+    \mathcal{M} &= \vect{\Pi}(T) = \exp(-i\vect{Q} T),
 \end{align}
-as $\bm{P}(T) = \bm{P}(0) = \mathbb{I}$. The existence and uniqueness of the solution to \eqref{Peaks:FloquetMatrixIVP} guarantees that $\bm{\Pi}(t)$ and hence $\mathcal{M}$ will be invertible. The Floquet exponents $\xi_i$ can therefore be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(-i\xi_i T)$.\footnote{Note that the Floquet exponents are only defined modulo $2 \pi/T$ as $\displaystyle\lambda = \exp(-i\xi T) = \exp\left[-i \left(\xi + n \frac{2 \pi}{T}\right)T\right]$ for any integer $n$.} It is the Floquet exponents of the matrix $\mathcal{H}(\bm{k})$ that we wish to calculate in order to determine the stability of the condensate to excitations.
+as $\vect{P}(T) = \vect{P}(0) = \mathbb{I}$. The existence and uniqueness of the solution to \eqref{Peaks:FloquetMatrixIVP} guarantees that $\vect{\Pi}(t)$ and hence $\mathcal{M}$ will be invertible. The Floquet exponents $\xi_i$ can therefore be obtained from the eigenvalues $\lambda_i$ of the monodromy matrix using $\lambda_i = \exp(-i\xi_i T)$.\footnote{Note that the Floquet exponents are only defined modulo $2 \pi/T$ as $\displaystyle\lambda = \exp(-i\xi T) = \exp\left[-i \left(\xi + n \frac{2 \pi}{T}\right)T\right]$ for any integer $n$.} It is the Floquet exponents of the matrix $\mathcal{H}(\vect{k})$ that we wish to calculate in order to determine the stability of the condensate to excitations.
 
 \subsection{Determination of the dynamical instabilities}
 \label{Peaks:ExperimentEigenvalues}
@@ -385,60 +385,60 @@ The period $T$ and frequency offset $\Delta\nu$ in \eqref{Peaks:MeanFieldFourier
     \caption{Temporal Fourier transform of the calculated mean field evolution defined by \eqref{Peaks:MeanFieldEquationsOfMotion} for the centre of the condensate defined by the experimental parameters given in \tableref{Peaks:ExperimentalParameters}. The frequency $\nu_0$ is the inverse period of the system, and $\Delta\nu$ represents the global phase rotation. From the data in this figure the values $\nu_0 = \unit[6.65]{kHz}$ and $\Delta\nu = \unit[-1.78]{kHz}$ can be determined, giving the period as $T=\unit[150]{\micro{}s}$. \label{Peaks:MeanFieldFourierTransform}}
 \end{figure}
 
-The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\bm{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\bm{k})$ only depends on $k = \abs{\bm{k}}$, the solutions for the Floquet exponents $\xi(\bm{k}) = \omega(\bm{k}) + i\gamma(\bm{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}.
+The period and energy offset determined, it remains to calculate the mono\-dromy matrix $\mathcal{M}(\vect{k})$ from which the Floquet exponents may be derived. This is achieved by numerically solving the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} from $t=0$ to $t=T$ [refer to \eqref{Peaks:MonodromyMatrix}]. Noting that the matrix $\mathcal{H}(\vect{k})$ only depends on $k = \abs{\vect{k}}$, the solutions for the Floquet exponents $\xi(\vect{k}) = \omega(\vect{k}) + i\gamma(\vect{k})$ are illustrated in \figureref{Peaks:CondensateEigenvalues}.
 
-In the limit that the mean-field is time-independent (a degenerate case of periodicity), the Floquet exponents $\xi(\bm{k})$ are related to the eigenvalues $\lambda(\bm{k})$ of the matrix $\mathcal{H}$ by $\xi(\bm{k}) = \frac{1}{\hbar} \lambda(\bm{k})$. It was previously stated that eigenvalues of $\mathcal{H}(\bm{k})$ with nonzero imaginary components would be unstable, this is therefore also true for the Floquet exponent $\xi(\bm{k})$.
+In the limit that the mean-field is time-independent (a degenerate case of periodicity), the Floquet exponents $\xi(\vect{k})$ are related to the eigenvalues $\lambda(\vect{k})$ of the matrix $\mathcal{H}$ by $\xi(\vect{k}) = \frac{1}{\hbar} \lambda(\vect{k})$. It was previously stated that eigenvalues of $\mathcal{H}(\vect{k})$ with nonzero imaginary components would be unstable, this is therefore also true for the Floquet exponent $\xi(\vect{k})$.
 
 \begin{figure}
     \centering
     \includegraphics[height=19cm]{CondensateEigenvalues}
-    \caption{Illustration of the Floquet exponents for $\mathcal{H}(\bm{k})$ and comparison to a corresponding truncated Wigner simulation for $\Omega = 2\pi \times \unit[3]{kHz}$.
+    \caption{Illustration of the Floquet exponents for $\mathcal{H}(\vect{k})$ and comparison to a corresponding truncated Wigner simulation for $\Omega = 2\pi \times \unit[3]{kHz}$.
         Upper figure (a) displays the imaginary part $\omega_i$ of the Floquet exponents. As the $\omega_i$ can only be determined up to a multiple of $2\pi\nu_0$ [see \eqref{Peaks:AmbiguityFloquetExponent}], they have been reduced modulo $2\pi\nu_0$ into the range $\left[-\pi\nu_0,\, \pi\nu_0\right]$.
         The middle figure (b) shows the imaginary part $\gamma_i$ of the Floquet exponents, which indicate an instability for the corresponding wavenumber when they are nonzero.
         Lower figure (c) shows the results of a 1D truncated Wigner simulation corresponding to the system under consideration in (a) and (b). The truncated Wigner simulation exhibits growth in the same modes predicted from the results of the perturbative analysis shown in (b). The truncated Wigner results shown are the average of 500 realisations.
         \label{Peaks:CondensateEigenvalues}}
 \end{figure}
 
-The temporal periodicity of the system implies that the real components $\omega_i(\bm{k})$ of the Floquet exponents are only uniquely defined modulo $2\pi \nu_0$ (see \figureref{Peaks:CondensateEigenvalues}(a)). This is because any eigenvalue $\lambda$ of the monodromy matrix $\mathcal{M}(\bm{k})$ corresponds to infinitely many Floquet exponents,
+The temporal periodicity of the system implies that the real components $\omega_i(\vect{k})$ of the Floquet exponents are only uniquely defined modulo $2\pi \nu_0$ (see \figureref{Peaks:CondensateEigenvalues}(a)). This is because any eigenvalue $\lambda$ of the monodromy matrix $\mathcal{M}(\vect{k})$ corresponds to infinitely many Floquet exponents,
 \begin{align}
     \label{Peaks:AmbiguityFloquetExponent}
     \lambda = \exp\left[-i \left(\omega + 2 \pi n \nu_0 + i \gamma\right)T\right] = \exp\left[-i\left(\omega + i \gamma\right)T\right].
 \end{align}
-This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\bm{k})$.
+This does not hinder our understanding of the system as our primary interest is in the stability of the condensate to excitations, which is determined by the $\gamma_i(\vect{k})$.
 
-The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{FloquetAppendix}, this is only true when the Floquet exponents are purely real. When the Floquet exponents have a nonzero imaginary component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{FloquetAppendix}, Floquet exponents with nonzero imaginary parts come in pairs of the form $\omega(\bm{k}) \pm i \gamma(\bm{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\bm{k}, t)$ can be formed, which evolves as
+The normalised eigenvectors of the system are not always annihilation or creation operators; as is discussed in \appendixref{FloquetAppendix}, this is only true when the Floquet exponents are purely real. When the Floquet exponents have a nonzero imaginary component, annihilation and creation operators can be constructed from linear combinations of the eigenvectors. Not being eigenvectors, these operators will therefore have nontrivial evolution. As is shown in \appendixref{FloquetAppendix}, Floquet exponents with nonzero imaginary parts come in pairs of the form $\omega(\vect{k}) \pm i \gamma(\vect{k})$. From the corresponding eigenvectors to these Floquet exponents the bosonic annihilation operator $\hat{\Lambda}(\vect{k}, t)$ can be formed, which evolves as
 \begin{subequations}
     \label{Peaks:DynamicalInstability}
     \begin{align}
-        \hat{\Lambda}(\bm{k}, nT) &= e^{i n\omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}'^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}(\bm{k}, 0)\right),\\
-        \hat{\Lambda}'(\bm{k}, nT) &= e^{-i n \omega(\bm{k}) T} \left( \sinh(n\gamma(\bm{k}) T) \hat{\Lambda}^\dagger(-\bm{k}, 0) + \cosh(n\gamma(\bm{k}) T) \hat{\Lambda}'(\bm{k}, 0)\right),
+        \hat{\Lambda}(\vect{k}, nT) &= e^{i n\omega(\vect{k}) T} \left( \sinh(n\gamma(\vect{k}) T) \hat{\Lambda}'^\dagger(-\vect{k}, 0) + \cosh(n\gamma(\vect{k}) T) \hat{\Lambda}(\vect{k}, 0)\right),\\
+        \hat{\Lambda}'(\vect{k}, nT) &= e^{-i n \omega(\vect{k}) T} \left( \sinh(n\gamma(\vect{k}) T) \hat{\Lambda}^\dagger(-\vect{k}, 0) + \cosh(n\gamma(\vect{k}) T) \hat{\Lambda}'(\vect{k}, 0)\right),
     \end{align}
 \end{subequations}
-where $n$ is a positive integer, and where $\hat{\Lambda}'(\bm{k}, t)$ will be equal to $\hat{\Lambda}(\bm{k}, t)$ in some circumstances as discussed in \appendixref{FloquetAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\bm{k})$ represents a dynamical instability of the condensate.
+where $n$ is a positive integer, and where $\hat{\Lambda}'(\vect{k}, t)$ will be equal to $\hat{\Lambda}(\vect{k}, t)$ in some circumstances as discussed in \appendixref{FloquetAppendix}. Due to the exponential growth in \eqref{Peaks:DynamicalInstability}, the mode corresponding to $\hat{\Lambda}(\vect{k})$ represents a dynamical instability of the condensate.
 
 The behaviour of the dynamical instabilities will be governed by \eqref{Peaks:DynamicalInstability} only while the unstable modes have a small occupation compared to the condensate, and scattering between the unstable modes can be neglected. \figureref{Peaks:CondensateEigenvalues}(c) shows the results of a truncated Wigner simulation of the Hamiltonian \eqref{Peaks:InitialHamiltonian}, which is in excellent agreement with the location of the dynamical instabilities as determined by the Floquet exponents [see \figureref{Peaks:CondensateEigenvalues}(b)]. For later times, there is an additional mode undergoing growth, $k \approx \unit[7.5\times 10^5]{m}^{-1}$. This mode is the result of scattering between the dynamical instabilities, a process neglected the perturbative approach taken in this section. 
 
 \parasep
 
-In summary, the procedure used to find the Floquet exponents of $\mathcal{H}(\bm{k})$, and hence the stability of the condensate to excitations is:
+In summary, the procedure used to find the Floquet exponents of $\mathcal{H}(\vect{k})$, and hence the stability of the condensate to excitations is:
 \begin{enumerate}
     \item Numerically solve \eqref{Peaks:MeanFieldEquationsOfMotion} with $\mu=0$ for a long period of time $t \gg T$ where $T$ is the periodicity of the solution.
     \item Perform the temporal Fourier transform of the solutions obtained for $\Psi_i(t)$ to accurately determine the period $T$ and the value of the energy offset $\mu$ required to cancel any global phase evolution to make the wavefunctions themselves periodic (see \figureref{Peaks:MeanFieldFourierTransform}).
-    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\bm{k}$ to obtain the monodromy matrix $\mathcal{M}(\bm{k})$. In this calculation the matrix $\bm{A}(t)$ in \eqref{Peaks:FloquetMatrixIVP} is $\displaystyle -\frac{i}{\hbar}\mathcal{H}(\bm{k}, t)$.
-    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\bm{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(-i \xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}). The real parts of these Floquet exponents gives the energy spectrum, with nonzero imaginary parts giving the growth rate for the corresponding instability.
+    \item Using the calculated period and energy offset, numerically solve the related matrix problem to \eqref{Peaks:DeviationOperatorsMatrixEvolution} for a range of values of $\vect{k}$ to obtain the monodromy matrix $\mathcal{M}(\vect{k})$. In this calculation the matrix $\vect{A}(t)$ in \eqref{Peaks:FloquetMatrixIVP} is $\displaystyle -\frac{i}{\hbar}\mathcal{H}(\vect{k}, t)$.
+    \item Calculate the eigenvalues $\lambda_i$ of $\mathcal{M}(\vect{k})$ and determine the Floquet exponents $\xi_i$ using $\protect{\lambda_i = \exp(-i \xi_i T)}$ (see \figureref{Peaks:CondensateEigenvalues}). The real parts of these Floquet exponents gives the energy spectrum, with nonzero imaginary parts giving the growth rate for the corresponding instability.
 \end{enumerate}
 
 \subsection{Discussion of the dynamical instabilities}
 \label{Peaks:DynamicalInstabilitiesDiscussion}
 
-The dynamics of the dynamical instability $\hat{\Lambda}(\bm{k})$ described by \eqref{Peaks:DynamicalInstability} are the same as those of the amplified modes in non-degenerate parametric down-conversion~\citep{WallsMilburn}.  In parametric down-conversion, a non-linear crystal produces pairs of EPR-entangled\footnote{EPR entanglement was proposed by Einstein, Podolsky and Rosen~\citep{Einstein:1935} as a demonstration that quantum mechanics could not simultaneously be local, real and complete.  Their preferred option of local and real but \emph{incomplete} has since been demonstrated to be incorrect~\citep{Aspect:1982uq}.  For more information about EPR entanglement, see~\citep[Chapter 18]{Scully}.} photons at frequencies $\omega_1$ and $\omega_2$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$.  Analogously, in the case of the He* BEC discussed at the start of this chapter, the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR-entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \bm{k})$ modes. Although these modes will be entangled upon production, it does not necessarily follow that parts of the outcoupled atom laser will be entangled; the entangled $\hat{\Lambda}(\bm{k})$ modes are each superpositions of $m_F=1$ and $m_F=0$ states, but only the $m_F=0$ atoms can leave the condensate. However, if the $m_F=1$ components of the entangled modes are outcoupled faster than the time to reverse their momenta ($\unit[9]{ms}$), then number difference squeezing between the atom laser components with opposite axial momenta may be observed.
+The dynamics of the dynamical instability $\hat{\Lambda}(\vect{k})$ described by \eqref{Peaks:DynamicalInstability} are the same as those of the amplified modes in non-degenerate parametric down-conversion~\citep{WallsMilburn}.  In parametric down-conversion, a non-linear crystal produces pairs of EPR-entangled\footnote{EPR entanglement was proposed by Einstein, Podolsky and Rosen~\citep{Einstein:1935} as a demonstration that quantum mechanics could not simultaneously be local, real and complete.  Their preferred option of local and real but \emph{incomplete} has since been demonstrated to be incorrect~\citep{Aspect:1982uq}.  For more information about EPR entanglement, see~\citep[Chapter 18]{Scully}.} photons at frequencies $\omega_1$ and $\omega_2$ from a classical seed beam at frequency $\omega = \omega_1 + \omega_2$.  Analogously, in the case of the He* BEC discussed at the start of this chapter, the evolution represented by \eqref{Peaks:DynamicalInstability} will result in the spontaneous formation of EPR-entangled pairs of excitations, one in each of the $\hat{\Lambda}(\pm \vect{k})$ modes. Although these modes will be entangled upon production, it does not necessarily follow that parts of the outcoupled atom laser will be entangled; the entangled $\hat{\Lambda}(\vect{k})$ modes are each superpositions of $m_F=1$ and $m_F=0$ states, but only the $m_F=0$ atoms can leave the condensate. However, if the $m_F=1$ components of the entangled modes are outcoupled faster than the time to reverse their momenta ($\unit[9]{ms}$), then number difference squeezing between the atom laser components with opposite axial momenta may be observed.
 
 The unstable excitations would not necessarily be expected to form along the tight trapping directions. Of the three most unstable modes in \figureref{Peaks:CondensateEigenvalues}, the shortest wavelength for these excitations is $\lambda \approx \unit[3]{\micro m}$ which is not significantly smaller than the Thomas-Fermi radius in this dimension of $\rho_\text{TF} = \unit[9.4]{\micro m}$. Hence the local density approximation will not be satisfied in this dimension as the condensate density decays to zero over a distance a few times larger than the size of the excitation itself.  However, as the Thomas-Fermi radius in the axial dimension is $z_\text{TF} = \unit[175]{\micro m}$, the local density approximation will be a good approximation for describing the excitations along that dimension. Therefore excitations should form along the axial dimension.
 
 This effect also depends on the scattering length for collisions between $m_F=0$ atoms being significantly smaller than both the 1--1 and 1--0 scattering lengths as no instabilities were found in the $\kappa = 1$ limit (see \sectionref{Peaks:Kappa1Limit}). 
 Consequently, this effect would not be expected to be observed in atoms like $\nucl{87}{}{Rb}$ for which $\kappa = 1.002$~\citep{Kempen:2002,Widera:2006}.
 
-Verification that the $\hat{\Lambda}(\bm{k})$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation, which is discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles driven by a spontaneous four-wave mixing process indicates that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the absence of the vacuum fluctuations which are critical to all spontaneous processes.
+Verification that the $\hat{\Lambda}(\vect{k})$ quasiparticles are the origin of the peak-like structure observed in the experiment required a full 3D field calculation, which is discussed in \sectionref{Peaks:3DCalculation}.  The argument made in this section that the observed structure is due to the formation of pairs of quasiparticles driven by a spontaneous four-wave mixing process indicates that a Gross-Pitaevskii model will be unable to reproduce the observations. Such a mean-field model will be insufficient due to the absence of the vacuum fluctuations which are critical to all spontaneous processes.
 
 \section{Full 3D calculation}
 \label{Peaks:3DCalculation}
@@ -447,24 +447,24 @@ In the previous section it was found that the process of outcoupling from the He
 The master equation that describes the experiment described in \sectionref{Peaks:ExperimentalSetup} is given by
 \begin{align}
     \label{Peaks:MasterEquation}
-    \frac{d }{d t}\hat{\rho} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{9}{2} K^\text{(unpol)}_{^{4}\text{He}} \int d \bm{x}\, \mathcal{D}\left[\hat{\Xi}_{S=0,m_S=0} \right] \hat{\rho},
+    \frac{d }{d t}\hat{\rho} &= \frac{-i}{\hbar} [\hat{H},\, \hat{\rho} ] + \frac{9}{2} K^\text{(unpol)}_{^{4}\text{He}} \int d \vect{x}\, \mathcal{D}\left[\hat{\Xi}_{S=0,m_S=0} \right] \hat{\rho},
 \end{align}
 where $\displaystyle\hat{\Xi}_{S, m_S}$ is the annihilation operator for the quasimolecular state with total hyperfine spin $S$ and projection $m_S$, $\mathcal{D}[\hat{c}]\hat{\rho} \equiv \hat{c}\hat{\rho}\hat{c}^\dagger - \frac{1}{2}(\hat{c}^\dagger \hat{c} \hat{\rho} + \hat{\rho} \hat{c}^\dagger \hat{c})$ is the usual decoherence superoperator, and the second term\footnote{The reason for the difference between the ${54}/{5}$ factor in~\citet{Dall:2009} and the $9/2$ factor in \eqref{Peaks:MasterEquation} is a difference of a factor of $\sqrt{2}$ in the definition of $\hat{\Psi}_{J=0}^{\text{(mol)}}$ in~\citep{Dall:2009} and $\displaystyle\hat{\Xi}_\ket{S=0, m_S=0}$ here, and a calculational error of the order of 20\% in~\citep{Dall:2009}.} on the RHS in \eqref{Peaks:MasterEquation} is due to Penning ionisation (refer to \sectionref{BackgroundTheory:PenningIonisation} and \appendixref{PenningIonisationAppendix}) with $K^\text{(unpol)}_{^{4}\text{He}}=\unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ the Penning ionisation rate for an unpolarised thermal sample of He*~\citep{Stas:2006kx}. The Hamiltonian in \eqref{Peaks:MasterEquation} is given by
 \begin{align}
     \label{Peaks:3DHamiltonian}
     \begin{split}
-    \hat{H} &= \sum_i \int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\bm{x})\right)\hat{\Psi}_i^{\phantom{\dagger}} + \sum_{S, m_S} g_{S}\int d\bm{x}\, \hat{\Xi}_{S, m_S}^\dagger \hat{\Xi}_{S, m_S}^{\phantom{\dagger}}\\
+    \hat{H} &= \sum_i \int d\vect{x}\, \hat{\Psi}_i^\dagger \left(\frac{-\hbar^2 \nabla^2}{2 M} + V_i(\vect{x})\right)\hat{\Psi}_i^{\phantom{\dagger}} + \sum_{S, m_S} g_{S}\int d\vect{x}\, \hat{\Xi}_{S, m_S}^\dagger \hat{\Xi}_{S, m_S}^{\phantom{\dagger}}\\
     \\
-            &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\bm{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
+            &\phantom{=} + \sqrt{2} \hbar \Omega \sum_{i j}\int d\vect{x}\, \hat{\Psi}_i^\dagger \left(\delta_{i, j+1} + \delta_{i, j-1}\right) \hat{\Psi}_j^{\phantom{\dagger}},
     \end{split}
 \end{align}
-$\displaystyle \hat{\Psi}_i$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\bm{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The quasimolecular annihilation operator $\displaystyle \hat{\Xi}_{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients~\citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right)$.
+$\displaystyle \hat{\Psi}_i$ is the annihilation operator for the atomic state $\displaystyle \ket{F=1, m_F=i}$, $V_i(\vect{x})$ is the potential experienced by that state, and $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). The quasimolecular annihilation operator $\displaystyle \hat{\Xi}_{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients~\citep{Ho:1998}. For example $\displaystyle \hat{\Xi}_{S=0, m_S=0} = \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right)$.
 
 In the first instance, we wish to verify the results of the previous section within a fully three-dimensional model and determine the pattern that would be observed on the detector in this case. Although a similar system was solved with the GP equation in \sectionref{TransverseProfile:Helium} when the transverse profile of a He* atom laser was considered, it is not possible to solve the system corresponding to \eqref{Peaks:MasterEquation} with available computational infrastructure. The difference between these two systems is in the axial dimension.
 
 When modelling the transverse profile of the atom laser, the tight aspect ratio of the condensate meant that outcoupled atoms would be accelerated much more along the radial trapping directions than along the axial trapping direction. This permitted the use of a much larger spatial grid separation in the axial dimension than in the radial dimensions. In the present system it is expected that there will exist instabilities with momenta that correspond to a substantial fraction of that which the atom laser would have after leaving the condensate ($\sim \unit[2 \times 10^6]{m\textsuperscript{-1}}$ as compared to $\sim \unit[4 \times 10^6]{m\textsuperscript{-1}}$). In the present case the spatial grid separation in the axial dimension must be comparable to that used in the radial dimensions. Exacerbating this problem is that the tighter aspect ratio in the experiment described in this chapter requires this significantly smaller spatial grid separation be used over a larger range. To perform a simulation using a method similar to that used in \sectionref{TransverseProfile:Helium}, approximately $\unit[500]{GiB}$ of memory would be needed simply to store the wavefunctions for the system. Additional approximations are necessary to make this system tractable.
 
-One of the most effective ways to reduce the size of a problem is by reducing its dimensionality. Although the master equation \eqref{Peaks:MasterEquation} possesses no continuous symmetries, near the BEC it is approximately cylindrically symmetric. The only term breaking this cylindrical symmetry is the gravitational potential $V_\text{grav}(\bm{x}) =- M \bm{g} \cdot \bm{x}$ where $\bm{g}$ is the gravitational field strength. While this term can be neglected over the region close to the BEC as it varies by only $10\%$ of the chemical potential of the BEC, it certainly cannot be neglected when considering the propagation of the atom laser onto the detector located $\unit[4]{cm}$ below. However, as discussed in \sectionref{TransverseProfile:Helium} the evolution of the atom laser in the region below the BEC is well described by free fall with the exception of fine-scale interference effects. In this chapter it is only the large-scale structure that is of interest, enabling a classical description for the atom laser to be used after it leaves the immediate vicinity of the condensate where the important dynamics will occur.
+One of the most effective ways to reduce the size of a problem is by reducing its dimensionality. Although the master equation \eqref{Peaks:MasterEquation} possesses no continuous symmetries, near the BEC it is approximately cylindrically symmetric. The only term breaking this cylindrical symmetry is the gravitational potential $V_\text{grav}(\vect{x}) =- M \vect{g} \cdot \vect{x}$ where $\vect{g}$ is the gravitational field strength. While this term can be neglected over the region close to the BEC as it varies by only $10\%$ of the chemical potential of the BEC, it certainly cannot be neglected when considering the propagation of the atom laser onto the detector located $\unit[4]{cm}$ below. However, as discussed in \sectionref{TransverseProfile:Helium} the evolution of the atom laser in the region below the BEC is well described by free fall with the exception of fine-scale interference effects. In this chapter it is only the large-scale structure that is of interest, enabling a classical description for the atom laser to be used after it leaves the immediate vicinity of the condensate where the important dynamics will occur.
 
 Another demonstration of the validity of the assumption of cylindrical symmetry is that the gravitational sag of the centre of the condensate from the centre of the trap is only $\unit[0.2]{\micro m}$, which is small compared to the Thomas-Fermi radius in the tight trapping dimensions of $r_\text{TF} = \unit[9.4]{\micro m}$. Consequently, atoms will be repelled from the condensate almost symmetrically. Such a situation was observed earlier in \sectionref{TransverseProfile:Helium}.
 
@@ -492,7 +492,7 @@ The reason for the choice of the Fourier basis over the Bessel basis in~\citep{D
 \subsection{Calculation of the momentum flux density}
 \label{Peaks:AbsorbingBoundaryTricks}
 
-As discussed previously, it is necessary to calculate the momentum density that leaves the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. The simulation will necessarily make use of an absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the outgoing atom laser interacting with the artificial boundary conditions at the edge of the computational domain.  In the case of a perfect absorbing boundary layer the dynamics inside the `region of interest' (see \figureref{Peaks:RegionOfInterest}) will be exactly the same as if the problem were solved on the infinite domain. We wish to calculate the time-integrated momentum density flux $\int \Phi(\bm{k}, t) \, dt$ leaving the region of interest where $\Phi(\bm{k}, t)$ is the momentum density flux leaving the region of interest at time $t$.
+As discussed previously, it is necessary to calculate the momentum density that leaves the simulation region near the condensate to be able to propagate the atom laser classically onto the MCP detector below the condensate. The simulation will necessarily make use of an absorbing boundary layer (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) to prevent the outgoing atom laser interacting with the artificial boundary conditions at the edge of the computational domain.  In the case of a perfect absorbing boundary layer the dynamics inside the `region of interest' (see \figureref{Peaks:RegionOfInterest}) will be exactly the same as if the problem were solved on the infinite domain. We wish to calculate the time-integrated momentum density flux $\int \Phi(\vect{k}, t) \, dt$ leaving the region of interest where $\Phi(\vect{k}, t)$ is the momentum density flux leaving the region of interest at time $t$.
 
 \begin{figure}
     \centering
@@ -502,33 +502,33 @@ As discussed previously, it is necessary to calculate the momentum density that 
 
 The rate and distribution with which momentum leaves the region of interest can be determined by considering the equation of motion for the wavenumber density in the region of interest,
 \begin{align}
-    \frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2 &= 2 \Re \left\{ \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{\partial }{\partial t}\widetilde{\psi}_\text{roi}(\bm{k}, t) \right \},
+    \frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\vect{k}, t)}^2 &= 2 \Re \left\{ \widetilde{\psi}_\text{roi}^*(\vect{k}, t) \frac{\partial }{\partial t}\widetilde{\psi}_\text{roi}(\vect{k}, t) \right \},
 \end{align}
-where $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\bm{x}, t)$, which is defined to be nonzero only within the region of interest. The equation of motion for $\widetilde{\psi}_\text{roi}(\bm{k}, t)$ is
+where $\widetilde{\psi}_\text{roi}(\vect{k}, t)$ is the Fourier transform of the restricted wavefunction $\psi_\text{roi}(\vect{x}, t)$, which is defined to be nonzero only within the region of interest. The equation of motion for $\widetilde{\psi}_\text{roi}(\vect{k}, t)$ is
 \begin{align}
     \label{Peaks:PsikROIEquationOfMotion}
-    \frac{\partial}{\partial t} \widetilde{\psi}_\text{roi}(\bm{k}, t) &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\bm{x}) + U \abs{\psi_\text{roi}(\bm{x}, t)}^2\right) \psi_\text{roi}(\bm{x}, t)\right](\bm{k}),
+    \frac{\partial}{\partial t} \widetilde{\psi}_\text{roi}(\vect{k}, t) &= -\frac{i}{\hbar} \mathcal{F}\left[\left(-\frac{\hbar^2 \nabla^2}{2M} + V(\vect{x}) + U \abs{\psi_\text{roi}(\vect{x}, t)}^2\right) \psi_\text{roi}(\vect{x}, t)\right](\vect{k}),
 \end{align}
-where $\mathcal{F}[f(\bm{x})](\bm{k})$ denotes the Fourier transform of the function $f(\bm{x})$. While the potential and interaction terms in \eqref{Peaks:PsikROIEquationOfMotion} redistribute momentum, it is only due to the kinetic term that momentum will leave the region of interest. To see that this is true, consider a Hamiltonian with no kinetic term. In this case the local phase of the wavefunction will rotate, but the density distribution will remain unchanged. Hence it will be the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} that will determine the momentum density flux leaving the region of interest.
+where $\mathcal{F}[f(\vect{x})](\vect{k})$ denotes the Fourier transform of the function $f(\vect{x})$. While the potential and interaction terms in \eqref{Peaks:PsikROIEquationOfMotion} redistribute momentum, it is only due to the kinetic term that momentum will leave the region of interest. To see that this is true, consider a Hamiltonian with no kinetic term. In this case the local phase of the wavefunction will rotate, but the density distribution will remain unchanged. Hence it will be the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} that will determine the momentum density flux leaving the region of interest.
 
-The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} can be evaluated to give the momentum density flux $\Phi(\bm{k}, t)$ leaving the region of interest in terms of a surface integral over the boundary of the region of interest,
+The Fourier transform of the kinetic term in \eqref{Peaks:PsikROIEquationOfMotion} can be evaluated to give the momentum density flux $\Phi(\vect{k}, t)$ leaving the region of interest in terms of a surface integral over the boundary of the region of interest,
 \begin{align}
-    \Phi(\bm{k}, t) & = -\frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\bm{k}, t)}^2\bigg|_\text{kinetic}\\
-    & = -2 \Re \left\{ \frac{i \hbar}{2 M} \widetilde{\psi}_\text{roi}^*(\bm{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \bm{k}\cdot \bm{x}} \Big[ \nabla \psi_\text{roi}(\bm{x}, t) + i \bm{k} \psi_\text{roi}(\bm{x}, t)\Big] \cdot d \bm{A} \right\}.
+    \Phi(\vect{k}, t) & = -\frac{\partial }{\partial t}\abs{\widetilde{\psi}_\text{roi}(\vect{k}, t)}^2\bigg|_\text{kinetic}\\
+    & = -2 \Re \left\{ \frac{i \hbar}{2 M} \widetilde{\psi}_\text{roi}^*(\vect{k}, t) \frac{1}{(2 \pi)^{\frac{3}{2}}}\oiint e^{-i \vect{k}\cdot \vect{x}} \Big[ \nabla \psi_\text{roi}(\vect{x}, t) + i \vect{k} \psi_\text{roi}(\vect{x}, t)\Big] \cdot d \vect{A} \right\}.
     \label{Peaks:MomentumDensityFluxSurfaceIntegral}
 \end{align}
-The $\psi_\text{roi}(\bm{x}, t)$ and $\nabla\psi_\text{roi}(\bm{x}, t)$ terms to be evaluated at the boundary in \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} should be understood to be defined by the limit from the interior of the region of interest. While \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} is the most direct way of evaluating $\Phi(\bm{k}, t)$, it is a computationally inefficient method as it requires the calculation of a surface integral for every point $\bm{k}$ at which we wish to evaluate $\Phi(\bm{k}, t)$. 
+The $\psi_\text{roi}(\vect{x}, t)$ and $\nabla\psi_\text{roi}(\vect{x}, t)$ terms to be evaluated at the boundary in \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} should be understood to be defined by the limit from the interior of the region of interest. While \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} is the most direct way of evaluating $\Phi(\vect{k}, t)$, it is a computationally inefficient method as it requires the calculation of a surface integral for every point $\vect{k}$ at which we wish to evaluate $\Phi(\vect{k}, t)$. 
 
-A more efficient method can be found by instead considering the evolution of the wavenumber density on the entire computational domain. The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves at a slightly later time due to the negative imaginary potential. As it is not the temporal dynamics of $\Phi(\bm{k}, t)$ in which we are interested, but just the distribution of momentum that left the region of interest at \emph{any} time, this delay is unimportant. On the entire computational domain, the two kinetic transport terms will cancel leaving the term due to the negative imaginary potential. Assuming that the mean-field interaction energy of the wavefunction reaching the absorbing boundary layer is small compared to its kinetic energy, the momentum flux density leaving the computational domain is given by
+A more efficient method can be found by instead considering the evolution of the wavenumber density on the entire computational domain. The momentum flux density that left the region of interest enters the absorbing boundary layer through a term like \eqref{Peaks:MomentumDensityFluxSurfaceIntegral}, but leaves at a slightly later time due to the negative imaginary potential. As it is not the temporal dynamics of $\Phi(\vect{k}, t)$ in which we are interested, but just the distribution of momentum that left the region of interest at \emph{any} time, this delay is unimportant. On the entire computational domain, the two kinetic transport terms will cancel leaving the term due to the negative imaginary potential. Assuming that the mean-field interaction energy of the wavefunction reaching the absorbing boundary layer is small compared to its kinetic energy, the momentum flux density leaving the computational domain is given by
 \begin{align}
     \label{Peaks:MomentumDensityFlux}
-    \Phi(\bm{k}, t)&=\frac{2}{\hbar} \Re \left\{ \widetilde{\psi}^*(\bm{k}, t) \mathcal{F}'\left[ V_I(\bm{x}) \psi(\bm{x}, t)\right](\bm{k}) \right\},
+    \Phi(\vect{k}, t)&=\frac{2}{\hbar} \Re \left\{ \widetilde{\psi}^*(\vect{k}, t) \mathcal{F}'\left[ V_I(\vect{x}) \psi(\vect{x}, t)\right](\vect{k}) \right\},
 \end{align}
-where $\mathcal{F}'$ is the appropriate Fourier-like transform that connects the spatial and spectral representations of the wavefunction $\psi$, and guarantees the artificial boundary conditions are satisfied. Equation \eqref{Peaks:MomentumDensityFlux} is a more efficient method of evaluating $\Phi(\bm{k}, t)$ than \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} as it only requires two Fourier-like transforms to evaluate $\Phi(\bm{k}, t)$ for all $\bm{k}$, instead of one surface integral \emph{for each} $\bm{k}$.
+where $\mathcal{F}'$ is the appropriate Fourier-like transform that connects the spatial and spectral representations of the wavefunction $\psi$, and guarantees the artificial boundary conditions are satisfied. Equation \eqref{Peaks:MomentumDensityFlux} is a more efficient method of evaluating $\Phi(\vect{k}, t)$ than \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} as it only requires two Fourier-like transforms to evaluate $\Phi(\vect{k}, t)$ for all $\vect{k}$, instead of one surface integral \emph{for each} $\vect{k}$.
 
-The information provided by either \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} or \eqref{Peaks:MomentumDensityFlux} will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer $\int \Phi(\bm{k}, t)\, dt$ would exactly equal the lost momentum density from the region of interest, for an imperfect absorbing boundary layer $\int \Phi(\bm{k}, t)\, dt$ will also include contributions due to any reflection from or transmission through the boundary layer. 
+The information provided by either \eqref{Peaks:MomentumDensityFluxSurfaceIntegral} or \eqref{Peaks:MomentumDensityFlux} will only be as good as the absorbing boundary layer. While for a perfect absorbing boundary layer $\int \Phi(\vect{k}, t)\, dt$ would exactly equal the lost momentum density from the region of interest, for an imperfect absorbing boundary layer $\int \Phi(\vect{k}, t)\, dt$ will also include contributions due to any reflection from or transmission through the boundary layer. 
 
-An example calculation of $\Phi(\bm{k}, t)$ for a finite absorbing boundary layer is given in \sectionref{MethodsAppendix:MomentumDensityFluxExampleCalculation}. There it is demonstrated that $\Phi(\bm{k}, t)$ is an accurate method for determining the rate of loss of momentum density from a region of space for the same range of momenta for which the absorbing boundary layer is itself accurate.
+An example calculation of $\Phi(\vect{k}, t)$ for a finite absorbing boundary layer is given in \sectionref{MethodsAppendix:MomentumDensityFluxExampleCalculation}. There it is demonstrated that $\Phi(\vect{k}, t)$ is an accurate method for determining the rate of loss of momentum density from a region of space for the same range of momenta for which the absorbing boundary layer is itself accurate.
 
 \parasep
 
@@ -542,46 +542,46 @@ Having described the calculational techniques that will be used, we now turn to 
     \label{Peaks:3DGPEquations}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial }{\partial t}\Psi_1 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\bm{x}) - i V_I(\bm{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
+            i \hbar \frac{\partial }{\partial t}\Psi_1 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_1 + \big(V_\text{trap}(\vect{x}) - i V_I(\vect{x})\big)\Psi_1 + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_1 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 - \abs{\Psi_{-1}}^2 \right) \Psi_1 + c_2 \Psi_{-1}^*\Psi_0^2 \\
             & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{-1}}^2 \Psi_1 - \Psi_{-1}^* \Psi_0^2\right),
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial }{\partial t}\Psi_0 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(\hbar \Delta - i V_I(\bm{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
+            i \hbar \frac{\partial }{\partial t}\Psi_0 &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_0 + \big(\hbar \Delta - i V_I(\vect{x}) \big)\Psi_0 + \sqrt{2} \hbar \Omega \Psi_1 + \sqrt{2}\hbar\Omega \Psi_{-1} \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_0 + c_2\left(\abs{\Psi_1}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_0 + 2 c_2 \Psi_{0}^*\Psi_1\Psi_{-1} \\
             & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(\abs{\Psi_{0}}^2 \Psi_0 - 2\Psi_{0}^* \Psi_1\Psi_{-1}\right),
         \end{split}\\
         \begin{split}
-            i \hbar \frac{\partial }{\partial t}\Psi_{-1} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\bm{x}) + 2 \hbar \Delta - i V_I(\bm{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
+            i \hbar \frac{\partial }{\partial t}\Psi_{-1} &= \frac{-\hbar^2 \nabla^2}{2 M} \Psi_{-1} + \big(-V_\text{trap}(\vect{x}) + 2 \hbar \Delta - i V_I(\vect{x})\big)\Psi_{-1} + \sqrt{2} \hbar \Omega \Psi_0 \\
             & \relphantom{=} + c_0 \sum_j \abs{\Psi_j}^2 \Psi_{-1} + c_2\left(-\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2 \right) \Psi_{-1} + c_2 \Psi_{1}^*\Psi_0^2 \\
             & \relphantom{=} - i \hbar\frac{3}{2}K^\text{(unpol)}_{^{4}\text{He}} \left(2\abs{\Psi_{1}}^2 \Psi_{-1} - \Psi_{1}^* \Psi_0^2\right),
         \end{split}
     \end{align}
 \end{subequations}
-where $\displaystyle V_\text{trap}(\bm{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 + \omega_z^2 z^2 \right)$ is the trapping potential, $\hbar \Delta$ is the detuning in energy of the resonant outcoupling surface from the centre of the condensate, $c_0 = (g_0 + 2 g_2)/3$, $c_2 = (g_2 - g_0)/3$, where $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). A derivation of the Penning ionisation terms in \eqref{Peaks:3DGPEquations} is given in \sectionref{PenningIonisationAppendix:GP}.
+where $\displaystyle V_\text{trap}(\vect{x}) = \frac{1}{2} M \left(\omega_r^2 r^2 + \omega_z^2 z^2 \right)$ is the trapping potential, $\hbar \Delta$ is the detuning in energy of the resonant outcoupling surface from the centre of the condensate, $c_0 = (g_0 + 2 g_2)/3$, $c_2 = (g_2 - g_0)/3$, where $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel (refer to \sectionref{BackgroundTheory:Helium}). A derivation of the Penning ionisation terms in \eqref{Peaks:3DGPEquations} is given in \sectionref{PenningIonisationAppendix:GP}.
 
 The Truncated Wigner equations corresponding to the master equation \eqref{Peaks:MasterEquation} are very similar to \eqref{Peaks:3DGPEquations} but with some additional terms. In Stratonovich form, the equations of motion for the stochastic wavefunctions are approximately
 % See MolecularScattering.nb for the derivation of the Penning ionisation terms
 \begin{align}
     \label{Peaks:3DTWEquations}
     \begin{split}
-        \left. i \hbar \,d\bm{\Psi}\right|_\text{TW} &\approx \left. i \hbar \frac{\partial }{\partial t}\bm{\Psi}\right|_\text{GP} dt - \left(2 c_0 + c_2 \right)\frac{1}{\Delta V}\bm{\Psi}\, dt\\
-        &\relphantom{\approx} + i\sqrt{ \hbar V_I(\bm{x})} \,d\bm{W}(\bm{x}) + i \hbar\sqrt{3 \Kunpol}
+        \left. i \hbar \,d\vect{\Psi}\right|_\text{TW} &\approx \left. i \hbar \frac{\partial }{\partial t}\vect{\Psi}\right|_\text{GP} dt - \left(2 c_0 + c_2 \right)\frac{1}{\Delta V}\vect{\Psi}\, dt\\
+        &\relphantom{\approx} + i\sqrt{ \hbar V_I(\vect{x})} \,d\vect{W}(\vect{x}) + i \hbar\sqrt{3 \Kunpol}
         \begin{pmatrix}
             \Psi_{-1}^*\\
             \Psi_0^*\\
             \Psi_1^*
-        \end{pmatrix} dW_p(\bm{x}),
+        \end{pmatrix} dW_p(\vect{x}),
     \end{split}
 \end{align}
-where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as those that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight~\citep{Ronen:2006}), $\bm{\Psi} = \left(\Psi_1, \Psi_0, \Psi_{-1} \right)^T$ and $d \bm{W}(\bm{x}) = \big(dW_1(\bm{x}), dW_0(\bm{x}), dW_{-1}(\bm{x})\big)^T$ and $dW_p(\bm{x})$ are the complex Gaussian noises satisfying
+where $\Delta V$ is the computational grid's volume element (for irregularly spaced grids such as those that used for cylindrically symmetric problems, $\Delta V$ is the local Gaussian quadrature weight~\citep{Ronen:2006}), $\vect{\Psi} = \left(\Psi_1, \Psi_0, \Psi_{-1} \right)^T$ and $d \vect{W}(\vect{x}) = \big(dW_1(\vect{x}), dW_0(\vect{x}), dW_{-1}(\vect{x})\big)^T$ and $dW_p(\vect{x})$ are the complex Gaussian noises satisfying
 \begin{align}
-    \overline{dW_i(\bm{x})\, dW_j(\bm{x}')} &= 0 \\
-    \overline{dW_i(\bm{x})\, dW_j^*(\bm{x}')} &= \frac{1}{\Delta V}\delta_{ij}\delta_{\bm{x},\bm{x}'}\,dt, \label{Peaks:ComplexNoiseExpectationValue}
+    \overline{dW_i(\vect{x})\, dW_j(\vect{x}')} &= 0 \\
+    \overline{dW_i(\vect{x})\, dW_j^*(\vect{x}')} &= \frac{1}{\Delta V}\delta_{ij}\delta_{\vect{x},\vect{x}'}\,dt, \label{Peaks:ComplexNoiseExpectationValue}
 \end{align}
 where $\overline{(\cdot)}$ denotes the expectation value taken with respect to the noises. The usual spatial Dirac delta function in \eqref{Peaks:ComplexNoiseExpectationValue} has been replaced by a Kronecker delta function scaled by the inverse volume element due to the discretisation of the problem onto a computational grid.
 
-The origin of the additional terms in \eqref{Peaks:3DTWEquations} can be understood qualitatively in terms of the `virtual' particles added to the initial state required in Truncated Wigner (see \sectionref{BackgroundTheory:TruncatedWigner}). The $\Delta V^{-1}$ term corrects for the contribution to \emph{s}-wave scattering due to the virtual particles. The $d \bm{W}$ term corrects for the loss of virtual particles due to the absorbing boundary layer and the $dW_p$ term does similarly for the virtual particles lost due to Penning ionisation.
+The origin of the additional terms in \eqref{Peaks:3DTWEquations} can be understood qualitatively in terms of the `virtual' particles added to the initial state required in Truncated Wigner (see \sectionref{BackgroundTheory:TruncatedWigner}). The $\Delta V^{-1}$ term corrects for the contribution to \emph{s}-wave scattering due to the virtual particles. The $d \vect{W}$ term corrects for the loss of virtual particles due to the absorbing boundary layer and the $dW_p$ term does similarly for the virtual particles lost due to Penning ionisation.
 
 The approximation made in obtaining \eqref{Peaks:3DTWEquations} was to neglect $\Delta V^{-1}$ compared to the field occupations $\abs{\Psi_1}^2$, $\abs{\Psi_0}^2$, $\abs{\Psi_{-1}}^2$ in the Penning ionisation noise term. This is justified for large occupations where Penning ionisation will be significant. The approximation cannot be made where the density is low, but at these locations the Penning ionisation process itself can be neglected as the associated rate constant will have decreased proportionally with the density. A derivation of the Penning ionisation noise term in \eqref{Peaks:3DTWEquations} is given in \sectionref{PenningIonisationAppendix:TW}.
 
@@ -616,8 +616,8 @@ The spontaneously-seeded dynamical instabilities predicted in \sectionref{Peaks:
 \begin{sidewaysfigure}
     \centering
     \includegraphics[width=22cm]{ResonantOutcouplingProcess}
-    \caption{Simulation results for outcoupling from the centre of the condensate without Penning ionisation illustrating the formation of the normal atom laser profile and the dynamical instabilities. Upper figures (a)--(d) are the results of a two level Gross-Pitaevskii model, and lower figures (e)--(h) are the results of a two level Truncated Wigner model. The upper and lower rows respectively correspond to the upper and lower rows of \figureref{Peaks:TheoryZeroDetuningNoPIResults}. The columns from left to right show the evolution of the momentum density $\abs{\Psi_0(\bm{k})}^2$ of the untrapped state at times: \unit[0.3]{ms}, \unit[0.6]{ms}, \unit[1.2]{ms}, and \unit[2]{ms}.
-    This figure illustrates that the instabilities are spontaneously seeded and that modes between the main atom laser profile and the instabilities are not significantly populated until after the instability has formed. The marked `Normal atom laser' part of the momentum density distribution is the component that corresponds to the MCP atom laser profile shown in \figureref{Peaks:TheoryZeroDetuningNoPIResults}(b).  Note that the vacuum noise in (e)--(h) is not uniform because the initial vacuum noise is proportional to the inverse volume element, which due to the assumed cylindrical symmetry $\displaystyle \Delta V_{\bm{k}}^{-1} \propto k_r^{-1}$.\label{Peaks:ResonantOutcouplingProcess}}
+    \caption{Simulation results for outcoupling from the centre of the condensate without Penning ionisation illustrating the formation of the normal atom laser profile and the dynamical instabilities. Upper figures (a)--(d) are the results of a two level Gross-Pitaevskii model, and lower figures (e)--(h) are the results of a two level Truncated Wigner model. The upper and lower rows respectively correspond to the upper and lower rows of \figureref{Peaks:TheoryZeroDetuningNoPIResults}. The columns from left to right show the evolution of the momentum density $\abs{\Psi_0(\vect{k})}^2$ of the untrapped state at times: \unit[0.3]{ms}, \unit[0.6]{ms}, \unit[1.2]{ms}, and \unit[2]{ms}.
+    This figure illustrates that the instabilities are spontaneously seeded and that modes between the main atom laser profile and the instabilities are not significantly populated until after the instability has formed. The marked `Normal atom laser' part of the momentum density distribution is the component that corresponds to the MCP atom laser profile shown in \figureref{Peaks:TheoryZeroDetuningNoPIResults}(b).  Note that the vacuum noise in (e)--(h) is not uniform because the initial vacuum noise is proportional to the inverse volume element, which due to the assumed cylindrical symmetry $\displaystyle \Delta V_{\vect{k}}^{-1} \propto k_r^{-1}$.\label{Peaks:ResonantOutcouplingProcess}}
 \end{sidewaysfigure}
 
 As discussed in \sectionref{Peaks:DynamicalInstabilitiesDiscussion} the dynamical instabilities observed in \figureref{Peaks:TheoryZeroDetuningNoPIResults} will be entangled when they are produced, however the entangled modes are superpositions of the $\Psi_1$ and $\Psi_0$ states with opposite momenta. It will not be feasible to directly detect this entanglement as the outcoupling process will significantly complicate the spatial structure of the entangled modes. Although only the $\Psi_0$ state can leave the magnetic trap, the $\Psi_1$ component of the entangled mode is likely to be outcoupled faster than the time it would take to perform half an oscillation and reverse the sign of its axial momentum ($\sim \unit[9]{ms}$). Consequently number difference squeezing between the opposite momentum components of the entangled modes should be robust enough to survive outcoupling. It cannot be proven due to the small number of realisations calculated, however it is expected that there should exist number difference squeezing between the number of atoms above and below the main atom laser beam in \figureref{Peaks:TheoryZeroDetuningNoPIResults}. The main atom laser beam must be excluded as it is produced due to entirely classical means and hence would not be have number difference squeezing.
@@ -675,12 +675,12 @@ The experimental results presented in \figureref{Peaks:ExperimentalResults} were
 
 The results of 2-level TW and 2- and 3-level GP simulations of the experiment for a detuning of $\Delta = 2\pi \times \unit[6.5]{kHz}$ are shown in \figureref{Peaks:TheoryMaxFluxDetuningResults}. As discussed at the end of \sectionref{Peaks:3DEquationsOfMotion}, a 3-level TW model is too computationally demanding to simulate, although the similarity of the results of the three models presented in \figureref{Peaks:TheoryMaxFluxDetuningResults} suggests that the results of such a simulation would differ negligibly from those presented.
 
-The results pictured in \figureref{Peaks:TheoryMaxFluxDetuningResults} are of the momentum density $\abs{\Psi_0(\bm{k})}^2$ of the $m_F=0$ untrapped state at $t=\unit[5.1]{ms}$.  A comparison of the results of simulations with and without Penning ionisation are also shown (right and left columns respectively), which demonstrate that the features depicted are not suppressed by Penning ionisation.  As expected, the features of the momentum density profiles in \figureref{Peaks:TheoryMaxFluxDetuningResults} have a similar form to those in \figureref{Peaks:TheoryZeroDetuningNoPIResults}(c).  An important difference is that for detuned outcoupling, the features at large $\abs{k_z}$ appear in both the TW and GP models indicating that these structures are \emph{not} spontaneously seeded.  \figureref{Peaks:DetunedPeaksFormationProcess} illustrates the formation process of these structures demonstrating that they are produced by a stimulated scattering process from the condensate that sweeps in momentum from $k_z=0$ towards the final state pictured in \figureref{Peaks:TheoryMaxFluxDetuningResults}. 
+The results pictured in \figureref{Peaks:TheoryMaxFluxDetuningResults} are of the momentum density $\abs{\Psi_0(\vect{k})}^2$ of the $m_F=0$ untrapped state at $t=\unit[5.1]{ms}$.  A comparison of the results of simulations with and without Penning ionisation are also shown (right and left columns respectively), which demonstrate that the features depicted are not suppressed by Penning ionisation.  As expected, the features of the momentum density profiles in \figureref{Peaks:TheoryMaxFluxDetuningResults} have a similar form to those in \figureref{Peaks:TheoryZeroDetuningNoPIResults}(c).  An important difference is that for detuned outcoupling, the features at large $\abs{k_z}$ appear in both the TW and GP models indicating that these structures are \emph{not} spontaneously seeded.  \figureref{Peaks:DetunedPeaksFormationProcess} illustrates the formation process of these structures demonstrating that they are produced by a stimulated scattering process from the condensate that sweeps in momentum from $k_z=0$ towards the final state pictured in \figureref{Peaks:TheoryMaxFluxDetuningResults}. 
 
 \begin{sidewaysfigure}
     \centering
     \includegraphics[width=20cm]{DetunedPeaksFormationProcess}
-    \caption{Simulation results illustrating the formation of the peak-like structures due to stimulated scattering from the condensate. The results presented are from a three level GP model with a detuning of $\Delta = 2\pi \times \unit[6.5]{kHz}$ and include Penning ionisation (the results correspond to \figureref{Peaks:TheoryMaxFluxDetuningResults}(b)). Figures (a), (b), and (c) show the momentum density distribution $\abs{\Psi_0(\bm{k})}^2$ of the $m_F=0$ untrapped state at times \unit[1]{ms}, \unit[3]{ms}, and \unit[5]{ms} respectively. The marked outcoupled instabilities are the origin of the structure away from the main atom laser profile in \figureref{Peaks:ExpTheoryComparison}(e) and (f).
+    \caption{Simulation results illustrating the formation of the peak-like structures due to stimulated scattering from the condensate. The results presented are from a three level GP model with a detuning of $\Delta = 2\pi \times \unit[6.5]{kHz}$ and include Penning ionisation (the results correspond to \figureref{Peaks:TheoryMaxFluxDetuningResults}(b)). Figures (a), (b), and (c) show the momentum density distribution $\abs{\Psi_0(\vect{k})}^2$ of the $m_F=0$ untrapped state at times \unit[1]{ms}, \unit[3]{ms}, and \unit[5]{ms} respectively. The marked outcoupled instabilities are the origin of the structure away from the main atom laser profile in \figureref{Peaks:ExpTheoryComparison}(e) and (f).
     \label{Peaks:DetunedPeaksFormationProcess}}
 \end{sidewaysfigure}
 

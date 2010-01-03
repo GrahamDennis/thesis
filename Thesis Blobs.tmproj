@@ -16,7 +16,7 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-16T23:59:21Z</date>
+			<date>2009-12-31T02:13:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -46,7 +46,7 @@
 			<key>filename</key>
 			<string>OpticalPumping.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-24T08:46:10Z</date>
+			<date>2009-12-31T02:13:35Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -118,9 +118,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>962</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>93</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>127</integer>
@@ -146,23 +146,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>417</integer>
 				<key>line</key>
-				<integer>327</integer>
+				<integer>362</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>325</integer>
+			<integer>334</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>571</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>408</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -216,28 +216,20 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>50</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>107</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>15</integer>
+			<integer>85</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
-		<string>Peaks.tex</string>
-		<string>BackgroundTheory.tex</string>
-		<string>TransverseProfile.tex</string>
 		<string>OpticalPumping.tex</string>
-		<string>KineticTheory.tex</string>
-		<string>FloquetAppendix.tex</string>
-		<string>PenningIonisationAppendix.tex</string>
-		<string>MethodsAppendix.tex</string>
-		<string>ToolsAppendix.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>

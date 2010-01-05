@@ -1,4 +1,4 @@
-\begin{thebibliography}{107}
+\begin{thebibliography}{109}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -637,6 +637,17 @@
   \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{013620} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Eckart}(1930)}]{Eckart:1930}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Eckart}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{2}},
+  \bibinfo{pages}{305} (\bibinfo{year}{1930}).
+
+\bibitem[{\citenamefont{Brink and Satchler}(1962)}]{Brink:1962}
+\bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Brink}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Satchler}},
+  \emph{\bibinfo{title}{{Angular Momentum}}} (\bibinfo{publisher}{Oxford},
+  \bibinfo{year}{1962}).
 
 \bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
   Zaremba, and Stoof}}]{Bijlsma:2000}

@@ -285,57 +285,61 @@ where $\delta_{ij}$ is the Kronecker delta.
 
 As each of the photon fields $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$ will only be occupied within a small range of wavenumbers $\delta k$, the photon energy and polarisation vectors can be assumed to differ negligibly from their values at $\vect{k}=\vect{q}_n$. This permits the corresponding electric field components to be written as
 \begin{align}
-    \vect{E}_{+, \vect{q}_n}(\vect{x}) &= \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \unitvec{u}_{\lambda_n} (\vect{k}) \left(\frac{\hbar \omega_{\vect{k}}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n}(\vect{k}) e^{i \vect{k}\cdot \vect{x}}\\
-    &\approx \unitvec{u}_{\lambda_n}(\vect{q}_n) \left( \frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}}   \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \Phi_{\lambda_n, \vect{q}_n}(\vect{k}) e^{i \vect{k}\cdot \vect{x}}\\
-   &= \unitvec{u}_{\lambda_n}(\vect{q}_n) \left( \frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n} (\vect{x}) \\
+    \vect{E}_{+, \vect{q}_n}(\vect{x}) &= \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \unitvec{u}_{\lambda_n} (\vect{k}) \left(\frac{\hbar \omega_{\vect{k}}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n}(\vect{k}) e^{i \vect{k}\cdot \vect{x}} \notag\\
+    &\approx \unitvec{u}_{\lambda_n}(\vect{q}_n) \left( \frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}}   \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \Phi_{\lambda_n, \vect{q}_n}(\vect{k}) e^{i \vect{k}\cdot \vect{x}}\notag\\
+   &= \unitvec{u}_{\lambda_n}(\vect{q}_n) \left( \frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n} (\vect{x}) \notag\\
    &= \unitvec{u}_{\lambda_n}(\vect{q}_n) E_{+, \vect{q}_n}(\vect{x})
 \end{align}
 where $\Phi_{\lambda_n, \vect{q}_n}(\vect{x})$ is the inverse Fourier-transform of $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$, and $E_{+, \vect{q}_n}(\vect{x})$ is defined by
 \begin{align}
-    E_{+, \vect{q}_n}(\vect{x}) &= \left( \frac{\hbar \omega_{\vect{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}).
+    E_{+, \vect{q}_n}(\vect{x}) &= \left( \frac{\hbar \omega_{\vect{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}).\label{OpticalPumping:ElectricFieldPhotonFieldRelationship}
 \end{align}
 
-To obtain separate evolution equations for each of the $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$ the contribution of the atomic coupling terms of \eqref{OpticalPumping:MeanFieldPhotonRWAEvolution} to the evolution of $\Phi_\lambda(\vect{k})$ must be split amongst the evolution equations for the $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$.  If each atomic transition is only energy resonant with a single optical mode $\vect{q}_n$ (\emph{e.g.} the $\pi$-polarised transition between $\ket{F=2, m_F=0} \leftrightarrow \ket{F'=1, m_F=0}$ illustrated in \figureref{OpticalPumping:LevelDiagram}), the splitting is obvious.  It is however possible that two or more optical modes may be energy resonant with a single atomic transition (in this case the wavenumbers of all resonant modes must have the same magnitude); this case is more complicated.  In this derivation we wish to consider the possibility that an atomic transition might be resonant with two optical modes propagating in opposite directions\footnote{As discussed at the end of \sectionref{OpticalPumping:ContinuousExperiment}, it is unclear in the continuous pumping experiment whether the $\sigma^+$ photons emitted as the atoms are stimulated to emit into the lasing condensate are emitted vertically upwards or downwards.  If both possibilities are allowed for then both the upward- and downward-propagating modes would be energy resonant with a single atomic transition.  Another case in which two counter-propagating optical modes may be resonant with a single atomic transition is in the Bragg reflection of light by a matter-wave grating.}.  In this case the contribution of the atomic coupling terms may be separated into two halves: the contribution at wavenumbers $\vect{k}$ such that $\vect{q}_n \cdot \vect{k} > 0$ only affecting $\Phi_{\lambda_n, +\vect{q}_n}(\vect{k})$, and the contribution for which $\vect{q}_n \cdot \vect{k} < 0$ only affecting $\Phi_{\lambda_n, -\vect{q}_n}(\vect{k})$.  This separation can be achieved by including the full contribution of the relevant atomic coupling terms in the evolution equations for each of the photon fields $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$, but defining the fields to be zero when $\vect{q}_n \cdot \vect{k} < 0$.  This is not an additional approximation as it has already been assumed that the photon fields $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$ are only nonzero within a small range $\abs{\vect{k} - \vect{q}_n}\ll \delta k$.  
+To obtain separate evolution equations for each of the $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$ the contribution of the atomic coupling terms of \eqref{OpticalPumping:MeanFieldPhotonRWAEvolution} to the evolution of $\Phi_\lambda(\vect{k})$ must be split amongst the evolution equations for the $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$.  If each atomic transition is only energy resonant with a single optical mode $\vect{q}_n$ (\emph{e.g.} the $\pi$-polarised transition between $\ket{F=2, m_F=0} \leftrightarrow \ket{F'=1, m_F=0}$ illustrated in \figureref{OpticalPumping:LevelDiagram}), the splitting is obvious.  It is however possible that two or more optical modes may be energy resonant with a single atomic transition (the wavenumbers of all resonant modes will have the same magnitude); this case is more complicated.  In this derivation we wish to consider the possibility that an atomic transition might be resonant with two optical modes propagating in opposite directions\footnote{As discussed at the end of \sectionref{OpticalPumping:ContinuousExperiment}, it is unclear in the continuous pumping experiment whether the $\sigma^+$ photons emitted as the atoms are stimulated to emit into the lasing condensate are emitted vertically upwards or downwards.  If both possibilities are allowed for then both the upward- and downward-propagating modes would be energy resonant with a single atomic transition.  Another case in which two counter-propagating optical modes may be resonant with a single atomic transition is in the Bragg reflection of light by a matter-wave grating.}.  In this case the contribution of the atomic coupling terms may be separated into two halves: the contribution at wavenumbers $\vect{k}$ such that $\vect{q}_n \cdot \vect{k} > 0$ only affecting $\Phi_{\lambda_n, +\vect{q}_n}(\vect{k})$, and the contribution for which $\vect{q}_n \cdot \vect{k} < 0$ only affecting $\Phi_{\lambda_n, -\vect{q}_n}(\vect{k})$.  This separation can be achieved by including the full contribution of the relevant atomic coupling terms in the evolution equations for each of the photon fields $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$, but defining the fields to be zero when $\vect{q}_n \cdot \vect{k} < 0$.  This is not an additional approximation as it has already been assumed that the photon fields $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$ are only nonzero within a small range $\abs{\vect{k} - \vect{q}_n}\ll \delta k$.  
 
 
-We denote the atomic transitions $i \leftrightarrow j'$ coupled to the optical mode $\vect{q}_n$ by the set $T_n$. The new equations become
+We denote the atomic transitions $i \leftrightarrow j'$ coupled to the optical mode $\vect{q}_n$ by the set $T_n$. The equations of motion in terms of the separate electric field components are
 \begin{subequations}
     \label{OpticalPumping:MeanFieldRWAEvolutionSeparatedOpticalFields}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\Psi_j(\vect{x})}^2\right) \Psi_i(\vect{x})\\
-            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) {E}_{+,\vect{q}_n}^*(\vect{x}) \Psi_{j'}(\vect{x})
+            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) {E}_{+,\vect{q}_n}^*(\vect{x}) \Psi_{j'}(\vect{x}),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{i'}(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\vect{x}) + U \sum_j \abs{\Psi_j(\vect{x})}^2 - \frac{i\hbar \Gamma}{2}\right) \Psi_{i'}(\vect{x})\\
-            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) {E}_{+,\vect{q}_n}(\vect{x}) \Psi_{j}(\vect{x}) 
+            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) {E}_{+,\vect{q}_n}(\vect{x}) \Psi_{j}(\vect{x}),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \vect{q}_n}(\vect{k}) &= \hbar c \abs{\vect{k}} \Phi_{\lambda_n,\vect{q}_n}(\vect{k}) \\
-            &\relphantom{=} - \left(\frac{\hbar \omega_{\vect{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \unitvec{u}_{\lambda_n}^*(\vect{q}_n) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \vect{x}\, \sum_{\{i,j'\}\in T_n}\vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x}) e^{-i \vect{k} \cdot \vect{x}} \right).
+            &\relphantom{=} - \left(\frac{\hbar \omega_{\vect{q}_n}}{2 \varepsilon_0}\right)^{\frac{1}{2}} \unitvec{u}_{\lambda_n}^*(\vect{q}_n) \cdot \left( \frac{1}{\left(2\pi\right)^{3/2}} \int d \vect{x}\, \sum_{\{i,j'\}\in T_n}\vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x}) e^{-i \vect{k} \cdot \vect{x}} \right), \label{OpticalPumping:MeanFieldSeparatedPhotonEvolution}
         \end{split}
     \end{align}
 \end{subequations}
-where we have made a couple of approximations in the last equation similar to those made earlier. Also, the above equation for $\Phi_{\lambda_n, \vect{q}_n}$ may only be nonzero for $\vect{q}_n \cdot \vect{k} > 0$
-While it may seem that we have unnecessarily complicated the problem by separating one equation (two really) for the optical field into many for each significantly occupied mode, this complication will enable the use of significant simplifications later.
+where we have made the same approximations made previously that the electric polarisation vectors and the photon energies vary negligibly for each photon field.
 
-Perhaps we don't need the step function above, we could simply say that the $\Phi_{\lambda, \vect{q}_n}(\vect{k})$ may only be non-zero for $\vect{q}_n \cdot \vect{k} > 0$.  Perhaps a simpler method.
+It may seem that we have made an unnecessary complication by separating the single equation of motion for the total photon field \eqref{OpticalPumping:MeanFieldPhotonRWAEvolution} into the set of equations \eqref{OpticalPumping:MeanFieldSeparatedPhotonEvolution} for each significantly occupied mode $\Phi_{\lambda_n, \vect{q}_n}(\vect{k})$. This temporary complication will however enable the equations of motion to be simplified into a form that will be computationally tractable to solve.  In their present form the evolution equations \eqref{OpticalPumping:MeanFieldRWAEvolutionSeparatedOpticalFields} have the problem that the fastest timescale in the problem is that of the propagation of the optical field over the length of the condensate.  For a condensate with a Thomas-Fermi radius of $\sim \unit[20]{\micro m}$, this timescale is $\sim \unit[10^{-13}]{s}$ much shorter than the timescale over which the pumping was observed to occur in the experiment of $\sim \unit[10^{-1}]{s}$!  Any numerical method used to solve the system \eqref{OpticalPumping:MeanFieldRWAEvolutionSeparatedOpticalFields} must resolve dynamics on the shorter timescale to be accurate, but evolve for long enough to see the transfer of atoms occurring on a much slower timescale.  Our aim in the next part of the derivation is to eliminate all fast timescales in the problem to obtain a set of numerically-tractable equations to model the system.
 
-We should now be able to do an inverse Fourier transform. We can once we approximate $\abs{\vect{k}} \approx \unitvec{q}_n \cdot \vect{k}$ (where we use the notation $\unitvec{x}$ for the unit vector in the direction of \vect{x} to avoid confusion with the use of hats to denote operators),
+As the equations of motion for the the atomic fields are written in the position basis, it would be convenient to write the equation of motion for the photon fields in the same basis.  To simplify this process it is first necessary to approximate the wavenumber magnitude $\abs{\vect{k}}$ appearing in \eqref{OpticalPumping:MeanFieldSeparatedPhotonEvolution},
 \begin{align}
-    \abs{\vect{k}} &= \abs{\vect{q}_n + \delta \vect{k}}\\
-    &\approx \sqrt{\abs{\vect{q}_n}^2 + 2 \vect{q}_n \cdot \delta \vect{k}} = \abs{\vect{q}_n} \sqrt{1 + \frac{2 \vect{q}_n \cdot \delta \vect{k}}{\abs{\vect{q}_n}^2}}\\
-    &\approx \abs{\vect{q}_n} + \unitvec{q}_n \cdot \delta \vect{k} = \abs{\vect{q}_n} + \unitvec{q}_n \cdot \left(\vect{k} - \vect{q}_n\right)\\
-    &= \unitvec{q}_n \cdot \vect{k}
+    \abs{\vect{k}} &= \abs{\vect{q}_n + \delta \vect{k}}\notag\\
+    &\approx \sqrt{\abs{\vect{q}_n}^2 + 2 \vect{q}_n \cdot \delta \vect{k}} = \abs{\vect{q}_n} \sqrt{1 + \frac{2 \vect{q}_n \cdot \delta \vect{k}}{\abs{\vect{q}_n}^2}}\notag\\
+    &\approx \abs{\vect{q}_n} + \unitvec{q}_n \cdot \delta \vect{k} = \abs{\vect{q}_n} + \unitvec{q}_n \cdot \left(\vect{k} - \vect{q}_n\right)\notag\\
+    &= \unitvec{q}_n \cdot \vect{k}.
 \end{align}
-Then we obtain
+With this approximation, the inverse Fourier transform of \eqref{OpticalPumping:MeanFieldSeparatedPhotonEvolution} gives
 \begin{align}
-    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) &= -i \hbar c \unitvec{q}_n \cdot \nabla \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) - \left(\frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \unitvec{u}_{\lambda_n}^*(\vect{q}_n) \cdot \sum_{\{i,j'\} \in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
+    i \hbar \frac{\partial}{\partial t} \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) &= -i \hbar c \unitvec{q}_n \cdot \nabla \Phi_{\lambda_n, \vect{q}_n}(\vect{x}) - \left(\frac{\hbar \omega_{\vect{q}_n}}{2\varepsilon_0}\right)^{\frac{1}{2}} \unitvec{u}_{\lambda_n}^*(\vect{q}_n) \cdot \sum_{\{i,j'\} \in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x}). \label{OpticalPumping:PhotonFieldTransport}
 \end{align}
-Hooray.  We have made an approximation in here because we haven't correctly projected the atomic source term in the above equation.  However, the contributions will be $2 \vect{q}_n$ out of resonance, and so will average to zero over half a wavelength. Note that the above equation without the source term is the transport equation in the direction of ${\vect{q}_n}$ with speed $c$.  Next we turn it into a propagation equation for the electric field ${E}_{+,\vect{q}_n}$,
+In directly taking the inverse Fourier transform of \eqref{OpticalPumping:MeanFieldSeparatedPhotonEvolution} we have neglected to take account of the fact that only the wavenumbers $\vect{k}$ for which $\vect{k} \cdot \vect{q}_n > 0$ may contribute in \eqref{OpticalPumping:PhotonFieldTransport}, instead the contribution at all wavenumbers has been included.  These additional contributions will be $2 \vect{q}_n$ out of momentum-resonance, and will average to zero over half a wavelength.
+
+Using \eqref{OpticalPumping:ElectricFieldPhotonFieldRelationship} the photon field may be eliminated in favour of the electric field giving the equation of motion for the electric field to be
 \begin{align}
-    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla E_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x})
+    \frac{1}{c} \frac{\partial}{\partial t} E_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla E_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x}). \label{OpticalPumping:ElectricFieldEvolution}
 \end{align}
+This equation has the familiar form of a transport process in the $\unitvec{q}_n$ direction (at speed $c$) with a source term. The propagation of the electric field across the system occurs on a sufficiently short timescale that as seen by the atoms, the velocity is essentially infinite.  By separating the fast evolution of the electric and atomic fields at $e^{-i\omega t}$ from the slowly-varying envelopes, we will be able to neglect the finite propagation time of the electric field in \eqref{OpticalPumping:ElectricFieldEvolution} to obtain a set of algebraic equations for the electric field at a given time.  The next step in this process is to rotate away the fast terms... or whatever terminology we wish to use.  `frames' is probably a poor choice given the change in reference frame used later.
+
+This process occurs sufficiently quickly that  The reality is that the timescale for propagation of light across the system is 
 
 Next we need to move into appropriate rotating frames for all states.  That means including possible detunings. For the excited states, that's well-defined.  What about for the lower states too?  What is required in order to be able to go into these appropriate rotating frames is that all photons coupling to a given excited state all couple to essentially the same detuning.  This is guaranteed in our system because only one set of photons are supplied to the system.  The others are generated spontaneously.  The other way to go into an appropriate rotating frame is to define all detunings relative to an original level (but we still need consistency on all photons coupling a given level).  How does all of this mix with RF outcoupling and the associated detunings?
 
@@ -352,13 +356,13 @@ Rotate as $\Psi_{i} = \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}$, $\Psi_{
             &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x})  e^{-i (\omega_{j} - \Delta_j - (\omega_{i'} - \Delta_{i'}) + \omega_{\vect{q}_n})t}
         \end{split}\\
         \begin{split}
-          \frac{1}{c} \frac{\partial}{\partial t} \widetilde{E}_{+, \vect{q}_n} (\vect{x}) &= - \frac{\vect{q}_n}{\abs{\vect{q}_n}} \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x})\\
+          \frac{1}{c} \frac{\partial}{\partial t} \widetilde{E}_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x})\\
           &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i (\omega_{j'} - \Delta_{j'} -\omega_i + \Delta_i - \omega_{\vect{q}_n})t}
         \end{split}
     \end{align}
 \end{subequations}
 
-$\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall \; \{i, j'\} \in T_n$? 
+$\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall \; i, j', n : \{i, j'\} \in T_n$? 
 
 The frame transformation we wish to make is
 \begin{align}

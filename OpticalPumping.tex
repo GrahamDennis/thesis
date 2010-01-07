@@ -337,32 +337,46 @@ Using \eqref{OpticalPumping:ElectricFieldPhotonFieldRelationship} the photon fie
 \begin{align}
     \frac{1}{c} \frac{\partial}{\partial t} E_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla E_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \Psi^*_i(\vect{x}) \Psi_{j'}(\vect{x}). \label{OpticalPumping:ElectricFieldEvolution}
 \end{align}
-This equation has the familiar form of a transport process in the $\unitvec{q}_n$ direction (at speed $c$) with a source term. The propagation of the electric field across the system occurs on a sufficiently short timescale that as seen by the atoms, the velocity is essentially infinite.  By separating the fast evolution of the electric and atomic fields at $e^{-i\omega t}$ from the slowly-varying envelopes, we will be able to neglect the finite propagation time of the electric field in \eqref{OpticalPumping:ElectricFieldEvolution} to obtain a set of algebraic equations for the electric field at a given time.  The next step in this process is to rotate away the fast terms... or whatever terminology we wish to use.  `frames' is probably a poor choice given the change in reference frame used later.
+This equation has the familiar form of a transport process in the $\unitvec{q}_n$ direction (at speed $c$) with a source term. The propagation of the electric field across the system occurs on a sufficiently short timescale that as seen by the atoms, the velocity is essentially infinite.  By separating the fast phase rotation of the electric and atomic fields from the slowly-varying envelopes, it will become possible to neglect the finite propagation time of the electric field in \eqref{OpticalPumping:ElectricFieldEvolution} to obtain a set of algebraic equations for the electric field at a given time.  The next step in this process is to remove the fast phase rotation of these fields.
 
-This process occurs sufficiently quickly that  The reality is that the timescale for propagation of light across the system is 
+To remove the fast phase rotation of the electric and atomic envelopes, we define slowly-varying (temporally) fields marked with tildes as
+\begin{subequations}
+    \label{OpticalPumping:PhaseRotationDefinition}
+    \begin{align}
+        \Psi_i &= \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}, \\
+        \Psi_{i'} &= \widetilde{\Psi}_{i'} e^{-i (\omega_{i'} - \Delta_{i'}) t}, \\
+        E_{+, \vect{q}_n} &= \widetilde{E}_{+, \vect{q}_n} e^{-i \omega_{\vect{q}_n}t},
+    \end{align}
+\end{subequations}
+where $\omega_i$ (and $\omega_{i'}$) are the bare frequencies of the atomic levels, $\Delta_i$ (and $\Delta_{i'}$) are the detunings of those levels.  The definitions of these detunings are illustrated in \figureref{OpticalPumping:PhaseRotationDefinition}.
 
-Next we need to move into appropriate rotating frames for all states.  That means including possible detunings. For the excited states, that's well-defined.  What about for the lower states too?  What is required in order to be able to go into these appropriate rotating frames is that all photons coupling to a given excited state all couple to essentially the same detuning.  This is guaranteed in our system because only one set of photons are supplied to the system.  The others are generated spontaneously.  The other way to go into an appropriate rotating frame is to define all detunings relative to an original level (but we still need consistency on all photons coupling a given level).  How does all of this mix with RF outcoupling and the associated detunings?
+\begin{figure}
+    \centering
+    \includegraphics[width=6cm]{PhaseRotationDefinition}
+    \caption{Schematic level diagram illustrating the definitions of the detunings in \eqref{OpticalPumping:PhaseRotationDefinition}. The sign of all detunings illustrated are positive.}
+    \label{OpticalPumping:PhaseRotationDefinition}
+\end{figure}
 
-Rotate as $\Psi_{i} = \widetilde{\Psi}_i e^{-i (\omega_i - \Delta_i)t}$, $\Psi_{i'} = \widetilde{\Psi}_{i'} e^{-i (\omega_{i'} - \Delta_{i'})t}$, $E_{+,\vect{q}_n} = \widetilde{E}_{+, \vect{q}_n} e^{-i \omega_{\vect{q}_n}t}$. Spatial phase rotation for the electric fields? --- No.
-
+The equations of motion of the slowly-varying fields are
 \begin{subequations}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x})\\
-            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i (\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) - \omega_{\vect{q}_n})t}
+            i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x}) \\
+            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i \left[\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) - \omega_{\vect{q}_n}\right] t},
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_{i'}(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \frac{i\hbar \Gamma}{2} - \hbar \omega_{i'} + \hbar \Delta_{i'}\right) \widetilde{\Psi}_{i'}(\vect{x})\\
-            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x})  e^{-i (\omega_{j} - \Delta_j - (\omega_{i'} - \Delta_{i'}) + \omega_{\vect{q}_n})t}
+            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x})  e^{-i \left[\omega_{j} - \Delta_j - (\omega_{i'} - \Delta_{i'}) + \omega_{\vect{q}_n}\right]t},
         \end{split}\\
         \begin{split}
           \frac{1}{c} \frac{\partial}{\partial t} \widetilde{E}_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x})\\
-          &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i (\omega_{j'} - \Delta_{j'} -\omega_i + \Delta_i - \omega_{\vect{q}_n})t}
+          &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i \left[\omega_{j'} - \Delta_{j'} -(\omega_i - \Delta_i) - \omega_{\vect{q}_n}\right] t}.
         \end{split}
     \end{align}
 \end{subequations}
 
-$\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall \; i, j', n : \{i, j'\} \in T_n$? 
+FIXME: We need a substantial explanation here.  There are a bunch of requirements, if the state is initially occupied, the detuning must be zero (actually only a requirement when we make the adiabatic elimination, but might as well discuss it here); the photon energies must be consistent, \emph{i.e.} a given atomic state may only be occupied at a given energy. 
+All of the exponential terms are $1$ in our case as all of the photon energies are consistent, \emph{i.e.} $\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall \; i, j', n : \{i, j'\} \in T_n$. See \figureref{OpticalPumping:LevelDiagram}.
 
 The frame transformation we wish to make is
 \begin{align}

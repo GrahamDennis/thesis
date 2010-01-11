@@ -357,8 +357,9 @@ where $\omega_i$ (and $\omega_{i'}$) are the bare frequencies of the atomic leve
     \label{OpticalPumping:PhaseRotationDefinition}
 \end{figure}
 
-The equations of motion of the slowly-varying fields are
+The equations of motion for the slowly-varying fields are
 \begin{subequations}
+    \label{OpticalPumping:MeanFieldTemporallySlowlyVarying}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x}) \\
@@ -374,59 +375,67 @@ The equations of motion of the slowly-varying fields are
         \end{split}
     \end{align}
 \end{subequations}
-
-FIXME: We need a substantial explanation here.  There are a bunch of requirements, if the state is initially occupied, the detuning must be zero (actually only a requirement when we make the adiabatic elimination, but might as well discuss it here); the photon energies must be consistent, \emph{i.e.} a given atomic state may only be occupied at a given energy. 
-All of the exponential terms are $1$ in our case as all of the photon energies are consistent, \emph{i.e.} $\omega_{j'} - \Delta_{j'} - (\omega_i - \Delta_i) = \omega_{\vect{q}_n} \forall \; i, j', n : \{i, j'\} \in T_n$. See \figureref{OpticalPumping:LevelDiagram}.
-
-The frame transformation we wish to make is
+If the level detunings are chosen such that all optical fields couple resonantly between the `detuned levels' (dotted lines in \figureref{OpticalPumping:PhaseRotationDefinition}), the arguments of the exponential terms in \eqref{OpticalPumping:MeanFieldTemporallySlowlyVarying} will all be zero and the terms themselves will be equal to $1$.  Stated mathematically this requirement is
 \begin{align}
-  \vect{x}' &= \vect{x} \\
+    \big(\omega_{j'} - \Delta_{j'}\big) - \big(\omega_i - \Delta_i\big) &= \omega_{\vect{q}_n} \;\forall \; i, j', n : \left\{i, j'\right\} \in T_n.
+\end{align}
+This requirement is satisfied by the optical pumping scheme (see \figureref{OpticalPumping:LevelDiagram}) as the pumping laser defines the detunings of the $F'$ states relative to the $F=2$ states, and the $\sigma^+$ light generated on the $\ket{F=1, m_F=-1} \leftrightarrow \ket{F'=1, m_F=0}$ transition is formed spontaneously and will therefore be resonant with the transition from the (possibly detuned) $\ket{F'=1, m_F=0}$ state such that the overall two-photon process $\ket{F=2, m_F=0} \leftrightarrow \ket{F=1, m_F=-1}$ is resonant.
+
+With the evolution equations for the slowly-varying envelopes obtained, we may now work to eliminate effects on the propagation timescale of the electric fields.  To achieve this, we choose an arbitrary electric field $\widetilde{E}_{+, \vect{q}_n}$  and transform our coordinate system according to
+\begin{align}
+  \vect{x}' &= \vect{x}, \\
   t' &= t - \frac{1}{c} \unitvec{q}_n \cdot \vect{x}.
 \end{align}
-But we only make this transform on the electric fields, not the atomic fields.  This means that
+With this transformation, the spatial and temporal derivatives become
 \begin{align}
-  \frac{\partial}{\partial t} &= \frac{\partial }{\partial t'}\\
-  \nabla_{\vect{x}} &= \left(\nabla_{\vect{x}} t'\right) \frac{\partial }{\partial t'} + \nabla_{\vect{x}'}\\
-  &= - \frac{1}{c} \unitvec{q}_n\frac{\partial}{\partial t'} + \nabla_{\vect{x}'}
+  \frac{\partial}{\partial t} &= \frac{\partial }{\partial t'}, \\
+  \nabla_{\vect{x}} &= \left(\nabla_{\vect{x}} t'\right) \frac{\partial }{\partial t'} + \nabla_{\vect{x}'} \notag \\
+  &= - \frac{1}{c} \unitvec{q}_n\frac{\partial}{\partial t'} + \nabla_{\vect{x}'}.
 \end{align}
-This gives our equation for $\widetilde{E}_{+, \vect{q}_n}$ as
+
+In the primed coordinates, the propagation equation for $\widetilde{E}_{+, \vect{q}_n}$ is
 \begin{align}
+    \label{OpticalPumping:ElectricFieldSpatialPropagation}
   \begin{split}
     \unitvec{q}_n \cdot \nabla_{\vect{x}'} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t') &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t')\\
-    &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right)
+    &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right),
   \end{split}
 \end{align}
-
-If we define our spatial origin to be in the centre of the condensate, then $t(\vect{x}', t') \approx t'$ is a very good approximation.  To see just how good, consider that
+where $\widetilde{E}_{+, \vect{q}_n}$ is written as a function of $(\vect{x}', t')$, while the atomic fields are written as functions of $(\vect{x}, t)$.  Although the primed and unprimed time coordinates are not exactly equal, if the spatial origin is chosen to be in the centre of the condensate then $t(\vect{x}', t') \approx t'$ is a very good approximation.  We can estimate the size of the terms neglected by this approximation by considering the variation in the atomic fields over the time $t'-t$,
 \begin{align}
-    \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) &= \widetilde{\Psi}^*_i\left(\vect{x}', t' + \frac{1}{c} \unitvec{q}_n \cdot \vect{x} \right)\\
-    &\approx \widetilde{\Psi}^*_i(\vect{x}', t') \left(1 + i  \frac{\delta \omega}{c}\unitvec{q}_n \cdot \vect{x} \right)
+    \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) &= \widetilde{\Psi}^*_i\left(\vect{x}', t' + \frac{1}{c} \unitvec{q}_n \cdot \vect{x} \right), \notag\\
+    &\approx \widetilde{\Psi}^*_i(\vect{x}', t') \left(1 + i  \frac{\delta \omega}{c}\unitvec{q}_n \cdot \vect{x} \right),
 \end{align}
-
-This correction term is of the order of 
+where the atomic field $\widetilde{\Psi}_{i}$ is assumed to evolve in time as $e^{-i\, \delta\omega\, t}$ for sufficiently small times.  For a condensate of maximum spatial extent $\sim \unit[100]{\micro m}$ and an excitation frequency $\delta \omega\sim \unit[10^5]{rad\,s\textsuperscript{-1}}$ (of the order of the chemical potential; refer to the discussion at the end of \sectionref{Peaks:ElementaryExcitations}), this correction term is of the order of
 \begin{align}
-    \abs{\delta \widetilde{\Psi} / \widetilde{\Psi}} &\leq \frac{\unit[100]{\micro m} \times \unit[10^{5}]{rad\,s\textsuperscript{-1}}}{3 \times \unit[10^8]{m\,s\textsuperscript{-1}}} \approx 10^{-7}
+    \abs{\delta \widetilde{\Psi} / \widetilde{\Psi}} &\leq \frac{\unit[100]{\micro m} \times \unit[10^{5}]{rad\,s\textsuperscript{-1}}}{3 \times \unit[10^8]{m\,s\textsuperscript{-1}}} \approx 10^{-7}.
 \end{align}
-Although this is a zeroth-order approximation, it is as good as (or better than) many other first-order approximations that have been made earlier in the derivation.  A similar approximation needs to be made for $\widetilde{E}_{+, \vect{q}_n}(\vect{x}, t) \approx \widetilde{E}_{+, \vect{q}_n}(\vect{x}, t')$ with a similarly-sized correction.  These approximations made, the system becomes
+Although neglecting this correction term is a zeroth-order approximation, the term being neglected is sufficiently small to make this approximation as good as (or better than) many of the first-order approximations that are made elsewhere in this derivation.  A similar approximation needs to be made in the evolution equations for the atomic fields (written in the unprimed coordinate system), $\widetilde{E}_{+, \vect{q}_n}(\vect{x}, t) \approx \widetilde{E}_{+, \vect{q}_n}(\vect{x}, t')$ with a similarly-sized correction.  
+
+The overall effect of this change of coordinate system has been to neglect the temporal derivative in the evolution equation for the electric field mode $\widetilde{E}_{+, \vect{q}_n}$.  To the same degree of approximation, the temporal derivatives of all other electric field modes may also therefore be neglected.  These approximations made, the equations of motion for the system become
 \begin{subequations}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x})\\
-            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x})
+            &\relphantom{=} - \sum_{j',n} \vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}),
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_{i'}(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \frac{i\hbar \Gamma}{2} - \hbar \omega_{i'} + \hbar \Delta_{i'}\right) \widetilde{\Psi}_{i'}(\vect{x})\\
-            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x}) 
+            &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x}),
         \end{split}\\
-      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right)
+      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right).
     \end{align}
 \end{subequations}
+With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, this can be viewed as an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
 
-FIXME: Here we need a computational aside where we discuss how this system can be solved using cross-propagation, and how particular care must be taken in cases in which the optical fields do not all propagate in the same direction.  In this case the system of equations must be solved self-consistently.  The system has a few properties which help in this (namely slowly-varying) which enables self-consistent solutions to be found iteratively.
+After eliminating the light propagation timescale from the problem, the next fastest timescale is that of the excited atomic states $\widetilde{\Psi}_{i'}$.  The evolution of these states is dominated either by spontaneous decay at a rate $\Gamma = 2\pi \times \unit[5.9]{MHz}$ or by the detuning term (if the pumping laser is detuned by several linewidths).  As these frequencies are much higher than the slower atomic evolution we are interested in ($\sim\unit[10]{kHz}$), the excited states may be adiabatically eliminated.  
 
-At this point we may adiabatically eliminate the $\widetilde{\Psi}_{i'}(\vect{x})$ atomic excited states.  We do this by recognising that the $\hbar \omega_{i'}$ term cancels with the other energy terms in parenthesis giving
+
+
+
+We recognise that the $\hbar \omega_{i'}$ term cancels the other energy terms giving
 \begin{align}
-    \widetilde{\Psi}_{i'}(\vect{x}) &\approx \sum_{j, n} \frac{ \vect{d}_{i' j}\cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+, \vect{q}_n}(\vect{x}) \widetilde{\Psi}_j(\vect{x})}{\hbar \Delta_{i'} - \frac{i \hbar}{2}\Gamma}
+    \widetilde{\Psi}_{i'}(\vect{x}) &\approx \sum_{j, n} \frac{ \vect{d}_{i' j}\cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+, \vect{q}_n}(\vect{x}) \widetilde{\Psi}_j(\vect{x})}{\hbar \Delta_{i'} - \frac{i \hbar}{2}\Gamma}.
 \end{align}
 
 Substituting this back gives,

@@ -468,25 +468,29 @@ Steps remaining (should be discussed when we apply the model to the optical pump
 
 \begin{figure}
     \centering
-    \includegraphics[width=8cm]{LambdaModel}
-    \caption{Lambda model. FIXME: This is not a caption}
-    \label{OpticalPumping:LambdaModel}
+    \includegraphics[width=14cm]{OverlappingCondensateModel}
+    \caption{Overlapping condensate model. FIXME: This is not a caption}
+    \label{OpticalPumping:OverlappingCondensateModel}
 \end{figure}
 
 
 
+This simple model displays some interesting behaviour.  Note that the current simulations are out by various factors.  So they will of course need to be run again.
+
+Here we investigate a simple application of the pumping scheme to a system in which the source and lasing modes perfectly overlap.  Even in this minimal model, we see that multimode effects are important, but in certain limits the behaviour described by the single-mode model of \sectionref{OpticalPumping:SingleModeModel} is observed.
+
 Here we apply the multimode model \eqref{OpticalPumping:GeneralMultimodeModel} to the following scheme\dots
 
-For the 1D scheme presented in \figureref{OpticalPumping:LambdaModel},
+For the 1D scheme presented in \figureref{OpticalPumping:OverlappingCondensateModel} we may simplify the multimode equations \eqref{OpticalPumping:GeneralMultimodeModel} to
 \begin{subequations}
     \begin{align}
         i \hbar \frac{\partial}{\partial t} \Psi_1(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_1}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_1 - \hbar \frac{\Omega_1^* \Omega_2^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_2 \\
         i \hbar \frac{\partial}{\partial t} \Psi_2(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_2}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_2 - \hbar \frac{\Omega_2^* \Omega_1^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_1 \\
-        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_1 \Gamma \sigma_0 \frac{\Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}\\
-        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_2 \Gamma \sigma_0 \frac{\Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma}
+        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_1 \Gamma \sigma_0 \frac{\abs{\Psi_1}^2 \Omega_1 + \Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}\\
+        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_2 \Gamma \sigma_0 \frac{\abs{\Psi_2}^2 \Omega_2 + \Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma}
     \end{align}
 \end{subequations}
-where $\hbar \Omega_n = \vect{d}_{i j'} \cdot \unitvec{u}_{\lambda_n} \widetilde{E}_{+, \vect{q}_n}$, $\displaystyle \Gamma = \frac{\omega^3 d_\text{eff}^2}{3 \pi \epsilon_0 \hbar c^3}$, $\abs{\vect{d}_{ij'}} = f_{ij'} \abs{d_\text{eff}}^2$, $\sigma_0 = \frac{3 \lambda^2}{2 \pi}$, stuff.
+where $\hbar \Omega_n = \vect{d}_{i j'} \cdot \unitvec{u}_{\lambda_n} \widetilde{E}_{+, \vect{q}_n}$, $\displaystyle \Gamma = \frac{\omega^3 d_\text{eff}^2}{3 \pi \epsilon_0 \hbar c^3}$, $\abs{\vect{d}_{ij'}} = f_{ij'} \abs{d_\text{eff}}^2$, $\displaystyle\sigma_0 = \frac{3 \lambda^2}{2 \pi}$, $f_{ij'}$ is the fraction of atoms in the $j'$ state that spontaneously decay to the $i$ state.  If the two optical transitions in \figureref{OpticalPumping:OverlappingCondensateModel} are equally strong, $f_1 = f_2 = \frac{1}{2}$.
 
 \subsection{Atom laser model}
 

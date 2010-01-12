@@ -26,15 +26,15 @@ Previous work on light-BEC interactions. Rayleigh/Raman superradiance, EIT, CARL
 
 \begin{figure}
     \centering
-    \includegraphics[width=14cm]{LambdaModel}
-    \caption{FIXME: This is not a caption. Comparison of considered atom laser pumping scheme (a) and typical optical laser pumping scheme (b).\label{OpticalPumping:LambdaModel}}
+    \includegraphics[width=14cm]{AtomLaserVsOpticalLaser}
+    \caption{FIXME: This is not a caption. Comparison of considered atom laser pumping scheme (a) and typical optical laser pumping scheme (b).\label{OpticalPumping:AtomLaserVsOpticalLaser}}
 \end{figure}
 
-The optical pumping process under investigation in this chapter is illustrated in \figureref{OpticalPumping:LambdaModel}(a).  In this process atoms in the source mode are driven by a laser into an excited state from which they can decay into the lasing mode (the condensate).  Although there is no laser driving this second transition ($\ket{3}\leftrightarrow\ket{2}$), the decay of atoms into the lasing mode is not spontaneous emission in the usual sense.  The emission process is \emph{atomically}-stimulated by the large occupation of the lasing mode in the same way that the transition may be \emph{optically}-stimulated even in the absence of any population in the atomic state into which the atom decays.
+The optical pumping process under investigation in this chapter is illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).  In this process atoms in the source mode are driven by a laser into an excited state from which they can decay into the lasing mode (the condensate).  Although there is no laser driving this second transition ($\ket{3}\leftrightarrow\ket{2}$), the decay of atoms into the lasing mode is not spontaneous emission in the usual sense.  The emission process is \emph{atomically}-stimulated by the large occupation of the lasing mode in the same way that the transition may be \emph{optically}-stimulated even in the absence of any population in the atomic state into which the atom decays.
 
-The final decay of an atom into the lasing mode in \figureref{OpticalPumping:LambdaModel} resembles standard \emph{optical} laser schemes [see \figureref{OpticalPumping:LambdaModel}(b)] in which the roles of atoms and light are reversed.  In an optical laser an atom in the excited state is stimulated to emit into the ground state by the resonant photons in the laser cavity.  Once the atom has emitted, it decays rapidly into other internal states with rate $\gamma$ significantly limiting reabsorption from the $\ket{g}$ state.  A similar process occurs in the proposed optical pumping scheme in which the photon emitted as the atom decays  leaves the system rapidly preventing reabsorption.  The loss of photons from the system is represented by the decay of the optical mode with rate $\gamma$ in \figureref{OpticalPumping:LambdaModel}(a).
+The final decay of an atom into the lasing mode in \figureref{OpticalPumping:AtomLaserVsOpticalLaser} resembles standard \emph{optical} laser schemes [see \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(b)] in which the roles of atoms and light are reversed.  In an optical laser an atom in the excited state is stimulated to emit into the ground state by the resonant photons in the laser cavity.  Once the atom has emitted, it decays rapidly into other internal states with rate $\gamma$ significantly limiting reabsorption from the $\ket{g}$ state.  A similar process occurs in the proposed optical pumping scheme in which the photon emitted as the atom decays  leaves the system rapidly preventing reabsorption.  The loss of photons from the system is represented by the decay of the optical mode with rate $\gamma$ in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).
 
-This similarity between the proposed atom laser pumping mechanism and the usual optical laser pumping mechanism is clearly illustrated by considering the Hamiltonian coupling the excited and ground atomic states in \figureref{OpticalPumping:LambdaModel}
+This similarity between the proposed atom laser pumping mechanism and the usual optical laser pumping mechanism is clearly illustrated by considering the Hamiltonian coupling the excited and ground atomic states in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}
 \begin{align}
     \hat{H} &= \hbar \epsilon \left(\hat{a}_e^\dagger \hat{a}_g \hat{a}_\text{ph} + \hat{a}_g^\dagger \hat{a}_\text{ph}^\dagger \hat{a}_e  \right),
     \label{OpticalPumping:TwoLevelAtomHamiltonian}
@@ -51,13 +51,13 @@ This emission process can therefore be stimulated either by photons ($N_\text{ph
 \end{align}
 It is for this reason that it is desirable in an optical laser to have $N_g \approx 0$, and in the proposed atom laser pumping scheme to have $N_\text{ph} \approx 0$.
 
-Atom laser pumping schemes of the form of that illustrated in \figureref{OpticalPumping:LambdaModel}(a) have been proposed before~\citep{Olshanii:1996,Janicke:1996,Spreeuw:1995,Cirac:1996rr,Cirac:1996,Santos:2000,Castin:1998,Cirac:1994,Vengalattore:2003,Santos:2001ve,Wolf:2000,Santos:1999qf} for the production of BEC without the use of collisional evaporation and its consequent losses.  The main problem that they all seek to address is that of reabsorption of photons spontaneously emitted when the atom in state $\ket{3}$ decays to the $\ket{2}$ state, but not to the lasing mode.  This emitted photon will be resonant with the lasing mode and may be scattered several times before finally leaving the condensate.  A single such spontaneously emitted photon can cause significant heating of a condensate as the single photon recoil energy can be as large as or greater than the chemical potential of the condensate.
+Atom laser pumping schemes of the form of that illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a) have been proposed before~\citep{Olshanii:1996,Janicke:1996,Spreeuw:1995,Cirac:1996rr,Cirac:1996,Santos:2000,Castin:1998,Cirac:1994,Vengalattore:2003,Santos:2001ve,Wolf:2000,Santos:1999qf} for the production of BEC without the use of collisional evaporation and its consequent losses.  The main problem that they all seek to address is that of reabsorption of photons spontaneously emitted when the atom in state $\ket{3}$ decays to the $\ket{2}$ state, but not to the lasing mode.  This emitted photon will be resonant with the lasing mode and may be scattered several times before finally leaving the condensate.  A single such spontaneously emitted photon can cause significant heating of a condensate as the single photon recoil energy can be as large as or greater than the chemical potential of the condensate.
 
 One proposed method~\citep{Castin:1998,Vengalattore:2003} for reducing the heating uses a purely geometric solution: if a condensate is made sufficiently narrow in one or more dimensions such that a photon emitted in one of those directions is negligibly likely to be reabsorbed, the overall probability for reabsorption will also be reduced.  While this method may be appropriate for the initial formation of BEC, it is impractical for a large BEC as the trap deformation necessary to reach the required regime is extreme.  For a \nucl{87}{}{Rb} condensate of $N= 5\times 10^5$ atoms with trapping frequencies of $\omega_x = \omega_y = \unit[2\pi \times 128]{Hz}$, $\omega_z = \unit[12.8]{Hz}$, the mean-free path in the centre of the condensate for a resonant photon on the cycling transition ($\lambda = \unit[780]{nm}$) is $1/(n \sigma) = \unit[16]{nm}$ where $n$ is the peak condensate density and $\sigma = 3 \lambda^2/2 \pi$ is the atomic scattering cross-section.
 
-Another possibility for reducing reabsorption that works well in optical lattices is to operate in the \emph{festina lente} regime~\citep{Wolf:2000,Santos:1999qf,Cirac:1996,Castin:1998} in which the energy levels of the trap are sufficiently separated such that a photon emitted when an atom decays into a particular trap level is only resonant with atoms in that level (and those levels degenerate with it).  This prevents the occurrence of `dangerous' processes in which an excited atom decays into a non-condensate level with the emitted photon being absorbed by the condensate.  In the case of resonant optical pumping light ($\Delta = 0$ in \figureref{OpticalPumping:LambdaModel}(a)), the \emph{festina lente} regime requires that $\omega_\text{min} \gg \Gamma$  where $\omega_\text{min}$ is the minimum of the magnetic trapping frequencies.  Strictly, the \emph{festina lente} regime has only been investigated in the absence of \emph{s}-wave scattering interactions, however one would expect that in the presence of \emph{s}-wave scattering the trap frequency energy scale would simply be replaced by the energy of the relevant Bogoliubov excitation (refer to \sectionref{Peaks:ElementaryExcitations}).  Regardless, the \emph{festina lente} regime is impractical to achieve in alkali gases like \nucl{87}{}{Rb} as the relevant decay rate is $\Gamma = \unit[2\pi\times 5.9]{MHz}$, which is much larger than typical trap frequencies ($\omega \sim \unit[2\pi \times 100]{Hz}$) and condensate excitations ($\mu/\hbar \sim \unit[2\pi \times 10]{kHz}$).
+Another possibility for reducing reabsorption that works well in optical lattices is to operate in the \emph{festina lente} regime~\citep{Wolf:2000,Santos:1999qf,Cirac:1996,Castin:1998} in which the energy levels of the trap are sufficiently separated such that a photon emitted when an atom decays into a particular trap level is only resonant with atoms in that level (and those levels degenerate with it).  This prevents the occurrence of `dangerous' processes in which an excited atom decays into a non-condensate level with the emitted photon being absorbed by the condensate.  In the case of resonant optical pumping light ($\Delta = 0$ in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a)), the \emph{festina lente} regime requires that $\omega_\text{min} \gg \Gamma$  where $\omega_\text{min}$ is the minimum of the magnetic trapping frequencies.  Strictly, the \emph{festina lente} regime has only been investigated in the absence of \emph{s}-wave scattering interactions, however one would expect that in the presence of \emph{s}-wave scattering the trap frequency energy scale would simply be replaced by the energy of the relevant Bogoliubov excitation (refer to \sectionref{Peaks:ElementaryExcitations}).  Regardless, the \emph{festina lente} regime is impractical to achieve in alkali gases like \nucl{87}{}{Rb} as the relevant decay rate is $\Gamma = \unit[2\pi\times 5.9]{MHz}$, which is much larger than typical trap frequencies ($\omega \sim \unit[2\pi \times 100]{Hz}$) and condensate excitations ($\mu/\hbar \sim \unit[2\pi \times 10]{kHz}$).
 
-A third possibility for reducing reabsorption is to operate in the \emph{boson accumulation regime} (BAR)~\citep{Cirac:1996rr,Floegel:2001} in which an atom in the excited state is significantly more likely to decay into the condensate mode than into all other modes.  In this limit it can be shown that absorption of emitted photons by atoms not in the condensate mode can be neglected.  It is in the BAR that we wish to operate our proposed pumping mechanism of \figureref{OpticalPumping:LambdaModel}(a).  
+A third possibility for reducing reabsorption is to operate in the \emph{boson accumulation regime} (BAR)~\citep{Cirac:1996rr,Floegel:2001} in which an atom in the excited state is significantly more likely to decay into the condensate mode than into all other modes.  In this limit it can be shown that absorption of emitted photons by atoms not in the condensate mode can be neglected.  It is in the BAR that we wish to operate our proposed pumping mechanism of \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).  
 
 Up to this point, the source mode was entirely arbitrary; without consideration of reabsorption the proposed pumping process would work equally well for coherent or thermal states in the source mode.  As the optical transition between the excited atomic state and the lasing mode is not driven by a laser, the phase of the photons emitted is determined by the relative phase between the source and lasing modes; the direction of population transfer does not depend on the phase difference between these two modes. However the requirement that excited atoms be significantly more likely to decay into the condensate mode than to any other mode places a stringent requirement on the source mode of the pumping mechanism.  For this requirement to be satisfied, the momentum width of the source atom distribution cannot be significantly larger than the momentum width of the condensate.  If this were not the case a significant fraction of the atoms would not be momentum-resonant with the condensate under the pumping process and will therefore not be in the boson accumulation regime.  These atoms would be able to reabsorb spontaneously emitted photons causing the reabsorption problem previously discussed.  For an atomic distribution to have a momentum width comparable to that of the target condensate, the atoms must either be condensed or if they are thermal, be trapped in a significantly weaker trap than the target condensate mode and have a temperature below the condensation temperature in the tighter trap.  
 
@@ -126,13 +126,13 @@ A second experiment was also performed simultaneously pumping the laser-mode BEC
 
 The continuous pumping experiment just described was designed to transfer $2 \hbar k$ of momentum to the falling pump atoms (by absorbing a photon of momentum $\hbar k$ going up and then emitting a photon of similar momentum directed downwards) as they are transferred to the laser-mode condensate.  However, there is a second way for the pump atoms to be momentum-resonant with the laser-mode condensate.  If the outcoupling surface for the upper condensate is towards the lower edge of the condensate the outcoupled atoms will be in close proximity to the laser-mode condensate immediately below due to the slight spatial overlap.  These recently outcoupled atoms will have almost no momentum and will be able to absorb a $\pi$-polarised photon with momentum $\hbar k$ upwards and emit a $\sigma^+$-polarised photon of similar momentum also directed upwards, decaying into the lower laser-mode condensate with no net momentum transfer.
 
-These two different processes are examined in greater detail theoretically in \sectionref{OpticalPumping:MultimodeModel}, however we begin our theoretical analysis of the experiment and the pumping mechanism more generally with a simple single-mode model of the process illustrated in \figureref{OpticalPumping:LambdaModel}(a).
+These two different processes are examined in greater detail theoretically in \sectionref{OpticalPumping:MultimodeModel}, however we begin our theoretical analysis of the experiment and the pumping mechanism more generally with a simple single-mode model of the process illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).
 
 
 \section{Simple single-mode model}
 \label{OpticalPumping:SingleModeModel}
 
-We begin our theoretical investigation of the pumping mechanism behind the previously-described experiment by considering the simplest-possible model, a single-mode mean-field approximation to the process illustrated in \figureref{OpticalPumping:LambdaModel}(a).  The equations of motion for this model are
+We begin our theoretical investigation of the pumping mechanism behind the previously-described experiment by considering the simplest-possible model, a single-mode mean-field approximation to the process illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).  The equations of motion for this model are
 \begin{subequations}
     \label{OpticalPumping:SingleModeModel}
     \begin{align}
@@ -348,7 +348,7 @@ To remove the fast phase rotation of the electric and atomic envelopes, we defin
         E_{+, \vect{q}_n} &= \widetilde{E}_{+, \vect{q}_n} e^{-i \omega_{\vect{q}_n}t},
     \end{align}
 \end{subequations}
-where $\omega_i$ (and $\omega_{i'}$) are the bare frequencies of the atomic levels, $\Delta_i$ (and $\Delta_{i'}$) are the detunings of those levels.  The definitions of these detunings are illustrated in \figureref{OpticalPumping:PhaseRotationDefinition}.
+where $\omega_i$ (and $\omega_{i'}$) are the frequencies of the atomic levels (including mean-field shifts), $\Delta_i$ (and $\Delta_{i'}$) are the detunings of those levels.  The definitions of these detunings are illustrated in \figureref{OpticalPumping:PhaseRotationDefinition}.
 
 \begin{figure}
     \centering
@@ -371,7 +371,7 @@ The equations of motion for the slowly-varying fields are
         \end{split}\\
         \begin{split}
           \frac{1}{c} \frac{\partial}{\partial t} \widetilde{E}_{+, \vect{q}_n} (\vect{x}) &= - \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x})\\
-          &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i \left[\omega_{j'} - \Delta_{j'} -(\omega_i - \Delta_i) - \omega_{\vect{q}_n}\right] t}.
+          &\relphantom{=} + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_{j'}(\vect{x}) e^{-i \left[\omega_{j'} - \Delta_{j'} -(\omega_i - \Delta_i) - \omega_{\vect{q}_n}\right] t}.
         \end{split}
     \end{align}
 \end{subequations}
@@ -398,7 +398,7 @@ In the primed coordinates, the propagation equation for $\widetilde{E}_{+, \vect
     \label{OpticalPumping:ElectricFieldSpatialPropagation}
   \begin{split}
     \unitvec{q}_n \cdot \nabla_{\vect{x}'} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t') &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}', t')\\
-    &\relphantom{=} + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right),
+    &\relphantom{=} + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i\left(\vect{x}', t(\vect{x}', t')\right) \widetilde{\Psi}_{j'}\left(\vect{x}', t(\vect{x}', t')\right),
   \end{split}
 \end{align}
 where $\widetilde{E}_{+, \vect{q}_n}$ is written as a function of $(\vect{x}', t')$, while the atomic fields are written as functions of $(\vect{x}, t)$.  Although the primed and unprimed time coordinates are not exactly equal, if the spatial origin is chosen to be in the centre of the condensate then $t(\vect{x}', t') \approx t'$ is a very good approximation.  We can estimate the size of the terms neglected by this approximation by considering the variation in the atomic fields over the time $t'-t$,
@@ -422,110 +422,71 @@ The overall effect of this change of coordinate system has been to neglect the t
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_{i'}(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \frac{i\hbar \Gamma}{2} - \hbar \omega_{i'} + \hbar \Delta_{i'}\right) \widetilde{\Psi}_{i'}(\vect{x})\\
             &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x}),
-        \end{split}\\
-      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\hbar \abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \frac{\vect{d}_{ij'}}{\hbar} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right).
+        \end{split} \label{OpticalPumping:AtomicExcitedStateEvolution}\\
+      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right).
     \end{align}
 \end{subequations}
 With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, this can be viewed as an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
 
 After eliminating the light propagation timescale from the problem, the next fastest timescale is that of the excited atomic states $\widetilde{\Psi}_{i'}$.  The evolution of these states is dominated either by spontaneous decay at a rate $\Gamma = 2\pi \times \unit[5.9]{MHz}$ or by the detuning term (if the pumping laser is detuned by several linewidths).  As these frequencies are much higher than the slower atomic evolution we are interested in ($\sim\unit[10]{kHz}$), the excited states may be adiabatically eliminated.  
 
-
-
-
-We recognise that the $\hbar \omega_{i'}$ term cancels the other energy terms giving
+To adiabatically eliminate the excited atomic states, we first recognise that the $\hbar \omega_{i'}$ term in \eqref{OpticalPumping:AtomicExcitedStateEvolution} will approximately balance the kinetic, potential and mean-field terms.  With this cancellation made, the adiabatic elimination of the excited atomic states can be made by setting the temporal derivative to zero yielding
 \begin{align}
     \widetilde{\Psi}_{i'}(\vect{x}) &\approx \sum_{j, n} \frac{ \vect{d}_{i' j}\cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+, \vect{q}_n}(\vect{x}) \widetilde{\Psi}_j(\vect{x})}{\hbar \Delta_{i'} - \frac{i \hbar}{2}\Gamma}.
 \end{align}
-
-Substituting this back gives,
+Substituting this expression back into the remaining evolution equations gives
 \begin{subequations}
+    \label{OpticalPumping:GeneralMultimodeModel}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x})\\
-            &\relphantom{=} - \sum_{\substack{j',n\\ l,m}}  \frac{ \left[\vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \right]\left[\vect{d}_{j'l} \cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma} \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{E}^{\phantom{*}}_{+, \vect{q}_m}(\vect{x}) \widetilde{\Psi}_{l}(\vect{x})
+            &\relphantom{=} - \sum_{\substack{j',n\\ l,m}}  \frac{ \left[\vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \right]\left[\vect{d}_{j'l} \cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma} \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{E}^{\phantom{*}}_{+, \vect{q}_m}(\vect{x}) \widetilde{\Psi}_{l}(\vect{x}),
         \end{split}\\
         \begin{split}
             \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) \\
-            &\relphantom{=} + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \sum_{\substack{\{i,j'\}\in T_n\\ l, m}} \frac{\left[\vect{d}_{ij'}\cdot\unitvec{u}^*_{\lambda_n}(\vect{q}_n)\right] \left[\vect{d}_{j' l}\cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma}  \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_l(\vect{x}) \widetilde{E}_{+, \vect{q}_m}(\vect{x})
+            &\relphantom{=} + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \sum_{\substack{\{i,j'\}\in T_n\\ l, m}} \frac{\left[\vect{d}_{ij'}\cdot\unitvec{u}^*_{\lambda_n}(\vect{q}_n)\right] \left[\vect{d}_{j' l}\cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma}  \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_l(\vect{x}) \widetilde{E}_{+, \vect{q}_m}(\vect{x}).
         \end{split}
     \end{align}
 \end{subequations}
+This set of equations represents the basic multimode model that will be used in the remainder of this chapter.  This scheme can be made more concrete by applying it to a specific level scheme, but these equations are the fundamental model.
+
+FIXME: Probably need a little more discussion of this model, but that's it.
+
+\parasep
+
+Let us now summarise the approximations and the regimes of validity of the model \eqref{OpticalPumping:GeneralMultimodeModel}.
 
 And we are just about done now.  Write out some polarisation vectors, and then that's it.  We do it all in 1D... oh crap. I forgot about that bit.  Deal with that bit later. This is the full 3D model, then consider 1D systems, then apply the other stuff.
 
-Now we just need to summarise the approximations made in the derivation, and maybe draw a diagram or something.
-
-
-If everything is hunky-dory, then we can approximate $t(\vect{x}', t') \approx t'$, similarly elsewhere, then we make adiabatically eliminate the excited states.  I fear that there is a self-consistency requirement in here that we are approximating away.  I fear that despite the terms involved being `small', they can have a significant effect due to the way in which they appear.  Nevertheless, approximate we must.
-
-
-Then we do a frame transform for each $\vect{q}_n$.  Really only works for one... how can we justify this for each and every direction (in our case, just two).
-
-I can't say anything about ${\pi\slashed{\pi}}\bar{\pi}$ We need to be able to separate the optical field equation of motion.  I suspect that means that we need to assign $\left(i, j\right)$ pairs to $\vect{q}_i$ values.  There is also a question about sign... i.e. what is the distinction between $\pm \vect{q}_i$?
-
-
-
-Steps remaining:
+Steps remaining (should be discussed when we apply the model to the optical pumping experiment):
 \begin{itemize}
     \item 1D
-    \item Polarisation?? --- Not quite sure yet how to treat this.
+    \item Polarisation --- atomic vs. optical ($\unitvec{u}_{\pm1} = \frac{1}{\sqrt{2}}\left(\unitvec{x} \pm i \unitvec{y}\right)$, $\unitvec{u}_0 = \unitvec{z}$).
 \end{itemize}
 
-Hooray.  Next we separate the electric field and apply the SVE approximation. So we then have a bunch of $\Phi_{\vect{k}_0,\lambda}(\vect{k})$'s, each centred around a $\vect{k}_0$. At this point we approximate the $\omega_{\vect{k}}\approx \omega_{\vect{k}_0}$ also the time and phase variation must be removed at this point, requiring the removal of appropriate terms from the atomic fields.  Then we reduce to 1D, allowing us to inverse Fourier transform the $\Phi_{\vect{k}_0, \lambda}(\vect{k})$.  Finally we neglect retardation effects to remove the time derivatives.  Then we have our 1D multimode Maxwell-Schrödinger equations.  Oh, and we need to re-introduce loss.  Then we can adiabatically eliminate the excited states to obtain our model of the system.  As if that is not complicated.
-
-This spontaneous emission process can be approximated by including the decay of the excited levels in a 
-
-This spontaneous emission process is well-described
-
-
-This spontaneous emission process is well-described by the 
-
-
-
-To approximate this system we will treat the electric field as having a finite number of highly-occupied contributions with the remaining electric field modes causing the spontaneous decay of all excited atomic levels.  The spontaneous decay will be introduced in the usual way at a later stage; we continue focusing on the photon modes.
-
-
-
-The multimode model we use in this chapter to describe the interaction of the BEC with the optical fields is similar to the Maxwell-Schrödinger equations \citep{Zobay:2005,Zobay:2006}, however we pursue a different derivation here beginning with / starting from the Hamiltonian for the system.
-
-
-from consideration o the Hamiltonian describing the atoms, light and their interaction.  Perhaps a different lead-in.
-
-The multimode model describing the interaction of atoms and light 
-
-
-A multimode model for the pumping mechanism considered in this chapter can be obtained by consideration of the Hamiltonian describing the atoms, light and their interaction.
-
-
-
-
-A multimode model for the pumping mechanism considered in this chapter can be obtained by consideration of the Hamiltonian describing the system dynamics.  
-
-
-
-Here we need to describe the general system of equations, the Maxwell-Schrödinger equations.  Describe how they are solved, and then apply them to various systems. Screw the usual method, let's go from the Hamiltonian:
-
-\begin{align}
-    \begin{split}
-        \hat{H} &= \sum_j \int d \vect{x}\, \hat{\Psi}_j^\dagger(\vect{x}) \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_j(\vect{x}) \right] \hat{\Psi}_j(\vect{x}) + \sum_\lambda \int d \vect{k}\, \hbar c \abs{\vect{k}} \hat{\Phi}_\lambda^\dagger(\vect{k}) \hat{\Phi}_\lambda(\vect{k}) \\
-        &\relphantom{=}- \int d \vect{x}\, \hat{\vect{d}}(\vect{x}) \cdot \hat{\vect{E}}(\vect{x})
-    \end{split}
-\end{align}
-
-\begin{align}
-    \hat{\vect{E}}(\vect{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \left[\unitvec{u}_\lambda(\vect{k}) \left(\frac{\hbar \omega_{\vect{k}}}{2\varepsilon_0} \right)^{\frac{1}{2}} \hat{\Phi}_\lambda(\vect{k}) e^{i \vect{k} \cdot \vect{x}} + \text{h.c.}\right],
-\end{align}
-where $\unitvec{u}_\lambda(\vect{k})$ is a unit vector for the corresponding polarisation, $\hat{\Phi}_\lambda(\vect{k})$ is the photon annihilation operator in momentum space for the $\lambda$ polarisation, $\lambda = \pm 1$.
-
-It is important to note that the above Hamiltonian essentially retains spontaneous emission.
-
-We can approximate the above expression in the slowly-varying envelope (SVE) approximation
-\begin{align}
-    \hat{\vect{E}}(\vect{x}) &\approx \sum_\lambda \frac{1}{(2\pi)^{3/2}} \left(\frac{\hbar k_\gamma c}{2\varepsilon_0} \right)^{\frac{1}{2}} \int d \vect{k}\, \left[\unitvec{u}_\lambda \hat{\Phi}_\lambda(\vect{k}) e^{i \vect{k} \cdot \vect{x}} + \text{h.c.}\right],
-\end{align}
-
 \subsection{Two overlapping condensates model}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=8cm]{LambdaModel}
+    \caption{Lambda model. FIXME: This is not a caption}
+    \label{OpticalPumping:LambdaModel}
+\end{figure}
+
+
+
+Here we apply the multimode model \eqref{OpticalPumping:GeneralMultimodeModel} to the following scheme\dots
+
+For the 1D scheme presented in \figureref{OpticalPumping:LambdaModel},
+\begin{subequations}
+    \begin{align}
+        i \hbar \frac{\partial}{\partial t} \Psi_1(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_1}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_1 - \hbar \frac{\Omega_1^* \Omega_2^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_2 \\
+        i \hbar \frac{\partial}{\partial t} \Psi_2(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_2}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_2 - \hbar \frac{\Omega_2^* \Omega_1^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_1 \\
+        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_1 \Gamma \sigma_0 \frac{\Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}\\
+        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_2 \Gamma \sigma_0 \frac{\Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma}
+    \end{align}
+\end{subequations}
+where $\hbar \Omega_n = \vect{d}_{i j'} \cdot \unitvec{u}_{\lambda_n} \widetilde{E}_{+, \vect{q}_n}$, $\displaystyle \Gamma = \frac{\omega^3 d_\text{eff}^2}{3 \pi \epsilon_0 \hbar c^3}$, $\abs{\vect{d}_{ij'}} = f_{ij'} \abs{d_\text{eff}}^2$, $\sigma_0 = \frac{3 \lambda^2}{2 \pi}$, stuff.
 
 \subsection{Atom laser model}
 

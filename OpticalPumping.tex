@@ -234,7 +234,7 @@ where $\unitvec{u}_\lambda(\vect{k})$ is the electric polarisation unit vector f
 
 The Hamiltonian \eqref{OpticalPumping:AtomLightHamiltonian} describes the full dynamics of the system including the spontaneous decay of excited atomic levels.  From this complete description of the system we wish to obtain a simplified model with which we can investigate the behaviour of the experiment described in \sectionref{OpticalPumping:ContinuousExperiment}, and the underlying pumping mechanism more generally.  
 
-The first simplification we will make is to assume that all atomic and optical modes are coherent states, \emph{i.e.} the mean-field approximation.  While this approximation is justified for the condensed atomic fields and the strongly-occupied parts of the optical field (due to the pumping laser and stimulated emission into the lasing BEC), the vacuum fluctuations responsible for spontaneous emission are necessarily neglected by any mean-field model.  The effect of spontaneous emission may be partially included by adding a decay term for the excited atomic levels, however this necessarily neglects the effect of atoms that have undergone spontaneous emission.  While some of these atoms will decay into internal atomic states that are dark to the optical pumping laser and photons emitted by stimulated emission, others will decay into the same internal atomic level as the target condensate, however with non-zero momentum.  In this case, these atoms will be able to absorb photons emitted when atoms are stimulated to emit into the lasing condensate and the photon emitted when they decayed could also be absorbed by atoms in the lasing condensate.  Both of these processes are neglected by this treatment of spontaneous emission.  The effect of this approximation is discussed further in \sectionref{OpticalPumping:Discussion}\footnote{FIXME: Cross-ref to unwritten content. Check at a later date.}.
+The first simplification we will make is to assume that all atomic and optical modes are coherent states, \emph{i.e.} the mean-field approximation.  While this approximation is justified for the condensed atomic fields and the strongly-occupied parts of the optical field (due to the pumping laser and stimulated emission into the lasing BEC), the vacuum fluctuations responsible for spontaneous emission are necessarily neglected by any mean-field model.  The effect of spontaneous emission may be partially included by adding a decay term for the excited atomic levels, however this necessarily neglects the effect of atoms that have undergone spontaneous emission.  While some of these atoms will decay into internal atomic states that are dark to both the optical pumping laser and photons emitted by stimulated emission, others will decay into the same internal atomic level as the target condensate, however with non-zero momentum.  These decays can cause heating if the photon they emit is absorbed by the lasing condensate as some fraction of the atoms that reabsorb these photons will not decay back into the lasing condensate. This process is neglected by this treatment of spontaneous emission.  The effect of this approximation is discussed further in \sectionref{OpticalPumping:Discussion}\footnote{FIXME: Cross-ref to unwritten content. Check at a later date.}.
 
 The semiclassical mean-field model for this system is readily obtained from the Heisenberg evolution equations written in normal order,
 \begin{subequations}
@@ -417,10 +417,10 @@ The overall effect of this change of coordinate system has been to neglect the t
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_{i'}(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_{i'}(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \frac{i\hbar \Gamma}{2} - \hbar \omega_{i'} + \hbar \Delta_{i'}\right) \widetilde{\Psi}_{i'}(\vect{x})\\
             &\relphantom{=} - \sum_{j,n} \vect{d}_{i'j} \cdot \unitvec{u}_{\lambda_n}(\vect{q}_n) \widetilde{E}_{+,\vect{q}_n}(\vect{x}) \widetilde{\Psi}_{j}(\vect{x}),
         \end{split} \label{OpticalPumping:AtomicExcitedStateEvolution}\\
-      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right).
+      \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right),
     \end{align}
 \end{subequations}
-With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, this can be viewed as an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
+where boundary values for the $\widetilde{E}_{+, \vect{q}_n}$ over a plane perpendicular to $\unitvec{q}_n$ must be specified to complete the system of equations.  With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, this can be viewed as an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
 
 After eliminating the light propagation timescale from the problem, the next fastest timescale is that of the excited atomic states $\widetilde{\Psi}_{i'}$.  The evolution of these states is dominated either by spontaneous decay at a rate $\Gamma = 2\pi \times \unit[5.9]{MHz}$ or by the detuning term (if the pumping laser is detuned by several linewidths).  As these frequencies are much higher than the slower atomic evolution we are interested in ($\sim\unit[10]{kHz}$), the excited states may be adiabatically eliminated.  
 
@@ -458,33 +458,77 @@ Steps remaining (should be discussed when we apply the model to the optical pump
     \item Polarisation --- atomic vs. optical ($\unitvec{u}_{\pm1} = \frac{1}{\sqrt{2}}\left(\unitvec{x} \pm i \unitvec{y}\right)$, $\unitvec{u}_0 = \unitvec{z}$).
 \end{itemize}
 
+In the following sections the multimode pumping model \eqref{OpticalPumping:GeneralMultimodeModel} will be applied to some idealised systems to further investigate the pumping mechanism before applying the model to the pumping experiment itself.
+
 \subsection{Two overlapping condensates model}
 
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{OverlappingCondensateModel}
-    \caption{Overlapping condensate model. When the `$+$' sign is chosen in \eqref{OpticalPumping:OverlappingCondensates:Omega2}, the optical field $\Omega_2$ propagates from the left [marked with $(+)$], while if the `$-$' sign is chosen it will propagate from the right [marked with $(-)$]. FIXME: This is still not a caption.}
+    \caption{Overlapping condensate model. When the `$+$' sign is chosen in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2}, the optical field $\Omega_2$ propagates to the right [marked with $(+)$], while if the `$-$' sign is chosen it will propagate to the left [marked with $(-)$]. FIXME: This is still not a caption.}
     \label{OpticalPumping:OverlappingCondensateModel}
 \end{figure}
 
-
-
-This simple model displays some interesting behaviour.  Note that the current simulations are out by various factors.  So they will of course need to be run again.
-
-Here we investigate a simple application of the pumping scheme to a system in which the source and lasing modes perfectly overlap.  Even in this minimal model, we see that multimode effects are important, but in certain limits the behaviour described by the single-mode model of \sectionref{OpticalPumping:SingleModeModel} is observed.
-
-Here we apply the multimode model \eqref{OpticalPumping:GeneralMultimodeModel} to the following scheme\dots
+The first idealised (multimode) pumping model to be considered is that illustrated in \figureref{OpticalPumping:OverlappingCondensateModel} in which the source and lasing modes are the two ground states ($\ket{1}$ and $\ket{2}$ respectively) of atoms with a $\Lambda$ level scheme.  Light on the $\ket{1} \leftrightarrow \ket{3}$ transition is applied with detuning $\Delta$ from the left with an initial Rabi frequency of $\Omega_1(-\infty) = \Omega_{1, 0}$.  Light on the $\ket{2} \leftrightarrow \ket{3}$ transition is not supplied externally but may be produced as a result of atoms in the excited state ($\ket{3}$) being stimulated to emit into the lasing mode ($\ket{2}$).  To investigate possible differences in behaviour if the two optical modes are co-propagating or counter-propagating, we will consider both the case in which the source mode is initially stationary (with the $\Omega_2$ mode propagating to the right) and moving to the left with momentum $2 \hbar k$ (with the $\Omega_2$ mode propagating to the left).  In both cases the initial condition is chosen such that the lasing and source modes are in the overall ground state of the system given their respective initial occupations $N_\text{lasing}(t=0)$ and $N_\text{source}(t=0)$ (i.e. in the absence of any optical coupling the system would remain static).  The source mode is assumed to be given its momentum kick to the left (if appropriate) immediately before the optical field $\Omega_1$ is turned on at $t=0$.  As the $\Omega_2$ light is generated by (atomic) stimulated emission its phase will be determined by the phase difference between the source and lasing modes, we may assume there to be a specific phase relationship between the two modes without loss of generality; our results will also apply if the two condensates were independently produced and had a random relative phase.
 
 For the 1D scheme presented in \figureref{OpticalPumping:OverlappingCondensateModel} we may simplify the multimode equations \eqref{OpticalPumping:GeneralMultimodeModel} to
 \begin{subequations}
+    \label{OpticalPumping:OverlappingCondensatesEvolution}
     \begin{align}
-        i \hbar \frac{\partial}{\partial t} \Psi_1(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_1}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_1 - \hbar \frac{\Omega_1^* \Omega_2^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_2 \\
-        i \hbar \frac{\partial}{\partial t} \Psi_2(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  - \hbar \frac{\abs{\Omega_2}^2}{\Delta - \frac{i}{2} \Gamma}\right] \Psi_2 - \hbar \frac{\Omega_2^* \Omega_1^{\phantom{*}}}{\Delta - \frac{i}{2}\Gamma} \Psi_1 \\
-        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_{13} \Gamma \sigma_0 \frac{\abs{\Psi_1}^2 \Omega_1 + \Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}\\
-        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_{23} \Gamma \sigma_0 \frac{\abs{\Psi_2}^2 \Omega_2 + \Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma} \label{OpticalPumping:OverlappingCondensates:Omega2}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_1(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U_\text{1D}\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  \right] \Psi_1\\
+            &\relphantom{=} - \hbar \frac{\abs{\Omega_1}^2\Psi_1 + \Omega_1^* \Omega_2^{\phantom{*}}\Psi_2}{\Delta - \frac{i}{2} \Gamma},
+        \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:Psi1}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_2(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U_\text{1D}\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  \right] \Psi_2\\
+            &\relphantom{=} - \hbar \frac{\abs{\Omega_2}^2 \Psi_2 + \Omega_2^* \Omega_1^{\phantom{*}} \Psi_1}{\Delta - \frac{i}{2} \Gamma},
+        \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:Psi2}\\
+        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_{13} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_1}^2 \Omega_1 + \Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega1}\\
+        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_{23} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_2}^2 \Omega_2 + \Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega2}
     \end{align}
 \end{subequations}
-where $\hbar \Omega_i = \vect{d}_{i 3} \cdot \unitvec{u}_{\lambda_i} \widetilde{E}_{+, \vect{q}_i}$, $\displaystyle \Gamma = \frac{\omega^3 d_\text{total}^2}{3 \pi \epsilon_0 \hbar c^3}$, $\abs{d_\text{total}}^2 = \sum_{ij'} \abs{\vect{d}_{ij'}}$, $\abs{\vect{d}_{ij'}}^2 = f_{ij'} \abs{d_\text{total}}^2$, $\displaystyle\sigma_0 = \frac{3 \lambda^2}{2 \pi}$, $f_{ij'}$ is the fraction of atoms in the $j'$ state that spontaneously decay to the $i$ state.  If the state $\ket{3}$ may only decay into states $\ket{1}$ and $\ket{2}$ and does so with equal probability, then $f_{13} = f_{23} = \frac{1}{2}$.
+where the electric fields of \eqref{OpticalPumping:GeneralMultimodeModel} have been replaced with Rabi frequencies\footnote{Electric fields must be used in the general case in which a single optical field may couple multiple transitions with different dipole matrix elements.  In the present model each optical field drives only a single transition, enabling the electric fields to be replaced with Rabi frequencies.} using $\hbar \Omega_i = \vect{d}_{i 3} \cdot \unitvec{u}_{\lambda_i} \widetilde{E}_{+, \vect{q}_i}$; the remaining dipole matrix elements have been eliminated in favour of the spontaneous emission rate using $\displaystyle \Gamma = \frac{\omega^3 d_\text{total}^2}{3 \pi \epsilon_0 \hbar c^3}$, where the total dipole matrix element is $\abs{d_\text{total}}^2 = \sum_{i} \abs{\vect{d}_{i3}}^2$ with $\abs{\vect{d}_{i3}}^2 = f_{i3} \abs{d_\text{total}}^2$, where $f_{i3}$ is the fraction of atoms in the $\ket{3}$ state that decay to the $\ket{i}$ state; $\displaystyle\sigma_0 = \frac{3 \lambda^2}{2 \pi}$ is the atomic scattering cross-section; and a very simple dimension reduction scheme has been used: $\Psi_i^\text{(3D)} = \Psi_i^\text{(1D)} / \sqrt{A_\perp}$, $U_\text{1D} = U_\text{3D} / A_\perp$, where $A_\perp$ is a representative area of the condensate perpendicular to the $x$ direction.  The positive sign in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2} applies if the source mode is initially stationary causing the $\Omega_2$ mode to propagate to the right, and the negative sign applies if the source mode is initially moving to the left with momentum $2 \hbar k$ causing the $\Omega_2$ mode to propagate to the left.
+
+Before simulating the system numerically, some analytical insight can be obtained by considering the behaviour of the optical fields as they propagate through the condensates.  Although propagating in space instead of in time, the equations of motion for the optical fields resemble those for a coupled $\Lambda$ level scheme with the \emph{atomic} fields governing the strength of the coupling of each transition, a role normally filled by optical fields.  Rewriting the evolution equations for the two optical fields elucidates this analogy,
+\begin{subequations}
+    \begin{align}
+        i \hbar c \frac{d}{dx} \phi_1 &= -\hbar \omega \phi_1  - \hbar \frac{\abs{\Omega_\text{source}}^2 \phi_1 + \Omega_\text{source}^* \Omega_\text{lasing}^{\phantom{*}} \phi_2}{\Delta - \frac{i}{2} \Gamma},\\
+        \pm i \hbar c\frac{d}{dx} \phi_2 &= - \hbar \omega \phi_2 - \hbar \frac{\abs{\Omega_\text{lasing}}^2 \phi_2 + \Omega_\text{lasing}^* \Omega_\text{source}^{\phantom{*}} \phi_1}{\Delta - \frac{i}{2} \Gamma},
+    \end{align}
+\end{subequations}
+where $\displaystyle\Omega_\text{source, lasing} = \sqrt{\frac{c \Gamma \sigma_0}{8 A_\perp}} \Psi_{1,\, 2}$, $\phi_i$ has been used to replace the optical Rabi frequencies $\Omega_i$ to limit the possibility for confusion, and it has been assumed that the two optical transitions are of equal strength, hence $f_{13} = f_{23} = \frac{1}{2}$.  The coupling terms between the two fields $\phi_1$ and $\phi_2$ are now clearly in the same form as the atomic coupling terms between $\Psi_1$ and $\Psi_2$ in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi1}--\eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi2}.  This similarity is not surprising as the ground state atomic fields and the optical fields may be interchanged in the in the atom--light coupling Hamiltonian (after making the rotating-wave approximation) without changing its form as
+\begin{align}
+    \hat{H}_\text{atom--light} &\propto \hat{\Psi}_e^\dagger \hat{\Psi}_g^{\phantom{\dagger}} \hat{\phi} + \hat{\phi}^\dagger \hat{\Psi}_g^\dagger \hat{\Psi}_e^{\phantom{\dagger}},
+\end{align}
+where $\hat{\Psi}_e$, $\hat{\Psi}_g$ are the excited and ground atomic fields respectively and $\hat{\phi}$ is the photon field.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=6cm]{DualModel}
+    \caption{Photon analogy. FIXME: This is not a caption.}
+    \label{OpticalPumping:DualModel}
+\end{figure}
+
+This analogy for the photon propagation is illustrated in \figureref{OpticalPumping:DualModel}.  In this model the two fields $\phi_1$ and $\phi_2$ are coupled by two Rabi frequencies $\Omega_\text{source}$ and $\Omega_\text{lasing}$ that vary (in space) as the two fields $\phi_i$ evolve (in space).  For the co-propagating case (\emph{i.e.} the source mode remains stationary), the optical propagation equations can be solved exactly for small times while the source and lasing modes have the same shape.  The solution for the mode produced from vacuum is
+\begin{align}
+    \phi_2(x) = \phi_1(-\infty) \frac{\Omega_\text{source}^{\phantom{*}} \Omega_\text{lasing}^*}{\abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2} \left[\exp\left( i \frac{\frac{1}{c}\int_{-\infty}^x dx\, \abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2}{\Delta - \frac{i}{2} \Gamma}\right) - 1 \right].
+\end{align}
+
+
+
+Simulations of this system:
+\begin{itemize}
+    \item Co-propagating
+    \begin{itemize}
+        \item Resonant
+        \item Detuned
+    \end{itemize}
+    \item Counter-propagating
+    \begin{itemize}
+        \item Resonant
+        \item Detuned
+    \end{itemize}
+\end{itemize}
 
 \subsection{Atom laser model}
 

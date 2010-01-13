@@ -148,8 +148,6 @@
 					<string>FilledArrow</string>
 					<key>TailArrow</key>
 					<string>0</string>
-					<key>Width</key>
-					<real>2</real>
 				</dict>
 			</dict>
 		</dict>
@@ -485,7 +483,7 @@
 					<key>TailArrow</key>
 					<string>0</string>
 					<key>Width</key>
-					<real>2</real>
+					<real>4</real>
 				</dict>
 			</dict>
 		</dict>
@@ -7778,7 +7776,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-01-12 17:15:58 +1100</string>
+	<string>2010-01-13 11:03:33 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>

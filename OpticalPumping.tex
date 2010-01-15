@@ -491,12 +491,13 @@ where the electric fields of \eqref{OpticalPumping:GeneralMultimodeModel} have b
 
 Before simulating the system numerically, some analytical insight can be obtained by considering the behaviour of the optical fields as they propagate through the condensates.  Although propagating in space instead of in time, the equations of motion for the optical fields resemble those for a coupled $\Lambda$ level scheme with the \emph{atomic} fields governing the strength of the coupling of each transition, a role normally filled by optical fields.  Rewriting the evolution equations for the two optical fields elucidates this analogy,
 \begin{subequations}
+    \label{OpticalPumping:OpticalPropagationAnalogy}
     \begin{align}
         i \hbar c \frac{d}{dx} \phi_1 &= -\hbar \omega \phi_1  - \hbar \frac{\abs{\Omega_\text{source}}^2 \phi_1 + \Omega_\text{source}^* \Omega_\text{lasing}^{\phantom{*}} \phi_2}{\Delta - \frac{i}{2} \Gamma},\\
         \pm i \hbar c\frac{d}{dx} \phi_2 &= - \hbar \omega \phi_2 - \hbar \frac{\abs{\Omega_\text{lasing}}^2 \phi_2 + \Omega_\text{lasing}^* \Omega_\text{source}^{\phantom{*}} \phi_1}{\Delta - \frac{i}{2} \Gamma},
     \end{align}
 \end{subequations}
-where $\displaystyle\Omega_\text{source, lasing} = \sqrt{\frac{c \Gamma \sigma_0}{8 A_\perp}} \Psi_{1,\, 2}$, $\phi_i$ has been used to replace the optical Rabi frequencies $\Omega_i$ to limit the possibility for confusion, and it has been assumed that the two optical transitions are of equal strength, hence $f_{13} = f_{23} = \frac{1}{2}$.  The coupling terms between the two fields $\phi_1$ and $\phi_2$ are now clearly in the same form as the atomic coupling terms between $\Psi_1$ and $\Psi_2$ in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi1}--\eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi2}.  This similarity is not surprising as the ground state atomic fields and the optical fields may be interchanged in the in the atom--light coupling Hamiltonian (after making the rotating-wave approximation) without changing its form as
+where $\displaystyle\Omega_\text{source, lasing} = \sqrt{\frac{c \Gamma \sigma_0}{8 A_\perp}} \Psi_{1,\, 2}$, $\phi_i$ has been used to replace the optical Rabi frequencies $\Omega_i$ to limit the possibility for confusion, and it has been assumed that the two optical transitions are of equal strength, hence $f_{13} = f_{23} = \frac{1}{2}$.  The coupling terms between the two fields $\phi_1$ and $\phi_2$ are now clearly in the same form as the atomic coupling terms between $\Psi_1$ and $\Psi_2$ in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi1}--\eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi2}.  This similarity is not surprising as the ground state atomic fields and the optical fields may be interchanged in the atom--light coupling Hamiltonian (after making the rotating-wave approximation) without changing its form:
 \begin{align}
     \hat{H}_\text{atom--light} &\propto \hat{\Psi}_e^\dagger \hat{\Psi}_g^{\phantom{\dagger}} \hat{\phi} + \hat{\phi}^\dagger \hat{\Psi}_g^\dagger \hat{\Psi}_e^{\phantom{\dagger}},
 \end{align}
@@ -505,16 +506,50 @@ where $\hat{\Psi}_e$, $\hat{\Psi}_g$ are the excited and ground atomic fields re
 \begin{figure}
     \centering
     \includegraphics[width=6cm]{DualModel}
-    \caption{Photon analogy. FIXME: This is not a caption.}
+    \caption{Photon propagation analogy. FIXME: This is not a caption.}
     \label{OpticalPumping:DualModel}
 \end{figure}
 
-This analogy for the photon propagation is illustrated in \figureref{OpticalPumping:DualModel}.  In this model the two fields $\phi_1$ and $\phi_2$ are coupled by two Rabi frequencies $\Omega_\text{source}$ and $\Omega_\text{lasing}$ that vary (in space) as the two fields $\phi_i$ evolve (in space).  For the co-propagating case (\emph{i.e.} the source mode remains stationary), the optical propagation equations can be solved exactly for small times while the source and lasing modes have the same shape.  The solution for the mode produced from vacuum is
+This analogy for the photon propagation is illustrated in \figureref{OpticalPumping:DualModel}.  In this model the two fields $\phi_1$ and $\phi_2$ are coupled by two Rabi frequencies $\Omega_\text{source}$ and $\Omega_\text{lasing}$ that vary (in space) as the two fields $\phi_i$ evolve (in space).  For the counter-propagating case the analogy is imperfect as one mode propagates forward while the other backward, preventing a direct analogy with propagation in time.  For the co-propagating case however, the analogy is perfect and the optical propagation equations can be solved exactly for small times while the source and lasing modes have the same shape.  The quantity that we are interested in is $\abs{\Omega_2}^2$, as every photon in the $\Omega_2$ mode leaving the system corresponds to an atom that has been transferred to the lasing mode.  The solution for $\Omega_2$ is
+% \begin{align}
+%     \phi_2(x) &= \phi_1(-\infty) \frac{\Omega_\text{source}^{\phantom{*}} \Omega_\text{lasing}^*}{\abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2} \left[\exp\left( i \frac{\frac{1}{c}\int_{-\infty}^x dx\, \abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2}{\Delta - \frac{i}{2} \Gamma}\right) - 1 \right].
+% \end{align}
 \begin{align}
-    \phi_2(x) = \phi_1(-\infty) \frac{\Omega_\text{source}^{\phantom{*}} \Omega_\text{lasing}^*}{\abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2} \left[\exp\left( i \frac{\frac{1}{c}\int_{-\infty}^x dx\, \abs{\Omega_\text{source}}^2 + \abs{\Omega_\text{lasing}}^2}{\Delta - \frac{i}{2} \Gamma}\right) - 1 \right].
+    \Omega_2(x) &= \Omega_1(-\infty) \frac{\Psi_1^{\phantom{*}} \Psi_2^*}{\abs{\Psi_1}^2 + \abs{\Psi_2}^2} \left[\exp \left( i \frac{\Gamma \sigma_0}{8 A_\perp\left(\Delta - \frac{i}{2} \Gamma\right)}\int_{-\infty}^x dx\, \abs{\Psi_1}^2 + \abs{\Psi_2}^2\right) -1 \right].
+\end{align}
+The net rate of atom transfer into the lasing mode ($\ket{2}$) is therefore
+\begin{align}
+    \frac{d N_2}{dt} &= \abs{\Omega_1(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \abs{\alpha - 1}^2,
+\end{align}
+where
+\begin{align}
+    \frac{d N_2}{dt} &= \abs{\Omega_2(+\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0},\\
+    \alpha &= \exp \left( i \frac{N\Gamma \sigma_0}{8 A_\perp\left(\Delta - \frac{i}{2} \Gamma\right)}\right),
+\end{align}
+$N_i$ is the number of atoms in the $\ket{i}$ state, and $N$ is the number of atoms in the system.  The efficiency of the atomic transfer is
+\begin{align}
+    \eta &= \left.\frac{d N_2}{d t} \middle / \left(- \frac{d N_1}{dt}\right)\right. = \frac{N_2 \abs{\alpha - 1}^2}{2 N \left(1 - \Re\{\alpha\}\right) - N_1 \abs{\alpha -1}^2}.
 \end{align}
 
+In the limit of zero detuning ($\Delta = 0$) and assuming the lasing mode to contain significantly more atoms than the source mode ($N_1 \ll N_2$), a simpler understanding of the dynamics can be obtained,
+\begin{align}
+    \alpha &= \exp\left( - \frac{N \sigma_0}{4 A_\perp}\right) \approx 0, \\
+    \frac{d N_2}{dt} &\approx \abs{\Omega_1(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N_2}, \\
+    \eta &\approx \frac{1}{2}.
+\end{align}
+Where for $\lambda = \unit[780]{nm}$, $N= 5 \times 10^5$, $A_\perp = \unit[10^{-9}]{m\textsuperscript{2}}$, the term in brackets is $\sim -36$. Here we observe the Quantum Zeno Effect, \emph{i.e.} the opposite of Bose-enhancement.  If there are more atoms in the lasing mode, the rate of transfer to that mode \emph{decreases}.  Simulations are in agreement with this result, and show that the efficiency increases from 50\% for later times as the atoms are closer to being in a dark state\dots
 
+% \begin{align}
+%     \frac{d N_2}{dt} &= \abs{\Omega_1(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \abs{\exp \left( i \frac{N \Gamma \sigma_0}{8 A_\perp(\Delta - \frac{i}{2} \Gamma)}\right) - 1}^2
+% \end{align}
+% 
+% \begin{align}
+%     \Omega_1(x) &= \Omega_1(-\infty) \left\{1 + \frac{\abs{\Psi_1}^2}{\abs{\Psi_1}^2 + \abs{\Psi_2}^2}\left[\exp\left(i \frac{\Gamma \sigma_0}{8 A_\perp (\Delta - \frac{i}{2} \Gamma)} \int_{-\infty}^x dx\, \abs{\Psi_1}^2 + \abs{\Psi_2}^2 \right) -1 \right] \right\}
+% \end{align}
+% 
+% \begin{align}
+%     \abs{\Omega_1(+\infty)}^2 &= \abs{\Omega_1(-\infty)}^2 \abs{1 + \frac{N_1}{N} \left[\exp\left( i \frac{N \Gamma \sigma_0}{8 A_\perp(\Delta - \frac{i}{2}\Gamma)}\right) - 1\right] }^2
+% \end{align}
 
 Simulations of this system:
 \begin{itemize}

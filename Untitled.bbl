@@ -1,4 +1,4 @@
-\begin{thebibliography}{109}
+\begin{thebibliography}{111}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -915,6 +915,19 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
   \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Schwartz}(1963)}]{Schwartz:1963}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Schwartz}},
+  \bibinfo{journal}{American Journal of Mathematics}
+  \textbf{\bibinfo{volume}{85}}, \bibinfo{pages}{453} (\bibinfo{year}{1963}),
+  ISSN \bibinfo{issn}{00029327}.
+
+\bibitem[{\citenamefont{{Ye Yan-qian}}(1986)}]{Ye-Yan-qian:1984}
+\bibinfo{author}{\bibnamefont{{Ye Yan-qian}}}, \emph{\bibinfo{title}{{Theory of
+  Limit Cycles}}}, vol.~\bibinfo{volume}{66} of
+  \emph{\bibinfo{series}{Translations of mathematical monographs}}
+  (\bibinfo{publisher}{American Mathematical Society}, \bibinfo{year}{1986}),
+  \bibinfo{edition}{2nd} ed.
 
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},

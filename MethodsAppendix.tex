@@ -9,7 +9,7 @@
 \label{MethodsAppendix:OpticalBlochPeriodicityProof}
 In this section a proof is given of the periodicity of the solutions to the nonlinear optical Bloch equations considered in \sectionref{Peaks:MeanFieldPeriodicity} which described the dynamics of the mean field of a two-level homogeneous condensate in the case that the scattering lengths for the two levels are not equal. We restate the nonlinear optical Bloch equations \eqref{Peaks:OpticalBlochEquations} here for convenience,
 \begin{subequations}
-    \label{Peaks:OpticalBlochEquations}
+    \label{MethodsAppendix:OpticalBlochEquations}
     \begin{align}
         \frac{d}{dt}\rho_{10} &= -i\frac{g}{2} (1-w)\rho_{10} + i \Omega w,\\
         \frac{d }{dt}w &= -4 \Omega \Im\{\rho_{10}\},
@@ -22,10 +22,13 @@ These equations describe motion on the surface of a sphere, known as the Bloch s
 We next aim to show that there are no limit cycles in this system, \emph{i.e.} there exist no trajectories that approach periodic orbits which are not themselves periodic.
 
 We first write the equations of motion for the system in the usual spherical polar coordinates as
-\begin{align}
-    \frac{d \theta}{dt} &= 2 \Omega \sin\phi, \\
-    \frac{d \phi}{dt} &= 2 \Omega \cos\phi \cot\theta - \frac{1}{2} g (1-\cos\theta),
-\end{align}
+\begin{subequations}
+    \label{MethodsAppendix:EvolutionOfAngles}
+    \begin{align}
+        \frac{d \theta}{dt} &= 2 \Omega \sin\phi, \label{MethodsAppendix:EvolutionOfAngles:Theta}\\
+        \frac{d \phi}{dt} &= 2 \Omega \cos\phi \cot\theta - \frac{1}{2} g (1-\cos\theta), \label{MethodsAppendix:EvolutionOfAngles:Phi}
+    \end{align}
+\end{subequations}
 where we note that these equations are of the form
 \begin{align}
     \dot{\vect{r}} &= \frac{2}{\hbar} \unitvec{r} \times \nabla E, \label{MethodsAppendix:ConservativeEvolution}
@@ -34,30 +37,27 @@ where $E$ is the energy per particle previously defined in \eqref{Peaks:OpticalB
 
 As the evolution has the form \eqref{MethodsAppendix:ConservativeEvolution}, a given point moves in the direction perpendicular to the gradient of $E$ at a rate proportional to the magnitude of the gradient, and hence the energy $E$ is conserved along any given trajectory.
 
-Assuming a limit cycle exists, there will exist a trajectory approaching the limit cycle. For each point in the limit cycle $\vect{x}$ there exists an infinite sequence of points $\vect{s}_i$ that approach $\vect{x}$ which are the intersection of a curve which intersects no trajectory tangentially (a transversal, see \citep{Schwartz:1963}) and the trajectory approaching the limit cycle.  As the energy $E$ is continuous, we have $\displaystyle \lim_{i\rightarrow\infty}E(\vect{s}_i) = E(\vect{x})$, and therefore the energy of the approaching trajectory must be the same as the energy of the limit cycle.  The derivative of $E$ in the direction of the transversal is zero as $\displaystyle \lim_{i\rightarrow\infty} \frac{E(\vect{s}_i) - E(\vect{x})}{\abs{\vect{s}_i - \vect{x}}} = 0$. It is already known that the derivative of the energy is zero parallel to the limit cycle, and hence as the direction of the transversal and the limit cycle at $\vect{x}$ are linearly independent (a transversal intersects no trajectory tangentially) and the manifold is two-dimensional, 
+Assuming a limit cycle exists, there will exist a trajectory approaching the limit cycle which is not the limit cycle. For each point in the limit cycle $\vect{x}$ there exists an infinite sequence of points $\vect{s}_i$ that approach $\vect{x}$ which are the intersection of a curve which intersects no trajectory tangentially (a \emph{transversal}, see \citep{Schwartz:1963}) and the trajectory approaching the limit cycle.  As the energy $E$ is continuous, we have $\displaystyle \lim_{i\rightarrow\infty}E(\vect{s}_i) = E(\vect{x})$, and therefore the energy of the approaching trajectory must be the same as the energy of the limit cycle.  The derivative of $E$ in the direction of the transversal is zero as $\displaystyle \lim_{i\rightarrow\infty} \frac{E(\vect{s}_i) - E(\vect{x})}{\abs{\vect{s}_i - \vect{x}}} = 0$.  It is already known that the derivative of the energy is zero parallel to the limit cycle as energy is conserved along any trajectory. As the direction of the transversal and the limit cycle at $\vect{x}$ are linearly independent (a transversal intersects no trajectory tangentially) and the manifold is two-dimensional, the gradient of $E$ at $\vect{x}$ must necessarily be zero.  From \eqref{MethodsAppendix:ConservativeEvolution} this implies that $\vect{x}$ is a fixed point, which is a contradiction with $\vect{x}$ being part of a limit cycle.  Our original assumption that a limit cycle exists is therefore false.
 
+It now remains to be shown that no trajectories approach fixed points (with the exception of the fixed points themselves).  With the possibility of limit cycles excluded, by the generalised Poincaré-Bendixson theorem this will show that all remaining trajectories are periodic.
 
-\parasep
+To analyse the stability of the fixed points, it is first necessary to determine their location.  It immediately follows from \eqref{MethodsAppendix:EvolutionOfAngles:Theta} that fixed points will satisfy $\sin\phi = 0$, \emph{i.e.} fixed points are restricted to the great circle in the $x$--$z$ plane.  To parameterise this circle by a single coordinate, we alter the usual ranges of the spherical polar coordinates such that $\phi \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right)$ and $\theta \in [-\pi, \pi)$.  With this definition $\cos\phi = 1$ over the entire circle, instead of $\cos\phi = \pm 1$ over opposite halves.
 
-FIXME: I'm not going to write out the entire bloody proof here just yet as I want to finish \chapterref{Peaks}. But here is a summary to jog my memory.
-\begin{enumerate}
-    \item We need to discard the possibilities of attractors, limit cycles and saddle points.\citep{Schwartz:1963}
-    \item Derive the equations of motion for the $(\theta, \phi)$ coordinates as this basis has the dimension of the phase-space.
-    \begin{align}
-        \frac{d \theta}{dt} &= 2 \Omega \sin\phi\\
-        \frac{d \phi}{dt} &= 2 \Omega \cos\phi \cot\theta - \frac{1}{2} g (1-\cos\theta)
-    \end{align}
-    \item Note that these equations can be written in the form
-    \begin{align}
-        \dot{\vect{r}} &= \frac{2}{\hbar} \unitvec{r} \times \nabla E,\\
-        E &= \frac{\mean{\hat{H}}}{\mean{\hat{N}}} = -\frac{1}{8}\hbar g(1 - w)^2 + 2 \hbar \Omega \Re\{\rho_{10}\}
-    \end{align}
-    where the hat indicates a unit vector, not an operator the energy comes from \eqref{Peaks:OpticalBlochEnergy}. Using a mild extension to the argument given in \citep[Theorem 1.14]{Ye-Yan-qian:1984} it is then shown that limit cycles are impossible. Make sure that it is noted that this only works because the phase-space is two-dimensional.
-    \item Solve for the stationary points of the equations above and use the tan-half substitution to obtain the solution expressed as roots of a polynomial. As $\sin\phi=0$, let $\cos\phi=1$ and let $\theta \in [-\pi, \pi]$ to cover the range of solutions. This makes things a bit simpler.
-    \item Obtain the linearised equations about an arbitrary stationary point, use the tan-half substitution again to use the polynomial obtained before to show that the eigenvalues must be purely imaginary. This shows that we don't have saddle points or attractors of any form. All stationary points are centres.
-    \item Profit!?
-\end{enumerate}
+Using the tan-half substitution $s = \tan\frac{1}{2}\theta$, it can be shown from \eqref{MethodsAppendix:EvolutionOfAngles:Phi} that all fixed points satisfy
+\begin{align}
+    g s^3 &= \Omega (1 - s^4). \label{MethodsAppendix:FixedPointsEquation}
+\end{align}
 
+The stability of \eqref{MethodsAppendix:EvolutionOfAngles} about the fixed points may be investigated to demonstrate that there are no trajectories that approach the fixed points (with the exception of the fixed points themselves).  Linearising \eqref{MethodsAppendix:EvolutionOfAngles} about the fixed points yields
+\begin{align}
+    \frac{d}{dt} \delta \theta &= 2 \Omega \delta \phi,\\
+    \frac{d}{dt} \delta \phi &= - \frac{\Omega}{2 s^2}(s^4 + 3) \delta \theta,
+\end{align}
+where $\delta \theta$ and $\delta\phi$ are the deviations from the fixed point and the identity \eqref{MethodsAppendix:FixedPointsEquation} has been used to simplify the result.  The eigenvalues of this linear system of differential equations are
+\begin{align}
+    \lambda &= \pm\sqrt{- \frac{\Omega^2}{s^2}(s^4 + 3)},
+\end{align}
+which are pure imaginary as both $\Omega$ and $s$ are real.  This implies that there exist no trajectories near any fixed points of the system that asymptotically approach the fixed point.  It may then be concluded that with the exception of the fixed points themselves, all trajectories of the system \eqref{MethodsAppendix:OpticalBlochEquations} are periodic, and Floquet's theorem may be applied in \sectionref{Peaks:ExperimentEigenvalues}.
 
 \section{Example calculation of the momentum density flux}
 \label{MethodsAppendix:MomentumDensityFluxExampleCalculation}

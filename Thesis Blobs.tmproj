@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>OpticalPumping.tex</string>
+	<string>Peaks.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,7 +16,7 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-31T02:13:35Z</date>
+			<date>2010-01-07T01:06:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -40,15 +40,15 @@
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-08T05:06:29Z</date>
+			<date>2010-01-16T08:10:30Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>OpticalPumping.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-31T02:13:35Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-01-15T00:43:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -72,7 +72,7 @@
 			<key>filename</key>
 			<string>MethodsAppendix.tex</string>
 			<key>lastUsed</key>
-			<date>2009-11-12T05:05:44Z</date>
+			<date>2010-01-16T08:10:30Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -132,42 +132,58 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>29</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>8</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>70</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>51</integer>
+				<key>line</key>
+				<integer>8</integer>
+			</dict>
 		</dict>
 		<key>OpticalPumping.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>417</integer>
+				<integer>10</integer>
 				<key>line</key>
-				<integer>362</integer>
+				<integer>538</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>636</integer>
 			<key>firstVisibleLine</key>
-			<integer>334</integer>
+			<integer>512</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>1407</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>226</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>623</integer>
 			<key>firstVisibleLine</key>
-			<integer>387</integer>
+			<integer>211</integer>
 		</dict>
 		<key>PenningIonisationAppendix.tex</key>
 		<dict>
@@ -216,20 +232,38 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>50</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>107</integer>
+				<integer>97</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>85</integer>
+			<integer>74</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>90</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>97</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
 		<string>OpticalPumping.tex</string>
+		<string>MethodsAppendix.tex</string>
+		<string>Peaks.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -245,6 +279,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{292, 0}, {978, 832}}</string>
+	<string>{{293, 169}, {979, 832}}</string>
 </dict>
 </plist>

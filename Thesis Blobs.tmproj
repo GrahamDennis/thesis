@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>Peaks.tex</string>
+	<string>OpticalPumping.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,7 +16,7 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2010-01-07T01:06:31Z</date>
+			<date>2010-01-18T03:51:33Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -40,15 +40,15 @@
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2010-01-16T08:10:30Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-01-16T08:16:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>OpticalPumping.tex</string>
 			<key>lastUsed</key>
-			<date>2010-01-15T00:43:39Z</date>
+			<date>2010-01-18T03:51:33Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -132,53 +132,37 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>29</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>0</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>7</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>51</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
 		</dict>
 		<key>OpticalPumping.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>10</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>538</integer>
+				<integer>599</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>636</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>512</integer>
+			<integer>584</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1407</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>226</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>623</integer>
@@ -279,6 +263,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{293, 169}, {979, 832}}</string>
+	<string>{{349, 103}, {979, 832}}</string>
 </dict>
 </plist>

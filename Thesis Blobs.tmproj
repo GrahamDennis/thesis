@@ -46,7 +46,7 @@
 			<key>filename</key>
 			<string>OpticalPumping.tex</string>
 			<key>lastUsed</key>
-			<date>2010-01-18T03:51:33Z</date>
+			<date>2010-01-19T06:10:56Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -54,7 +54,7 @@
 			<key>filename</key>
 			<string>KineticTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2009-12-11T06:13:18Z</date>
+			<date>2010-01-19T06:10:56Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -113,20 +113,6 @@
 			<key>firstVisibleLine</key>
 			<integer>129</integer>
 		</dict>
-		<key>KineticTheory.tex</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>127</integer>
-			<key>firstVisibleLine</key>
-			<integer>72</integer>
-		</dict>
 		<key>MethodsAppendix.tex</key>
 		<dict>
 			<key>caret</key>
@@ -146,14 +132,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>599</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>584</integer>
+			<integer>498</integer>
 		</dict>
 		<key>Peaks.tex</key>
 		<dict>
@@ -263,6 +249,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{349, 103}, {979, 832}}</string>
+	<string>{{401, 187}, {979, 832}}</string>
 </dict>
 </plist>

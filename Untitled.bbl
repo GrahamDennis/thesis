@@ -1,4 +1,4 @@
-\begin{thebibliography}{115}
+\begin{thebibliography}{114}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -317,7 +317,7 @@
   \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Gericke}},
   \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Mandel}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
-  \bibinfo{journal}{New Journal of Physics} \textbf{\bibinfo{volume}{8}},
+  \bibinfo{journal}{New J. Phys.} \textbf{\bibinfo{volume}{8}},
   \bibinfo{pages}{152} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Fetter and Walecka}(1971)}]{FetterWalecka}
@@ -333,6 +333,11 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Balachandran}},
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Schwartz}(1963)}]{Schwartz:1963}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Schwartz}},
+  \bibinfo{journal}{Amer. J. Math.} \textbf{\bibinfo{volume}{85}},
+  \bibinfo{pages}{453} (\bibinfo{year}{1963}), ISSN \bibinfo{issn}{00029327}.
 
 \bibitem[{\citenamefont{Shirley}(1965)}]{Shirley:1965}
 \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Shirley}},
@@ -658,14 +663,6 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{40}},
   \bibinfo{pages}{6741} (\bibinfo{year}{1989}).
 
-\bibitem[{\citenamefont{Harris \emph{et~al.}}(1990)\citenamefont{Harris, Field,
-  and Imamo{\u g}lu}}]{Harris:1990}
-\bibinfo{author}{\bibfnamefont{S.~E.} \bibnamefont{Harris}},
-  \bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Field}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Imamo{\u g}lu}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{64}},
-  \bibinfo{pages}{1107} (\bibinfo{year}{1990}).
-
 \bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
   Zaremba, and Stoof}}]{Bijlsma:2000}
 \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Bijlsma}},
@@ -961,12 +958,6 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
   \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
-
-\bibitem[{\citenamefont{Schwartz}(1963)}]{Schwartz:1963}
-\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Schwartz}},
-  \bibinfo{journal}{American Journal of Mathematics}
-  \textbf{\bibinfo{volume}{85}}, \bibinfo{pages}{453} (\bibinfo{year}{1963}),
-  ISSN \bibinfo{issn}{00029327}.
 
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},

@@ -124,7 +124,7 @@ A second experiment was also performed simultaneously pumping the laser-mode BEC
 
 \parasep
 
-The continuous pumping experiment just described was designed to transfer $2 \hbar k$ of momentum to the falling pump atoms (by absorbing a photon of momentum $\hbar k$ going up and then emitting a photon of similar momentum directed downwards) as they are transferred to the laser-mode condensate.  However, there is a second way for the pump atoms to be momentum-resonant with the laser-mode condensate.  If the outcoupling surface for the upper condensate is towards the lower edge of the condensate the outcoupled atoms will be in close proximity to the laser-mode condensate immediately below due to the slight spatial overlap.  These recently outcoupled atoms will have almost no momentum and will be able to absorb a $\pi$-polarised photon with momentum $\hbar k$ upwards and emit a $\sigma^+$-polarised photon of similar momentum also directed upwards, decaying into the lower laser-mode condensate with no net momentum transfer.
+The continuous pumping experiment just described was designed to transfer $2 \hbar k$ of momentum to the falling $\ket{2, 0}$ atoms (by absorbing a photon of momentum $\hbar k$ going up and then emitting a photon of similar momentum directed downwards) as they are transferred to the laser-mode condensate.  However, there is a second way for these atoms to be momentum-resonant with the laser-mode condensate.  If the outcoupling surface for the upper condensate is towards the lower edge of the condensate the outcoupled atoms will be in close proximity to the laser-mode condensate immediately below due to the slight spatial overlap.  These recently outcoupled atoms will have almost no momentum and will be able to absorb a $\pi$-polarised photon with momentum $\hbar k$ upwards and emit a $\sigma^+$-polarised photon of similar momentum also directed upwards, decaying into the lower laser-mode condensate with no net momentum transfer.
 
 These two different processes are examined in greater detail theoretically in \sectionref{OpticalPumping:MultimodeModel}, however we begin our theoretical analysis of the experiment and the pumping mechanism more generally with a simple single-mode model of the process illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).
 
@@ -466,11 +466,11 @@ In the following sections the multimode pumping model \eqref{OpticalPumping:Gene
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{OverlappingCondensateModel}
-    \caption{Schematic of the two overlapping condensates model.  The system consists of two condensates in the two ground states of a $\Lambda$ level scheme (a).  The system is illuminated on the $\ket{1}\leftrightarrow\ket{3}$ transition by light at a detuning $\Delta$ and Rabi frequency $\Omega_1$.  Light on the $\ket{2} \leftrightarrow \ket{3}$ transition is generated as atoms in the $\ket{3}$ state are stimulated to emit into the lasing mode $\ket{2}$.  Depending on the relative momenta of the atoms in the source and lasing modes, the light on the $\ket{2} \leftrightarrow \ket{3}$ transition will travel to the left or right.  The `$+$' sign in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2} corresponds to the optical field $\Omega_2$ propagating to the right [marked with $(+)$], while the `$-$' sign corresponds to propagation to the left [marked with $(-)$].}
+    \caption{Schematic of the two overlapping condensates model.  The system consists of two condensates in the two ground states of a $\Lambda$ level scheme (a).  The system is illuminated on the $\ket{1}\leftrightarrow\ket{3}$ transition by light at a detuning $\Delta$ and Rabi frequency $\Omega_{1\leftrightarrow 3}$.  Light on the $\ket{2} \leftrightarrow \ket{3}$ transition is generated as atoms in the $\ket{3}$ state are stimulated to emit into the lasing mode $\ket{2}$.  Depending on the relative momenta of the atoms in the source and lasing modes, the light on the $\ket{2} \leftrightarrow \ket{3}$ transition will travel to the left or right.  The `$+$' sign in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2} corresponds to the optical field $\Omega_{2\leftrightarrow 3}$ propagating to the right [marked with $(+)$], while the `$-$' sign corresponds to propagation to the left [marked with $(-)$].}
     \label{OpticalPumping:OverlappingCondensateModel}
 \end{figure}
 
-The first idealised (multimode) pumping model to be considered is a simplified model of the transfer process occurring at the centre of the lasing condensate in the continuous pumping experiment.  In this model, illustrated in \figureref{OpticalPumping:OverlappingCondensateModel}, the source and lasing modes are the two ground states ($\ket{1}$ and $\ket{2}$ respectively) of atoms with a $\Lambda$-level scheme.  Light on the $\ket{1} \leftrightarrow \ket{3}$ transition is applied with detuning $\Delta$ from the left with an initial Rabi frequency of $\Omega_1(-\infty)$.  Light on the $\ket{2} \leftrightarrow \ket{3}$ transition is not supplied externally but may be produced as a result of atoms in the excited state ($\ket{3}$) being stimulated to emit into the lasing mode ($\ket{2}$).  To investigate possible differences in behaviour if the two optical modes are co-propagating or counter-propagating, we will consider both the case in which the source mode is initially stationary (with the $\Omega_2$ mode propagating to the right) and moving to the left with momentum $2 \hbar k$ (with the $\Omega_2$ mode propagating to the left).  In both cases the initial condition is chosen such that the lasing and source modes are in the overall ground state of the system given their respective initial occupations $N_\text{lasing}(t=0)$ and $N_\text{source}(t=0)$ (i.e.\  in the absence of any optical coupling the system would remain static).  The source mode is assumed to be given its momentum kick to the left (if appropriate) immediately before the optical field $\Omega_1$ is turned on at $t=0$.  As the $\Omega_2$ light is generated by (atomic) stimulated emission its phase will be determined by the phase difference between the source and lasing modes, we may assume there to be a specific phase relationship between the two modes without loss of generality; our results will also apply if the two condensates were independently produced and had a random relative phase.
+The first idealised (multimode) pumping model to be considered is a simplified model of the transfer process occurring at the centre of the lasing condensate in the continuous pumping experiment.  In this model, illustrated in \figureref{OpticalPumping:OverlappingCondensateModel}, the source and lasing modes are the two ground states ($\ket{1}$ and $\ket{2}$ respectively) of atoms with a $\Lambda$-level scheme.  Light on the $\ket{1} \leftrightarrow \ket{3}$ transition is applied with detuning $\Delta$ from the left with an initial Rabi frequency of $\Omega_{1\leftrightarrow 3}(-\infty)$.  Light on the $\ket{2} \leftrightarrow \ket{3}$ transition is not supplied externally but may be produced as a result of atoms in the excited state ($\ket{3}$) being stimulated to emit into the lasing mode ($\ket{2}$).  To investigate possible differences in behaviour if the two optical modes are co-propagating or counter-propagating, we will consider both the case in which the source mode is initially stationary (with the $\Omega_{2\leftrightarrow 3}$ mode propagating to the right) and moving to the left with momentum $2 \hbar k$ (with the $\Omega_{2\leftrightarrow 3}$ mode propagating to the left).  In both cases the initial condition is chosen such that the lasing and source modes are in the overall ground state of the system given their respective initial occupations $N_\text{lasing}(t=0)$ and $N_\text{source}(t=0)$ (i.e.\  in the absence of any optical coupling the system would remain static).  The source mode is assumed to be given its momentum kick to the left (if appropriate) immediately before the optical field $\Omega_{1\leftrightarrow 3}$ is turned on at $t=0$.  As the $\Omega_{2\leftrightarrow 3}$ light is generated by (atomic) stimulated emission its phase will be determined by the phase difference between the source and lasing modes, we may assume there to be a specific phase relationship between the two modes without loss of generality; our results will also apply if the two condensates were independently produced and had a random relative phase.
 
 For the 1D scheme presented in \figureref{OpticalPumping:OverlappingCondensateModel} we may simplify the multimode equations \eqref{OpticalPumping:GeneralMultimodeModel} to
 \begin{subequations}
@@ -478,27 +478,27 @@ For the 1D scheme presented in \figureref{OpticalPumping:OverlappingCondensateMo
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_1(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U_\text{1D}\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  \right] \Psi_1\\
-            &\relphantom{=} - \hbar \frac{\abs{\Omega_1}^2\Psi_1 + \Omega_1^* \Omega_2^{\phantom{*}}\Psi_2}{\Delta - \frac{i}{2} \Gamma},
+            &\relphantom{=} - \hbar \frac{\abs{\Omega_{1\leftrightarrow 3}}^2\Psi_1 + \Omega_{1\leftrightarrow 3}^* \Omega_{2\leftrightarrow 3}^{\phantom{*}}\Psi_2}{\Delta - \frac{i}{2} \Gamma},
         \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:Psi1}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_2(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{trap}(x) + U_\text{1D}\left(\abs{\Psi_1}^2 + \abs{\Psi_2}^2\right)  \right] \Psi_2\\
-            &\relphantom{=} - \hbar \frac{\abs{\Omega_2}^2 \Psi_2 + \Omega_2^* \Omega_1^{\phantom{*}} \Psi_1}{\Delta - \frac{i}{2} \Gamma},
+            &\relphantom{=} - \hbar \frac{\abs{\Omega_{2\leftrightarrow 3}}^2 \Psi_2 + \Omega_{2\leftrightarrow 3}^* \Omega_{1\leftrightarrow 3}^{\phantom{*}} \Psi_1}{\Delta - \frac{i}{2} \Gamma},
         \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:Psi2}\\
-        \frac{d}{dx} \Omega_1 &= i k \Omega_1 + \frac{i}{4} f_{13} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_1}^2 \Omega_1 + \Psi_1^* \Psi_2^{\phantom{*}}\Omega_2}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega1}\\
-        \pm \frac{d}{dx} \Omega_2 &= i k \Omega_2 + \frac{i}{4} f_{23} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_2}^2 \Omega_2 + \Psi_2^* \Psi_1^{\phantom{*}} \Omega_1}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega2}
+        \frac{d}{dx} \Omega_{1\leftrightarrow 3} &= i k \Omega_{1\leftrightarrow 3} + \frac{i}{4} f_{13} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_1}^2 \Omega_{1\leftrightarrow 3} + \Psi_1^* \Psi_2^{\phantom{*}}\Omega_{2\leftrightarrow 3}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega1}\\
+        \pm \frac{d}{dx} \Omega_{2\leftrightarrow 3} &= i k \Omega_{2\leftrightarrow 3} + \frac{i}{4} f_{23} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_2}^2 \Omega_{2\leftrightarrow 3} + \Psi_2^* \Psi_1^{\phantom{*}} \Omega_{1\leftrightarrow 3}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:Omega2}
     \end{align}
 \end{subequations}
-where the electric fields of \eqref{OpticalPumping:GeneralMultimodeModel} have been replaced with Rabi frequencies\footnote{Electric fields must be used in the general case in which a single optical field may couple multiple transitions with different dipole matrix elements.  In the present model each optical field drives only a single transition, enabling the electric fields to be replaced with Rabi frequencies.} using $\hbar \Omega_i = \vect{d}_{i 3} \cdot \unitvec{u}_{\lambda_i} \widetilde{E}_{+, \vect{q}_i}$; the remaining dipole matrix elements have been eliminated in favour of the spontaneous emission rate using $\displaystyle \Gamma = \frac{\omega^3 d_\text{total}^2}{3 \pi \epsilon_0 \hbar c^3}$, where the total dipole matrix element is $\abs{d_\text{total}}^2 = \sum_{i} \abs{\vect{d}_{i3}}^2$ with $\abs{\vect{d}_{i3}}^2 = f_{i3} \abs{d_\text{total}}^2$, where $f_{i3}$ is the fraction of atoms in the $\ket{3}$ state that decay to the $\ket{i}$ state; $\displaystyle\sigma_0 = \frac{3 \lambda^2}{2 \pi}$ is the atomic scattering cross-section; and a very simple dimension reduction scheme has been used: $\Psi_i^\text{(3D)} = \Psi_i^\text{(1D)} / \sqrt{A_\perp}$, $U_\text{1D} = U_\text{3D} / A_\perp$, where $A_\perp$ is a representative area of the condensate perpendicular to the $x$ direction.  The positive sign in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2} applies if the source mode is initially stationary causing the $\Omega_2$ mode to propagate to the right, and the negative sign applies if the source mode is initially moving to the left with momentum $2 \hbar k$ causing the $\Omega_2$ mode to propagate to the left.
+where the electric fields of \eqref{OpticalPumping:GeneralMultimodeModel} have been replaced with Rabi frequencies\footnote{Electric fields must be used in the general case in which a single optical field may couple multiple transitions with different dipole matrix elements.  In the present model each optical field drives only a single transition, enabling the electric fields to be replaced with Rabi frequencies.} using $\hbar \Omega_i = \vect{d}_{i 3} \cdot \unitvec{u}_{\lambda_i} \widetilde{E}_{+, \vect{q}_i}$; the remaining dipole matrix elements have been eliminated in favour of the spontaneous emission rate using $\displaystyle \Gamma = \frac{\omega^3 d_\text{total}^2}{3 \pi \epsilon_0 \hbar c^3}$, where the total dipole matrix element is $\abs{d_\text{total}}^2 = \sum_{i} \abs{\vect{d}_{i3}}^2$ with $\abs{\vect{d}_{i3}}^2 = f_{i3} \abs{d_\text{total}}^2$, where $f_{i3}$ is the fraction of atoms in the $\ket{3}$ state that decay to the $\ket{i}$ state; $\displaystyle\sigma_0 = \frac{3 \lambda^2}{2 \pi}$ is the atomic scattering cross-section; and a very simple dimension reduction scheme has been used: $\Psi_i^\text{(3D)} = \Psi_i^\text{(1D)} / \sqrt{A_\perp}$, $U_\text{1D} = U_\text{3D} / A_\perp$, where $A_\perp$ is a representative area of the condensate perpendicular to the $x$ direction.  The positive sign in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Omega2} applies if the source mode is initially stationary causing the $\Omega_{2\leftrightarrow 3}$ mode to propagate to the right, and the negative sign applies if the source mode is initially moving to the left with momentum $2 \hbar k$ causing the $\Omega_{2\leftrightarrow 3}$ mode to propagate to the left.
 
 Before simulating the system numerically, some analytical insight can be obtained by considering the behaviour of the optical fields as they propagate through the condensates.  Although propagating in space instead of in time, the equations of motion for the optical fields resemble those for a coupled $\Lambda$ level scheme with the \emph{atomic} fields governing the strength of the coupling of each transition, a role normally filled by optical fields.  Rewriting the evolution equations for the two optical fields elucidates this analogy,
 \begin{subequations}
     \label{OpticalPumping:OpticalPropagationAnalogy}
     \begin{align}
-        i \hbar c \frac{d}{dx} \phi_1 &= -\hbar \omega \phi_1  - \hbar \frac{\abs{\Omega_\text{source}}^2 \phi_1 + \Omega_\text{source}^* \Omega_\text{lasing}^{\phantom{*}} \phi_2}{\Delta - \frac{i}{2} \Gamma},\\
-        \pm i \hbar c\frac{d}{dx} \phi_2 &= - \hbar \omega \phi_2 - \hbar \frac{\abs{\Omega_\text{lasing}}^2 \phi_2 + \Omega_\text{lasing}^* \Omega_\text{source}^{\phantom{*}} \phi_1}{\Delta - \frac{i}{2} \Gamma},
+        i \hbar c \frac{d}{dx} \phi_{1\leftrightarrow 3} &= -\hbar \omega \phi_{1\leftrightarrow 3}  - \hbar \frac{\abs{\Omega_1}^2 \phi_{1\leftrightarrow 3} + \Omega_1^* \Omega_2^{\phantom{*}} \phi_{2\leftrightarrow 3}}{\Delta - \frac{i}{2} \Gamma},\\
+        \pm i \hbar c\frac{d}{dx} \phi_{2\leftrightarrow 3} &= - \hbar \omega \phi_{2\leftrightarrow 3} - \hbar \frac{\abs{\Omega_2}^2 \phi_2 + \Omega_2^* \Omega_1^{\phantom{*}} \phi_{1\leftrightarrow 3}}{\Delta - \frac{i}{2} \Gamma},
     \end{align}
 \end{subequations}
-where $\displaystyle\Omega_\text{source, lasing} = \sqrt{\frac{c \Gamma \sigma_0}{8 A_\perp}} \Psi_{1,\, 2}$, $\phi_i$ has been used to replace the optical Rabi frequencies $\Omega_i$ to limit the possibility for confusion, and it has been assumed that the two optical transitions are of equal strength, hence $f_{13} = f_{23} = \frac{1}{2}$.  The coupling terms between the two fields $\phi_1$ and $\phi_2$ are now clearly in the same form as the atomic coupling terms between $\Psi_1$ and $\Psi_2$ in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi1}--\eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi2}.  This similarity is not surprising as the ground state atomic fields and the optical fields may be interchanged in the atom--light coupling Hamiltonian (after making the rotating-wave approximation) without changing its form:
+where $\displaystyle\Omega_i = \sqrt{\frac{c \Gamma \sigma_0}{8 A_\perp}} \Psi_i$, $\phi_{i\leftrightarrow j}$ has been used to replace the optical Rabi frequencies $\Omega_{i \leftrightarrow j}$ to limit the possibility for confusion, and it has been assumed that the two optical transitions are of equal strength, hence $f_{13} = f_{23} = \frac{1}{2}$.  The coupling terms between the two fields $\phi_{1 \leftrightarrow 3}$ and $\phi_{2 \leftrightarrow 3}$ are now clearly in the same form as the atomic coupling terms between $\Psi_1$ and $\Psi_2$ in \eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi1}--\eqref{OpticalPumping:OverlappingCondensatesEvolution:Psi2}.  This similarity is not surprising as the ground state atomic fields and the optical fields may be interchanged in the atom--light coupling Hamiltonian (after making the rotating-wave approximation) without changing its form:
 \begin{align}
     \hat{H}_\text{atom--light} &\propto \hat{\Psi}_e^\dagger \hat{\Psi}_g^{\phantom{\dagger}} \hat{\phi} + \hat{\phi}^\dagger \hat{\Psi}_g^\dagger \hat{\Psi}_e^{\phantom{\dagger}},
 \end{align}
@@ -511,14 +511,14 @@ where $\hat{\Psi}_e$, $\hat{\Psi}_g$ are the excited and ground atomic fields re
     \label{OpticalPumping:DualModel}
 \end{figure}
 
-This analogy for the photon propagation is illustrated in \figureref{OpticalPumping:DualModel}.  In this model the two fields $\phi_1$ and $\phi_2$ are coupled by two Rabi frequencies $\Omega_\text{source}$ and $\Omega_\text{lasing}$ that vary (in space) as the two fields $\phi_i$ evolve (in space).  For the counter-propagating case the analogy is imperfect as one mode propagates forward while the other backward, preventing a direct analogy with propagation in time.  For the co-propagating case however, the analogy is perfect and the optical propagation equations can be solved exactly for small times while the source and lasing modes have the same shape.  The solution for $\Omega_2$ is
+This analogy for the photon propagation is illustrated in \figureref{OpticalPumping:DualModel}.  In this model the two fields $\phi_{1\leftrightarrow 3}$ and $\phi_{2 \leftrightarrow 3}$ are coupled by two Rabi frequencies $\Omega_1$ and $\Omega_2$ that vary (in space) as the two fields $\phi_{i \leftrightarrow j}$ evolve (in space).  For the counter-propagating case the analogy is imperfect as one mode propagates forward while the other backward, preventing a direct analogy with propagation in time.  For the co-propagating case however, the analogy is perfect and the optical propagation equations can be solved exactly for small times while the source and lasing modes have the same shape.  The solution for $\Omega_{2\leftrightarrow 3}$ is
 \begin{align}
-    \Omega_2(x) &= \Omega_1(-\infty) \frac{\Psi_1^{\phantom{*}} \Psi_2^*}{\abs{\Psi_1}^2 + \abs{\Psi_2}^2} \left[\exp \left( i \frac{\Gamma \sigma_0}{8 A_\perp\left(\Delta - \frac{i}{2} \Gamma\right)}\int_{-\infty}^x dx\, \abs{\Psi_1}^2 + \abs{\Psi_2}^2\right) -1 \right].
+    \Omega_{2\leftrightarrow 3}(x) &= \Omega_{1\leftrightarrow 3}(-\infty) \frac{\Psi_1^{\phantom{*}} \Psi_2^*}{\abs{\Psi_1}^2 + \abs{\Psi_2}^2} \left[\exp \left( i \frac{\Gamma \sigma_0}{8 A_\perp\left(\Delta - \frac{i}{2} \Gamma\right)}\int_{-\infty}^x dx\, \abs{\Psi_1}^2 + \abs{\Psi_2}^2\right) -1 \right].
 \end{align}
 
-As every photon that leaves the system in the $\Omega_2$ optical mode corresponds to an atom being transferred into the lasing mode, the net rate of atom transfer will be governed by
+As every photon that leaves the system in the $\Omega_{2\leftrightarrow 3}$ optical mode corresponds to an atom being transferred into the lasing mode, the net rate of atom transfer will be governed by
 \begin{align}
-    \abs{\Omega_2(+\infty)}^2 &= \abs{\Omega_1(-\infty)}^2 \frac{N_1}{N} \frac{N_2}{N} \abs{\alpha - 1}^2, \label{OpticalPumping:OverlappingCondensates:Omega2Infinity}
+    \abs{\Omega_{2\leftrightarrow 3}(+\infty)}^2 &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{N_1}{N} \frac{N_2}{N} \abs{\alpha - 1}^2, \label{OpticalPumping:OverlappingCondensates:Omega2Infinity}
 \end{align}
 where
 \begin{align}
@@ -528,8 +528,8 @@ $N_i$ is the number of atoms in the $\ket{i}$ state, and $N = N_1 + N_2$ is the 
 
 The rate of atom transfer into the lasing mode is then
 \begin{align}
-    \frac{d N_2}{dt} &= \abs{\Omega_2(+\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \\
-     &= \abs{\Omega_1(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \abs{\alpha - 1}^2. \label{OpticalPumping:OverlappingCondensates:TransferRate}
+    \frac{d N_2}{dt} &= \abs{\Omega_{2\leftrightarrow 3}(+\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \\
+     &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \abs{\alpha - 1}^2. \label{OpticalPumping:OverlappingCondensates:TransferRate}
 \end{align}
 The rate of atom transfer out of the source mode can be found in a similar way.  From these two rates the efficiency of the pumping process may be obtained,
 \begin{align}
@@ -546,7 +546,7 @@ In these limits the parameter $\alpha$ becomes
 \end{align}
 where a numerical value for $\alpha$ has been obtained using the experimentally-relevant values $\lambda = \unit[780]{nm}$, $N = 5 \times 10^5$, $A_\perp = 3\times\unit[10^{-10}]{m\textsuperscript{2}}$.  Using $\alpha \approx 0$ the transfer rate and efficiency take the simple forms:
 \begin{align}
-    \frac{d N_2}{dt} &\approx \abs{\Omega_1(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N_2}, \label{OpticalPumping:OverlappingCondensates:ZeroDetuningTransferRate}\\
+    \frac{d N_2}{dt} &\approx \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{8 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N_2}, \label{OpticalPumping:OverlappingCondensates:ZeroDetuningTransferRate}\\
     \eta &\approx \frac{N_2}{N + N_2} \approx \frac{1}{2} \label{OpticalPumping:OverlappingCondensates:ZeroDetuningEfficiency}.
 \end{align}
 As observed in the single-mode model of \sectionref{OpticalPumping:SingleModeModel} [see \eqref{OpticalPumping:SingleModePumpingRateZeroDetuning}], the transfer rate \emph{decreases} as the occupation of the lasing mode increases.  
@@ -554,37 +554,37 @@ As observed in the single-mode model of \sectionref{OpticalPumping:SingleModeMod
 An interesting difference with the single-mode model however is that the transfer efficiency in this model (for short times) cannot exceed 50\% while the efficiency of the single-mode model approaches 100\% for sufficiently large $N_2$.  This difference can be understood by recognising that the $\Lambda$ level scheme of \figureref{OpticalPumping:DualModel} has a dark eigenstate that does not undergo spontaneous emission as the $\ket{3}$ atomic state contains no population.  The dark eigenstate is
 \begin{align}
     \ket{D} &= \frac{1}{\sqrt{\abs{\Psi_1}^2 + \abs{\Psi_2}^2}} \left(\Psi_2 \ket{1 \leftrightarrow 3}- \Psi_1 \ket{2\leftrightarrow 3}\right), \label{OpticalPumping:DarkState}\\
-    &= \sqrt{\frac{N_2}{N}} \ket{1 \leftrightarrow 3} - \sqrt{\frac{N_1}{N}} \ket{2 \leftrightarrow 3}
+    &= \sqrt{\frac{N_2}{N}} \ket{1 \leftrightarrow 3} - \sqrt{\frac{N_1}{N}} \ket{2 \leftrightarrow 3} \label{OpticalPumping:DarkStateShortTimes}
 \end{align}
-where $\ket{i \leftrightarrow j}$ is the state for the optical mode resonant with the $\ket{i} \leftrightarrow \ket{j}$ transition, and the second equality only applies for short times while the two atomic modes have the same spatial profile (and assuming they have the same phase).  It is only the component that is in the dark state that will propagate through the system; all other components will be absorbed rapidly.  Although the projection of the initial (optical) state $\ket{\Psi_\text{initial}} = \ket{1 \leftrightarrow 3}$ onto the dark state
+where $\ket{i \leftrightarrow j}$ is the state for the optical mode resonant with the $\ket{i} \leftrightarrow \ket{j}$ transition.  When the optical modes are in this dark eigenstate, the numerators of the atom--light coupling terms of \eqref{OpticalPumping:OverlappingCondensatesEvolution} are zero.  The second form of the dark state \eqref{OpticalPumping:DarkStateShortTimes} only applies for short times while the two atomic modes have the same spatial profile (and assuming they have the same phase).  It is only the component that is in the dark state that will propagate through the system; all other components will be absorbed rapidly.  Although the projection of the initial (optical) state $\ket{\Psi_\text{initial}} = \ket{1 \leftrightarrow 3}$ onto the dark state
 \begin{align}
     \abs{\braket{D}{\Psi_\text{initial}}}^2 &= \frac{N_2}{N}
 \end{align}
 may approach 1 arbitrarily, the efficiency only approaches $\frac{1}{2}$,
 \begin{align}
-    \eta &= \frac{\abs{\braket{2 \leftrightarrow 3}{D} \!\!\braket{D}{\Psi_\text{initial}}}^2}{1 - \abs{\braket{1 \leftrightarrow 3}{D} \!\! \braket{D}{\Psi_\text{initial}}}^2} = \frac{\frac{N_1}{N} \frac{N_2}{N}}{1 - \left(\frac{N_2}{N}\right)^2}, \\
+    \eta &= \frac{\abs{\braket{2 \leftrightarrow 3}{D} \!\!\braket{D}{\Psi_\text{initial}}}^2}{1 - \abs{\braket{1 \leftrightarrow 3}{D} \!\! \braket{D}{\Psi_\text{initial}}}^2} = \frac{\frac{N_1}{N} \frac{N_2}{N}}{1 - \left(\frac{N_2}{N}\right)^2}, \notag\\
     &= \frac{N_2}{N + N_2} \approx \frac{1}{2},
 \end{align}
 in agreement with \eqref{OpticalPumping:OverlappingCondensates:ZeroDetuningEfficiency}.
 
-The definition of the dark state \eqref{OpticalPumping:DarkState} suggests a method of improving this efficiency: if the profiles of the source and lasing modes are not the same but instead the $\Omega_1$ pumping beam first encounters atoms in the lasing mode before atoms in the source mode, the initial projection onto the dark state will be perfect.  If the variation of the source and lasing mode densities occurs over length scales significantly larger than the absorption length scale for the non-dark states ($\displaystyle \frac{4 A_\perp}{\sigma_0 \abs{\Psi_2}^2} \sim \unit[60]{nm}$), then the dark state will be followed adiabatically with minimal losses.  This situation will arise naturally at later times as the source atoms closest to the pumping beam are transferred to the lasing mode.  As this occurs, the pumping beam will encounter a greater proportion of atoms in the lasing mode than at earlier times thus increasing the efficiency.  This behaviour is observed numerically in simulations of the system \eqref{OpticalPumping:OverlappingCondensatesEvolution} as illustrated in \figureref{OpticalPumping:OverlappingCondensatesZeroDetuning}.
+The definition of the dark state \eqref{OpticalPumping:DarkState} suggests a method of improving this efficiency: if the profiles of the source and lasing modes are not the same but instead the $\Omega_{1\leftrightarrow 3}$ pumping beam first encounters atoms in the lasing mode before atoms in the source mode, the initial projection onto the dark state will be perfect.  If the variation of the source and lasing mode densities occurs over length scales significantly larger than the absorption length scale for the non-dark states ($\displaystyle d = \frac{4 A_\perp}{\sigma_0 \abs{\Psi_2}^2} \sim \unit[60]{nm}$), then the dark state will be followed adiabatically with minimal losses.  This situation will arise naturally at later times as the source atoms closest to the pumping beam are transferred to the lasing mode.  As this occurs, the pumping beam will encounter a greater proportion of atoms in the lasing mode than at earlier times thus increasing the efficiency.  This behaviour is observed numerically in simulations of the system \eqref{OpticalPumping:OverlappingCondensatesEvolution} as illustrated in \figureref{OpticalPumping:OverlappingCondensatesZeroDetuning}.
 
 \begin{figure}
     \centering
     \includegraphics[width=15cm]{OverlappingCondensatesZeroDetuning}
-    \caption{Simulation results of the two overlapping condensates model \eqref{OpticalPumping:OverlappingCondensatesEvolution} driven resonantly.  Figure (a) is a snapshot of the densities and magnitudes of the Rabi frequencies at $t = \unit[2]{ms}$.  The instantaneous efficiency is shown in (b).  There are a total of $N = 5 \times 10^5$ atoms in the system, of which initially 5\% are in the source mode ($\ket{1}$), and the system is driven resonantly with $\Omega_1(-\infty) = 3.5 \times \unit[10^5]{s\textsuperscript{-1}}$.}
+    \caption{Simulation results of the two overlapping condensates model \eqref{OpticalPumping:OverlappingCondensatesEvolution} driven resonantly.  Figure (a) is a snapshot of the densities and magnitudes of the Rabi frequencies at $t = \unit[2]{ms}$.  The instantaneous efficiency is shown in (b).  There are a total of $N = 5 \times 10^5$ atoms in the system, of which initially 5\% are in the source mode ($\ket{1}$), and the system is driven resonantly with $\Omega_{1\leftrightarrow 3}(-\infty) = 3.5 \times \unit[10^5]{s\textsuperscript{-1}}$.}
     \label{OpticalPumping:OverlappingCondensatesZeroDetuning}
 \end{figure}
 
-While the efficiency of the population transfer is related to the leading edge of the density profiles, the rate of transfer can be related to the trailing edge.  The fraction of the photons leaving the system in the $\Omega_2$ mode is determined by the dark state at the trailing edge
+While the efficiency of the population transfer is related to the leading edge of the density profiles, the rate of transfer can be related to the trailing edge.  The fraction of the photons leaving the system in the $\Omega_{2\leftrightarrow 3}$ mode is determined by the dark state at the trailing edge
 \begin{align}
-    \abs{\Omega_2(+\infty)}^2 &= \abs{\Omega_1(-\infty)}^2 \abs{\braket{2 \leftrightarrow 3}{D_\text{trailing}}\!\! \braket{D_\text{leading}}{\Psi_\text{initial}}}^2, \\
-    &= \abs{\Omega_1(-\infty)}^2 \frac{N_1}{N} \frac{N_2}{N},
+    \abs{\Omega_{2\leftrightarrow 3}(+\infty)}^2 &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \abs{\braket{2 \leftrightarrow 3}{D_\text{trailing}}\!\! \braket{D_\text{leading}}{\Psi_\text{initial}}}^2, \\
+    &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{N_1}{N} \frac{N_2}{N},
 \end{align}
 where the second equality only applies for short times while the two atomic modes have the same spatial profile, and is in agreement with \eqref{OpticalPumping:OverlappingCondensates:Omega2Infinity} as $\alpha \approx 0$.  The rate of population transfer can therefore be increased by having the dark state at the trailing edge to be almost purely the $\ket{2 \leftrightarrow 3}$ state.  This would be achieved by having the density in the lasing mode decay first before the density in the source mode.  In this limit, every photon in the pumping beam would transfer one atom into the lasing mode.  This possibility is related to the idea of adiabatic population transfer \citep{Kuklinski:1989}, and is investigated further in \sectionref{OpticalPumping:SimpleModels:AtomLaserModel}.
 
 
-This system still suffers from the same problem discussed at the end of \sectionref{OpticalPumping:SingleModeModel}, i.e.\ that the transfer rate is lower than the spontaneous emission rate for atoms that are not momentum resonant with the lasing condensate.  If there is a non-zero time for which the source atoms are not resonant with the lasing condensate (for example, if they must fall from an upper condensate to a lower condensate), this population loss will significantly reduce the overall efficiency of the transfer process.  One possible solution to this problem would be if the pumping process were operated such that every photon in the $\Omega_1$ mode left the system in the $\Omega_2$ mode which the source atoms do not absorb.  This possibility is discussed further in \sectionref{OpticalPumping:SimpleModels:AtomLaserModel}.
+This system still suffers from the same problem discussed at the end of \sectionref{OpticalPumping:SingleModeModel}, i.e.\ that the transfer rate is lower than the spontaneous emission rate for atoms that are not momentum resonant with the lasing condensate.  If there is a non-zero time for which the source atoms are not resonant with the lasing condensate (for example, if they must fall from an upper condensate to a lower condensate), this population loss will significantly reduce the overall efficiency of the transfer process.  One possible solution to this problem would be if the pumping process were operated such that every photon in the $\Omega_{1\leftrightarrow 3}$ mode left the system in the $\Omega_{2\leftrightarrow 3}$ mode which the source atoms do not absorb.  This possibility is discussed further in \sectionref{OpticalPumping:SimpleModels:AtomLaserModel}.
 
 \subsubsection{Far detuned limit ($\Delta \gg \Gamma$)}
 
@@ -596,7 +596,7 @@ Although the continuous pumping experiment described in \sectionref{OpticalPumpi
 \end{align}
 where the same values have been used as in the resonant case.  Efficiencies close to unity require the magnitude of $\alpha$ to be close to 1.  While this can be achieved relatively easily (a detuning of a few 10's of linewidths is enough for the experimental parameters), the rate of population transfer depends strongly on the phase of $\alpha$ [see \eqref{OpticalPumping:OverlappingCondensates:TransferRate}].  If the detuning is not sufficiently large to make the phase of $\alpha$ small, the photons will Rabi flop between the $\ket{1 \leftrightarrow 3}$ and $\ket{2 \leftrightarrow 3}$ modes, reducing the rate of transfer into the lasing mode.  In this limit, the transfer rate into the lasing mode averaged over all phases for $\alpha$ is
 \begin{align}
-    \overline{\frac{d N_2}{dt}} &= \abs{\Omega_1(-\infty)}^2 \frac{16 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \approx \abs{\Omega_1(-\infty)}^2 \frac{16 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N_2}, \label{OpticalPumping:OverlappingCondensates:IntermediateDetuningTransferRate}
+    \overline{\frac{d N_2}{dt}} &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{16 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N} \frac{N_2}{N} \approx \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \frac{16 A_\perp}{\Gamma \sigma_0} \frac{N_1}{N_2}, \label{OpticalPumping:OverlappingCondensates:IntermediateDetuningTransferRate}
 \end{align}
 which is twice that in the zero detuning limit \eqref{OpticalPumping:OverlappingCondensates:ZeroDetuningTransferRate}, and hence decreases as the occupation of the lasing mode increases.  The factor of two difference comes from the difference in efficiency: in this case the efficiency is approximately 100\%, while it is 50\% in the zero detuning limit.
 
@@ -606,7 +606,7 @@ The situation is much improved if the pumping light is sufficiently detuned that
 \end{align}
 the transfer rate is
 \begin{align}
-    \frac{d N_2}{dt} &\approx \frac{\abs{\Omega_1(-\infty)}^2}{\Delta} \frac{\sigma_0}{8 A_\perp} \frac{\Gamma}{\Delta} N_1 N_2, \label{OpticalPumping:OverlappingCondensates:FarDetuningTransferRate}
+    \frac{d N_2}{dt} &\approx \frac{\abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2}{\Delta} \frac{\sigma_0}{8 A_\perp} \frac{\Gamma}{\Delta} N_1 N_2, \label{OpticalPumping:OverlappingCondensates:FarDetuningTransferRate}
 \end{align}
 with an efficiency
 \begin{align}
@@ -616,7 +616,7 @@ The transfer rate for very high detunings displays Bose-enhancement as it increa
 
 As the transfer rate at high-detunings is Bose-enhanced, the system does not suffer from the same problem with spontaneous emission as exists closer to resonance.  The spontaneous emission rate of source atoms in the absence of the condensate,
 \begin{align}
-    \left. \frac{d N_1}{dt} \right|_\text{no condensate} &\approx - \frac{\abs{\Omega_1(-\infty)}^2}{\Delta^2}\Gamma N_1,
+    \left. \frac{d N_1}{dt} \right|_\text{no condensate} &\approx - \frac{\abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2}{\Delta^2}\Gamma N_1,
 \end{align}
 is significantly lower than the pumping rate in the presence of the lasing mode \eqref{OpticalPumping:OverlappingCondensates:FarDetuningTransferRate},
 \begin{align}
@@ -625,50 +625,83 @@ is significantly lower than the pumping rate in the presence of the lasing mode 
 where this ratio is $\sim 60$ for the parameters of the continuous pumping experiment.
 
 \subsubsection{Counter-propagating optical modes}
-The behaviour of this system in the case that $\Omega_1$ and $\Omega_2$ are counter-propagating is not qualitatively different from that described previously for the co-propagating case.  This is because the pumping beam $\Omega_1$ cannot be significantly reduced by propagating through the system when the source mode is significantly less occupied than the lasing mode ($N_1 \ll N_2$).  After propagating through the system (in the co-propagating case), $\Omega_1$ is
+The behaviour of this system in the case that $\Omega_{1\leftrightarrow 3}$ and $\Omega_{2\leftrightarrow 3}$ are counter-propagating is not qualitatively different from that described previously for the co-propagating case.  This is because the pumping beam $\Omega_{1\leftrightarrow 3}$ cannot be significantly reduced by propagating through the system when the source mode is significantly less occupied than the lasing mode ($N_1 \ll N_2$).  After propagating through the system (in the co-propagating case), $\Omega_{1\leftrightarrow 3}$ is
 \begin{align}
-    \abs{\Omega_1(+\infty)}^2 &= \abs{\Omega_1(-\infty)}^2 \abs{1 + \frac{N_1}{N}\left(\alpha - 1\right)}^2.
+    \abs{\Omega_{1\leftrightarrow 3}(+\infty)}^2 &= \abs{\Omega_{1\leftrightarrow 3}(-\infty)}^2 \abs{1 + \frac{N_1}{N}\left(\alpha - 1\right)}^2.
 \end{align}
-For $N_1 \ll N$, $\Omega_1$ changes negligibly propagating through the system and is well approximated by a constant.  Being constant, its propagation direction relative to that of $\Omega_2$ can be expected to have little effect on the system's dynamics.  This is observed in numerical simulations of \eqref{OpticalPumping:OverlappingCondensatesEvolution}.
+For $N_1 \ll N$, $\Omega_{1\leftrightarrow 3}$ changes negligibly propagating through the system and is well approximated by a constant.  Being constant, its propagation direction relative to that of $\Omega_{2\leftrightarrow 3}$ can have little effect on the system's dynamics.  This is observed in simulations of \eqref{OpticalPumping:OverlappingCondensatesEvolution}.
 
 
-\subsection{Atom laser model}
+\subsection{Simple atom laser model}
 \label{OpticalPumping:SimpleModels:AtomLaserModel}
 
 \begin{figure}
     \centering
     \includegraphics[width=12cm]{TravellingBeamModel}
-    \caption{Schematic of the travelling beam model.}
+    \caption{Schematic of the travelling beam model.  The additional excited level that is a necessary part of the Raman outcoupling process has been suppressed to simplify the diagram.  This scheme is governed by \eqref{OpticalPumping:TravellingBeamEvolution}.}
     \label{OpticalPumping:TravellingBeamModel}
 \end{figure}
 
+The previous model suggested that efficient population transfer with resonant light might be possible if the source and lasing modes partially overlap such that the first resonant atoms the pumping photons encounter are in the lasing mode and the last are in the source mode.  One way this might occur which is relevant to the continuous pumping experiment is illustrated in \figureref{OpticalPumping:TravellingBeamModel}.  In this model there are two trapped condensates, the source condensate $\ket{\text{S}}$, and the lasing condensate $\ket{\text{L}}$.  Atoms are outcoupled from the source condensate via a Raman transition to form an atom laser $\ket{\text{A}}$.  The Raman process gives atoms a $2 \hbar k$ momentum kick to the left as they are outcoupled from the source condensate.  The atom laser forms the source mode for the pumping process considered in the previous section (see \figureref{OpticalPumping:OverlappingCondensateModel}).  In this pumping process, light on the $\ket{A} \leftrightarrow \ket{\text{E}}$ transition is applied from the left with detuning $\Delta$ and an initial Rabi frequency of $\Omega_{\text{A}\leftrightarrow\text{E}}(-\infty)$.  Light on the $\ket{\text{L}} \leftrightarrow \ket{\text{E}}$ transition is produced as atoms in the excited state $\ket{\text{E}}$ are stimulated to emit into the lasing condensate $\ket{\text{L}}$.  Similarly to \sectionref{OpticalPumping:SimpleModels:OverlappingCondensatesModel}, we consider the cases in which the light on the $\ket{\text{L}} \leftrightarrow \ket{\text{E}}$ transition propagates from the right or the left.  Physically, only the case in which $\Omega_{\text{L}\leftrightarrow\text{E}}$ propagates from the right can be momentum resonant as the $2 \hbar k$ of momentum transferred in this process will cancel the momentum of the atoms in the atom laser.  The process in which $\Omega_{\text{L}\leftrightarrow\text{E}}$ propagates from the left is interesting, however, as a model of the zero momentum-transfer pumping process described at the end of \sectionref{OpticalPumping:ContinuousExperiment} in which atoms from the source condensate are outcoupled into the source mode and then immediately undergo the stimulated $\ket{\text{A}} \rightarrow \ket{\text{E}} \rightarrow \ket{\text{L}}$ pumping process with no net momentum transfer.  When considering this process in the present model, the equations of motion are slightly modified to make the otherwise unphysical process momentum-resonant.
 
-
-Investigation of the previous model (the overlapping condensates model) suggested that if the source mode were offset from
-
-The second idealised model is much closer to the experimental system.  We have two condensates, we outcouple from one of them to produce an atom laser beam that propagates towards the other and stuff, concrete and ice cream happens for this one.
-
-
-The equations here are
+The equations of motion for this system are similar to those for the previous model with the difference that the source mode (the atom laser) is coupled via a Raman transition to a second condensate,
 \begin{subequations}
     \label{OpticalPumping:TravellingBeamEvolution}
     \begin{align}
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi_\text{L}(x) &= \left[ - \frac{\hbar^2}{2M} \frac{d^2}{dx^2} + V_\text{left}(x) + U_\text{1D}\left(\abs{\Psi_\text{L}}^2 + \abs{\Psi_\text{M}}^2 + \abs{\Psi_\text{R}}^2\right) \right] \Psi_\text{R}\\
-            &\relphantom{=} +\hbar \Omega_\text{Raman} \Psi_\text{M}
-        \end{split}\\
+            i \hbar \frac{\partial}{\partial t} \Psi_\text{S}(x) &= \left[ - \frac{\hbar^2}{2M} \frac{d^2}{dx^2} + V_\text{S}(x) + U_\text{1D}\left(\abs{\Psi_\text{S}}^2 + \abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2\right) \right] \Psi_\text{S}\\
+            &\relphantom{=} +\hbar \Omega_\text{Raman} \Psi_\text{A}
+        \end{split} \label{OpticalPumping:TravellingBeamEvolution:CondensatesEvolution:PsiS}\\
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi_\text{M}(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + U_\text{1D}\left(\abs{\Psi_\text{L}}^2 + \abs{\Psi_\text{M}}^2 + \abs{\Psi_\text{R}}^2\right)  \right] \Psi_\text{M}\\
-            &\relphantom{=} + \hbar \Omega^*_\text{Raman} \Psi_\text{L} - \hbar \frac{\abs{\Omega_\text{M}}^2\Psi_\text{M} + \Omega_\text{M}^* \Omega_\text{R}^{\phantom{*}}\Psi_\text{R}}{\Delta - \frac{i}{2} \Gamma},
-        \end{split} \label{OpticalPumping:TravellingBeamEvolution:CondensatesEvolution:PsiM}\\
+            i \hbar \frac{\partial}{\partial t} \Psi_\text{A}(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + U_\text{1D}\left(\abs{\Psi_\text{S}}^2 + \abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2\right)  \right] \Psi_\text{A}\\
+            &\relphantom{=} + \hbar \Omega^*_\text{Raman} \Psi_\text{S} - \hbar \frac{\abs{\Omega_{\text{A}\leftrightarrow\text{E}}}^2\Psi_\text{A} + \Omega_{\text{A}\leftrightarrow\text{E}}^* \Omega_{\text{L}\leftrightarrow\text{E}}^{\phantom{*}}\Psi_\text{L}}{\Delta - \frac{i}{2} \Gamma},
+        \end{split} \label{OpticalPumping:TravellingBeamEvolution:CondensatesEvolution:PsiA}\\
         \begin{split}
-            i \hbar \frac{\partial}{\partial t} \Psi_\text{R}(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{right}(x) + U_\text{1D}\left(\abs{\Psi_\text{L}}^2 + \abs{\Psi_\text{M}}^2 + \abs{\Psi_\text{R}}^2\right)  \right] \Psi_\text{R}\\
-            &\relphantom{=} - \hbar \frac{\abs{\Omega_\text{R}}^2 \Psi_\text{R} + \Omega_\text{R}^* \Omega_\text{M}^{\phantom{*}} \Psi_\text{M}}{\Delta - \frac{i}{2} \Gamma},
-        \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:PsiR}\\
-        \frac{d}{dx} \Omega_\text{M} &= i k \Omega_\text{M} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{M}}^2 \Omega_\text{M} + \Psi_\text{M}^* \Psi_\text{R}^{\phantom{*}}\Omega_\text{R}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaM}\\
-        \pm \frac{d}{dx} \Omega_\text{R} &= i k \Omega_\text{R} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{R}}^2 \Omega_\text{R} + \Psi_\text{R}^* \Psi_\text{M}^{\phantom{*}} \Omega_\text{M}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaR}
+            i \hbar \frac{\partial}{\partial t} \Psi_\text{L}(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{L}(x) + U_\text{1D}\left(\abs{\Psi_\text{S}}^2 + \abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2\right)  \right] \Psi_\text{L}\\
+            &\relphantom{=} - \hbar \frac{\abs{\Omega_{\text{L}\leftrightarrow\text{E}}}^2 \Psi_\text{L} + \Omega_{\text{L}\leftrightarrow\text{E}}^* \Omega_{\text{A}\leftrightarrow\text{E}}^{\phantom{*}} \Psi_\text{A}}{\Delta - \frac{i}{2} \Gamma},
+        \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:PsiL}\\
+        \frac{d}{dx} \Omega_{\text{A}\leftrightarrow\text{E}} &= i k \Omega_{\text{A}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{A}}^2 \Omega_{\text{A}\leftrightarrow\text{E}} + \Psi_\text{A}^* \Psi_\text{L}^{\phantom{*}}\Omega_{\text{L}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaA}\\
+        \pm \frac{d}{dx} \Omega_{\text{L}\leftrightarrow\text{E}} &= i k \Omega_{\text{L}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{L}}^2 \Omega_{\text{L}\leftrightarrow\text{E}} + \Psi_\text{L}^* \Psi_\text{A}^{\phantom{*}} \Omega_{\text{A}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaL}
     \end{align}
 \end{subequations}
+where $\Omega_\text{Raman}(x) = \Omega_\text{Raman}(0) e^{- 2 i k x}$.  In the absence of any clear limits in which these equations may be solved analytically, we investigate their behaviour numerically in the limit of resonant and far detuned pumping light.
+
+\subsubsection{Zero detuning limit ($\Delta = 0$)}
+
+When an atom in the atom laser absorbs a photon from the $\Omega_{\text{A}\leftrightarrow\text{E}}$ mode and undergoes spontaneous emission, both the photon and the atom are removed from the system.  If the fluxes of the two are balanced, then there will be a region of overlap between the two where they interact; outside this region there will either be no photons (in the $\Omega_{\text{A}\leftrightarrow\text{E}}$ mode) or no  atom laser.  If the fluxes are unbalanced even only slightly, this overlap region will begin to move.  As the fluxes do not change in the absence of direct atom--light interactions, the overlap region will never reach equilibrium.  If the photon flux exceeds the atom flux then the system will reach equilibrium when the atoms in the atom laser undergo spontaneous emission almost immediately after being outcoupled.  If the atom flux exceeds the photon flux, the overlap region will move in the $-x$ direction at a constant velocity forever.  This extreme sensitivity is an artefact of the reduction of the system to a single dimension, in higher dimensions it is the \emph{flux densities} which must balance, not the \emph{fluxes}.  As the atom laser beam propagates the beam will diffuse in the transverse dimensions reducing the atomic flux density along the line through the centres of the condensates.  Variations in the total fluxes of either the fluxes or photons will therefore simply alter the equilibrium position of the overlap region until the flux densities balance.
+
+While this problem could be resolved by considering a two- or three-dimensional model instead of the one-dimensional model of \eqref{OpticalPumping:TravellingBeamEvolution}, a simpler solution is to assume the instantaneous behaviour of the one-dimensional model as representative of equilibrium behaviour in a higher-dimensional model.  In our modelling of this system the pumping light ($\Omega_{\text{A}\leftrightarrow\text{E}}$) is turned on after some delay, and at an appropriate flux to approximately balance the atom laser flux.
+
+For the pumping process to be efficient when operated with resonant pumping light the photons must remain in the dark state of the system as much as possible.  The length scale over which the system can adjust to changes in the dark state must be significantly shorter than the characteristic length scale over which the dark state changes.  In the notation of this model, the dark state is
+\begin{align}
+    \ket{D} &= \frac{1}{\sqrt{\abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2}} \left(\Psi_\text{L} \ket{\text{A} \leftrightarrow \text{E}}- \Psi_\text{A} \ket{\text{L} \leftrightarrow \text{E}}\right). \label{OpticalPumping:TravellingBeam:DarkState}
+\end{align}
+The length scale over which the system adjusts to changes in this dark state is
+\begin{align}
+     d &= \frac{4 A_\perp}{\sigma_0 \left(\abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2 \right)}.
+\end{align}
+If a large fraction of the atom laser is to be transferred to the lasing condensate, the density of the atom laser must reduce to zero within the lasing condensate.  At this point the dark state will have all of the photons in the $\Omega_{\text{A}\leftrightarrow\text{E}}$ mode.  Outside of the lasing condensate, the atom laser density will be non-zero, but the density of the lasing condensate will be zero and the dark state will have all of the photons in the $\Omega_{\text{L}\leftrightarrow\text{E}}$ mode.  The characteristic length scale for changes in the dark state can therefore be no larger than the Thomas-Fermi radius, which in this system is $r_\text{TF} \approx \unit[5]{\micro m}$.  Numerical simulations of the system show that the actual length scale over which the dark state changes is closer to $\unit[1]{\micro m}$.
+
+Ideally, a large fraction of the atom laser beam should be transferred to the lasing condensate. For this to occur, either the dark state must be followed as much as possible.  If the dark state following length scale $d$ were to exceed the length scale for changes to the dark state at some position, the dark state at this position would determine the fraction of the atom laser transferred to the lasing condensate.  The dark state 
+
+
+the dark state can be 
+
+
+Efficient pumping using resonant light requires 
+
+
+For there to be efficient pumping in the presence of resonant pumping
+
+
+In the resonant case we can discuss the trade-off of pumping photons for atoms in the atom laser.  Then argue that this only occurs in one dimension and that the behaviour will far more stable in higher dimensions.  Regardless, the instantaneous efficiency should still be a good measure of the maximum attainable efficiency.  Then demonstrate some results.  Maximum efficiency of around $\sim 15\%$, though that is not directly comparable to the continuous pumping experiment.  Though this efficiency is strongly dependent on the atom laser flux as the interaction region needs to be of a size comparable to that of the lasing condensate (or ideally smaller).
+
+\begin{itemize}
+    \item Fluxes in 1D: photonic vs atomic
+\end{itemize}
+
+\subsubsection{Far detuned limit ($\Delta \gg \Gamma$)}
+
 
 
 First we discuss the on-resonance case and mention why it is so fiddly.  Despite this, some meaningful information can be obtained if we take an appropriate time point as a representation of a possible steady-state of the full system.  We will not study the full system.  We get instantaneous efficiency numbers out of this.  We also consider co- and counter-propagating.

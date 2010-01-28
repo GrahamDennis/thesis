@@ -682,23 +682,28 @@ The length scale over which the system adjusts to changes in this dark state is
 \end{align}
 If a large fraction of the atom laser is to be transferred to the lasing condensate, the density of the atom laser must reduce to zero within the lasing condensate.  At this point the dark state will have all of the photons in the $\Omega_{\text{A}\leftrightarrow\text{E}}$ mode.  Outside of the lasing condensate, the atom laser density will be non-zero, but the density of the lasing condensate will be zero and the dark state will have all of the photons in the $\Omega_{\text{L}\leftrightarrow\text{E}}$ mode.  The characteristic length scale for changes in the dark state can therefore be no larger than the Thomas-Fermi radius, which in this system is $r_\text{TF} \approx \unit[5]{\micro m}$.  Numerical simulations of the system show that the actual length scale over which the dark state changes is closer to $\unit[1]{\micro m}$.
 
-Ideally, a large fraction of the atom laser beam should be transferred to the lasing condensate. For this to occur, either the dark state must be followed as much as possible.  If the dark state following length scale $d$ were to exceed the length scale for changes to the dark state at some position, the dark state at this position would determine the fraction of the atom laser transferred to the lasing condensate.  The dark state 
+Ideally, a large fraction of the atom laser beam should be transferred to the lasing condensate. For this to occur, either the dark state must be followed as much as possible.  The dark state will be changing the fastest when the densities of the atom laser and the lasing condensate are approximately equal.  The dark state following length scale at this position must therefore be much smaller than the length scale over which the dark state changes.  For this requirement to be satisfied, the atom laser must be significantly greater than a minimum density,
+\begin{align}
+    d & \ll r_\text{TF}, \\
+    \frac{4 A_\perp}{\sigma_0 \left(\abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2\right)} & \ll r_\text{TF}, \notag\\
+    \frac{4 A_\perp}{\sigma_0 2 \abs{\Psi_\text{A}}^2} &\ll r_\text{TF}, \notag\\
+    \abs{\Psi_\text{A}}^2 &\gg \frac{2 A_\perp}{\sigma_0 r_\text{TF}}.
+\end{align}
+Given that the atom laser has momentum $2 \hbar k$, this density requirement can be rewritten as a requirement on the flux $\Phi_\text{A}$ of the atom laser,
+\begin{align}
+    \Phi_\text{A} \gg \frac{4 \hbar k A_\perp}{\sigma_0 M r_\text{TF}} \approx 5\times\unit[10^6]{s\textsuperscript{-1}},
+\end{align}
+where a numerical value for the minimum flux has been obtained using the experimentally-relevant values $\lambda = \unit[780]{nm}$, $A_\perp = 3\times \unit[10^{-10}]{m\textsuperscript{2}}$, $r_\text{TF} = \unit[5]{\micro m}$.  At this flux, the source condensate of $N_\text{S} = 5 \times 10^5$ atoms would be depleted in $\unit[100]{ms}$.  For a high efficiency to be achieved, the source condensate would need to be depleted in significantly less time than this.  In the continuous pumping experiment, the source condensate of $6.7 \times 10^5$ atoms was outcoupled over $\unit[200]{ms}$ giving an average flux of $3.4\times\unit[10^6]{s\textsuperscript{-1}}$, lower than the above requirement.  This only precludes efficient operation of the $2\hbar k$ momentum-transfer pumping process.  For the $0 \hbar k$ momentum-transfer pumping process, the requirement on the density of the atom laser still applies, however this cannot be simply translated into a requirement on the flux as the atom laser is approximately stationary when undergoing pumping into the lasing condensate.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm]{TravellingBeamZeroDetuningResults}
+    \caption{FIXME: This is not a caption}
+    \label{OpticalPumping:TravellingBeamZeroDetuningResults}
+\end{figure}
 
 
-the dark state can be 
-
-
-Efficient pumping using resonant light requires 
-
-
-For there to be efficient pumping in the presence of resonant pumping
-
-
-In the resonant case we can discuss the trade-off of pumping photons for atoms in the atom laser.  Then argue that this only occurs in one dimension and that the behaviour will far more stable in higher dimensions.  Regardless, the instantaneous efficiency should still be a good measure of the maximum attainable efficiency.  Then demonstrate some results.  Maximum efficiency of around $\sim 15\%$, though that is not directly comparable to the continuous pumping experiment.  Though this efficiency is strongly dependent on the atom laser flux as the interaction region needs to be of a size comparable to that of the lasing condensate (or ideally smaller).
-
-\begin{itemize}
-    \item Fluxes in 1D: photonic vs atomic
-\end{itemize}
+To illustrate these conclusions, we show some results from the model \eqref{OpticalPumping:TravellingBeamEvolution} for high and low atom laser fluxes.   
 
 \subsubsection{Far detuned limit ($\Delta \gg \Gamma$)}
 

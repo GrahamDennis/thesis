@@ -128,6 +128,13 @@ The continuous pumping experiment just described was designed to transfer $2 \hb
 
 These two different processes are examined in greater detail theoretically in \sectionref{OpticalPumping:MultimodeModel}, however we begin our theoretical analysis of the experiment and the pumping mechanism more generally with a simple single-mode model of the process illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).
 
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm]{WhichWayDidThePhotonsGo?}
+    \caption{FIXME: Caption}
+    \label{OpticalPumping:WhichWayDidThePhotonsGo?}
+\end{figure}
+
 
 \section{Simple single-mode model}
 \label{OpticalPumping:SingleModeModel}
@@ -693,7 +700,7 @@ Given that the atom laser has momentum $2 \hbar k$, this density requirement can
 \begin{align}
     \Phi_\text{A} \gg \frac{4 \hbar k A_\perp}{\sigma_0 M r_\text{TF}} \approx 5\times\unit[10^6]{s\textsuperscript{-1}},
 \end{align}
-where a numerical value for the minimum flux has been obtained using the experimentally-relevant values $\lambda = \unit[780]{nm}$, $A_\perp = 3\times \unit[10^{-10}]{m\textsuperscript{2}}$, $r_\text{TF} = \unit[5]{\micro m}$.  At this flux, the source condensate of $N_\text{S} = 5 \times 10^5$ atoms would be depleted in $\unit[100]{ms}$.  For a high efficiency to be achieved, the source condensate would need to be depleted in significantly less time than this.  In the continuous pumping experiment, the source condensate of $6.7 \times 10^5$ atoms was outcoupled over $\unit[200]{ms}$ giving an average flux of $3.4\times\unit[10^6]{s\textsuperscript{-1}}$, lower than the above requirement.  This only precludes efficient operation of the $2\hbar k$ momentum-transfer pumping process.  For the $0 \hbar k$ momentum-transfer pumping process, the requirement on the density of the atom laser still applies, however this cannot be simply translated into a requirement on the flux as the atom laser is approximately stationary when undergoing pumping into the lasing condensate.
+where a numerical value for the minimum flux has been obtained using the experimentally-relevant values $\lambda = \unit[780]{nm}$, $A_\perp = 3\times \unit[10^{-10}]{m\textsuperscript{2}}$, $r_\text{TF} = \unit[5]{\micro m}$.  At this flux, a source condensate of $N_\text{S} = 5 \times 10^5$ atoms would be depleted in $\unit[100]{ms}$.  For a high efficiency to be achieved, the source condensate would need to be depleted in significantly less time than this.  In the continuous pumping experiment, the source condensate of $6.7 \times 10^5$ atoms was outcoupled over $\unit[200]{ms}$ giving an average flux of $3.4\times\unit[10^6]{s\textsuperscript{-1}}$, lower than the above requirement.  This only precludes efficient operation of the $2\hbar k$ momentum-transfer pumping process.  For the $0 \hbar k$ momentum-transfer pumping process, the requirement on the density of the atom laser still applies, however this cannot be simply translated into a requirement on the flux as the atom laser is approximately stationary when undergoing pumping into the lasing condensate.
 
 \begin{figure}
     \centering
@@ -705,12 +712,14 @@ where a numerical value for the minimum flux has been obtained using the experim
     The figures of the right column are in the limit of a lower-flux atom laser ($\Omega_\text{Raman} = 1 \times \unit[10^2]{s\textsuperscript{-1}}$, $\Phi_\text{A} \approx 3\times \unit[10^6]{s\textsuperscript{-1}}$, $\Omega_{\text{A}\leftrightarrow\text{E}}(-\infty) = 1.1\times\unit[10^5]{s\textsuperscript{-1}}$) with a flux similar to that of the continuous pumping experiment.  
     In all simulations the optical pumping laser $\Omega_{\text{A}\leftrightarrow\text{E}}$ is turned on when the atom laser is half-way inside the lasing condensate at $t=\unit[1.6]{ms}$ to approximate equilibrium conditions in a higher-dimensional model (see main text).  The value of $\Omega_{\text{A} \leftrightarrow \text{E}}(-\infty)$ is chosen such that the photon flux balances the atom laser flux.
     Due to the limitations of the 1D nature of this model (see main text), the peak-efficiency of each simulation should be taken to be representative of possible steady-state efficiencies of higher-dimensional models.  The peak-efficiencies of the four simulations are (a) 54\%, (b) 3.5\%, (c) 33\%, (d) 2.7\%.
-The different times for the snapshots are chosen to be close to the point of maximum efficiency to best illustrate the transfer process in each case.}
+The different times for the snapshots are chosen to be close to the point of maximum efficiency to best illustrate the transfer process in each case.
+    In all simulations the source and lasing condensates are trapped in $\omega = 2 \pi \times \unit[128]{Hz}$ traps, separated by $\unit[20]{\micro m}$ and initially have $N_\text{S} = N_\text{L} = 5 \times \unit[10^5]{atoms}$.
+}
     \label{OpticalPumping:TravellingBeamZeroDetuningResults}
 \end{figure}
 
+\figureref{OpticalPumping:TravellingBeamZeroDetuningResults} illustrates these conclusions showing some results from the model \eqref{OpticalPumping:TravellingBeamEvolution} for high and low atom laser fluxes.  In particular, the results for higher atom laser fluxes yield higher efficiencies (54\% and 33\% for (a) and (c) respectively) than for lower atom laser fluxes (3.5\% and 2.7\% for (b) and (d) respectively).
 
-To illustrate these conclusions, we show some results from the model \eqref{OpticalPumping:TravellingBeamEvolution} for high and low atom laser fluxes.   
 
 \subsubsection{Far detuned limit ($\Delta \gg \Gamma$)}
 

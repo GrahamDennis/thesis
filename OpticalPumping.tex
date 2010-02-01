@@ -124,14 +124,14 @@ A second experiment was also performed simultaneously pumping the laser-mode BEC
 
 \parasep
 
-The continuous pumping experiment just described was designed to transfer $2 \hbar k$ of momentum to the falling $\ket{2, 0}$ atoms (by absorbing a photon of momentum $\hbar k$ going up and then emitting a photon of similar momentum directed downwards) as they are transferred to the laser-mode condensate.  However, there is a second way for these atoms to be momentum-resonant with the laser-mode condensate.  If the outcoupling surface for the upper condensate is towards the lower edge of the condensate the outcoupled atoms will be in close proximity to the laser-mode condensate immediately below due to the slight spatial overlap.  These recently outcoupled atoms will have almost no momentum and will be able to absorb a $\pi$-polarised photon with momentum $\hbar k$ upwards and emit a $\sigma^+$-polarised photon of similar momentum also directed upwards, decaying into the lower laser-mode condensate with no net momentum transfer.
+The continuous pumping experiment just described was designed to transfer $2 \hbar k$ of momentum to the falling $\ket{2, 0}$ atoms (by absorbing a photon of momentum $\hbar k$ going up and then emitting a photon of similar momentum directed downwards) as they are transferred to the laser-mode condensate.  However, there is a second way for these atoms to be momentum-resonant with the laser-mode condensate.  If the outcoupling surface for the upper condensate is towards the lower edge of the condensate the outcoupled atoms will be in close proximity to the laser-mode condensate immediately below due to the slight spatial overlap.  These recently outcoupled atoms will have almost no momentum and will be able to absorb a $\pi$-polarised photon with momentum $\hbar k$ upwards and emit a $\sigma^+$-polarised photon of similar momentum also directed upwards, decaying into the lower laser-mode condensate with no net momentum transfer.  These two processes are illustrated in \figureref{OpticalPumping:WhichWayDidThePhotonsGo?}.
 
 These two different processes are examined in greater detail theoretically in \sectionref{OpticalPumping:MultimodeModel}, however we begin our theoretical analysis of the experiment and the pumping mechanism more generally with a simple single-mode model of the process illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).
 
 \begin{figure}
     \centering
     \includegraphics[width=12cm]{WhichWayDidThePhotonsGo?}
-    \caption{FIXME: Caption}
+    \caption{Illustration of the two potential pumping processes that could occur in the continuous pumping experiment.  The freely-falling atoms form the atom laser in the $\ket{2, 0}$ state and can undergo stimulated transitions into the lasing condensate in one of two processes.  If the atoms are outcoupled from the lower part of the source condensate, they may immediately absorb a pumping photon from below and emit one in the same direction to decay into the lasing condensate with no net change in momentum (a).  If the atoms are outcoupled from the centre of the source condensate, they may fall under gravity for approximately $\unit[1]{ms}$ gaining approximately $2 \hbar k$ of momentum before absorbing a pumping photon from below and emitting one downwards to decay into the source condensate with a net momentum transfer of $2 \hbar k$ (b).}
     \label{OpticalPumping:WhichWayDidThePhotonsGo?}
 \end{figure}
 
@@ -723,6 +723,95 @@ The different times for the snapshots are chosen to be close to the point of max
 
 \subsubsection{Far detuned limit ($\Delta \gg \Gamma$)}
 
+In the limit of large detuning spontaneous emission should be reduced, however there is still the potential for losses as the atom laser propagates between the source and lasing condensates due to off-resonant interactions with the intense $\Omega_{\text{A} \leftrightarrow \text{E}}$ optical mode.  These losses may be estimated fractionally as
+\begin{align}
+    r_\text{loss} &= 1 - \exp\left( - \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}^2}{\Delta^2} \Gamma t \right), \label{OpticalPumping:TravellingBeam:FarDetuned:PropagationLoss}
+\end{align}
+where $t$ is the time the atom laser takes to propagate from the source to lasing condensates.  Minimising this loss requires
+\begin{align}
+    \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}^2}{\Delta^2} \Gamma t \ll 1.
+\end{align}
+Although this is the dominant loss in the system, the remaining fraction of the atom laser may not be fully transferred into the lasing condensate.  The transfer process must also be considered to determine the overall behaviour of the pumping mechanism in this limit.
+
+In the limit of large detuning the suppression of spontaneous emission means that the photon and atom laser fluxes need not be exactly balanced for a steady-state to be reached, as in the resonant case.  To study the steady-state of the system in the limit that the source and lasing condensate numbers are not changing too quickly, the equations of motion may be simplified by moving into appropriate rotating frames to remove simple phase rotation and neglecting spontaneous emission.  In this limit the source and lasing condensates can be assumed to be constant in time, and the Rabi frequency $\Omega_{\text{A} \leftrightarrow \text{E}}$ will be sufficiently large to be negligibly reduced after propagation through the system and may be assumed to be constant in space.  Our interest is principally in the transfer process itself.  This may be investigated by considering the simplified propagation equations for the atom laser $\Psi_\text{A}$ and the $\Omega_{\text{L} \leftrightarrow \text{E}}$ optical mode as they traverse the lasing condensate in steady state,
+\begin{subequations}
+    \label{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution}
+    \begin{align}
+        \frac{\partial}{\partial x} \Psi_\text{A} &= -i \frac{M}{2 \hbar k} \frac{\Omega_{\text{A}\leftrightarrow\text{E}}^* \Omega_{\text{L} \leftrightarrow \text{E}}^{\phantom{*}}}{\Delta} \Psi_\text{L}, \label{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution:PsiA}\\
+        \frac{\partial}{\partial x} \Omega_{\text{L} \leftrightarrow \text{E}} &= \pm \frac{i}{8} \frac{\Gamma}{\Delta} \frac{\sigma_0}{A_\perp} \Psi_\text{L}^* \Psi_\text{A}^{\phantom{*}} \Omega_{\text{A} \leftrightarrow \text{E}}, \label{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution:OmegaLE}
+    \end{align}
+\end{subequations}
+where the `$\pm$' sign in \eqref{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution:OmegaLE} corresponds to propagation of $\Omega_{\text{L} \leftrightarrow \text{E}}$ in the $\pm x$ direction.  These equations can be solved analytically as the phases of $\Psi_\text{L}$ and $\Omega_{\text{A} \leftrightarrow \text{E}}$ may be absorbed into the other terms without changing the form of the equations.
+
+The solution to the system for the `$+$' sign of \eqref{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution:OmegaLE} (the $0 \hbar k$ momentum-transfer process) may be found by applying the boundary conditions
+\begin{subequations}
+    \begin{align}
+        \Psi_\text{A}(x=0) &= \Psi_\text{A}(0), \\
+        \Omega_{\text{L} \leftrightarrow \text{E}}(-\infty) &= 0,
+    \end{align}
+\end{subequations}
+where $x=0$ is chosen to be between the source and lasing condensates (see \figureref{OpticalPumping:TravellingBeamZeroDetuningResults}).  The steady-state solution for the atom laser can be shown to be
+\begin{align}
+    \Psi_\text{A}(x) &= \Psi_\text{A}(0) \frac{e^{w(x) - 2 w(-\infty)} + e^{-w(x)}}{1 + e^{-2 w(x)}},
+\end{align}
+where $w(x)$ is the dimensionless function
+\begin{align}
+    w(x) &= \frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{ \frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{x}^{0} \abs{\Psi_\text{L}}\, dx.
+\end{align}
+As all atoms transferred out of the atom laser must go into the lasing condensate (as spontaneous emission has been neglected), the efficiency of the transfer process itself is given by
+\begin{align}
+    \eta &= 1 - \frac{\abs{\Psi_\text{A}(-\infty)}^2}{\abs{\Psi_\text{A}(0)}^2} = 1-\sech^2\left(\frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^{0} \abs{\Psi_\text{L}}\, dx \right) \notag \\
+    &= 1-\sech^2\left(\frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^{+\infty} \abs{\Psi_\text{L}}\, dx \right),
+\end{align}
+where the integral has been extended to $+\infty$ as $\Psi_\text{L}(x\geq 0) = 0$ (refer to \figureref{OpticalPumping:TravellingBeamZeroDetuningResults}).  Efficient operation of this pumping process therefore requires
+\begin{align}
+    \frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^{+\infty} \abs{\Psi_\text{L}}\, dx \gg 1.
+\end{align}
+
+An illustration of the results of this process are in blah blah blah.
+
+The $0\hbar k$ has a number of features that make it a promising scheme for an atom laser, blah blah blah.  But overlapping condensates are bad.  One way to avoid that would be...
+
+
+
+
+A comparison between this equation and the other requirement yields the interesting conclusion that losses cannot simply be suppressed through appropriate choice of $\Omega_{\text{A} \leftrightarrow \text{E}}$ and detuning as both depend on their ratio.  Instead, the losses are reduced as the lasing condensate increases in size provided that $\abs{\Omega_{\text{A} \leftrightarrow \text{E}}} / \Delta$ is reduced accordingly.
+
+
+
+The behaviour in the case of the `$+$' sign displays a number of useful properties, as $\Omega_{\text{A} \leftrightarrow \text{E}}$ is increased, good stuff happens, yada yada yada.
+
+
+The system of equations \eqref{OpticalPumping:TravellingBeam:FarDetuned:SteadyStateEvolution} may be solved analytically in terms of the dimensionless quantity 
+\begin{align}
+    w(x) &= \frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{ \frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^x \abs{\Psi_\text{L}}\, dx.
+\end{align}
+
+
+
+The phases of $\Psi_\text{L}$ and $\Omega_{\text{A} \leftrightarrow \text{E}}$ may be absorbed into the other terms without changing the equations
+
+
+This yields solutions with eigenvalues satisfying
+\begin{align}
+    \lambda^2 &= \pm \frac{M}{16 \hbar k} \frac{\Omega_{\text{A} \leftrightarrow \text{E}}^2}{\Delta^2} \Gamma \sigma_0
+\end{align}
+
+The co-propagating solution is
+\begin{align}
+    \Psi_\text{A}(+\infty) &= \Psi_\text{A}(0) \sech \left( \frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^{+\infty} \abs{\Psi_\text{L}}\, dx\right)
+\end{align}
+The co-propagating solution is approximately (in the limit of goodness),
+\begin{align}
+    \Psi_\text{A}(x) &= \Psi_\text{A}(0) \exp \left( \frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^x \abs{\Psi_\text{L}} \, dx\right)
+\end{align}
+
+
+The counter-propagating solution is
+\begin{align}
+    \Psi_\text{A}(x) &= \Psi_\text{A}(0) \cos \left(\frac{1}{4} \frac{\abs{\Omega_{\text{A} \leftrightarrow \text{E}}}}{\Delta} \sqrt{\frac{M \Gamma \sigma_0}{\hbar k A_\perp}} \int_{-\infty}^x \abs{\Psi_\text{L}} \, dx\right)
+\end{align}
+While the counter-propagating solution could certainly be made to work in 1D, it would be significantly harder in higher dimensions as the line integral of $\abs{\Psi_\text{L}}$ will vary across the condensate.
 
 
 First we discuss the on-resonance case and mention why it is so fiddly.  Despite this, some meaningful information can be obtained if we take an appropriate time point as a representation of a possible steady-state of the full system.  We will not study the full system.  We get instantaneous efficiency numbers out of this.  We also consider co- and counter-propagating.

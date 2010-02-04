@@ -233,7 +233,7 @@ where $\hat{\Psi}_i(\vect{x})$ is the atomic field operator for the internal ato
 \begin{align}
     \hat{\vect{d}}(\vect{x}) &= \sum_{ij}\vect{d}_{ij} \hat{\Psi}_i^\dagger(\vect{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\vect{x}),
 \end{align}
-where $\vect{d}_{ij} = -e\left<i\middle|\vect{r}\middle|j\right> = \vect{d}_{ji}$ is the dipole matrix element\footnote{These matrix elements may all be chosen to be real as by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962} all matrix elements within the $\text{D}_2$ line (the levels illustrated in \figureref{OpticalPumping:LevelDiagram}) may be written as real multiples of a reduced dipole matrix element for the $\text{D}_2$ transition.} for the atomic transition $i \leftrightarrow j$, and the electric field operator is given by
+where $\vect{d}_{ij} = -e\left<i\middle|\vect{r}\middle|j\right>$ is the dipole matrix element for the atomic transition $i \leftrightarrow j$, and the electric field operator is given by
 \begin{align}
     \hat{\vect{E}}(\vect{x}) &= \sum_\lambda \frac{1}{(2\pi)^{3/2}} \int d \vect{k}\, \left[\unitvec{u}_\lambda(\vect{k}) \left(\frac{\hbar \omega_{\vect{k}}}{2\varepsilon_0} \right)^{\frac{1}{2}} \hat{\Phi}_\lambda(\vect{k}) e^{i \vect{k} \cdot \vect{x}} + \text{h.c.}\right],
 \end{align}
@@ -781,7 +781,7 @@ In this process, the atoms in the atom laser oscillate between the lasing conden
 \begin{figure}
     \centering
     \includegraphics[width=15cm]{TravellingBeamFarDetunedResults}
-    \caption{FIXME: This is not a caption}
+    \caption{FIXME: This is not a caption. Values: $\Omega_{\text{A} \leftrightarrow \text{E}}(-\infty) = 1.5 \times \unit[10^8]{s\textsuperscript{-1}}$, $\Delta = 10^3 \Gamma = 2 \pi \times \unit[5.9]{GHz}$, $\Omega_\text{Raman} = 1 \times \unit[10^2]{s\textsuperscript{-1}}$.  Steady-state efficiencies achieved: (a) 48\%, (b) 19\%.  There is an absorbing boundary reducing the density of the atom laser in both, but this is observed in (b).}
     \label{OpticalPumping:TravellingBeamFarDetunedResults}
 \end{figure}
 
@@ -789,18 +789,65 @@ Through appropriate choice of detuning and $\Omega_{\text{A} \leftrightarrow \te
 
 \subsection{3-level model}
 
-\subsection{5-level model}
-The 1D model is based on the Maxwell-Schrödinger equations.  One of the technical difficulties is the fact that we must be able to solve in the case that light is travelling in opposite directions simultaneously.  It is not an issue analytically, the equations are well-defined.  The trouble is solving the system self-consistently.  The equations as posed are stiff and are best treated by implicit algorithms, but the best we have are half-arsed semi-implicit algorithms. Better yet would be to use a finite-element method and treat the cross-propagation properly, but I'm lazy.  The other issue is that the frequency of the light is usually known \emph{a priori}.  That is not the case for at least one of the modes in this system.  We therefore need to use some fancy tricks in order to get around that issue.  However, any detunings should not be too large.
+\begin{figure}
+    \centering
+    \includegraphics[width=13cm]{3LevelModelLevelDiagram}
+    \caption{FIXME: This is not a caption.  Only the levels which have not been greyed out are included in this model.  Of course all the excited levels have been adiabatically eliminated.}
+    \label{OpticalPumping:3LevelModelLevelDiagram}
+\end{figure}
+
+Throw the equations out there, then we explain how the 1D reduction is made.
+\begin{subequations}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_{2,2} &= \left[- \frac{\hbar^2}{2 M} \frac{\partial^2}{\partial y^2} + 2 V_\text{trap}(y) + M g y + U_\text{1D}\left(\abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)\right] \Psi_{2, 2} \\
+            &\relphantom{=} + \hbar \Omega_\text{RF}^* \Psi_{2, 0} -i \hbar\, Q(2,2 \xrightarrow{\pi,\pi} 2, 2) \abs{E_\pi}^2 \Psi_{2, 2}
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_{2, 0} &= \left[ - \frac{\hbar^2}{2M} \frac{\partial^2}{\partial y^2} + 2 \hbar \Delta_\text{RF} + M g y + U_\text{1D}\left(\abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)\right] \Psi_{2, 0} \\
+            &\relphantom{=} + \hbar \Omega_\text{RF} \Psi_{2, 2}  - i \hbar \,Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{E_\pi}^2 \Psi_{2, 0} - i \hbar \,Q(2, 0 \xrightarrow{\pi,\sigma^+} 1, -1) E_\pi^* E_{\pislash}^{\phantom{*}} \Psi_{1, -1}
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_{1, -1} &= \left[ - \frac{\hbar^2}{2 M} \frac{\partial^2}{\partial y^2} + V_{\text{trap}}(y) + M g y + U_\text{1D} \left( \abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)  \right] \Psi_{1, -1}\\
+            &\relphantom{=} - i \hbar \,Q(1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1) \abs{E_{\pislash}}^2 \Psi_{1, -1} - i \hbar \,Q(1, -1 \xrightarrow{\sigma^+,\pi} 2, 0) E_{\pislash}^* E_\pi^{\phantom{*}}\Psi_{2, 0}
+        \end{split}
+    \end{align}
+\end{subequations}
+where $E_\pislash$ is the electric field in the polarisation orthogonal to $\pi$.  $\unitvec{u}_\pi = \unitvec{z}$, $\unitvec{u}_\pislash = \unitvec{x}$, $\unitvec{u}_{\sigma^{\pm}} = \frac{1}{\sqrt{2}} \left(\unitvec{x} \pm i \unitvec{y}\right)$
+
+\begin{align}
+    Q(F, f \xrightarrow{\alpha, \beta} G, g) &= \sum_{F',f'}\frac{1}{\frac{1}{2}\Gamma + i \Delta_{F',f'}} \frac{(\vect{d}_{F, f; F', f'} \cdot \unitvec{u}_\alpha^*)}{\hbar} \frac{(\vect{d}_{G, g; F', f'}^* \cdot \unitvec{u}_\beta^{\phantom{*}})}{\hbar}
+\end{align}
+
+The electric fields are split as
+\begin{align}
+    E_{i}(y) &= E_{i, \text{up}}(y) + E_{i, \text{down}}(y)
+\end{align}
+and evolve as
+\begin{subequations}
+    \begin{align}
+        \begin{split}
+            \frac{\partial}{\partial y}E_{\pi, \text{up}} &= i k E_{\pi, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} \left[Q({2, 2 \xrightarrow{\pi,\pi} 2, 2}) \abs{\Psi_{2, 2}}^2  + Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{\Psi_{2, 0}}^2 \right] E_{\pi, \text{up}}
+        \end{split}\\
+        \begin{split}
+            -\frac{\partial}{\partial y}E_{\pi, \text{down}} &= i k E_{\pi, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} \left[Q({2, 2 \xrightarrow{\pi,\pi} 2, 2}) \abs{\Psi_{2, 2}}^2  + Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{\Psi_{2, 0}}^2 \right] E_{\pi, \text{down}}
+        \end{split}\\
+        \begin{split}
+            \frac{\partial}{\partial y}E_{\pislash, \text{up}} &= i k E_{\pislash, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{up}} 
+        \end{split}\\
+        \begin{split}
+            -\frac{\partial}{\partial y}E_{\pislash, \text{down}} &= i k E_{\pislash, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{down}} 
+        \end{split}
+\end{align}
+\end{subequations}
+
+
 
 Apart from the Maxwell part of the system of equations, everything else is fairly standard.  Except of course for the 1D reduction itself.  We'll call it a `central-line' approximation.
-
-Somewhere in here we need to mention the adiabatic elimination and what kinds of terms it gives rise to.  And in what limit the approximation is valid (even close to resonance).
-
-We need to talk about the other assumptions made in the model.  The assumption that spontaneous emission is negligible.  There is a question about how the 1D approximation affects the Franck-Condon factor, and the relationship between that and spontaneous emission.
-
-Now is a good time to consider $0 \hbar k$ vs $2 \hbar k$ and resonant vs detuned in a simplified model in which things can be controlled (two overlapping modes in the same trap and where $k \rightarrow 0$). The important difference being the \emph{geometry}.
-
-\subsection{3-level model}
 
 This is a simplified model that contains only a small number of levels so that it is easier to keep track of what is going on.  We assume that we can outcouple directly from the $F=2$, $m_F=2$ trapped condensate to the $F=2$, $m_F=0$ state. This isn't realistic, but it is useful to simplify the whole process.  I believe the excited $F'$ manifold was also reduced.  With this simplified model we can investigate resonance vs detuned.  I seem to recall some crazy interesting physics where we had atom transfer back to the \emph{source} condensate in the $0 \hbar k$ configuration in the detuned case.  I believe it was all about phase differences and stuff.  If you look at the equations from the zero-dimensional model, the direction of transfer depends on the phase of a couple of terms, so it can go either way.  For the resonant case, the atoms were definitely transferred to the \emph{target} condensate, as desired.  Also, try as we might, it was not possible to get the $2 \hbar k$ resonance working efficiently.  Too much loss on the way.  Though I don't remember what happened in the detuned $2 \hbar k$ case.
 

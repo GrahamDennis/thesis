@@ -413,7 +413,7 @@ where the atomic field $\widetilde{\Psi}_{i}$ is assumed to evolve in time as $e
 \end{align}
 Although neglecting this correction term is a zeroth-order approximation, the term being neglected is sufficiently small to make this approximation as good as (or better than) many of the first-order approximations that are made elsewhere in this derivation.  A similar approximation needs to be made in the evolution equations for the atomic fields (written in the unprimed coordinate system), $\widetilde{E}_{+, \vect{q}_n}(\vect{x}, t) \approx \widetilde{E}_{+, \vect{q}_n}(\vect{x}, t')$ with a similarly-sized correction.  
 
-The overall effect of this change of coordinate system has been to neglect the temporal derivative in the evolution equation for the electric field mode $\widetilde{E}_{+, \vect{q}_n}$.  To the same degree of approximation, the temporal derivatives of all other electric field modes may also therefore be neglected.  These approximations made, the equations of motion for the system become
+The overall effect of this change of coordinate system has been to neglect the temporal derivative in the evolution equation for the electric field mode $\widetilde{E}_{+, \vect{q}_n}$.  To the same degree of approximation, the temporal derivatives of all other electric field modes may also therefore be neglected.  These approximations made, the equations of motion become
 \begin{subequations}
     \begin{align}
         \begin{split}
@@ -427,7 +427,7 @@ The overall effect of this change of coordinate system has been to neglect the t
       \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \cdot \sum_{\{i,j'\}\in T_n} \vect{d}_{ij'} \widetilde{\Psi}^*_i\left(\vect{x}\right) \widetilde{\Psi}_{j'}\left(\vect{x}\right),
     \end{align}
 \end{subequations}
-where boundary values for the $\widetilde{E}_{+, \vect{q}_n}$ over a plane perpendicular to $\unitvec{q}_n$ must be specified to complete the system of equations.  With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, this can be viewed as an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
+where boundary values for the $\widetilde{E}_{+, \vect{q}_n}$ over a plane perpendicular to $\unitvec{q}_n$ must be specified to complete the system of equations.  With the temporal derivatives of the evolution equations for the electric fields neglected, these equations need to be solved self-consistently at every time point.  When all electric fields are propagating in the same direction, the evolution of the electric fields is an initial-value problem propagating in the $\unitvec{q}_n$ direction.  This is not the case in the optical pumping scheme in which optical modes may propagate both upwards and downwards.  However as the electric fields evolve slowly in time, the self-consistent solutions may be found iteratively starting from the solution found for the previous time point.
 
 After eliminating the light propagation timescale from the problem, the next fastest timescale is that of the excited atomic states $\widetilde{\Psi}_{i'}$.  The evolution of these states is dominated either by spontaneous decay at a rate $\Gamma = 2\pi \times \unit[5.9]{MHz}$ or by the detuning term (if the pumping laser is detuned by several linewidths).  As these frequencies are much higher than the slower atomic evolution we are interested in ($\sim\unit[10]{kHz}$), the excited states may be adiabatically eliminated.  
 
@@ -449,23 +449,18 @@ Substituting this expression back into the remaining evolution equations gives
         \end{split}
     \end{align}
 \end{subequations}
-This set of equations represents the basic multimode model that will be used in the remainder of this chapter.
-
-FIXME: Probably need a little more discussion of this model, but that's it.
+This set of equations for the ground state atomic modes and the optical modes they interact with represents the basic multimode model that will be used in the remainder of this chapter.
 
 \parasep
 
-Let us now summarise the approximations and the regimes of validity of the model \eqref{OpticalPumping:GeneralMultimodeModel}.
-
-And we are just about done now.  Write out some polarisation vectors, and then that's it.  We do it all in 1D... oh crap. I forgot about that bit.  Deal with that bit later. This is the full 3D model, then consider 1D systems, then apply the other stuff.
-
-Steps remaining (should be discussed when we apply the model to the optical pumping experiment):
+Several approximations were made in deriving the model derived in this section.  A summary of the most significant approximations is given below.
 \begin{itemize}
-    \item 1D
-    \item Polarisation --- atomic vs. optical ($\unitvec{u}_{\pm1} = \frac{1}{\sqrt{2}}\left(\unitvec{x} \pm i \unitvec{y}\right)$, $\unitvec{u}_0 = \unitvec{z}$).
+    \item Scattering of spontaneously emitted photons has been neglected.  While this process can be neglected if the pumping laser is sufficiently detuned from resonance, this is potentially a significant issue closer to resonance.  As discussed in \sectionref{OpticalPumping:PumpingMechanism}, reabsorption can be negligible when operating in the boson accumulation regime in which excited atoms are significantly more likely to decay into the condensate mode than into all other modes.  It is this regime in which the continuous pumping experiment is operated.
+    \item Atoms that have undergone spontaneous emission are neglected.  These thermal atoms will contribute to collisional heating of the condensate.  Provided that they are small in number compared to the condensate this heating can be neglected.  For a continuously pumped atom laser this requires that more atoms are transferred to the condensate than are lost due to spontaneous emission.
+    \item Various time- and length-scales have been neglected.  The results of the model are only valid for timescales greater than the spontaneous lifetime of the system $\sim \unit[27]{ns}$, and for lengthscales larger than the optical wavelength $\lambda = \unit[780]{nm}$.
 \end{itemize}
 
-In the following sections the multimode pumping model \eqref{OpticalPumping:GeneralMultimodeModel} will be applied to some idealised systems to further investigate the pumping mechanism before applying the model to the pumping experiment itself.
+In the following sections the multimode pumping model derived here will be applied to some idealised systems to further investigate the pumping mechanism before considering the pumping experiment itself.
 
 \subsection{Two overlapping condensates model}
 \label{OpticalPumping:SimpleModels:OverlappingCondensatesModel}
@@ -666,9 +661,9 @@ The equations of motion for this system are similar to those for the previous mo
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_\text{L}(x) &= \left[- \frac{\hbar^2}{2M}\frac{d^2}{dx^2} + V_\text{L}(x) + U_\text{1D}\left(\abs{\Psi_\text{S}}^2 + \abs{\Psi_\text{A}}^2 + \abs{\Psi_\text{L}}^2\right)  \right] \Psi_\text{L}\\
             &\relphantom{=} - \hbar \frac{\abs{\Omega_{\text{L}\leftrightarrow\text{E}}}^2 \Psi_\text{L} + \Omega_{\text{L}\leftrightarrow\text{E}}^* \Omega_{\text{A}\leftrightarrow\text{E}}^{\phantom{*}} \Psi_\text{A}}{\Delta - \frac{i}{2} \Gamma},
-        \end{split} \label{OpticalPumping:OverlappingCondensatesEvolution:PsiL}\\
-        \frac{d}{dx} \Omega_{\text{A}\leftrightarrow\text{E}} &= i k \Omega_{\text{A}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{A}}^2 \Omega_{\text{A}\leftrightarrow\text{E}} + \Psi_\text{A}^* \Psi_\text{L}^{\phantom{*}}\Omega_{\text{L}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaA}\\
-        \pm \frac{d}{dx} \Omega_{\text{L}\leftrightarrow\text{E}} &= i k \Omega_{\text{L}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{L}}^2 \Omega_{\text{L}\leftrightarrow\text{E}} + \Psi_\text{L}^* \Psi_\text{A}^{\phantom{*}} \Omega_{\text{A}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:OverlappingCondensatesEvolution:OmegaL}
+        \end{split} \label{OpticalPumping:TravellingBeamEvolution:PsiL}\\
+        \frac{d}{dx} \Omega_{\text{A}\leftrightarrow\text{E}} &= i k \Omega_{\text{A}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{A}}^2 \Omega_{\text{A}\leftrightarrow\text{E}} + \Psi_\text{A}^* \Psi_\text{L}^{\phantom{*}}\Omega_{\text{L}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:TravellingBeamEvolution:OmegaA}\\
+        \pm \frac{d}{dx} \Omega_{\text{L}\leftrightarrow\text{E}} &= i k \Omega_{\text{L}\leftrightarrow\text{E}} + \frac{i}{8} \Gamma \frac{\sigma_0}{A_\perp} \frac{\abs{\Psi_\text{L}}^2 \Omega_{\text{L}\leftrightarrow\text{E}} + \Psi_\text{L}^* \Psi_\text{A}^{\phantom{*}} \Omega_{\text{A}\leftrightarrow\text{E}}}{\Delta - \frac{i}{2} \Gamma}, \label{OpticalPumping:TravellingBeamEvolution:OmegaL}
     \end{align}
 \end{subequations}
 where $\Omega_\text{Raman}(x) = \Omega_\text{Raman}(0) e^{- 2 i k x}$.  In the absence of any clear limits in which these equations may be solved analytically, we investigate their behaviour numerically in the limit of resonant and far detuned pumping light.
@@ -706,8 +701,8 @@ where a numerical value for the minimum flux has been obtained using the experim
     \centering
     \includegraphics[width=15cm]{TravellingBeamZeroDetuningResults}
     \caption{Simulation results of the simple atom laser model \eqref{OpticalPumping:TravellingBeamEvolution} driven resonantly.  
-    The top row is of the $0\hbar k$ momentum-transfer process, which corresponds to the `$+$' sign of \eqref{OpticalPumping:OverlappingCondensatesEvolution:OmegaL}.  
-    The bottom row is of the $2\hbar k$ momentum-transfer process, corresponding to the `$-$' sign of \eqref{OpticalPumping:OverlappingCondensatesEvolution:OmegaL}.  
+    The top row is of the $0\hbar k$ momentum-transfer process, which corresponds to the `$+$' sign of \eqref{OpticalPumping:TravellingBeamEvolution:OmegaL}.  
+    The bottom row is of the $2\hbar k$ momentum-transfer process, corresponding to the `$-$' sign of \eqref{OpticalPumping:TravellingBeamEvolution:OmegaL}.  
     The figures of the left column consider the limit of a high-flux atom laser ($\Omega_\text{Raman} = 5 \times\unit[10^2]{s\textsuperscript{-1}}$, $\Phi_\text{A} \approx 5 \times \unit[10^7]{s\textsuperscript{-1}}$, $\Omega_{\text{A}\leftrightarrow\text{E}}(-\infty) = 4.5\times \unit[10^5]{s\textsuperscript{-1}}$) in which the transfer efficiency is expected to be greater (see main text).  
     The figures of the right column are in the limit of a lower-flux atom laser ($\Omega_\text{Raman} = 1 \times \unit[10^2]{s\textsuperscript{-1}}$, $\Phi_\text{A} \approx 3\times \unit[10^6]{s\textsuperscript{-1}}$, $\Omega_{\text{A}\leftrightarrow\text{E}}(-\infty) = 1.1\times\unit[10^5]{s\textsuperscript{-1}}$) with a flux similar to that of the continuous pumping experiment.  
     In all simulations the optical pumping laser $\Omega_{\text{A}\leftrightarrow\text{E}}$ is turned on when the atom laser is half-way inside the lasing condensate at $t=\unit[1.6]{ms}$ to approximate equilibrium conditions in a higher-dimensional model (see main text).  The value of $\Omega_{\text{A} \leftrightarrow \text{E}}(-\infty)$ is chosen such that the photon flux balances the atom laser flux.
@@ -781,7 +776,7 @@ In this process, the atoms in the atom laser oscillate between the lasing conden
 \begin{figure}
     \centering
     \includegraphics[width=15cm]{TravellingBeamFarDetunedResults}
-    \caption{FIXME: This is not a caption. Values: $\Omega_{\text{A} \leftrightarrow \text{E}}(-\infty) = 1.5 \times \unit[10^8]{s\textsuperscript{-1}}$, $\Delta = 10^3 \Gamma = 2 \pi \times \unit[5.9]{GHz}$, $\Omega_\text{Raman} = 1 \times \unit[10^2]{s\textsuperscript{-1}}$.  Steady-state efficiencies achieved: (a) 48\%, (b) 19\%.  There is an absorbing boundary reducing the density of the atom laser in both, but this is observed in (b).}
+    \caption{Simulation results of the simple atom laser model \eqref{OpticalPumping:TravellingBeamEvolution} driven by a $\Delta = 10^3 \Gamma = 2 \pi \times \unit[5.9]{GHz}$ detuned optical pumping laser.  Figure (a) is of the $0 \hbar k$ momentum-transfer process, which corresponds to the `$+$' sign of \eqref{OpticalPumping:TravellingBeamEvolution:OmegaL}.  Figure (b) is of the $2 \hbar k$ momentum-transfer process, corresponding to the `$-$' sign of \eqref{OpticalPumping:TravellingBeamEvolution:OmegaL}.  The difference in behaviour of the two processes is quite marked: while in (a) the population transfer is complete, in (b) atoms Rabi flop between the atom laser and the lasing condensate.  These oscillations are damped due to off-resonant spontaneous scattering by the atom laser.  The steady-state efficiencies achieved for these two processes are (a) 48\%, (b) 19\%.  There is an absorbing boundary layer (see \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) used in both simulations, and this is observed in the sharp decay of the atom laser at the left edge of (b).  In all simulations the optical pumping laser $\Omega_{\text{A} \leftrightarrow \text{E}}$ is approximately constant as it propagates through the system with $\Omega_{\text{A}\leftrightarrow \text{E}}(-\infty) = 1.5 \times \unit[10^8]{s\textsuperscript{-1}}$.  The atom laser is outcoupled from the source condensate with a Rabi frequency $\Omega_\text{Raman} = 1 \times \unit[10^2]{s\textsuperscript{-1}}$.}
     \label{OpticalPumping:TravellingBeamFarDetunedResults}
 \end{figure}
 
@@ -792,7 +787,7 @@ Through appropriate choice of detuning and $\Omega_{\text{A} \leftrightarrow \te
 \begin{figure}
     \centering
     \includegraphics[width=13cm]{3LevelModelLevelDiagram}
-    \caption{FIXME: This is not a caption.  Only the levels which have not been greyed out are included in this model.  Of course all the excited levels have been adiabatically eliminated.}
+    \caption{FIXME: This is not a caption.  Only the levels which have not been greyed out are included in this model.  Of course all the excited levels that haven't been greyed out have still been adiabatically eliminated.}
     \label{OpticalPumping:3LevelModelLevelDiagram}
 \end{figure}
 
@@ -805,11 +800,11 @@ Throw the equations out there, then we explain how the 1D reduction is made.
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{2, 0} &= \left[ - \frac{\hbar^2}{2M} \frac{\partial^2}{\partial y^2} + 2 \hbar \Delta_\text{RF} + M g y + U_\text{1D}\left(\abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)\right] \Psi_{2, 0} \\
-            &\relphantom{=} + \hbar \Omega_\text{RF} \Psi_{2, 2}  - i \hbar \,Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{E_\pi}^2 \Psi_{2, 0} - i \hbar \,Q(2, 0 \xrightarrow{\pi,\sigma^+} 1, -1) E_\pi^* E_{\pislash}^{\phantom{*}} \Psi_{1, -1}
+            &\relphantom{=} + \hbar \Omega_\text{RF} \Psi_{2, 2}  - i \hbar \,Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{E_\pi}^2 \Psi_{2, 0} - i \hbar \,Q(2, 0 \xrightarrow{\pi,\pislash} 1, -1) E_\pi^* E_{\pislash}^{\phantom{*}} \Psi_{1, -1}
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{1, -1} &= \left[ - \frac{\hbar^2}{2 M} \frac{\partial^2}{\partial y^2} + V_{\text{trap}}(y) + M g y + U_\text{1D} \left( \abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)  \right] \Psi_{1, -1}\\
-            &\relphantom{=} - i \hbar \,Q(1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1) \abs{E_{\pislash}}^2 \Psi_{1, -1} - i \hbar \,Q(1, -1 \xrightarrow{\sigma^+,\pi} 2, 0) E_{\pislash}^* E_\pi^{\phantom{*}}\Psi_{2, 0}
+            &\relphantom{=} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pislash} 1, -1) \abs{E_{\pislash}}^2 \Psi_{1, -1} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pi} 2, 0) E_{\pislash}^* E_\pi^{\phantom{*}}\Psi_{2, 0}
         \end{split}
     \end{align}
 \end{subequations}
@@ -827,20 +822,20 @@ and evolve as
 \begin{subequations}
     \begin{align}
         \begin{split}
-            \frac{\partial}{\partial y}E_{\pi, \text{up}} &= i k E_{\pi, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
+            \frac{\partial}{\partial y}E_{\pi, \text{up}} &= i k E_{\pi, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\pislash} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
             &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} \left[Q({2, 2 \xrightarrow{\pi,\pi} 2, 2}) \abs{\Psi_{2, 2}}^2  + Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{\Psi_{2, 0}}^2 \right] E_{\pi, \text{up}}
         \end{split}\\
         \begin{split}
-            -\frac{\partial}{\partial y}E_{\pi, \text{down}} &= i k E_{\pi, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
+            -\frac{\partial}{\partial y}E_{\pi, \text{down}} &= i k E_{\pi, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\pislash} 1, -1}) \Psi_{2, 0}^* \Psi_{1, -1} E_{\pislash}\\
             &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} \left[Q({2, 2 \xrightarrow{\pi,\pi} 2, 2}) \abs{\Psi_{2, 2}}^2  + Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{\Psi_{2, 0}}^2 \right] E_{\pi, \text{down}}
         \end{split}\\
         \begin{split}
-            \frac{\partial}{\partial y}E_{\pislash, \text{up}} &= i k E_{\pislash, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
-            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{up}} 
+            \frac{\partial}{\partial y}E_{\pislash, \text{up}} &= i k E_{\pislash, \text{up}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\pislash} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\pislash,\pislash} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{up}} 
         \end{split}\\
         \begin{split}
-            -\frac{\partial}{\partial y}E_{\pislash, \text{down}} &= i k E_{\pislash, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\sigma^+} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
-            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\sigma^+,\sigma^+} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{down}} 
+            -\frac{\partial}{\partial y}E_{\pislash, \text{down}} &= i k E_{\pislash, \text{down}} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({2, 0 \xrightarrow{\pi,\pislash} 1, -1}) \Psi_{1, -1}^* \Psi_{2, 0} E_{\pi} \\
+            &\relphantom{=} - \frac{\hbar k}{2 \varepsilon_0 A_\perp} Q({1, -1 \xrightarrow{\pislash,\pislash} 1, -1}) \abs{\Psi_{1, -1}}^2 E_{\pislash, \text{down}} 
         \end{split}
 \end{align}
 \end{subequations}

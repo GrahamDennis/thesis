@@ -787,38 +787,42 @@ Through appropriate choice of detuning and $\Omega_{\text{A} \leftrightarrow \te
 \begin{figure}
     \centering
     \includegraphics[width=13cm]{3LevelModelLevelDiagram}
-    \caption{FIXME: This is not a caption.  Only the levels which have not been greyed out are included in this model.  Of course all the excited levels that haven't been greyed out have still been adiabatically eliminated.}
+    \caption{FIXME: This is not a caption.  Only the levels which have not been greyed out are included in this model.  Of course all the excited levels that haven't been greyed out have still been adiabatically eliminated.  Gravity acts to the left accelerating the initially stationary atom laser from the source condensate towards the lasing condensate.}
     \label{OpticalPumping:3LevelModelLevelDiagram}
 \end{figure}
 
-Throw the equations out there, then we explain how the 1D reduction is made.
+The model of the previous section suggested that the most likely process occurring in the continuous pumping experiment was the $0 \hbar k$ momentum-transfer process.  In this section this will be investigated further by considering a system very similar to that of the continuous pumping experiment.  As it is well known that 5-level atom lasers lead to complicated dynamics \citep{Dugue:2007fk} and our primary focus is on the pumping process itself, we first consider a simplification in which the $F=2$ manifold is effectively reduced to a 3-level system by directly coupling the untrapped $\ket{2, 0}$ mode to the source condensate in the $\ket{2, 2}$ state.  In the weak-outcoupling limit considered here the $\ket{2, -2}$ state will be negligibly occupied and it too may be neglected.  A level diagram and schematic of the system under consideration is illustrated in \figureref{OpticalPumping:3LevelModelLevelDiagram}.  
+
+In the present model $\pi$-polarised pumping light is applied below resonant with the $\ket{F=2, m_F=0} \leftrightarrow \ket{F'=1, m_F=0}$ transition.  Pumping occurs when an atom in the $\ket{F=2, m_F=0}$ state absorbs a $\pi$-polarised photon and is stimulated by the lasing condensate to emit a `$\sigma^+$-polarised' photon.  Due to momentum conservation this `$\sigma^+$-polarised' photon must propagate vertically upwards or downwards (corresponding to the $0\hbar k$ and $2 \hbar k$ momentum-transfer processes, respectively), however pure $\sigma^\pm$-polarised light may only propagate along the direction of the bias field, which is in the horizontal plane in this experiment.  It is the direction of the bias field that defines the atomic polarisations.  The polarisation vector for $\pi$-polarised light is $\unitvec{u}_\pi = \unitvec{z}$ where $\unitvec{z}$ is the unit vector in the direction of the bias field (also the weak trapping axis).  Pure $\pi$-polarised light may therefore propagate vertically (i.e.\ in the $\pm \unitvec{y}$ direction).  The polarisation vectors for $\sigma^\pm$-polarised light are $\unitvec{u}_{\sigma^\pm} = \frac{1}{\sqrt{2}} (\unitvec{x} \pm i \unitvec{y})$.  Pure $\sigma^\pm$-polarised light cannot therefore propagate in the $\unitvec{y}$ direction as the polarisation vector is not orthogonal to this direction.  The polarisation that propagates vertically that the $\ket{F=1, m_F=-1} \leftrightarrow \ket{F'=1, m_F=0}$ transition is coupled to is the polarisation orthogonal to the $\pi$-polarised photons travelling in this direction, i.e.\ they will be polarised along the $\unitvec{x}$ direction.  We label this polarisation $\pislash$ with $\unitvec{u}_\pislash = \unitvec{x}$.
+
+The equations of motion for this system are derived directly from the general multimode model of \eqref{OpticalPumping:GeneralMultimodeModel}.  The evolution of the atomic fields is given by
 \begin{subequations}
     \begin{align}
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{2,2} &= \left[- \frac{\hbar^2}{2 M} \frac{\partial^2}{\partial y^2} + 2 V_\text{trap}(y) + M g y + U_\text{1D}\left(\abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)\right] \Psi_{2, 2} \\
-            &\relphantom{=} + \hbar \Omega_\text{RF}^* \Psi_{2, 0} -i \hbar\, Q(2,2 \xrightarrow{\pi,\pi} 2, 2) \abs{E_\pi}^2 \Psi_{2, 2}
+            &\relphantom{=} + \hbar \Omega_\text{RF}^* \Psi_{2, 0} -i \hbar\, Q(2,2 \xrightarrow{\pi,\pi} 2, 2) \abs{E_\pi}^2 \Psi_{2, 2},
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{2, 0} &= \left[ - \frac{\hbar^2}{2M} \frac{\partial^2}{\partial y^2} + 2 \hbar \Delta_\text{RF} + M g y + U_\text{1D}\left(\abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)\right] \Psi_{2, 0} \\
-            &\relphantom{=} + \hbar \Omega_\text{RF} \Psi_{2, 2}  - i \hbar \,Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{E_\pi}^2 \Psi_{2, 0} - i \hbar \,Q(2, 0 \xrightarrow{\pi,\pislash} 1, -1) E_\pi^* E_{\pislash}^{\phantom{*}} \Psi_{1, -1}
+            &\relphantom{=} + \hbar \Omega_\text{RF} \Psi_{2, 2}  - i \hbar \,Q({2, 0 \xrightarrow{\pi,\pi} 2, 0}) \abs{E_\pi}^2 \Psi_{2, 0} - i \hbar \,Q(2, 0 \xrightarrow{\pi,\pislash} 1, -1) E_\pi^* E_{\pislash}^{\phantom{*}} \Psi_{1, -1},
         \end{split}\\
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \Psi_{1, -1} &= \left[ - \frac{\hbar^2}{2 M} \frac{\partial^2}{\partial y^2} + V_{\text{trap}}(y) + M g y + U_\text{1D} \left( \abs{\Psi_{2, 2}}^2 + \abs{\Psi_{2, 0}}^2 + \abs{\Psi_{1, -1}}^2\right)  \right] \Psi_{1, -1}\\
-            &\relphantom{=} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pislash} 1, -1) \abs{E_{\pislash}}^2 \Psi_{1, -1} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pi} 2, 0) E_{\pislash}^* E_\pi^{\phantom{*}}\Psi_{2, 0}
+            &\relphantom{=} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pislash} 1, -1) \abs{E_{\pislash}}^2 \Psi_{1, -1} - i \hbar \,Q(1, -1 \xrightarrow{\pislash,\pi} 2, 0) E_{\pislash}^* E_\pi^{\phantom{*}}\Psi_{2, 0},
         \end{split}
     \end{align}
 \end{subequations}
-where $E_\pislash$ is the electric field in the polarisation orthogonal to $\pi$.  $\unitvec{u}_\pi = \unitvec{z}$, $\unitvec{u}_\pislash = \unitvec{x}$, $\unitvec{u}_{\sigma^{\pm}} = \frac{1}{\sqrt{2}} \left(\unitvec{x} \pm i \unitvec{y}\right)$
-
+where $\Psi_{F,f}$ is the wavefunction for the atomic state $\ket{F, f}$; $E_\alpha$ is the electric field for polarisation $\alpha$; $V_\text{trap}(y) = \frac{1}{2} M \Omega_y^2 y^2$; $\Delta_\text{RF}$ is the detuning of the rf outcoupling; $g$ is the acceleration due to gravity and the two-photon coupling constants between atomic state $\ket{F, f}$ and $\ket{G, g}$ are
 \begin{align}
-    Q(F, f \xrightarrow{\alpha, \beta} G, g) &= \sum_{F',f'}\frac{1}{\frac{1}{2}\Gamma + i \Delta_{F',f'}} \frac{(\vect{d}_{F, f; F', f'} \cdot \unitvec{u}_\alpha^*)}{\hbar} \frac{(\vect{d}_{G, g; F', f'}^* \cdot \unitvec{u}_\beta^{\phantom{*}})}{\hbar}
+    Q(F, f \xrightarrow{\alpha, \beta} G, g) &= \sum_{F',f'}\frac{1}{\frac{1}{2}\Gamma + i \Delta_{F',f'}} \frac{(\vect{d}_{F, f; F', f'} \cdot \unitvec{u}_\alpha^*)}{\hbar} \frac{(\vect{d}_{G, g; F', f'}^* \cdot \unitvec{u}_\beta^{\phantom{*}})}{\hbar};
 \end{align}
+where the sum over $\{F', f'\}$ extends over all excited levels $\ket{F', f'}$ coupled to both $\ket{F, f}$ and $\ket{G, g}$; and $\Delta_{F', f'}$ is the detuning of the excited state $\ket{F', f'}$ relative to the optical modes.
 
-The electric fields are split as
+To consider both the $0 \hbar k$ and $2 \hbar k$ momentum-transfer processes, we split the electric fields for each polarisation into upward and downward propagating components,
 \begin{align}
-    E_{i}(y) &= E_{i, \text{up}}(y) + E_{i, \text{down}}(y)
+    E_{\alpha}(y) &= E_{\alpha, \text{up}}(y) + E_{\alpha, \text{down}}(y).
 \end{align}
-and evolve as
+These electric field components evolve as
 \begin{subequations}
     \begin{align}
         \begin{split}
@@ -840,6 +844,17 @@ and evolve as
 \end{align}
 \end{subequations}
 
+The dipole moments of the various transitions can be calculated as multiples of the reduced dipole matrix element for the $\text{D}_2$ transition by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962}
+\begin{align}
+    \vect{d}_{F,f;F',f'} &= c_{F,f;F',f'} d_\text{reduced} \unitvec{u}_\alpha,
+\end{align}
+where $\alpha\in \{\pi,\sigma^\pm\}$ is the polarisation corresponding to the $\ket{F, f} \leftrightarrow \ket{F', f'}$ transition, $d_\text{reduced} = 3.6 \times \unit[10^{-29}]{C.m}$ is the reduced dipole matrix element for the $\text{D}_2$ transition in $^{87}\text{Rb}$, and $c_{F, f; F', f'}$ is a real constant that may be found in standard tables\footnote{FIXME: Cite something.}.  For example the two most important dipole moments are
+\begin{align}
+    \vect{d}_{1, -1; 1', 0'} &=  \sqrt{\frac{5}{24}} d_\text{reduced} \unitvec{u}_{\sigma^+},\\
+    \vect{d}_{2, 0; 1', 0'} &= \sqrt{\frac{1}{30}} d_\text{reduced} \unitvec{u}_\pi.
+\end{align}
+
+1D dimension reduction, then move on to a discussion of results.
 
 
 Apart from the Maxwell part of the system of equations, everything else is fairly standard.  Except of course for the 1D reduction itself.  We'll call it a `central-line' approximation.

@@ -1,4 +1,4 @@
-\begin{thebibliography}{115}
+\begin{thebibliography}{116}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -675,6 +675,11 @@
   \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Satchler}},
   \emph{\bibinfo{title}{{Angular Momentum}}} (\bibinfo{publisher}{Oxford},
   \bibinfo{year}{1962}).
+
+\bibitem[{\citenamefont{Steck}(2009)}]{Steck:2009}
+\bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Steck}},
+  \emph{\bibinfo{title}{{Rubidium 87 D Line Data}}} (\bibinfo{year}{2009}),
+  \bibinfo{note}{revision 2.1.2}, \urlprefix\url{http://steck.us/alkalidata}.
 
 \bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
   Zaremba, and Stoof}}]{Bijlsma:2000}

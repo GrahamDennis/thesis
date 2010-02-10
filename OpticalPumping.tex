@@ -844,20 +844,32 @@ These electric field components evolve as
 \end{align}
 \end{subequations}
 
-The dipole moments of the various transitions can be calculated as multiples of the reduced dipole matrix element for the $\text{D}_2$ transition by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962}
+The dipole moments of the various transitions can be written as multiples of the reduced dipole matrix element for the $\text{D}_2$ transition by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962}
 \begin{align}
     \vect{d}_{F,f;F',f'} &= c_{F,f;F',f'} d_\text{reduced} \unitvec{u}_\alpha,
 \end{align}
-where $\alpha\in \{\pi,\sigma^\pm\}$ is the polarisation corresponding to the $\ket{F, f} \leftrightarrow \ket{F', f'}$ transition, $d_\text{reduced} = 3.6 \times \unit[10^{-29}]{C.m}$ is the reduced dipole matrix element for the $\text{D}_2$ transition in $^{87}\text{Rb}$, and $c_{F, f; F', f'}$ is a real constant that may be found in standard tables\footnote{FIXME: Cite something.}.  For example the two most important dipole moments are
+where $\alpha\in \{\pi,\sigma^\pm\}$ is the polarisation corresponding to the $\ket{F, f} \leftrightarrow \ket{F', f'}$ transition, $d_\text{reduced} = \left<J=\frac{1}{2} \middle\| e r \middle\| J'=\frac{3}{2}\right> = 3.6 \times \unit[10^{-29}]{C.m}$ is the reduced dipole matrix element for the $\text{D}_2$ transition in $^{87}\text{Rb}$, and $c_{F, f; F', f'}$ is a real constant given by \citep{Steck:2009}
+\begin{align}
+    \label{OpticalPumping:DipoleMomentCoefficient}
+    c_{F,f;F',f'} &= (-1)^{J +I + f} \sqrt{(2 F + 1)(2F' + 1)(2J + 1)}
+    \begin{Bmatrix} 
+        J & J' & 1 \\
+        F' & F & I 
+    \end{Bmatrix}
+    \begin{pmatrix}
+        F' & 1 & F\\
+        f' & f - f' & -f
+    \end{pmatrix},
+\end{align}
+where the array in braces is a Wigner $6j$ symbol, and the array in parentheses is a Wigner $3j$ symbol.  For the $5^2\text{S}_{\frac{1}{2}} \rightarrow 5^2\text{P}_{\frac{3}{2}}$ transition of $^{87}\text{Rb}$, the remaining quantum numbers in \eqref{OpticalPumping:DipoleMomentCoefficient} are $I = \frac{3}{2}$, $J = \frac{1}{2}$, and $J' = \frac{3}{2}$.  Values for $c_{F, f; F', f'}$ may be found in standard tables \citep{Steck:2009}.  The two most important dipole moments are
 \begin{align}
     \vect{d}_{1, -1; 1', 0'} &=  \sqrt{\frac{5}{24}} d_\text{reduced} \unitvec{u}_{\sigma^+},\\
     \vect{d}_{2, 0; 1', 0'} &= \sqrt{\frac{1}{30}} d_\text{reduced} \unitvec{u}_\pi.
 \end{align}
 
-1D dimension reduction, then move on to a discussion of results.
+The usual technique of reducing a 3D model to a 1D model cannot be applied to the present system without ambiguity.  The usual method aims to derive an effective 1D interaction strength $U_\text{1D}$ from the 3D interaction strength $U_\text{3D}$ by dividing it by a representative transverse area $A_\perp$, i.e.\ $U_\text{1D} = U_\text{3D}/A_\perp$.  This transverse area is typically chosen such that the chemical potentials of the two models are equal (and hence the corresponding Thomas-Fermi radii are equal).  In the present model, there are two possible transverse areas to choose corresponding to each of the two condensates.  Although the transverse areas depend on the condensate number, the primary difference is due to the different effective trapping frequencies: those for the $\ket{2, 2}$ atoms are $\sqrt{2}$ times larger than those for the $\ket{1, -1}$ atoms.  To resolve this problem we choose the transverse area corresponding to the source condensate (the $\ket{2, 2}$ state) $A_\perp = 2.8\times\unit[10^{-10}]{m\textsuperscript{2}}$, and decrease the number of atoms in the lasing condensate (the $\ket{1, -1}$ state) such that the Thomas-Fermi radius in the vertical direction matches its value in a 3D model.  This reduces the effective number of atoms in the lasing condensate from $N_\text{lasing} = 5.0\times 10^5$ to $N_\text{lasing}^\text{(eff)} = 4.3\times 10^5$.  This model is effectively focusing on the behaviour along a line through the centre of both condensates in a 3D model.
 
 
-Apart from the Maxwell part of the system of equations, everything else is fairly standard.  Except of course for the 1D reduction itself.  We'll call it a `central-line' approximation.
 
 This is a simplified model that contains only a small number of levels so that it is easier to keep track of what is going on.  We assume that we can outcouple directly from the $F=2$, $m_F=2$ trapped condensate to the $F=2$, $m_F=0$ state. This isn't realistic, but it is useful to simplify the whole process.  I believe the excited $F'$ manifold was also reduced.  With this simplified model we can investigate resonance vs detuned.  I seem to recall some crazy interesting physics where we had atom transfer back to the \emph{source} condensate in the $0 \hbar k$ configuration in the detuned case.  I believe it was all about phase differences and stuff.  If you look at the equations from the zero-dimensional model, the direction of transfer depends on the phase of a couple of terms, so it can go either way.  For the resonant case, the atoms were definitely transferred to the \emph{target} condensate, as desired.  Also, try as we might, it was not possible to get the $2 \hbar k$ resonance working efficiently.  Too much loss on the way.  Though I don't remember what happened in the detuned $2 \hbar k$ case.
 

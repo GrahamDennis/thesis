@@ -27,7 +27,7 @@ Previous work on light-BEC interactions. Rayleigh/Raman superradiance, EIT, CARL
 \begin{figure}
     \centering
     \includegraphics[width=14cm]{AtomLaserVsOpticalLaser}
-    \caption{FIXME: This is not a caption. Comparison of considered atom laser pumping scheme (a) and typical optical laser pumping scheme (b).\label{OpticalPumping:AtomLaserVsOpticalLaser}}
+    \caption{Comparison of the atom laser pumping scheme considered in this chapter (a) to the typical optical laser pumping scheme (b).  In an optical laser absorption of lasing mode photons by atoms in the state $\ket{g}$ is suppressed by the fast decay of these atoms to lower atomic levels (represented by a decay process with rate constant $\gamma$).  This fast decay is what makes the pumping process irreversible.  This irreversibility in the atom laser pumping mechanism derives from the departure of the photons emitted on the $\ket{2} \leftrightarrow \ket{3}$ transition.  Once a photon in this mode leaves the system the lasing mode atom cannot be transferred back to the source mode via the excited state $\ket{3}$.\label{OpticalPumping:AtomLaserVsOpticalLaser}}
 \end{figure}
 
 The optical pumping process under investigation in this chapter is illustrated in \figureref{OpticalPumping:AtomLaserVsOpticalLaser}(a).  In this process atoms in the source mode are driven by a laser into an excited state from which they can decay into the lasing mode (the condensate).  Although there is no laser driving this second transition ($\ket{3}\leftrightarrow\ket{2}$), the decay of atoms into the lasing mode is not spontaneous emission in the usual sense.  The emission process is \emph{atomically}-stimulated by the large occupation of the lasing mode in the same way that the transition may be \emph{optically}-stimulated even in the absence of any population in the atomic state into which the atom decays.
@@ -82,7 +82,7 @@ A summary is provided here of the continuous pumping experiment performed by \em
 \begin{figure}
     \centering
     \includegraphics[width=8cm]{ExperimentSchematic}
-    \caption{FIXME: Caption.  Schematic diagram of the operation of the pumped atom laser.  Schematic diagram of the experiment (a) and pumping steps (b--f).  A radiofrequency field spin-flips the atoms to the $\ket{2, 0}$ state (b), and they fall under gravity (c).  The light field couples the atoms to the $F'=1$ excited state from which they are stimulated to emit into the $\ket{1, -1}$ BEC.  The atomic momentum is cancelled by the absorption and emission of the photons (d, e).  A second radiofrequency field finally output-couples the atoms into the $\ket{1, 0}$ atom laser (f).  (g), Absorption image of the experimental system, showing source, laser mode and output beam.}
+    \caption{Schematic diagram of the experiment (a) and pumping steps (b--f).  A radiofrequency field spin-flips the atoms to the $\ket{2, 0}$ state (b), and they fall under gravity (c).  The light field couples the atoms to the $F'=1$ excited state from which they are stimulated to emit into the $\ket{1, -1}$ BEC.  The atomic momentum is cancelled by the absorption and emission of the photons (d, e).  A second radiofrequency field finally output-couples the atoms into the $\ket{1, 0}$ atom laser (f).  (g), Absorption image of the experimental system, showing source, laser mode and output beam.}
     \label{OpticalPumping:ExperimentSchematic}
 \end{figure}
 
@@ -114,7 +114,7 @@ For successful pumping, the pump atoms must be momentum-resonant with the lasing
 \begin{figure}
     \centering
     \includegraphics[width=12cm]{ExperimentalResults}
-    \caption{FIXME: Caption.  Blue-detuned absorption images averaged over three identical runs of the experiment (top row); detuning of the probe laser from resonance is $\unit[7]{MHz}$.  The graphs below are horizontal cross-sections through the absorption images, showing optical depth, averaged over $\unit[50]{\micro m}$ in the vertical direction.  The tree columns correspond to: pumping off (left); pumping on (centre); difference between pumped and unpumped (right).}
+    \caption{Blue-detuned absorption images averaged over three identical runs of the experiment (top row); detuning of the imaging laser from resonance is $\unit[7]{MHz}$.  The graphs below are horizontal cross-sections through the absorption images, showing optical depth, averaged over $\unit[50]{\micro m}$ in the vertical direction.  The three columns correspond to: pumping off (left); pumping on (centre); difference between pumped and unpumped (right).}
     \label{OpticalPumping:ExperimentalResults}
 \end{figure}
 
@@ -844,7 +844,7 @@ These electric field components evolve as
 \end{align}
 \end{subequations}
 
-The dipole moments of the various transitions can be written as multiples of the reduced dipole matrix element for the $\text{D}_2$ transition by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962}
+The dipole moments for the various transitions can be written as multiples of the reduced dipole matrix element for the $\text{D}_2$ transition by the Wigner-Eckart theorem \citep{Eckart:1930,Brink:1962}
 \begin{align}
     \vect{d}_{F,f;F',f'} &= c_{F,f;F',f'} d_\text{reduced} \unitvec{u}_\alpha,
 \end{align}
@@ -867,7 +867,17 @@ where the array in braces is a Wigner $6j$ symbol, and the array in parentheses 
     \vect{d}_{2, 0; 1', 0'} &= \sqrt{\frac{1}{30}} d_\text{reduced} \unitvec{u}_\pi.
 \end{align}
 
-The usual technique of reducing a 3D model to a 1D model cannot be applied to the present system without ambiguity.  The usual method aims to derive an effective 1D interaction strength $U_\text{1D}$ from the 3D interaction strength $U_\text{3D}$ by dividing it by a representative transverse area $A_\perp$, i.e.\ $U_\text{1D} = U_\text{3D}/A_\perp$.  This transverse area is typically chosen such that the chemical potentials of the two models are equal (and hence the corresponding Thomas-Fermi radii are equal).  In the present model, there are two possible transverse areas to choose corresponding to each of the two condensates.  Although the transverse areas depend on the condensate number, the primary difference is due to the different effective trapping frequencies: those for the $\ket{2, 2}$ atoms are $\sqrt{2}$ times larger than those for the $\ket{1, -1}$ atoms.  To resolve this problem we choose the transverse area corresponding to the source condensate (the $\ket{2, 2}$ state) $A_\perp = 2.8\times\unit[10^{-10}]{m\textsuperscript{2}}$, and decrease the number of atoms in the lasing condensate (the $\ket{1, -1}$ state) such that the Thomas-Fermi radius in the vertical direction matches its value in a 3D model.  This reduces the effective number of atoms in the lasing condensate from $N_\text{lasing} = 5.0\times 10^5$ to $N_\text{lasing}^\text{(eff)} = 4.3\times 10^5$.  This model is effectively focusing on the behaviour along a line through the centre of both condensates in a 3D model.
+The usual technique for reducing a 3D model to a 1D model cannot be applied to the present system without ambiguity.  The usual method aims to derive an effective 1D interaction strength $U_\text{1D}$ from the 3D interaction strength $U_\text{3D}$ by dividing it by a representative transverse area $A_\perp$, i.e.\ $U_\text{1D} = U_\text{3D}/A_\perp$.  This transverse area is typically chosen such that the chemical potentials of the two models are equal (and hence the corresponding Thomas-Fermi radii are equal).  In the present model there are two possible transverse areas to choose corresponding to each of the two condensates.  Although the transverse areas depend on the condensate number, the primary difference is due to the different trapping frequencies: those for the $\ket{2, 2}$ atoms are $\sqrt{2}$ times larger than those for the $\ket{1, -1}$ atoms.  In resolving this problem we would like to preserve the Thomas-Fermi radii of both condensates because as discussed at the end of \sectionref{OpticalPumping:ContinuousExperiment}, the slight overlap of the two condensates may be crucially important for the operation of the pumping mechanism.
+
+To make the dimension reduction, we choose the transverse area corresponding to the source condensate (the $\ket{2, 2}$ state) $A_\perp = 2.8 \times\unit[10^{-1}]{m\textsuperscript{2}}$, as this should be representative for both the source condensate and the atom laser in the $\ket{2, 0}$ state.  To make the Thomas-Fermi radius of the lasing condensate (the $\ket{1, -1}$ state) match that of a 3D model, we decrease the number of atoms in this state.  This reduces the effective number of atoms in the lasing condensate from $N_\text{lasing} = 5.0\times 10^5$ to $N_\text{lasing}^\text{(eff)} = 4.3\times 10^5$.  This reduction in the condensate number causes the density of the lasing condensate to be lower than it otherwise would be in the 1D model; in a 3D model the density would be lower because of the larger transverse area.
+
+\parasep
+
+By this point, I believe that the full 1D 3-level model has been described.  It is now a matter to describe the results of the simulations.
+
+Results:
+3ms run, optimum efficiency 19.81\% (overall, not peak), $\Delta = 2\pi \times \unit[5.48]{kHz}$, $E_{\pi}(-\infty) = \unit[4.9317]{V/m}$, $\Omega_\text{RF} = \unit[8.79]{s\textsuperscript{-1}}$.\\
+10ms run, optimum efficiency 20.56\% (overall, not peak), $\Delta = 2\pi \times \unit[5.4]{kHz}$, $E_{\pi}(-\infty) = \unit[4.6185]{V/m}$, $\Omega_\text{RF} = \unit[1040]{s\textsuperscript{-1}}$.  Flux was $\sim 5\text{--}6\times 10^6\unit{s\textsuperscript{-1}}$.
 
 
 

@@ -873,7 +873,7 @@ To make the dimension reduction, we choose the transverse area corresponding to 
 
 \parasep
 
-With the model itself explained, we may now use it to investigate the hypothesis that it is the $0 \hbar k$ momentum-transfer process that occurs in the continuous pumping experiment.  To this end, a parameter scan of the model was performed to find the maximum transfer efficiency as a function of outcoupling detuning for a fixed atom laser flux $\Phi = \unit[1\times 10^7]{s\textsuperscript{-1}}$ for $\unit[3]{ms}$ of outcoupling.  For each outcoupling detuning $\Delta_\text{RF}$, a parameter scan is performed as a function of the intensity of the applied optical pumping light (as determined by $E_{\pi, \text{up}}(-\infty)$) to determine the optimum pumping efficiency.  If the pumping light intensity is too low, the transfer process will proceed slowly, while if the pumping light is too intense spontaneous losses from the atom laser and the source condensate will exceed the atom number transferred to the lasing condensate.  The optimum pumping efficiency defined as the ratio of the number of atoms transferred to the lasing condensate divided by the number of atoms lost from the source condensate is plotted as a function of the outcoupling detuning in \figureref{OpticalPumping:3LevelModelEfficiency}.
+With the model itself explained, we may now use it to investigate the hypothesis that it is the $0 \hbar k$ momentum-transfer process that occurs in the continuous pumping experiment.  To this end, a parameter scan of the model was performed to find the maximum transfer efficiency as a function of outcoupling detuning for a fixed atom laser flux $\Phi = \unit[1\times 10^7]{s\textsuperscript{-1}}$ for $\unit[3]{ms}$ of outcoupling.  For each outcoupling detuning $\Delta_\text{RF}$, a parameter scan was performed as a function of the intensity of the applied optical pumping light (as determined by $E_{\pi, \text{up}}(-\infty)$) to determine the optimum pumping efficiency.  If the pumping light intensity is too low the transfer process will proceed slowly, while if the pumping light is too intense spontaneous losses from the atom laser and the source condensate will exceed the atom number transferred to the lasing condensate.  The optimum pumping efficiency (ratio of the number of atoms transferred to the lasing condensate divided by the number of atoms lost from the source condensate) is plotted as a function of the outcoupling detuning in \figureref{OpticalPumping:3LevelModelEfficiency}.
 
 \begin{figure}
     \centering
@@ -881,6 +881,31 @@ With the model itself explained, we may now use it to investigate the hypothesis
     \caption{FIXME: This is not a caption. $\unit[3]{ms}$ of outcoupling, a flux of $\Phi = 1\times \unit[10^7]{s\textsuperscript{-1}}$.  $\Delta_\text{RF} =0$ corresponds to the energy resonance of the outcoupling process being in the centre of the condensate.}
     \label{OpticalPumping:3LevelModelEfficiency}
 \end{figure}
+
+The plot of pumping efficiency \figureref{OpticalPumping:3LevelModelEfficiency} for this parameter scan shows a clear increase in efficiency at large detunings where the $0 \hbar k$ momentum-transfer process is expected to occur.  It is interesting to note that there is not a local maximum near $\Delta_\text{RF} = 0$ where the $2 \hbar k$ momentum-transfer process would be expected to occur.  Examining the dynamics of a simulation in this parameter regime illuminates the reason this process does not occur.  \figureref{OpticalPumping:3LevelParameterScanSnapshots}(a) illustrates a snapshot of a simulation of the system with $\Delta_\text{RF}= 0$.  What is occurring is that as the atom laser falls, it first comes into momentum-resonance with the lower condensate (via the $2 \hbar k$ momentum-transfer process) at the upper edge of the lasing condensate, however it then goes out of momentum-resonance towards the lower side of the condensate as the atom laser continues to accelerate under gravity.  As this occurs, the system attempts to follow the dark state which involves transferring atoms back from the lasing condensate to the atom laser to compensate for the reduction in the density of the atom laser that is momentum-resonant with the lasing condensate.  This then transfers photons back from $E_{\pislash, \text{down}}$ to $E_{\pi, \text{up}}$ in the process.  Counter-intuitively, the only way the $2 \hbar k$ momentum-transfer process can operate is when the momentum-resonance occurs at the lower edge of the lasing condensate where the lasing condensate density will reduce first before the part of the atom laser beam that it is momentum-resonant with.  This therefore requires outcoupling from the lower part of the source condensate, the same parameter regime in which the $0 \hbar k$ momentum-transfer process is expected to operate.  However, for the reasons discussed in \sectionref{OpticalPumping:SimpleModels:AtomLaserModel}, the $0 \hbar k$ momentum-transfer process is expected to dominate as it will not suffer from spontaneous loss to the same extent.
+
+\figureref{OpticalPumping:3LevelParameterScanSnapshots}(b) illustrates a snapshot of a simulation of the system for $\Delta_\text{RF} = 2\pi \times \unit[5]{kHz}$, a parameter regime in which the $0 \hbar k$ momentum-transfer process is expected to be significant.  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{3LevelParameterScanSnapshots}
+    \caption{FIXME: This is not a caption. (a) $E_{\pi,\text{up}}(-\infty) = \unit[2.6741509905]{V/m}$, $\Omega_\text{RF} = \unit[263.66]{s\textsuperscript{-1}}$, $\Delta_\text{RF} = 0.0$. (b) $E_{\pi, \text{up}}(-\infty) = \unit[2.97398865843]{V/m}$, $\Omega_\text{RF} = \unit[702.53]{s\textsuperscript{-1}}$, $\Delta_\text{RF} = 2 \pi \times \unit[5]{kHz}$.}
+    \label{OpticalPumping:3LevelParameterScanSnapshots}
+\end{figure}
+
+
+
+illuminates the cause of 
+
+
+For this parameter-scan 
+
+For pumping of this duration
+
+
+
+
+For this short-duration pumping, the plot of the pumping efficiency \figureref{OpticalPumping:3LevelModelEfficiency} shows a clear increase at large detunings where the $0 \hbar k$ momentum-transfer process is expected to occur.  It is interesting to note that there is not a local maximum near $\Delta_\text{RF} = 0$ where the $2 \hbar k$ momentum-transfer process would be expected to occur.  Examining the dynamics of a simulation in this region illuminates the process occurring here.
 
 
 While $\unit[3]{ms}$ of outcoupling and pumping cannot fully represent the behaviour of the system over the entire $\unit[100]{ms}$ to $\unit[200]{ms}$ over which the pumping occurred in the experiment, it can give a general indication of the behaviour of the system. 

@@ -39,13 +39,13 @@ The use of absorbing boundary layers must be slightly modified for use in phase-
     \label{BackgroundTheory:PhaseSpaceAbsorbingBoundaryLayer}
     \frac{d \hat{\rho}}{dt} &= \int d \vect{x}\, \frac{2}{\hbar}V_I(\vect{x})\mathcal{D}[\hat{\Psi}(\vect{x})]\hat{\rho},
 \end{align}
-where $\mathcal{D}$ is the usual decoherence superoperator. This master equation term leads to the same imaginary potential term in the equations of motion for the field operator with an additional noise term for Truncated Wigner and the Q function methods that restores the vacuum fluctuations that would otherwise be lost.
+where $\mathcal{D}$ is the usual decoherence superoperator. This master equation term leads to the same imaginary potential term in the equations of motion for the field operator with an additional noise term the for Truncated Wigner and Q function methods that restores the vacuum fluctuations that would otherwise be lost.
 
 \parasep
 
-In most of this thesis it is only the immediate vicinity of the BEC that is under consideration and absorbing boundary layers are used to restrict the computational domain to this region. One notable exception is \chapterref{TransverseProfile} in which the transverse profile of the atom laser a large distance from the BEC is considered. In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above. Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
+In most of this thesis it is only the immediate vicinity of the BEC that is under consideration and absorbing boundary layers are used to restrict the computational domain to this region.  As the use of absorbing boundary layers is a technical issue not related to the underlying physics, they are not included in equations of motion given in this thesis but should be understood to be included when simulations are performed.  
 
-FIXME: Although not always stated at the time, almost all simulations in this thesis make use of absorbing boundaries.  Neither are they included when equations of motion are given, but should be understood to be included when simulations are performed.
+While direct application of absorbing boundary layers permit the study of dynamics near the BEC, in \chapterref{TransverseProfile} the transverse profile of the atom laser a large distance from the BEC is considered.  In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above.  Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
 \section{Spontaneous symmetry-breaking and all that}
 \label{BackgroundTheory:SymmetryBreaking}

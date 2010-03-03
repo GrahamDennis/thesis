@@ -885,7 +885,7 @@ With the model itself explained, we may now use it to investigate the hypothesis
 \begin{figure}
     \centering
     \includegraphics[width=8cm]{3LevelModelEfficiency}
-    \caption{Optimum pumping efficiency over $\unit[3]{ms}$ as a function of outcoupling detuning $\Delta_\text{RF}$.  The optimisation was performed over the intensity of the applied pumping light [as determined by $E_{\pi, \text{up}}(-\infty)$] at a constant flux of $\Phi = 1 \times \unit[10^7]{s\textsuperscript{-1}}$.  Zero outcoupling detuning ($\Delta_\text{RF} = 0$) corresponds to the energy resonance of the outcoupling process being in the centre of the source condensate.}
+    \caption{Optimum pumping efficiency over $\unit[3]{ms}$ as a function of outcoupling detuning $\Delta_\text{RF}$.  The optimisation was performed over the intensity of the applied pumping light [as determined by $E_{\pi, \text{up}}(-\infty)$] at a constant flux of $\Phi = 1 \times \unit[10^7]{s\textsuperscript{-1}}$.  Zero outcoupling detuning ($\Delta_\text{RF} = 0$) corresponds to the energy resonance of the outcoupling process being in the centre of the source condensate.  FIXME: State somewhere that higher detunings become unreasonable for longer outcoupling times because you won't be able to outcouple the entire condensate.  So while you might get larger efficiencies earlier on, at later times you won't be outcoupling at all but still experiencing loss from the source condensate due to off-resonant scattering.}
     \label{OpticalPumping:3LevelModelEfficiency}
 \end{figure}
 
@@ -936,6 +936,45 @@ It would be computationally intensive, although achievable, to solve a two- or t
 
 \subsection{The pulsed pumping experiment}
 \label{OpticalPumping:PulsedPumpingExperiment}
+
+To further investigate the pumping mechanism of the continuous pumping experiment described in \sectionref{OpticalPumping:ContinuousExperiment} a second experiment was performed in the pulsed domain to enable the temporal dynamics of the pumping mechanism to be probed.  A summary is provided here of the pulsed pumping experiment performed by \emph{Daniel Döring}, \emph{Nick Robins}, \emph{Matthew Jeppesen}, and \emph{Cristina Figl} at the Department of Quantum Science, ANU.  Further details of the experimental setup and results are published in \citep{Doring:2009}.  
+
+\parasep
+
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm]{PulsedPumpingScheme}
+    \caption{Sequential illustration of the pulsed pumping experiment. (a) The setup includes a source and a lasing condensate trapped in the same magnetic trap. (b) A pulse of atoms is output-coupled from the source cloud and is accelerated downward due to gravity. (c) As the atoms fall, a variable delay pulse of $\pi$-polarised light is applied. (e) The atoms in the transfer pulse continue to fall and are detected by absorption imaging.}
+    \label{OpticalPumping:PulsedPumpingScheme}
+\end{figure}
+
+
+The experimental setup of the pulsed pumping experiment was very similar to that of the continuous pumping experiment.  Instead of continuously outcoupling from the source condensate, a short ($\unit[40]{\micro s}$) intense outcoupling pulse was applied.  After output-coupling, the $\ket{F=2, m_F=0}$ pulse of atoms (the transfer pulse) then accelerates downward due to gravity, and propagates through the $\ket{F=1, m_F=-1}$ condensate.  At a well-defined time during the travel of the transfer pulse, a pulse ($\unit[150]{\micro s}$) of $\pi$-polarised light was applied in the vertical direction, opposite to the movement of the atoms as they fall under gravity.  The intensity of this pumping light was of the order of $\unit[30]{\micro W/cm\textsuperscript{2}}$ and was adjusted such that for the pulse length chosen a loss of $\sim 20\%$ from the transfer pulse due to spontaneous emission was observed.  Thus there was a reasonable amount of interaction between the transfer pulse and the pumping light that could be significantly increased by Bose stimulation in the presence of the lasing mode.  The light was blue detuned by two natural linewidths from the $F=2 \rightarrow F'=1$ transition.  In order to investigate the pumping process, the timing of the pumping light pulse applied to the system was varied.  A schematic of the pulsed pumping experiment is illustrated in \figureref{OpticalPumping:PulsedPumpingScheme}.  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm]{PulsedPumpingExperimentalTransfer}
+    \caption{Remaining atom number in the transfer pulse as a function of the time delay of the pumping pulse.  The absorption pictures show the remaining atoms in the transfer pulse after the pumping process.  The inset depicts the efficiency of the pumping process as a function of the size of the lasing condensate.}
+    \label{OpticalPumping:PulsedPumpingExperimentalTransfer}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm]{PulsedPumpingExperimentalHeating}
+    \caption{Width of the lasing condensate (normalised to the width with no pumping light applied) as a function of the time delay of the pumping pulse.  The two insets show the integrated density profile of the (expanded) lasing condensate for two different time delays of the pumping pulse.}
+    \label{OpticalPumping:PulsedPumpingExperimentalHeating}
+\end{figure}
+
+\figureref{OpticalPumping:PulsedPumpingExperimentalTransfer} displays the number of atoms left in the transfer pulse after the pumping when the time delay of the light pulse is varied.  Changing the pulse delay clearly affects the atom number remaining in the transfer pulse.  The data show a resonance centred at a time $\unit[1.1]{ms}$ after the output-coupling pulse, suggesting an enhanced transfer of atoms into the lasing condensate.  \figureref{OpticalPumping:PulsedPumpingExperimentalHeating} illustrates the heating of the $\ket{F=1, m_F=-1}$ cloud as a function of the delay time, measured with a $\unit[100]{\micro s}$ long pumping light pulse.  Again the curve reaches a minimum value with no significant heating at $\unit[1.1]{ms}$.  the heating does not increase for delay times above the centre of the resonance, which may be explained by the transfer pulse shielding the lasing condensate from the emitted resonant photons.  The sets of data in \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer,OpticalPumping:PulsedPumpingExperimentalHeating} indicate that the underlying process occurs predominantly at a pulse delay time of $\unit[1.1]{ms}$, and the resonance data show that the $\ket{F=1, m_F=-1}$ condensate mediates the process since without this condensate there is no additional loss from the pulse (see the inset of \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer}).
+
+
+
+
+% The $\unit[1.1]{ms}$ resonance is consistent with the time a free falling atom takes to travel the distance of $\unit[7.3]{\micro m}$ between the two condensate centres ($\unit[1.2]{ms}$).  In this time the atoms reach a velocity corresponding to $\unit[1.3]{cm/s}$.  This velocity is equivalent to the absorption and subsequent emission of a photon, giving a $2 \hbar k$ momentum kick.  Indeed, we set the distance between the $F=1$ and $F=2$ condensates in order to achieve exactly this situation.  Our measurements support this, indicating that the optical pumping pulse effectively stops the atoms.  This requires that the emitted photon must be emitted almost straight down and shows that the emission process is not spontaneous.
+
+
+
+
 
 This section describes the pulsed pumping experiment \citep{Doring:2009}, its motivations and results.  We also discuss the theoretical results and comparison to experiment.  Basically just steal figures from the paper.  The experiment focussed on the $2 \hbar k$ momentum-transfer process, and a discussion is needed as to why this process doesn't directly correspond to the $2 \hbar k$ momentum-transfer process in the continuous experiment.  The conclusions of this section are that although there is reasonable agreement in the operation of the pumping process, there is anomalously low heating observed in the experiment.  This suggests that there is beyond mean-field physics occurring here suppressing spontaneous emission.  The likely candidate is BAR.
 

@@ -949,7 +949,7 @@ To further investigate the pumping mechanism of the continuous pumping experimen
 \end{figure}
 
 
-The experimental setup of the pulsed pumping experiment was very similar to that of the continuous pumping experiment.  Instead of continuously outcoupling from the source condensate, a short ($\unit[40]{\micro s}$) intense outcoupling pulse was applied.  After output-coupling, the $\ket{F=2, m_F=0}$ pulse of atoms (the transfer pulse) then accelerates downward due to gravity, and propagates through the $\ket{F=1, m_F=-1}$ condensate.  At a well-defined time during the travel of the transfer pulse, a pulse ($\unit[150]{\micro s}$) of $\pi$-polarised light was applied in the vertical direction, opposite to the movement of the atoms as they fall under gravity.  The intensity of this pumping light was of the order of $\unit[30]{\micro W/cm\textsuperscript{2}}$ and was adjusted such that for the pulse length chosen a loss of $\sim 20\%$ from the transfer pulse due to spontaneous emission was observed.  Thus there was a reasonable amount of interaction between the transfer pulse and the pumping light that could be significantly increased by Bose stimulation in the presence of the lasing mode.  The light was blue detuned by two natural linewidths from the $F=2 \rightarrow F'=1$ transition.  In order to investigate the pumping process, the timing of the pumping light pulse applied to the system was varied.  A schematic of the pulsed pumping experiment is illustrated in \figureref{OpticalPumping:PulsedPumpingScheme}.  
+The experimental setup of the pulsed pumping experiment was very similar to that of the continuous pumping experiment.  Instead of continuously outcoupling from the source condensate, a short ($\unit[40]{\micro s}$) intense outcoupling pulse was applied.  After output-coupling, the $\ket{F=2, m_F=0}$ pulse of atoms (the transfer pulse) then accelerated downward due to gravity, and propagated through the $\ket{F=1, m_F=-1}$ condensate.  At a well-defined time during the travel of the transfer pulse, a pulse ($\unit[150]{\micro s}$) of $\pi$-polarised light was applied in the vertical direction, opposite to the movement of the atoms as they fell under gravity.  The intensity of this pumping light was of the order of $\unit[30]{\micro W/cm\textsuperscript{2}}$ and was adjusted such that for the pulse length chosen a loss of $\sim 20\%$ from the transfer pulse due to spontaneous emission was observed.  Thus there was a reasonable amount of interaction between the transfer pulse and the pumping light that could be significantly increased by Bose stimulation in the presence of the lasing mode.  The light was blue detuned by two natural linewidths from the $F=2 \rightarrow F'=1$ transition.  In order to investigate the pumping process, the timing of the pumping light pulse applied to the system was varied.  \figureref{OpticalPumping:PulsedPumpingScheme} is a schematic of the pulsed pumping experiment.
 
 \begin{figure}
     \centering
@@ -967,12 +967,52 @@ The experimental setup of the pulsed pumping experiment was very similar to that
 
 \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer} displays the number of atoms left in the transfer pulse after the pumping when the time delay of the light pulse is varied.  Changing the pulse delay clearly affects the atom number remaining in the transfer pulse.  The data show a resonance centred at a time $\unit[1.1]{ms}$ after the output-coupling pulse, suggesting an enhanced transfer of atoms into the lasing condensate.  \figureref{OpticalPumping:PulsedPumpingExperimentalHeating} illustrates the heating of the $\ket{F=1, m_F=-1}$ cloud as a function of the delay time, measured with a $\unit[100]{\micro s}$ long pumping light pulse.  Again the curve reaches a minimum value with no significant heating at $\unit[1.1]{ms}$.  the heating does not increase for delay times above the centre of the resonance, which may be explained by the transfer pulse shielding the lasing condensate from the emitted resonant photons.  The sets of data in \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer,OpticalPumping:PulsedPumpingExperimentalHeating} indicate that the underlying process occurs predominantly at a pulse delay time of $\unit[1.1]{ms}$, and the resonance data show that the $\ket{F=1, m_F=-1}$ condensate mediates the process since without this condensate there is no additional loss from the pulse (see the inset of \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer}).
 
+The $\unit[1.1]{ms}$ resonance is consistent with the time a free falling atom takes to travel the distance of $\unit[7.3]{\micro m}$ between the two condensate centres ($\unit[1.2]{ms}$).  In this time the atoms reach a velocity of $\unit[1.3]{cm/s}$.  This velocity is equal to that gained due to absorption and subsequent emission of a photon in the opposite direction, giving a $2 \hbar k$ momentum kick.  The $\unit[1.1]{ms}$ resonance therefore corresponds to the $2 \hbar k$ momentum-transfer process.  Operated in the pulsed regime, the $2 \hbar k$ momentum-transfer process does not suffer from spontaneous loss from the transfer pulse (and subsequent heating of the lasing condensate) during transport as is the case in the continuous experiment.  For shorter delay times for which the $2 \hbar k$ momentum-transfer process is not momentum-resonant the spontaneously emitted photons from the transfer pulse are strongly scattered by the lasing condensate causing significant heating to that condensate.  This behaviour is observed in \figureref{OpticalPumping:PulsedPumpingExperimentalHeating}.
+
+From the experimental data presented, three main conclusions can be drawn: (a) the $\ket{F=1, m_F=-1}$ condensate significantly enhances transitions of atoms from the transfer pulse into the $\ket{1, -1}$ state. (b) These transitions primarily occur at a position in space that maximally overlaps with the lasing condensate. (c) This position allows the absorption of a pump beam photon and emission of a photon downward that exactly cancel the $2 \hbar k$ momentum gained in falling to that position.  The significantly lower heating of the lasing condensate near this resonance compared to shorter pump delays indicates that the photons emitted as a result of the pumping process do not significantly heat the lasing condensate despite propagating through it.
+
+\subsubsection{Theory}
+
+Due to the short duration of the pulsed pumping experiment ($t < \unit[2]{ms}$), the problems discussed in the previous section for using a one-dimensional model to model a 5-level atom laser do not apply.  A natural extension of the model presented in \sectionref{OpticalPumping:3LevelModel} that was used for the continuous pumping experiment is used in this section for the pulsed experiment.  We do not distract the reader by including the equations of motion explicitly; the relevant levels and atomic transitions included are illustrated in \figureref{OpticalPumping:PulsedPumpingLevelDiagram}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm]{PulsedPumpingLevelDiagram}
+    \caption{Level scheme for the pulsed pumping model.  The only levels not included in the model of this system are the $\ket{F=1, m_F=0}$ and $\ket{F=1, m_F=1}$ levels, which are greyed out in the illustration.  The contribution of all excited levels in the $F'$ manifold have been included, however the levels themselves have been adiabatically eliminated.}
+    \label{OpticalPumping:PulsedPumpingLevelDiagram}
+\end{figure}
+
+The simulation results for the remaining atom number in the transfer pulse after the pumping process are given in \figureref{OpticalPumping:PulsedPumpingTheoryTransferPulseNumber}.  The results are in approximate quantitative agreement with the experimental results in \figureref{OpticalPumping:PulsedPumpingExperimentalTransfer}.  It is important to note that a reduction in the number of atoms in the transfer pulse does not necessarily correspond to an increase in the number of atoms in the lasing condensate; they could also have undergone spontaneous emission.  This could not be probed directly in the experiment due to the difficulty in reliably measuring a change in condensate number of $\sim 10^4$ atoms on a condensate of $\sim 10^6$ atoms.  However, the notable absence of heating of the lasing condensate around $\unit[1.1]{ms}$ where the $2 \hbar k$ momentum-transfer process is expected to occur suggests that relatively few of the atoms are likely to have undergone spontaneous emission.  The theoretical results on the efficiency of the population transfer (see \figureref{OpticalPumping:PulsedPumpingTheoryTransferEfficiency}) are in contradiction to the experimental results.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{PulsedPumpingTheoryTransferPulseNumber}
+    \caption{Theoretical results for the remaining atom number in the transfer pulse as a function of the time delay of the pumping pulse.}
+    \label{OpticalPumping:PulsedPumpingTheoryTransferPulseNumber}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{PulsedPumpingTheoryTransferEfficiency}
+    \caption{Theoretical results for the efficiency of the population transfer as a function of the time delay of the pumping pulse.  Efficiency is defined as $\Delta N_{F=1, m_F=-1} / (-\Delta N_{F=2, m_F=0})$.}
+    \label{OpticalPumping:PulsedPumpingTheoryTransferEfficiency}
+\end{figure}
+
+
+The pulsed regime most closely corresponds to the model considered in \sectionref{OpticalPumping:SimpleModels:OverlappingCondensatesModel} in which pumping between two overlapping condensates was considered.  In this case the source and lasing modes will not initially have identical spatial profiles.  The main difference between this model and the pulsed pumping experiment is that the acceleration of the transfer pulse (the source mode) under gravity limits the time for which the pumping process is momentum-resonant.
 
 
 
-% The $\unit[1.1]{ms}$ resonance is consistent with the time a free falling atom takes to travel the distance of $\unit[7.3]{\micro m}$ between the two condensate centres ($\unit[1.2]{ms}$).  In this time the atoms reach a velocity corresponding to $\unit[1.3]{cm/s}$.  This velocity is equivalent to the absorption and subsequent emission of a photon, giving a $2 \hbar k$ momentum kick.  Indeed, we set the distance between the $F=1$ and $F=2$ condensates in order to achieve exactly this situation.  Our measurements support this, indicating that the optical pumping pulse effectively stops the atoms.  This requires that the emitted photon must be emitted almost straight down and shows that the emission process is not spontaneous.
 
 
+One of the conclusions of that section was that the pumping process in this regime could operate efficiently [see \figureref{OpticalPumping:OverlappingCondensatesZeroDetuning}(b)].
+
+Gravity prevents the two things being momentum-resonant across the entire lasing condensate.
+
+
+The efficiency was related to the dark state at the leading edge, while the rate of transfer was related to the dark state at the trailing edge.  It will be necessary to have the pulse offset with the lasing condensate, but not by too much or the losses as the emitted photons leave the lower edge of the condensate will be significant.  I need to look at some damned movies.
+
+Things get much more complicated when you have gravity as the atoms are only momentum-resonant for a time.
 
 
 

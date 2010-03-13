@@ -1,4 +1,4 @@
-\begin{thebibliography}{116}
+\begin{thebibliography}{122}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -513,6 +513,78 @@
   \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{40}},
   \bibinfo{pages}{F77} (\bibinfo{year}{2007}).
 
+\bibitem[{\citenamefont{Inouye
+  \emph{et~al.}}(1999{\natexlab{a}})\citenamefont{Inouye, Pfau, Gupta,
+  Chikkatur, Gorlitz, Pritchard, and Ketterle}}]{Inouye:1999ph}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Inouye}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Gupta}},
+  \bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Chikkatur}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Gorlitz}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{402}},
+  \bibinfo{pages}{641} (\bibinfo{year}{1999}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Kozuma \emph{et~al.}}(1999)\citenamefont{Kozuma,
+  Suzuki, Torii, Sugiura, Kuga, Hagley, and Deng}}]{Kozuma:1999pi}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kozuma}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Suzuki}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Torii}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sugiura}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kuga}},
+  \bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{286}},
+  \bibinfo{pages}{2309} (\bibinfo{year}{1999}),
+  \eprint{http://www.sciencemag.org/cgi/reprint/286/5448/2309.pdf}.
+
+\bibitem[{\citenamefont{Zobay and Nikolopoulos}(2006)}]{Zobay:2006}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Zobay}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{013620} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Inouye
+  \emph{et~al.}}(1999{\natexlab{b}})\citenamefont{Inouye, Chikkatur,
+  Stamper-Kurn, Stenger, Pritchard, and Ketterle}}]{Inouye:1999yq}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Inouye}},
+  \bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Chikkatur}},
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Stamper-Kurn}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Stenger}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{285}},
+  \bibinfo{pages}{571} (\bibinfo{year}{1999}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Schneble \emph{et~al.}}(2004)\citenamefont{Schneble,
+  Campbell, Streed, Boyd, Pritchard, and Ketterle}}]{Schneble:2004}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Schneble}},
+  \bibinfo{author}{\bibfnamefont{G.~K.} \bibnamefont{Campbell}},
+  \bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Streed}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Boyd}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{69}},
+  \bibinfo{pages}{041601} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Yoshikawa \emph{et~al.}}(2004)\citenamefont{Yoshikawa,
+  Sugiura, Torii, and Kuga}}]{Yoshikawa:2004}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Yoshikawa}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sugiura}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Torii}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kuga}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{69}},
+  \bibinfo{pages}{041603} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Ginsberg \emph{et~al.}}(2007)\citenamefont{Ginsberg,
+  Garner, and Hau}}]{Ginsberg:2007fk}
+\bibinfo{author}{\bibfnamefont{N.~S.} \bibnamefont{Ginsberg}},
+  \bibinfo{author}{\bibfnamefont{S.~R.} \bibnamefont{Garner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~V.} \bibnamefont{Hau}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{445}},
+  \bibinfo{pages}{623} (\bibinfo{year}{2007}).
+
 \bibitem[{\citenamefont{Olshan'ii \emph{et~al.}}(1996)\citenamefont{Olshan'ii,
   Castin, and Dalibard}}]{Olshanii:1996}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshan'ii}},
@@ -636,12 +708,6 @@
   \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
   \bibinfo{pages}{041604} (\bibinfo{year}{2005}).
-
-\bibitem[{\citenamefont{Zobay and Nikolopoulos}(2006)}]{Zobay:2006}
-\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Zobay}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Nikolopoulos}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
-  \bibinfo{pages}{013620} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Kuklinski \emph{et~al.}}(1989)\citenamefont{Kuklinski,
   Gaubatz, Hioe, and Bergmann}}]{Kuklinski:1989}

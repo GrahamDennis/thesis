@@ -1,4 +1,4 @@
-\begin{thebibliography}{122}
+\begin{thebibliography}{124}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -434,15 +434,18 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
   \bibinfo{pages}{031606(R)} (\bibinfo{year}{2005}).
 
-\bibitem[{\citenamefont{Robins \emph{et~al.}}(2008)\citenamefont{Robins, Figl,
-  Jeppesen, Dennis, and Close}}]{Robins:2008}
-\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
-  \bibinfo{journal}{Nat. Phys.} \textbf{\bibinfo{volume}{4}},
-  \bibinfo{pages}{731} (\bibinfo{year}{2008}).
+\bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
+  and Herriott}}]{Javan:1961}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Javan}},
+  \bibinfo{author}{\bibfnamefont{W.~R.} \bibnamefont{Bennett}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.}
+  \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
+
+\bibitem[{\citenamefont{Maiman}(1960)}]{Maiman:1960}
+\bibinfo{author}{\bibfnamefont{T.~H.} \bibnamefont{Maiman}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{187}},
+  \bibinfo{pages}{493} (\bibinfo{year}{1960}).
 
 \bibitem[{\citenamefont{D{\"o}ring
   \emph{et~al.}}(2009)\citenamefont{D{\"o}ring, Dennis, Robins, Jeppesen, Figl,
@@ -456,6 +459,16 @@
   \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
   \bibinfo{pages}{063630} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Robins \emph{et~al.}}(2008)\citenamefont{Robins, Figl,
+  Jeppesen, Dennis, and Close}}]{Robins:2008}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Nat. Phys.} \textbf{\bibinfo{volume}{4}},
+  \bibinfo{pages}{731} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Chikkatur \emph{et~al.}}(2002)\citenamefont{Chikkatur,
   Shin, Leanhardt, Kielpinski, Tsikata, Gustavson, Pritchard, and
@@ -585,9 +598,9 @@
   \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{445}},
   \bibinfo{pages}{623} (\bibinfo{year}{2007}).
 
-\bibitem[{\citenamefont{Olshan'ii \emph{et~al.}}(1996)\citenamefont{Olshan'ii,
+\bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1996)\citenamefont{Olshanii,
   Castin, and Dalibard}}]{Olshanii:1996}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshan'ii}},
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshanii}},
   \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, in
   \emph{\bibinfo{booktitle}{{Proceedings of the 12th International Conference

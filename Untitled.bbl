@@ -1,4 +1,4 @@
-\begin{thebibliography}{124}
+\begin{thebibliography}{125}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -74,6 +74,12 @@
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
   \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Ballagh and Savage}(2000)}]{Ballagh:2000oq}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ballagh}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Savage}},
+  \bibinfo{journal}{Modern Physics Letters B} \textbf{\bibinfo{volume}{14}},
+  \bibinfo{pages}{153} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Dall \emph{et~al.}}(2009)\citenamefont{Dall, Byron,
   Truscott, Dennis, Johnsson, and Hope}}]{Dall:2009}
@@ -334,6 +340,12 @@
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
 
+\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
+\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
+  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
+  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
+
 \bibitem[{\citenamefont{Schwartz}(1963)}]{Schwartz:1963}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Schwartz}},
   \bibinfo{journal}{Amer. J. Math.} \textbf{\bibinfo{volume}{85}},
@@ -374,12 +386,6 @@
   \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Roger}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{49}},
   \bibinfo{pages}{1804} (\bibinfo{year}{1982}).
-
-\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
-\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
-  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
-  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
 \bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},

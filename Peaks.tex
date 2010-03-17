@@ -2,6 +2,8 @@
 \label{Peaks}
 \graphicspath{{Figures/Peaks/}{Figures/Common/}}
 
+FIXME: In this chapter somewhere we need a discussion of dynamic vs energetic stability.  See Sebastian's thesis.
+
 In this chapter we investigate the production of paired atom laser beams from a metastable helium condensate due to an unusual scattering process.  Radio-frequency outcoupling is used to extract atoms from a Bose-Einstein condensate to initiate scattering between trapped and untrapped atoms.  The unequal strengths of the interactions for different internal states allows an energy-momentum resonance which leads to the scattering of atoms from the zero-velocity condensate into modes of opposite momenta.  This process is shown to be the result of dynamical instabilities within the condensate that originate from a process analogous to optical parametric down-conversion, giving rise to entanglement between the unstable modes.  These unstable modes are outcoupled to form scattered beams well-separated from the main atom laser profile, which are observed experimentally.
 
 The results presented in \sectionref{Peaks:PerturbativeApproach} of this chapter are in preparation for submission, while the results presented in \sectionref{Peaks:3DCalculation} of this chapter have been published in~\citet{Dall:2009}.  All of the theoretical work in these papers was my own work with the exception of the classical propagation discussed at the end of \sectionref{Peaks:AbsorbingBoundaryTricks}.
@@ -207,7 +209,7 @@ Within the local density approximation we can assume that the mean-field remains
     \end{align}
 \end{subequations}
 
-Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic up to a global phase rotation, and exactly periodic for appropriate choice of the arbitrary energy offset $\mu$. This can be shown by recognising these equations as modified optical Bloch equations containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are
+Although solving \eqref{Peaks:MeanFieldEquationsOfMotion} for $\kappa \neq 1$ is intractable analytically, it can at least be shown that the solutions are periodic up to a global phase rotation, and exactly periodic for appropriate choice of the arbitrary energy offset $\mu$. This can be shown by recognising these equations as modified optical Bloch equations \citep[\S 5.B]{Scully} containing a nonlinear term but with no damping. Defining $\Psi_i = c_i\sqrt{n}$ where $n = \abs{\Psi_1}^2 + \abs{\Psi_0}^2$ is the total density, the equations of motion for the density matrix terms $\rho_{10} = c_{1}^{}c_{0}^*$ and $w = \rho_{11}-\rho_{00} = \abs{c_1}^2 - \abs{c_0}^2$ are
 \begin{subequations}
     \label{Peaks:OpticalBlochEquations}
     \begin{align}
@@ -473,7 +475,7 @@ To solve the system corresponding to the master equation \eqref{Peaks:MasterEqua
 
 \subsection{Choice of artificial boundary conditions}
 
-The freedom of choice for the artificial boundary conditions can be used to ensure the accurate calculation of all terms in \eqref{Peaks:MasterEquation} and \eqref{Peaks:3DHamiltonian}. With the exception of the kinetic energy term, all terms in these equations are local in space hence their accurate calculation is guaranteed by any spatial representation. It is appropriate therefore to use the freedom in the choice of the artificial boundary conditions to permit the solution to be equivalently represented as a sum of the eigenfunctions of the kinetic energy operator,
+The freedom of choice for the artificial boundary conditions (refer to \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}) can be used to ensure the accurate calculation of all terms in \eqref{Peaks:MasterEquation} and \eqref{Peaks:3DHamiltonian}. With the exception of the kinetic energy term, all terms in these equations are local in space hence their accurate calculation is guaranteed by any spatial representation. It is appropriate therefore to use the freedom in the choice of the artificial boundary conditions to permit the solution to be equivalently represented as a sum of the eigenfunctions of the kinetic energy operator,
 \begin{align}
     \label{Peaks:SpectralRepresentation}
     f(x) &= \sum c_n g_n (x)
@@ -580,7 +582,7 @@ where $\Delta V$ is the computational grid's volume element (for irregularly spa
     \overline{dW_i(\vect{x})\, dW_j(\vect{x}')} &= 0 \\
     \overline{dW_i(\vect{x})\, dW_j^*(\vect{x}')} &= \frac{1}{\Delta V}\delta_{ij}\delta_{\vect{x},\vect{x}'}\,dt, \label{Peaks:ComplexNoiseExpectationValue}
 \end{align}
-where $\overline{(\cdot)}$ denotes the expectation value taken with respect to the noises. The usual spatial Dirac delta function in \eqref{Peaks:ComplexNoiseExpectationValue} has been replaced by a Kronecker delta function scaled by the inverse volume element due to the discretisation of the problem onto a computational grid.
+where $\overline{(\cdots)}$ denotes the expectation value taken with respect to the noises. The usual spatial Dirac delta function in \eqref{Peaks:ComplexNoiseExpectationValue} has been replaced by a Kronecker delta function scaled by the inverse volume element due to the discretisation of the problem onto a computational grid.
 
 The origin of the additional terms in \eqref{Peaks:3DTWEquations} can be understood qualitatively in terms of the `virtual' particles added to the initial state required in Truncated Wigner (see \sectionref{BackgroundTheory:TruncatedWigner}). The $\Delta V^{-1}$ term corrects for the contribution to \emph{s}-wave scattering due to the virtual particles. The $d \vect{W}$ term corrects for the loss of virtual particles due to the absorbing boundary layer and the $dW_p$ term does similarly for the virtual particles lost due to Penning ionisation.
 

@@ -2,6 +2,98 @@
 \label{BackgroundTheory}
 \graphicspath{{Figures/BackgroundTheory/}{Figures/Common/}}
 
+
+\section{Indistinguishable particles and BEC, a non-classical phenomenon}
+
+Condensate fraction, temperature dependence
+
+\section{Hamiltonian}
+
+After second-quantisation, the Hamiltonian describing an interacting multi-component field of bosonic atoms is
+\begin{align}
+    \begin{split}
+        \hat{H} &=
+            \sum_i \int d \vect{x}\, \hat{\Psi}_i^\dagger(\vect{x}) \left(- \frac{\hbar^2\nabla^2}{2 M_i} + V_{i}(\vect{x}) \right) \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x})\\
+            &+ \sum_{i, j, m, n} \int \int d\vect{x}\, d\vect{x}'\, \hat{\Psi}_i^\dagger(\vect{x}) \hat{\Psi}_j^\dagger(\vect{x}') V_{ijmn}(\vect{x} - \vect{x}') \hat{\Psi}_m^{\phantom{\dagger}}(\vect{x}') \hat{\Psi}_n^{\phantom{\dagger}}(\vect{x}),
+    \end{split}
+\end{align}
+where $\hat{\Psi}_i(\vect{x})$ is the bosonic annihilation operator that removes an atom in the internal state $i$ at position $\vect{x}$.  These fields obey the commutation relations
+\begin{align}
+    \left[\hat{\Psi}_i(\vect{x}),\, \hat{\Psi}_j(\vect{x}') \right] &= 0\\
+    \left[ \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x}),\, \hat{\Psi}_j^{\dagger}(\vect{x}')\right] &= \delta_{ij} \delta(\vect{x} - \vect{x}').
+\end{align}
+The potential $V_i(\vect{x})$ describes the external potential experienced by atoms in the internal state $i$, and will include contributions from gravity and any optical or magnetic trapping fields present.  A common example from this thesis is the cylindrically symmetric harmonic trap of the form
+\begin{align}
+    V(\vect{x}) &= \frac{1}{2} M \left(\omega_r^2 x^2 + \omega_r^2 y^2 + \omega_z^2 z^2 \right),
+\end{align}
+where $\omega_r$ is the radial trapping frequency, and $\omega_z$ is the trapping frequency in the $z$ direction.  Usually $\omega_r$ is significantly larger than $\omega_z$.  In this case, $x$ and $y$ are referred to as the `tight' trapping dimensions, and $z$ the `weak' trapping dimension.
+
+The interatomic interaction potential $V_{ijmn}(\vect{x})$ describes scattering processes between two particles in the $m$ and $n$ internal states separated by $\vect{x}$ that scatter into the $i$ and $j$ internal states.  If the atoms have only a single internal state, this is simply the interatomic potential.
+
+Atoms do, however, have internal structure: the quantum numbers $n$, $l$ and $m_l$ for the orbit of each electron; the projections $m_s$ for the spin of each electron; and the quantum numbers describing the state of the atom's nucleus.  Due to the couplings between these different states, none of these are `good' quantum numbers in the sense that they label eigenstates of the Hamiltonian describing a single atom.  For atoms that are well-approximated by a positively-charged core and a single orbiting electron (such as the alkali and metastable noble gas atoms used in most BEC experiments), the good quantum numbers are the principal quantum number for the primary electron $n$, the total angular momentum $F$, and its projection $m_F$\footnote{FIXME: Cite something}.  In practice, states with $n > 0$ decay on timescales significantly shorter than typical experimental timescales.  The $n > 0$ levels, however can contribute significantly when the atoms are driven with light near-resonant with an $n = 0 \leftrightarrow n'$ transition.  The $i$ index of the atomic field operator $\hat{\Psi}_i(\vect{x})$ is used to label the quantum numbers $n$, $F$, and $m_F$.  The notation typically used, however, differs slightly from this as $n=0$ is typically understood, and at most one of the fine-structure manifolds (which are distinguished by different values of the total electronic orbital and spin angular momentum quantum number $J$) contributes significantly.  These excited internal atomic states are usually denoted with a prime, for example $\ket{F'=1, m_F=0}$.
+
+It is this internal atomic structure that enables atoms to be manipulated using a wide range of techniques.  In the presence of a magnetic field, the different $m_F$ levels have different energies separated by the Zeeman splitting\footnote{FIXME: Cite something}.  This enables atoms in certain $m_F$ levels to be trapped in a local magnetic field minimum.  In the presence of radio-frequency radiation resonant with this Zeeman splitting the $m_F$ levels within a given $F$ manifold are coupled permitting the transfer of population between levels.  In the presence of intense optical radiation far detuned from the $n=0 \leftrightarrow n'=1$ transition, depending on the polarisation, all $m_F$ levels can receive the same energy shift and be all be trapped equally.  Atom--light coupling is discussed in detail in \sectionref{OpticalPumping:MultimodeModel}.
+
+Mention something about how we need to approximate the scattering term to simplify things.  The fact that the system is cold permits a certain approximation to be made. Too much detail for this bit.
+
+
+
+
+
+List the equations of motion in the single-component case.
+
+\section{Atomic scattering}
+Stuff to cite here: \citep{Ho:1998,Leggett:2001}
+
+The s-wave scattering approximation is creating an effective field theory that holds at length scales greater than the scattering length $a$.  It vastly simplifies things.  For multi-component condensates, the strength of interactions are completely described by the total spin of the scattering atoms.  This gives rise to more complicated terms, but simpler terms if the scattering lengths are equal.  Sebastian has written some good work here for the single-component case.
+
+Bound states formed near Feschbach resonances are one way that the effective field theory can be violated, but they can be treated by considering them to be a different kind of particle.
+
+List the equations of motion in the single-component case.
+
+??The fine structure of alkali atoms is such that there are two $F$ manifolds.  The energy splitting between these two manifolds is significantly larger than trap frequencies or relevant energy scales for condensates.  Scattering between atoms in the lower manifold must therefore preserve $F$ for each atom. 
+
+
+\section{Gross-Pitaevskii equation}
+
+Briefly mention an approach to spontaneous symmetry-breaking.  This is in terms of assuming a given phase.
+
+Derive the GP equation.  Simply, not too much fuss.  Note that the only term where an approximation is made is the scattering term.  The atom--light coupling term also suffers this problem if present, even with the RWA.
+
+\subsection{Thomas-Fermi approximation}
+
+Derive the TF, show a few plots or something.  Do it simply.  Apply it to outcoupling in the TF limit to determine the difference in behaviour of Rb and He* atom lasers.
+
+\subsection{Application: Transverse profile of the atom laser}
+
+Quick example calculation, show some pretty pictures.  Good agreement with experiment, yada yada.
+
+\section{Density matrices and loss}
+The decoherence superoperator arises naturally due to system--bath coupling of a certain form.  Gives rise to the Lindblad form, which gives rise to a certain form for a general bath occupation, and a simpler form with vacuum bath (usual case).  Show that the decoherence superoperator gives rise to usual forms for loss in expectation values.
+
+Brief applications to spontaneous emission (assume \emph{both} the atomic ground states and photon modes are in vacuum states) and Penning ionisation.
+
+\section{Phase-space methods}
+
+Fokker-Planck equations derived from master equations using operator correspondences.  Given certain conditions, these can then be transformed into SDEs, which may be efficiently simulated (see \sectionref{PenningIonisationAppendix:FokkerPlanckToSDEs}).  Truncation is necessary to give rise to the TW method.  Mention validity and reproduce some of my pretty Wigner vs Truncated Wigner pictures.  
+
+This does not rely on truncating a cumulant-expansion, but does assume that particles act independently of one-another, and only depend on a finite set of moments. (FIXME: Get a clearer picture of the difference)
+
+\section{Other methods beyond the mean field}
+
+Rely on truncating a cumulant expansion.
+
+\section{Numerical Techniques}
+\subsection{Absorbing boundary layers}
+\subsection{Error checking}
+\subsection{New piece of software}
+Feature list given in \appendixref{ToolsAppendix}.
+
+\section{Summary}
+And now, on with the show!
+\hrule
+
+
 \section{Phase-space methods}
 \label{BackgroundTheory:PhaseSpaceMethods}
 %Focus primarily on truncated Wigner.

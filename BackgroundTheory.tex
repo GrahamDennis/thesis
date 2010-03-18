@@ -11,10 +11,11 @@ Condensate fraction, temperature dependence
 
 After second-quantisation, the Hamiltonian describing an interacting multi-component field of bosonic atoms is
 \begin{align}
+    \label{BackgroundTheory:BasicHamiltonian}
     \begin{split}
         \hat{H} &=
-            \sum_i \int d \vect{x}\, \hat{\Psi}_i^\dagger(\vect{x}) \left(- \frac{\hbar^2\nabla^2}{2 M_i} + V_{i}(\vect{x}) \right) \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x})\\
-            &+ \sum_{i, j, m, n} \int \int d\vect{x}\, d\vect{x}'\, \hat{\Psi}_i^\dagger(\vect{x}) \hat{\Psi}_j^\dagger(\vect{x}') V_{ijmn}(\vect{x} - \vect{x}') \hat{\Psi}_m^{\phantom{\dagger}}(\vect{x}') \hat{\Psi}_n^{\phantom{\dagger}}(\vect{x}),
+            \sum_i \int d \vect{x}\, \hat{\Psi}_i^\dagger(\vect{x}) \left(- \frac{\hbar^2\nabla^2}{2 M} + V_{i}(\vect{x}) \right) \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x})\\
+            &+ \frac{1}{2}\sum_{i j m n} \int \int d\vect{x}\, d\vect{x}'\, \hat{\Psi}_i^\dagger(\vect{x}) \hat{\Psi}_j^\dagger(\vect{x}') V_{ijmn}(\vect{x} - \vect{x}') \hat{\Psi}_m^{\phantom{\dagger}}(\vect{x}') \hat{\Psi}_n^{\phantom{\dagger}}(\vect{x}),
     \end{split}
 \end{align}
 where $\hat{\Psi}_i(\vect{x})$ is the bosonic annihilation operator that removes an atom in the internal state $i$ at position $\vect{x}$.  These fields obey the commutation relations
@@ -30,31 +31,63 @@ where $\omega_r$ is the radial trapping frequency, and $\omega_z$ is the trappin
 
 The interatomic interaction potential $V_{ijmn}(\vect{x})$ describes scattering processes between two particles in the $m$ and $n$ internal states separated by $\vect{x}$ that scatter into the $i$ and $j$ internal states.  If the atoms have only a single internal state, this is simply the interatomic potential.
 
-Atoms do, however, have internal structure: the quantum numbers $n$, $l$ and $m_l$ for the orbit of each electron; the projections $m_s$ for the spin of each electron; and the quantum numbers describing the state of the atom's nucleus.  Due to the couplings between these different states, none of these are `good' quantum numbers in the sense that they label eigenstates of the Hamiltonian describing a single atom.  For atoms that are well-approximated by a positively-charged core and a single orbiting electron (such as the alkali and metastable noble gas atoms used in most BEC experiments), the good quantum numbers are the principal quantum number for the primary electron $n$, the total angular momentum $F$, and its projection $m_F$\footnote{FIXME: Cite something}.  In practice, states with $n > 0$ decay on timescales significantly shorter than typical experimental timescales.  The $n > 0$ levels, however can contribute significantly when the atoms are driven with light near-resonant with an $n = 0 \leftrightarrow n'$ transition.  The $i$ index of the atomic field operator $\hat{\Psi}_i(\vect{x})$ is used to label the quantum numbers $n$, $F$, and $m_F$.  The notation typically used, however, differs slightly from this as $n=0$ is typically understood, and at most one of the fine-structure manifolds (which are distinguished by different values of the total electronic orbital and spin angular momentum quantum number $J$) contributes significantly.  These excited internal atomic states are usually denoted with a prime, for example $\ket{F'=1, m_F=0}$.
+Atoms do, however, have internal structure: the quantum numbers $n$, $l$ and $m_l$ for the orbit of each electron; the projections $m_s$ for the spin of each electron; and the quantum numbers describing the state of the atom's nucleus.  Due to the couplings between these different states, none of these are `good' quantum numbers in the sense that they label eigenstates of the Hamiltonian describing a single atom.  For atoms that are well-approximated by a positively-charged core and a single orbiting electron (such as the alkali and metastable noble gas atoms used in most BEC experiments), the good quantum numbers are the principal quantum number for the primary electron $n$, the total angular momentum $F$, and its projection $m_F$ \citep{Leggett:2001}.  In practice, states with $n > 0$ decay on timescales significantly shorter than typical experimental timescales.  The $n > 0$ levels, however can contribute significantly when the atoms are driven with light near-resonant with an $n = 0 \leftrightarrow n'$ transition.  The $i$ index of the atomic field operator $\hat{\Psi}_i(\vect{x})$ is used to label the quantum numbers $n$, $F$, and $m_F$.  The notation typically used, however, differs slightly from this as $n=0$ is typically understood, and at most one of the fine-structure manifolds (which are distinguished by different values of the total electronic orbital and spin angular momentum quantum number $J$) contributes significantly.  These excited internal atomic states are usually denoted with a prime, for example $\ket{F'=1, m_F=0}$.
 
-It is this internal atomic structure that enables atoms to be manipulated using a wide range of techniques.  In the presence of a magnetic field, the different $m_F$ levels have different energies separated by the Zeeman splitting\footnote{FIXME: Cite something}.  This enables atoms in certain $m_F$ levels to be trapped in a local magnetic field minimum.  In the presence of radio-frequency radiation resonant with this Zeeman splitting the $m_F$ levels within a given $F$ manifold are coupled permitting the transfer of population between levels.  In the presence of intense optical radiation far detuned from the $n=0 \leftrightarrow n'=1$ transition, depending on the polarisation, all $m_F$ levels can receive the same energy shift and be all be trapped equally.  Atom--light coupling is discussed in detail in \sectionref{OpticalPumping:MultimodeModel}.
+It is this internal atomic structure that enables atoms to be manipulated using a rich variety of techniques.  In the presence of a magnetic field, the different $m_F$ levels have different energies separated by the Zeeman splitting.  This enables atoms in certain $m_F$ levels to be trapped in a local magnetic field minimum.  In the presence of radio-frequency radiation resonant with this Zeeman splitting the $m_F$ levels within a given $F$ manifold are coupled permitting the transfer of population between levels.  In the presence of intense optical radiation far detuned from the $n=0 \leftrightarrow n'=1$ transition, depending on the polarisation, all $m_F$ levels can receive the same energy shift and be all be trapped equally.  In the presence of pairs of optical fields momentum can be coherently transferred to the atoms, and depending on the polarisations, simultaneously change their internal state.  The atom--light coupling term is discussed in detail in \sectionref{OpticalPumping:MultimodeModel}.
 
-Mention something about how we need to approximate the scattering term to simplify things.  The fact that the system is cold permits a certain approximation to be made. Too much detail for this bit.
-
-
-
-
-
-List the equations of motion in the single-component case.
+In the absence of additional coupling terms, the equations of motion for the atomic field operators $\hat{\Psi}_i$ are determined by the Hamiltonian \eqref{BackgroundTheory:BasicHamiltonian},
+\begin{align}
+    \begin{split}
+    i \hbar \frac{\partial}{\partial t}\hat{\Psi}_i(\vect{x}) &= \left( - \frac{\hbar^2 \nabla^2}{2 M}  + V_i(\vect{x}) \right) \hat{\Psi}_i(\vect{x}) \\
+        &+ \sum_{jmn} \int d \vect{x}'\, V_{ijmn}(\vect{x} - \vect{x}') \hat{\Psi}_j^\dagger(\vect{x}') \hat{\Psi}_m^{\phantom{\dagger}}(\vect{x}') \hat{\Psi}_n(\vect{x}).
+    \end{split}\label{BackgroundTheory:NonLocalOperatorEvolution}
+\end{align}
+The most complicated part of this evolution is the non-local term governed by the interatomic interaction potential $V_{ijmn}(\vect{x})$.  The following section discusses an approximation in which this potential may be approximated by a \emph{local} interaction, simplifying the evolution described by \eqref{BackgroundTheory:NonLocalOperatorEvolution}.
 
 \section{Atomic scattering}
-Stuff to cite here: \citep{Ho:1998,Leggett:2001}
 
-The s-wave scattering approximation is creating an effective field theory that holds at length scales greater than the scattering length $a$.  It vastly simplifies things.  For multi-component condensates, the strength of interactions are completely described by the total spin of the scattering atoms.  This gives rise to more complicated terms, but simpler terms if the scattering lengths are equal.  Sebastian has written some good work here for the single-component case.
+As the composite structure of atoms is not included in \eqref{BackgroundTheory:BasicHamiltonian}, the Hamiltonian represents an effective field theory which is only valid on length scales larger than the atomic size.  At the low temperatures and densities typical of ultracold atom experiments these structures are not probed and the effective field theory is a good approximation.  Indeed, it is usual that the details of the interaction potential $V_{ijmn}(\vect{x})$ are not probed either, and the potential can be approximated by a contact interaction \citep{Leggett:2001}
+\begin{align}
+    V_{ijmn}(\vect{x}) &\approx U_{ijmn} \delta(\vect{x}), \label{BackgroundTheory:ContactInteractionPotential}
+\end{align}
+where $U_{ijmn} = 4 \pi \hbar^2 a_{ijmn}/M$, and $a_{ijmn}$ is the scattering length for the corresponding interaction.  The scattering length is chosen to reproduce the long-range scattering behaviour of the exact potential $V_{ijmn}(\vect{x})$.  Equation~\eqref{BackgroundTheory:ContactInteractionPotential} is termed the $s$-wave scattering approximation as only collisions in which the atoms have zero relative motional angular momentum occur; as the full potential has finite extent collisions with non-zero relative angular momenta (the $p$- or $d$-wave terms, for example) would occur.  These collisions have negligible amplitude at the temperatures typical of ultracold atom experiments as atoms with non-zero relative motional angular momentum cannot approach sufficiently closely for $V_{ijmn}(\vect{x})$ to be non-negligible.
 
-Bound states formed near Feschbach resonances are one way that the effective field theory can be violated, but they can be treated by considering them to be a different kind of particle.
+In alkali atoms there are two $n=0$ $F$ manifolds, which are separated by the hyperfine splitting.  The energy difference between these two manifolds is sufficiently large that collisions between atoms in the lower manifold cannot result in any atoms being scattered into the upper manifold.  As a result of this restriction it can be shown \citep{Ho:1998} that the scattering only depends on the total angular momentum of the scattering atoms.  The interaction term of \eqref{BackgroundTheory:BasicHamiltonian} can be written as
+\begin{align}
+    \label{BackgroundTheory:QuasimolecularScatteringTerm}
+    \hat{H}_\text{int} &= \frac{1}{2}\sum_{S, m_S}  g_S \int d \vect{x}\, \hat{\Xi}^\dagger_{S, m_S}(\vect{x}) \hat{\Xi}^{\phantom{\dagger}}_{S, m_S}(\vect{x}),
+\end{align}
+where $g_S = 4 \pi \hbar^2 a_S/M$ is the nonlinear interaction strength, and $a_S$ is the $s$-wave scattering length for the total hyperfine spin $S$ channel.  For bosons, the total hyperfine spin $S$ is restricted to even values due to symmetry \citep{Ho:1998}.  The quasi-molecular operator $\hat{\Xi}_{S, m_S}$ is defined in terms of the atomic annihilation operators and the appropriate Clebsch-Gordan coefficients~\citep{Ho:1998}
+\begin{align}
+    \hat{\Xi}_{S, m_S}(\vect{x}) &= \sum_{m_F, m_F'} \left(F, m_F; F, m_F' \middle| S, m_S \right) \hat{\Psi}_{F, m_F}(\vect{x}) \hat{\Psi}_{F, m_F'}(\vect{x}),
+\end{align}
+where $\left(j_1, m_1; j_2, m_2 \middle| J, M\right)$ is a Clebsch-Gordan coefficient.  For the metastable noble gases, the interaction term is also in the form of \eqref{BackgroundTheory:QuasimolecularScatteringTerm} as only one $F$ manifold is accessible.  In metastable Helium the scattering lengths $a_S$ differ by 25\%.  The consequences of this difference are considered in \chapterref{Peaks}.  For $\nucl{87}{}{Rb}$, however, the scattering lengths for collisions between $F=1$ atoms differ by at most 1\% \citep{Kempen:2002}, permitting the approximation $g_0 \approx g_2$.  The nonlinear interaction Hamiltonian can then be written in the simple form
+\begin{align}
+    \label{BackgroundTheory:SimpleScattering}
+    \hat{H}_\text{int} &= \frac{1}{2} \sum_{ij} U_\text{int} \int d \vect{x}\, \hat{\Psi}_i^\dagger(\vect{x}) \hat{\Psi}_j^\dagger(\vect{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\vect{x}) \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x}).
+\end{align}
 
-List the equations of motion in the single-component case.
+When interatomic scattering is well-described by the simple interaction \eqref{BackgroundTheory:SimpleScattering}, the operator evolution of \eqref{BackgroundTheory:NonLocalOperatorEvolution} may be simplified to
+\begin{align}
+    i \hbar \frac{\partial}{\partial t} \hat{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2 M} + V_{i}(\vect{x}) + U_\text{int} \sum_{j} \hat{\Psi}_j^\dagger(\vect{x}) \hat{\Psi}_j^{\phantom{\dagger}}(\vect{x}) \right) \hat{\Psi}_i^{\phantom{\dagger}}(\vect{x}). \label{BackgroundTheory:LocalOperatorEvolution}
+\end{align}
+While the approximation made to the nonlinear interaction term of the Hamiltonian has made these equations local, they cannot be solved exactly.  In the absence of the nonlinear term the atoms do not interact with one another, and the energy eigenstates do not depend on the number of atoms in the system.  In this case the field operator $\hat{\Psi}_i$ may be decomposed as
+\begin{align}
+    \hat{\Psi}_i(\vect{x}, t) &= \sum_j \hat{a}_{ij} \phi_{ij}(\vect{x}, t),
+\end{align}
+where the $\phi_{ij}$ are a set of orthogonal basis functions obeying
+\begin{align}
+    i \hbar \frac{\partial }{\partial t} \phi_{ij}(\vect{x}, t) &= \left( - \frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) \right) \phi_{ij}(\vect{x}, t),
+\end{align}
+and $\hat{a}_{ij}$ are stationary bosonic annihilation operators for the corresponding single-particle modes.  
 
-??The fine structure of alkali atoms is such that there are two $F$ manifolds.  The energy splitting between these two manifolds is significantly larger than trap frequencies or relevant energy scales for condensates.  Scattering between atoms in the lower manifold must therefore preserve $F$ for each atom. 
+With the addition of the nonlinear interaction term, the evolution of the field operator may not be decomposed into the sum of \emph{stationary} bosonic annihilation operators and time-dependent basis functions; the evolution of each `mode' would necessarily depend on the occupation of the other modes.  It is this complication that makes \eqref{BackgroundTheory:LocalOperatorEvolution} difficult to solve in the general case, either analytically \emph{or numerically}.  The difficulty numerically is the sheer amount of information needed to describe $\hat{\Psi}(\vect{x})$.  For a system with exactly $N=100$ atoms that can each occupy one of $m = 100$ spatial modes, $\sim 10^{117}$ complex numbers are needed to describe $\hat{\Psi}(\vect{x})$.  Typical BEC's have $N \gtrsim 10^5$.  While it is this complexity that it is hoped that quantum computers can harness, it is what makes it hard to solve many-body interacting quantum problems with classical computers.
 
+The following section discusses a limit in which the field operator can be approximated by a complex function, whose evolution can feasibly be simulated numerically.
 
 \section{Gross-Pitaevskii equation}
+
+
 
 Briefly mention an approach to spontaneous symmetry-breaking.  This is in terms of assuming a given phase.
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{125}
+\begin{thebibliography}{126}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,35 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{307} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
+\bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{81}},
+  \bibinfo{pages}{742} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{van Kempen \emph{et~al.}}(2002)\citenamefont{van
+  Kempen, Kokkelmans, Heinzen, and Verhaar}}]{Kempen:2002}
+\bibinfo{author}{\bibfnamefont{E.~G.~M.} \bibnamefont{van Kempen}},
+  \bibinfo{author}{\bibfnamefont{S.~J. J. M.~F.} \bibnamefont{Kokkelmans}},
+  \bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Heinzen}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.~J.}
+  \bibnamefont{Verhaar}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{88}}, \bibinfo{pages}{093201}
+  (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Greiner \emph{et~al.}}(2002)\citenamefont{Greiner,
+  Mandel, H{\"a}nsch, and Bloch}}]{Greiner:2002fk}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Greiner}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Mandel}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{419}}, \bibinfo{pages}{51}
+  (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
@@ -240,11 +269,6 @@
   \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
   (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
-\bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
-\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
-  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
-  \bibinfo{pages}{307} (\bibinfo{year}{2001}).
-
 \bibitem[{\citenamefont{Ozeri \emph{et~al.}}(2005)\citenamefont{Ozeri, Katz,
   Steinhauer, and Davidson}}]{Ozeri:2005}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ozeri}},
@@ -304,16 +328,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Babb}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{64}},
   \bibinfo{pages}{042710} (\bibinfo{year}{2001}).
-
-\bibitem[{\citenamefont{van Kempen \emph{et~al.}}(2002)\citenamefont{van
-  Kempen, Kokkelmans, Heinzen, and Verhaar}}]{Kempen:2002}
-\bibinfo{author}{\bibfnamefont{E.~G.~M.} \bibnamefont{van Kempen}},
-  \bibinfo{author}{\bibfnamefont{S.~J. J. M.~F.} \bibnamefont{Kokkelmans}},
-  \bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Heinzen}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.~J.}
-  \bibnamefont{Verhaar}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{88}}, \bibinfo{pages}{093201}
-  (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Widera \emph{et~al.}}(2006)\citenamefont{Widera,
   Gerbier, F\"{o}lling, Gericke, Mandel, and Bloch}}]{Widera:2006}
@@ -386,11 +400,6 @@
   \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Roger}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{49}},
   \bibinfo{pages}{1804} (\bibinfo{year}{1982}).
-
-\bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
-\bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{81}},
-  \bibinfo{pages}{742} (\bibinfo{year}{1998}).
 
 \bibitem[{\citenamefont{Boyd}(2000)}]{SpectralMethods}
 \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Boyd}},

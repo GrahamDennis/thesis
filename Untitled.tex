@@ -3,6 +3,10 @@
 \documentclass[twoside,onecolumn,11pt,a4paper,draft]{book}
 \usepackage[activate={true,nocompatibility},final]{microtype}
 \usepackage[utf8]{inputenc}
+
+\pdfminorversion=5
+\pdfobjcompresslevel=2
+
 %\usepackage{cite} % sort multiple citations alphanumerically
 \usepackage[numbers,sort&compress]{natbib}
 %\usepackage{natbib}
@@ -73,11 +77,11 @@
 %\hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
 \hypersetup{linkcolor=black,citecolor=black,filecolor=black,urlcolor=black} % black links, for printed output
 %\usepackage{hypernat}
-% \usepackage{fancybox}
-% \fancyput(1cm ,1 cm)
-%   {\Huge\bfseries
-%       \textcolor{lightgray}{DRAFT\hspace{2cm}\today}
-%   }
+\usepackage{fancybox}
+\fancyput(0.5cm ,1 cm)
+  {
+      \textcolor{lightgray}{DRAFT: \today\ --- \input{GitSHA}}
+  }
 
 \usepackage{typedref}
 %\refname{section}{}{S}
@@ -108,12 +112,10 @@
 \newcommand\vect[1]{\ensuremath{\bm{#1}}}
 \newcommand\unitvec[1]{\ensuremath{\check{\vect{#1}}}}
 
-\newcommand{\nucl}[3]{
+\newcommand{\nucl}[2]{
  \ensuremath{
- \phantom{\ensuremath{^{#1}_{#2}}}
- \llap{\ensuremath{^{#1}}}
- \llap{\ensuremath{_{\rule{0pt}{.75em}#2}}}
- \mbox{#3}
+ ^{#1}
+ \text{#2}
  }
  }
 

@@ -80,7 +80,7 @@
 \usepackage{fancybox}
 \fancyput(0.5cm ,1 cm)
   {
-      \textcolor{lightgray}{DRAFT: \today\ --- \input{GitSHA}}
+      \textcolor{lightgray}{DRAFT: \today\IfFileExists{GitSHA}{ --- Revision: \input{GitSHA}}{}}
   }
 
 \usepackage{typedref}
@@ -191,7 +191,7 @@ university.
 
 \include{BackgroundTheory}
 
-\include{TransverseProfile}
+%\include{TransverseProfile}
 
 \include{Peaks}
 

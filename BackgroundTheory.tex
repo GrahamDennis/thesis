@@ -167,7 +167,7 @@ The concept of spontaneously-broken symmetries is discussed in greater detail el
 
 \parasep
 
-The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe\footnote{FIXME: Cite stuff}.   The nonlinear term of the GP equation prevents its being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
+The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe \dots\footnote{FIXME: Cite stuff}   The nonlinear term of the GP equation prevents its being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
 
 
 \subsection{Thomas-Fermi approximation}
@@ -176,11 +176,11 @@ The ground state of a condensate is described by the time-independent Gross-Pita
 \begin{align}
     \mu \Psi(\vect{x}) &= \left(- \frac{\hbar^2 \nabla^2}{2M} + V(\vect{x}) + U_\text{int} \abs{\Psi(\vect{x})}^2 \right) \Psi(\vect{x}),
 \end{align}
-where $\mu = \partial \mean{\hat{H}} / \partial $ is the chemical potential of the condensate.  In the limit that the nonlinear term is zero, the condensate ground state in a harmonic trap is a Gaussian
+where $\mu = \partial \mean{\hat{H}} / \partial N$ is the chemical potential of the condensate.  In the limit that the nonlinear term is zero, the condensate ground state in a harmonic trap is Gaussian,
 \begin{align}
     \Psi(\vect{x}) &= \sqrt{N} \left(\frac{M \overline{\omega}}{\hbar \pi} \right)^{\frac{3}{4}} \exp\left[ - \frac{M}{2 \hbar} \left(\omega_x x^2 + \omega_y y^2 + \omega_z z^2\right) \right],
 \end{align}
-where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies.  As the nonlinear term is increased, interatomic repulsion will increase the mean separation of atoms and the ground state will spread out.  For a sufficiently large scattering length, the kinetic energy term in \eqref{BackgroundTheory:GrossPitaevskii} becomes small in comparison to both the potential and interaction terms as it depends on the derivative of $\Psi(\vect{x})$.  This is known as the Thomas-Fermi approximation.  In this limit the form of the wavefunction is
+where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}$ is the geometric mean of the trapping frequencies.  As the nonlinear term is increased, interatomic repulsion will increase the mean separation of atoms and the ground state will become broader.  For a sufficiently large scattering length, the kinetic energy term in \eqref{BackgroundTheory:GrossPitaevskii} is small in comparison to both the potential and interaction terms as it depends on the second derivative of $\Psi(\vect{x})$.  In the Thomas-Fermi approximation the kinetic energy term is neglected, and the form of the wavefunction may be explicitly obtained,
 \begin{align}
     \Psi(\vect{x}) &= 
     \begin{cases}
@@ -188,7 +188,7 @@ where $\overline{\omega} = \left(\omega_x \omega_y \omega_z\right)^{\frac{1}{3}}
         0 & \text{ otherwise.}
     \end{cases}
 \end{align}
-By requiring that $\Psi(\vect{x})$ be correctly normalised an explicit expression for the chemical potential can be obtained
+By requiring that $\Psi(\vect{x})$ be correctly normalised, the chemical potential is found to be
 \begin{align}
     \mu &= \left(\frac{15 N U_\text{int} \overline{\omega}^3}{8 \pi} \right)^{\frac{2}{5}} \left(\frac{M}{2} \right)^{\frac{3}{5}}. \label{BackgroundTheory:ChemicalPotential}
 \end{align}
@@ -202,13 +202,67 @@ The Thomas-Fermi approximation is only valid in the limit that the chemical pote
     \label{BackgroundTheory:GroundStateComparison}
 \end{figure}
 
-A comparison of the harmonic-oscillator and Thomas-Fermi groundstates is given in \figureref{BackgroundTheory:GroundStateComparison}.  The form of the density profile of the Thomas-Fermi wavefunction is that of a truncated inverted parabola.  Near the edge of the wavefunction the nonlinear term has a smaller contribution and the kinetic energy term causes the density profile of the exact groundstate to decay smoothly, as opposed to the Thomas-Fermi profile which has a discontinuous first derivative.  The discontinuity of the Thomas-Fermi profile gives rise to a well-defined condensate radius in each dimension.  This Thomas-Fermi radius is given by
+A comparison of the harmonic-oscillator and Thomas-Fermi groundstates is given in \figureref{BackgroundTheory:GroundStateComparison}.  The density profile of the Thomas-Fermi wavefunction is that of a truncated inverted parabola.  Near the edge of the wavefunction the Thomas-Fermi approximation breaks down as the nonlinear term is smaller and the kinetic energy term causes the density profile of the exact groundstate to decay smoothly.  The Thomas-Fermi profile instead has a discontinuous first derivative.  This discontinuity gives rise to a well-defined condensate radius in each dimension.  This Thomas-Fermi radius is given by
 \begin{align}
     r_\text{TF} &= \frac{1}{\omega_r} \sqrt{\frac{2 \mu}{M}},
 \end{align}
 where $\omega_r$ is the trapping frequency of that dimension.
 
+The Thomas-Fermi approximation is useful as a simple description of the condensate when other parts of the system are of primary interest (it is used in this manner in the next section), or as an initial guess when finding the true groundstate of the system.
+
 \subsection{Application: Transverse profile of the atom laser}
+\label{BackgroundTheory:TransverseProfile}
+
+As discussed in \sectionref{Introduction:AtomLaser}\footnote{FIXME: We can expect that the idea of an atom laser has been discussed in the introduction.  Check cross-ref at later date.} an atom laser is formed by outcoupling from a condensate to produce a propagating beam of coherent atoms.  In the common case of a magnetically-trapped condensate in an $F=1$ manifold, the atoms in one of the $m_F$ Zeeman levels are trapped (the low-field seeking level, either $m_F=1$ as in He* or $m_F=-1$ as in \nucl{87}{Rb}), the atoms in the $m_F=0$ level experience no magnetic trapping potential (and are referred to as `untrapped'), and the atoms in the level opposite to the trapped state experience a repulsive potential and are referred to as `anti-trapped'.  For He*, the potentials experienced by the three levels in a cylindrically-symmetric trap are
+\begin{align}
+    V_{m_F}(\vect{x}) &= m_F V_\text{trap}(\vect{x}) = m_F \frac{1}{2} M \left(\omega_r^2 x^2 + \omega_r^2 y^2 + \omega_z^2 z^2 \right).
+\end{align}
+These three levels are coupled by applying radio-frequency radiation resonant with the Zeeman splitting between the $m_F$ levels.  This Zeeman splitting is due to the magnetic trap, and therefore the outcoupling process will be resonant along a surface of constant $V_\text{trap}(\vect{x})$.  The Hamiltonian for this coupling term is
+\begin{align}
+    \hat{H}_\text{outcoupling} &= \sum_{m_F} \int d \vect{x}\, \hbar \Omega \left(\hat{\Psi}_{m_F+1}^\dagger(\vect{x}) \hat{\Psi}_{m_F}^{\phantom{\dagger}}(\vect{x}) + \hat{\Psi}_{m_F}^\dagger(\vect{x}) \hat{\Psi}_{m_F+1}^{\phantom{\dagger}}(\vect{x}) \right),
+\end{align}
+where $\Omega$ is the Rabi frequency.  Note that this Hamiltonian only applies for an $F=1$ manifold.  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm]{OutcouplingSurfaces}
+    \caption{FIXME: This is not a caption.}
+    \label{BackgroundTheory:OutcouplingSurfaces}
+\end{figure}
+
+
+The equations of motion for the system are therefore
+\begin{subequations}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_1(\vect{x}) &= \left[ - \frac{\hbar^2 \nabla^2}{2 M} + V_\text{trap}(\vect{x}) + M g y + U_\text{int}\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2\right)\right] \Psi_1(\vect{x})\\
+            & + \hbar \Omega \Psi_0(\vect{x}),
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_0(\vect{x}) &= \left[ - \frac{\hbar^2 \nabla^2}{2 M} + M g y + U_\text{int} \left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2\right)\right] \Psi_0(\vect{x})\\
+            & + \hbar \Omega \Psi_1(\vect{x}) + \hbar \Omega \Psi_{-1}(\vect{x}),
+        \end{split}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi_{-1}(\vect{x}) &= \left[ - \frac{\hbar^2 \nabla^2}{2 M} - V_\text{trap}(\vect{x}) + M g y + U_\text{int}\left(\abs{\Psi_1}^2 + \abs{\Psi_0}^2 + \abs{\Psi_{-1}}^2\right)\right] \Psi_{-1}(\vect{x})\\
+            & + \hbar \Omega \Psi_0(\vect{x}).
+        \end{split}
+    \end{align}
+\end{subequations}
+
+Initially the condensate is in the ground state of the trapped $m_F=1$ state.  Once the outcoupling is turned on, the states will be coupled and atoms will be transferred to the $m_F=0$ and $m_F=-1$ levels.  In the limit of weak outcoupling, the atoms in the $m_F=0$ level will leave the region in which outcoupling is resonant before they are significantly coupled into the $m_F=-1$ level.  The $m_F=-1$ level will therefore be relatively unpopulated and may be neglected.  It is the untrapped $m_F=0$ level that we are primarily interested in as it is in this level that the freely-falling atom laser forms.
+
+For short times, most of the atoms will be in the $m_F=1$ level and we may use the Thomas-Fermi approximation to determine the effective potential seen by the untrapped $m_F=0$ atoms.  Inside the condensate, the effective potential has contributions from gravity and interatomic interactions,
+\begin{align}
+    V_\text{eff} &= M g y + U_\text{int} \abs{\Psi_1}^2 = M g y + \left(\mu - V_\text{trap}(\vect{x}) - M g y \right) \notag\\
+    &= \mu - V_\text{trap}(\vect{x}).
+\end{align}
+This effective potential experienced by the untrapped atoms is a repulsive harmonic potential centred at the centre of the magnetic trap.  Once the atoms are outcoupled they will therefore accelerate away from the centre of the magnetic trap until they reach the edge of the condensate, whereupon they will fall under gravity.
+
+Due to gravity, the centre of the condensate and the centre of the magnetic trap do not coincide.  The atoms are pulled down by gravity and the centre of the condensate is $\Delta y = g / \omega_y^2$ below the centre of the condensate.  
+
+Quote: ``However, as discussed in \sectionref{BackgroundTheory:TransverseProfile} the evolution of the atom laser in the region below the BEC is well described by free fall with the exception of fine-scale interference effects.''
+``The double-peak structure of the atom laser profile was discussed earlier in \sectionref{BackgroundTheory:TransverseProfile}.''
+``Neither the fine structure nor the `shadow' of the BEC in the atom laser profile discussed in \sectionref{BackgroundTheory:TransverseProfile} are observed\dots''
 
 Quick example calculation, show some pretty pictures.  Good agreement with experiment, yada yada.
 Apply the TF approx to outcoupling to determine the difference in behaviour of Rb and He* atom lasers.
@@ -282,7 +336,7 @@ where $\mathcal{D}$ is the usual decoherence superoperator. This master equation
 
 In most of this thesis it is only the immediate vicinity of the BEC that is under consideration and absorbing boundary layers are used to restrict the computational domain to this region.  As the use of absorbing boundary layers is a technical issue not related to the underlying physics, they are not included in equations of motion given in this thesis but should be understood to be included when simulations are performed.  
 
-While direct application of absorbing boundary layers permit the study of dynamics near the BEC, in \chapterref{TransverseProfile} the transverse profile of the atom laser a large distance from the BEC is considered.  In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above.  Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
+% While direct application of absorbing boundary layers permit the study of dynamics near the BEC, in \chapterref{TransverseProfile} the transverse profile of the atom laser a large distance from the BEC is considered.  In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above.  Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
 \section{Truncated Wigner}
 \label{BackgroundTheory:TruncatedWigner}

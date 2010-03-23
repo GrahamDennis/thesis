@@ -1,4 +1,4 @@
-\begin{thebibliography}{126}
+\begin{thebibliography}{132}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -41,6 +41,95 @@
   \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{419}}, \bibinfo{pages}{51}
   (\bibinfo{year}{2002}).
 
+\bibitem[{\citenamefont{Leggett and Sols}(1991)}]{Leggett:1991fj}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sols}},
+  \bibinfo{journal}{Found. Phys.} \textbf{\bibinfo{volume}{21}},
+  \bibinfo{pages}{353} (\bibinfo{year}{1991}).
+
+\bibitem[{\citenamefont{M{\o}lmer}(1997)}]{Molmer:1997fr}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
+  \bibinfo{pages}{3195} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Kasevich}(2002)}]{Kasevich:2002}
+\bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{298}},
+  \bibinfo{pages}{1363} (\bibinfo{year}{2002}),
+  \eprint{http://www.sciencemag.org/cgi/reprint/298/5597/1363.pdf}.
+
+\bibitem[{\citenamefont{Dall \emph{et~al.}}(2007)\citenamefont{Dall, Byron,
+  Truscott, Dennis, Johnsson, Jeppesen, and Hope}}]{Dall:2007}
+\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
+  \bibinfo{author}{\bibfnamefont{L.~J.} \bibnamefont{Byron}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
+  \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2008)\citenamefont{Jeppesen,
+  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2008}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{063618} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Dall and Truscott}(2007)}]{Dall:2007a}
+\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
+  \bibinfo{journal}{Optics Communications} \textbf{\bibinfo{volume}{270}},
+  \bibinfo{pages}{255} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Riou}(2006)}]{Riou:2006fk}
+\bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}}, Ph.D. thesis,
+  \bibinfo{school}{Universit{\'e} Paris Sud} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Dall \emph{et~al.}}(2010)\citenamefont{Dall, Hodgman,
+  Johnsson, Baldwin, and Truscott}}]{Dall:2010}
+\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
+  \bibinfo{author}{\bibfnamefont{S.~S.} \bibnamefont{Hodgman}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{K.~G.~H.} \bibnamefont{Baldwin}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~G.}
+  \bibnamefont{Truscott}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{011602}
+  (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Couvert \emph{et~al.}}(2008)\citenamefont{Couvert,
+  Jeppesen, Kawalec, Reinaudi, Mathevet, and Gu{\'e}ry-Odelin}}]{Couvert:2008}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Couvert}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kawalec}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Reinaudi}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Mathevet}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{50001} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Bord{\'e}}(2001)}]{Borde:2001qy}
+\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Bord{\'e}}},
+  \bibinfo{journal}{Comptes Rendus de l'Academie des Sciences - Series IV -
+  Physics} \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{509}
+  (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Busch \emph{et~al.}}(2002)\citenamefont{Busch,
+  K{\"o}hl, Esslinger, and M{\o}lmer}}]{Busch:2002zr}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{65}},
+  \bibinfo{pages}{043615} (\bibinfo{year}{2002}).
+
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
@@ -52,17 +141,6 @@
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
   Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
   (\bibinfo{year}{1989}).
-
-\bibitem[{\citenamefont{Leggett and Sols}(1991)}]{Leggett:1991fj}
-\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sols}},
-  \bibinfo{journal}{Found. Phys.} \textbf{\bibinfo{volume}{21}},
-  \bibinfo{pages}{353} (\bibinfo{year}{1991}).
-
-\bibitem[{\citenamefont{M{\o}lmer}(1997)}]{Molmer:1997fr}
-\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
-  \bibinfo{pages}{3195} (\bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Bardou \emph{et~al.}}(1992)\citenamefont{Bardou, Emile,
   Courty, Westbrook, and Aspect}}]{Bardou:1992}
@@ -141,16 +219,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{78}},
   \bibinfo{pages}{582} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{Busch \emph{et~al.}}(2002)\citenamefont{Busch,
-  K{\"o}hl, Esslinger, and M{\o}lmer}}]{Busch:2002zr}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
-  \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{65}},
-  \bibinfo{pages}{043615} (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Riou \emph{et~al.}}(2006)\citenamefont{Riou, Guerin,
   Coq, Fauquembergue, Josse, Bouyer, and Aspect}}]{Riou:2006uq}
@@ -244,24 +312,6 @@
   \bibnamefont{N{\"a}gerl}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{100}}, \bibinfo{pages}{080404}
   (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Dall and Truscott}(2007)}]{Dall:2007a}
-\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
-  \bibinfo{journal}{Optics Communications} \textbf{\bibinfo{volume}{270}},
-  \bibinfo{pages}{255} (\bibinfo{year}{2007}).
-
-\bibitem[{\citenamefont{Dall \emph{et~al.}}(2007)\citenamefont{Dall, Byron,
-  Truscott, Dennis, Johnsson, Jeppesen, and Hope}}]{Dall:2007}
-\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
-  \bibinfo{author}{\bibfnamefont{L.~J.} \bibnamefont{Byron}},
-  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
-  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
-  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
-  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
-  \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{Pethick and Smith}(2002)}]{PethickSmith}
 \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Pethick}} \bibnamefont{and}

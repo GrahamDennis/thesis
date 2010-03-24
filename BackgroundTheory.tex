@@ -283,10 +283,60 @@ While the fine structure of the transverse atom laser profile is caused by inter
 
 Although good agreement is seen between the predictions of the Gross-Pitaevskii model and the observed experimental profile, the presence of interference fringes on the atom laser will cause problems in mode matching the atom laser beam to another atom laser, as would be necessary in an atom interferometry experiment.  \figureref{BackgroundTheory:HeliumTransverseProfile} demonstrates that outcoupling from a weaker trap improves the transverse profile, making it closer to an ideal Gaussian beam.  It is also possible to improve the transverse mode by outcoupling closer to the bottom of the trap \citep{Riou:2006fk}, however this comes at the cost of reduced flux and a higher sensitivity to technical noise in the frequency of the outcoupling radiation \citep{Robins:2005uq}.  Other options for improving the transverse profile include using a multiphoton Raman outcoupling process \citep{Hagley:1999dz,Ruostekoski:2003,Jeppesen:2008} or guiding the atom laser optically \citep{Guerin:2006mz,Couvert:2008,Dall:2010}.  This last possibility, however, may introduce sufficient noise due to fluctuations in the waveguide to preclude its use in atom interferometry measurements \citep{Le-Coq:2006}.
 
-\section{Density matrices and loss}
-The decoherence superoperator arises naturally due to system--bath coupling of a certain form.  Gives rise to the Lindblad form, which gives rise to a certain form for a general bath occupation, and a simpler form with vacuum bath (usual case).  Show that the decoherence superoperator gives rise to usual forms for loss in expectation values.
+\section{Loss processes and the master equation}
 
-Brief applications to spontaneous emission (assume \emph{both} the atomic ground states and photon modes are in vacuum states) and Penning ionisation.
+We are not always interested in the entirety of an interacting system; frequently it is only a small part of that system that is of interest.  For example, in \sectionref{BackgroundTheory:GrossPitaevskiiEquation} we considered a BEC its environment of the almost empty atomic modes of the vacuum chamber in which it was produced.  The environment is vastly larger than the BEC, both in terms of the number of available atomic modes, and also in terms of the total occupation of those modes.  Condensates containing as many as $10^8$ \nucl{87}{Rb} atoms have been produced, however many more atoms ($\sim 10^{10}$) were initially in the trap before the evaporation process \citep{Streed:2006}.  The remaining atoms that are not part of the condensate in which we are interested comprise the environment.  While the entire system may be described by a many-body wavefunction, much of the information in this wavefunction will be describing the environment.  A description is necessary of the state of the condensate independent of the exact state of the environment.  The density matrix $\hat{\rho}$ provides that description.
+
+As mentioned in \sectionref{BackgroundTheory:GrossPitaevskiiEquation}, a density matrix for a subsystem may be obtained by formally averaging (or tracing) over the degrees of freedom of the environment.  This simpler description fully describes the subsystem when we are restricted to performing measurements on the subsystem of interest.  With this very natural restriction it becomes impossible to distinguish otherwise distinct states of the entire system.  This indistinguishability is not fundamental; by performing measurements on the entire system the states may be distinguished.  The indistinguishability arises only due to our limited knowledge of the subsystem.
+
+Although not part of the subsystem of interest, the environment typically still influences the evolution of the subsystem.  For example collisions with atoms in the environment will lead to losses from the condensate.  While knowledge of the state of the entire system is necessary to treat this exactly, if the interaction between the subsystem and the environment is sufficiently weak and the subsystem is sufficiently small in comparison to the environment, the interaction may be treated perturbatively using the master equation technique originally derived in the context of quantum optics \citep{Senitzky:1960,Senitzky:1961}.  Specifically, for subsystem--environment interactions of the form
+\begin{align}
+    \hat{H}_\text{int} &= \hbar \sum_m \left(\hat{X}_m^\dagger \hat{\Gamma}_m^{\phantom{\dagger}} + \hat{X}_m^{\phantom{\dagger}} \hat{\Gamma}_m^\dagger \right), \label{BackgroundTheory:GeneralSubsystemEnvironmentCoupling}
+\end{align}
+where $\{\hat{X}_m\}$ are a set of subsystem operators, and $\{\hat{\Gamma}_m^\dagger\}$ are a set of environment operators, the equation of motion for the density matrix gains the following term \citep[Chapter 5]{GardinerQN}:
+\begin{align}
+    \left.\frac{\partial}{\partial t} \hat{\rho}\right|_\text{int} &= \sum_m K_m \mathcal{D}[\hat{X}_m]\hat{\rho} + \sum_m G_m \mathcal{D}[\hat{X}_m^\dagger]\hat{\rho}, \label{BackgroundTheory:LindbladForm}
+\end{align}
+where $\mathcal{D}[\hat{a}]\hat{\rho} = \hat{a} \hat{\rho} \hat{a}^\dagger - \frac{1}{2}\left(\hat{a}^\dagger \hat{a} \hat{\rho} + \hat{\rho} \hat{a}^\dagger \hat{a} \right)$ is the decoherence superoperator, and the constants $K_m$ and $G_m$ depend on properties of the environment.  In the common case that the environment operators $\hat{\Gamma}_m$ are products of annihilation operators, the constants $G_m$ are zero if the modes of the environment are essentially unoccupied.
+
+In the following section the master equation will be used to model the process of Penning ionisation in metastable helium.
+
+% A practical application of \eqref{BackgroundTheory:LindbladForm} is to the process of spontaneous emission.  Consider the case of a field of two-level atoms coupled by light.  Within certain approximations (see \sectionref{OpticalPumping:MultimodeModel} for details) the interaction Hamiltonian takes the form
+% \begin{align}
+%     \hat{H}_\text{int} &= \hbar \epsilon \int d \vect{x}\, \left(\hat{\Psi}_e^\dagger(\vect{x}) \hat{\Psi}_g^{\phantom{\dagger}}(\vect{x}) \hat{\Phi}_\text{ph}^{\phantom{\dagger}}(\vect{x}) + \hat{\Phi}_\text{ph}^\dagger(\vect{x}) \hat{\Psi}_g^\dagger(\vect{x}) \hat{\Psi}_e^{\phantom{\dagger}}(\vect{x})\right),
+% \end{align}
+% where $\epsilon$ is a coupling constant, $\hat{\Psi}_g$ and $\hat{\Psi}_e$ are the atomic field operators for the ground and excited states respectively, and $\hat{\Phi}_\text{ph}$ is the photon field operator.  If we are only interested in the behaviour of atoms in the excited state, we may consider $\hat{\Psi}_e$ to be our subsystem of interest with $\hat{\Psi}_g$ and $\hat{\Phi}_\text{ph}$ comprising the environment.  In this case, the subsystem operator $\hat{X}_m$ is $\hat{\Psi}_e$ and the environment operator $\hat{\Gamma}_m$ is $\hat{\Psi}_g \hat{\Phi}_\text{ph}$.  
+
+\subsection{Application: Penning ionisation}
+\label{BackgroundTheory:PenningIonisation}
+
+The primary attraction of creating Bose-Einstein condensates of metastable helium atoms is that their large internal energy ($\unit[20]{eV}$) enables single-atom detection with high spatial (\micro m) and temporal resolution (ns). However, this large internal energy can be released when two metastable helium atoms collide resulting in Penning ionisation (PI),
+\begin{align}
+    \label{BackgroundTheory:PenningIonisation}
+    \text{He}^* + \text{He}^* & \rightarrow \left\{
+        \begin{matrix}
+            \text{He}^+ + \text{He} + e^-\\
+            \text{He}_2^+ + e^-
+        \end{matrix}\right..
+\end{align}
+While this process dominates for unpolarised cold samples such as magneto-optical traps~\citep{Bardou:1992}, it does not prohibit the formation of Bose-Einstein condensates as the process is suppressed by five orders of magnitude~\citep{Shlyapnikov:1994} in polarised samples.  This suppression is due to conservation of angular momentum. While the reactants each have a total angular momentum $s=1$, giving their combined total angular momentum as either $S=0$ or $S=2$ (assuming $s$-wave collisions), the products each have total angular momentum $s=\frac{1}{2}$ (in the case of $\text{He}^+$, $e^-$ and $\text{He}_2^+$) or $s=0$ (for $\text{He}$), giving the total angular momentum of the products as either $S=0$ or $S=1$. Hence spin polarised states having $S=2$, $m_S=\pm2$ cannot directly undergo the process \eqref{BackgroundTheory:PenningIonisation}.
+
+In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be prevented from directly undergoing PI. As collisions with nonzero relative angular momentum can be neglected at BEC temperatures~\citep{Venturi:2000,Stas:2006kx} (due to the atoms having insufficient energy to penetrate the centrifugal barrier), it is only the $S=0$ quasimolecule state that undergoes PI.
+
+The Hamiltonian describing either of the processes \eqref{BackgroundTheory:PenningIonisation} will be of the form
+\begin{align}
+    \hat{H}_\text{int} &= \hbar \epsilon \int d \vect{x}\, \hat{\Gamma}^\dagger(\vect{x})\hat{\Xi}_{S=0, m_S=0}^{\phantom{\dagger}}(\vect{x}) + \hat{\Xi}_{S=0, m_S=0}^\dagger (\vect{x}) \hat{\Gamma}(\vect{x}), \label{BackgroundTheory:PIInteractionHamiltonian}
+\end{align}
+where $\epsilon$ is a spatially-independent coupling constant, $\hat{\Gamma}$ is a product of annihilation operators for the products of the PI process, and the $S=0$ quasimolecule state that undergoes PI is given by
+\begin{align}
+    \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
+\end{align}
+
+As we are only interested in the metastable helium atoms, and not the products of the PI process, $\hat{\Xi}_{S=0, m_S=0}$ is the subsystem operator of the interaction Hamiltonian \eqref{BackgroundTheory:PIInteractionHamiltonian}, and $\hat{\Gamma}$ is the environment operator.  As the environment operator is of the form of a product of annihilation operators and the products of PI will have sufficient kinetic energy to leave the condensate rapidly (and therefore keep the $\hat{\Gamma}$ modes unoccupied), the master equation term describing Penning ionisation must have the form
+\begin{align}
+    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \gamma_\text{PI} \int d \vect{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho}, \label{BackgroundTheory:PenningIonisationMasterEquationTerm}
+\end{align}
+where $\gamma_\text{PI}$ is a positive rate constant.  An explicit form for this rate constant is obtained in \sectionref{PenningIonisationAppendix:MasterEquation}.  It is shown there that $\gamma_\text{PI} = \frac{9}{2} \Kunpol$, where $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$~\citep{Stas:2006kx}.
 
 \section{Phase-space methods}
 
@@ -378,30 +428,6 @@ Operator correspondences must be described here.
     \caption{\label{BackgroundTheory:He*Parameters} Relevant parameters of metastable helium.}
 \end{table}
 
-\subsection{Penning ionisation}
-\label{BackgroundTheory:PenningIonisation}
-
-The primary attraction of creating Bose-Einstein condensates of metastable helium atoms is that their large internal energy ($\unit[20]{eV}$) enables single-atom detection with high spatial (\micro m) and temporal resolution (ns). However, this large internal energy can be released when two metastable helium atoms collide resulting in Penning ionisation (PI),
-\begin{align}
-    \label{BackgroundTheory:PenningIonisation}
-    \text{He}^* + \text{He}^* & \rightarrow \left\{
-        \begin{matrix}
-            \text{He}^+ + \text{He} + e^-\\
-            \text{He}_2^+ + e^-
-        \end{matrix}\right.
-\end{align}
-While this process dominates for unpolarised cold samples such as magneto-optical traps~\citep{Bardou:1992}, it does not prohibit the formation of Bose-Einstein condensates as the process is suppressed by five orders of magnitude~\citep{Shlyapnikov:1994} in polarised samples.  This suppression is due to conservation of angular momentum. While the reactants each have a total angular momentum $s=1$, giving their combined total angular momentum as either $S=0$ or $S=2$ (assuming $s$-wave collisions), the products each have total angular momentum $s=\frac{1}{2}$ (in the case of $\text{He}^+$, $e^-$ and $\text{He}_2^+$) or $s=0$ (for $\text{He}$), giving the total angular momentum of the products as either $S=0$ or $S=1$. Hence spin polarised states having $S=2$, $m_S=\pm2$ cannot directly undergo the process \eqref{BackgroundTheory:PenningIonisation}.
-
-In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be prevented from directly undergoing Penning ionisation. As collisions with nonzero relative angular momentum can be neglected at BEC temperatures~\citep{Venturi:2000,Stas:2006kx} (due to the atoms having insufficient energy to penetrate the centrifugal barrier), it is only the $S=0$ quasimolecule state that undergoes Penning ionisation.
-
-As derived in \sectionref{PenningIonisationAppendix:MasterEquation} the master equation term describing Penning ionisation is
-\begin{align}
-    \left.\frac{d \hat{\rho}}{dt}\right|_\text{PI} &= \frac{9}{2} \Kunpol \int d \vect{x}\, \mathcal{D}\left[ \hat{\Xi}_{S=0, m_S=0}\right] \hat{\rho},
-\end{align}
-where $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$~\citep{Stas:2006kx}, and the $S=0$ quasimolecule state that undergoes Penning ionisation is given by
-\begin{align}
-    \hat{\Xi}_{S=0, m_S=0} &= \frac{1}{\sqrt{3}} \left( 2 \hat{\Psi}_1 \hat{\Psi}_{-1} - \hat{\Psi}_0 \hat{\Psi}_0\right).
-\end{align}
 
 \section{Pumping and (atom) lasers}
 \label{BackgroundTheory:Lasers}

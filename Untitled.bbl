@@ -1,4 +1,4 @@
-\begin{thebibliography}{135}
+\begin{thebibliography}{137}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -165,17 +165,37 @@
   \bibinfo{journal}{Applied Physics B: Lasers and Optics}
   \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{627} (\bibinfo{year}{2006}).
 
-\bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
-  \bibinfo{journal}{Journal of Computational Physics}
-  \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
+\bibitem[{\citenamefont{Streed \emph{et~al.}}(2006)\citenamefont{Streed,
+  Chikkatur, Gustavson, Boyd, Torii, Schneble, Campbell, Pritchard, and
+  Ketterle}}]{Streed:2006}
+\bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Streed}},
+  \bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Chikkatur}},
+  \bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Boyd}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Torii}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Schneble}},
+  \bibinfo{author}{\bibfnamefont{G.~K.} \bibnamefont{Campbell}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Rev. Sci. Instrum.} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{023106} (\bibinfo{year}{2006}).
 
-\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
-  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
-  (\bibinfo{year}{1989}).
+\bibitem[{\citenamefont{Senitzky}(1960)}]{Senitzky:1960}
+\bibinfo{author}{\bibfnamefont{I.~R.} \bibnamefont{Senitzky}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{119}},
+  \bibinfo{pages}{670} (\bibinfo{year}{1960}).
+
+\bibitem[{\citenamefont{Senitzky}(1961)}]{Senitzky:1961}
+\bibinfo{author}{\bibfnamefont{I.~R.} \bibnamefont{Senitzky}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{124}},
+  \bibinfo{pages}{642} (\bibinfo{year}{1961}).
+
+\bibitem[{\citenamefont{Gardiner and Zoller}(2004)}]{GardinerQN}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
+  \emph{\bibinfo{title}{{Quantum Noise}}}, Springer Series in Synergetics
+  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2004}), \bibinfo{edition}{3rd}
+  ed.
 
 \bibitem[{\citenamefont{Bardou \emph{et~al.}}(1992)\citenamefont{Bardou, Emile,
   Courty, Westbrook, and Aspect}}]{Bardou:1992}
@@ -211,6 +231,18 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
+  \bibinfo{journal}{Journal of Computational Physics}
+  \textbf{\bibinfo{volume}{63}}, \bibinfo{pages}{363} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Neuhasuer and Baer}(1989)}]{Neuhasuer:1989}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Neuhasuer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
+  Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
+  (\bibinfo{year}{1989}).
 
 \bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
@@ -907,21 +939,6 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
   \bibinfo{pages}{043618} (\bibinfo{year}{2007}).
 
-\bibitem[{\citenamefont{Streed \emph{et~al.}}(2006)\citenamefont{Streed,
-  Chikkatur, Gustavson, Boyd, Torii, Schneble, Campbell, Pritchard, and
-  Ketterle}}]{Streed:2006}
-\bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Streed}},
-  \bibinfo{author}{\bibfnamefont{A.~P.} \bibnamefont{Chikkatur}},
-  \bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Boyd}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Torii}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Schneble}},
-  \bibinfo{author}{\bibfnamefont{G.~K.} \bibnamefont{Campbell}},
-  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Pritchard}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
-  \bibinfo{journal}{Rev. Sci. Instrum.} \textbf{\bibinfo{volume}{77}},
-  \bibinfo{pages}{023106} (\bibinfo{year}{2006}).
-
 \bibitem[{\citenamefont{M{\"u}ller
   \emph{et~al.}}(2007)\citenamefont{M{\"u}ller, Wendrich, Gilowski, Jentsch,
   Rasel, and Ertmer}}]{Muller:2007}
@@ -1144,13 +1161,6 @@
   \emph{\bibinfo{title}{{Handbook of Stochastic Methods}}}, Springer Series in
   Synergetics (\bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
   \bibinfo{year}{2004}), \bibinfo{edition}{3rd} ed.
-
-\bibitem[{\citenamefont{Gardiner and Zoller}(2004)}]{GardinerQN}
-\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
-  \emph{\bibinfo{title}{{Quantum Noise}}}, Springer Series in Synergetics
-  (\bibinfo{publisher}{Springer}, \bibinfo{year}{2004}), \bibinfo{edition}{3rd}
-  ed.
 
 \bibitem[{\citenamefont{Polkovnikov}(2003)}]{Polkovnikov:2003}
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},

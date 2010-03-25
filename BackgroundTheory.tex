@@ -167,8 +167,11 @@ The concept of spontaneously-broken symmetries is discussed in greater detail el
 
 \parasep
 
+FIXME: The following needs writing / rewriting / editing.
+
 The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe \dots\footnote{FIXME: Cite stuff}   The nonlinear term of the GP equation prevents its being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
 
+In the rest of this thesis, the symmetry-breaking assumption will be applied.  It is understood that this is a calculational tool equivalent to assuming the system to be in a state of the form of \eqref{BackgroundTheory:CondensateDensityMatrixCoherentStateMixture}, which preserves the $U(1)$ symmetry dictated by total number conservation.
 
 \subsection{Thomas-Fermi approximation}
 
@@ -297,7 +300,7 @@ where $\{\hat{X}_m\}$ are a set of subsystem operators, and $\{\hat{\Gamma}_m^\d
 \begin{align}
     \left.\frac{\partial}{\partial t} \hat{\rho}\right|_\text{int} &= \sum_m K_m \mathcal{D}[\hat{X}_m]\hat{\rho} + \sum_m G_m \mathcal{D}[\hat{X}_m^\dagger]\hat{\rho}, \label{BackgroundTheory:LindbladForm}
 \end{align}
-where $\mathcal{D}[\hat{a}]\hat{\rho} = \hat{a} \hat{\rho} \hat{a}^\dagger - \frac{1}{2}\left(\hat{a}^\dagger \hat{a} \hat{\rho} + \hat{\rho} \hat{a}^\dagger \hat{a} \right)$ is the decoherence superoperator, and the constants $K_m$ and $G_m$ depend on properties of the environment.  In the common case that the environment operators $\hat{\Gamma}_m$ are products of annihilation operators, the constants $G_m$ are zero if the modes of the environment are essentially unoccupied.
+where $\mathcal{D}[\hat{a}]\hat{\rho} = \hat{a} \hat{\rho} \hat{a}^\dagger - \frac{1}{2}\left(\hat{a}^\dagger \hat{a} \hat{\rho} + \hat{\rho} \hat{a}^\dagger \hat{a} \right)$ is the decoherence superoperator, and the positive constants $K_m$ and $G_m$ depend on properties of the environment.  In the common case that the environment operators $\hat{\Gamma}_m$ are products of annihilation operators, the constants $G_m$ are zero if the modes of the environment are essentially unoccupied.
 
 In the following section the master equation will be used to model the process of Penning ionisation in metastable helium.
 
@@ -338,13 +341,163 @@ As we are only interested in the metastable helium atoms, and not the products o
 \end{align}
 where $\gamma_\text{PI}$ is a positive rate constant.  An explicit form for this rate constant is obtained in \sectionref{PenningIonisationAppendix:MasterEquation}.  It is shown there that $\gamma_\text{PI} = \frac{9}{2} \Kunpol$, where $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}s\textsuperscript{-1}}$ is the rate constant for the production of ions due to Penning ionisation in an unpolarised thermal sample at $\unit[1]{\micro K}$~\citep{Stas:2006kx}.
 
-\section{Phase-space methods}
+\section{Beyond the Gross-Pitaevskii equation}
+\label{BackgroundTheory:BeyondGrossPitaevskii}
+
+In deriving the Gross-Pitaevskii equation, the atomic field $\hat{\Psi}(\vect{x})$ was separated into a classical component $\Psi(\vect{x})$ and a fluctuations operator $\delta\hat{\Psi}(\vect{x})$,
+\begin{align}
+    \hat{\Psi}(\vect{x}) &= \Psi(\vect{x}) + \delta\hat{\Psi}(\vect{x}),
+\end{align}
+where it was then assumed that the fluctuations operator was `small'.  This is the so-called semiclassical or mean-field approximation which includes single-particle quantum mechanical effects such as interference and barrier-tunnelling.  This approximation neglects some of the more interesting quantum phenomena such as entanglement and squeezing\footnote{FIXME: Citations missing}.  This section discusses some techniques beyond the Gross-Pitaevskii equation that include these quantum statistical effects to varying levels of approximation.  
+
+There are two classes of methods that go semiclassical approximations.  In the first class of methods the state of the system is quite general and an expansion is performed in the evolution of the system, which is truncated at a certain level.  The stochastic phase-space methods are the most common of this class, and are discussed in  \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods}.  In the second class of methods, an expansion of the form of the system's state.  This expansion is truncated at some level, neglecting correlations above a certain order.  Requiring the state of the system to be of a certain form implicitly approximates the evolution of the system as well, however these approximations are of a different form to those of the first class.  The Bogoliubov-type methods are representative of the second class of methods, and are discussed in \sectionref{BackgroundTheory:BogoliubovMethods}.
+
+% Note that Karen's recent +P / HFB (bog?) hybrid is a cross-over between these two classes.
+
+
+\subsection{Stochastic phase-space methods}
+\label{BackgroundTheory:StochasticPhaseSpaceMethods}
+
+% c-number methods?
+
+Phase-space representations are real-valued functions that are an alternative description of the state of the system fully-equivalent to the density matrix $\hat{\rho}$.  In addition to being useful pictorial representations of the state of a system, these phase-space representations can be used to derive stochastic methods for describing the evolution of the system.
+
+There are several phase-space representations, the most common being the P, Q and Wigner distributions.  Each of these represent the state of the system in terms of coherent states.  This is mostly clearly seen for the P-function,
+\begin{align}
+    \hat{\rho} &= \int d \alpha\, P(\alpha) \ketbra{\alpha}{\alpha}, \label{BackgroundTheory:PFunction}
+\end{align}
+where $P(\alpha)$ is the P-function for the single-mode system described by the density matrix $\hat{\rho}$.  Every density matrix has a unique, equivalent, P-function.  While the P-function is real, it is frequently pathological.  For example, the coherent state $\ket{\alpha_0}$ has P-function
+\begin{align}
+    P(\alpha) &= \delta^2(\alpha - \alpha_0).
+\end{align}
+The Wigner and Q functions are significantly less pathological as they can be obtained by convolving the P-function with $\frac{2}{\pi}e^{-2 \abs{\alpha}^2}$ and $\frac{1}{\pi} e^{-\abs{\alpha}^2}$ respectively.  Despite this convolution, the Wigner and Q functions are also complete representations of the state of the system \citep{GardinerQN}.
+
+Instead of considering the evolution of the density matrix directly, the stochastic phase-space methods aim to model the evolution of phase-space representations.  If the equation of motion for the phase-space representation is of the form of a Fokker-Planck equation \citep{GardinerHSM}, the phase-space representation may be interpreted as a classical probability distribution.  In this case the evolution may be unravelled using stochastic differential equations.  Expectation values can then be calculated as averages of appropriate quantities over \emph{independent} realisations of a stochastic differential equation, which requires significantly fewer computational resources than solving the Fokker-Planck equation directly.  In the general case it is desired to unravel the Fokker-Planck equation
+\begin{align}
+    \frac{\partial}{\partial t}F(\vect{\alpha}, t) &= - \sum_j \frac{\partial}{\partial \alpha_j} A_j(\vect{\alpha}, t) F(\vect{\alpha}, t) + \frac{1}{2} \sum_{j, k} \frac{\partial}{\partial \alpha_j^{\phantom{*}}} \frac{\partial}{\partial \alpha_k^*} D_{j,k}(\vect{\alpha}, t) F(\vect{\alpha}, t) \label{BackgroundTheory:GeneralFokkerPlanckEquation}
+\end{align}
+in terms of the Stratonovich stochastic differential equation \citep{GardinerHSM}
+\begin{align}
+    d \alpha_i &= \left[A_i(\vect{\alpha}, t)  - \frac{1}{2} \sum_{j, k} B_{k, j}(\vect{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\vect{\alpha}, t) \right] dt + \sum_j B_{i,j}(\vect{\alpha}, t) \,d W_j(t), \label{BackgroundTheory:GeneralStratonovichSDE}
+\end{align}
+where the matrix $\vect{B}(\vect{\alpha}, t)$ is defined by
+\begin{align}
+    \vect{D}(\vect{\alpha}, t) &= \vect{B}(\vect{\alpha}, t) \vect{B}^\dagger(\vect{\alpha}, t),
+\end{align}
+and the Wiener increments $d W_j(t)$ are independent real Gaussian random variables with zero mean satisfying
+\begin{align}
+    \overline{d W_i(t) dW_j(t')} = \delta_{i j}\delta(t - t').
+\end{align}
+This decomposition is guaranteed when the matrix $\vect{D}(\vect{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{BackgroundTheory:GeneralFokkerPlanckEquation} and \eqref{BackgroundTheory:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
+
+The unravelling of a Fokker-Planck equation in terms of a stochastic differential equation can be physically interpreted as the macroscopic and microscopic views of the same process. For example, a Fokker-Planck equation can be used to model the probability distribution of positions and velocities of particles in a gas (macroscopic view), and the corresponding stochastic differential equation would describe the path taken by a single particle (microscopic view).  The macroscopic view is useful when it is the distribution of positions and velocities which is of interest, or if it is only a few moments that are of interest, when the equations of motion for those moments form a closed system (such as those describing an ideal gas). Frequently however the equations of motion are not closed with that for each moment depending on a higher-order moment [for example \eqref{BackgroundTheory:ExpectationValueEvolution}], and an assumption must be made to close the system of equations (in the case of \eqref{BackgroundTheory:ExpectationValueEvolution}, that the system remains in a coherent state). 
+
+The microscopic view is an alternative approach which is useful when two conditions are met. The first is that it is only a finite set of moments of the distribution that are of interest, not the distribution itself. The second is that the motion of the particles are independent of one another (although they may depend on moments of the distribution). That the particles' motions are independent is equivalent to the eigenvalues of $\vect{D}$ being nonnegative. Positive eigenvalues of $\vect{D}$ can be physically interpreted as corresponding to a diffusion process which microscopically takes the form of Brownian motion. Negative eigenvalues however correspond to \emph{negative} diffusion, a highly singular process in which particles tend to drift toward one another\footnote{It should be noted that the existence of negative eigenvalues for the matrix $\vect{D}$ does not imply that the \emph{solution} to the Fokker-Planck equation is singular. A good example of this is the equation of motion for the Q function~\citep{Scully} of the anharmonic oscillator which is periodic in time, yet the corresponding $\vect{D}$ matrix has positive and negative eigenvalues of equal magnitude.}. In this case the evolution of one realisation of \eqref{BackgroundTheory:GeneralStratonovichSDE} will depend on the local \emph{distribution}, violating the conditions stated above. One solution to this problem is increase the dimensionality of the Fokker-Planck equation and use the additional freedom given by the auxiliary dimensions to ensure that motion in the larger space is purely diffusive (this approach is taken with the Positive-P representation~\citep{GardinerQN}). 
+
+
+% The Fokker-Planck equation is a faster technique when it is the distribution that is of interest, however the stochastic unravelling is a faster technique when it is only a few moments that are of interest.
+
+\subsubsection{Application: Anharmonic oscillator}
+
+We now demonstrate the application of a stochastic phase-space method to the anharmonic oscillator, which is governed by the Hamiltonian
+\begin{align}
+    \hat{H} = \hbar \omega \hat{a}^\dagger \hat{a} + \frac{1}{2} \hbar \kappa \hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}. \label{BackgroundTheory:AnharmonicOscillator:Hamiltonian}
+\end{align}
+We wish to consider the evolution of the system with initial state $\ket{\Psi(0)} = \ket{\alpha_0}$.  This system can be solved exactly and has the interesting feature that its two-time correlation function initially decays, but undergoes perfect revivals when $\kappa t = 2 \pi n$ for integral $n$.  The normalised two-time correlation function for this system is
+\begin{align}
+    \frac{1}{N}\abs{\mean{\hat{a}^\dagger(t) \hat{a}(0)}}^2 &= \exp \left\{2 N \left[\cos(\kappa t) - 1 \right] \right\}, \label{BackgroundTheory:AnharmonicOscillator:ExactTwoTimeCorrelationFunction}
+\end{align}
+where $N = \abs{\alpha_0}^2$.
+
+In this thesis we will only consider stochastic methods based on the Wigner distribution, which is defined by \citep{Scully}
+\begin{align}
+    W(\alpha) &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \hat{\rho} \right\}.
+\end{align}
+An equation of motion for the Wigner function can be obtained by substituting in the equation of motion for the density matrix,
+\begin{align}
+    \frac{\partial}{\partial t} W(\alpha) &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \frac{\partial}{\partial t}\hat{\rho}\right\} \notag \\
+    &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \frac{-i}{\hbar} \left[\hat{H},\, \hat{\rho} \right]\right\},
+\end{align}
+for evolution driven by a Hamiltonian $\hat{H}$.  The simplification of this expression is made easier through the application of the following operator correspondences \citep[\S 4.5]{GardinerQN}
+\begin{subequations}
+    \begin{align}
+        \hat{a} \hat{\rho} &\leftrightarrow \left(\alpha + \frac{1}{2} \frac{\partial}{\partial \alpha^*} \right) W(\alpha), \\
+        \hat{\rho} \hat{a} & \leftrightarrow \left(\alpha - \frac{1}{2} \frac{\partial}{\partial \alpha^*} \right) W(\alpha), \\
+        \hat{a}^\dagger \hat{\rho} & \leftrightarrow \left( \alpha^* - \frac{1}{2} \frac{\partial}{\partial \alpha} \right) W(\alpha), \\
+        \hat{\rho} \hat{a}^\dagger & \leftrightarrow \left( \alpha^* + \frac{1}{2} \frac{\partial}{\partial \alpha} \right) W(\alpha).
+    \end{align}
+\end{subequations}
+
+In the case of the anharmonic oscillator Hamiltonian \eqref{BackgroundTheory:AnharmonicOscillator:Hamiltonian}, the evolution equation for the Wigner distribution is
+\begin{align}
+    \label{BackgroundTheory:AnharmonicOscillator:WignerEvolution}
+    \begin{split}
+        \frac{\partial}{\partial t} W(\alpha) &=  i\left( \frac{\partial}{\partial \alpha} \alpha - \frac{\partial}{\partial \alpha^*} \alpha^*\right) \left[\omega + \kappa\left(\abs{\alpha}^2 + 1\right) \right] W(\alpha)\\
+        &-\frac{1}{4}i \kappa \left(\frac{\partial^2}{\partial \alpha^2}\frac{\partial}{\partial \alpha^*}\alpha - \frac{\partial^2}{\partial {\alpha^*}^2} \frac{\partial}{\partial \alpha} \alpha^*\right) W(\alpha).
+    \end{split}
+\end{align}
+The third-order derivatives in this equation mean that it is not in the form of a Fokker-Planck equation, and therefore may not be unravelled in terms of stochastic differential equations.  However, if these higher-order derivatives are neglected the equation of motion will only contain first-order derivatives and may therefore be unravelled in terms of stochastic differential equations.  In fact, due to the absence of second-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution}, there will be no noise term in the resulting stochastic differential equations, and they may be integrated using standard deterministic methods.  The initial condition for these equations is, however, stochastic.  More on that later.
+
+The neglect of third and higher-order derivatives in the equation of motion for the Wigner distribution is known as the Truncated Wigner (TW) approximation.  This is an uncontrolled approximation in the sense that there is no explicit small parameter in which this approximation is an expansion in.  We can motivate this approximation in the present system by considering the initial state of the Wigner distribution,
+\begin{align}
+    W(\alpha, t=0) &= \frac{2}{\pi} \exp\left(- 2 \abs{\alpha - \alpha_0}^2\right). \label{BackgroundTheory:WignerFunctionCoherentState}
+\end{align}
+As $\alpha_0$ changes, the initial Wigner distribution simply translates.  For small times therefore, each derivative can be considered to be of size $O(1)$.  The relative importance of each term in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} therefore solely depends on the powers of $\alpha$ and $\alpha^*$.  The size of $\alpha$ and $\alpha^*$ can be considered to be of the order of $O(\alpha_0)$ as it is only in the vicinity of $\alpha_0$ that the Wigner distribution is significantly different from zero (for small times).  The first-order terms therefore scale as $O(\abs{\alpha_0}^2 \alpha_0)$, while the third-order terms scale as $O(\alpha_0)$.  For sufficiently large $\alpha_0$, the third-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} can be neglected, at least for small times.  The accuracy of the Truncated Wigner approximation has been considered in great detail elsewhere \citep{Sinatra:2002lq,Norrie:2005fk,Norrie:2006vn,Norrie:2006kx,Polkovnikov:2009}.  In general it has been shown that it is a good approximation if the total occupation of the system is much greater than the number of available modes \citep{Norrie:2006vn}.  
+
+We continue now with the application of the Truncated Wigner method to the anharmonic oscillator.  With the third-order derivatives neglected, the Stratonovich stochastic differential equation describing the system is
+\begin{align}
+    d \alpha &= -i \left[\omega + \kappa \left(\abs{\alpha}^2 + 1\right) \right] \alpha \, dt. \label{BackgroundTheory:AnharmonicOscillator:SDE}
+\end{align}
+Although the evolution of this `stochastic' differential equation is deterministic, its initial condition is random as it must sample the initial condition of the Wigner distribution \eqref{BackgroundTheory:WignerFunctionCoherentState}.  The initial condition of \eqref{BackgroundTheory:AnharmonicOscillator:SDE} is therefore
+\begin{align}
+    \alpha(0) &= \alpha_0 + \frac{1}{\sqrt{2}} \eta,
+\end{align}
+where $\eta$ is a complex Gaussian random variable satisfying
+\begin{align}
+    \overline{\eta} &= 0, & \overline{\eta \eta} &= 0, & \overline{\eta^* \eta} &= 1.
+\end{align}
+The noise term in the initial state can be considered to be adding, on average, half a `virtual' particle per mode to the system \citep{Scott:2007}.  These virtual particles represent the contribution of the vacuum fluctuations that is ignored in the Gross-Pitaevskii equation.
+
+In principle \eqref{BackgroundTheory:AnharmonicOscillator:SDE} can be simulated numerically to determine the dynamics of the system.  However, as it is of a particularly simple form it may be integrated analytically.  Within the Truncated Wigner approximation, the normalised two-time correlation function of the anharmonic oscillator is
+\begin{align}
+    \frac{1}{N} \abs{ \mean{\hat{a}^\dagger(t) \hat{a}(0)}_\text{TW}}^2 &= \frac{16}{(4 + \kappa^2 t^2)^2} \exp\left(\frac{- 4 N \kappa^2 t^2}{4 + \kappa^2 t^2} \right).
+\end{align}
+The exact and truncated solutions are illustrated in \figureref{BackgroundTheory:TwoTimeTWComparison}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm]{TwoTimeTWComparison}
+    \caption{
+        FIXME: This is not a caption.\label{BackgroundTheory:TwoTimeTWComparison}
+    }
+\end{figure}
+
+
+ to yield the two-time correlation function
+
+% Don't forget to cite that crazy Russian who showed that TW is the second term in an expansion in the evolution.
+
+
+\subsection{Bogoliubov-type methods}
+\label{BackgroundTheory:BogoliubovMethods}
+
+Bog, HFB, etc.
+
+\subsection{Other methods}
+
+In deriving the Gross-Pitaevskii equation, quantum statistical effects have been neglected.  Stuff.
+
+In GP model, we truncate the cumulants (performing an expansion in the state).  In the TW model, we perform an expansion in the evolution (there are higher-order terms).  In the Bog / HFB etc methods, we again are truncating cumulants (performing an expansion in the state).
+
+
+
+Motivation:  while loss process such as those discussed in the previous section may be included phenomenologically into a Gross-Pitaevskii equation (by considering the evolution of the expectation value $\mean{\hat{\Psi}}$ including the master equation terms), it is desirable 
+
+
 
 Fokker-Planck equations derived from master equations using operator correspondences.  Given certain conditions, these can then be transformed into SDEs, which may be efficiently simulated (see \sectionref{PenningIonisationAppendix:FokkerPlanckToSDEs}).  Truncation is necessary to give rise to the TW method.  Mention validity and reproduce some of my pretty Wigner vs Truncated Wigner pictures.  
 
 This does not rely on truncating a cumulant-expansion, but does assume that particles act independently of one-another, and only depend on a finite set of moments. (FIXME: Get a clearer picture of the difference)
-
-\section{Other methods beyond the mean field}
 
 Rely on truncating a cumulant expansion.
 

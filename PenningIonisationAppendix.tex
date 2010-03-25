@@ -53,7 +53,7 @@ Comparing \eqref{PenningIonisationAppendix:ThermalSampleStas} and \eqref{Penning
 \section{Gross-Pitaevskii Penning ionisation terms}
 \label{PenningIonisationAppendix:GP}
 
-The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} can be obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system can be expressed as a tensor product of coherent states\footnote{As discussed in \sectionref{BackgroundTheory:GrossPitaevskiiEquation} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi}\underset{\vect{x}}{\otimes} \ketbra{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}$.} $\displaystyle\hat{\rho} = \underset{\vect{x}}{\otimes} \ketbra{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}$.
+The Gross-Pitaevskii terms corresponding to the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} can be obtained by considering the equations of motion for the expectation values of the atomic fields $\hat{\Psi}_j$ and assuming the system is in a coherent state\footnote{As discussed in \sectionref{BackgroundTheory:GrossPitaevskiiEquation} this assumption gives the same results as the more realistic assumption that the system can be expressed as a classical mixture over the global phase $\hat{\rho} = \int \frac{d\phi}{2\pi} \ketbra{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}{e^{i\phi}\Psi_1(\vect{x}), e^{i\phi}\Psi_0(\vect{x}), e^{i\phi}\Psi_{-1}(\vect{x})}$.}, $\displaystyle\hat{\rho} =  \ketbra{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}{\Psi_1(\vect{x}), \Psi_0(\vect{x}), \Psi_{-1}(\vect{x})}$.
 
 Using the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm}, the equations of motion for the expectation values of the atomic fields are
 \begin{align}
@@ -90,7 +90,7 @@ where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the
 \subsection{Fokker-Planck and stochastic differential equations}
 \label{PenningIonisationAppendix:FokkerPlanckToSDEs}
 
-FIXME: Discuss the initial state for the SDE system.
+FIXME: This section now needs to be ripped out, and we need to refer to \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods}.
 
 The tremendous advantage of transforming a master equation into a Fokker-Planck equation is that under certain conditions, a Fokker-Planck equation may be unravelled as a stochastic differential equation. Expectation values can be calculated as averages of appropriate quantities over \emph{independent} realisations of a stochastic differential equation, which is requires significantly less computational resources. In the general case it is desired to unravel the Fokker-Planck equation
 \begin{align}

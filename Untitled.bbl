@@ -1,4 +1,4 @@
-\begin{thebibliography}{137}
+\begin{thebibliography}{141}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -231,6 +231,63 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Gardiner}(2004)}]{GardinerHSM}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \emph{\bibinfo{title}{{Handbook of Stochastic Methods}}}, Springer Series in
+  Synergetics (\bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
+  \bibinfo{year}{2004}), \bibinfo{edition}{3rd} ed.
+
+\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
+\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
+  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
+  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Norrie
+  \emph{et~al.}}(2006{\natexlab{a}})\citenamefont{Norrie, Ballagh, and
+  Gardiner}}]{Norrie:2006vn}
+\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
+  \bibnamefont{Gardiner}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043617}
+  (\bibinfo{year}{2006}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Norrie
+  \emph{et~al.}}(2006{\natexlab{b}})\citenamefont{Norrie, Ballagh, Gardiner,
+  and Bradley}}]{Norrie:2006kx}
+\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~S.}
+  \bibnamefont{Bradley}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043618}
+  (\bibinfo{year}{2006}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Sinatra \emph{et~al.}}(2002)\citenamefont{Sinatra,
+  Lobo, and Castin}}]{Sinatra:2002lq}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sinatra}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Lobo}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{35}},
+  \bibinfo{pages}{3599} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Norrie}(2005)}]{Norrie:2005fk}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Norrie}}, \bibinfo{type}{{PhD
+  Thesis}}, \bibinfo{school}{University of Otago} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Polkovnikov}(2009)}]{Polkovnikov:2009}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}}
+  (\bibinfo{year}{2009}), \eprint{arXiv:0905.3384}.
+
+\bibitem[{\citenamefont{Scott \emph{et~al.}}(2007)\citenamefont{Scott,
+  Gardiner, and Hutchinson}}]{Scott:2007}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Scott}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Gardiner}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Hutchinson}},
+  \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{527} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
@@ -480,12 +537,6 @@
   \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Balachandran}},
   \emph{\bibinfo{title}{{Applied Nonlinear Dynamics}}}, Wiley Series in
   Nonlinear Science (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1995}).
-
-\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
-\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
-  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
-  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Schwartz}(1963)}]{Schwartz:1963}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Schwartz}},
@@ -1134,33 +1185,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
   \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
   \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Norrie
-  \emph{et~al.}}(2006{\natexlab{a}})\citenamefont{Norrie, Ballagh, and
-  Gardiner}}]{Norrie:2006vn}
-\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
-  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
-  \bibnamefont{Gardiner}}, \bibinfo{journal}{Phys. Rev. A}
-  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043617}
-  (\bibinfo{year}{2006}{\natexlab{a}}).
-
-\bibitem[{\citenamefont{Norrie
-  \emph{et~al.}}(2006{\natexlab{b}})\citenamefont{Norrie, Ballagh, Gardiner,
-  and Bradley}}]{Norrie:2006kx}
-\bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Norrie}},
-  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
-  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~S.}
-  \bibnamefont{Bradley}}, \bibinfo{journal}{Phys. Rev. A}
-  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{043618}
-  (\bibinfo{year}{2006}{\natexlab{b}}).
-
-\bibitem[{\citenamefont{Gardiner}(2004)}]{GardinerHSM}
-\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
-  \emph{\bibinfo{title}{{Handbook of Stochastic Methods}}}, Springer Series in
-  Synergetics (\bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
-  \bibinfo{year}{2004}), \bibinfo{edition}{3rd} ed.
 
 \bibitem[{\citenamefont{Polkovnikov}(2003)}]{Polkovnikov:2003}
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},

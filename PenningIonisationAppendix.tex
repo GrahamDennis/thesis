@@ -85,36 +85,7 @@ The Truncated Wigner terms corresponding to the master equation \eqref{PenningIo
     \end{split}
     \label{PenningIonisationAppendix:FunctionalFokkerPlanckEquation}
 \end{align}
-where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin. While the $\delta(0)$ terms are pathological, they will later be approximated on a computational grid by $\Delta V^{-1}$ where $\Delta V$ is the local volume element\footnote{An alternative treatment of the Truncated Wigner method can be used~\citep{Norrie:2006vn,Norrie:2006kx} in which it is assumed from the beginning a restricted basis is being used.  In this alternative treatment the Dirac delta function $\delta(\vect{x})$ is replaced by a truncated version $\delta_\mathcal{P}(\vect{x})$ which is contained within the restricted basis. This is a formalisation of the discretisation process later used in which $\delta(0)$ is replaced by $\Delta V^{-1}$.  The two methods are essentially equivalent.}.
-
-\subsection{Fokker-Planck and stochastic differential equations}
-\label{PenningIonisationAppendix:FokkerPlanckToSDEs}
-
-FIXME: This section now needs to be ripped out, and we need to refer to \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods}.
-
-The tremendous advantage of transforming a master equation into a Fokker-Planck equation is that under certain conditions, a Fokker-Planck equation may be unravelled as a stochastic differential equation. Expectation values can be calculated as averages of appropriate quantities over \emph{independent} realisations of a stochastic differential equation, which is requires significantly less computational resources. In the general case it is desired to unravel the Fokker-Planck equation
-\begin{align}
-    \frac{\partial}{\partial t}F(\vect{\alpha}, t) &= - \sum_j \frac{\partial}{\partial \alpha_j} A_j(\vect{\alpha}, t) F(\vect{\alpha}, t) + \frac{1}{2} \sum_{j, k} \frac{\partial}{\partial \alpha_j^{\phantom{*}}} \frac{\partial}{\partial \alpha_k^*} D_{j,k}(\vect{\alpha}, t) F(\vect{\alpha}, t) \label{PenningIonisationAppendix:GeneralFokkerPlanckEquation}
-\end{align}
-in terms of the Stratonovich stochastic differential equation
-\begin{align}
-    d \alpha_i &= A_i(\vect{\alpha}, t) - \frac{1}{2} \sum_{j, k} B_{k, j}(\vect{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\vect{\alpha}, t) + \sum_j B_{i,j}(\vect{\alpha}, t) d W_j(t), \label{PenningIonisationAppendix:GeneralStratonovichSDE}
-\end{align}
-where the matrix $\vect{B}(\vect{\alpha}, t)$ is defined by
-\begin{align}
-    \vect{D}(\vect{\alpha}, t) &= \vect{B}(\vect{\alpha}, t) \vect{B}^\dagger(\vect{\alpha}, t),
-\end{align}
-and the Wiener increments $d W_j(t)$ are independent real Gaussian random variables with zero mean satisfying
-\begin{align}
-    \overline{d W_i(t) dW_j(t')} = \delta_{i j}\delta(t - t').
-\end{align}
-This decomposition is guaranteed when the matrix $\vect{D}(\vect{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation} and \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
-
-The unravelling of a Fokker-Planck equation in terms of a stochastic differential equation can be physically interpreted as the macroscopic and microscopic views of the same process. For example, a Fokker-Planck equation can be used to model the distribution of positions and velocities of particles in a gas (macroscopic view) and the corresponding stochastic differential equation would describe the path taken by a single particle (microscopic view). The macroscopic view is useful in situations in which the equations of motion for the moments of the distribution form a closed system of equations (such as those describing an ideal gas). Frequently however the equations of motion are not closed with that for each moment depending on a higher-order moment (for example \eqref{PenningIonisationAppendix:GPTerms}) and an assumption must be made to close the system of equations (in the case of \eqref{PenningIonisationAppendix:GPTerms} that the system remains in a coherent state). 
-
-The microscopic view is an alternative approach which is useful when two equivalent conditions are met. The first is that it is only a finite set of moments of the distribution that are of interest, and not the distribution itself. The second is that the motion of the particles are independent of one another (although they may depend on moments of the distribution). That the particles' motions are independent is equivalent to the eigenvalues of $\vect{D}$ being nonnegative. Positive eigenvalues of $\vect{D}$ can be physically interpreted as corresponding to a diffusion process which microscopically takes the form of Brownian motion. Negative eigenvalues however correspond to \emph{negative} diffusion, a highly singular process in which particles tend to drift toward one another\footnote{It should be noted that the existence of negative eigenvalues for the matrix $\vect{D}$ does not imply that the \emph{solution} to the Fokker-Planck equation is singular. A good example of this is the equation of motion for the Q function~\citep{Scully} of the anharmonic oscillator which is periodic in time yet the corresponding $\vect{D}$ matrix has positive and negative eigenvalues of equal magnitude.}. In this case the evolution of one realisation of \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} will depend on the local \emph{distribution}, violating the conditions stated above. One solution to this problem is increase the dimensionality of the Fokker-Planck equation and use the additional freedom given by the auxiliary dimensions to ensure that motion in the larger space is purely diffusive (this approach is taken with Positive-P~\citep{GardinerQN}). 
-
-\subsection{Truncated Wigner stochastic differential equation terms}
+where $\delta(0)$ is the three-dimensional Dirac delta function evaluated at the origin. While the $\delta(0)$ terms are pathological, they will later be approximated on a computational grid by $\Delta V^{-1}$ where $\Delta V$ is the local volume element\footnote{An alternative treatment of the Truncated Wigner method can be used~\citep{Norrie:2006vn,Norrie:2006kx} in which it is assumed from the beginning a restricted basis is being used.  In this alternative treatment the Dirac delta function $\delta(\vect{x})$ is replaced by a truncated version $\delta_\mathcal{P}(\vect{x})$ which is contained within the restricted basis. This is a formalisation of the discretisation process later used in which $\delta(0)$ is replaced by $\Delta V^{-1}$.  The two methods are essentially equivalent.}.  This equation of motion is in the form of a (functional) Fokker-Planck equation, and using the methods of \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods} we may unravel this equation in terms of stochastic (partial) differential equations.
 
 As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is local in the position basis, the $\vect{D}$ and $\vect{B}$ matrices can be constructed independently at each spatial position. Discretising \eqref{PenningIonisationAppendix:FunctionalFokkerPlanckEquation} onto a computational grid (this implies the replacement $\delta(0) \rightarrow \Delta V^{-1}$ where $\Delta V$ is the local volume element), the $\vect{D}$ matrix at position $\vect{x}$ is
 \begin{align}
@@ -132,7 +103,7 @@ As the master equation \eqref{PenningIonisationAppendix:MasterEquationTerm} is l
     \end{split}
     \label{PenningIonisationAppendix:DMatrix}
 \end{align}
-where $\mathbb{I}$ is the identity matrix, and the rows of the matrix $\vect{D}$ are constructed from the derivatives in the order: $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$, $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, and the columns from the derivatives in the order: $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$ (see \eqref{PenningIonisationAppendix:GeneralFokkerPlanckEquation}).
+where $\mathbb{I}$ is the identity matrix, and the rows of the matrix $\vect{D}$ are constructed from the derivatives in the order: $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$, $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, and the columns from the derivatives in the order: $\Psi_1^*$, $\Psi_0^*$, $\Psi_{-1}^*$, $\Psi_1^{\phantom{*}}$, $\Psi_0^{\phantom{*}}$, $\Psi_{-1}^{\phantom{*}}$ (see \eqref{BackgroundTheory:GeneralFokkerPlanckEquation}).
 
 The matrix $\vect{D}$ in \eqref{PenningIonisationAppendix:DMatrix} contains negative eigenvalues due to the $\Delta V^{-1}$ term that corrects for the `virtual' particles added to the initial state of the Wigner function (refer to \sectionref{BackgroundTheory:TruncatedWigner}). At positions where the field is highly occupied this will be a small correction and can safely be neglected compared to the local density. Inevitably there will be some positions within the computational domain at which the field will be negligibly occupied and the $\Delta V^{-1}$ term cannot be neglected. At such positions however the Penning ionisation process itself will be negligible\footnote{For the simulation grids used in \chapterref{Peaks}, the relevant timescale is $\sim \unit[1]{s}$ which is much longer than the simulated time of $\sim \unit[10]{ms}$.}. Although in this case the approximation is unjustified for a system undergoing only Penning ionisation, it is justified in the system under consideration in \chapterref{Peaks} in which other processes occur on significantly shorter timescales.
 
@@ -149,9 +120,9 @@ Neglecting the $\Delta V^{-1}$ term the eigenvalues of $\vect{D}$ are positive o
     \end{pmatrix}.
     \label{PenningIonisationAppendix:BMatrix}
 \end{align}
-The lower three rows of \eqref{PenningIonisationAppendix:BMatrix} are necessarily the conjugate of the upper three rows as they correspond to the evolution of the conjugates of the atomic fields (see \eqref{PenningIonisationAppendix:GeneralStratonovichSDE}).
+The lower three rows of \eqref{PenningIonisationAppendix:BMatrix} are necessarily the conjugate of the upper three rows as they correspond to the evolution of the conjugates of the atomic fields [see \eqref{BackgroundTheory:GeneralStratonovichSDE}].
 
-It now remains to evaluate the middle term in \eqref{PenningIonisationAppendix:GeneralStratonovichSDE} (the Stratonovich correction). Using \eqref{PenningIonisationAppendix:BMatrix} this term is
+It now remains to evaluate the middle term in \eqref{BackgroundTheory:GeneralStratonovichSDE}, the Stratonovich correction. Using \eqref{PenningIonisationAppendix:BMatrix} this term is
 \begin{align}
     - \frac{1}{2} \sum_{j, k} B_{k, j} \frac{\delta }{\delta \Psi_k}B_{i,j} &= - \frac{3}{2} \frac{1}{\Delta V} \Kunpol 
     \begin{pmatrix}

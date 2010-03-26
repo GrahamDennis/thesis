@@ -378,7 +378,7 @@ Instead of considering the evolution of the density matrix directly, the stochas
 \end{align}
 in terms of the Stratonovich stochastic differential equation \citep{GardinerHSM}
 \begin{align}
-    d \alpha_i &= \left[A_i(\vect{\alpha}, t)  - \frac{1}{2} \sum_{j, k} B_{k, j}(\vect{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\vect{\alpha}, t) \right] dt + \sum_j B_{i,j}(\vect{\alpha}, t) \,d W_j(t), \label{BackgroundTheory:GeneralStratonovichSDE}
+    d \alpha_i &= A_i(\vect{\alpha}, t)\, dt  - \frac{1}{2} \sum_{j, k} B_{k, j}(\vect{\alpha}, t) \frac{\partial }{\partial \alpha_k}B_{i,j}(\vect{\alpha}, t) \, dt + \sum_j B_{i,j}(\vect{\alpha}, t) \,d W_j(t), \label{BackgroundTheory:GeneralStratonovichSDE}
 \end{align}
 where the matrix $\vect{B}(\vect{\alpha}, t)$ is defined by
 \begin{align}
@@ -432,7 +432,7 @@ In the case of the anharmonic oscillator Hamiltonian \eqref{BackgroundTheory:Anh
 \begin{align}
     \label{BackgroundTheory:AnharmonicOscillator:WignerEvolution}
     \begin{split}
-        \frac{\partial}{\partial t} W(\alpha) &=  i\left( \frac{\partial}{\partial \alpha} \alpha - \frac{\partial}{\partial \alpha^*} \alpha^*\right) \left[\omega + \kappa\left(\abs{\alpha}^2 + 1\right) \right] W(\alpha)\\
+        \frac{\partial}{\partial t} W(\alpha) &=  i\left( \frac{\partial}{\partial \alpha} \alpha - \frac{\partial}{\partial \alpha^*} \alpha^*\right) \left[\omega + \kappa\left(\abs{\alpha}^2 - 1\right) \right] W(\alpha)\\
         &-\frac{1}{4}i \kappa \left(\frac{\partial^2}{\partial \alpha^2}\frac{\partial}{\partial \alpha^*}\alpha - \frac{\partial^2}{\partial {\alpha^*}^2} \frac{\partial}{\partial \alpha} \alpha^*\right) W(\alpha).
     \end{split}
 \end{align}
@@ -442,11 +442,11 @@ The neglect of third and higher-order derivatives in the equation of motion for 
 \begin{align}
     W(\alpha, t=0) &= \frac{2}{\pi} \exp\left(- 2 \abs{\alpha - \alpha_0}^2\right). \label{BackgroundTheory:WignerFunctionCoherentState}
 \end{align}
-As $\alpha_0$ changes, the initial Wigner distribution simply translates.  For small times therefore, each derivative can be considered to be of size $O(1)$.  The relative importance of each term in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} therefore solely depends on the powers of $\alpha$ and $\alpha^*$.  The size of $\alpha$ and $\alpha^*$ can be considered to be of the order of $O(\alpha_0)$ as it is only in the vicinity of $\alpha_0$ that the Wigner distribution is significantly different from zero (for small times).  The first-order terms therefore scale as $O(\abs{\alpha_0}^2 \alpha_0)$, while the third-order terms scale as $O(\alpha_0)$.  For sufficiently large $\alpha_0$, the third-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} can be neglected, at least for small times.  The accuracy of the Truncated Wigner approximation has been considered in great detail elsewhere \citep{Sinatra:2002lq,Norrie:2005fk,Norrie:2006vn,Norrie:2006kx,Polkovnikov:2009}.  In general it has been shown that it is a good approximation if the total occupation of the system is much greater than the number of available modes \citep{Norrie:2006vn}.  
+As $\alpha_0$ changes, the initial Wigner distribution simply translates.  For small times therefore, each derivative can be considered to be of size $O(1)$.  The relative importance of each term in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} therefore solely depends on the powers of $\alpha$ and $\alpha^*$.  The size of $\alpha$ and $\alpha^*$ can be considered to be of the order of $O(\alpha_0)$ as it is only in the vicinity of $\alpha_0$ that the Wigner distribution is significantly different from zero (for small times).  The first-order terms therefore scale as $O(\abs{\alpha_0}^2 \alpha_0)$, while the third-order terms scale as $O(\alpha_0)$.  For sufficiently large $\alpha_0$, the third-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution} can be neglected, at least for small times.  The accuracy of the Truncated Wigner approximation has been considered in great detail elsewhere \citep{Sinatra:2002lq,Norrie:2005fk,Norrie:2006vn,Norrie:2006kx,Polkovnikov:2003}.  In general it has been shown that it is a good approximation if the total occupation of the system is much greater than the number of available modes \citep{Norrie:2006vn}.  
 
 We continue now with the application of the Truncated Wigner method to the anharmonic oscillator.  With the third-order derivatives neglected, the Stratonovich stochastic differential equation describing the system is
 \begin{align}
-    d \alpha &= -i \left[\omega + \kappa \left(\abs{\alpha}^2 + 1\right) \right] \alpha \, dt. \label{BackgroundTheory:AnharmonicOscillator:SDE}
+    d \alpha &= -i \left[\omega + \kappa \left(\abs{\alpha}^2 - 1\right) \right] \alpha \, dt. \label{BackgroundTheory:AnharmonicOscillator:SDE}
 \end{align}
 Although the evolution of this `stochastic' differential equation is deterministic, its initial condition is random as it must sample the initial condition of the Wigner distribution \eqref{BackgroundTheory:WignerFunctionCoherentState}.  The initial condition of \eqref{BackgroundTheory:AnharmonicOscillator:SDE} is therefore
 \begin{align}
@@ -472,7 +472,7 @@ The exact and truncated solutions are illustrated in \figureref{BackgroundTheory
     }
 \end{figure}
 
-The good agreement between the Truncated Wigner and exact results in \figureref{BackgroundTheory:TwoTimeTWComparison} for $\kappa t \lesssim \frac{\pi}{}$ does not mean that the distributions themselves are approximately equal over this time.  The Wigner and Truncated Wigner distributions for the anharmonic oscillator are illustrated in \figureref{BackgroundTheory:WignerTruncatedWignerComparison}.
+The good agreement between the Truncated Wigner and exact results in \figureref{BackgroundTheory:TwoTimeTWComparison} for $\kappa t \lesssim \frac{\pi}{4}$ does not mean that the distributions themselves are approximately equal over this time.  The Wigner and Truncated Wigner distributions for the anharmonic oscillator are illustrated in \figureref{BackgroundTheory:WignerTruncatedWignerComparison}.  Expectation values of higher-order moments therefore diverge from the exact solutions faster than those for lower-order moments.  The validity of Truncated Wigner therefore also depends on the moments that are to be calculated.  Typically, it is only second order moments that are of interest $\mean{\hat{a}^\dagger \hat{a}}$, and this is the case in this thesis.
 
 \begin{figure}
     \centering
@@ -482,14 +482,38 @@ The good agreement between the Truncated Wigner and exact results in \figureref{
     }
 \end{figure}
 
+\parasep
 
-% Don't forget to cite that crazy Russian who showed that TW is the second term in an expansion in the evolution.
+Stochastic phase-space methods were described as being an expansion in the evolution of the system with no restriction on the state of the system.  The expansion in the evolution occurs at the level of the equation of motion for the phase-space distribution.  For an unravelling in terms of stochastic differential equations be possible, all derivatives in this equation above second order must be truncated.  Although the positivity of the Truncated Wigner distribution does impose a restriction on the state of the system, this restriction is not fundamental as a doubled phase-space may be used to allow any state to be described by a positive distribution (this technique is typically used with the P-function, and is known as the Positive-P method \citep{GardinerQN}).  \citet{Polkovnikov:2003} has shown explicitly that the Gross-Pitaevskii equation and the Truncated Wigner method can be considered to be the zeroth and first order terms in an expansion of the system dynamics in terms of its response to quantum fluctuations.  In principle, higher-order corrections can be included, however the computational requirements increase rapidly for each additional correction considered.
 
+Although the application of the Truncated Wigner method considered in this section did not involve explicitly stochastic evolution, an application that does is discussed in \appendixref{PenningIonisationAppendix}.
 
 \subsection{Bogoliubov-type methods}
 \label{BackgroundTheory:BogoliubovMethods}
 
-Bog, HFB, etc.
+The Bogoliubov-type methods consider the evolution of a truncated expansion of the state of the system.  These methods begin by decomposing the atomic field operator $\hat{\Psi}$ in terms of a classical component $\Psi = \mean{\hat{\Psi}}$ and a fluctuations operator $\delta \hat{\Psi}$,
+\begin{align}
+    \hat{\Psi} &= \Psi + \delta \hat{\Psi}.
+\end{align}
+The equation of motion for $\Psi$ and $\delta\hat{\Psi}$ may be obtained from \eqref{BackgroundTheory:ExpectationValueEvolution} and \eqref{BackgroundTheory:LocalOperatorEvolution} respectively \citep{Proukakis:2008},
+\begin{align}
+    \begin{split}
+        i \hbar \frac{\partial}{\partial t} \Psi &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + U_\text{int} \abs{\Psi}^2 + 2 U_\text{int} \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi}} \right) \Psi\\
+        & + U_\text{int} \left(\mean{\delta\hat{\Psi} \delta\hat{\Psi}} \Psi^* + \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right),
+    \end{split}\\
+    \begin{split}
+        i \hbar \frac{\partial}{\partial t} \delta\hat{\Psi} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + 2 U_\text{int} \abs{\Psi}^2 \right)\delta \hat{\Psi} + U_\text{int} \Psi^2 \delta \hat{\Psi}^\dagger\\
+        &+ 2 U_\text{int} \Psi \left(\delta\hat{\Psi}^\dagger\delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger\delta\hat{\Psi}} \right)+ U_\text{int} \Psi^* \left(\delta \hat{\Psi}\delta \hat{\Psi} - \mean{\delta \hat{\Psi}\delta \hat{\Psi}} \right)\\
+        &+ U_\text{int} \left(\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right).
+    \end{split}
+\end{align}
+
+
+
+
+The Bogoliubov-type methods rely on an explicit parametrisation of the state of the system.  There are a hierarchy of such methods.  These are summarised quite nicely in \citep{Proukakis:2008}.
+
+
 
 \subsection{Other methods}
 

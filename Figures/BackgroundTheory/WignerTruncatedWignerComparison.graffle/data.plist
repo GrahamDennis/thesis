@@ -573,7 +573,7 @@
 			<integer>43</integer>
 			<key>Points</key>
 			<array>
-				<string>{424.886, 852.271}</string>
+				<string>{424.886, 851.771}</string>
 				<string>{424.886, 610.885}</string>
 			</array>
 			<key>Style</key>
@@ -624,7 +624,7 @@
 			<integer>41</integer>
 			<key>Points</key>
 			<array>
-				<string>{118.886, 852.271}</string>
+				<string>{118.886, 851.771}</string>
 				<string>{118.886, 610.885}</string>
 			</array>
 			<key>Style</key>
@@ -961,7 +961,7 @@
 			<integer>14</integer>
 			<key>Points</key>
 			<array>
-				<string>{424.886, 573.543}</string>
+				<string>{424.886, 573.043}</string>
 				<string>{424.886, 332.157}</string>
 			</array>
 			<key>Style</key>
@@ -1012,7 +1012,7 @@
 			<integer>11</integer>
 			<key>Points</key>
 			<array>
-				<string>{118.886, 573.543}</string>
+				<string>{118.886, 573.043}</string>
 				<string>{118.886, 332.157}</string>
 			</array>
 			<key>Style</key>
@@ -1086,7 +1086,7 @@
 			<integer>8</integer>
 			<key>Points</key>
 			<array>
-				<string>{423.886, 305.157}</string>
+				<string>{423.886, 304.657}</string>
 				<string>{423.886, 63.7713}</string>
 			</array>
 			<key>Style</key>
@@ -1160,7 +1160,7 @@
 			<integer>5</integer>
 			<key>Points</key>
 			<array>
-				<string>{118.886, 305.157}</string>
+				<string>{118.886, 304.657}</string>
 				<string>{118.886, 63.7716}</string>
 			</array>
 			<key>Style</key>
@@ -11195,7 +11195,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-03-26 13:26:26 +1100</string>
+	<string>2010-03-26 19:33:44 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -11280,7 +11280,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-86, 610}, {836, 830}}</string>
+		<string>{{0, 379}, {836, 830}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
@@ -11288,7 +11288,7 @@
 			<array>
 				<string>Canvas 1</string>
 				<real>1</real>
-				<real>2</real>
+				<real>4</real>
 			</array>
 		</array>
 	</dict>

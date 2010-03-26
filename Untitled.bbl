@@ -1,4 +1,4 @@
-\begin{thebibliography}{141}
+\begin{thebibliography}{140}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -277,9 +277,10 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Norrie}}, \bibinfo{type}{{PhD
   Thesis}}, \bibinfo{school}{University of Otago} (\bibinfo{year}{2005}).
 
-\bibitem[{\citenamefont{Polkovnikov}(2009)}]{Polkovnikov:2009}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}}
-  (\bibinfo{year}{2009}), \eprint{arXiv:0905.3384}.
+\bibitem[{\citenamefont{Polkovnikov}(2003)}]{Polkovnikov:2003}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
+  \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
 
 \bibitem[{\citenamefont{Scott \emph{et~al.}}(2007)\citenamefont{Scott,
   Gardiner, and Hutchinson}}]{Scott:2007}
@@ -1185,11 +1186,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
   \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
   \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Polkovnikov}(2003)}]{Polkovnikov:2003}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Polkovnikov}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
-  \bibinfo{pages}{053604} (\bibinfo{year}{2003}).
 
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},

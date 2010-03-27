@@ -13,6 +13,10 @@ A Bose-Einstein condensate is defined by the macroscopic occupation of a single 
 \end{align}
 where $\phi(\vect{x})$ is the macroscopically-occupied mode.  
 
+We need an equation for the condensate fraction in a harmonic trap.  This equation has the appropriate label
+\begin{align}
+    \frac{N_0}{N} &= \label{BackgroundTheory:CondensateFractionHarmonicTrap}
+\end{align}
 
 \section{Hamiltonian}
 
@@ -328,7 +332,7 @@ In general as $S$ is conserved, any of the $S=2$ quasimolecule states will be pr
 
 The Hamiltonian describing either of the processes \eqref{BackgroundTheory:PenningIonisation} will be of the form
 \begin{align}
-    \hat{H}_\text{int} &= \hbar \epsilon \int d \vect{x}\, \hat{\Gamma}^\dagger(\vect{x})\hat{\Xi}_{S=0, m_S=0}^{\phantom{\dagger}}(\vect{x}) + \hat{\Xi}_{S=0, m_S=0}^\dagger (\vect{x}) \hat{\Gamma}(\vect{x}), \label{BackgroundTheory:PIInteractionHamiltonian}
+    \hat{H}_\text{int} &= \hbar \epsilon \int d \vect{x}\, \left(\hat{\Gamma}^\dagger(\vect{x})\hat{\Xi}_{S=0, m_S=0}^{\phantom{\dagger}}(\vect{x}) + \hat{\Xi}_{S=0, m_S=0}^\dagger (\vect{x}) \hat{\Gamma}(\vect{x}) \right), \label{BackgroundTheory:PIInteractionHamiltonian}
 \end{align}
 where $\epsilon$ is a spatially-independent coupling constant, $\hat{\Gamma}$ is a product of annihilation operators for the products of the PI process, and the $S=0$ quasimolecule state that undergoes PI is given by
 \begin{align}
@@ -413,7 +417,7 @@ In this thesis we will only consider stochastic methods based on the Wigner dist
 \begin{align}
     W(\alpha) &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \hat{\rho} \right\}.
 \end{align}
-An equation of motion for the Wigner function can be obtained by substituting in the equation of motion for the density matrix,
+An equation of motion for the Wigner function can be obtained using the equation of motion for the density matrix
 \begin{align}
     \frac{\partial}{\partial t} W(\alpha) &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \frac{\partial}{\partial t}\hat{\rho}\right\} \notag \\
     &= \frac{1}{\pi^2} \int d^2 \lambda\, \exp\left(-\lambda \alpha^* + \lambda^* \alpha\right) \Tr\left\{ \exp\left(\lambda \hat{a}^\dagger - \lambda^* \hat{a}\right) \frac{-i}{\hbar} \left[\hat{H},\, \hat{\rho} \right]\right\},
@@ -436,7 +440,7 @@ In the case of the anharmonic oscillator Hamiltonian \eqref{BackgroundTheory:Anh
         &-\frac{1}{4}i \kappa \left(\frac{\partial^2}{\partial \alpha^2}\frac{\partial}{\partial \alpha^*}\alpha - \frac{\partial^2}{\partial {\alpha^*}^2} \frac{\partial}{\partial \alpha} \alpha^*\right) W(\alpha).
     \end{split}
 \end{align}
-The third-order derivatives in this equation mean that it is not in the form of a Fokker-Planck equation, and therefore may not be unravelled in terms of stochastic differential equations.  However, if these higher-order derivatives are neglected the equation of motion will only contain first-order derivatives and may therefore be unravelled in terms of stochastic differential equations.  In fact, due to the absence of second-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution}, there will be no noise term in the resulting stochastic differential equations, and they may be integrated using standard deterministic methods.  The initial condition for these equations is, however, stochastic.  More on that later.
+The third-order derivatives in this equation mean that it is not in the form of a Fokker-Planck equation [cf.\ \eqref{BackgroundTheory:GeneralFokkerPlanckEquation}], and therefore may not be unravelled in terms of stochastic differential equations.  However, if these higher-order derivatives are neglected the equation of motion will only contain first-order derivatives and may therefore be unravelled in terms of stochastic differential equations.  In fact, due to the absence of second-order derivatives in \eqref{BackgroundTheory:AnharmonicOscillator:WignerEvolution}, there will be no noise term in the resulting stochastic differential equations.  The initial condition for these equations is, however, stochastic.  More on that later.
 
 The neglect of third and higher-order derivatives in the equation of motion for the Wigner distribution is known as the Truncated Wigner (TW) approximation.  This is an uncontrolled approximation in the sense that there is no explicit small parameter in which this approximation is an expansion in.  We can motivate this approximation in the present system by considering the initial state of the Wigner distribution,
 \begin{align}
@@ -462,7 +466,7 @@ In principle \eqref{BackgroundTheory:AnharmonicOscillator:SDE} can be simulated 
 \begin{align}
     \frac{1}{N} \abs{ \mean{\hat{a}^\dagger(t) \hat{a}(0)}_\text{TW}}^2 &= \frac{16}{(4 + \kappa^2 t^2)^2} \exp\left(\frac{- 4 N \kappa^2 t^2}{4 + \kappa^2 t^2} \right).
 \end{align}
-The exact and truncated solutions are illustrated in \figureref{BackgroundTheory:TwoTimeTWComparison}.
+A comparison of the exact and truncated solutions is given in \figureref{BackgroundTheory:TwoTimeTWComparison}.
 
 \begin{figure}
     \centering
@@ -472,7 +476,7 @@ The exact and truncated solutions are illustrated in \figureref{BackgroundTheory
     }
 \end{figure}
 
-The good agreement between the Truncated Wigner and exact results in \figureref{BackgroundTheory:TwoTimeTWComparison} for $\kappa t \lesssim \frac{\pi}{4}$ does not mean that the distributions themselves are approximately equal over this time.  The Wigner and Truncated Wigner distributions for the anharmonic oscillator are illustrated in \figureref{BackgroundTheory:WignerTruncatedWignerComparison}.  Expectation values of higher-order moments therefore diverge from the exact solutions faster than those for lower-order moments.  The validity of Truncated Wigner therefore also depends on the moments that are to be calculated.  Typically, it is only second order moments that are of interest $\mean{\hat{a}^\dagger \hat{a}}$, and this is the case in this thesis.
+The good agreement between the Truncated Wigner and exact results in \figureref{BackgroundTheory:TwoTimeTWComparison} for $\kappa t \lesssim \frac{\pi}{4}$ does not imply that the distributions themselves are approximately equal over this time.  This is shown not to be the case in \figureref{BackgroundTheory:WignerTruncatedWignerComparison}, in which the Wigner and Truncated Wigner distributions for the anharmonic oscillator are compared.  Expectation values of higher-order moments will diverge from the exact solutions faster than those for lower-order moments.  The validity of Truncated Wigner therefore also depends on the moments that are to be calculated.  Typically, it is only second order moments $\mean{\hat{a}^\dagger \hat{a}}$ that are of interest. This is the case in this thesis.
 
 \begin{figure}
     \centering
@@ -495,63 +499,47 @@ The Bogoliubov-type methods consider the evolution of a truncated expansion of t
 \begin{align}
     \hat{\Psi} &= \Psi + \delta \hat{\Psi}.
 \end{align}
-The equation of motion for $\Psi$ and $\delta\hat{\Psi}$ may be obtained from \eqref{BackgroundTheory:ExpectationValueEvolution} and \eqref{BackgroundTheory:LocalOperatorEvolution} respectively \citep{Proukakis:2008},
+The equations of motion for $\Psi$ and $\delta\hat{\Psi}$ may be obtained from \eqref{BackgroundTheory:ExpectationValueEvolution} and \eqref{BackgroundTheory:LocalOperatorEvolution} respectively \citep{Proukakis:2008},
+\begin{subequations}
+    \label{BackgroundTheory:Bogoliubov:GeneralEvolutionEquations}
+    \begin{align}
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \Psi &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + U_\text{int} \abs{\Psi}^2 + 2 U_\text{int} \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi}} \right) \Psi\\
+            & + U_\text{int} \left(\mean{\delta\hat{\Psi} \delta\hat{\Psi}} \Psi^* + \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right),
+        \end{split} \label{BackgroundTheory:Bogoliubov:OrderParameterEvolution}\\
+        \begin{split}
+            i \hbar \frac{\partial}{\partial t} \delta\hat{\Psi} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + 2 U_\text{int} \abs{\Psi}^2 \right)\delta \hat{\Psi} + U_\text{int} \Psi^2 \delta \hat{\Psi}^\dagger\\
+            &+ 2 U_\text{int} \Psi \left(\delta\hat{\Psi}^\dagger\delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger\delta\hat{\Psi}} \right)+ U_\text{int} \Psi^* \left(\delta \hat{\Psi}\delta \hat{\Psi} - \mean{\delta \hat{\Psi}\delta \hat{\Psi}} \right)\\
+            &+ U_\text{int} \left(\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right).
+        \end{split} \label{BackgroundTheory:Bogoliubov:FluctuationOperatorEvolution}
+    \end{align}
+\end{subequations}
+These equations are completely equivalent to the operator equation of motion \eqref{BackgroundTheory:LocalOperatorEvolution}, and are therefore equally infeasible to simulate numerically.  An approximation is needed to proceed.
+
+There are a variety of methods that approximate \eqref{BackgroundTheory:Bogoliubov:GeneralEvolutionEquations} to varying degrees.  An extensive discussion of these methods is given in \citep{Proukakis:2008}.  The simplest of these is the Bogoliubov method in which the mean-field evolution \eqref{BackgroundTheory:Bogoliubov:OrderParameterEvolution} is approximated by the Gross-Pitaevskii equation and all terms of second- or higher-order in $\delta\hat{\Psi}$ are neglected.  This method is discussed in greater detail in \sectionref{Peaks:ElementaryExcitations}, and used in \sectionref{Peaks:PerturbativeApproach} to determine the stability of a He* condensate to excitations.
+
+While the Bogoliubov method is useful in the zero-temperature limit, it does not consider effects such as scattering between the condensate and thermal fractions that are significant at higher temperatures.  In this limit more accurate methods based on \eqref{BackgroundTheory:Bogoliubov:GeneralEvolutionEquations} such as the Hartree-Fock and Hartree-Fock-Bogoliubov methods are necessary.  These methods expand the state in terms of moments of the fluctuation operator.  This expansion is typically truncated at second-order, with the state described (in the case of Hartree-Fock-Bogoliubov theory) in terms of the moments
+\begin{align*}
+    \Psi(\vect{x}) &= \mean{\hat{\Psi}(\vect{x})}, & G_N(\vect{x}, \vect{x}') &= \mean{\delta\hat{\Psi}^\dagger(\vect{x}') \delta\hat{\Psi}(\vect{x})}, & G_A(\vect{x}, \vect{x}') &= \mean{\delta\hat{\Psi}(\vect{x}') \delta\hat{\Psi}(\vect{x})}.
+\end{align*}
+All higher-order moments are approximately expressed in terms of lower-order moments using Wick's theorem \citep{Wick:1950,Blaizot:1986}.  For example
 \begin{align}
-    \begin{split}
-        i \hbar \frac{\partial}{\partial t} \Psi &= \left(- \frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + U_\text{int} \abs{\Psi}^2 + 2 U_\text{int} \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi}} \right) \Psi\\
-        & + U_\text{int} \left(\mean{\delta\hat{\Psi} \delta\hat{\Psi}} \Psi^* + \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right),
-    \end{split}\\
-    \begin{split}
-        i \hbar \frac{\partial}{\partial t} \delta\hat{\Psi} &= \left(-\frac{\hbar^2 \nabla^2}{2 M} + V(\vect{x}) + 2 U_\text{int} \abs{\Psi}^2 \right)\delta \hat{\Psi} + U_\text{int} \Psi^2 \delta \hat{\Psi}^\dagger\\
-        &+ 2 U_\text{int} \Psi \left(\delta\hat{\Psi}^\dagger\delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger\delta\hat{\Psi}} \right)+ U_\text{int} \Psi^* \left(\delta \hat{\Psi}\delta \hat{\Psi} - \mean{\delta \hat{\Psi}\delta \hat{\Psi}} \right)\\
-        &+ U_\text{int} \left(\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi} - \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} \right).
-    \end{split}
+    \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} &\approx 2 \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi}} \mean{\delta\hat{\Psi}} + \mean{\delta\hat{\Psi}^\dagger} \mean{\delta\hat{\Psi} \delta\hat{\Psi}}.
 \end{align}
 
+While these methods are appropriate at intermediate temperatures, other techniques are necessary near the phase transition at $T\sim T_C$.  Methods appropriate in this limit are discussed in the following section.
 
+\subsection{Methods applicable near the critical temperature}
 
+Near the critical temperature $T_C$, the system has a significant thermal fraction [see \eqref{BackgroundTheory:CondensateFractionHarmonicTrap}].  In this limit scattering and particle-exchange between the condensed and thermal fractions are significant.  These processes are of particular importance when considering condensate formation and growth.  Simple models in which the condensate was described in terms of its occupation $N_0$, and the thermal cloud in terms of its energy distribution function $g(\varepsilon)$ have been quite successful in describing these processes \citep{Davis:2000vn,Bijlsma:2000}.  Such models use an extension of classical kinetic theory termed Quantum Kinetic theory \citep{Gardiner:1997tz,Jaksch:1997ug,Gardiner:1998wx,Jaksch:1998sj,Gardiner:2000ug,Lee:2000vs,Davis:2000vn}.  Quantum Kinetic theory is discussed in greater detail in \chapterref{KineticTheory}, in which it is used to describe the collisional pumping of a condensate.
 
-The Bogoliubov-type methods rely on an explicit parametrisation of the state of the system.  There are a hierarchy of such methods.  These are summarised quite nicely in \citep{Proukakis:2008}.
-
-
-
-\subsection{Other methods}
-
-In deriving the Gross-Pitaevskii equation, quantum statistical effects have been neglected.  Stuff.
-
-In GP model, we truncate the cumulants (performing an expansion in the state).  In the TW model, we perform an expansion in the evolution (there are higher-order terms).  In the Bog / HFB etc methods, we again are truncating cumulants (performing an expansion in the state).
-
-
-
-Motivation:  while loss process such as those discussed in the previous section may be included phenomenologically into a Gross-Pitaevskii equation (by considering the evolution of the expectation value $\mean{\hat{\Psi}}$ including the master equation terms), it is desirable 
-
-
-
-Fokker-Planck equations derived from master equations using operator correspondences.  Given certain conditions, these can then be transformed into SDEs, which may be efficiently simulated (see \sectionref{PenningIonisationAppendix:FokkerPlanckToSDEs}).  Truncation is necessary to give rise to the TW method.  Mention validity and reproduce some of my pretty Wigner vs Truncated Wigner pictures.  
-
-This does not rely on truncating a cumulant-expansion, but does assume that particles act independently of one-another, and only depend on a finite set of moments. (FIXME: Get a clearer picture of the difference)
-
-Rely on truncating a cumulant expansion.
+More detailed models have since been developed that are applicable where the spatial dynamics of either the condensate or thermal cloud is important.  These include the $c$-field methods such as the (Stochastic) Projected Gross-Pitaevskii equation \citep{Blakie:2008a}, and the ZNG theory \citep{Zaremba:1999,Proukakis:2008}.  The former includes the statistics of the thermal cloud which is critical in low-dimensional systems \citep{Blakie:2008a}, while the latter employs a simpler representation of the thermal cloud which is simpler to solve numerically \citep{Proukakis:2008}.
 
 \section{Numerical Techniques}
 \label{BackgroundTheory:NumericalTechniques}
+
 \subsection{Absorbing boundary layers}
-\subsection{Error checking}
-\subsection{New piece of software}
-Feature list given in \appendixref{ToolsAppendix}.
-
-\section{Summary}
-And now, on with the show!
-\hrule
-
-
-\section{Phase-space methods}
-\label{BackgroundTheory:PhaseSpaceMethods}
-%Focus primarily on truncated Wigner.
-
-\section{Absorbing boundary layers for Schrödinger-type equations}
 \label{BackgroundTheory:AbsorbingBoundaryLayers}
-
 
 To solve any partial differential equation numerically, it must be restricted to a finite domain with boundary conditions imposed at the edges\footnote{This requirement can be avoided when the solution's asymptotic behaviour is known \emph{a priori}, however this case will not be encountered in this thesis.}. For some systems, this poses no additional restriction over the original problem as they are explicitly defined over a finite domain and with the correct boundary conditions this constitutes the problem itself (for example electromagnetic wave propagation in a waveguide). Other systems are naturally restricted to a finite domain (for example a BEC in a trap) and will be unaffected by the imposition of the artificial boundary conditions. 
 
@@ -570,14 +558,14 @@ In many circumstances it is the Bose-Einstein condensate and the outcoupling pro
     }
 \end{figure}
 
-An absorbing boundary layer of finite thickness can only be effective over a finite range of incident wavenumbers. Incident wavefunctions with large wavelengths (low wavenumbers) will be reflected from the absorbing boundary layer due to the rapid variation in the potential over a wavelength. Incident wavenumbers with very short wavelengths (high wavenumbers) will be transmitted through the absorbing boundary layer due to the finite amount of time spent in the absorbing boundary layer by any point on the phase-front.  Using this argument~\citet{Neuhasuer:1989} showed that the approximate range of wavenumbers over which an absorbing boundary layer will be effective is
+An absorbing boundary layer of finite thickness can only be effective over a finite range of incident wavenumbers. Incident wavefunctions with large wavelengths (low wavenumbers) will be reflected from the absorbing boundary layer due to the rapid variation in the potential over a wavelength. Incident wavenumbers with very short wavelengths (high wavenumbers) will be transmitted through the absorbing boundary layer due to the finite amount of time spent in the absorbing boundary layer by any point on the phase-front.  Using this argument \citet{Neuhasuer:1989} showed that the approximate range of wavenumbers over which an absorbing boundary layer will be effective is
 \begin{align}
     \label{BackgroundTheory:AbsorbingBoundaryKEffectiveRange}
     \left( \frac{M \overline{V_I}}{\hbar^2 \Delta x}\right)^{\frac{1}{3}} \ll k \ll \frac{4 M \overline{V_I} \Delta x}{\hbar^2},
 \end{align}
 where $\overline{V_I}$ is a representative value of $V_I(x)$. The maximum and minimum limits for the wavenumber are respectively due to the requirements of negligible transmission and reflection. Although cast in terms of the wavenumber, \eqref{BackgroundTheory:AbsorbingBoundaryKEffectiveRange} is equivalent to (26) in~\citep{Neuhasuer:1989}. While not its purpose, \sectionref{MethodsAppendix:MomentumDensityFluxExampleCalculation} demonstrates how to calculate the reflection and transmission coefficients as a function of wavenumber for arbitrary absorbing boundary layers.
 
-The use of absorbing boundary layers must be slightly modified for use in phase-space methods such as those discussed in \sectionref{BackgroundTheory:PhaseSpaceMethods}. In these cases simply adding an absorbing boundary layer to the potential would lead to unphysical results as the absorbing potential would not discriminate between real particles in a mode and the virtual particles which represent the fundamental vacuum fluctuations inherent in the field. An appropriate way of handling this problem is to add a position-dependent loss term to the master equation of the form
+The use of absorbing boundary layers must be slightly modified for use in phase-space methods such as those discussed in \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods}. In these cases simply adding an absorbing boundary layer to the potential would lead to unphysical results as the absorbing potential would not discriminate between real particles in a mode and the virtual particles which represent the fundamental vacuum fluctuations inherent in the field. An appropriate way of handling this problem is to add a position-dependent loss term to the master equation of the form
 \begin{align}
     \label{BackgroundTheory:PhaseSpaceAbsorbingBoundaryLayer}
     \frac{d \hat{\rho}}{dt} &= \int d \vect{x}\, \frac{2}{\hbar}V_I(\vect{x})\mathcal{D}[\hat{\Psi}(\vect{x})]\hat{\rho},
@@ -590,12 +578,15 @@ In most of this thesis it is only the immediate vicinity of the BEC that is unde
 
 % While direct application of absorbing boundary layers permit the study of dynamics near the BEC, in \chapterref{TransverseProfile} the transverse profile of the atom laser a large distance from the BEC is considered.  In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above.  Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
-\section{Truncated Wigner}
-\label{BackgroundTheory:TruncatedWigner}
-We must talk about the initial state noise being interpreted as `virtual' particles. The exact number required due to the vacuum energy of the harmonic oscillator.
-Operator correspondences must be described here.
-\section{Rubidium}
-\label{BackgroundTheory:Rubidium}
+\subsection{Error checking}
+\subsection{New piece of software}
+Feature list given in \appendixref{ToolsAppendix}.
+
+\section{Summary}
+And now, on with the show!
+\hrule
+
+
 \section{Metastable helium}
 \label{BackgroundTheory:Helium}
 
@@ -616,6 +607,9 @@ Operator correspondences must be described here.
 
 \section{Pumping and (atom) lasers}
 \label{BackgroundTheory:Lasers}
+
+FIXME: This content to go in the introduction.
+
 A brief overview of what gives a laser its properties. Refer to Wiseman's paper~\citep{Wiseman:1997ba} and compare the optical and atom lasers. Alternatives for the irreversibility / source are discussed in \chapterref{OpticalPumping,KineticTheory}.
 
 There are two fundamental reasons making the pumping of an atom laser harder than pumping an optical laser is that the dispersion relation for potential reservoirs is not flat by comparison to the dispersion relation for atoms.  For an optical laser in the homogeneous broadening limit, \emph{all} atoms in the sample can contribute to gain.  Fundamentally this is because independent of what momentum the atom might have, it can still be stimulated to emit a photon into the lasing mode as the decay rates of the excited and/or ground atomic states are greater than any possible energy detuning in this process.  The second fundamental issue affecting atom lasers is that atom number is conserved.  It is therefore inescapable that there will be atoms in a (potentially) non-condensed source mode in the vicinity of the lasing mode.  Unless a Feschbach resonance is used to set the scattering-length of atomic interactions to zero, the atoms in the source mode will disrupt the phase stability of the lasing mode.

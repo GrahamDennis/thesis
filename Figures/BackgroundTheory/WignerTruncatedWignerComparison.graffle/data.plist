@@ -813,7 +813,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{326.886, 31}, {195, 27}}</string>
+			<string>{{326.886, 20}, {195, 27}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -843,7 +843,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{78.8858, 31}, {81, 26}}</string>
+			<string>{{78.8858, 20}, {81, 26}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -11195,7 +11195,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-03-26 19:33:44 +1100</string>
+	<string>2010-03-27 11:47:03 +1100</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -11280,7 +11280,7 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 379}, {836, 830}}</string>
+		<string>{{-2, 0}, {836, 830}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

@@ -1,4 +1,4 @@
-\begin{thebibliography}{140}
+\begin{thebibliography}{141}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -290,6 +290,99 @@
   \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{17}},
   \bibinfo{pages}{527} (\bibinfo{year}{2007}).
 
+\bibitem[{\citenamefont{Proukakis and Jackson}(2008)}]{Proukakis:2008}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Jackson}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{41}},
+  \bibinfo{pages}{203002 (66pp)} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Wick}(1950)}]{Wick:1950}
+\bibinfo{author}{\bibfnamefont{G.~C.} \bibnamefont{Wick}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{268} (\bibinfo{year}{1950}).
+
+\bibitem[{\citenamefont{Blaizot and Ripka}(1986)}]{Blaizot:1986}
+\bibinfo{author}{\bibfnamefont{J.-P.} \bibnamefont{Blaizot}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Ripka}},
+  \emph{\bibinfo{title}{{Quantum Theory of finite systems}}}
+  (\bibinfo{publisher}{MIT Press}, \bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
+  Zaremba, and Stoof}}]{Bijlsma:2000}
+\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Bijlsma}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.~T.~C.} \bibnamefont{Stoof}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{62}},
+  \bibinfo{pages}{063609} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{{Davis} \emph{et~al.}}(2000)\citenamefont{{Davis},
+  {Gardiner}, and {Ballagh}}}]{Davis:2000vn}
+\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{{Davis}}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~J.}
+  \bibnamefont{{Ballagh}}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{063608}
+  (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(1997)}]{Gardiner:1997tz}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
+  \bibinfo{pages}{2902} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{{Jaksch} \emph{et~al.}}(1997)\citenamefont{{Jaksch},
+  {Gardiner}, and {Zoller}}}]{Jaksch:1997ug}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Jaksch}}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{575} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(1998)}]{Gardiner:1998wx}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{58}},
+  \bibinfo{pages}{536} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{{Jaksch} \emph{et~al.}}(1998)\citenamefont{{Jaksch},
+  {Gardiner}, {Gheri}, and {Zoller}}}]{Jaksch:1998sj}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Jaksch}}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
+  \bibinfo{author}{\bibfnamefont{K.~M.} \bibnamefont{{Gheri}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{58}},
+  \bibinfo{pages}{1450} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(2000)}]{Gardiner:2000ug}
+\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
+  \bibinfo{pages}{033601} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{{Lee} and {Gardiner}}(2000)}]{Lee:2000vs}
+\bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{{Lee}}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{62}},
+  \bibinfo{pages}{033606} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Blakie \emph{et~al.}}(2008)\citenamefont{Blakie,
+  Bradley, {Davis}, {Ballagh}, and {Gardiner}}}]{Blakie:2008a}
+\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Blakie}},
+  \bibinfo{author}{\bibfnamefont{A.~S.} \bibnamefont{Bradley}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{{Davis}}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{{Ballagh}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
+  \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
+  \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Zaremba \emph{et~al.}}(1999)\citenamefont{Zaremba,
+  Nikuni, and Griffin}}]{Zaremba:1999}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Nikuni}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Griffin}},
+  \bibinfo{journal}{Journal of Low Temperature Physics}
+  \textbf{\bibinfo{volume}{116}}, \bibinfo{pages}{277} (\bibinfo{year}{1999}).
+
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
@@ -462,12 +555,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Davidson}},
   \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{77}},
   \bibinfo{pages}{187} (\bibinfo{year}{2005}).
-
-\bibitem[{\citenamefont{Proukakis and Jackson}(2008)}]{Proukakis:2008}
-\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}}
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Jackson}},
-  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{41}},
-  \bibinfo{pages}{203002 (66pp)} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Leonhardt \emph{et~al.}}(2003)\citenamefont{Leonhardt,
   Kiss, and \"Ohberg}}]{Leonhardt:2003}
@@ -945,23 +1032,6 @@
   \emph{\bibinfo{title}{{Rubidium 87 D Line Data}}} (\bibinfo{year}{2009}),
   \bibinfo{note}{revision 2.1.2}, \urlprefix\url{http://steck.us/alkalidata}.
 
-\bibitem[{\citenamefont{Bijlsma \emph{et~al.}}(2000)\citenamefont{Bijlsma,
-  Zaremba, and Stoof}}]{Bijlsma:2000}
-\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Bijlsma}},
-  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{H.~T.~C.} \bibnamefont{Stoof}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{62}},
-  \bibinfo{pages}{063609} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{{Davis} \emph{et~al.}}(2000)\citenamefont{{Davis},
-  {Gardiner}, and {Ballagh}}}]{Davis:2000vn}
-\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{{Davis}}},
-  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~J.}
-  \bibnamefont{{Ballagh}}}, \bibinfo{journal}{Phys. Rev. A}
-  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{063608}
-  (\bibinfo{year}{2000}).
-
 \bibitem[{\citenamefont{{Haine} \emph{et~al.}}(2002)\citenamefont{{Haine},
   {Hope}, {Robins}, and {Savage}}}]{Haine:2002kp}
 \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{{Haine}}},
@@ -1007,47 +1077,6 @@
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
   \bibinfo{pages}{1414} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(1997)}]{Gardiner:1997tz}
-\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
-  \bibinfo{pages}{2902} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{{Jaksch} \emph{et~al.}}(1997)\citenamefont{{Jaksch},
-  {Gardiner}, and {Zoller}}}]{Jaksch:1997ug}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Jaksch}}},
-  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
-  \bibinfo{pages}{575} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(1998)}]{Gardiner:1998wx}
-\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{58}},
-  \bibinfo{pages}{536} (\bibinfo{year}{1998}).
-
-\bibitem[{\citenamefont{{Jaksch} \emph{et~al.}}(1998)\citenamefont{{Jaksch},
-  {Gardiner}, {Gheri}, and {Zoller}}}]{Jaksch:1998sj}
-\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{{Jaksch}}},
-  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
-  \bibinfo{author}{\bibfnamefont{K.~M.} \bibnamefont{{Gheri}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{58}},
-  \bibinfo{pages}{1450} (\bibinfo{year}{1998}).
-
-\bibitem[{\citenamefont{{Gardiner} and {Zoller}}(2000)}]{Gardiner:2000ug}
-\bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}}
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{{Zoller}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
-  \bibinfo{pages}{033601} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{{Lee} and {Gardiner}}(2000)}]{Lee:2000vs}
-\bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{{Lee}}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{{Gardiner}}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{62}},
-  \bibinfo{pages}{033606} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Miesner \emph{et~al.}}(1998)\citenamefont{Miesner,
   Stamper-Kurn, Andrews, Durfee, Inouye, and Ketterle}}]{Miesner:1998}
@@ -1169,32 +1198,9 @@
   \bibinfo{journal}{Laser Phys.} \textbf{\bibinfo{volume}{13}},
   \bibinfo{pages}{527} (\bibinfo{year}{2003}).
 
-\bibitem[{\citenamefont{Zaremba \emph{et~al.}}(1999)\citenamefont{Zaremba,
-  Nikuni, and Griffin}}]{Zaremba:1999}
-\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Zaremba}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Nikuni}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Griffin}},
-  \bibinfo{journal}{Journal of Low Temperature Physics}
-  \textbf{\bibinfo{volume}{116}}, \bibinfo{pages}{277} (\bibinfo{year}{1999}).
-
-\bibitem[{\citenamefont{Blakie \emph{et~al.}}(2008)\citenamefont{Blakie,
-  Bradley, {Davis}, {Ballagh}, and {Gardiner}}}]{Blakie:2008a}
-\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Blakie}},
-  \bibinfo{author}{\bibfnamefont{A.~S.} \bibnamefont{Bradley}},
-  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{{Davis}}},
-  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{{Ballagh}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~W.}
-  \bibnamefont{{Gardiner}}}, \bibinfo{journal}{Advances in Physics}
-  \textbf{\bibinfo{volume}{57}}, \bibinfo{pages}{363} (\bibinfo{year}{2008}).
-
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{89}},
   \bibinfo{pages}{140402} (\bibinfo{year}{2002}).
-
-\bibitem[{\citenamefont{Wick}(1950)}]{Wick:1950}
-\bibinfo{author}{\bibfnamefont{G.~C.} \bibnamefont{Wick}},
-  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{80}},
-  \bibinfo{pages}{268} (\bibinfo{year}{1950}).
 
 \end{thebibliography}

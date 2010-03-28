@@ -56,6 +56,7 @@ In the absence of additional coupling terms, the equations of motion for the ato
 The most complicated part of this evolution is the non-local term governed by the interatomic interaction potential $V_{ijmn}(\vect{x})$.  The following section discusses an approximation in which this potential may be approximated by a \emph{local} interaction, simplifying the evolution described by \eqref{BackgroundTheory:NonLocalOperatorEvolution}.
 
 \section{Atomic scattering}
+\label{BackgroundTheory:AtomicScattering}
 
 As the composite structure of atoms is not included in \eqref{BackgroundTheory:BasicHamiltonian}, the Hamiltonian represents an effective field theory which is only valid on length scales larger than the atomic size.  At the low temperatures and densities typical of ultracold atom experiments these structures are not probed and the effective field theory is a good approximation.  Indeed, it is usual that the details of the interaction potential $V_{ijmn}(\vect{x})$ are not probed either, and the potential can be approximated by a contact interaction \citep{Leggett:2001}
 \begin{align}
@@ -538,6 +539,12 @@ More detailed models have since been developed that are applicable where the spa
 \section{Numerical Techniques}
 \label{BackgroundTheory:NumericalTechniques}
 
+Numerical calculations are a common and important part of theoretical (and frequently experimental) physics.  While methods for validating the convergence of calculations by comparing results for different grid- and time-step sizes are well-known and understood, other techniques are less commonly discussed.  I have chosen to discuss one of these, the use of absorbing boundary layers, in \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}.  An unusual application of this technique is discussed in \sectionref{Peaks:AbsorbingBoundaryTricks}.
+
+FIXME: Add in a reference to \appendixref{ToolsAppendix}.
+
+Stolen from xmds.org: Often writing a computer program to solve complex problems can be very difficult, time-consuming, and error-prone. This is where xmds excels. One merely needs to write a script in a high-level form which is easy for a person to understand, and xmds goes off and writes the low-level code for you, producing code that is better for a computer. This makes the writing of a simulation program significantly easier, reducing the development time, and almost eliminating bugs since xmds has written the vast majority of the code for you and has used thoroughly tested code and techniques in the production of the program. The output program that xmds writes is still about as fast as code hand-written by an expert, so one can has the best of both worlds: quick development time, and quick execution.
+
 \subsection{Absorbing boundary layers}
 \label{BackgroundTheory:AbsorbingBoundaryLayers}
 
@@ -578,45 +585,3 @@ In most of this thesis it is only the immediate vicinity of the BEC that is unde
 
 % While direct application of absorbing boundary layers permit the study of dynamics near the BEC, in \chapterref{TransverseProfile} the transverse profile of the atom laser a large distance from the BEC is considered.  In this case a different strategy must be used to avoid the $N_\text{pts} \propto t^3$ scaling discussed above.  Such a strategy is discussed in \sectionref{TransverseProfile:DropGP}.
 
-\subsection{Error checking}
-\subsection{New piece of software}
-Feature list given in \appendixref{ToolsAppendix}.
-
-\section{Summary}
-And now, on with the show!
-\hrule
-
-
-\section{Metastable helium}
-\label{BackgroundTheory:Helium}
-
-\begin{table}
-    \centering
-    \begin{tabular}{cc}
-    \toprule
-    Parameter & Value\\
-    \midrule
-    Quasimolecule $S=0$ scattering length & $a_{S=0}=\unit[9.46]{nm}$\\
-    Quasimolecule $S=2$ scattering length & $a_{S=2}=\unit[7.51]{nm}$\\
-    Penning ionisation rate & $\Kunpol = \unit[7.7\times 10^{-17}]{m\textsuperscript{3}}$\\
-    \bottomrule
-    \end{tabular}
-    \caption{\label{BackgroundTheory:He*Parameters} Relevant parameters of metastable helium.}
-\end{table}
-
-
-\section{Pumping and (atom) lasers}
-\label{BackgroundTheory:Lasers}
-
-FIXME: This content to go in the introduction.
-
-A brief overview of what gives a laser its properties. Refer to Wiseman's paper~\citep{Wiseman:1997ba} and compare the optical and atom lasers. Alternatives for the irreversibility / source are discussed in \chapterref{OpticalPumping,KineticTheory}.
-
-There are two fundamental reasons making the pumping of an atom laser harder than pumping an optical laser is that the dispersion relation for potential reservoirs is not flat by comparison to the dispersion relation for atoms.  For an optical laser in the homogeneous broadening limit, \emph{all} atoms in the sample can contribute to gain.  Fundamentally this is because independent of what momentum the atom might have, it can still be stimulated to emit a photon into the lasing mode as the decay rates of the excited and/or ground atomic states are greater than any possible energy detuning in this process.  The second fundamental issue affecting atom lasers is that atom number is conserved.  It is therefore inescapable that there will be atoms in a (potentially) non-condensed source mode in the vicinity of the lasing mode.  Unless a Feschbach resonance is used to set the scattering-length of atomic interactions to zero, the atoms in the source mode will disrupt the phase stability of the lasing mode.
-
-In \chapterref{OpticalPumping}, we attempt to solve the first problem by making the momentum distribution of source atoms sufficiently narrow that it can be guaranteed that every atom will be momentum-resonant with the pumping process at some point.  In \chapterref{KineticTheory}, we use atomic modes as the reservoir.  Although their dispersion relation cannot be flat with respect to that of the atoms in the source mode, it is at least far more comparable than that of light (which is used in \chapterref{OpticalPumping}).
-
-Ideally we should pump an atom laser using something with a flat dispersion relation.  One possibility that comes to mind is the phonon.  However it is necessary that the reservoir is essentially a pure vacuum.  Phonons produced in a condensate cannot escape the system unless the system is in contact with other atoms.  If these other atoms are thermal, than it will have its own phonons which will propagate into the condensate.  If the condensate is not in physical contact with anything, then the phonons cannot leave the system: there is no evaporation process for phonons.
-
-Stolen from \citep{Ballagh:2000oq}:
-Despite the parallels with optical laser theory, the fundamental differences between photons and atoms remain important. They arise principally because atoms have rest mass, and because they interact with each other. Unlike photons, atoms cannot be created or destroyed, rather they are transferred into the laser mode from some other mode. The interactions produce phase dynamics, which degrades the coherence of the atom laser, and self repulsion which spreads the output beam and limits the possible focussing. Even when these interactions are neglected, atoms have dispersive propagation in vacuum.

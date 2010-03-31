@@ -1,4 +1,4 @@
-\begin{thebibliography}{141}
+\begin{thebibliography}{145}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,34 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Fierz and Pauli}(1939)}]{Fierz:1939}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Fierz}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Pauli}},
+  \bibinfo{journal}{Proceedings of the Royal Society of London. Series A,
+  Mathematical and Physical Sciences} \textbf{\bibinfo{volume}{173}},
+  \bibinfo{pages}{211} (\bibinfo{year}{1939}), ISSN \bibinfo{issn}{00804630}.
+
+\bibitem[{\citenamefont{Einstein}(1924)}]{Einstein:1924}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
+  \bibinfo{journal}{Sitzber. Kgl. Preuss. Akad. Wiss}
+  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{1924} (\bibinfo{year}{1924}).
+
+\bibitem[{\citenamefont{Einstein}(1925)}]{Einstein:1925}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
+  \bibinfo{journal}{Sitzungsber. Kgl. Preuss. Akad. Wiss}
+  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{3} (\bibinfo{year}{1925}).
+
+\bibitem[{\citenamefont{Bose}(1924)}]{Bose:1924}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Bose}},
+  \bibinfo{journal}{Zeitschrift f{\"u}r Physik} \textbf{\bibinfo{volume}{26}},
+  \bibinfo{pages}{178} (\bibinfo{year}{1924}).
+
+\bibitem[{\citenamefont{Pethick and Smith}(2002)}]{PethickSmith}
+\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Pethick}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Smith}},
+  \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
+  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
@@ -383,6 +411,12 @@
   \bibinfo{journal}{Journal of Low Temperature Physics}
   \textbf{\bibinfo{volume}{116}}, \bibinfo{pages}{277} (\bibinfo{year}{1999}).
 
+\bibitem[{\citenamefont{Collecutt and Drummond}(2001)}]{Collecutt:2001}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Collecutt}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
+  \bibinfo{journal}{Computer Physics Communications}
+  \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}).
+
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Kosloff}},
@@ -394,17 +428,6 @@
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
   Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
   (\bibinfo{year}{1989}).
-
-\bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
-\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
-  \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{Ballagh and Savage}(2000)}]{Ballagh:2000oq}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ballagh}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Savage}},
-  \bibinfo{journal}{Modern Physics Letters B} \textbf{\bibinfo{volume}{14}},
-  \bibinfo{pages}{153} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Dall \emph{et~al.}}(2009)\citenamefont{Dall, Byron,
   Truscott, Dennis, Johnsson, and Hope}}]{Dall:2009}
@@ -459,6 +482,11 @@
   \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{96}},
   \bibinfo{pages}{070404} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
+\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Dowling}(1998)}]{Dowling:1998}
 \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Dowling}},
@@ -540,12 +568,6 @@
   \bibnamefont{N{\"a}gerl}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{100}}, \bibinfo{pages}{080404}
   (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Pethick and Smith}(2002)}]{PethickSmith}
-\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Pethick}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Smith}},
-  \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
-  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Ozeri \emph{et~al.}}(2005)\citenamefont{Ozeri, Katz,
   Steinhauer, and Davidson}}]{Ozeri:2005}

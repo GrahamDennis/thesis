@@ -3,20 +3,39 @@
 \graphicspath{{Figures/BackgroundTheory/}{Figures/Common/}}
 
 
-\section{Indistinguishable particles and BEC, a non-classical phenomenon}
+\section{Indistinguishability and Bose-Einstein condensation}
 
-Condensate fraction, temperature dependence
+All fundamental particles fall into one of two classes of particles based on their intrinsic spin.  The \emph{bosons}, which have integer spin (0, 1, 2, 3, \dots\ in units of $\hbar$), and the \emph{fermions}, which have half-integral spin ($\frac{1}{2}$, $\frac{3}{2}$, $\frac{5}{2}$, \dots).  Quantum-mechanically these two classes of particles behave very differently.  Due to a deep property of the relationship between quantum physics and (special) relativity known as the spin-statistics theorem \citep{Fierz:1939}, the many-body wavefunction of a system of identical bosons is invariant under particle interchange,
+\begin{align}
+    \Psi_\text{bosons}(\vect{x}_1, \vect{x}_2, \dots, \vect{x}_i, \dots, \vect{x}_j, \dots, \vect{x}_N) &= \Psi_\text{bosons}(\vect{x}_1, \vect{x}_2, \dots, \vect{x}_j, \dots, \vect{x}_i, \dots, \vect{x}_N), \label{BackgroundTheory:BosonInterchange}
+\end{align}
+while for a system of identical fermions the many-body wavefunction changes sign,
+\begin{align}
+    \Psi_\text{fermions}(\vect{x}_1, \vect{x}_2, \dots, \vect{x}_i, \dots, \vect{x}_j, \dots, \vect{x}_N) &= -\Psi_\text{fermions}(\vect{x}_1, \vect{x}_2, \dots, \vect{x}_j, \dots, \vect{x}_i, \dots, \vect{x}_N). \label{BackgroundTheory:FermionInterchange}
+\end{align}
+The consequence of this difference is that while there may be more than one boson in a given spatial mode, there cannot be more than one fermion in a given spatial mode.  Were two fermions to occupy the same mode, \eqref{BackgroundTheory:FermionInterchange} would require the wavefunction to be identically zero.  This difference between fermions and bosons is not always noticed however.  At room temperature and pressure the average occupancy of a single-particle state is sufficiently small ($\sim 10^{-6}$ for Helium at $T=\unit[300]{K}$, $p = \unit[10^5]{Pa}$) as to make the probability that one such state will be multiply-occupied in a bosonic gas entirely negligible.  Under these conditions bosonic and fermionic systems will behave identically.
 
-A Bose-Einstein condensate is defined by the macroscopic occupation of a single mode.  If all $N$ particles of the system are in the mode, the many-body wavefunction of the system is
+In the previous paragraph, it was neglected that Helium is not a fundamental particle, but a \emph{composite} particle.  If the typical energy of particles in a system is sufficiently low that the composite structure of individual particles is not significantly affected during collisions with other particles, the composite particles may be treated as effectively indivisible.  For the room temperature sample of Helium discussed above, the mean energy of each atom is $3.9\times\unit[10^{-2}]{eV}$, while the energy required to excite an electron in the atom (and therefore significantly alter the internal state of the atom) is significantly larger at $\unit[20]{eV}$.
+
+Bose-Einstein condensation occurs in the opposite limit to that discussed above, in which the lowest energy level of the system gains a significant fraction of the total population of the system.  This macroscopically-occupied mode is known as the condensate.  Bose-Einstein condensation was originally predicted by Einstein \citep{Einstein:1924,Einstein:1925} in 1924 who was inspired by Bose's description of photons as identical particles symmetric under interchange \citep{Bose:1924}.  Bose showed that it follows from this property, i.e.\ \eqref{BackgroundTheory:BosonInterchange}, that the average occupation of a state with energy $E$ in a system of identical non-interacting bosons is
+\begin{align}
+    \mean{n(E)} &= \frac{1}{e^{(E - \mu)/k_B T} - 1}, \label{BackgroundTheory:BoseEinsteinDistribution}
+\end{align}
+where $\mu$ is the chemical potential of the system, determined by the normalisation condition $N = \sum_i \mean{n(E_i)}$, where $N$ is the number of particles in the system.  If the zero of energy is chosen to be the lowest energy state in the system, the positivity of $\mean{n(0)}$ requires that the chemical potential $\mu$ must be negative.  Equation~\eqref{BackgroundTheory:BoseEinsteinDistribution} is known as the Bose-Einstein distribution and reduces to the classical result $e^{-(E - \mu)/k_B T}$ in the limit that $\abs{\mu} \gg k_B T$, i.e.\ $n(0) \ll 1$.  For a gas of Helium at room temperature and pressure, $n(0) \approx 10^{-6}$.
+
+Bose-Einstein condensation occurs below a phase-transition at a critical temperature $T_c$.  In the infinite-particle limit this transition is sharp, however in any real system this transition is smooth.  While Bose-Einstein condensation occurs in a range of systems, the temperature dependence of the condensate occupation depends on the form of the density of states of the system.  In a free two-dimensional gas Bose-Einstein condensation does not occur at all, while in a free three-dimensional gas it does.  While it was the latter case in which Bose-Einstein condensation was originally derived, most BEC experiments are performed in either magnetic or optical traps, which are approximately harmonic near the trap minimum.  For a Bose gas trapped in a three-dimensional harmonic trap with trapping frequencies $\omega_x$, $\omega_y$ and $\omega_z$ the condensate fraction is \citep{PethickSmith}
+\begin{align}
+    \frac{N_0}{N} &= \left[1 - \left(\frac{T}{T_c}\right)^{3} \right], \label{BackgroundTheory:CondensateFractionHarmonicTrap}
+\end{align}
+where $N_0 = \mean{n(0)}$ is the occupation of the ground state, and the critical temperature is given by
+\begin{align}
+    k_B T_c &\approx 0.94 \hbar \overline{\omega} N^{1/3}, \label{BackgroundTheory:HarmonicTrapCriticalTemperature}
+\end{align}
+and $\overline{\omega}=(\omega_x \omega_y \omega_z)^{1/3}$ is the geometric mean of the trapping frequencies.  For typical parameters of the $\nucl{87}{Rb}$ experiment considered in this thesis ($N = 5\times 10^5$, $\omega_x = \omega_y = 2 \pi \times \unit[130]{Hz}$, $\omega_z = 2 \pi \times \unit[13]{Hz}$), $T_c \approx \unit[220]{nK}$.  At the critical temperature the condensate is unoccupied ($N_0 \approx 0$), however the condensate occupation increases sharply with decreasing temperature until all particles are in the ground state near $T \approx 0$.  In this limit all particles in the system are in the same single-particle mode and the many-body wavefunction of the system is
 \begin{align}
     \Psi(\vect{x}_1, \vect{x}_2, \dots, \vect{x}_N) &= \prod_{i=1}^{N} \phi(\vect{x}_i), \label{BackgroundTheory:ManyBodyWavefunction}
 \end{align}
-where $\phi(\vect{x})$ is the macroscopically-occupied mode.  
-
-We need an equation for the condensate fraction in a harmonic trap.  This equation has the appropriate label
-\begin{align}
-    \frac{N_0}{N} &= \label{BackgroundTheory:CondensateFractionHarmonicTrap}
-\end{align}
+where $\phi(\vect{x})$ is the macroscopically-occupied mode.  In \sectionref{BackgroundTheory:GrossPitaevskiiEquation}, a more accurate description of the state of a BEC will be considered, however \eqref{BackgroundTheory:ManyBodyWavefunction} is a useful approximation in many circumstances.
 
 \section{Hamiltonian}
 
@@ -172,11 +191,11 @@ The concept of spontaneously-broken symmetries is discussed in greater detail el
 
 \parasep
 
-FIXME: The following needs writing / rewriting / editing.
+FIXME: The following needs writing / rewriting / editing.  Assume I will get around to that.
 
-The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe \dots\footnote{FIXME: Cite stuff}   The nonlinear term of the GP equation prevents its being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
+The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe \dots\footnote{FIXME: Cite stuff.}   The nonlinear term of the GP equation prevents its being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
 
-In the rest of this thesis, the symmetry-breaking assumption will be applied.  It is understood that this is a calculational tool equivalent to assuming the system to be in a state of the form of \eqref{BackgroundTheory:CondensateDensityMatrixCoherentStateMixture}, which preserves the $U(1)$ symmetry dictated by total number conservation.
+In the rest of this thesis, the symmetry-breaking assumption will be applied.  It is understood that this is a calculational tool equivalent to assuming the system to be in a state of the form of \eqref{BackgroundTheory:CondensateDensityMatrixCoherentStateMixture}, which preserves the global phase symmetry dictated by total number conservation.
 
 \subsection{Thomas-Fermi approximation}
 
@@ -528,11 +547,11 @@ All higher-order moments are approximately expressed in terms of lower-order mom
     \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi} \delta\hat{\Psi}} &\approx 2 \mean{\delta\hat{\Psi}^\dagger \delta\hat{\Psi}} \mean{\delta\hat{\Psi}} + \mean{\delta\hat{\Psi}^\dagger} \mean{\delta\hat{\Psi} \delta\hat{\Psi}}.
 \end{align}
 
-While these methods are appropriate at intermediate temperatures, other techniques are necessary near the phase transition at $T\sim T_C$.  Methods appropriate in this limit are discussed in the following section.
+While these methods are appropriate at intermediate temperatures, other techniques are necessary near the phase transition at $T\sim T_c$.  Methods appropriate in this limit are discussed in the following section.
 
 \subsection{Methods applicable near the critical temperature}
 
-Near the critical temperature $T_C$, the system has a significant thermal fraction [see \eqref{BackgroundTheory:CondensateFractionHarmonicTrap}].  In this limit scattering and particle-exchange between the condensed and thermal fractions are significant.  These processes are of particular importance when considering condensate formation and growth.  Simple models in which the condensate was described in terms of its occupation $N_0$, and the thermal cloud in terms of its energy distribution function $g(\varepsilon)$ have been quite successful in describing these processes \citep{Davis:2000vn,Bijlsma:2000}.  Such models use an extension of classical kinetic theory termed Quantum Kinetic theory \citep{Gardiner:1997tz,Jaksch:1997ug,Gardiner:1998wx,Jaksch:1998sj,Gardiner:2000ug,Lee:2000vs,Davis:2000vn}.  Quantum Kinetic theory is discussed in greater detail in \chapterref{KineticTheory}, in which it is used to describe the collisional pumping of a condensate.
+Near the critical temperature $T_c$, the system has a significant thermal fraction [see \eqref{BackgroundTheory:CondensateFractionHarmonicTrap}].  In this limit scattering and particle-exchange between the condensed and thermal fractions are significant.  These processes are of particular importance when considering condensate formation and growth.  Simple models in which the condensate was described in terms of its occupation $N_0$, and the thermal cloud in terms of its energy distribution function $g(\varepsilon)$ have been quite successful in describing these processes \citep{Davis:2000vn,Bijlsma:2000}.  Such models use an extension of classical kinetic theory termed Quantum Kinetic theory \citep{Gardiner:1997tz,Jaksch:1997ug,Gardiner:1998wx,Jaksch:1998sj,Gardiner:2000ug,Lee:2000vs,Davis:2000vn}.  Quantum Kinetic theory is discussed in greater detail in \chapterref{KineticTheory}, in which it is used to describe the collisional pumping of a condensate.
 
 More detailed models have since been developed that are applicable where the spatial dynamics of either the condensate or thermal cloud is important.  These include the $c$-field methods such as the (Stochastic) Projected Gross-Pitaevskii equation \citep{Blakie:2008a}, and the ZNG theory \citep{Zaremba:1999,Proukakis:2008}.  The former includes the statistics of the thermal cloud which is critical in low-dimensional systems \citep{Blakie:2008a}, while the latter employs a simpler representation of the thermal cloud which is simpler to solve numerically \citep{Proukakis:2008}.
 
@@ -541,9 +560,7 @@ More detailed models have since been developed that are applicable where the spa
 
 Numerical calculations are a common and important part of theoretical (and frequently experimental) physics.  While methods for validating the convergence of calculations by comparing results for different grid- and time-step sizes are well-known and understood, other techniques are less commonly discussed.  I have chosen to discuss one of these, the use of absorbing boundary layers, in \sectionref{BackgroundTheory:AbsorbingBoundaryLayers}.  An unusual application of this technique is discussed in \sectionref{Peaks:AbsorbingBoundaryTricks}.
 
-FIXME: Add in a reference to \appendixref{ToolsAppendix}.
-
-Stolen from xmds.org: Often writing a computer program to solve complex problems can be very difficult, time-consuming, and error-prone. This is where xmds excels. One merely needs to write a script in a high-level form which is easy for a person to understand, and xmds goes off and writes the low-level code for you, producing code that is better for a computer. This makes the writing of a simulation program significantly easier, reducing the development time, and almost eliminating bugs since xmds has written the vast majority of the code for you and has used thoroughly tested code and techniques in the production of the program. The output program that xmds writes is still about as fast as code hand-written by an expert, so one can has the best of both worlds: quick development time, and quick execution.
+There are a large number of technical details that must be correct for a simulation to operate correctly.  Diagnosing and resolving these issues can be a very difficult and time-consuming process.  As a large number of the problems solved within quantum and atom optics fall into the class of initial-value (stochastic) partial differential equations, the vast majority of these simulations are very similar on a fundamental level.  To reduce the time required to develop these simulations, the computational package \texttt{XMDS} \citep{Collecutt:2001} was created several years ago to take a high-level description of a problem and produce a low-level simulation to solve the problem.  I have benefitted greatly from this tool throughout my PhD, however some of its limitations required the creation of a successor to this tool.  I have developed the package \texttt{xpdeint} to fill this role, and a discussion of its capabilities is given in \appendixref{ToolsAppendix}.
 
 \subsection{Absorbing boundary layers}
 \label{BackgroundTheory:AbsorbingBoundaryLayers}

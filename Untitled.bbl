@@ -1,4 +1,4 @@
-\begin{thebibliography}{146}
+\begin{thebibliography}{148}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,15 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Stas \emph{et~al.}}(2006)\citenamefont{Stas, McNamara,
+  Hogervorst, and Vassen}}]{Stas:2006kx}
+\bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
+  \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
@@ -55,6 +64,19 @@
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
   \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{307} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Bergmann and Schaefer}(1997)}]{Bergmann:1997}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Bergmann}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Schaefer}},
+  \emph{\bibinfo{title}{{Constituents of Matter}}} (\bibinfo{publisher}{{Walter
+  de Gruyter}}, \bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Metcalf and van~der Straten}(1999)}]{Metcalf:1999}
+\bibinfo{author}{\bibfnamefont{H.~J.} \bibnamefont{Metcalf}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{van~der Straten}},
+  \emph{\bibinfo{title}{{Laser Cooling and Trapping}}}
+  (\bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{New York},
+  \bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Ho}(1998)}]{Ho:1998}
 \bibinfo{author}{\bibfnamefont{T.-L.} \bibnamefont{Ho}},
@@ -261,15 +283,6 @@
   \bibinfo{author}{\bibfnamefont{I.~B.} \bibnamefont{Whittingham}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{61}},
   \bibinfo{pages}{060703} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{Stas \emph{et~al.}}(2006)\citenamefont{Stas, McNamara,
-  Hogervorst, and Vassen}}]{Stas:2006kx}
-\bibinfo{author}{\bibfnamefont{R.~J.~W.} \bibnamefont{Stas}},
-  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
-  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{73}},
-  \bibinfo{pages}{032713} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Gardiner}(2004)}]{GardinerHSM}
 \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},

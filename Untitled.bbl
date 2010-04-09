@@ -1,4 +1,4 @@
-\begin{thebibliography}{156}
+\begin{thebibliography}{159}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -148,6 +148,12 @@
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
   \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{73}},
   \bibinfo{pages}{307} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Shankar}(1994)}]{Shankar:1994}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Shankar}},
+  \emph{\bibinfo{title}{{Principles of Quantum Mechanics}}}
+  (\bibinfo{publisher}{Plenum Press}, \bibinfo{address}{New York},
+  \bibinfo{year}{1994}).
 
 \bibitem[{\citenamefont{Bergmann and Schaefer}(1997)}]{Bergmann:1997}
 \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Bergmann}} \bibnamefont{and}
@@ -389,6 +395,14 @@
   \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
   University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
 
+\bibitem[{\citenamefont{Gilchrist \emph{et~al.}}(1997)\citenamefont{Gilchrist,
+  Gardiner, and Drummond}}]{Gilchrist:1997fk}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Gilchrist}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Gardiner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.~D.}
+  \bibnamefont{Drummond}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{3014} (\bibinfo{year}{1997}).
+
 \bibitem[{\citenamefont{Norrie
   \emph{et~al.}}(2006{\natexlab{a}})\citenamefont{Norrie, Ballagh, and
   Gardiner}}]{Norrie:2006vn}
@@ -434,6 +448,14 @@
   \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Hutchinson}},
   \bibinfo{journal}{Laser Physics} \textbf{\bibinfo{volume}{17}},
   \bibinfo{pages}{527} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Hush \emph{et~al.}}(2010)\citenamefont{Hush, Carvalho,
+  and Hope}}]{Hush:2010}
+\bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Hush}},
+  \bibinfo{author}{\bibfnamefont{A.~R.~R.} \bibnamefont{Carvalho}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{81}},
+  \bibinfo{pages}{033852} (\bibinfo{year}{2010}).
 
 \bibitem[{\citenamefont{Proukakis and Jackson}(2008)}]{Proukakis:2008}
 \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}}

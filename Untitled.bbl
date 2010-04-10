@@ -1,4 +1,4 @@
-\begin{thebibliography}{159}
+\begin{thebibliography}{162}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -104,6 +104,42 @@
   \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Chu}},
   \bibinfo{journal}{Metrologia} \textbf{\bibinfo{volume}{38}},
   \bibinfo{pages}{25} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Johnsson \emph{et~al.}}(2007)\citenamefont{Johnsson,
+  Haine, Hope, Robins, Figl, Jeppesen, Dugu\'{e}, and Close}}]{Johnsson:2007}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Haine}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hope}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu\'{e}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
+  \bibinfo{pages}{043618} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Johnsson and Hope}(2007)}]{Johnsson:2007a}
+\bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
+  \bibinfo{pages}{043619} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Schawlow and Townes}(1958)}]{Schawlow:1958}
+\bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Schawlow}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~H.} \bibnamefont{Townes}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{112}},
+  \bibinfo{pages}{1940} (\bibinfo{year}{1958}).
+
+\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2007)\citenamefont{Jeppesen,
+  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2007yq}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}}
+  (\bibinfo{year}{2007}), \eprint{arXiv:0704.0291}.
 
 \bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
@@ -331,6 +367,12 @@
   \bibinfo{journal}{Rev. Sci. Instrum.} \textbf{\bibinfo{volume}{77}},
   \bibinfo{pages}{023106} (\bibinfo{year}{2006}).
 
+\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
+\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
+  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
+  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
+
 \bibitem[{\citenamefont{Senitzky}(1960)}]{Senitzky:1960}
 \bibinfo{author}{\bibfnamefont{I.~R.} \bibnamefont{Senitzky}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{119}},
@@ -388,12 +430,6 @@
   \emph{\bibinfo{title}{{Handbook of Stochastic Methods}}}, Springer Series in
   Synergetics (\bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
   \bibinfo{year}{2004}), \bibinfo{edition}{3rd} ed.
-
-\bibitem[{\citenamefont{Scully and Zubairy}(1997)}]{Scully}
-\bibinfo{author}{\bibfnamefont{M.~O.} \bibnamefont{Scully}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~S.} \bibnamefont{Zubairy}},
-  \emph{\bibinfo{title}{{Quantum Optics}}} (\bibinfo{publisher}{Cambridge
-  University Press}, \bibinfo{address}{Cambridge}, \bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Gilchrist \emph{et~al.}}(1997)\citenamefont{Gilchrist,
   Gardiner, and Drummond}}]{Gilchrist:1997fk}
@@ -1188,19 +1224,6 @@
   \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{{Hope}}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{68}},
   \bibinfo{pages}{023607} (\bibinfo{year}{2003}).
-
-\bibitem[{\citenamefont{Johnsson \emph{et~al.}}(2007)\citenamefont{Johnsson,
-  Haine, Hope, Robins, Figl, Jeppesen, Dugu\'{e}, and Close}}]{Johnsson:2007}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Haine}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hope}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Robins}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu\'{e}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Close}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
-  \bibinfo{pages}{043618} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{M{\"u}ller
   \emph{et~al.}}(2007)\citenamefont{M{\"u}ller, Wendrich, Gilowski, Jentsch,

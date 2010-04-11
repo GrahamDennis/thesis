@@ -1,4 +1,4 @@
-\begin{thebibliography}{162}
+\begin{thebibliography}{167}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -48,15 +48,21 @@
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{75}},
   \bibinfo{pages}{3969} (\bibinfo{year}{1995}).
 
-\bibitem[{\citenamefont{Dimopoulos
-  \emph{et~al.}}(2007)\citenamefont{Dimopoulos, Graham, Hogan, and
-  Kasevich}}]{Dimopoulos:2007uq}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
-  \bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Graham}},
-  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Hogan}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
-  \bibinfo{pages}{111102} (\bibinfo{year}{2007}), \eprint{arXiv:gr-qc/0610047}.
+\bibitem[{\citenamefont{Vessot \emph{et~al.}}(1980)\citenamefont{Vessot,
+  Levine, Mattison, Blomberg, Hoffman, Nystrom, Farrel, Decher, Eby, Baugher
+  \emph{et~al.}}}]{Vessot:1980}
+\bibinfo{author}{\bibfnamefont{R.~F.~C.} \bibnamefont{Vessot}},
+  \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Levine}},
+  \bibinfo{author}{\bibfnamefont{E.~M.} \bibnamefont{Mattison}},
+  \bibinfo{author}{\bibfnamefont{E.~L.} \bibnamefont{Blomberg}},
+  \bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Hoffman}},
+  \bibinfo{author}{\bibfnamefont{G.~U.} \bibnamefont{Nystrom}},
+  \bibinfo{author}{\bibfnamefont{B.~F.} \bibnamefont{Farrel}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Decher}},
+  \bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Eby}},
+  \bibinfo{author}{\bibfnamefont{C.~R.} \bibnamefont{Baugher}},
+  \bibnamefont{\emph{et~al.}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{45}}, \bibinfo{pages}{2081} (\bibinfo{year}{1980}).
 
 \bibitem[{\citenamefont{Arvanitaki
   \emph{et~al.}}(2007)\citenamefont{Arvanitaki, Dimopoulos, Geraci, Hogan, and
@@ -67,6 +73,16 @@
   \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hogan}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kasevich}}
   (\bibinfo{year}{2007}), \eprint{arXiv:0711.4636}.
+
+\bibitem[{\citenamefont{Dimopoulos
+  \emph{et~al.}}(2007)\citenamefont{Dimopoulos, Graham, Hogan, and
+  Kasevich}}]{Dimopoulos:2007uq}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
+  \bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Graham}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Hogan}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
+  \bibinfo{pages}{111102} (\bibinfo{year}{2007}), \eprint{arXiv:gr-qc/0610047}.
 
 \bibitem[{\citenamefont{Gustavson \emph{et~al.}}(1997)\citenamefont{Gustavson,
   Bouyer, and Kasevich}}]{Gustavson:1997}
@@ -105,6 +121,62 @@
   \bibinfo{journal}{Metrologia} \textbf{\bibinfo{volume}{38}},
   \bibinfo{pages}{25} (\bibinfo{year}{2001}).
 
+\bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
+  and Herriott}}]{Javan:1961}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Javan}},
+  \bibinfo{author}{\bibfnamefont{W.~R.} \bibnamefont{Bennett}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.}
+  \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
+
+\bibitem[{\citenamefont{Ketterle \emph{et~al.}}(1999)\citenamefont{Ketterle,
+  Durfee, and Stamper-Kurn}}]{Ketterle:1999fk}
+\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Durfee}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Stamper-Kurn}}, in
+  \emph{\bibinfo{booktitle}{{Bose-Einstein Condensation in Atomic Gases}}},
+  edited by \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Inguscio}},
+  \bibinfo{editor}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
+  \bibnamefont{and} \bibinfo{editor}{\bibfnamefont{C.~E.}
+  \bibnamefont{Wieman}}, \bibinfo{organization}{Proc. Int. School of Physics
+  Enrico Fermi} (\bibinfo{publisher}{IOS Press}, \bibinfo{address}{Amsterdam},
+  \bibinfo{year}{1999}), pp. \bibinfo{pages}{67--176},
+  \urlprefix\url{arXiv:cond-mat/9904034}.
+
+\bibitem[{\citenamefont{M{\"u}ller}(1986)}]{Muller:1986}
+\bibinfo{author}{\bibfnamefont{E.~E.} \bibnamefont{M{\"u}ller}},
+  \bibinfo{journal}{Physica A: Statistical Mechanics and its Applications}
+  \textbf{\bibinfo{volume}{139}}, \bibinfo{pages}{165} (\bibinfo{year}{1986}).
+
+\bibitem[{\citenamefont{Pethick and Smith}(2002)}]{PethickSmith}
+\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Pethick}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Smith}},
+  \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
+  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Elesin and Levchenko}(1979)}]{Elesin:1979}
+\bibinfo{author}{\bibfnamefont{V.~F.} \bibnamefont{Elesin}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.~B.} \bibnamefont{Levchenko}},
+  \bibinfo{journal}{Radiophysics and Quantum Electronics}
+  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{88} (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{Chiao and Boyce}(1999)}]{Chiao:1999}
+\bibinfo{author}{\bibfnamefont{R.~Y.} \bibnamefont{Chiao}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Boyce}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{60}},
+  \bibinfo{pages}{4114} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2007)\citenamefont{Jeppesen,
+  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2007yq}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}}
+  (\bibinfo{year}{2007}), \eprint{arXiv:0704.0291}.
+
 \bibitem[{\citenamefont{Johnsson \emph{et~al.}}(2007)\citenamefont{Johnsson,
   Haine, Hope, Robins, Figl, Jeppesen, Dugu\'{e}, and Close}}]{Johnsson:2007}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Johnsson}},
@@ -129,17 +201,6 @@
   \bibinfo{author}{\bibfnamefont{C.~H.} \bibnamefont{Townes}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{112}},
   \bibinfo{pages}{1940} (\bibinfo{year}{1958}).
-
-\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2007)\citenamefont{Jeppesen,
-  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2007yq}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Dennis}},
-  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
-  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}}
-  (\bibinfo{year}{2007}), \eprint{arXiv:0704.0291}.
 
 \bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
@@ -173,12 +234,6 @@
 \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Bose}},
   \bibinfo{journal}{Zeitschrift f{\"u}r Physik} \textbf{\bibinfo{volume}{26}},
   \bibinfo{pages}{178} (\bibinfo{year}{1924}).
-
-\bibitem[{\citenamefont{Pethick and Smith}(2002)}]{PethickSmith}
-\bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Pethick}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Smith}},
-  \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
-  (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Leggett}(2001)}]{Leggett:2001}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}},
@@ -887,14 +942,6 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{R{\"o}{\ss}ler}},
   \bibinfo{journal}{SIAM Journal on Numerical Analysis}
   \textbf{\bibinfo{volume}{47}}, \bibinfo{pages}{1713} (\bibinfo{year}{2009}).
-
-\bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
-  and Herriott}}]{Javan:1961}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Javan}},
-  \bibinfo{author}{\bibfnamefont{W.~R.} \bibnamefont{Bennett}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.}
-  \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
 
 \bibitem[{\citenamefont{D{\"o}ring
   \emph{et~al.}}(2009)\citenamefont{D{\"o}ring, Dennis, Robins, Jeppesen, Figl,

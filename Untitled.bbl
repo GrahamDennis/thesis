@@ -1,4 +1,4 @@
-\begin{thebibliography}{167}
+\begin{thebibliography}{195}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -16,6 +16,11 @@
 \bibinfo{author}{\bibfnamefont{T.~H.} \bibnamefont{Maiman}},
   \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{187}},
   \bibinfo{pages}{493} (\bibinfo{year}{1960}).
+
+\bibitem[{\citenamefont{Einstein}(1925)}]{Einstein:1925}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
+  \bibinfo{journal}{Sitzungsber. Kgl. Preuss. Akad. Wiss}
+  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{3} (\bibinfo{year}{1925}).
 
 \bibitem[{\citenamefont{Anderson \emph{et~al.}}(1995)\citenamefont{Anderson,
   Ensher, Matthews, Wieman, and Cornell}}]{Anderson:1995vn}
@@ -129,6 +134,33 @@
   \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
 
+\bibitem[{\citenamefont{Canuel \emph{et~al.}}(2006)\citenamefont{Canuel, Leduc,
+  Holleville, Gauguet, Fils, Virdis, Clairon, Dimarcq, Bord{\'e}, Landragin
+  \emph{et~al.}}}]{Canuel:2006}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Canuel}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Leduc}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Holleville}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Gauguet}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Fils}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Virdis}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Clairon}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Dimarcq}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Bord{\'e}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Landragin}},
+  \bibnamefont{\emph{et~al.}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{97}}, \bibinfo{pages}{010402}
+  (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Lamporesi \emph{et~al.}}(2008)\citenamefont{Lamporesi,
+  Bertoldi, Cacciapuoti, Prevedelli, and Tino}}]{Lamporesi:2008}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Lamporesi}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Bertoldi}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Cacciapuoti}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prevedelli}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Tino}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{050801} (\bibinfo{year}{2008}).
+
 \bibitem[{\citenamefont{Ketterle \emph{et~al.}}(1999)\citenamefont{Ketterle,
   Durfee, and Stamper-Kurn}}]{Ketterle:1999fk}
 \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
@@ -143,6 +175,11 @@
   \bibinfo{year}{1999}), pp. \bibinfo{pages}{67--176},
   \urlprefix\url{arXiv:cond-mat/9904034}.
 
+\bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
+\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
+
 \bibitem[{\citenamefont{M{\"u}ller}(1986)}]{Muller:1986}
 \bibinfo{author}{\bibfnamefont{E.~E.} \bibnamefont{M{\"u}ller}},
   \bibinfo{journal}{Physica A: Statistical Mechanics and its Applications}
@@ -154,17 +191,140 @@
   \emph{\bibinfo{title}{{Bose-Einstein Condensation in Dilute Gases}}}
   (\bibinfo{publisher}{Cambridge University Press}, \bibinfo{year}{2002}).
 
-\bibitem[{\citenamefont{Elesin and Levchenko}(1979)}]{Elesin:1979}
-\bibinfo{author}{\bibfnamefont{V.~F.} \bibnamefont{Elesin}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{E.~B.} \bibnamefont{Levchenko}},
-  \bibinfo{journal}{Radiophysics and Quantum Electronics}
-  \textbf{\bibinfo{volume}{22}}, \bibinfo{pages}{88} (\bibinfo{year}{1979}).
+\bibitem[{\citenamefont{Lewenstein
+  \emph{et~al.}}(2007)\citenamefont{Lewenstein, Sanpera, Ahufinger, Damski,
+  Sen, and Sen}}]{Lewenstein:2007}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sanpera}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Ahufinger}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Damski}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sen}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Sen}},
+  \bibinfo{journal}{Advances in Physics} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{243} (\bibinfo{year}{2007}).
 
-\bibitem[{\citenamefont{Chiao and Boyce}(1999)}]{Chiao:1999}
-\bibinfo{author}{\bibfnamefont{R.~Y.} \bibnamefont{Chiao}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Boyce}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{60}},
-  \bibinfo{pages}{4114} (\bibinfo{year}{1999}).
+\bibitem[{\citenamefont{Buluta and Nori}(2009)}]{Buluta:2009}
+\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Buluta}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Nori}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{326}},
+  \bibinfo{pages}{108} (\bibinfo{year}{2009}),
+  \eprint{http://www.sciencemag.org/cgi/reprint/326/5949/108.pdf}.
+
+\bibitem[{\citenamefont{Fisher \emph{et~al.}}(1989)\citenamefont{Fisher,
+  Weichman, Grinstein, and Fisher}}]{Fisher:1989}
+\bibinfo{author}{\bibfnamefont{M.~P.~A.} \bibnamefont{Fisher}},
+  \bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Weichman}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Grinstein}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~S.}
+  \bibnamefont{Fisher}}, \bibinfo{journal}{Phys. Rev. B}
+  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{546} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Greiner
+  \emph{et~al.}}(2002{\natexlab{a}})\citenamefont{Greiner, Mandel, Esslinger,
+  H{\"a}nsch, and Bloch}}]{Greiner:2002lr}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Greiner}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Mandel}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{415}}, \bibinfo{pages}{39}
+  (\bibinfo{year}{2002}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Levy \emph{et~al.}}(2007)\citenamefont{Levy, Lahoud,
+  Shomroni, and Steinhauer}}]{Levy:2007vn}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Levy}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Lahoud}},
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Shomroni}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Steinhauer}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{449}},
+  \bibinfo{pages}{579} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Girardeau}(1960)}]{Girardeau:1960}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Girardeau}},
+  \bibinfo{journal}{Journal of Mathematical Physics}
+  \textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{516} (\bibinfo{year}{1960}).
+
+\bibitem[{\citenamefont{Lieb and Liniger}(1963)}]{Lieb:1963}
+\bibinfo{author}{\bibfnamefont{E.~H.} \bibnamefont{Lieb}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Liniger}},
+  \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{130}},
+  \bibinfo{pages}{1605} (\bibinfo{year}{1963}).
+
+\bibitem[{\citenamefont{Paredes \emph{et~al.}}(2004)\citenamefont{Paredes,
+  Widera, Murg, Mandel, Folling, Cirac, Shlyapnikov, Hansch, and
+  Bloch}}]{Paredes:2004}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Paredes}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Widera}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Murg}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Mandel}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Folling}},
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Cirac}},
+  \bibinfo{author}{\bibfnamefont{G.~V.} \bibnamefont{Shlyapnikov}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{Hansch}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{429}},
+  \bibinfo{pages}{277} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Abo-Shaeer
+  \emph{et~al.}}(2001)\citenamefont{Abo-Shaeer, Raman, Vogels, and
+  Ketterle}}]{Abo-Shaeer:2001}
+\bibinfo{author}{\bibfnamefont{J.~R.} \bibnamefont{Abo-Shaeer}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Raman}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Vogels}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{292}},
+  \bibinfo{pages}{476} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Ginsberg \emph{et~al.}}(2007)\citenamefont{Ginsberg,
+  Garner, and Hau}}]{Ginsberg:2007fk}
+\bibinfo{author}{\bibfnamefont{N.~S.} \bibnamefont{Ginsberg}},
+  \bibinfo{author}{\bibfnamefont{S.~R.} \bibnamefont{Garner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~V.} \bibnamefont{Hau}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{445}},
+  \bibinfo{pages}{623} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Jeltes \emph{et~al.}}(2007)\citenamefont{Jeltes,
+  McNamara, Hogervorst, Vassen, Krachmalnicoff, Schellekens, Perrin, Chang,
+  Boiron, Aspect \emph{et~al.}}}]{Jeltes:2007fk}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Jeltes}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McNamara}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Hogervorst}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Vassen}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Krachmalnicoff}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Schellekens}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Perrin}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Chang}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Boiron}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
+  \bibnamefont{\emph{et~al.}}, \bibinfo{journal}{Nature}
+  \textbf{\bibinfo{volume}{445}}, \bibinfo{pages}{402} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Deng \emph{et~al.}}(1999)\citenamefont{Deng, Hagley,
+  Wen, Trippenbach, Band, Julienne, Simsarian, Helmerson, Rolston, and
+  Phillips}}]{Deng:1999qy}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
+  \bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wen}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Trippenbach}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Band}},
+  \bibinfo{author}{\bibfnamefont{P.~S.} \bibnamefont{Julienne}},
+  \bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Simsarian}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Helmerson}},
+  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Rolston}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.~D.}
+  \bibnamefont{Phillips}}, \bibinfo{journal}{Nature}
+  \textbf{\bibinfo{volume}{398}}, \bibinfo{pages}{218} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Inouye \emph{et~al.}}(1998)\citenamefont{Inouye,
+  Andrews, Stenger, Miesner, Stamper-Kurn, and Ketterle}}]{Inouye:1998hy}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Inouye}},
+  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Andrews}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Stenger}},
+  \bibinfo{author}{\bibfnamefont{H.-J.} \bibnamefont{Miesner}},
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Stamper-Kurn}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{392}},
+  \bibinfo{pages}{151} (\bibinfo{year}{1998}).
 
 \bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2007)\citenamefont{Jeppesen,
   Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2007yq}
@@ -176,6 +336,190 @@
   \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}}
   (\bibinfo{year}{2007}), \eprint{arXiv:0704.0291}.
+
+\bibitem[{\citenamefont{Mewes \emph{et~al.}}(1997)\citenamefont{Mewes, Andrews,
+  Kurn, Durfee, Townsend, and Ketterle}}]{Mewes:1997}
+\bibinfo{author}{\bibfnamefont{M.-O.} \bibnamefont{Mewes}},
+  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Andrews}},
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Kurn}},
+  \bibinfo{author}{\bibfnamefont{D.~S.} \bibnamefont{Durfee}},
+  \bibinfo{author}{\bibfnamefont{C.~G.} \bibnamefont{Townsend}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{78}},
+  \bibinfo{pages}{582} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Moy \emph{et~al.}}(1997)\citenamefont{Moy, Hope, and
+  Savage}}]{Moy:1997}
+\bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Moy}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~M.} \bibnamefont{Savage}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
+  \bibinfo{pages}{3631} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Dowling}(1998)}]{Dowling:1998}
+\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Dowling}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{57}},
+  \bibinfo{pages}{4736} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Hagley \emph{et~al.}}(1999)\citenamefont{Hagley, Deng,
+  Kozuma, Wen, Helmerson, Rolston, and Phillips}}]{Hagley:1999dz}
+\bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kozuma}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wen}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Helmerson}},
+  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Rolston}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.~D.}
+  \bibnamefont{Phillips}}, \bibinfo{journal}{Science}
+  \textbf{\bibinfo{volume}{283}}, \bibinfo{pages}{1706} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Bloch \emph{et~al.}}(1999)\citenamefont{Bloch,
+  H{\"a}nsch, and Esslinger}}]{Bloch:1999mi}
+\bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{82}},
+  \bibinfo{pages}{3008} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Jeffers \emph{et~al.}}(2000)\citenamefont{Jeffers,
+  Horak, Barnett, and Radmore}}]{Jeffers:2000rr}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Jeffers}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Horak}},
+  \bibinfo{author}{\bibfnamefont{S.~M.} \bibnamefont{Barnett}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{P.~M.}
+  \bibnamefont{Radmore}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{043602}
+  (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2001)\citenamefont{Le~Coq,
+  Thywissen, Rangwala, Gerbier, Richard, Delannoy, Bouyer, and
+  Aspect}}]{Le-Coq:2001vn}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Le~Coq}},
+  \bibinfo{author}{\bibfnamefont{J.~H.} \bibnamefont{Thywissen}},
+  \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Rangwala}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Gerbier}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Richard}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Delannoy}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{87}},
+  \bibinfo{pages}{170403} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Wiseman and Thomsen}(2001)}]{Wiseman:2001zr}
+\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~K.} \bibnamefont{Thomsen}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{86}},
+  \bibinfo{pages}{1143} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Busch \emph{et~al.}}(2002)\citenamefont{Busch,
+  K{\"o}hl, Esslinger, and M{\o}lmer}}]{Busch:2002zr}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{65}},
+  \bibinfo{pages}{043615} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Robins \emph{et~al.}}(2004)\citenamefont{Robins,
+  Savage, Hope, Lye, Fletcher, Haine, and Close}}]{Robins:2004pz}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.~M.} \bibnamefont{Savage}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Lye}},
+  \bibinfo{author}{\bibfnamefont{C.~S.} \bibnamefont{Fletcher}},
+  \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Haine}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{69}},
+  \bibinfo{pages}{051602(R)} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Haine and Hope}(2005)}]{Haine:2005}
+\bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Haine}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{033601} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{K{\"o}hl \emph{et~al.}}(2005)\citenamefont{K{\"o}hl,
+  Busch, Molmer, H{\"a}nsch, and Esslinger}}]{Kohl:2005fk}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Molmer}},
+  \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{063618} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Robins \emph{et~al.}}(2005)\citenamefont{Robins,
+  Morrison, Hope, and Close}}]{Robins:2005uq}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{A.~K.} \bibnamefont{Morrison}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{031606(R)} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{{\"O}ttl \emph{et~al.}}(2005)\citenamefont{{\"O}ttl,
+  Ritter, K{\"o}hl, and Esslinger}}]{Ottl:2005}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{{\"O}ttl}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Ritter}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{95}},
+  \bibinfo{pages}{090404} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Riou \emph{et~al.}}(2006)\citenamefont{Riou, Guerin,
+  Coq, Fauquembergue, Josse, Bouyer, and Aspect}}]{Riou:2006uq}
+\bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Guerin}},
+  \bibinfo{author}{\bibfnamefont{Y.~L.} \bibnamefont{Coq}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Fauquembergue}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Josse}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{96}},
+  \bibinfo{pages}{070404} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Robins \emph{et~al.}}(2006)\citenamefont{Robins, Figl,
+  Haine, Morrison, Jeppesen, Hope, and Close}}]{Robins:2006fk}
+\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Haine}},
+  \bibinfo{author}{\bibfnamefont{A.~K.} \bibnamefont{Morrison}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{96}},
+  \bibinfo{pages}{140403} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Guerin \emph{et~al.}}(2006)\citenamefont{Guerin, Riou,
+  Gaebler, Josse, Bouyer, and Aspect}}]{Guerin:2006mz}
+\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Guerin}},
+  \bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}},
+  \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Gaebler}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Josse}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{97}},
+  \bibinfo{pages}{200402} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Wu and Yang}(2006)}]{Wu:2006fj}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Wu}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Yang}}, \bibinfo{journal}{J.
+  Opt. Soc. Am. B} \textbf{\bibinfo{volume}{23}}, \bibinfo{pages}{913}
+  (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Roura \emph{et~al.}}(2006)\citenamefont{Roura, Brill,
+  Hu, Misner, and Phillips}}]{Roura:2006}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Roura}},
+  \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Brill}},
+  \bibinfo{author}{\bibfnamefont{B.~L.} \bibnamefont{Hu}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Misner}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.~D.}
+  \bibnamefont{Phillips}}, \bibinfo{journal}{Phys. Rev. D}
+  \textbf{\bibinfo{volume}{73}}, \bibinfo{pages}{084018}
+  (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Johnsson \emph{et~al.}}(2007)\citenamefont{Johnsson,
   Haine, Hope, Robins, Figl, Jeppesen, Dugu\'{e}, and Close}}]{Johnsson:2007}
@@ -196,16 +540,110 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
   \bibinfo{pages}{043619} (\bibinfo{year}{2007}).
 
+\bibitem[{\citenamefont{Johnsson and Haine}(2007)}]{Johnsson:2007b}
+\bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{Haine}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{99}},
+  \bibinfo{pages}{010401} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Dugu{\'e} \emph{et~al.}}(2007)\citenamefont{Dugu{\'e},
+  Robins, Figl, Jeppesen, Summers, Johnsson, Hope, and Close}}]{Dugue:2007fk}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Summers}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
+  \bibinfo{pages}{053602} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Dall \emph{et~al.}}(2007)\citenamefont{Dall, Byron,
+  Truscott, Dennis, Johnsson, Jeppesen, and Hope}}]{Dall:2007}
+\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
+  \bibinfo{author}{\bibfnamefont{L.~J.} \bibnamefont{Byron}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
+  \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Dugu{\'e} \emph{et~al.}}(2008)\citenamefont{Dugu{\'e},
+  Dennis, Jeppesen, Johnsson, Figl, Robins, and Close}}]{Dugue:2008}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{031603(R)} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2008)\citenamefont{Jeppesen,
+  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2008}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
+  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{063618} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Riou \emph{et~al.}}(2008)\citenamefont{Riou, Coq,
+  Impens, Guerin, Bord{\'e}, Aspect, and Bouyer}}]{Riou:2008}
+\bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}},
+  \bibinfo{author}{\bibfnamefont{Y.~L.} \bibnamefont{Coq}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Impens}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Guerin}},
+  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Bord{\'e}}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{033630} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{D{\"o}ring
+  \emph{et~al.}}(2008)\citenamefont{D{\"o}ring, Robins, Figl, and
+  Close}}]{Doring:2008}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{D{\"o}ring}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{16}},
+  \bibinfo{pages}{13893} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Couvert \emph{et~al.}}(2008)\citenamefont{Couvert,
+  Jeppesen, Kawalec, Reinaudi, Mathevet, and Gu{\'e}ry-Odelin}}]{Couvert:2008}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Couvert}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kawalec}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Reinaudi}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Mathevet}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{50001} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Debs \emph{et~al.}}(2009)\citenamefont{Debs,
+  D{\"o}ring, Robins, Figl, Altin, and Close}}]{Debs:2009}
+\bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Debs}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{D{\"o}ring}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
+  \bibinfo{author}{\bibfnamefont{P.~A.} \bibnamefont{Altin}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{2319} (\bibinfo{year}{2009}).
+
 \bibitem[{\citenamefont{Schawlow and Townes}(1958)}]{Schawlow:1958}
 \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Schawlow}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{C.~H.} \bibnamefont{Townes}},
   \bibinfo{journal}{Phys. Rev.} \textbf{\bibinfo{volume}{112}},
   \bibinfo{pages}{1940} (\bibinfo{year}{1958}).
-
-\bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
-\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
-  \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Ballagh and Savage}(2000)}]{Ballagh:2000oq}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ballagh}} \bibnamefont{and}
@@ -224,11 +662,6 @@
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
   \bibinfo{journal}{Sitzber. Kgl. Preuss. Akad. Wiss}
   \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{1924} (\bibinfo{year}{1924}).
-
-\bibitem[{\citenamefont{Einstein}(1925)}]{Einstein:1925}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
-  \bibinfo{journal}{Sitzungsber. Kgl. Preuss. Akad. Wiss}
-  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{3} (\bibinfo{year}{1925}).
 
 \bibitem[{\citenamefont{Bose}(1924)}]{Bose:1924}
 \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Bose}},
@@ -274,14 +707,15 @@
   \textbf{\bibinfo{volume}{88}}, \bibinfo{pages}{093201}
   (\bibinfo{year}{2002}).
 
-\bibitem[{\citenamefont{Greiner \emph{et~al.}}(2002)\citenamefont{Greiner,
-  Mandel, H{\"a}nsch, and Bloch}}]{Greiner:2002fk}
+\bibitem[{\citenamefont{Greiner
+  \emph{et~al.}}(2002{\natexlab{b}})\citenamefont{Greiner, Mandel, H{\"a}nsch,
+  and Bloch}}]{Greiner:2002fk}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Greiner}},
   \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Mandel}},
   \bibinfo{author}{\bibfnamefont{T.~W.} \bibnamefont{H{\"a}nsch}},
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Bloch}},
   \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{419}}, \bibinfo{pages}{51}
-  (\bibinfo{year}{2002}).
+  (\bibinfo{year}{2002}{\natexlab{b}}).
 
 \bibitem[{\citenamefont{Leggett and Sols}(1991)}]{Leggett:1991fj}
 \bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Leggett}} \bibnamefont{and}
@@ -300,30 +734,6 @@
   \bibinfo{pages}{1363} (\bibinfo{year}{2002}),
   \eprint{http://www.sciencemag.org/cgi/reprint/298/5597/1363.pdf}.
 
-\bibitem[{\citenamefont{Dall \emph{et~al.}}(2007)\citenamefont{Dall, Byron,
-  Truscott, Dennis, Johnsson, Jeppesen, and Hope}}]{Dall:2007}
-\bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}},
-  \bibinfo{author}{\bibfnamefont{L.~J.} \bibnamefont{Byron}},
-  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
-  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
-  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
-  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{15}},
-  \bibinfo{pages}{17673} (\bibinfo{year}{2007}).
-
-\bibitem[{\citenamefont{Jeppesen \emph{et~al.}}(2008)\citenamefont{Jeppesen,
-  Dugu{\'e}, Dennis, Johnsson, Figl, Robins, and Close}}]{Jeppesen:2008}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
-  \bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}},
-  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
-  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{77}},
-  \bibinfo{pages}{063618} (\bibinfo{year}{2008}).
-
 \bibitem[{\citenamefont{Dall and Truscott}(2007)}]{Dall:2007a}
 \bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Truscott}},
@@ -333,27 +743,6 @@
 \bibitem[{\citenamefont{Riou}(2006)}]{Riou:2006fk}
 \bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}}, Ph.D. thesis,
   \bibinfo{school}{Universit{\'e} Paris Sud} (\bibinfo{year}{2006}).
-
-\bibitem[{\citenamefont{Robins \emph{et~al.}}(2005)\citenamefont{Robins,
-  Morrison, Hope, and Close}}]{Robins:2005uq}
-\bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
-  \bibinfo{author}{\bibfnamefont{A.~K.} \bibnamefont{Morrison}},
-  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
-  \bibinfo{pages}{031606(R)} (\bibinfo{year}{2005}).
-
-\bibitem[{\citenamefont{Hagley \emph{et~al.}}(1999)\citenamefont{Hagley, Deng,
-  Kozuma, Wen, Helmerson, Rolston, and Phillips}}]{Hagley:1999dz}
-\bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
-  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kozuma}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wen}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Helmerson}},
-  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Rolston}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.~D.}
-  \bibnamefont{Phillips}}, \bibinfo{journal}{Science}
-  \textbf{\bibinfo{volume}{283}}, \bibinfo{pages}{1706} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Ruostekoski
   \emph{et~al.}}(2003)\citenamefont{Ruostekoski, Gasenzer, and
@@ -374,28 +763,6 @@
   \bibnamefont{Truscott}}, \bibinfo{journal}{Phys. Rev. A}
   \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{011602}
   (\bibinfo{year}{2010}).
-
-\bibitem[{\citenamefont{Couvert \emph{et~al.}}(2008)\citenamefont{Couvert,
-  Jeppesen, Kawalec, Reinaudi, Mathevet, and Gu{\'e}ry-Odelin}}]{Couvert:2008}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Couvert}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Kawalec}},
-  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Reinaudi}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Mathevet}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
-  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{83}},
-  \bibinfo{pages}{50001} (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Guerin \emph{et~al.}}(2006)\citenamefont{Guerin, Riou,
-  Gaebler, Josse, Bouyer, and Aspect}}]{Guerin:2006mz}
-\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Guerin}},
-  \bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}},
-  \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Gaebler}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Josse}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{97}},
-  \bibinfo{pages}{200402} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2006)\citenamefont{Le~Coq,
   Retter, Richard, Aspect, and Bouyer}}]{Le-Coq:2006}
@@ -670,44 +1037,6 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
   \bibinfo{pages}{011601(R)} (\bibinfo{year}{2009}).
 
-\bibitem[{\citenamefont{Mewes \emph{et~al.}}(1997)\citenamefont{Mewes, Andrews,
-  Kurn, Durfee, Townsend, and Ketterle}}]{Mewes:1997}
-\bibinfo{author}{\bibfnamefont{M.-O.} \bibnamefont{Mewes}},
-  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Andrews}},
-  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Kurn}},
-  \bibinfo{author}{\bibfnamefont{D.~S.} \bibnamefont{Durfee}},
-  \bibinfo{author}{\bibfnamefont{C.~G.} \bibnamefont{Townsend}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{78}},
-  \bibinfo{pages}{582} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{Busch \emph{et~al.}}(2002)\citenamefont{Busch,
-  K{\"o}hl, Esslinger, and M{\o}lmer}}]{Busch:2002zr}
-\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Esslinger}},
-  \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{65}},
-  \bibinfo{pages}{043615} (\bibinfo{year}{2002}).
-
-\bibitem[{\citenamefont{Riou \emph{et~al.}}(2006)\citenamefont{Riou, Guerin,
-  Coq, Fauquembergue, Josse, Bouyer, and Aspect}}]{Riou:2006uq}
-\bibinfo{author}{\bibfnamefont{J.-F.} \bibnamefont{Riou}},
-  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Guerin}},
-  \bibinfo{author}{\bibfnamefont{Y.~L.} \bibnamefont{Coq}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Fauquembergue}},
-  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Josse}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{96}},
-  \bibinfo{pages}{070404} (\bibinfo{year}{2006}).
-
-\bibitem[{\citenamefont{Dowling}(1998)}]{Dowling:1998}
-\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Dowling}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{57}},
-  \bibinfo{pages}{4736} (\bibinfo{year}{1998}).
-
 \bibitem[{\citenamefont{Reid and Drummond}(1988)}]{Reid:1988}
 \bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{Reid}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
@@ -720,22 +1049,6 @@
   \emph{\bibinfo{title}{{Quantum Optics}}}
   (\bibinfo{publisher}{Springer-Verlag}, \bibinfo{address}{Berlin},
   \bibinfo{year}{1994}).
-
-\bibitem[{\citenamefont{Deng \emph{et~al.}}(1999)\citenamefont{Deng, Hagley,
-  Wen, Trippenbach, Band, Julienne, Simsarian, Helmerson, Rolston, and
-  Phillips}}]{Deng:1999qy}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
-  \bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wen}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Trippenbach}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Band}},
-  \bibinfo{author}{\bibfnamefont{P.~S.} \bibnamefont{Julienne}},
-  \bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Simsarian}},
-  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Helmerson}},
-  \bibinfo{author}{\bibfnamefont{S.~L.} \bibnamefont{Rolston}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.~D.}
-  \bibnamefont{Phillips}}, \bibinfo{journal}{Nature}
-  \textbf{\bibinfo{volume}{398}}, \bibinfo{pages}{218} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Vogels \emph{et~al.}}(2002)\citenamefont{Vogels, Xu,
   and Ketterle}}]{Vogels:2002}
@@ -1086,14 +1399,6 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{69}},
   \bibinfo{pages}{041603} (\bibinfo{year}{2004}).
 
-\bibitem[{\citenamefont{Ginsberg \emph{et~al.}}(2007)\citenamefont{Ginsberg,
-  Garner, and Hau}}]{Ginsberg:2007fk}
-\bibinfo{author}{\bibfnamefont{N.~S.} \bibnamefont{Ginsberg}},
-  \bibinfo{author}{\bibfnamefont{S.~R.} \bibnamefont{Garner}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~V.} \bibnamefont{Hau}},
-  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{445}},
-  \bibinfo{pages}{623} (\bibinfo{year}{2007}).
-
 \bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1996)\citenamefont{Olshanii,
   Castin, and Dalibard}}]{Olshanii:1996}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshanii}},
@@ -1226,19 +1531,6 @@
   \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Bergmann}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{40}},
   \bibinfo{pages}{6741} (\bibinfo{year}{1989}).
-
-\bibitem[{\citenamefont{Dugu{\'e} \emph{et~al.}}(2007)\citenamefont{Dugu{\'e},
-  Robins, Figl, Jeppesen, Summers, Johnsson, Hope, and Close}}]{Dugue:2007fk}
-\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
-  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
-  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jeppesen}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Summers}},
-  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
-  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Close}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
-  \bibinfo{pages}{053602} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{Eckart}(1930)}]{Eckart:1930}
 \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Eckart}},

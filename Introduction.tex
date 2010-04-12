@@ -2,11 +2,16 @@
 \label{Introduction}
 \graphicspath{{Figures/Introduction/}{Figures/Common/}}
 
-It is hard to underestimate the effect that the laser has had since its invention in 1960 \citep{Maiman:1960}.  Although initially motivated by pure scientific curiosity, its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  These unique properties, namely its narrow spectral linewidth, high spectral intensity, and long coherence length derive from the macroscopic occupation of photons in a single spatial mode.  With the achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} --- a macroscopic occupation of \emph{atoms} in a single spatial mode --- it has become possible to consider the creation of an atomic analogue of the optical laser: the \emph{atom} laser.
+It is hard to underestimate the effect that the laser has had since its invention in 1960 \citep{Maiman:1960}.  Although initially motivated by pure scientific curiosity, its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  
+
+Laser radiation is distinguished from the light emitted by everyday light sources --- such as light bulbs --- by three main properties, (i) its narrow divergence, (ii) the narrow range of frequencies that are emitted, and (iii) the \emph{coherence} of the emitted radiation.  Although many applications only make use of the first two properties, the coherence of a laser is critical to its use in such applications as laser gyroscopes, gravitational wave detection and fundamental tests of quantum mechanics\footnote{FIXME: Add citations}.  Crudely, the coherence of light is related to the extent to which knowledge of its phase at one instant can be used to predict its phase at later times.  Light emitted from a light bulb is chaotic: its phase evolves randomly in time.  Light emitted from a laser is highly predictable: its phase evolves linearly in time with some phase diffusion over longer time scales.  
+
+Quantum mechanics tells us that not only can light behave as a wave, but atoms can too.  This wave nature of atoms is usually indiscernible because the typical wavelength for a thermal atom is many orders of magnitude smaller than the inter-atomic spacing ($\lambda \sim 5 \times\unit[10^{-11}]{m}$ as compared to $d \sim 3 \times\unit[10^{-9}]{m}$).  However, in 1925 Einstein predicted \citep{Einstein:1925} that if a gas of \emph{bosons} (a class of particles which includes many atomic species) was cooled below a critical temperature, a large fraction of the particles would occupy the ground state of the system, forming a coherent wavefunction.  This was achieved in 1995 for dilute atomic gases \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} with the first production of a Bose-Einstein Condensate (BEC), a macroscopic occupation of atoms in a single spatial mode.  As it is the macroscopic occupation of \emph{photons} in a single spatial mode that gives the optical laser many of its properties, with the achievement of BEC it has become possible to consider the creation of an atomic analogue of the optical laser: the \emph{atom} laser.
+
+An atom laser, while ideally sharing the above properties of its optical cousin, would behave very differently to an optical laser.  While photons interact strongly with matter, they interact only weakly with themselves or with gravity.  While this makes lasers robust to fluctuations in electromagnetic or gravitational fields, they are therefore less sensitive to these fields in interferometry experiments.  Despite this limitation, optical interferometry has been used in several incredible gravitational experiments, including GRACE, LIGO, and Gravity Probe-A \citep{Vessot:1980}.
 
 Somewhere the award of the Nobel prizes for BEC and related work should be mentioned as it is a rapidly evolving, and exciting field of tremendous importance.  Or something.
 
-An atom laser, while ideally sharing the above properties of its optical cousin, would behave very differently to an optical laser.  While photons interact strongly with matter, they interact only weakly with themselves or with gravity.  While this makes lasers robust to fluctuations in electromagnetic or gravitational fields, they are therefore less sensitive to these fields in interferometry experiments.  Despite this limitation, optical interferometry has been used in several incredible gravitational experiments, including GRACE, LIGO, and Gravity Probe-A \citep{Vessot:1980}.
 
 it means that they are less sensitive to these effects in interferometry experiments where they are under investigation.  
 
@@ -14,22 +19,6 @@ it means that they are less sensitive to these effects in interferometry experim
 amazing gravity experiments with lasers: GRACE, LIGO, eventually, LISA
 
 they do not interact strongly with themselves or with gravity.  
-
-properties listed above wit
-
-With the achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} --- a macroscopic occupation of \emph{atoms} in a single spatial mode --- there has arisen the experimental challenge of producing an atomic analogue of the optical laser: the \emph{atom} laser.
-
-
-
-narrow spectral linewidth, high spectral intensity, and long coherence length have given the optical laser application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.
-
-its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  
-
-its narrow spectral linewidth, high spectral intensity, and long coherence length have given the optical laser application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.
-
-a wide range of applications.  
-
-its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  Its narrow spectral linewidth, high spectral intensity, and long coherence length 
 
 It is the narrow spectral linewidth, the high spectral intensity, and its large coherence length that give the optical laser such a wide range of applications.  These properties themselves derive from the macroscopic occupation of photons in a single optical mode inside the laser cavity.  With the achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} --- a macroscopic occupation of \emph{atoms} in a single spatial mode --- there has arisen the experimental challenge of producing an atomic analogue of the optical laser: the \emph{atom} laser.  As atoms interact more readily with their environment than photons, atom interferometry has a broad range of applications: to the measurement of electric and magnetic fields in tests of atom and neutron charge neutrality \citep{Arvanitaki:2007}, an application which would be essentially impossible with optical lasers due to the weak photon--photon interaction; to fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}; to the development of gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}, which, while possible using optical lasers, their atomic counterparts are far more compact due to the significantly stronger gravitational interaction.
 
@@ -59,6 +48,9 @@ far more sensitive to fluctuations in external electric or magnetic fields, etc
 
 We need to talk about thermal beams, briefly.
 
+Discussion of cold thermal atom interferometry, and how this can be improved through the use of atom lasers. 
+
+Rotation sensing using cold thermal atom clouds: \citep{Canuel:2006}, measuring Newton's constant $G$: \citep{Lamporesi:2008}
 
 
 Here goes the motivation.
@@ -95,39 +87,75 @@ In an optical laser, the resonator is typically a cavity formed between two (or 
 
 The necessary property for the lasing mode of a laser --- be it optical or atomic --- is that it have an occupation much greater than one \citep{Wiseman:1997ba}.  For photons, such a highly-degenerate mode was first achieved with the development of the optical laser itself \citep{Maiman:1960,Javan:1961}; a photon condensate cannot exist in equilibrium as total photon number is not conserved \citep{Muller:1986,Ketterle:1999fk}.  Total atom number is, however, conserved and Bose-Einstein condensation occurs below a critical temperature \citep{PethickSmith}.  Below this critical temperature, a significant fraction of the atoms in the system occupy a single spatial mode; exactly what is required of the lasing mode of an atom laser.
 
-The process of Bose-Einstein condensation can be understood in a simplified picture in which the atoms are viewed as wave-packets with an extent of the order of the thermal de Broglie wavelength $\lambda_\text{dB} = (2 \pi \hbar^2 / M k_B T)^{1/2}$, where $M$ is the mass of the atom, $k_B$ is Boltzmann's constant, and $T$ is the temperature of the atoms.  At room temperature, the de Broglie wavelength is sufficiently small ($\sim 5\times\unit[10^{-11}]{m}$ for \nucl{4}{He} at $T=\unit[300]{K}$) that the atoms behave as point-like billiard balls (upper panel of \figureref{Introduction:WhatIsBEC}).  As the temperature decreases, the de Broglie wavelength increases (second panel of \figureref{Introduction:WhatIsBEC}).  As the temperature continues to decrease, the de Broglie wavelength approaches the mean interparticle separation $d$ and the atomic matter waves begin to overlap (third panel of \figureref{Introduction:WhatIsBEC}).  Below this temperature, a Bose-Einstein condensate begins to form, until at $T=0$, all atoms are in the condensate (lower panel of \figureref{Introduction:WhatIsBEC}).
+The process of Bose-Einstein condensation can be understood in a simplified picture in which the atoms are viewed as wave-packets with an extent of the order of the thermal de Broglie wavelength $\lambda_\text{dB} = (2 \pi \hbar^2 / M k_B T)^{1/2}$, where $M$ is the mass of the atom, $k_B$ is Boltzmann's constant, and $T$ is the temperature of the atoms.  At room temperature, the de Broglie wavelength is sufficiently small ($\sim 5\times\unit[10^{-11}]{m}$ for \nucl{4}{He} at $T=\unit[300]{K}$) that the atoms behave as point-like billiard balls (upper panel of \figureref{Introduction:WhatIsBEC}).  As the temperature decreases, the de Broglie wavelength increases (second panel of \figureref{Introduction:WhatIsBEC}).  As the temperature continues to decrease, the de Broglie wavelength approaches the mean interparticle separation $d$ and the atomic matter waves begin to overlap (third panel of \figureref{Introduction:WhatIsBEC}).  Below this temperature, a Bose-Einstein condensate begins to form, until at $T=0$, all atoms are in the condensate (lower panel of \figureref{Introduction:WhatIsBEC}).  Conservation of total number is necessary for BEC, as it is because of this that the interparticle separation $d$ remains constant as temperature is decreased (in a box of constant volume); for photons, as the temperature is decreased the total number of photons in the system decreases, increasing the mean interparticle separation $d$ faster than the photon wavelength increases.  Hence photon condensation cannot occur in equilibrium.
 
-Bose-Einstein condensation is a macroscopic quantum phenomenon with a broad range of applications beyond the production of atom lasers.  
+Bose-Einstein condensation is a macroscopic quantum phenomenon with a broad range of applications beyond the production of atom lasers.  Perhaps the most interesting of these are the development of \emph{quantum simulators} \citep{Lewenstein:2007,Buluta:2009}, experiments which directly realise theoretical condensed matter models, which where initially proposed as approximations to other systems.  For example, the Bose-Hubbard model \citep{Fisher:1989} of interacting bosons was realised by loading a BEC into an optical lattice.  By changing the depth of the optical lattice, the ratio of the tunnelling and interaction terms was be changed, permitting direct observation of the superfluid--Mott insulator transition \citep{Greiner:2002lr}.  Quantum simulators are possible for a variety of other systems, including Josephson junctions \citep{Levy:2007vn}, and reduced-dimensional systems such as the Tonks-Girardeau model of 1D hard core bosons \citep{Girardeau:1960,Lieb:1963,Paredes:2004}.  Dilute gas BECs have also been used in the direct observation of persistent currents in the form of vortices and vortex lattices \citep{Abo-Shaeer:2001}, the coherent control of optical information \citep{Ginsberg:2007fk}, and the observation of quantum optical effects in atoms such as the Hanbury-Brown-Twiss effect \citep{Jeltes:2007fk}, and four-wave mixing \citep{Deng:1999qy}.
 
-BECs can be made of dilute, weakly-interacting atomic gases in the limit where perturbation theory applies.  In this limit, the extraordinary degree of control of the system permits direct experimental tests of predictions of quantum field theory.  This is of particular importance to condensed matter theory, where the loading of BECs into optical lattices permits direct experimental realisations of condensed matter models, such as:
+% Theoretical things not included in the above list:
+% realisation of an analogue to a magnetic monopole \citep{Pietila:2009}
+% super-chemistry \citep{Heinzen:2000}: perform a chemical reaction in a controlled way, from a desired initial state to a desired final quantum state
+% GR-analogues
 
-vortices, spinor dynamics, topological structures, GR-analogues, entanglement, testing of Bogoliubov's theory for condensate excitations and the speed of sound.  Directly possible in BEC systems.  Testing the validity of sound theories, and temperature dependence.  Interatomic interaction strength may be controlled, strength of the trap, in an optical lattice the separation and geometry, 
+% Other things not mentioned:
+% Testing Bogoliubov's theory for excitations and the speed of sound (temperature dependence too)
 
-condensate interferometry
+One of the advantages of dilute gas BEC that gives these systems such a broad range of applications is the extraordinary degree to which these systems can be controlled and manipulated:  their effective dimensionality can be changed by changing the confining potential; the de Broglie wavelength is controllable over many orders of magnitude $\unit[1]{nm} \lesssim \lambda_\text{dB} \lesssim \unit[10]{\micro m}$; the sign and magnitude of interparticle interactions can be controlled \citep{Inouye:1998hy}, all the way from attractive interactions through to infinitely repulsive interactions, including the non-interacting limit; essentially `pure' potentials (minimal absorption) may be constructed in a range of forms including highly regular potentials such as harmonic or lattice potentials, and random potentials with controllable statistical properties.  Dilute gas BEC also has a range of available observational tools for probing the system including absorptive imaging, phase-contrast imaging, Bragg scattering, and ionisation in the case of metastable species\footnote{FIXME: Missing citations everywhere}.  
 
-interference experiments
-
-the simple models proposed in the past may be directly observed.
-
-The dilute nature of BECs of atomic gases 
-
-Bose-Einstein condensates are an interesting equilibrium quantum phenomenon, and have a broad range of applications beyond the production of atom lasers.
-
-
-The interesting
-
-
-Bose-Einstein condensates have a broad range of applications beyond the production of atom lasers.  
-
-
-BEC has a broad range of applications beyond atom lasers.  Fundamental studies of quantum mechanics, vortices, studies of phase transitions, atomic coherence, entanglement, anything else I can come up with (quantum computing / memory?).  Its high degree of controllability is one thing that makes this system ideal for constructing models of condensed matter systems.  Look at my notes for various conferences I have attended for ideas for this section.
-
-
-The lasing mode is of interest independently to the production of a continuous atom laser, as a Bose-Einstein condensate illustrates macroscopic quantum degeneracy of atoms.  Interesting quantum-mechanical effects that cannot be observed at higher temperatures... High degree of purity, controllability, stuff, nonsense.  I think I have stuff about this elsewhere.  All kinds of cool stuff you can do with a BEC.
+The goal of atom optics is to use the fundamental differences between atoms and photons in the application of the principles of laser optics to new fields of research.
 
 \subsection{The outcoupling process}
 
-Outcoupling light from the lasing mode in an optical laser is achieved through making one of the cavity mirrors partially transmittive, the emitted light is then the output mode of the optical laser. For atom lasers an analogous technique can be used for optical traps by lowering the depth of the trap until some atoms can tunnel out of the trap with the assistance of gravity. For atom lasers in magnetic traps a different technique is needed and either a microwave or Raman transition is employed to transfer the atoms into a magnetically-insensitive state that then falls under gravity. In addition to transferring the atoms into a magnetically-insensitive state, Raman transitions can also deliver a momentum kick to atoms that can be used to improve the spatial profile of the atom laser \cite{Jeppesen:2007yq}.
+Outcoupling light from the lasing mode in an optical laser is achieved through making one of the cavity mirrors partially transmissive.  The emitted light is the output mode of the optical laser.  For atom lasers, an analogous technique can be used in optical traps by lowering the depth of the trap until some atoms can tunnel out of the trap with the assistance of gravity.  In magnetic traps, electromagnetic radiation is applied to transfer the atoms into a magnetically-insensitive state in which they fall freely under gravity.  These outcoupled atoms form the atom laser beam.
+
+Contemporary atom optics experiments necessarily operate in pulsed mode.  Without a pumping mechanism, the atom laser beam is limited by the size of the condensate; once all of the atoms in the BEC have been outcoupled, the atom laser beam stops.  This places a fundamental limit on the linewidth (velocity-spread) of the atomic pulse produced: the Fourier limit, proportional to the inverse of the outcoupling time \citep{Johnsson:2007}.  This limit can be made arbitrarily small (until the energy uncertainty in the BEC due to interatomic scattering becomes significant \cite{Johnsson:2007a}) at the expense of an arbitrarily low atom flux.  Practically however, this trade-off cannot be made because the signal-to-noise ratio for atom laser experiments depends critically on the atomic flux.  The only way to achieve a high-flux atom laser with a narrow linewidth is with a continuous pumping process, which has yet to be achieved experimentally. 
+
+Pulsed atom lasers display a rich range of behaviour.  Bound states, multistate craziness, proposals to create non-classical states via squeezed light, guided with waveguides, Bragg diffraction, probing a BEC.
+
+
+Issues affecting the transverse profile should be given a separate hearing.  This is because a clean transverse profile is a desirable property of an atom laser, particularly for use in interferometry experiments.
+
+
+They may be outcoupled directly with radio-frequency radiation \citep{Mewes:1997,Bloch:1999mi}, or with Raman outcoupling giving the atoms a momentum kick as they are outcoupled \citep{Moy:1997,Hagley:1999dz,Robins:2006fk}.  The location in the condensate from which the atoms are outcoupled, and the size of the momentum kick given (if any) affects the transverse profile of the atom laser.  Due to the mean-field repulsion the atoms experience as they leave the condensate, significant interference fringes are observed on the atom laser profile \citep{Busch:2002zr,Kohl:2005fk}, however these fringes may be reduced by outcoupling from the bottom of the condensate \citep{Riou:2006uq} or by giving the atoms a significant momentum kick as they leave the condensate \citep{Jeppesen:2008}.  The transverse profile of the atom laser is discussed in greater detail in \sectionref{BackgroundTheory:TransverseProfile}.
+
+
+
+
+Here we discuss atom lasers, linewidths, spatial profiles, any other property we can think of.  The importance is the atom laser, whether it is pumped or not.  I have material on this.  We must point out that the operation of atom lasers has been only quasi-continuous to date, i.e.\ very long pulses.
+
+
+= First atom laser (pulsed): \citep{Mewes:1997}
+= Proposal to outcouple with Raman transition: \citep{Moy:1997}
+Quantum-noise limits to the atom-laser gyroscope \citep{Dowling:1998} --- Perhaps this should go earlier?
+= First demonstration of (pulsed, but high repetition rate) Raman outcoupling: \citep{Hagley:1999dz}
+= First demonstration of continuous outcoupling \citep{Bloch:1999mi}
+
+Realisation that there is a bound state in many circumstances: \citep{Jeffers:2000rr} --- Check this.
+
+First experimental studies of the divergence of the atom laser \citep{Le-Coq:2001vn}.
+Reducing the linewidth via feedback: \citep{Wiseman:2001zr}
+= Mean-field effects during outcoupling are theoretically shown to significantly affect the transverse profile of the atom laser \citep{Busch:2002zr}
+Fluctuations and flux: the limits of multi-state atom lasers \citep{Robins:2004pz}
+Non-classical atom lasers produced via outcoupling with squeezed light \citep{Haine:2005}
+= Detailed comparison of theoretically predicted transverse atom laser profile and experimentally observed profiles for rf outcoupling \citep{Kohl:2005fk}. --- Esslinger group
+= Experimental observation of bound states of an atom laser \citep{Robins:2005uq}
+Correlations and Counting Statistics of an Atom Laser \citep{Ottl:2005}
+= Beam quality of a nonideal atom laser: \citep{Riou:2006uq} --- definition and experimental tests.  Compare with \citep{Kohl:2005fk} --- Aspect group.
+First demonstration of continuous Raman outcoupling \citep{Robins:2006fk}
+An atom laser can be guided in a horizontal waveguide \citep{Guerin:2006mz}
+Bragg diffraction of an atom laser by an optical standing wave \citep{Wu:2006fj}
+It is claimed that gravitational wave detectors based on matter-wave interferometers are no better than laser interferometers \citep{Roura:2006}.
+Semiclassical limits to the linewidth: \citep{Johnsson:2007}
+Multimode quantum limits to the linewidth: \citep{Johnsson:2007a}
+Generating quadrature squeezing in an atom laser through self-interaction: \citep{Johnsson:2007b}
+Comparison of multistate and two-state atom laser output couplers \citep{Dugue:2007fk}
+Observation of transverse interference fringes: \citep{Dall:2007}
+Coherent splitting of an atom laser beam: \citep{Dugue:2008}
+= Approaching the Heisenberg limit to the quality of the transverse atom laser profile \citep{Jeppesen:2008}
+Theoretical tools for atom laser beam propagation: \citep{Riou:2008}
+Probing a BEC using an atom laser \citep{Doring:2008}
+Quasi-monomode guided atom laser \citep{Couvert:2008}
+Two-state Raman outcoupler \citep{Debs:2009}
+
 
 Here we discuss atom lasers in general.  We need to discuss spatial profile, and other things to do with (pulsed) atom lasers.
 

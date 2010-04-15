@@ -1,4 +1,4 @@
-\begin{thebibliography}{188}
+\begin{thebibliography}{189}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -397,6 +397,11 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{75}},
   \bibinfo{pages}{043619} (\bibinfo{year}{2007}).
 
+\bibitem[{\citenamefont{Dowling}(1998)}]{Dowling:1998}
+\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Dowling}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{57}},
+  \bibinfo{pages}{4736} (\bibinfo{year}{1998}).
+
 \bibitem[{\citenamefont{Jeffers \emph{et~al.}}(2000)\citenamefont{Jeffers,
   Horak, Barnett, and Radmore}}]{Jeffers:2000rr}
 \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Jeffers}},
@@ -513,6 +518,12 @@
   \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{96}},
   \bibinfo{pages}{133601} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Saleh and Teich}(1991)}]{SalehTeich}
+\bibinfo{author}{\bibfnamefont{B.~E.~A.} \bibnamefont{Saleh}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~C.} \bibnamefont{Teich}},
+  \emph{\bibinfo{title}{{Fundamentals of Photonics}}}
+  (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1991}).
 
 \bibitem[{\citenamefont{Schawlow and Townes}(1958)}]{Schawlow:1958}
 \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Schawlow}} \bibnamefont{and}
@@ -943,11 +954,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{79}},
   \bibinfo{pages}{011601(R)} (\bibinfo{year}{2009}).
-
-\bibitem[{\citenamefont{Dowling}(1998)}]{Dowling:1998}
-\bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Dowling}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{57}},
-  \bibinfo{pages}{4736} (\bibinfo{year}{1998}).
 
 \bibitem[{\citenamefont{Reid and Drummond}(1988)}]{Reid:1988}
 \bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{Reid}} \bibnamefont{and}

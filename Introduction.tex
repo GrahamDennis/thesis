@@ -57,9 +57,9 @@ Here goes the motivation.
 
 Steal everything that we can from papers.
 
-\section{Lasers and Atom lasers}
+\section{Photon lasers and Atom lasers}
 
-The basic features necessary of a continuous atom laser are analogous to the features of a continuous optical laser: a resonant, a lasing mode, an outcoupling process, and a Bose-stimulated pumping mechanism (see \figureref{Introduction:LaserAtomLaserComparison}).  The first three of these features are well understood for an atom laser; experimentally realising the fourth, the pumping mechanism, has presented the greatest challenge.
+The basic features necessary of a continuous atom laser are analogous to the features of a continuous photon laser: a resonant, a lasing mode, an outcoupling process, and a Bose-stimulated pumping mechanism (see \figureref{Introduction:LaserAtomLaserComparison}).  The first three of these features are well understood for an atom laser; experimentally realising the fourth, the pumping mechanism, has presented the greatest challenge.
 
 \begin{figure}
     \centering
@@ -72,7 +72,7 @@ The basic features necessary of a continuous atom laser are analogous to the fea
 
 \subsection{The resonator}
 
-In an optical laser, the resonator is typically a cavity formed between two (or more) mirrors trapping the photons with a region of space; the optical mode trapped within the resonator is the lasing mode.  For atom laser, the resonator is an `atom trap', either an optical trap using the ac Stark shift to trap the atoms in a region of high optical intensity, or a magnetic trap using the Zeeman shift to selectively trap certain magnetic hyperfine states near a local minimum of the magnetic field.
+In a photon laser, the resonator is typically a cavity formed between two (or more) mirrors trapping the photons with a region of space; the optical mode trapped within the resonator is the lasing mode.  For atom laser, the resonator is an `atom trap', either an optical trap using the ac Stark shift to trap the atoms in a region of high optical intensity, or a magnetic trap using the Zeeman shift to selectively trap certain magnetic hyperfine states near a local minimum of the magnetic field.
 
 \subsection{The lasing mode}
 
@@ -85,7 +85,7 @@ In an optical laser, the resonator is typically a cavity formed between two (or 
     }
 \end{figure}
 
-The necessary property for the lasing mode of a laser --- be it optical or atomic --- is that it have an occupation much greater than one \citep{Wiseman:1997ba}.  For photons, such a highly-degenerate mode was first achieved with the development of the optical laser itself \citep{Maiman:1960,Javan:1961}; a photon condensate cannot exist in equilibrium as total photon number is not conserved \citep{Muller:1986,Ketterle:1999fk}.  Total atom number is, however, conserved and Bose-Einstein condensation occurs below a critical temperature \citep{PethickSmith}.  Below this critical temperature, a significant fraction of the atoms in the system occupy a single spatial mode; exactly what is required of the lasing mode of an atom laser.
+The necessary property for the lasing mode of a laser --- be it optical or atomic --- is that it have an occupation much greater than one \citep{Wiseman:1997ba}.  For photons, such a highly-degenerate mode was first achieved with the development of the photon laser itself \citep{Maiman:1960,Javan:1961}; a photon condensate cannot exist in equilibrium as total photon number is not conserved \citep{Muller:1986,Ketterle:1999fk}.  Total atom number is, however, conserved and Bose-Einstein condensation occurs below a critical temperature \citep{PethickSmith}.  Below this critical temperature, a significant fraction of the atoms in the system occupy a single spatial mode; exactly what is required of the lasing mode of an atom laser.
 
 The process of Bose-Einstein condensation can be understood in a simplified picture in which the atoms are viewed as wave-packets with an extent of the order of the thermal de Broglie wavelength $\lambda_\text{dB} = (2 \pi \hbar^2 / M k_B T)^{1/2}$, where $M$ is the mass of the atom, $k_B$ is Boltzmann's constant, and $T$ is the temperature of the atoms.  At room temperature, the de Broglie wavelength is sufficiently small ($\sim 5\times\unit[10^{-11}]{m}$ for \nucl{4}{He} at $T=\unit[300]{K}$) that the atoms behave as point-like billiard balls (upper panel of \figureref{Introduction:WhatIsBEC}).  As the temperature decreases, the de Broglie wavelength increases (second panel of \figureref{Introduction:WhatIsBEC}).  As the temperature continues to decrease, the de Broglie wavelength approaches the mean interparticle separation $d$ and the atomic matter waves begin to overlap (third panel of \figureref{Introduction:WhatIsBEC}).  Below this temperature, a Bose-Einstein condensate begins to form, until at $T=0$, all atoms are in the condensate (lower panel of \figureref{Introduction:WhatIsBEC}).  Conservation of total number is necessary for BEC, as it is because of this that the interparticle separation $d$ remains constant as temperature is decreased (in a box of constant volume); for photons, as the temperature is decreased the total number of photons in the system decreases, increasing the mean interparticle separation $d$ faster than the photon wavelength increases.  Hence photon condensation cannot occur in equilibrium.
 
@@ -105,15 +105,15 @@ The goal of atom optics is to use the fundamental differences between atoms and 
 
 \subsection{The outcoupling process}
 
-Outcoupling light from the lasing mode in an optical laser is achieved through making one of the cavity mirrors partially transmissive.  The emitted light is the output mode of the optical laser.  For atom lasers, an analogous technique can be used in optical traps by lowering the depth of the trap until some atoms can tunnel out of the trap with the assistance of gravity.  In magnetic traps, electromagnetic radiation is applied to transfer the atoms (either directly with radio-frequency radiation \citep{Mewes:1997,Bloch:1999mi}, or indirectly via a multi-photon Raman transition \citep{Moy:1997,Hagley:1999dz,Robins:2006fk}) into a magnetically-insensitive state in which they fall freely under gravity.  These outcoupled atoms form the atom laser beam.
+The outcoupling of light from the lasing mode of a photon laser is achieved by making one of the cavity mirrors partially transmissive.  The emitted light is the output mode of the photon laser.  For atom lasers, an analogous technique can be used in optical traps by lowering the depth of the trap until some atoms can tunnel out of the trap with the assistance of gravity.  In magnetic traps, electromagnetic radiation is applied to transfer the atoms (either directly with radio-frequency radiation \citep{Mewes:1997,Bloch:1999mi}, or indirectly via a multi-photon Raman transition \citep{Moy:1997,Hagley:1999dz,Robins:2006fk}) into a magnetically-insensitive state in which they fall freely under gravity.  These outcoupled atoms form the atom laser beam.
 
-Contemporary atom optics experiments necessarily operate in pulsed mode.  Without a pumping mechanism, the atom laser beam is limited by the size of the condensate; once all of the atoms in the BEC have been outcoupled, the atom laser beam stops.  This places a fundamental limit on the linewidth (velocity-spread) of the atomic pulse produced: the Fourier limit, proportional to the inverse of the outcoupling time \citep{Johnsson:2007}.  This limit can be made arbitrarily small (until the energy uncertainty in the BEC due to interatomic scattering becomes significant \cite{Johnsson:2007a}) at the expense of an arbitrarily low atom flux.  Practically however, this trade-off cannot be made because the signal-to-noise ratio for atom laser experiments depends critically on the atomic flux.  The only way to achieve a high-flux atom laser with a narrow linewidth is with a continuous pumping process, which has yet to be achieved experimentally. 
+Contemporary atom optics experiments operate in pulsed mode.  Without a pumping mechanism, the atom laser beam is limited by the size of the condensate.  Once all of the atoms in the BEC have been outcoupled, the atom laser beam stops.  This places a fundamental limit on the linewidth (related to the longitudinal velocity-spread) of the atomic pulse produced: the Fourier limit, proportional to the inverse of the outcoupling time \citep{Johnsson:2007}.  This limit can be made arbitrarily small (until the energy uncertainty in the BEC due to interatomic scattering becomes significant \cite{Johnsson:2007a}) at the expense of an arbitrarily low atom flux.  Practically however, this trade-off cannot be made because the signal-to-noise ratio for atom laser experiments depends critically on the atomic flux \citep{Dowling:1998}.  The only way to achieve a high-flux atom laser with a narrow linewidth is with a continuous pumping process, which has yet to be achieved experimentally. 
 
-The outcoupling process for atom lasers displays an interesting range of behaviour.  While intuitively one might expect that increasing the outcoupling strength would continuously increase the atom laser flux, this is only true up to a point.  In the limit of extremely large outcoupling rates, a bound state forms \citep{Jeffers:2000rr}, and the atom laser shuts down \citep{Robins:2004pz}.  The outcoupling process also strongly affects the transverse profile of the atom laser.  Due to the mean-field repulsion the atoms experience as they leave the condensate, significant interference fringes are observed on the atom laser profile \citep{Busch:2002zr,Kohl:2005fk}.  These interference fringes complicate the spatial profile of the atom laser, making any atom interferometry experiment that relies upon separated beam paths more challenging due to the greater sensitivity of the atom laser beams to imperfections in the spatial overlap at detection.  These interference fringes may be reduced by outcoupling from the bottom of the condensate \citep{Riou:2006uq} or by giving the atoms a significant momentum kick as they leave the condensate \citep{Jeppesen:2008}.  The transverse profile of the atom laser is discussed in greater detail in \sectionref{BackgroundTheory:TransverseProfile}.
+The outcoupling process for atom lasers displays a range of behaviour.  While intuitively one might expect that increasing the outcoupling strength would continuously increase the atom laser flux, this is only true up to a point.  In the limit of large outcoupling rates a bound state forms \citep{Jeffers:2000rr}, and the atom laser shuts down \citep{Robins:2004pz}.  
+
+The outcoupling process also strongly affects the transverse profile of the atom laser.  Due to the mean-field repulsion the atoms experience as they leave the condensate, significant interference fringes are observed on the atom laser profile \citep{Busch:2002zr,Kohl:2005fk}.  These interference fringes complicate the spatial profile of the atom laser, making any atom interferometry experiment that relies upon separated beam paths more challenging.  The interference fringes on the transverse profile increase the sensitivity of the experiment to imperfections in the spatial overlap of the previously-separated beams when they are combined for detection.  These interference fringes may be reduced by outcoupling from the bottom of the condensate \citep{Riou:2006uq} or by giving the atoms a significant momentum kick as they leave the condensate \citep{Jeppesen:2008}.  The transverse profile of the atom laser is discussed in greater detail in \sectionref{BackgroundTheory:TransverseProfile}.
 
 Even in the absence of a pumping process, atom lasers can be used for a variety of interesting experiments.  The correlation and counting statistics of an atom laser have been measured \citep{Ottl:2005}, an atom laser has been guided with optical waveguides \citep{Guerin:2006mz}, and a BEC has been probed using an atom laser outcoupled from a separate BEC \citep{Doring:2008}.  There have also been interesting theoretical proposals to produce non-classical atom laser states using the interatomic interaction of the atom laser \citep{Johnsson:2007b}, or by outcoupling with squeezed light \citep{Haine:2005}, and a related proposal to generate controllable atom--light entanglement \citep{Haine:2006}.
-
-FIXME: Insert paragraph leading into the next section.
 
 % Comparison of multistate and two-state atom laser output couplers \citep{Dugue:2007fk}
 % Quasi-monomode guided atom laser \citep{Couvert:2008}
@@ -131,7 +131,157 @@ FIXME: Insert paragraph leading into the next section.
 % Quasi-monomode guided atom laser \citep{Couvert:2008}
 % Two-state Raman outcoupler \citep{Debs:2009}
 
-\subsection{Pumping mechanism}
+\subsection{The pumping mechanism}
+
+\subsubsection{The photon laser}
+
+The pumping mechanism of a laser acts as an amplifier for the lasing mode.  It is what replenishes the losses of the lasing mode due to outcoupling, and any other loss processes.  Without a pumping mechanism, an optical laser is simply a leaky cavity emitting an exponentially-decreasing amount of light.  The linewidth of this emitted light is limited by the linewidth of the optical cavity.  The pumping mechanism for an optical laser not only permits continuous operation of the laser, it also narrows the linewidth of the laser in a process known as \emph{gain-narrowing}.  Gain-narrowing results from the saturation of the pumping process for large signals; no physical amplifier can amplify a signal indefinitely.  
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=8cm]{4LevelOpticalLaserModel}
+    \caption{
+        \label{Introduction:4LevelOpticalLaserModel}
+        FIXME: This is not a caption.  It isn't even a figure.  See Figure 13.2-6 of \citep{SalehTeich}.  Note that all levels have been incremented by 1 to avoid confusion with the vacuum state.
+    }
+\end{figure}
+
+A pumping mechanism contains excitations that can each increase the occupation of the lasing mode by one.  These excitations are replenished at a finite rate, limiting the rate at which the lasing mode may be increased.  For example, in the 4-level photon laser model illustrated in \figureref{Introduction:4LevelOpticalLaserModel}, atoms are pumped from the ground state $\ket{1}$ to the short-lived state $\ket{4}$ at a rate $R$.  The atoms in state $\ket{4}$ may decay into the $\ket{3}$ state, the excited state of the lasing transition.  The occupation of the lasing mode can therefore not be increased at a rate greater than $R$.  Any physical pumping mechanism will also exhibit saturation, and therefore the laser mode will exhibit gain-narrowing.
+
+Another necessary property of the pumping mechanism is that it be irreversible; once the occupation of the lasing mode has been increased, the probability that the process will reverse should be negligible.  This is achieved by coupling to a large number of essentially-empty modes known as a \emph{reservoir}.  In the case of the 4-level photon laser model depicted in \figureref{Introduction:4LevelOpticalLaserModel}, once an atom in the excited state of the lasing transition, $\ket{4}$ has undergone spontaneous emission into the $\ket{2}$ state, it rapidly decays into the ground state $\ket{1}$.  By ensuring that the ground state of the lasing transition $\ket{2}$ decays to the true ground state $\ket{0}$ faster than it can absorb a lasing photon, the pumping process is made irreversible.  The reservoir is comprised of the essentially-empty modes of the $\ket{2}$ level, which are kept empty due to their short lifetime.
+
+Finally, in many circumstances it is desirable that the photon laser have only one lasing mode.  It is possible for a laser to support more than one lasing mode as the resonator may support many different modes, and if the gain bandwidth of the pumping mechanism encompasses more than one of these modes, multiple lasing modes may result.  As the photon--photon interaction is negligible, these lasing modes do not directly interact, and may operate independently.  Multiple-mode operation in a photon laser is naturally suppressed if the pumping process is \emph{homogeneously broadened}.  In homogeneously broadened gain media, every excitation of the pumping mechanism contributes to the gain of the lasing modes in the same way, i.e.\ every excitation has the same gain profile.  If the gain medium is \emph{inhomogeneously broadened}, some classes of pumping excitations will contribute differently to the total gain profile than others.  A classic example of this is Doppler-broadening.  Atoms in a gain medium will have a finite temperature, and their motion affects what frequencies they are resonant with in the laboratory frame due to the Doppler effect.  If the size of this frequency is greater than the natural width of the lasing transition, the saturation of those excitations resonant with one lasing mode may not affect the gain experienced by another lasing mode.  In this case, both lasing modes will experience gain independently, each without saturating the other.  If the pumping process is inhomogeneously broadened, undesirable modes can be removed by increasing their loss in the optical resonator.  This is naturally achieved by the addition of a second, smaller cavity inside the resonator that is only resonant with the desired mode.  If the pumping process is homogeneously broadened however, while multiple modes may initially experience gain, only the mode with the largest net gain will survive as the gain saturates, resulting in single-mode operation.
+
+
+\subsubsection{The atom laser}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm]{ReservoirChoices}
+    \caption{
+        \label{Introduction:ReservoirChoices}
+        FIXME: This is not a caption.
+    }
+\end{figure}
+
+There are two choices of reservoir for the pumping mechanism of an atom laser: the empty modes of the optical field, or the empty modes of the atomic field.  Each choice corresponds to a different class of pumping mechanism.  These two classes are illustrated in \figureref{Introduction:ReservoirChoices}.  In the first, an atom in an excited internal state is brought into resonance with the lasing mode such that it can decay into the lasing mode.  It is Bose-stimulated to do so by the occupation of the atomic lasing mode.  Once the emitted photon leaves the system, this decay is irreversible.  In the second, two atoms scatter into different energy states, one goes into the lasing mode, while the other gains sufficient energy to be removed from the system (for example, due to forced evaporation, the same process used in the formation of BEC).
+
+Now we have a discussion of dispersion relations.  And the feasibility of each of these pumping processes.  This leads into a discussion of `homogeneous broadening' and `inhomogeneous broadening' in the context of atom lasers.
+
+
+is discussed in further detail in \sectionref{OpticalPumping:PumpingMechanism}.
+
+
+There are two choices of reservoir for the pumping mechanism of an atom laser: the empty modes of the atomic field, or the empty modes of the optical field.  Each choice corresponds to a different class of pumping mechanism.  In the first, an atom in an excited internal state is brought near the lasing mode into which it is stimulated to emit.  The emitted photon 
+
+
+
+Irreversibility leads into homogeneous vs inhomogeneous broadening, and then we can discuss single-mode operation?
+
+Each of these choices results in a different 
+
+
+Issues to discuss:
+
+Irreversibility: two choices of reservoir.
+Single-mode operation: a necessity if there are non-zero interatomic interactions.
+Homogeneous broadening vs inhomogeneous broadening: Due to dispersion relations, inhomogeneous broadening is basically the only possibility.  Certainly for optical pumping, and for collisional pumping...
+
+In a continuously pumped atom laser, single-mode operation is not only desirable, it is necessary.  Due to the interatomic interactions, were two lasing modes to exist, they would undergo scattering and bad stuff would happen.
+
+
+In a continuously pumped atom laser, we desire both gain-narrowing and single-mode operation.  Single-mode operation is essential in an atom laser unless the interatomic interactions are made negligible through the use of a Feschbach resonance, as the scattering interactions between two lasing modes would mean that they could not operate independently.  The interactions between the two modes that experience gain would lead to an increase in the linewidth of both of the modes, and general badness.
+
+There are two fundamental reasons making the pumping of an atom laser harder than pumping an optical laser is that the dispersion relation for potential reservoirs is not flat by comparison to the dispersion relation for atoms.  For an optical laser in the homogeneous broadening limit, \emph{all} atoms in the sample can contribute to gain.  Fundamentally this is because independent of what momentum the atom might have, it can still be stimulated to emit a photon into the lasing mode as the decay rates of the excited and/or ground atomic states are greater than any possible energy detuning in this process.  The second fundamental issue affecting atom lasers is that atom number is conserved.  It is therefore inescapable that there will be atoms in a (potentially) non-condensed source mode in the vicinity of the lasing mode.  Unless a Feschbach resonance is used to set the scattering-length of atomic interactions to zero, the atoms in the source mode will disrupt the phase stability of the lasing mode.
+
+In \chapterref{OpticalPumping}, we attempt to solve the first problem by making the momentum distribution of source atoms sufficiently narrow that it can be guaranteed that every atom will be momentum-resonant with the pumping process at some point.  In \chapterref{KineticTheory}, we use atomic modes as the reservoir.  Although their dispersion relation cannot be flat with respect to that of the atoms in the source mode, it is at least far more comparable than that of light (which is used in \chapterref{OpticalPumping}).
+
+Ideally we should pump an atom laser using something with a flat dispersion relation.  One possibility that comes to mind is the phonon.  However it is necessary that the reservoir is essentially a pure vacuum.  Phonons produced in a condensate cannot escape the system unless the system is in contact with other atoms.  If these other atoms are thermal, than it will have its own phonons which will propagate into the condensate.  If the condensate is not in physical contact with anything, then the phonons cannot leave the system: there is no evaporation process for phonons.
+
+
+
+
+The difference between the atom laser and the optical laser is about dispersion relations for the available reservoirs.
+
+
+In an atom laser, we want gain-narrowing and single-mode operation.  Without gain-narrowing, the linewidth is limited by the outcoupling rate in the same way as if the 
+
+
+
+Issues to discuss: linewidth, gain-narrowing, irreversibility, single-mode operation.
+
+
+
+For a pumping mechanism 
+
+
+
+
+
+
+a finite number of excitations which can 
+
+Typically a pumping mechanism is 
+
+the lasing mode cannot be forever amplified
+
+
+Gain-narrowing is caused by the saturation of the pumping process; while small signals can be exponentially amplified by a pumping mechanism
+
+.  The linewidth of this emitted light is limited by the linewidth of the optical cavity.  
+
+
+
+Without a pumping mechanism, an optical laser is simply a leaky cavity emitting an exponentially decreasing amount of light.  The linewidth of this emitted light is limited by the linewidth of the optical cavity.  The pumping mechanism for an optical laser not only permits continuous operation of the laser, but it also narrows the linewidth of the laser in a process known as \emph{gain-narrowing}.  Gain-narrowing is caused by the saturation of the pumping process, and although the pumping process does not need to be saturable for the output of the laser to be coherent (or to have many of the other properties typically associated with a laser \citep{Wiseman:1997ba}), a narrow linewidth is critical for the optical laser in many interferometry applications.  
+
+Need to talk about saturation.  This is important because it affects the results of previous atom laser pumping models.  Classify past atom laser pumping papers.
+
+It is important to note that the laser is a driven steady-state phenomenon, it is not necessarily similar to the BEC, which is a thermal equilibrium phenomenon.  The linewidth properties of each are not necessarily related.  This is most certainly true for the optical laser where the cavity linewidth is much larger than the laser linewidth.  
+
+Nowhere have I given a detailed discussion of coherence.
+
+
+Laser-like scheme for Atomic-Matter Waves \citep{Spreeuw:1995} --- Single mode, effective Homogeneous broadening, it works, optical pumping
+An atom laser based on dark state cooling \citep{Wiseman:1995} --- Single mode, effective Homogeneous broadening, it works, optical pumping
+Theory of an atom laser \citep{Holland:1996mz} --- Single mode, effective Homogeneous broadening, it works, evaporative pumping
+An atom laser based on evaporative cooling \citep{Wiseman:1996} --- Single mode, effective Homogeneous broadening, it work, evaporative pumping
+A model for an atom laser \citep{Olshanii:1996} --- Single mode, effective Homogeneous broadening, optical pumping
+Theory of a coherent atomic-beam generator \citep{Guzman:1996} ---  Atoms trapped in an optical lattice, interacting via the dipole-dipole interaction.  This dipole-dipole interaction is mediated by the optical lattice.  The dipoles are in fact formed by the optical lattice.  Absent the ac Stark shift, the dipole-dipole interaction would be negligible.  The dipole-dipole interaction therefore occurs whenever \emph{detuned} radiation is present.  In the presence of resonant light, it may be that other effects dominate.  Their simulations are effectively single mode, effective Homogeneous broadening, dipole--dipole interaction with evaporative pumping
+Cirac and Lewenstein BAR model \citep{Cirac:1996rr}
+Atom laser based on Raman transitions \citep{Moy:1997} --- Single mode, effective Homogeneous broadening, optical pumping
+Generic model of an atom laser \citep{Kneer:1998fk} --- Multimode GP-based, position-independent loss, Homogeneous broadening.  Rate equation version shows threshold behaviour.  Spatially-independent loss leads to undamped excitations, spatially-dependent loss leads to a damping of these excitations.  These excitations only depend on the initial condition.
+Reducing the Linewidth of an Atom Laser by Feedback \citep{Wiseman:2001zr} --- Single mode model, but demonstrates that some of the linewidth issues can be resolved by feedback
+Atom-laser dynamics \citep{Robins:2001pd} --- Multimode GP-based, 3-body loss, Homogeneous broadening.  Based on the \citep{Kneer:1998fk} model.  Includes outcoupling properly.  This symmetry-breaking term changes the lowest excited mode form the breathing mode to the sloshing (Kohn \citep{Dalfovo:1999ly}) mode. 
+Continuous optical loading of a Bose-Einstein condensate \citep{Santos:2001ve} --- Few mode model, Homogeneous broadening.  Optical pumping.
+More feedback reducing the linewidth \citep{Thomsen:2002xc}.
+Stability of Continuous Pumped Atom Lasers \citep{Haine:2002kp} --- Locally-saturable GP-based model.  Position-independent one- and two-body loss, Raman outcoupling.  Although the parameters were not chosen to operate in the locally-saturated mode.  Instead it was globally-saturated (effectively Homogeneously broadened).  The characteristic diffusion timescale was $\sim \unit[10^{-6}]{s}$.  Hence the problem.  Regardless, in the zero-interaction limit, it is found that higher-energy modes are more spread out and therefore suffer lower two-body loss.  This leads to an instability.  Note that if this was modelled with proper locally-saturable pumping mechanism, not only would the higher modes suffer less loss, they would also experience greater gain, as they can source gain from a larger area.  In the presence of interactions, it may be hoped that there will be suppression of excitations as their mode shape will have changed.  It was demonstrated that increasing the scattering length suppressed excitation of the higher modes.
+
+
+Saturation also contributes to the single-mode operation of optical lasers.  
+
+
+The pumping mechanism for an optical laser not only permits the continuous operation of the laser, but it can also narrow the linewidth of the laser in a process known as \emph{gain-narrowing}.  
+
+Inhomogeneously-broadened gain media also show gain narrowing.
+
+For homogeneously-broadened gain media, this also prevents multimode operation.
+
+Gain-narrowing is caused by the saturation of the pumping process, and although the pumping process does not need to be saturable for the output of the laser to be coherent (or to have any other properties typically associated with a laser \citep{Wiseman:1997ba}), it is a property that increases the utility of atom lasers for 
+
+: The linewidth of the optical cavity is related to the Fourier limit.
+
+
+The pumping mechanism for an optical laser not only permits the continuous operation of the laser, but it can also narrow the linewidth of the laser in a process known as \emph{gain-narrowing}.  Gain-narrowing is caused by the saturation of the pumping process, and although a pumping process does not need to be saturable for the output of a laser to be coherent (or to have any other properties typically associated with a laser \citep{Wiseman:1997ba}), it is a useful property that would be convenient to have for atom lasers.  In particular, it is desirable that an atom laser pumping mechanism be uniformly saturable in the sense that stuff.
+
+
+
+Without a pumping mechanism, an optical laser is simply a leaky cavity emitting an exponentially decreasing amount of light with the same linewidth as the optical resonator.  The pumping mechanism for an optical laser not only permits the continuous operation of the laser, but it can also narrow the linewidth of the laser 
+
+also narrows the linewidth of the laser below the bare cavity linewidth in a process known as \emph{gain-narrowing}.  Gain-narrowing is caused by the saturation of the pumping process, and although a pumping process does not need to be saturable for the output of a laser to be coherent (or to have any other properties typically associated with a laser \cite{Wiseman:1997ba}), it is a useful property that would be convenient to have for atom lasers.
+
+The difference is between homogeneous broadening (gain-narrowing) and inhomogeneous broadening.  In the case of homogeneous broadening, all of the excitations of the pumping process access all of the potential optical modes for pumping. In inhomogeneous broadening, each excitation can only access a range of the potential optical modes; one dominant mode may saturate pumping excitations that may access that mode, but there will exist other pumping modes which are not saturated, and these may excite different modes.  This is a problem that is observed in certain atom laser pumping mechanism with a locally-saturable pumping reservoir.  \citep{SalehTeich}.
+
+
 
 Here we discuss pumping and matter-wave amplification.
 

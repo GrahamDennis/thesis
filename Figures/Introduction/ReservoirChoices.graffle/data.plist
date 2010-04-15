@@ -435,7 +435,7 @@
 			<integer>13</integer>
 			<key>Points</key>
 			<array>
-				<string>{447.17, 153.346}</string>
+				<string>{448.686, 154.32}</string>
 				<string>{410.5, 131}</string>
 			</array>
 			<key>Style</key>
@@ -486,7 +486,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{442.5, 138}, {64, 64}}</string>
+			<string>{{444, 139}, {64, 64}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>ID</key>
@@ -6223,7 +6223,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-04-15 19:21:54 +1000</string>
+	<string>2010-04-15 21:44:06 +1000</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>

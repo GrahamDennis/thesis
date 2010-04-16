@@ -20,7 +20,7 @@ amazing gravity experiments with lasers: GRACE, LIGO, eventually, LISA
 
 they do not interact strongly with themselves or with gravity.  
 
-It is the narrow spectral linewidth, the high spectral intensity, and its large coherence length that give the optical laser such a wide range of applications.  These properties themselves derive from the macroscopic occupation of photons in a single optical mode inside the laser cavity.  With the achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} --- a macroscopic occupation of \emph{atoms} in a single spatial mode --- there has arisen the experimental challenge of producing an atomic analogue of the optical laser: the \emph{atom} laser.  As atoms interact more readily with their environment than photons, atom interferometry has a broad range of applications: to the measurement of electric and magnetic fields in tests of atom and neutron charge neutrality \citep{Arvanitaki:2007}, an application which would be essentially impossible with optical lasers due to the weak photon--photon interaction; to fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}; to the development of gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}, which, while possible using optical lasers, their atomic counterparts are far more compact due to the significantly stronger gravitational interaction.
+It is the narrow spectral linewidth, the high spectral intensity, and its large coherence length that give the optical laser such a wide range of applications.  These properties themselves derive from the macroscopic occupation of photons in a single optical mode inside the laser cavity.  With the achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} --- a macroscopic occupation of \emph{atoms} in a single spatial mode --- there has arisen the experimental challenge of producing an atomic analogue of the optical laser: the \emph{atom} laser.  As atoms interact more readily with their environment than photons, atom interferometry has a broad range of applications: to the measurement of electric and magnetic fields in tests of atom and neutron charge neutrality \citep{Arvanitaki:2008}, an application which would be essentially impossible with optical lasers due to the weak photon--photon interaction; to fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}; to the development of gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}, which, while possible using optical lasers, their atomic counterparts are far more compact due to the significantly stronger gravitational interaction.
 
 more broadly and to the development of more compact sensors.  
 
@@ -39,7 +39,7 @@ The differences between an atom laser and an optical laser derive from the inher
 First cw optical laser \citep{Javan:1961}.
 
 
-The achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} has led to the possibility of creating an analogous source for atoms, which could take advantage of the inherent differences between photons and atoms.  Atoms interact much more readily with their environment, giving atom interferometry applications in fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}, tests of atom and neutron charge neutrality \citep{Arvanitaki:2007}, gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}.  FIXME: How many of these actually use atom lasers, and how many use thermal beams?
+The achievement of Bose-Einstein Condensate (BEC) in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} has led to the possibility of creating an analogous source for atoms, which could take advantage of the inherent differences between photons and atoms.  Atoms interact much more readily with their environment, giving atom interferometry applications in fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}, tests of atom and neutron charge neutrality \citep{Arvanitaki:2008}, gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}.  FIXME: How many of these actually use atom lasers, and how many use thermal beams?
 
 The increased interactivity of atoms over photons is both a blessing and a curse: while it is the source of crap.
 
@@ -160,109 +160,42 @@ Finally, in many circumstances it is desirable that the photon laser have only o
     \includegraphics[width=10cm]{ReservoirChoices}
     \caption{
         \label{Introduction:ReservoirChoices}
-        FIXME: This is not a caption.
+        Classes of pumping mechanism for an atom laser as defined by the reservoir. FIXME: This is not a caption.
     }
 \end{figure}
 
 There are two choices of reservoir for the pumping mechanism of an atom laser: the empty modes of the optical field, or the empty modes of the atomic field.  Each choice corresponds to a different class of pumping mechanism.  These two classes are illustrated in \figureref{Introduction:ReservoirChoices}.  In the first, an atom in an excited internal state is brought into resonance with the lasing mode such that it can decay into the lasing mode.  It is Bose-stimulated to do so by the occupation of the atomic lasing mode.  Once the emitted photon leaves the system, this decay is irreversible.  In the second, two atoms scatter into different energy states, one goes into the lasing mode, while the other gains sufficient energy to be removed from the system (for example, due to forced evaporation, the same process used in the formation of BEC).
 
-Single-mode operation is not simply desirable for an atom laser, it is necessary.  Due to the significant interatomic interactions, multiple lasing modes in an atom laser could not operate independently.  Significant scattering would occur between the lasing modes increasing the linewidth of both, possibly destroying any laser-like qualities in the process.  While the interatomic interactions can be `switched off' with the use of a Feschbach resonance, the loss process are such that the higher energy modes experience \emph{less} loss than the lower modes in this case \citep{Haine:2002kp}.  The question of gain is a separate one.  In \citeauthor{Haine:2002kp}'s model, the gain was mode-independent.  
+Single-mode operation is not simply desirable for an atom laser, it is necessary.  Due to the large interatomic interactions, multiple lasing modes in an atom laser could not operate independently.  Significant scattering would occur between the lasing modes, increasing the linewidth of both, possibly destroying any laser-like qualities in the process.  While the interatomic interactions can be `switched off' with the use of a Feschbach resonance\footnote{FIXME: Missing citation.}, the loss processes are such that higher energy modes experience \emph{less} loss than the lower modes in this case, making the atom laser unstable \citep{Haine:2002kp}.  This instability can be resolved by increasing the interatomic interactions \citep{Haine:2002kp}, adding a position-dependent loss near the edge of the lasing mode \citep{Kneer:1998fk}, and in the case of non-zero interatomic interactions, by increasing the pumping rate \citep{Robins:2001pd}.
 
-Due to the significant atomic scattering interactions, multiple lasing modes in an atom laser could not operate independently.  
+In all of the phenomenological atom laser pumping models discussed in the previous paragraph \citep{Haine:2002kp,Kneer:1998fk,Robins:2001pd}, the gain mechanism was effectively `homogeneously broadened' in the sense that all pumping excitations could contribute equally to the gain of all modes.  This is more difficult to achieve for atom lasers than for photon lasers.  In the case of photon lasers, the dispersion relation (the expression for energy --- or equivalently, frequency --- as a function of wavenumber) for the reservoir is relatively flat by comparison to that of the lasing mode.  This is a useful property, as a greater number of pumping excitations can increase the occupation of the lasing mode if variations in the momentum difference between the pumping excitations and the lasing mode can be compensated for by the reservoir with minimal energy cost.  In the limit of a perfectly flat dispersion relation for the reservoir, any momentum difference between the pumping excitation and the lasing mode can result in gain provided only energy is conserved, and due to the finite lifetime of the pumping excitation, energy need only be conserved to within this lifetime.  As a concrete example, consider the photon laser pumping mechanism illustrated in \figureref{Introduction:4LevelOpticalLaserModel} and the atom laser pumping mechanism illustrated in \figureref{Introduction:ReservoirChoices}(a).  The fundamental difference between these two pumping mechanisms is that for the photon laser, the emitted photon goes into the lasing mode, while for the atom laser, it is the decayed atom that enters the lasing mode.  The decay process of these pumping mechanisms is illustrated in \figureref{Introduction:AtomDecay}.  If a violation of energy conservation is permitted in this process of up to $\pm \Gamma$ where $\Gamma$ is the spontaneous lifetime of the $\ket{e}$ state, excited atoms with a wider range of momenta can contribute gain to the lasing mode in the case of the photon laser than in the case of the atom laser.  Specifically, for the photon laser, the wavenumber of the excited atom in the direction parallel to the lasing mode may vary by
+\begin{align*}
+    \Delta k_{i,\parallel} \approx \frac{2 M \Gamma}{\hbar \abs{\vect{k}_\gamma}},
+\end{align*}
+where $M$ is the mass of the atom.  The wavenumber of the atom in perpendicular directions is unconstrained.  However, for the atom laser, the magnitude of the wavenumber of the excited atom may only vary by (assuming a stationary lasing mode)
+\begin{align*}
+    \Delta \abs{\vect{k}_{i}} \approx \frac{2 \Gamma}{c}.
+\end{align*}
+For the $\lambda = \unit[633]{nm}$ lasing transition of the Helium-Neon gas laser, $\Gamma = \unit[1.4]{MHz}$ \citep[Table~13.2-1]{SalehTeich}, $M_\text{Ne} = 3.3 \times \unit[10^{-26}]{kg}$, giving $\Delta k_{i, \parallel} \sim \unit[10^8]{m\textsuperscript{-1}}$ for the photon laser and $\Delta\abs{\vect{k}_i} \sim \unit[10^{-2}]{m\textsuperscript{-1}}$ for an atom laser.  This 10 orders of magnitude difference significantly constrains the possible momentum width of the pumping excitations for the pumping mechanism to operate in the `homogeneously broadened' limit.  If the momentum width of the pumping excitations is greater than this, gain for modes other than the lasing mode will not be saturated by the lasing mode, and these other modes experiencing gain will increase the linewidth of the atom laser.  
 
- nonlinear scattering interactions between atoms, multiple lasing modes 
+\begin{figure}
+    \centering
+    \includegraphics[width=6cm]{AtomDecay}
+    \caption{
+        \label{Introduction:AtomDecay}
+        Excited state atom in the $\ket{e}$ state with momentum $\hbar \vect{k}_i$ decays into an atom in the ground state $\ket{g}$ with momentum $\hbar \vect{k}_f$, and a photon with momentum $\hbar \vect{k}_\gamma$.  In the photon laser pumping mechanism, the photon is in the lasing mode, while in an atom laser pumping mechanism, the decayed atom is in the lasing mode.  FIXME: This is probably not a caption.
+    }
+\end{figure}
 
+In \chapterref{OpticalPumping}, a pumping mechanism for an atom laser using an optical reservoir is considered.  We attempt to solve the problem of the narrow permissible momentum width of the pumping excitations by making their momentum distribution sufficiently narrow that it can be guaranteed that every atom will be momentum-resonant with the pumping process at some point.  In \chapterref{KineticTheory}, a pumping mechanism using atomic modes as the reservoir is considered.  Although their dispersion relation cannot be considered flat with respect to that of the lasing mode atoms, it is far more so than for photons.  The difficulty with this pumping mechanism is that it is inescapable that thermal atoms will be in the vicinity of the lasing mode.  Scattering between the lasing and thermal atoms will contribute to the collisional broadening of the lasing mode.  Using a Feschbach resonance to cancel these interactions is not an option, as the pumping mechanism itself relies upon interatomic collisions.
 
-
-The dispersion relations (the expression for energy --- or equivalently, frequency --- as a function of wavenumber) of these two reservoirs are such that pumping an atom laser using either is fundamentally more difficult than pumping a photon laser.
-
-
-
-
-
-The dispersion relations of these two reservoirs are such that pumping an atom laser using either is fundamentally more difficult than pumping a photon laser.  In a photon laser, the dispersion relation of its reservoir (the atomic modes) is relatively flat by comparison to that of the lasing mode.  For example, the dispersion curve for 
-
-Whey do we care about dispersion relations?  This needs to be explained.
-
-
-There is a fundamental difficulty associated with pumping an atom laser
-
-
-It is fundamentally more difficult to pump an atom laser using mechanisms
-
-There is a fundamental difficulty in pumping 
-
-
-
-Now we have a discussion of dispersion relations.  And the feasibility of each of these pumping processes.  This leads into a discussion of `homogeneous broadening' and `inhomogeneous broadening' in the context of atom lasers.
-
-
-is discussed in further detail in \sectionref{OpticalPumping:PumpingMechanism}.
-
-
-There are two choices of reservoir for the pumping mechanism of an atom laser: the empty modes of the atomic field, or the empty modes of the optical field.  Each choice corresponds to a different class of pumping mechanism.  In the first, an atom in an excited internal state is brought near the lasing mode into which it is stimulated to emit.  The emitted photon 
-
-
-
-Irreversibility leads into homogeneous vs inhomogeneous broadening, and then we can discuss single-mode operation?
-
-Each of these choices results in a different 
-
+\section{Matter wave amplification}
 
 Issues to discuss:
 
 Irreversibility: two choices of reservoir.
 Single-mode operation: a necessity if there are non-zero interatomic interactions.
 Homogeneous broadening vs inhomogeneous broadening: Due to dispersion relations, inhomogeneous broadening is basically the only possibility.  Certainly for optical pumping, and for collisional pumping...
-
-In a continuously pumped atom laser, single-mode operation is not only desirable, it is necessary.  Due to the interatomic interactions, were two lasing modes to exist, they would undergo scattering and bad stuff would happen.
-
-
-In a continuously pumped atom laser, we desire both gain-narrowing and single-mode operation.  Single-mode operation is essential in an atom laser unless the interatomic interactions are made negligible through the use of a Feschbach resonance, as the scattering interactions between two lasing modes would mean that they could not operate independently.  The interactions between the two modes that experience gain would lead to an increase in the linewidth of both of the modes, and general badness.
-
-There are two fundamental reasons making the pumping of an atom laser harder than pumping an optical laser is that the dispersion relation for potential reservoirs is not flat by comparison to the dispersion relation for atoms.  For an optical laser in the homogeneous broadening limit, \emph{all} atoms in the sample can contribute to gain.  Fundamentally this is because independent of what momentum the atom might have, it can still be stimulated to emit a photon into the lasing mode as the decay rates of the excited and/or ground atomic states are greater than any possible energy detuning in this process.  The second fundamental issue affecting atom lasers is that atom number is conserved.  It is therefore inescapable that there will be atoms in a (potentially) non-condensed source mode in the vicinity of the lasing mode.  Unless a Feschbach resonance is used to set the scattering-length of atomic interactions to zero, the atoms in the source mode will disrupt the phase stability of the lasing mode.
-
-In \chapterref{OpticalPumping}, we attempt to solve the first problem by making the momentum distribution of source atoms sufficiently narrow that it can be guaranteed that every atom will be momentum-resonant with the pumping process at some point.  In \chapterref{KineticTheory}, we use atomic modes as the reservoir.  Although their dispersion relation cannot be flat with respect to that of the atoms in the source mode, it is at least far more comparable than that of light (which is used in \chapterref{OpticalPumping}).
-
-Ideally we should pump an atom laser using something with a flat dispersion relation.  One possibility that comes to mind is the phonon.  However it is necessary that the reservoir is essentially a pure vacuum.  Phonons produced in a condensate cannot escape the system unless the system is in contact with other atoms.  If these other atoms are thermal, than it will have its own phonons which will propagate into the condensate.  If the condensate is not in physical contact with anything, then the phonons cannot leave the system: there is no evaporation process for phonons.
-
-
-
-
-The difference between the atom laser and the optical laser is about dispersion relations for the available reservoirs.
-
-
-In an atom laser, we want gain-narrowing and single-mode operation.  Without gain-narrowing, the linewidth is limited by the outcoupling rate in the same way as if the 
-
-
-
-Issues to discuss: linewidth, gain-narrowing, irreversibility, single-mode operation.
-
-
-
-For a pumping mechanism 
-
-
-
-
-
-
-a finite number of excitations which can 
-
-Typically a pumping mechanism is 
-
-the lasing mode cannot be forever amplified
-
-
-Gain-narrowing is caused by the saturation of the pumping process; while small signals can be exponentially amplified by a pumping mechanism
-
-.  The linewidth of this emitted light is limited by the linewidth of the optical cavity.  
-
-
-
-Without a pumping mechanism, an optical laser is simply a leaky cavity emitting an exponentially decreasing amount of light.  The linewidth of this emitted light is limited by the linewidth of the optical cavity.  The pumping mechanism for an optical laser not only permits continuous operation of the laser, but it also narrows the linewidth of the laser in a process known as \emph{gain-narrowing}.  Gain-narrowing is caused by the saturation of the pumping process, and although the pumping process does not need to be saturable for the output of the laser to be coherent (or to have many of the other properties typically associated with a laser \citep{Wiseman:1997ba}), a narrow linewidth is critical for the optical laser in many interferometry applications.  
-
-Need to talk about saturation.  This is important because it affects the results of previous atom laser pumping models.  Classify past atom laser pumping papers.
 
 It is important to note that the laser is a driven steady-state phenomenon, it is not necessarily similar to the BEC, which is a thermal equilibrium phenomenon.  The linewidth properties of each are not necessarily related.  This is most certainly true for the optical laser where the cavity linewidth is much larger than the laser linewidth.  
 
@@ -277,12 +210,12 @@ A model for an atom laser \citep{Olshanii:1996} --- Single mode, effective Homog
 Theory of a coherent atomic-beam generator \citep{Guzman:1996} ---  Atoms trapped in an optical lattice, interacting via the dipole-dipole interaction.  This dipole-dipole interaction is mediated by the optical lattice.  The dipoles are in fact formed by the optical lattice.  Absent the ac Stark shift, the dipole-dipole interaction would be negligible.  The dipole-dipole interaction therefore occurs whenever \emph{detuned} radiation is present.  In the presence of resonant light, it may be that other effects dominate.  Their simulations are effectively single mode, effective Homogeneous broadening, dipole--dipole interaction with evaporative pumping
 Cirac and Lewenstein BAR model \citep{Cirac:1996rr}
 Atom laser based on Raman transitions \citep{Moy:1997} --- Single mode, effective Homogeneous broadening, optical pumping
-Generic model of an atom laser \citep{Kneer:1998fk} --- Multimode GP-based, position-independent loss, Homogeneous broadening.  Rate equation version shows threshold behaviour.  Spatially-independent loss leads to undamped excitations, spatially-dependent loss leads to a damping of these excitations.  These excitations only depend on the initial condition.
+= Generic model of an atom laser \citep{Kneer:1998fk} --- Multimode GP-based, position-independent loss, Homogeneous broadening.  Rate equation version shows threshold behaviour.  Spatially-independent loss leads to undamped excitations, spatially-dependent loss leads to a damping of these excitations.  These excitations only depend on the initial condition.
 Reducing the Linewidth of an Atom Laser by Feedback \citep{Wiseman:2001zr} --- Single mode model, but demonstrates that some of the linewidth issues can be resolved by feedback
-Atom-laser dynamics \citep{Robins:2001pd} --- Multimode GP-based, 3-body loss, Homogeneous broadening.  Based on the \citep{Kneer:1998fk} model.  Includes outcoupling properly.  This symmetry-breaking term changes the lowest excited mode form the breathing mode to the sloshing (Kohn \citep{Dalfovo:1999ly}) mode. 
+= Atom-laser dynamics \citep{Robins:2001pd} --- Multimode GP-based, 3-body loss, Homogeneous broadening.  Based on the \citep{Kneer:1998fk} model.  Includes outcoupling properly.  This symmetry-breaking term changes the lowest excited mode form the breathing mode to the sloshing (Kohn \citep{Dalfovo:1999ly}) mode. 
 Continuous optical loading of a Bose-Einstein condensate \citep{Santos:2001ve} --- Few mode model, Homogeneous broadening.  Optical pumping.
 More feedback reducing the linewidth \citep{Thomsen:2002xc}.
-Stability of Continuous Pumped Atom Lasers \citep{Haine:2002kp} --- Locally-saturable GP-based model.  Position-independent one- and two-body loss, Raman outcoupling.  Although the parameters were not chosen to operate in the locally-saturated mode.  Instead it was globally-saturated (effectively Homogeneously broadened).  The characteristic diffusion timescale was $\sim \unit[10^{-6}]{s}$.  Hence the problem.  Regardless, in the zero-interaction limit, it is found that higher-energy modes are more spread out and therefore suffer lower two-body loss.  This leads to an instability.  Note that if this was modelled with proper locally-saturable pumping mechanism, not only would the higher modes suffer less loss, they would also experience greater gain, as they can source gain from a larger area.  In the presence of interactions, it may be hoped that there will be suppression of excitations as their mode shape will have changed.  It was demonstrated that increasing the scattering length suppressed excitation of the higher modes.
+= Stability of Continuous Pumped Atom Lasers \citep{Haine:2002kp} --- Locally-saturable GP-based model.  Position-independent one- and two-body loss, Raman outcoupling.  Although the parameters were not chosen to operate in the locally-saturated mode.  Instead it was globally-saturated (effectively Homogeneously broadened).  The characteristic diffusion timescale was $\sim \unit[10^{-6}]{s}$.  Hence the problem.  Regardless, in the zero-interaction limit, it is found that higher-energy modes are more spread out and therefore suffer lower two-body loss.  This leads to an instability.  Note that if this was modelled with proper locally-saturable pumping mechanism, not only would the higher modes suffer less loss, they would also experience greater gain, as they can source gain from a larger area.  In the presence of interactions, it may be hoped that there will be suppression of excitations as their mode shape will have changed.  It was demonstrated that increasing the scattering length suppressed excitation of the higher modes.
 
 
 Saturation also contributes to the single-mode operation of optical lasers.  

@@ -1,4 +1,4 @@
-\begin{thebibliography}{189}
+\begin{thebibliography}{198}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -70,14 +70,15 @@
   \textbf{\bibinfo{volume}{45}}, \bibinfo{pages}{2081} (\bibinfo{year}{1980}).
 
 \bibitem[{\citenamefont{Arvanitaki
-  \emph{et~al.}}(2007)\citenamefont{Arvanitaki, Dimopoulos, Geraci, Hogan, and
-  Kasevich}}]{Arvanitaki:2007}
+  \emph{et~al.}}(2008)\citenamefont{Arvanitaki, Dimopoulos, Geraci, Hogan, and
+  Kasevich}}]{Arvanitaki:2008}
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Arvanitaki}},
   \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
   \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Geraci}},
   \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hogan}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kasevich}}
-  (\bibinfo{year}{2007}), \eprint{arXiv:0711.4636}.
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kasevich}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{120407} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Dimopoulos
   \emph{et~al.}}(2007)\citenamefont{Dimopoulos, Graham, Hogan, and
@@ -87,7 +88,7 @@
   \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Hogan}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
-  \bibinfo{pages}{111102} (\bibinfo{year}{2007}), \eprint{arXiv:gr-qc/0610047}.
+  \bibinfo{pages}{111102} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{Gustavson \emph{et~al.}}(1997)\citenamefont{Gustavson,
   Bouyer, and Kasevich}}]{Gustavson:1997}
@@ -173,7 +174,7 @@
   \bibnamefont{Wieman}}, \bibinfo{organization}{Proc. Int. School of Physics
   Enrico Fermi} (\bibinfo{publisher}{IOS Press}, \bibinfo{address}{Amsterdam},
   \bibinfo{year}{1999}), pp. \bibinfo{pages}{67--176},
-  \urlprefix\url{arXiv:cond-mat/9904034}.
+  \eprint{arXiv:cond-mat/9904034}.
 
 \bibitem[{\citenamefont{Wiseman}(1997)}]{Wiseman:1997ba}
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
@@ -207,8 +208,7 @@
 \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Buluta}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Nori}},
   \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{326}},
-  \bibinfo{pages}{108} (\bibinfo{year}{2009}),
-  \eprint{http://www.sciencemag.org/cgi/reprint/326/5949/108.pdf}.
+  \bibinfo{pages}{108} (\bibinfo{year}{2009}).
 
 \bibitem[{\citenamefont{Fisher \emph{et~al.}}(1989)\citenamefont{Fisher,
   Weichman, Grinstein, and Fisher}}]{Fisher:1989}
@@ -525,6 +525,128 @@
   \emph{\bibinfo{title}{{Fundamentals of Photonics}}}
   (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1991}).
 
+\bibitem[{\citenamefont{{Haine} \emph{et~al.}}(2002)\citenamefont{{Haine},
+  {Hope}, {Robins}, and {Savage}}}]{Haine:2002kp}
+\bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{{Haine}}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{{Hope}}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{{Robins}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~M.}
+  \bibnamefont{{Savage}}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{88}}, \bibinfo{pages}{170403}
+  (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Kneer \emph{et~al.}}(1998)\citenamefont{Kneer, Wong,
+  Vogel, Schleich, and Walls}}]{Kneer:1998fk}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Kneer}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Wong}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Vogel}},
+  \bibinfo{author}{\bibfnamefont{W.~P.} \bibnamefont{Schleich}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~F.} \bibnamefont{Walls}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{58}},
+  \bibinfo{pages}{4841} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Robins \emph{et~al.}}(2001)\citenamefont{Robins,
+  Savage, and Ostrovskaya}}]{Robins:2001pd}
+\bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Robins}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Savage}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.~A.} \bibnamefont{Ostrovskaya}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{64}},
+  \bibinfo{pages}{043605} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Spreeuw \emph{et~al.}}(1995)\citenamefont{Spreeuw,
+  Pfau, Janicke, and Wilkens}}]{Spreeuw:1995}
+\bibinfo{author}{\bibfnamefont{R.~J.~C.} \bibnamefont{Spreeuw}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{32}},
+  \bibinfo{pages}{469} (\bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Wiseman and Collett}(1995)}]{Wiseman:1995}
+\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Collett}},
+  \bibinfo{journal}{Phys. Lett. A} \textbf{\bibinfo{volume}{202}},
+  \bibinfo{pages}{246} (\bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Holland \emph{et~al.}}(1996)\citenamefont{Holland,
+  Burnett, Gardiner, Cirac, and Zoller}}]{Holland:1996mz}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Holland}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burnett}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Gardiner}},
+  \bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zoller}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{54}},
+  \bibinfo{pages}{R1757} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Wiseman \emph{et~al.}}(1996)\citenamefont{Wiseman,
+  Martins, and Walls}}]{Wiseman:1996}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Wiseman}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Martins}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Walls}},
+  \bibinfo{journal}{Quantum and Semiclassical Optics: Journal of the European
+  Optical Society Part B} \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{737}
+  (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1996)\citenamefont{Olshanii,
+  Castin, and Dalibard}}]{Olshanii:1996}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshanii}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, in
+  \emph{\bibinfo{booktitle}{{Proceedings of the 12th International Conference
+  on Laser Spectroscopy}}}, edited by
+  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Inguscio}},
+  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Allegrini}},
+  \bibnamefont{and} \bibinfo{editor}{\bibfnamefont{A.}~\bibnamefont{Lasso}}
+  (\bibinfo{organization}{World Scientific}, \bibinfo{address}{Singapore},
+  \bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Guzm{\'a}n
+  \emph{et~al.}}(1996)\citenamefont{Guzm{\'a}n, Moore, and
+  Meystre}}]{Guzman:1996}
+\bibinfo{author}{\bibfnamefont{A.~M.} \bibnamefont{Guzm{\'a}n}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Moore}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Meystre}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{977} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Cirac and Lewenstein}(1996)}]{Cirac:1996rr}
+\bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{2466} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Wiseman and Thomsen}(2001)}]{Wiseman:2001zr}
+\bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~K.} \bibnamefont{Thomsen}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{86}},
+  \bibinfo{pages}{1143} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Dalfovo \emph{et~al.}}(1999)\citenamefont{Dalfovo,
+  Giorgini, Pitaevskii, and Stringari}}]{Dalfovo:1999ly}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Dalfovo}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Giorgini}},
+  \bibinfo{author}{\bibfnamefont{L.~P.} \bibnamefont{Pitaevskii}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{71}},
+  \bibinfo{pages}{463} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Santos \emph{et~al.}}(2001)\citenamefont{Santos,
+  Floegel, Pfau, and Lewenstein}}]{Santos:2001ve}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Floegel}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{63}},
+  \bibinfo{pages}{063408} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{{Thomsen} and Wiseman}(2002)}]{Thomsen:2002xc}
+\bibinfo{author}{\bibfnamefont{L.~K.} \bibnamefont{{Thomsen}}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.~M.}
+  \bibnamefont{Wiseman}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{063607}
+  (\bibinfo{year}{2002}).
+
 \bibitem[{\citenamefont{Schawlow and Townes}(1958)}]{Schawlow:1958}
 \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Schawlow}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{C.~H.} \bibnamefont{Townes}},
@@ -629,8 +751,7 @@
 \bibitem[{\citenamefont{Kasevich}(2002)}]{Kasevich:2002}
 \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
   \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{298}},
-  \bibinfo{pages}{1363} (\bibinfo{year}{2002}),
-  \eprint{http://www.sciencemag.org/cgi/reprint/298/5597/1363.pdf}.
+  \bibinfo{pages}{1363} (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Dall and Truscott}(2007)}]{Dall:2007a}
 \bibinfo{author}{\bibfnamefont{R.~G.} \bibnamefont{Dall}} \bibnamefont{and}
@@ -1276,8 +1397,7 @@
   \bibinfo{author}{\bibfnamefont{E.~W.} \bibnamefont{Hagley}},
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Deng}},
   \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{286}},
-  \bibinfo{pages}{2309} (\bibinfo{year}{1999}),
-  \eprint{http://www.sciencemag.org/cgi/reprint/286/5448/2309.pdf}.
+  \bibinfo{pages}{2309} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Zobay and Nikolopoulos}(2006)}]{Zobay:2006}
 \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Zobay}} \bibnamefont{and}
@@ -1317,39 +1437,11 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{69}},
   \bibinfo{pages}{041603} (\bibinfo{year}{2004}).
 
-\bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1996)\citenamefont{Olshanii,
-  Castin, and Dalibard}}]{Olshanii:1996}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshanii}},
-  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, in
-  \emph{\bibinfo{booktitle}{{Proceedings of the 12th International Conference
-  on Laser Spectroscopy}}}, edited by
-  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Inguscio}},
-  \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Allegrini}},
-  \bibnamefont{and} \bibinfo{editor}{\bibfnamefont{A.}~\bibnamefont{Lasso}}
-  (\bibinfo{organization}{World Scientific}, \bibinfo{address}{Singapore},
-  \bibinfo{year}{1996}).
-
 \bibitem[{\citenamefont{Janicke and Wilkens}(1996)}]{Janicke:1996}
 \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
   \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{35}},
   \bibinfo{pages}{561} (\bibinfo{year}{1996}).
-
-\bibitem[{\citenamefont{Spreeuw \emph{et~al.}}(1995)\citenamefont{Spreeuw,
-  Pfau, Janicke, and Wilkens}}]{Spreeuw:1995}
-\bibinfo{author}{\bibfnamefont{R.~J.~C.} \bibnamefont{Spreeuw}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}},
-  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Wilkens}},
-  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{32}},
-  \bibinfo{pages}{469} (\bibinfo{year}{1995}).
-
-\bibitem[{\citenamefont{Cirac and Lewenstein}(1996)}]{Cirac:1996rr}
-\bibinfo{author}{\bibfnamefont{J.~I.} \bibnamefont{Cirac}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
-  \bibinfo{pages}{2466} (\bibinfo{year}{1996}).
 
 \bibitem[{\citenamefont{Cirac \emph{et~al.}}(1996)\citenamefont{Cirac,
   Lewenstein, and Zoller}}]{Cirac:1996}
@@ -1401,15 +1493,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~S.} \bibnamefont{Weiss}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{85}},
   \bibinfo{pages}{4249} (\bibinfo{year}{2000}).
-
-\bibitem[{\citenamefont{Santos \emph{et~al.}}(2001)\citenamefont{Santos,
-  Floegel, Pfau, and Lewenstein}}]{Santos:2001ve}
-\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Floegel}},
-  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Pfau}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{63}},
-  \bibinfo{pages}{063408} (\bibinfo{year}{2001}).
 
 \bibitem[{\citenamefont{Santos and Lewenstein}(1999)}]{Santos:1999qf}
 \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}} \bibnamefont{and}
@@ -1478,16 +1561,6 @@
 \bibinfo{author}{\bibfnamefont{D.~A.} \bibnamefont{Steck}},
   \emph{\bibinfo{title}{{Rubidium 87 D Line Data}}} (\bibinfo{year}{2009}),
   \bibinfo{note}{revision 2.1.2}, \urlprefix\url{http://steck.us/alkalidata}.
-
-\bibitem[{\citenamefont{{Haine} \emph{et~al.}}(2002)\citenamefont{{Haine},
-  {Hope}, {Robins}, and {Savage}}}]{Haine:2002kp}
-\bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{{Haine}}},
-  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{{Hope}}},
-  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{{Robins}}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{C.~M.}
-  \bibnamefont{{Savage}}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{88}}, \bibinfo{pages}{170403}
-  (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{{Haine} and {Hope}}(2003)}]{Haine:2003fs}
 \bibinfo{author}{\bibfnamefont{S.~A.} \bibnamefont{{Haine}}} \bibnamefont{and}

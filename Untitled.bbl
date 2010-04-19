@@ -1,4 +1,4 @@
-\begin{thebibliography}{207}
+\begin{thebibliography}{215}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -868,6 +868,82 @@
 \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
   \bibinfo{pages}{3195} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Ruprecht \emph{et~al.}}(1996)\citenamefont{Ruprecht,
+  Edwards, Burnett, and Clark}}]{Ruprecht:1996}
+\bibinfo{author}{\bibfnamefont{P.~A.} \bibnamefont{Ruprecht}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Edwards}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burnett}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Clark}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{54}},
+  \bibinfo{pages}{4178} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Edwards
+  \emph{et~al.}}(1996{\natexlab{a}})\citenamefont{Edwards, Ruprecht, Burnett,
+  Dodd, and Clark}}]{Edwards:1996}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Edwards}},
+  \bibinfo{author}{\bibfnamefont{P.~A.} \bibnamefont{Ruprecht}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burnett}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Dodd}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Clark}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{77}},
+  \bibinfo{pages}{1671} (\bibinfo{year}{1996}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Dalfovo and Stringari}(1996)}]{Dalfovo:1996}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Dalfovo}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{2477} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Edwards
+  \emph{et~al.}}(1996{\natexlab{b}})\citenamefont{Edwards, Dodd, Clark,
+  Ruprecht, and Burnett}}]{Edwards:1996a}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Edwards}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Dodd}},
+  \bibinfo{author}{\bibfnamefont{C.~W.} \bibnamefont{Clark}},
+  \bibinfo{author}{\bibfnamefont{P.~A.} \bibnamefont{Ruprecht}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burnett}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{R1950} (\bibinfo{year}{1996}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Caradoc-Davies
+  \emph{et~al.}}(1999)\citenamefont{Caradoc-Davies, Ballagh, and
+  Burnett}}]{Caradoc-Davies:1999}
+\bibinfo{author}{\bibfnamefont{B.~M.} \bibnamefont{Caradoc-Davies}},
+  \bibinfo{author}{\bibfnamefont{R.~J.} \bibnamefont{Ballagh}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burnett}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{895} (\bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Caradoc-Davies}(2000)}]{Caradoc-Davies:2000qy}
+\bibinfo{author}{\bibfnamefont{B.~M.} \bibnamefont{Caradoc-Davies}},
+  \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of Otago}
+  (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Dalfovo \emph{et~al.}}(1997)\citenamefont{Dalfovo,
+  Minniti, Stringari, and Pitaevskii}}]{Dalfovo:1997lr}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Dalfovo}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Minniti}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Stringari}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Pitaevskii}},
+  \bibinfo{journal}{Phys. Lett. A} \textbf{\bibinfo{volume}{227}},
+  \bibinfo{pages}{259} (\bibinfo{year}{1997}), \eprint{arXiv:cond-mat/9612175}.
+
+\bibitem[{\citenamefont{Burger \emph{et~al.}}(1999)\citenamefont{Burger, Bongs,
+  Dettmer, Ertmer, Sengstock, Sanpera, Shlyapnikov, and
+  Lewenstein}}]{Burger:1999eu}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Burger}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Bongs}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dettmer}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ertmer}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Sengstock}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Sanpera}},
+  \bibinfo{author}{\bibfnamefont{G.~V.} \bibnamefont{Shlyapnikov}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Lewenstein}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{83}},
+  \bibinfo{pages}{5198} (\bibinfo{year}{1999}).
 
 \bibitem[{\citenamefont{Kasevich}(2002)}]{Kasevich:2002}
 \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},

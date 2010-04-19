@@ -140,10 +140,10 @@ The pumping mechanism of a laser acts as an amplifier for the lasing mode.  It i
 
 \begin{figure}
     \centering
-    % \includegraphics[width=8cm]{4LevelOpticalLaserModel}
+    \includegraphics[width=10cm]{4LevelOpticalLaserModel}
     \caption{
         \label{Introduction:4LevelOpticalLaserModel}
-        FIXME: This is not a caption.  It isn't even a figure.  See Figure 13.2-6 of \citep{SalehTeich}.  Note that all levels have been incremented by 1 to avoid confusion with the vacuum state.
+        FIXME: This is not a caption.  Figure shamelessly plagiarised from Figure 13.2-6 of \citep{SalehTeich}.  Note that all levels have been incremented by 1 to avoid confusion with the vacuum state.  Figure needs clarifying, but can stand in for the present.
     }
 \end{figure}
 
@@ -173,11 +173,11 @@ In all of the phenomenological atom laser pumping models discussed in the previo
 \begin{align*}
     \Delta k_{i,\parallel} \approx \frac{2 M \Gamma}{\hbar \abs{\vect{k}_\gamma}},
 \end{align*}
-where $M$ is the mass of the atom.  The wavenumber of the atom in perpendicular directions is unconstrained.  However, for the atom laser, the magnitude of the wavenumber of the excited atom may only vary by (assuming a stationary lasing mode)
+where $M$ is the mass of the atom.  The wavenumber of the atom in perpendicular directions is unconstrained.  However, for the atom laser, the magnitude of the wavenumber of the excited atom may only vary by (assuming a stationary lasing mode of size $d$)
 \begin{align*}
-    \Delta \abs{\vect{k}_{i}} \approx \frac{2 \Gamma}{c}.
+    \Delta \abs{\vect{k}_{i}} \approx \frac{2 \Gamma}{c} + \frac{\pi}{d}.
 \end{align*}
-For the $\lambda = \unit[633]{nm}$ lasing transition of the Helium-Neon gas laser, $\Gamma = \unit[1.4]{MHz}$ \citep[Table~13.2-1]{SalehTeich}, $M_\text{Ne} = 3.3 \times \unit[10^{-26}]{kg}$, giving $\Delta k_{i, \parallel} \sim \unit[10^8]{m\textsuperscript{-1}}$ for the photon laser and $\Delta\abs{\vect{k}_i} \sim \unit[10^{-2}]{m\textsuperscript{-1}}$ for an atom laser.  This 10 orders of magnitude difference significantly constrains the possible momentum width of the pumping excitations for the pumping mechanism to operate in the `homogeneously broadened' limit.  If the momentum width of the pumping excitations is greater than this, gain for modes other than the lasing mode will not be saturated by the lasing mode, and these other modes experiencing gain will increase the linewidth of the atom laser.  
+For the $\lambda = \unit[633]{nm}$ lasing transition of the Helium-Neon gas laser, $\Gamma = \unit[1.4]{MHz}$ \citep[Table~13.2-1]{SalehTeich}, $M_\text{Ne} = 3.3 \times \unit[10^{-26}]{kg}$, giving $\Delta k_{i, \parallel} \sim \unit[10^8]{m\textsuperscript{-1}}$ for the photon laser and $\Delta\abs{\vect{k}_i} \sim \unit[10^{6}]{m\textsuperscript{-1}}$ for an atom laser with a lasing mode of size $d \sim \unit[10]{\micro m}$.  This difference significantly constrains the possible momentum width of the pumping excitations for the pumping mechanism to operate in the `homogeneously broadened' limit.  If the momentum width of the pumping excitations is greater than this, gain for modes other than the lasing mode will not be saturated by the lasing mode, and these other modes experiencing gain will increase the linewidth of the atom laser.  
 
 \begin{figure}
     \centering

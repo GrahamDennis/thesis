@@ -2,7 +2,7 @@
 \label{BackgroundTheory}
 \graphicspath{{Figures/BackgroundTheory/}{Figures/Common/}}
 
-FIXME: This chapter contains results published in ... \citep{Dall:2007} Jeppesen too?
+In this chapter we discuss the theoretical tools and techniques that will be employed in this thesis.  In \sectionref{BackgroundTheory:TransverseProfile}, the results of an application of one of these techniques is discussed.  These results have been published in \citet{Dall:2007}.
 
 \section{Indistinguishability and Bose-Einstein condensation}
 
@@ -192,13 +192,13 @@ The concept of symmetry-breaking in this context is therefore a useful calculati
 
 The concept of spontaneously-broken symmetries is discussed in greater detail elsewhere \citep{Leggett:1991fj,Molmer:1997fr}.  % In principle, if one believed in spontaneous symmetry-breaking then one could use a relative phase standard \citep{Dunningham:1998} to measure the phase difference between successive condensates produced in the same experiment.  In principle, if the experiment is operated identically both times the phase difference between the two condensates should be zero.  In practice, shot-to-shot number fluctuations in experiments exceed that expected due to the poisson distribution.
 
+In the rest of this thesis, the symmetry-breaking assumption will be applied.  It is understood that this is a calculational tool equivalent to assuming the system to be in a state of the form of \eqref{BackgroundTheory:CondensateDensityMatrixCoherentStateMixture}, which preserves the global phase symmetry dictated by total number conservation.
+
 \parasep
 
-FIXME: The following needs writing / rewriting / editing.  Assume I will get around to that.
+The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe a range of phenomenon, including collective excitations of the condensate \citep{Ruprecht:1996,Edwards:1996}, vortex properties and dynamics \citep{Dalfovo:1996,Edwards:1996a,Caradoc-Davies:1999,Caradoc-Davies:2000qy}, expansion of the condensate after trap switch-off \citep{Dalfovo:1997lr}, and soliton dynamics \citep{Burger:1999eu}.  
 
-The Gross-Pitaevskii equation has been a tremendously successful description of Bose-condensed systems, and has been used to successfully describe \dots\footnote{FIXME: Cite stuff.}   The nonlinear term of the GP equation prevents it being solved analytically, however it is tractable to solve numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
-
-In the rest of this thesis, the symmetry-breaking assumption will be applied.  It is understood that this is a calculational tool equivalent to assuming the system to be in a state of the form of \eqref{BackgroundTheory:CondensateDensityMatrixCoherentStateMixture}, which preserves the global phase symmetry dictated by total number conservation.
+The nonlinear term of the Gross-Pitaevskii equation prevents it being solved analytically, however the GP equation is tractable numerically.  The following section describes a limit in which the approximate form of the ground state of the GP equation may be obtained.
 
 \subsection{Thomas-Fermi approximation}
 
@@ -242,7 +242,7 @@ The Thomas-Fermi approximation is useful as a simple description of the condensa
 \subsection{Application: Transverse profile of the atom laser}
 \label{BackgroundTheory:TransverseProfile}
 
-As discussed in \sectionref{Introduction:AtomLaser}\footnote{FIXME: We can expect that the idea of an atom laser has been discussed in the introduction.  Check cross-ref at later date.}, an atom laser is formed by outcoupling from a condensate to produce a directional beam of highly coherent atoms.  These atom lasers show great promise for studies of fundamental physics and in high precision measurements \citep{Kasevich:2002}.  For atom lasers to be applied in this way it will be crucial to develop atom lasers with output modes that are as clean as possible in amplitude and phase, to allow stable mode matching, just as it was crucial for optical lasers.  It is therefore important to understand what influences the transverse profile of an atom laser.  In this section, we demonstrate the application of the Gross-Pitaevskii equation to this problem.  The results of this section have been published in \citet{Dall:2007}.
+As discussed in \sectionref{Introduction:PhotonAndAtomLasers}\footnote{FIXME: We can expect that the idea of an atom laser has been discussed in the introduction.  Check cross-ref at later date.}, an atom laser is formed by outcoupling from a condensate to produce a directional beam of highly coherent atoms.  These atom lasers show great promise for studies of fundamental physics and in high precision measurements \citep{Kasevich:2002}.  For atom lasers to be applied in this way it will be crucial to develop atom lasers with output modes that are as clean as possible in amplitude and phase, to allow stable mode matching, just as it was crucial for optical lasers.  It is therefore important to understand what influences the transverse profile of an atom laser.  In this section, we demonstrate the application of the Gross-Pitaevskii equation to this problem.  The results of this section have been published in \citet{Dall:2007}.
 
 \parasep
 
@@ -315,7 +315,7 @@ Although good agreement is seen between the predictions of the Gross-Pitaevskii 
 
 \section{Loss processes and the master equation}
 
-We are not always interested in the entirety of an interacting system; frequently it is only a small part of that system that is of interest.  For example, in \sectionref{BackgroundTheory:GrossPitaevskiiEquation} we considered a BEC and its environment of the almost empty atomic modes of the vacuum chamber in which it was produced.  The environment is vastly larger than the BEC, both in terms of the number of available atomic modes, and also in terms of the total occupation of those modes.  Condensates containing as many as $10^8$ \nucl{87}{Rb} atoms have been produced, however many more atoms ($\sim 10^{10}$) were initially in the trap before the evaporation process \citep{Streed:2006}.  The remaining atoms that are not part of the condensate in which we are interested comprise the environment.  While the entire system may be described by a many-body wavefunction, much of the information in this wavefunction will be describing the environment.  A description is necessary of the state of the condensate independent of the exact state of the environment.  The density matrix $\hat{\rho}$ provides that description \citep{Scully}.
+We are not always interested in the entirety of an interacting system; frequently it is only a small part of that system that is of interest.  For example, in \sectionref{BackgroundTheory:GrossPitaevskiiEquation} we considered a BEC and its environment of the almost empty atomic modes of the vacuum chamber in which it was produced.  The environment is vastly larger than the BEC, both in terms of the number of available atomic modes, and also in terms of the total occupation of those modes.  Condensates containing as many as $10^8$ \nucl{87}{Rb} atoms have been produced, however many more atoms ($\sim 10^{10}$) were initially in the trap before the evaporation process \citep{Streed:2006}.  The remaining atoms that are not part of the condensate comprise the environment.  While the entire system may be described by a many-body wavefunction, much of the information in this wavefunction will be describing the environment.  A description is necessary of the state of the condensate independent of the exact state of the environment.  The density matrix $\hat{\rho}$ provides that description \citep{Scully}.
 
 As mentioned in \sectionref{BackgroundTheory:GrossPitaevskiiEquation}, a density matrix for a subsystem may be obtained by formally averaging (or tracing) over the degrees of freedom of the environment.  This simpler description fully describes the subsystem when we are restricted to performing measurements on the subsystem of interest.  With this very natural restriction it becomes impossible to distinguish otherwise distinct states of the entire system.  This indistinguishability is not fundamental; by performing measurements on the entire system the states may be distinguished.  The indistinguishability arises only due to our limited knowledge of the subsystem.
 
@@ -323,7 +323,7 @@ Although not part of the subsystem of interest, the environment typically still 
 \begin{align}
     \hat{H}_\text{int} &= \hbar \sum_m \left(\hat{X}_m^\dagger \hat{\Gamma}_m^{\phantom{\dagger}} + \hat{X}_m^{\phantom{\dagger}} \hat{\Gamma}_m^\dagger \right), \label{BackgroundTheory:GeneralSubsystemEnvironmentCoupling}
 \end{align}
-where $\{\hat{X}_m\}$ are a set of subsystem operators, and $\{\hat{\Gamma}_m^\dagger\}$ are a set of environment operators, the equation of motion for the density matrix gains the following term \citep[Chapter 5]{GardinerQN}:
+where $\{\hat{X}_m\}$ are a set of bosonic subsystem annihilation operators, and $\{\hat{\Gamma}_m\}$ are a set of bosonic environment annihilation operators, the equation of motion for the density matrix gains the following term \citep[Chapter 5]{GardinerQN}:
 \begin{align}
     \left.\frac{\partial}{\partial t} \hat{\rho}\right|_\text{int} &= \sum_m K_m \mathcal{D}[\hat{X}_m]\hat{\rho} + \sum_m G_m \mathcal{D}[\hat{X}_m^\dagger]\hat{\rho}, \label{BackgroundTheory:LindbladForm}
 \end{align}
@@ -340,7 +340,7 @@ In the following section the master equation will be used to model the process o
 \subsection{Application: Penning ionisation}
 \label{BackgroundTheory:PenningIonisation}
 
-The primary attraction of creating Bose-Einstein condensates of metastable helium atoms is that their large internal energy ($\unit[20]{eV}$) enables single-atom detection with high spatial (\micro m) and temporal resolution (ns). However, this large internal energy can be released when two metastable helium atoms collide resulting in Penning ionisation (PI),
+The primary attraction of creating Bose-Einstein condensates of metastable helium atoms is that their large internal energy ($\unit[20]{eV}$) enables single-atom detection with high spatial (\micro m) and temporal resolution (ns). However, this large internal energy can be released when two metastable helium atoms collide, resulting in Penning ionisation (PI),
 \begin{align}
     \label{BackgroundTheory:PenningIonisation}
     \text{He}^* + \text{He}^* & \rightarrow \left\{
@@ -375,7 +375,7 @@ In deriving the Gross-Pitaevskii equation, the atomic field $\hat{\Psi}(\vect{x}
 \begin{align}
     \hat{\Psi}(\vect{x}) &= \Psi(\vect{x}) + \delta\hat{\Psi}(\vect{x}),
 \end{align}
-where it was then assumed that the fluctuations operator was `small'.  This is the so-called semiclassical or mean-field approximation which includes single-particle quantum mechanical effects such as interference and barrier-tunnelling.  This approximation neglects some of the more interesting quantum phenomena such as entanglement and squeezing\footnote{FIXME: Citations missing}.  This section discusses some techniques beyond the Gross-Pitaevskii equation that include these quantum statistical effects to varying levels of approximation.  
+where it was then assumed that the fluctuations operator was `small'.  This is the so-called semiclassical or mean-field approximation which includes single-particle quantum mechanical effects such as interference and barrier-tunnelling.  This approximation neglects some of the more interesting quantum phenomena such as entanglement and squeezing \citep{Scully}.  This section discusses some techniques beyond the Gross-Pitaevskii equation that include these quantum statistical effects to varying levels of approximation.  
 
 There are two classes of methods that go beyond semiclassical approximations.  In the first class of methods the state of the system is quite general and an expansion is performed in the evolution of the system, which is truncated at a certain level.  The stochastic phase-space methods are the most common of this class, and are discussed in  \sectionref{BackgroundTheory:StochasticPhaseSpaceMethods}.  In the second class of methods, an expansion is performed in the form of the system's state.  This expansion is truncated at some level, neglecting correlations above a certain order.  Requiring the state of the system to be of a certain form implicitly approximates the evolution of the system as well, however these approximations are of a different kind to those of the first class.  The Bogoliubov-type methods are representative of the second class of methods, and are discussed in \sectionref{BackgroundTheory:BogoliubovMethods}.
 
@@ -387,7 +387,7 @@ There are two classes of methods that go beyond semiclassical approximations.  I
 
 % c-number methods?
 
-Phase-space representations are real-valued functions that are an alternative description of the state of the system fully-equivalent to the density matrix $\hat{\rho}$.  In addition to being useful pictorial representations of the state of a system, these phase-space representations can be used to derive stochastic methods for describing the evolution of the system.
+Phase-space representations are real-valued functions that are an alternative description of the state of the system, fully equivalent to the density matrix $\hat{\rho}$.  In addition to being useful pictorial representations of the state of a system, these phase-space representations can be used to derive stochastic methods for describing the evolution of the system.
 
 There are several phase-space representations, the most common being the P, Q and Wigner distributions.  Each of these represent the state of the system in terms of coherent states.  This is mostly clearly seen for the P-function,
 \begin{align}
@@ -419,7 +419,7 @@ and the Wiener increments $d W_j(t)$ are independent real Gaussian random variab
 \begin{align}
     \overline{d W_i(t) dW_j(t')} = \delta_{i j}\delta(t - t'),
 \end{align}
-where $\overline{\cdot}$ denotes an average over the random variables.  This decomposition is guaranteed when the matrix $\vect{D}(\vect{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{BackgroundTheory:GeneralFokkerPlanckEquation} and \eqref{BackgroundTheory:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
+where $\overline{(\cdot)}$ denotes an average over the random variables.  This decomposition is guaranteed when the matrix $\vect{D}(\vect{\alpha}, t)$ has only positive eigenvalues~\citep{GardinerHSM}, and may be possible when this requirement is loosened to only nonnegative eigenvalues. Note that the sums in \eqref{BackgroundTheory:GeneralFokkerPlanckEquation} and \eqref{BackgroundTheory:GeneralStratonovichSDE} are defined to run over both the complex variables $\alpha_j^{\phantom{*}}$ and their conjugates $\alpha_j^*$.
 
 The unravelling of a Fokker-Planck equation in terms of a stochastic differential equation can be physically interpreted as the macroscopic and microscopic views of the same process. For example, a Fokker-Planck equation can be used to model the probability distribution of positions and velocities of particles in a gas (macroscopic view), and the corresponding stochastic differential equation would describe the path taken by a single particle (microscopic view).  The macroscopic view is useful when it is the distribution of positions and velocities which is of interest, or if it is only a few moments that are of interest, when the equations of motion for those moments form a closed system (such as those describing an ideal gas). Frequently however the equations of motion are not closed with that for each moment depending on a higher-order moment [for example \eqref{BackgroundTheory:ExpectationValueEvolution}], and an assumption must be made to close the system of equations (in the case of \eqref{BackgroundTheory:ExpectationValueEvolution}, that the system remains in a coherent state). 
 
@@ -457,6 +457,7 @@ for evolution driven by a Hamiltonian $\hat{H}$.  The simplification of this exp
         \hat{\rho} \hat{a}^\dagger & \leftrightarrow \left( \alpha^* + \frac{1}{2} \frac{\partial}{\partial \alpha} \right) W(\alpha).
     \end{align}
 \end{subequations}
+These correspondences apply for general density matrix evolution, not only for evolution driven purely by a Hamiltonian (see, for example \sectionref{PenningIonisationAppendix:TW}).
 
 For the anharmonic oscillator Hamiltonian \eqref{BackgroundTheory:AnharmonicOscillator:Hamiltonian}, the evolution equation for the Wigner distribution is
 \begin{align}
@@ -520,9 +521,6 @@ Although the application of the Truncated Wigner method considered in this secti
 
 \subsection{Bogoliubov-type methods}
 \label{BackgroundTheory:BogoliubovMethods}
-
-The expansion is in terms of a gaussian state at the level of Bog, HF, HFB, etc.  If higher-order terms were included, this would not necessarily be the case, however as it is typically used, it is a more restricted version of stuff..  This means that the Wigner function is also Gaussian.  
-
 
 The Bogoliubov-type methods consider the evolution of a truncated expansion of the state of the system.  These methods begin by decomposing the atomic field operator $\hat{\Psi}$ in terms of a classical component $\Psi = \mean{\hat{\Psi}}$ and a fluctuations operator $\delta \hat{\Psi}$,
 \begin{align}

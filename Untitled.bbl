@@ -1,4 +1,4 @@
-\begin{thebibliography}{201}
+\begin{thebibliography}{209}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -127,13 +127,15 @@
   \bibinfo{journal}{Metrologia} \textbf{\bibinfo{volume}{38}},
   \bibinfo{pages}{25} (\bibinfo{year}{2001}).
 
-\bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
-  and Herriott}}]{Javan:1961}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Javan}},
-  \bibinfo{author}{\bibfnamefont{W.~R.} \bibnamefont{Bennett}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.}
-  \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
+\bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2006)\citenamefont{Le~Coq,
+  Retter, Richard, Aspect, and Bouyer}}]{Le-Coq:2006}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Le~Coq}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Retter}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Richard}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
+  \bibinfo{journal}{Applied Physics B: Lasers and Optics}
+  \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{627} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Canuel \emph{et~al.}}(2006)\citenamefont{Canuel, Leduc,
   Holleville, Gauguet, Fils, Virdis, Clairon, Dimarcq, Bord{\'e}, Landragin
@@ -180,6 +182,14 @@
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
   \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
+  and Herriott}}]{Javan:1961}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Javan}},
+  \bibinfo{author}{\bibfnamefont{W.~R.} \bibnamefont{Bennett}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~R.}
+  \bibnamefont{Herriott}}, \bibinfo{journal}{Phys. Rev. Lett.}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{106} (\bibinfo{year}{1961}).
 
 \bibitem[{\citenamefont{M{\"u}ller}(1986)}]{Muller:1986}
 \bibinfo{author}{\bibfnamefont{E.~E.} \bibnamefont{M{\"u}ller}},
@@ -900,16 +910,6 @@
   \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{011602}
   (\bibinfo{year}{2010}).
 
-\bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2006)\citenamefont{Le~Coq,
-  Retter, Richard, Aspect, and Bouyer}}]{Le-Coq:2006}
-\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Le~Coq}},
-  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Retter}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Richard}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
-  \bibinfo{journal}{Applied Physics B: Lasers and Optics}
-  \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{627} (\bibinfo{year}{2006}).
-
 \bibitem[{\citenamefont{Streed \emph{et~al.}}(2006)\citenamefont{Streed,
   Chikkatur, Gustavson, Boyd, Torii, Schneble, Campbell, Pritchard, and
   Ketterle}}]{Streed:2006}
@@ -1148,7 +1148,8 @@
 \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Collecutt}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
   \bibinfo{journal}{Computer Physics Communications}
-  \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}).
+  \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}),
+  \bibinfo{note}{see also \url{http://www.xmds.org}}.
 
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
@@ -1749,5 +1750,74 @@
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{89}},
   \bibinfo{pages}{140402} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{H{\'e}tet \emph{et~al.}}(2008)\citenamefont{H{\'e}tet,
+  Longdell, Alexander, Lam, and Sellars}}]{Hetet:2008}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{H{\'e}tet}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Longdell}},
+  \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Alexander}},
+  \bibinfo{author}{\bibfnamefont{P.~K.} \bibnamefont{Lam}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Sellars}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{023601} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Reichenbach
+  \emph{et~al.}}(2007)\citenamefont{Reichenbach, Mobilia, and
+  Frey}}]{Reichenbach:2007}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Reichenbach}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mobilia}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Frey}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{448}},
+  \bibinfo{pages}{1046} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Corney \emph{et~al.}}(2006)\citenamefont{Corney,
+  Drummond, Heersink, Josse, Leuchs, and Andersen}}]{Corney:2006}
+\bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Corney}},
+  \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Heersink}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Josse}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Leuchs}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.~L.} \bibnamefont{Andersen}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{97}},
+  \bibinfo{pages}{023606} (\bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Hope and Olsen}(2001)}]{Hope:2001a}
+\bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~K.} \bibnamefont{Olsen}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{86}},
+  \bibinfo{pages}{3220} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{W{\"u}ster
+  \emph{et~al.}}(2005)\citenamefont{W{\"u}ster, Hope, and
+  Savage}}]{Wuster:2005}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{W{\"u}ster}},
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~M.} \bibnamefont{Savage}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{71}},
+  \bibinfo{pages}{033604} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Frigo and Johnson}(2005)}]{Frigo:2005}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Frigo}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~G.} \bibnamefont{Johnson}},
+  \bibinfo{journal}{Proceedings of the IEEE} \textbf{\bibinfo{volume}{93}},
+  \bibinfo{pages}{216} (\bibinfo{year}{2005}), \bibinfo{note}{special issue on
+  ``Program Generation, Optimization, and Platform Adaptation''}.
+
+\bibitem[{\citenamefont{Szigeti \emph{et~al.}}(2009)\citenamefont{Szigeti,
+  Hush, Carvalho, and Hope}}]{Szigeti:2009}
+\bibinfo{author}{\bibfnamefont{S.~S.} \bibnamefont{Szigeti}},
+  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Hush}},
+  \bibinfo{author}{\bibfnamefont{A.~R.~R.} \bibnamefont{Carvalho}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{013614} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Hush \emph{et~al.}}(2009)\citenamefont{Hush, Carvalho,
+  and Hope}}]{Hush:2009}
+\bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Hush}},
+  \bibinfo{author}{\bibfnamefont{A.~R.~R.} \bibnamefont{Carvalho}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{013606} (\bibinfo{year}{2009}).
 
 \end{thebibliography}

@@ -437,11 +437,11 @@ Substituting this expression back into the remaining evolution equations gives
         \begin{split}
             i \hbar \frac{\partial}{\partial t} \widetilde{\Psi}_i(\vect{x}) &= \left( -\frac{\hbar^2 \nabla^2}{2M} + V_i(\vect{x}) + U \sum_j \abs{\widetilde{\Psi}_j(\vect{x})}^2 - \hbar \omega_{i} + \hbar \Delta_i \right) \widetilde{\Psi}_i(\vect{x})\\
             &\relphantom{=} - \sum_{\substack{j',n\\ l,m}}  \frac{ \left[\vect{d}_{ij'} \cdot \unitvec{u}^*_{\lambda_n}(\vect{q}_n) \right]\left[\vect{d}_{j'l} \cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma} \widetilde{E}_{+,\vect{q}_n}^*(\vect{x}) \widetilde{E}^{\phantom{*}}_{+, \vect{q}_m}(\vect{x}) \widetilde{\Psi}_{l}(\vect{x}),
-        \end{split}\\
+        \end{split} \label{OpticalPumping:GeneralMultimodeModel:AtomicField}\\
         \begin{split}
             \unitvec{q}_n \cdot \nabla \widetilde{E}_{+, \vect{q}_n}(\vect{x}) &= i \abs{\vect{q}_n} \widetilde{E}_{+, \vect{q}_n}(\vect{x}) \\
             &\relphantom{=} + i \frac{\abs{\vect{q}_n}}{2 \varepsilon_0} \sum_{\substack{\{i,j'\}\in T_n\\ l, m}} \frac{\left[\vect{d}_{ij'}\cdot\unitvec{u}^*_{\lambda_n}(\vect{q}_n)\right] \left[\vect{d}_{j' l}\cdot \unitvec{u}_{\lambda_m}(\vect{q}_m)\right] }{\hbar \Delta_{j'} - \frac{i \hbar}{2}\Gamma}  \widetilde{\Psi}^*_i(\vect{x}) \widetilde{\Psi}_l(\vect{x}) \widetilde{E}_{+, \vect{q}_m}(\vect{x}).
-        \end{split}
+        \end{split} \label{OpticalPumping:GeneralMultimodeModel:OpticalField}
     \end{align}
 \end{subequations}
 This set of equations for the ground state atomic modes and the optical modes they interact with represents the basic multimode model that will be used in the remainder of this chapter.

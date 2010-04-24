@@ -1,4 +1,4 @@
-\begin{thebibliography}{209}
+\begin{thebibliography}{219}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -838,7 +838,7 @@
   \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Pitaevskii}},
   \bibinfo{journal}{Phys. Lett. A} \textbf{\bibinfo{volume}{227}},
-  \bibinfo{pages}{259} (\bibinfo{year}{1997}), \eprint{arXiv:cond-mat/9612175}.
+  \bibinfo{pages}{259} (\bibinfo{year}{1997}).
 
 \bibitem[{\citenamefont{Burger \emph{et~al.}}(1999)\citenamefont{Burger, Bongs,
   Dettmer, Ertmer, Sengstock, Sanpera, Shlyapnikov, and
@@ -1149,7 +1149,7 @@
   \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
   \bibinfo{journal}{Computer Physics Communications}
   \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}),
-  \bibinfo{note}{see also \url{http://www.xmds.org}}.
+  \bibinfo{note}{see also \url{www.xmds.org}}.
 
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
@@ -1796,12 +1796,64 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{71}},
   \bibinfo{pages}{033604} (\bibinfo{year}{2005}).
 
-\bibitem[{\citenamefont{Frigo and Johnson}(2005)}]{Frigo:2005}
-\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Frigo}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.~G.} \bibnamefont{Johnson}},
-  \bibinfo{journal}{Proceedings of the IEEE} \textbf{\bibinfo{volume}{93}},
-  \bibinfo{pages}{216} (\bibinfo{year}{2005}), \bibinfo{note}{special issue on
-  ``Program Generation, Optimization, and Platform Adaptation''}.
+\bibitem[{\citenamefont{Drummond
+  \emph{et~al.}}(2007{\natexlab{a}})\citenamefont{Drummond, Deuar, and
+  Corney}}]{Drummond:2007}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Drummond}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Deuar}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Corney}},
+  \bibinfo{journal}{Optics and Spectroscopy} \textbf{\bibinfo{volume}{103}},
+  \bibinfo{pages}{7} (\bibinfo{year}{2007}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Drummond
+  \emph{et~al.}}(2007{\natexlab{b}})\citenamefont{Drummond, Deuar, Vaughan, and
+  Corney}}]{Drummond:2007a}
+\bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Deuar}},
+  \bibinfo{author}{\bibfnamefont{T.~G.} \bibnamefont{Vaughan}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~F.}
+  \bibnamefont{Corney}}, \bibinfo{journal}{Journal of Modern Optics}
+  \textbf{\bibinfo{volume}{54}}, \bibinfo{pages}{2499 }
+  (\bibinfo{year}{2007}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{G{\'o}ral and Santos}(2002)}]{Goral:2002}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{G{\'o}ral}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Santos}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{66}},
+  \bibinfo{pages}{023613} (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Gawryluk \emph{et~al.}}(2007)\citenamefont{Gawryluk,
+  Brewczyk, Bongs, and Gajda}}]{Gawryluk:2007}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Gawryluk}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Brewczyk}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Bongs}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Gajda}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{99}},
+  \bibinfo{pages}{130401} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Stevenson}(2008)}]{Stevenson:2008}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Stevenson}}, Master's thesis,
+  \bibinfo{school}{The Australian National University} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Drummond and Mortimer}(1991)}]{Drummond:1991}
+\bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{I.~K.} \bibnamefont{Mortimer}},
+  \bibinfo{journal}{Journal of Computational Physics}
+  \textbf{\bibinfo{volume}{93}}, \bibinfo{pages}{144} (\bibinfo{year}{1991}).
+
+\bibitem[{\citenamefont{Werner and Drummond}(1997)}]{Werner:1997}
+\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Werner}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
+  \bibinfo{journal}{Journal of Computational Physics}
+  \textbf{\bibinfo{volume}{132}}, \bibinfo{pages}{312} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Hush \emph{et~al.}}(2009)\citenamefont{Hush, Carvalho,
+  and Hope}}]{Hush:2009}
+\bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Hush}},
+  \bibinfo{author}{\bibfnamefont{A.~R.~R.} \bibnamefont{Carvalho}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{013606} (\bibinfo{year}{2009}).
 
 \bibitem[{\citenamefont{Szigeti \emph{et~al.}}(2009)\citenamefont{Szigeti,
   Hush, Carvalho, and Hope}}]{Szigeti:2009}
@@ -1812,12 +1864,25 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{80}},
   \bibinfo{pages}{013614} (\bibinfo{year}{2009}).
 
-\bibitem[{\citenamefont{Hush \emph{et~al.}}(2009)\citenamefont{Hush, Carvalho,
-  and Hope}}]{Hush:2009}
-\bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Hush}},
-  \bibinfo{author}{\bibfnamefont{A.~R.~R.} \bibnamefont{Carvalho}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Hope}},
-  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{80}},
-  \bibinfo{pages}{013606} (\bibinfo{year}{2009}).
+\bibitem[{\citenamefont{van Rossum}()}]{Python}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{van Rossum}},
+  \emph{\bibinfo{title}{Python programming language}},
+  \urlprefix\url{www.python.org}.
+
+\bibitem[{\citenamefont{Rudd}()}]{CheetahTemplates}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Rudd}},
+  \emph{\bibinfo{title}{{Cheetah --- The Python-Powered Template Engine}}},
+  \urlprefix\url{www.cheetahtemplate.org}.
+
+\bibitem[{\citenamefont{Frigo and Johnson}(2005)}]{Frigo:2005}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Frigo}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~G.} \bibnamefont{Johnson}},
+  \bibinfo{journal}{Proceedings of the IEEE} \textbf{\bibinfo{volume}{93}},
+  \bibinfo{pages}{216} (\bibinfo{year}{2005}), \bibinfo{note}{special issue on
+  ``Program Generation, Optimization, and Platform Adaptation''}.
+
+\bibitem[{\citenamefont{{HDF Group}}()}]{HDF5}
+\bibinfo{author}{\bibnamefont{{HDF Group}}}, \emph{\bibinfo{title}{{HDF5}}},
+  \urlprefix\url{www.hdfgroup.org/HDF5}.
 
 \end{thebibliography}

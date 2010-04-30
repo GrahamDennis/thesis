@@ -1,4 +1,4 @@
-\begin{thebibliography}{219}
+\begin{thebibliography}{220}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -1355,6 +1355,12 @@
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{74}},
   \bibinfo{pages}{013623} (\bibinfo{year}{2006}).
 
+\bibitem[{\citenamefont{Kloeden and Platen}(1992)}]{KloedenPlaten}
+\bibinfo{author}{\bibfnamefont{P.~E.} \bibnamefont{Kloeden}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Platen}},
+  \emph{\bibinfo{title}{{Numerical Solution of Stochastic Differential
+  Equations}}} (\bibinfo{publisher}{Springer}, \bibinfo{year}{1992}).
+
 \bibitem[{\citenamefont{Burrage \emph{et~al.}}(1997)\citenamefont{Burrage,
   Burrage, and Belward}}]{Burrage:1997}
 \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Burrage}},
@@ -1832,7 +1838,7 @@
   \bibinfo{pages}{130401} (\bibinfo{year}{2007}).
 
 \bibitem[{\citenamefont{Stevenson}(2008)}]{Stevenson:2008}
-\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Stevenson}}, Master's thesis,
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Stevenson}}, Honours thesis,
   \bibinfo{school}{The Australian National University} (\bibinfo{year}{2008}).
 
 \bibitem[{\citenamefont{Drummond and Mortimer}(1991)}]{Drummond:1991}

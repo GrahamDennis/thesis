@@ -287,6 +287,9 @@ FUNCTION {bbl.techrep}
 FUNCTION {bbl.mthesis}
 { "Master's thesis" }
 
+FUNCTION {bbl.hthesis}
+{ "Honours thesis"}
+
 FUNCTION {bbl.phdthesis}
 { "Ph.D. thesis" }
 
@@ -1970,6 +1973,19 @@ FUNCTION {mastersthesis}
   format.authors "author" output.check
   author format.key output
   bbl.mthesis format.thesis.type output.nonnull
+  school "school" bibinfo.warn output
+  address "address" bibinfo.check output
+  format.date "year" output.check
+  format.note output
+  format.eprint output
+  fin.entry
+}
+
+FUNCTION {honoursthesis}
+{ output.bibitem
+  format.authors "author" output.check
+  author format.key output
+  bbl.hthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
   format.date "year" output.check

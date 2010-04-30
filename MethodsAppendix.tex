@@ -218,7 +218,7 @@ The loss rate of atoms from the system due to three-body loss is readily obtaine
     \label{MethodsAppendix:ThreeBodyLossNumberLossRate}
 \end{align}
 
-To separate the contributions to \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate} due to the thermal and condensed components, we use an approach similar to that of the Bogoliubov theory discussed in \sectionref{Peaks:ElementaryExcitations}.  We write the annihilation operator $\hat{\Psi}$ in terms of its mean value $\Psi \equiv \mean{\hat{\Psi}}$ and the deviation operator $\delta \hat{\Psi} \equiv \hat{\Psi} - \Psi$ and substitute this into \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate}.  In contrast to \sectionref{Peaks:ElementaryExcitations} in which the zero-temperature limit was considered, the deviation operator defined here represents thermal fluctuations, which cannot be considered to be small.  Higher powers of $\delta\hat{\Psi}$ can therefore not be neglected.  However, thermal fluctuations have no well-defined phase relationship to one another or to the condensate.  Expectation values containing an unequal number of creation and annihilation deviation operators such as $\mean{\delta\hat{\Psi}\delta\hat{\Psi}}$ can therefore be assumed to be zero (cf. \eqref{Peaks:HamiltonianPowerSeriesQuadraticTerm} in which the $\delta\hat{\Psi}^\dagger \delta\hat{\Psi}^\dagger$ and $\delta\hat{\Psi}\delta\hat{\Psi}$ terms were retained as there is a well-defined phase relationship between the quasiparticles and the condensate).
+To separate the contributions to \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate} due to the thermal and condensed components, we use an approach similar to that of the Bogoliubov theory discussed in \sectionref{Peaks:ElementaryExcitations}.  We write the annihilation operator $\hat{\Psi}$ in terms of its mean value $\Psi \equiv \mean{\hat{\Psi}}$ and the fluctuation operator $\delta \hat{\Psi} \equiv \hat{\Psi} - \Psi$ and substitute this into \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate}.  In contrast to \sectionref{Peaks:ElementaryExcitations} in which the zero-temperature limit was considered, the fluctuation operator defined here represents thermal fluctuations, which cannot be considered to be small.  Higher powers of $\delta\hat{\Psi}$ can therefore not be neglected.  However, thermal fluctuations have no well-defined phase relationship to one another or to the condensate.  Expectation values containing an unequal number of creation and annihilation fluctuation operators such as $\mean{\delta\hat{\Psi}\delta\hat{\Psi}}$ can therefore be assumed to be zero (cf. \eqref{Peaks:HamiltonianPowerSeriesQuadraticTerm} in which the $\delta\hat{\Psi}^\dagger \delta\hat{\Psi}^\dagger$ and $\delta\hat{\Psi}\delta\hat{\Psi}$ terms were retained as there is a well-defined phase relationship between the quasiparticles and the condensate).
 
 Performing the substitution described, \eqref{MethodsAppendix:ThreeBodyLossNumberLossRate} becomes
 \begin{align}
@@ -226,7 +226,7 @@ Performing the substitution described, \eqref{MethodsAppendix:ThreeBodyLossNumbe
         \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \vect{r}\, \Big\{[n_c(\vect{r})]^3 + 9 [n_c(\vect{r})]^2 \mean{\delta\hat{\Psi}^\dagger(\vect{r}) \delta\hat{\Psi}(\vect{r})}\\
         &\relphantom{=-L_3 \int d \vect{r}\,\Big\{} + 9 n_c(\vect{r}) \mean{\delta\hat{\Psi}^\dagger(\vect{r})^2 \delta\hat{\Psi}(\vect{r})^2} + \mean{\delta\hat{\Psi}^\dagger(\vect{r})^3 \delta\hat{\Psi}(\vect{r})^3}\Big\},
     \end{split}
-    \label{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDeviationOperators}
+    \label{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfFluctuationOperators}
 \end{align}
 where $n_c(\vect{r}) = \abs{\Psi(\vect{r})}^2$ is the condensate density.
 
@@ -235,7 +235,7 @@ The non-condensate density is given by $n_T(\vect{r}) = \mean{\delta\hat{\Psi}^\
     \mean{\delta\hat{\Psi}^\dagger(\vect{r})^2 \delta\hat{\Psi}(\vect{r})^2} &= 2 [n_T(\vect{r})]^2, \\
     \mean{\delta\hat{\Psi}^\dagger(\vect{r})^3 \delta\hat{\Psi}(\vect{r})^3} &= 6 [n_T(\vect{r})]^3.
 \end{align}
-Substituting these expressions back into \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDeviationOperators} yields
+Substituting these expressions back into \eqref{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfFluctuationOperators} yields
 \begin{align}
     \left.\frac{d N}{dt} \right|_\text{3-body loss} &=  -L_3 \int d \vect{r}\, [n_c(\vect{r})]^3 + 9 [n_c(\vect{r})]^2 n_T(\vect{r}) + 18 n_c(\vect{r}) [n_T(\vect{r})]^2 + 6 [n_T(\vect{r})]^3.
     \label{MethodsAppendix:ThreeBodyLossNumberLossRateInTermsOfDensities}

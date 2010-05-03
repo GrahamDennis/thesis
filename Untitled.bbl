@@ -1,4 +1,4 @@
-\begin{thebibliography}{220}
+\begin{thebibliography}{226}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,68 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Gustavson \emph{et~al.}}(2000)\citenamefont{Gustavson,
+  Landragin, and Kasevich}}]{Gustavson:2000}
+\bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Landragin}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
+  \bibnamefont{Kasevich}}, \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{2385} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{McGuirk \emph{et~al.}}(2002)\citenamefont{McGuirk,
+  Foster, Fixler, Snadden, and Kasevich}}]{McGuirk:2002}
+\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McGuirk}},
+  \bibinfo{author}{\bibfnamefont{G.~T.} \bibnamefont{Foster}},
+  \bibinfo{author}{\bibfnamefont{J.~B.} \bibnamefont{Fixler}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Snadden}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
+  \bibnamefont{Kasevich}}, \bibinfo{journal}{Phys. Rev. A}
+  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{033608}
+  (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Schreiber \emph{et~al.}}(2008)\citenamefont{Schreiber,
+  Wells, and Stedman}}]{Schreiber:2008}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Schreiber}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wells}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Stedman}},
+  \bibinfo{journal}{General Relativity and Gravitation}
+  \textbf{\bibinfo{volume}{40}}, \bibinfo{pages}{935} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Moody and Paik}(1993)}]{Moody:1993}
+\bibinfo{author}{\bibfnamefont{M.~V.} \bibnamefont{Moody}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.~J.} \bibnamefont{Paik}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{70}},
+  \bibinfo{pages}{1195} (\bibinfo{year}{1993}).
+
+\bibitem[{\citenamefont{van Kann \emph{et~al.}}(1994)\citenamefont{van Kann,
+  Buckingham, Edwards, and Matthews}}]{Kann:1994}
+\bibinfo{author}{\bibfnamefont{F.~J.} \bibnamefont{van Kann}},
+  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Buckingham}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Edwards}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Matthews}},
+  \bibinfo{journal}{Physica B: Condensed Matter}
+  \textbf{\bibinfo{volume}{194-196}}, \bibinfo{pages}{61}
+  (\bibinfo{year}{1994}).
+
+\bibitem[{\citenamefont{M{\"u}ller
+  \emph{et~al.}}(2008)\citenamefont{M{\"u}ller, Chiow, Herrmann, Chu, and
+  Chung}}]{Muller:2008}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{M{\"u}ller}},
+  \bibinfo{author}{\bibfnamefont{S.-w.} \bibnamefont{Chiow}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Herrmann}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Chu}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.-Y.} \bibnamefont{Chung}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{031101} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Cronin \emph{et~al.}}(2009)\citenamefont{Cronin,
+  Schmiedmayer, and Pritchard}}]{Cronin:2009}
+\bibinfo{author}{\bibfnamefont{A.~D.} \bibnamefont{Cronin}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schmiedmayer}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~E.}
+  \bibnamefont{Pritchard}}, \bibinfo{journal}{Rev. Mod. Phys.}
+  \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{1051} (\bibinfo{year}{2009}).
 
 \bibitem[{\citenamefont{Maiman}(1960)}]{Maiman:1960}
 \bibinfo{author}{\bibfnamefont{T.~H.} \bibnamefont{Maiman}},
@@ -107,17 +169,6 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
   \bibnamefont{Kasevich}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{971} (\bibinfo{year}{1998}).
-
-\bibitem[{\citenamefont{McGuirk \emph{et~al.}}(2002)\citenamefont{McGuirk,
-  Foster, Fixler, Snadden, and Kasevich}}]{McGuirk:2002}
-\bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McGuirk}},
-  \bibinfo{author}{\bibfnamefont{G.~T.} \bibnamefont{Foster}},
-  \bibinfo{author}{\bibfnamefont{J.~B.} \bibnamefont{Fixler}},
-  \bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Snadden}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
-  \bibnamefont{Kasevich}}, \bibinfo{journal}{Phys. Rev. A}
-  \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{033608}
-  (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{Peters \emph{et~al.}}(2001)\citenamefont{Peters, Chung,
   and Chu}}]{Peters:2001}

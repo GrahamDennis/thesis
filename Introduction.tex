@@ -4,170 +4,33 @@
 
 %Since their development in 1991, atom interferometers have become competitive in the precision measurement of rotations and gravity gradients with short-term sensitivities of $6 \times 10^{-10} (\text{rad}/\text{s})/\sqrt{\text{Hz}}$ \citep{Gustavson:2000} and $4 \times 10^{-10} (g/\text{m})/\sqrt{\text{Hz}}$ \citep{McGuirk:2002} respectively compared to the world-leading sensitivities of $7\times 10^{-11}(\text{rad}/\text{s})/\sqrt{\text{Hz}}$ \citep{Schreiber:2008} and $10^{-11}(g/\text{m})/\sqrt{\text{Hz}}$ \citep{Moody:1993,Kann:1994}.
 
-Atom interferometry is a young and exciting field.  Since their development in 1991, atom interferometers have become competitive for the precision measurement of rotations \citep{McGuirk:2002} and gravity gradients \citep{Gustavson:2000}, with sensitivities within about an order magnitude of the best experiments \citep{Schreiber:2008,Moody:1993,Kann:1994}.  For the absolute measurement of the gravitational field strength, atom interferometry is world-leading \citep{Muller:2008} with sensitivities more than an order of magnitude below that of competing technologies.
+Atom interferometry is a young and exciting field.  Since their development in 1991\footnote{FIXME: Citations.}, atom interferometers have become competitive for the precision measurement of rotations \citep{McGuirk:2002} and gravity gradients \citep{Gustavson:2000}, with sensitivities within about an order magnitude of the best experiments \citep{Schreiber:2008,Moody:1993,Kann:1994}.  For the absolute measurement of the gravitational field strength, atom interferometry is world-leading \citep{Muller:2008} with sensitivities more than an order of magnitude below that of competing technologies.
 
-In comparison to optical interferometry experiments, which typically use a \emph{coherent} optical source, the above atom interferometry experiments are performed with cold \emph{thermal} atomic sources.  The reason for this difference is due to the different dispersion relations (the expression for energy --- or equivalently, frequency --- as a function of wavenumber) of photons and atoms.  While the measured phase difference in the optical interferometry experiments depends on the optical wavelength, in the case of atom interferometry, the observed phase difference is independent of the de Broglie wavelength.  While it is therefore critical that optical interferometers use sources with a narrow range of wavelengths, this is not the case for atom interferometers.
+In comparison to optical interferometry experiments, which typically use \emph{coherent} optical sources such as (photon) lasers, the above atom interferometry experiments are performed with cold \emph{thermal} atomic sources (the optical equivalent would be black-body radiation).  Coherent sources --- which are characterised by a macroscopic occupation of a single quantum state, and typically have a narrow spectral distribution --- are necessary in optical interferometry experiments as the measured phase difference depends on the optical wavelength, while in the case of atom interferometry, the observed phase difference is independent of the de Broglie wavelength.  The reason for this difference is due to the different dispersion relations (the expression for energy --- or equivalently, frequency --- as a function of wavenumber) of photons and atoms.  While it is therefore critical that optical interferometers use sources with a narrow range of wavelengths, this is not the case for atom interferometers.
 
+Coherent atomic sources were developed in 1995 with the achievement of Bose-Einstein Condensation (BEC) in dilute atomic gases \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995}.  Such sources offer several advantages for atom interferometers: a narrower momentum distribution allows better control of systematic uncertainties related to the initial position and velocity; more efficient operation of large-momentum transfer beam splitters, which are highly velocity selective, increasing the interaction time; and quantum degeneracy offers the possibility of increasing sensitivity through the use of squeezed or entangled atomic sources\footnote{FIXME: Citations?}.  Unfortunately, these potential increases in sensitivity are more than offset by the higher shot noise of currently available coherent atomic sources due to their lower fluxes, thus reducing their sensitivity.  To access these potential advantages of coherent atomic sources, in particular the interesting possibilities involving the use of squeezed and entangled atomic sources (which are interesting in their own right for fundamental tests of quantum mechanics), it will be necessary to produce a truly continuous high-flux source of coherent atoms: the pumped atom laser.  
 
+Pulsed (or quasi-continuous) atom lasers have been produced before.  These are sources of highly degenerate coherent atoms outcoupled from a Bose-Einstein condensate.  These coherent atomic sources are limited by the atom number of the source condensate: once the atoms run out, the atom laser stops.  The condensate must be replenished (or pumped) to produce a truly continuous coherent atomic source.  It is this pumping process upon which we focus our attention in this thesis.
 
+% This thesis is primarily motivated at investigating the pumping of an atom laser, but along the way we investigate questions of the beam quality of an atom laser, and interesting effects that occur in outcoupling from a He* condensate.
 
+%10/11 orders of magnitude sensitivity improvement (theoretically).  The same flux cannot be reached.  
 
-That said, coherent sources have narrower momentum distributions, which blah blah
+%Inertial sensors:  Fundamentally, atoms naturally define an inertial frame.  Falling corner cubes are the most precise for gravimeters.
 
-and have the potential for squeezing / entanglement.  The reason coherent sources are not used is a practical one: for current sources, number or flux must be sacrificed to achieve a coherent source.
+%Until the development of the `G' ring-laser gyroscope, the atomic Sagnac interferometer \citep{Gustavson:2000} was the most sensitive gyroscope.  The `G' ring-laser gyroscope increased the enclosed area by a factor of 16 over the previously most-sensitive ring-laser gyroscope, C-II.  Larger gyroscopes have run into significant technical problems due to phase noise.
 
-They can be controlled to a much greater extent. entangled matter wave sources.
+%There are 3 buttons we can push to further the precision of atom interferometers: flux, directionality, and squeezing.  This thesis concentrates on pushing on the `flux' button, which has been shown to be a big win with lasers (and with atom gyroscopes).
 
-Consider motivating entanglement / squeezing.  This thesis is primarily motivated at investigating the pumping of an atom laser, but along the way we investigate questions of the beam quality of an atom laser, and interesting effects that occur in outcoupling from a He* condensate.
+%It is hard to underestimate the effect that the laser has had since its invention in 1960 \citep{Maiman:1960}.  Although initially motivated by pure scientific curiosity, its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  
 
-Atoms have the advantage of their mass, their longer interaction times due to their lower velocities.
+%Laser radiation is distinguished from the light emitted by everyday light sources --- such as light bulbs --- by three main properties, (i) its narrow divergence, (ii) the narrow range of frequencies that are emitted, and (iii) the low intensity noise of the emitted radiation.  Although many applications only make use of the first property, the second property is critical to its use in such applications as laser gyroscopes, gravitational wave detection and fundamental tests of quantum mechanics\footnote{FIXME: Add citations}.  This second property can also be achieved for thermal light through appropriate spectral filtering, however in practice, lasers are a more convenient method for achieving high spectral intensities.  The third property is the true distinguishing property of a laser, however it is only important in specialised applications (e.g.\ gravitational wave detection), in which intensity fluctuations are a significant noise source\footnote{FIXME: In what other circumstances is $g^{(2)}$ important?  It's likely to be important for atom lasers with non-zero interatomic interactions, I suppose.}.
 
+%Quantum mechanics tells us that not only can light behave as a wave, but atoms can too.  This wave nature of atoms is usually indiscernible because the typical wavelength for a thermal atom is many orders of magnitude smaller than the inter-atomic spacing ($\lambda \sim 5 \times\unit[10^{-11}]{m}$ as compared to $d \sim 3 \times\unit[10^{-9}]{m}$).  However, in 1925 Einstein predicted \citep{Einstein:1925} that if a gas of \emph{bosons} (a class of particles which includes many atomic species) was cooled below a critical temperature, a large fraction of the particles would occupy the ground state of the system, forming a coherent wavefunction.  This was achieved in 1995 for dilute atomic gases \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} with the first production of a Bose-Einstein Condensate (BEC), a macroscopic occupation of atoms in a single spatial mode.  As it is the macroscopic occupation of \emph{photons} in a single spatial mode that gives the optical laser many of its properties, with the achievement of BEC it has become possible to consider the creation of an atomic analogue of the optical laser: the \emph{atom} laser.
 
+%An atom laser, while ideally sharing the above properties of its optical cousin, would behave very differently to an optical laser.  While photons interact strongly with matter, they interact only weakly with themselves or with gravity.  While this makes lasers robust to fluctuations in electromagnetic or gravitational fields, they are therefore less sensitive to these fields in interferometry experiments.  Despite this limitation, optical interferometry has been used in several incredible gravitational experiments, including GRACE, LIGO, and Gravity Probe-A \citep{Vessot:1980}.
 
-Somewhere talk about the first BEC
-
-Flux, enclosed area, squeezing.  These are the advantages of optical sources.  To increase the enclosed area for atomic sources, we start needing lower temperature sources, which requires a sacrifice in flux.  We want to solve this last problem.
-
-
-Discuss proposals using coherent atomic sources, and the reasons why they are using them.  The reason is the LMT mirrors/beam splitting, not the squeezing reason.  Squeezing is further away on the horizon.  Heck, it is only recently that they have upgraded LIGO to use a squeezed photon beam.
-
-As thermal atomic sources 
-
-have a higher flux than coherent sources
-
-
-
-
-By comparison to coherent atomic sources, thermal atomic sources have a higher flux, and therefore a lower shot-noise limit.  This is the fundamental limitation to the use of coherent atomic sources in atom interferometry experiments.  There are a number of advantages of coherent atomic sources that make them desirable to use in an atom interferometry experiment, but it is the limited flux that currently preclueds their use.  In this thesis we investigate possible means to rectifying this limitation of coherent atomic sources by creating the atomic eqwuilvalent to the (photon) ;aser:" the \emph{atom} laser."
-
- \emph{coherent} atomic sources, \emph{t}
-
-Now we need to mention what potential advantages \emph{coherent} atomic sources
-
-By comparison to optical interferometry, which uses a \emph{coherent} optical source, leading atom interferometry experiments are performed with cold \emph{thermal} atomic sources.  The reason for this difference is that, due to their different dispersion relations, the measured phase
-
-The reason for this difference is that due to the different dispersion relations, the measured phase depends on the wavelength of photons in optical interferometry, while this is not the case in atomic interferometry.  
-
-atom interferometry 
-
-in that the measured phase-shift is independent of the wavelength of the atoms.  The critical property is something else.  
-
-Errors in the time of flight affect the answer... But if you're applying pulses at a well-defined time...?
-
-
-There are proposals to measure blah x times better than y.
-
-
-
-In comparison to optical interferometry, atom interferometry experiments 
-
-Thermal vs coherent?  Maybe not, at least yet.
-
-
-10/11 orders of magnitude sensitivity improvement (theoretically).  The same flux cannot be reached.  
-
-Points to be made:
-
-
-
-Atoms are a natural choice for the measurement of 
-
-Atoms are a natural choice for measuring properties of inertial systems due to
-
-
-For inertial measurements atoms are 
-
-
-Talk about the advantages of atoms.  We need to lead into BEC and a comparison with the laser.  Ways of doing better.  Pumping.
-
-
-
-
-These leading atom interferometry experiments are performed with cold, \emph{thermal} atomic sources.  By comparison, all leading optical interferometry experiments are performed with (photon) lasers, which are \emph{coherent} optical sources.  Laser radiation is distinguished from the thermal light emitted by everyday light sources --- such as light bulbs --- by three main properties, (i) its narrow divergence, (ii) the narrow range of frequencies that are emitted, and (iii) the low intensity noise of the emitted radiation.  Although man
-
-We immediately go into a discussion of the differences between thermal and coherent sources.
-
-
-Laser radiation is distinguished from the light emitted by everyday light sources --- such as light bulbs --- by three main properties, (i) its narrow divergence, (ii) the narrow range of frequencies that are emitted, and (iii) the low intensity noise of the emitted radiation.  Although many applications only make use of the first property, the second property is critical to its use in such applications as laser gyroscopes, gravitational wave detection and fundamental tests of quantum mechanics\footnote{FIXME: Add citations}.  This second property can also be achieved for thermal light through appropriate spectral filtering, however in practice, lasers are a more convenient method for achieving high spectral intensities.  The third property is the true distinguishing property of a laser, however it is only important in specialised applications (e.g.\ gravitational wave detection), in which intensity fluctuations are a significant noise source\footnote{FIXME: In what other circumstances is $g^{(2)}$ important?  It's likely to be important for atom lasers with non-zero interatomic interactions, I suppose.}.
-
-
-
-
-Exactly where does the analogy to light appear?  
-
-
-These precision-measurement atom interferometry experiments have used cold
-
-
-These [adjective] atom interferometry experiments have used cold, but \emph{thermal}, atomic sources.
-
-
-All of these atom interferometers used cold, but \emph{thermal}, atomic sources.  With the achievement of BEC for dilute atomic gases in 1995 \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995}, a macroscopic occupation of atoms in a single 
-
-we can consider the development of atom interferometers based upon \emph{coherent} atomic sources.
-
-
-
-
-
-All of these measurements were made with the use of cold, but \emph{thermal} sources.  With the achievement of BEC, we can consider the development of atom interferometers based upon \emph{coherent} atomic sources.  With analogy to optics, this is the difference between thermal light and laser light.  The difference between thermal and laser light is blah.  There are three buttons we have pushed on to improve laser-based interferometers over thermal light interferometers.  Flux, low divergence, and squeezing.  
-
-
-
-The path for this section is: atom interferometry is cool, but currently, thermal --- with the achievement of BEC, can we do better with coherent atomic sources?  Comparison to light. Thermal vs laser light.  Comparison is not entirely equivalent as most atom interferometers are white-light interferometers, so, to first-order (in some sense), a narrow longitudinal linewidth doesn't help you that much.  This difference is due to a difference in dispersion relations.  With light we have had three ways of improving sensitivity: flux, divergence, squeezing.  Flux has been a big winner (in what sense?).  Would like to replicate that success with atoms.  For light, high flux is achieved through the pumping of a photon laser.  Would like to do the same for atoms.
-
-Questions to answer:
-There have been a few experiments on cold atom interferometry.  Where is the field at?  By comparison to older tech?  Why pump?  Here we're investigating pushing on one of the buttons (flux), the one which has shown to win big with lasers.  Small field / big potential.
-
-Inertial sensors:  Fundamentally, atoms naturally define an inertial frame.  Falling corner cubes are the most precise for gravimeters.
-
-
-
-Something about Bose-Einstein condensation leading to potentially much better measurements (for certain quantities).  In particular, accelerations.
-
-
-For the precision measurement of the acceleration due to gravity itself, atom interferometry is world-leading.  
-
-Since the development of the first separated beam-path atom interferometers in 1991, atom interferometers have become competitive and, in some cases, world-leading for the precision measurement of a variety of quantities.
-
-in precision measurement.
-
-precision absolute gravimetry, gravity gradiometers and gyroscopes.
-
-
-Since the development of the first separated beam-path atom interferometers in 1991, atom interferometers have become competitive and, in some cases, world-leading in short-term precision for absolute gravity measurement, gravity gradiometers and gyroscopes.
-
-
-
-Atom interferometry is a young field.  The first separated beam-path interferometers were developed in 1991.  Since then, atom interferometers have the greatest short-term sensitivity for absolute gravity measurements \citep{Muller:2008}, and are competitive for gravity gradiometry and gyroscopes.
-
-Until the development of the `G' ring-laser gyroscope, the atomic Sagnac interferometer \citep{Gustavson:2000} was the most sensitive gyroscope.  The `G' ring-laser gyroscope increased the enclosed area by a factor of 16 over the previously most-sensitive ring-laser gyroscope, C-II.  Larger gyroscopes have run into significant technical problems due to phase noise.
-
-``Therefore slow atoms are particularly advantageous for sensing acceleration, but fast atoms (beams) offer competitive sensitivity for gyroscopes.'' \citep{Cronin:2009}
-
-
-There are 3 buttons we can push to further the precision of atom interferometers: flux, directionality, and squeezing.  This thesis concentrates on pushing on the `flux' button, which has been shown to be a big win with lasers (and with atom gyroscopes).
-
-
-
-\hrule
-
-
-It is hard to underestimate the effect that the laser has had since its invention in 1960 \citep{Maiman:1960}.  Although initially motivated by pure scientific curiosity, its unique properties have given it application in an astonishing array of technologies, in addition to its use as a powerful tool in fundamental research.  
-
-Laser radiation is distinguished from the light emitted by everyday light sources --- such as light bulbs --- by three main properties, (i) its narrow divergence, (ii) the narrow range of frequencies that are emitted, and (iii) the low intensity noise of the emitted radiation.  Although many applications only make use of the first property, the second property is critical to its use in such applications as laser gyroscopes, gravitational wave detection and fundamental tests of quantum mechanics\footnote{FIXME: Add citations}.  This second property can also be achieved for thermal light through appropriate spectral filtering, however in practice, lasers are a more convenient method for achieving high spectral intensities.  The third property is the true distinguishing property of a laser, however it is only important in specialised applications (e.g.\ gravitational wave detection), in which intensity fluctuations are a significant noise source\footnote{FIXME: In what other circumstances is $g^{(2)}$ important?  It's likely to be important for atom lasers with non-zero interatomic interactions, I suppose.}.
-
-Quantum mechanics tells us that not only can light behave as a wave, but atoms can too.  This wave nature of atoms is usually indiscernible because the typical wavelength for a thermal atom is many orders of magnitude smaller than the inter-atomic spacing ($\lambda \sim 5 \times\unit[10^{-11}]{m}$ as compared to $d \sim 3 \times\unit[10^{-9}]{m}$).  However, in 1925 Einstein predicted \citep{Einstein:1925} that if a gas of \emph{bosons} (a class of particles which includes many atomic species) was cooled below a critical temperature, a large fraction of the particles would occupy the ground state of the system, forming a coherent wavefunction.  This was achieved in 1995 for dilute atomic gases \citep{Anderson:1995vn,Bradley:1995ys,Davis:1995} with the first production of a Bose-Einstein Condensate (BEC), a macroscopic occupation of atoms in a single spatial mode.  As it is the macroscopic occupation of \emph{photons} in a single spatial mode that gives the optical laser many of its properties, with the achievement of BEC it has become possible to consider the creation of an atomic analogue of the optical laser: the \emph{atom} laser.
-
-An atom laser, while ideally sharing the above properties of its optical cousin, would behave very differently to an optical laser.  While photons interact strongly with matter, they interact only weakly with themselves or with gravity.  While this makes lasers robust to fluctuations in electromagnetic or gravitational fields, they are therefore less sensitive to these fields in interferometry experiments.  Despite this limitation, optical interferometry has been used in several incredible gravitational experiments, including GRACE, LIGO, and Gravity Probe-A \citep{Vessot:1980}.
-
-As atoms interact more readily with their environment than photons, atom interferometry has a broad range of applications: to the measurement of electric and magnetic fields in tests of atom and neutron charge neutrality \citep{Arvanitaki:2008}, an application which would be essentially impossible with optical lasers due to the weak photon--photon interaction; to fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}; to the development of gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}, which, while possible using optical lasers, their atomic counterparts are far more compact due to the significantly stronger gravitational interaction.
-
-Discussion of cold thermal atom interferometry, and how this can be improved through the use of atom lasers.  In particular, space-based applications where the interrogation time is larger \citep{Le-Coq:2006}, therefore we need a greater control over the velocity distribution, and therefore $g^{(1)}$.
-
-Rotation sensing using cold thermal atom clouds: \citep{Canuel:2006}, measuring Newton's constant $G$: \citep{Lamporesi:2008}
-
-FIXME: The basic plan for this section: lasers are cool, now that we have BEC, wouldn't it be cool to have an atom laser.  Optical lasers have great application to interferometry, atoms behave differently and have advantages and disadvantages for interferometry applications.  In certain circumstances, we will need atom-laser based matter-wave interferometry, not just thermal atom interferometry.  Fundamentally, this is about the degree of control.  In the far future, if we want entangled matter-wave sources, we have better prospects using a condensed source like an atom laser.
+%As atoms interact more readily with their environment than photons, atom interferometry has a broad range of applications: to the measurement of electric and magnetic fields in tests of atom and neutron charge neutrality \citep{Arvanitaki:2008}, an application which would be essentially impossible with optical lasers due to the weak photon--photon interaction; to fundamental tests of predictions of General Relativity \citep{Dimopoulos:2007uq}; to the development of gyroscopes \citep{Gustavson:1997}, gradiometers \citep{Snadden:1998,McGuirk:2002} and gravimeters \citep{Peters:2001}, which, while possible using optical lasers, their atomic counterparts are far more compact due to the significantly stronger gravitational interaction.
 
 \section{Photon lasers and Atom lasers}
 \label{Introduction:PhotonAndAtomLasers}

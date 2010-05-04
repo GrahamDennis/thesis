@@ -1,4 +1,4 @@
-\begin{thebibliography}{226}
+\begin{thebibliography}{217}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -12,14 +12,6 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{\citenamefont{Gustavson \emph{et~al.}}(2000)\citenamefont{Gustavson,
-  Landragin, and Kasevich}}]{Gustavson:2000}
-\bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Landragin}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
-  \bibnamefont{Kasevich}}, \bibinfo{journal}{Classical and Quantum Gravity}
-  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{2385} (\bibinfo{year}{2000}).
-
 \bibitem[{\citenamefont{McGuirk \emph{et~al.}}(2002)\citenamefont{McGuirk,
   Foster, Fixler, Snadden, and Kasevich}}]{McGuirk:2002}
 \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McGuirk}},
@@ -30,6 +22,14 @@
   \bibnamefont{Kasevich}}, \bibinfo{journal}{Phys. Rev. A}
   \textbf{\bibinfo{volume}{65}}, \bibinfo{pages}{033608}
   (\bibinfo{year}{2002}).
+
+\bibitem[{\citenamefont{Gustavson \emph{et~al.}}(2000)\citenamefont{Gustavson,
+  Landragin, and Kasevich}}]{Gustavson:2000}
+\bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Landragin}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
+  \bibnamefont{Kasevich}}, \bibinfo{journal}{Classical and Quantum Gravity}
+  \textbf{\bibinfo{volume}{17}}, \bibinfo{pages}{2385} (\bibinfo{year}{2000}).
 
 \bibitem[{\citenamefont{Schreiber \emph{et~al.}}(2008)\citenamefont{Schreiber,
   Wells, and Stedman}}]{Schreiber:2008}
@@ -66,24 +66,6 @@
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
   \bibinfo{pages}{031101} (\bibinfo{year}{2008}).
 
-\bibitem[{\citenamefont{Cronin \emph{et~al.}}(2009)\citenamefont{Cronin,
-  Schmiedmayer, and Pritchard}}]{Cronin:2009}
-\bibinfo{author}{\bibfnamefont{A.~D.} \bibnamefont{Cronin}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schmiedmayer}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~E.}
-  \bibnamefont{Pritchard}}, \bibinfo{journal}{Rev. Mod. Phys.}
-  \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{1051} (\bibinfo{year}{2009}).
-
-\bibitem[{\citenamefont{Maiman}(1960)}]{Maiman:1960}
-\bibinfo{author}{\bibfnamefont{T.~H.} \bibnamefont{Maiman}},
-  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{187}},
-  \bibinfo{pages}{493} (\bibinfo{year}{1960}).
-
-\bibitem[{\citenamefont{Einstein}(1925)}]{Einstein:1925}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
-  \bibinfo{journal}{Sitzungsber. Kgl. Preuss. Akad. Wiss}
-  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{3} (\bibinfo{year}{1925}).
-
 \bibitem[{\citenamefont{Anderson \emph{et~al.}}(1995)\citenamefont{Anderson,
   Ensher, Matthews, Wieman, and Cornell}}]{Anderson:1995vn}
 \bibinfo{author}{\bibfnamefont{M.~H.} \bibnamefont{Anderson}},
@@ -115,106 +97,6 @@
   \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{75}},
   \bibinfo{pages}{3969} (\bibinfo{year}{1995}).
 
-\bibitem[{\citenamefont{Vessot \emph{et~al.}}(1980)\citenamefont{Vessot,
-  Levine, Mattison, Blomberg, Hoffman, Nystrom, Farrel, Decher, Eby, Baugher
-  \emph{et~al.}}}]{Vessot:1980}
-\bibinfo{author}{\bibfnamefont{R.~F.~C.} \bibnamefont{Vessot}},
-  \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Levine}},
-  \bibinfo{author}{\bibfnamefont{E.~M.} \bibnamefont{Mattison}},
-  \bibinfo{author}{\bibfnamefont{E.~L.} \bibnamefont{Blomberg}},
-  \bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Hoffman}},
-  \bibinfo{author}{\bibfnamefont{G.~U.} \bibnamefont{Nystrom}},
-  \bibinfo{author}{\bibfnamefont{B.~F.} \bibnamefont{Farrel}},
-  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Decher}},
-  \bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Eby}},
-  \bibinfo{author}{\bibfnamefont{C.~R.} \bibnamefont{Baugher}},
-  \bibnamefont{\emph{et~al.}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{45}}, \bibinfo{pages}{2081} (\bibinfo{year}{1980}).
-
-\bibitem[{\citenamefont{Arvanitaki
-  \emph{et~al.}}(2008)\citenamefont{Arvanitaki, Dimopoulos, Geraci, Hogan, and
-  Kasevich}}]{Arvanitaki:2008}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Arvanitaki}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
-  \bibinfo{author}{\bibfnamefont{A.~A.} \bibnamefont{Geraci}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Hogan}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kasevich}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
-  \bibinfo{pages}{120407} (\bibinfo{year}{2008}).
-
-\bibitem[{\citenamefont{Dimopoulos
-  \emph{et~al.}}(2007)\citenamefont{Dimopoulos, Graham, Hogan, and
-  Kasevich}}]{Dimopoulos:2007uq}
-\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
-  \bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Graham}},
-  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Hogan}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
-  \bibinfo{pages}{111102} (\bibinfo{year}{2007}).
-
-\bibitem[{\citenamefont{Gustavson \emph{et~al.}}(1997)\citenamefont{Gustavson,
-  Bouyer, and Kasevich}}]{Gustavson:1997}
-\bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Gustavson}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{78}},
-  \bibinfo{pages}{2046} (\bibinfo{year}{1997}).
-
-\bibitem[{\citenamefont{Snadden \emph{et~al.}}(1998)\citenamefont{Snadden,
-  McGuirk, Bouyer, Haritos, and Kasevich}}]{Snadden:1998}
-\bibinfo{author}{\bibfnamefont{M.~J.} \bibnamefont{Snadden}},
-  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{McGuirk}},
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
-  \bibinfo{author}{\bibfnamefont{K.~G.} \bibnamefont{Haritos}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.~A.}
-  \bibnamefont{Kasevich}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{971} (\bibinfo{year}{1998}).
-
-\bibitem[{\citenamefont{Peters \emph{et~al.}}(2001)\citenamefont{Peters, Chung,
-  and Chu}}]{Peters:2001}
-\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Peters}},
-  \bibinfo{author}{\bibfnamefont{K.~Y.} \bibnamefont{Chung}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Chu}},
-  \bibinfo{journal}{Metrologia} \textbf{\bibinfo{volume}{38}},
-  \bibinfo{pages}{25} (\bibinfo{year}{2001}).
-
-\bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2006)\citenamefont{Le~Coq,
-  Retter, Richard, Aspect, and Bouyer}}]{Le-Coq:2006}
-\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Le~Coq}},
-  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Retter}},
-  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Richard}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
-  \bibinfo{journal}{Applied Physics B: Lasers and Optics}
-  \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{627} (\bibinfo{year}{2006}).
-
-\bibitem[{\citenamefont{Canuel \emph{et~al.}}(2006)\citenamefont{Canuel, Leduc,
-  Holleville, Gauguet, Fils, Virdis, Clairon, Dimarcq, Bord{\'e}, Landragin
-  \emph{et~al.}}}]{Canuel:2006}
-\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Canuel}},
-  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Leduc}},
-  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Holleville}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Gauguet}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Fils}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Virdis}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Clairon}},
-  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Dimarcq}},
-  \bibinfo{author}{\bibfnamefont{C.~J.} \bibnamefont{Bord{\'e}}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Landragin}},
-  \bibnamefont{\emph{et~al.}}, \bibinfo{journal}{Phys. Rev. Lett.}
-  \textbf{\bibinfo{volume}{97}}, \bibinfo{pages}{010402}
-  (\bibinfo{year}{2006}).
-
-\bibitem[{\citenamefont{Lamporesi \emph{et~al.}}(2008)\citenamefont{Lamporesi,
-  Bertoldi, Cacciapuoti, Prevedelli, and Tino}}]{Lamporesi:2008}
-\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Lamporesi}},
-  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Bertoldi}},
-  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Cacciapuoti}},
-  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Prevedelli}},
-  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Tino}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{100}},
-  \bibinfo{pages}{050801} (\bibinfo{year}{2008}).
-
 \bibitem[{\citenamefont{Ketterle \emph{et~al.}}(1999)\citenamefont{Ketterle,
   Durfee, and Stamper-Kurn}}]{Ketterle:1999fk}
 \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ketterle}},
@@ -233,6 +115,11 @@
 \bibinfo{author}{\bibfnamefont{H.~M.} \bibnamefont{Wiseman}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{56}},
   \bibinfo{pages}{2068} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Maiman}(1960)}]{Maiman:1960}
+\bibinfo{author}{\bibfnamefont{T.~H.} \bibnamefont{Maiman}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{187}},
+  \bibinfo{pages}{493} (\bibinfo{year}{1960}).
 
 \bibitem[{\citenamefont{Javan \emph{et~al.}}(1961)\citenamefont{Javan, Bennett,
   and Herriott}}]{Javan:1961}
@@ -760,6 +647,11 @@
   Mathematical and Physical Sciences} \textbf{\bibinfo{volume}{173}},
   \bibinfo{pages}{211} (\bibinfo{year}{1939}), ISSN \bibinfo{issn}{00804630}.
 
+\bibitem[{\citenamefont{Einstein}(1925)}]{Einstein:1925}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
+  \bibinfo{journal}{Sitzungsber. Kgl. Preuss. Akad. Wiss}
+  \textbf{\bibinfo{volume}{261}}, \bibinfo{pages}{3} (\bibinfo{year}{1925}).
+
 \bibitem[{\citenamefont{Einstein}(1924)}]{Einstein:1924}
 \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Einstein}},
   \bibinfo{journal}{Sitzber. Kgl. Preuss. Akad. Wiss}
@@ -960,6 +852,16 @@
   \bibnamefont{Truscott}}, \bibinfo{journal}{Phys. Rev. A}
   \textbf{\bibinfo{volume}{81}}, \bibinfo{pages}{011602}
   (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Le~Coq \emph{et~al.}}(2006)\citenamefont{Le~Coq,
+  Retter, Richard, Aspect, and Bouyer}}]{Le-Coq:2006}
+\bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Le~Coq}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Retter}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Richard}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Aspect}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Bouyer}},
+  \bibinfo{journal}{Applied Physics B: Lasers and Optics}
+  \textbf{\bibinfo{volume}{84}}, \bibinfo{pages}{627} (\bibinfo{year}{2006}).
 
 \bibitem[{\citenamefont{Streed \emph{et~al.}}(2006)\citenamefont{Streed,
   Chikkatur, Gustavson, Boyd, Torii, Schneble, Campbell, Pritchard, and

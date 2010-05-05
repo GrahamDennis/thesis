@@ -184,7 +184,7 @@
 			<integer>28</integer>
 			<key>Points</key>
 			<array>
-				<string>{310.25, 306.625}</string>
+				<string>{309, 312.5}</string>
 				<string>{421.875, 221.75}</string>
 			</array>
 			<key>Style</key>
@@ -563,7 +563,7 @@
 			<integer>41</integer>
 			<key>Points</key>
 			<array>
-				<string>{701.875, 310.375}</string>
+				<string>{687.333, 294}</string>
 				<string>{588.875, 222.75}</string>
 			</array>
 			<key>Style</key>
@@ -7008,7 +7008,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2010-04-06 22:14:48 +1000</string>
+	<string>2010-05-05 10:37:39 +1000</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>
@@ -7079,7 +7079,7 @@
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{309, 116}, {865, 813}}</string>
+		<string>{{251, 127}, {865, 813}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -7093,15 +7093,15 @@
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{57, 0}, {837, 644}}</string>
+		<string>{{153, 111.5}, {418.5, 322}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>2</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canvas 1</string>
-				<real>1</real>
-				<real>8</real>
+				<real>2</real>
+				<real>1.5</real>
 			</array>
 		</array>
 	</dict>

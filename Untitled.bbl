@@ -1,4 +1,4 @@
-\begin{thebibliography}{232}
+\begin{thebibliography}{233}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -1984,6 +1984,10 @@
   \bibinfo{journal}{Proceedings of the IEEE} \textbf{\bibinfo{volume}{93}},
   \bibinfo{pages}{216} (\bibinfo{year}{2005}), \bibinfo{note}{special issue on
   ``Program Generation, Optimization, and Platform Adaptation''}.
+
+\bibitem[{\citenamefont{{MPI Forum}}()}]{MPI}
+\bibinfo{author}{\bibnamefont{{MPI Forum}}}, \emph{\bibinfo{title}{{Message
+  Passing Interface}}}, \urlprefix\url{www.mpi-forum.org}.
 
 \bibitem[{\citenamefont{{HDF Group}}()}]{HDF5}
 \bibinfo{author}{\bibnamefont{{HDF Group}}}, \emph{\bibinfo{title}{{HDF5}}},

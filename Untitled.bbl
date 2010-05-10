@@ -1,4 +1,4 @@
-\begin{thebibliography}{236}
+\begin{thebibliography}{238}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -12,11 +12,21 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{\citenamefont{Carnal and Mlynek}(1991)}]{Carnal:1991}
-\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Carnal}} \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Mlynek}},
-  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{66}},
-  \bibinfo{pages}{2689} (\bibinfo{year}{1991}).
+\bibitem[{\citenamefont{Missiroli \emph{et~al.}}(1981)\citenamefont{Missiroli,
+  Pozzi, and Valdre}}]{Missiroli:1981}
+\bibinfo{author}{\bibfnamefont{G.~F.} \bibnamefont{Missiroli}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Pozzi}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Valdre}},
+  \bibinfo{journal}{Journal of Physics E: Scientific Instruments}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{649} (\bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Rauch \emph{et~al.}}(1974)\citenamefont{Rauch, Treimer,
+  and Bonse}}]{Rauch:1974}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Rauch}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Treimer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Bonse}},
+  \bibinfo{journal}{Physics Letters A} \textbf{\bibinfo{volume}{47}},
+  \bibinfo{pages}{369} (\bibinfo{year}{1974}).
 
 \bibitem[{\citenamefont{Keith \emph{et~al.}}(1991)\citenamefont{Keith, Ekstrom,
   Turchette, and Pritchard}}]{Keith:1991}
@@ -26,6 +36,12 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~E.}
   \bibnamefont{Pritchard}}, \bibinfo{journal}{Phys. Rev. Lett.}
   \textbf{\bibinfo{volume}{66}}, \bibinfo{pages}{2693} (\bibinfo{year}{1991}).
+
+\bibitem[{\citenamefont{Carnal and Mlynek}(1991)}]{Carnal:1991}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Carnal}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Mlynek}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{66}},
+  \bibinfo{pages}{2689} (\bibinfo{year}{1991}).
 
 \bibitem[{\citenamefont{Riehle \emph{et~al.}}(1991)\citenamefont{Riehle,
   Kisters, Witte, Helmcke, and Bord{\'e}}}]{Riehle:1991}

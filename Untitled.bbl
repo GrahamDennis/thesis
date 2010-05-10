@@ -1,4 +1,4 @@
-\begin{thebibliography}{234}
+\begin{thebibliography}{236}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -1854,6 +1854,32 @@
 \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Proukakis}},
   \bibinfo{journal}{Laser Phys.} \textbf{\bibinfo{volume}{13}},
   \bibinfo{pages}{527} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Dimopoulos
+  \emph{et~al.}}(2007)\citenamefont{Dimopoulos, Graham, Hogan, and
+  Kasevich}}]{Dimopoulos:2007uq}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dimopoulos}},
+  \bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Graham}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Hogan}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Kasevich}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{98}},
+  \bibinfo{pages}{111102} (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Leibfried \emph{et~al.}}(2004)\citenamefont{Leibfried,
+  Barrett, Schaetz, Britton, Chiaverini, Itano, Jost, Langer, and
+  Wineland}}]{Leibfried:2004}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Leibfried}},
+  \bibinfo{author}{\bibfnamefont{M.~D.} \bibnamefont{Barrett}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Schaetz}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Britton}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Chiaverini}},
+  \bibinfo{author}{\bibfnamefont{W.~M.} \bibnamefont{Itano}},
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Jost}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Langer}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Wineland}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{304}},
+  \bibinfo{pages}{1476} (\bibinfo{year}{2004}),
+  \eprint{http://www.sciencemag.org/cgi/reprint/304/5676/1476.pdf}.
 
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},

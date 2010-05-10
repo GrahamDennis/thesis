@@ -4,9 +4,9 @@
 
 \section{Evolution of the excitations}
 \label{FloquetAppendix:Evolution}
-The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before~\citep{Leonhardt:2003}.  In this section, restrictions on the Floquet exponents for the system under consideration in \sectionref{Peaks:PerturbativeApproach} are obtained from which the equations of motion for the instabilities may be solved.  This is achieved by applying the methods discussed in \citep{Leonhardt:2003} and consideration of the symmetries of the system Hamiltonian.  This Hamiltonian can be obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} about the time-dependent (but periodic) mean-field.
+The theory of elementary excitations in unstable Bose-Einstein Condensates has been considered before~\citep{Leonhardt:2003}.  In this section, restrictions on the Floquet exponents for the system under consideration in \sectionref{Peaks:PerturbativeApproach} are obtained, from which the equations of motion for the instabilities may be solved.  This is achieved by applying the methods discussed in \citep{Leonhardt:2003} and consideration of the symmetries of the system Hamiltonian.  This Hamiltonian can be obtained by making a perturbative expansion of the Hamiltonian \eqref{Peaks:InitialHamiltonian} about the time-dependent (but periodic) mean-field.
 
-Consider a general quadratic, spatially-homogeneous Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\vect{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\vect{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\vect{k}, t)$, $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\dagger}(-\vect{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\vect{k}, t)$. Consequently the terms $\hat{\phi}_j(-\vect{k}, t)$ and $\hat{\phi}_j^\dagger(\vect{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
+Consider a general quadratic, spatially-homogeneous Hamiltonian $\hat{H}(t)$ of period $T$ in terms of the operators $\hat{\phi}_i(\vect{x}, t)$ which obey the usual equal-time bosonic commutation relations. As the Hamiltonian $\hat{H}(t)$ is homogenous by assumption, the operator equations of motion will take their simplest form in a Fourier basis. In this basis the equations of motion for the operators $\hat{\phi}_i(\vect{k}, t)$ can be written in matrix form\footnote{Due to conservation of momentum, the Hamiltonian $\hat{H}(t)$ can only contain terms of the form $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(\vect{k}, t)$, $\hat{\phi}_i^\dagger(\vect{k}, t) \hat{\phi}_j^{\dagger}(-\vect{k}, t)$ and $\hat{\phi}_i^{\phantom{\dagger}}(\vect{k}, t) \hat{\phi}_j^{\phantom{\dagger}}(-\vect{k}, t)$. Consequently the terms $\hat{\phi}_j(-\vect{k}, t)$ and $\hat{\phi}_j^\dagger(\vect{k}, t)$ cannot occur on the RHS of \eqref{FloquetAppendix:UpsilonEquationOfMotion}.},
 \begin{subequations}
     \label{FloquetAppendix:MatrixOperatorEvolution}
     \begin{align}
@@ -35,12 +35,12 @@ If the Hamiltonian $\hat{H}(t)$ were not time-dependent, $\mathcal{H}(\vect{k}, 
 \end{align}
 where the $\hat{Q}_j(\vect{k}, t)$ need not obey boson commutation relations. The real parts of the eigenvalues of $\mathcal{H}(\vect{k}, t)$ would give the excitation spectrum of the Hamiltonian $\hat{H}(t)$ with non-zero imaginary components giving the growth rates of the corresponding unstable mode.
 
-In the case of a periodic matrix $\mathcal{H}(\vect{k}, t)$ it is instead the monodromy matrix $\mathcal{M}(\vect{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\vect{k})$ satisfies
+In the case of a periodic matrix $\mathcal{H}(\vect{k}, t)$, it is instead the monodromy matrix $\mathcal{M}(\vect{k})$ (see \sectionref{Peaks:FloquetsTheorem}) that we wish to diagonalise. The monodromy matrix $\mathcal{M}(\vect{k})$ satisfies
 \begin{align}
     \label{FloquetAppendix:MonodromyMatrix}
     \hat{\vect{\Upsilon}}(\vect{k}, nT) &= \mathcal{M}(\vect{k})^n \hat{\vect{\Upsilon}}(\vect{k}, 0),
 \end{align}
-where $n$ is a positive integer. In place of \eqref{FloquetAppendix:ContinouousTimeEigenoperators} we seek the operators $\hat{Q}_j(\vect{k}, t)$ that obey
+where $n$ is a positive integer. In place of \eqref{FloquetAppendix:ContinouousTimeEigenoperators}, we seek the operators $\hat{Q}_j(\vect{k}, t)$ that obey
 \begin{align}
     \label{FloquetAppendix:QOperatorEvolution}
     \hat{Q}_j(\vect{k}, T) &= \lambda_j(\vect{k}) \hat{Q}_j(\vect{k}, 0),
@@ -50,13 +50,13 @@ where the $\hat{Q}_j(\vect{k}, t)$ are defined by
     \label{FloquetAppendix:QOperatorDefinition}
     \hat{Q}_j(\vect{k}, t) &= \vect{c}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, t),
 \end{align}
-for some vectors $\vect{c}_j(\vect{k})$, where $\vect{c}_j^\dagger(\vect{k})$ denotes the conjugate transpose. 
+for some vectors $\vect{c}_j(\vect{k})$, where $\vect{c}_j^\dagger(\vect{k})$ denotes its conjugate transpose. 
 
 Using definitions \eqref{FloquetAppendix:MonodromyMatrix}--\eqref{FloquetAppendix:QOperatorDefinition}, it follows that the $\lambda_j(\vect{k})$ and $\vect{c}_j^\dagger(\vect{k})$ are respectively the eigenvalues and left eigenvectors of $\mathcal{M}(\vect{k})$,
 \begin{align}
-    \hat{Q}_j(\vect{k}, T) &= \vect{c}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, T) = \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0) \\
-    \hat{Q}_j(\vect{k}, T) &= \lambda_j(\vect{k}) \hat{Q}_j(\vect{k}, 0) = \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0)\\
-    \implies \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0) &= \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0) \label{FloquetAppendix:LeftEigenvectorWithOperator}\\
+    \hat{Q}_j(\vect{k}, T) &= \vect{c}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, T) = \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0), \\
+    \hat{Q}_j(\vect{k}, T) &= \lambda_j(\vect{k}) \hat{Q}_j(\vect{k}, 0) = \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0),\\
+    \implies \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) \hat{\vect{\Upsilon}}(\vect{k}, 0) &= \lambda_j(\vect{k}) \vect{c}_j^\dagger \hat{\vect{\Upsilon}}(\vect{k}, 0), \label{FloquetAppendix:LeftEigenvectorWithOperator}\\
     \implies \vect{c}_j^\dagger(\vect{k}) \mathcal{M}(\vect{k}) &= \lambda_j(\vect{k}) \vect{c}_j^\dagger(\vect{k}), \label{FloquetAppendix:LeftEigenvector}
 \end{align}
 where \eqref{FloquetAppendix:LeftEigenvector} follows from \eqref{FloquetAppendix:LeftEigenvectorWithOperator} as the components of $\hat{\vect{\Upsilon}}(\vect{k}, 0)$ are linearly independent operators.
@@ -64,7 +64,7 @@ where \eqref{FloquetAppendix:LeftEigenvector} follows from \eqref{FloquetAppendi
 The operators $\hat{Q}_j(\vect{k}, t)$ are not necessarily bosonic annihilation or creation operators. To determine the conditions under which they are, we consider their Hermitian conjugates $\hat{Q}_j^\dagger(\vect{k}, t)$. As every operator in $\hat{\vect{\Upsilon}}(-\vect{k}, t)$ is the Hermitian conjugate of an operator in $\hat{\vect{\Upsilon}}(\vect{k}, t)$, the $\hat{Q}_j^\dagger(\vect{k}, t)$ can be written as
 \begin{align}
     \label{FloquetAppendix:QDaggerDefinition}
-    \hat{Q}_j^\dagger(\vect{k}, t) &= \vect{d}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(-\vect{k}, t)
+    \hat{Q}_j^\dagger(\vect{k}, t) &= \vect{d}_j^\dagger(\vect{k}) \hat{\vect{\Upsilon}}(-\vect{k}, t),
 \end{align}
 for some vectors $\vect{d}_j(\vect{k})$. It follows from \eqref{FloquetAppendix:QOperatorEvolution} that the $\hat{Q}_j^\dagger(\vect{k}, t)$ will obey
 \begin{align}
@@ -72,17 +72,17 @@ for some vectors $\vect{d}_j(\vect{k})$. It follows from \eqref{FloquetAppendix:
     \hat{Q}_j^\dagger(\vect{k}, T) &= \lambda_j^*(\vect{k}) \hat{Q}_j^\dagger(\vect{k}, 0).
 \end{align}
 
-The commutators of the $\hat{Q}_j^{(\dagger)}(\vect{k}, t)$ will be constant as they are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\vect{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
+The commutators of the $\hat{Q}_j^{(\dagger)}(\vect{k}, t)$ will be constant as the $\hat{Q}_j^{(\dagger)}(\vect{k}, t)$ are constant linear combinations of the $\hat{\phi}^{(\dagger)}(\pm\vect{k}, t)$, the commutators of which are themselves constant. Using this requirement gives
 \begin{align}
-    \left[ \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, T),\, \hat{Q}_j^\dagger(\vect{k}, T) \right] &= \left[ \lambda_i(\vect{k}) \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, 0),\, \lambda_j^*(\vect{k}) \hat{Q}_j^\dagger(\vect{k}, 0)\right]\\
+    \left[ \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, T),\, \hat{Q}_j^\dagger(\vect{k}, T) \right] &= \left[ \lambda_i(\vect{k}) \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, 0),\, \lambda_j^*(\vect{k}) \hat{Q}_j^\dagger(\vect{k}, 0)\right]\notag\\
         &= \lambda_i(\vect{k}) \lambda_j^*(\vect{k}) \left[ \hat{Q}_i^{\phantom{\dagger}}(\vect{k}, 0),\, \hat{Q}_j^\dagger(\vect{k}, 0)\right].
         \label{FloquetAppendix:InvariantCommutator}
 \end{align}
 For \eqref{FloquetAppendix:InvariantCommutator} to be true either $\lambda_i(\vect{k}) \lambda_j^*(\vect{k}) = 1$ or the two operators commute. Specifically, for $\hat{Q}_i(\vect{k}, t)$ to be an annihilation or creation operator it is required that ${\lambda_i^*(\vect{k})}^{-1} = \lambda_i(\vect{k})$. In terms of the Floquet exponents (see \sectionref{Peaks:FloquetsTheorem}) $\displaystyle \xi_i(\vect{k}) = \frac{i}{T} \ln \lambda_i(\vect{k})$, this requirement becomes $\xi_i(\vect{k}) = \omega_i(\vect{k})$. Hence it is only for purely real Floquet exponents that the eigenvalues of $\mathcal{M}(\vect{k})$ correspond to bosonic annihilation or creation operators. Note that in the degenerate case in which $\mathcal{H}(\vect{k}, t)$ is time-independent, the Floquet exponents $\xi(\vect{k})$ are equal to the eigenvalues $\Omega(\vect{k})$ of $\mathcal{H}(\vect{k}, t)$. Hence the real components of the Floquet exponents are related to the excitation spectrum and non-zero imaginary components are related to the existence of instabilities.
 
-Generally the Floquet exponents $\xi_i$ may have a non-zero imaginary component. In this case the $\hat{Q}_i(\vect{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\vect{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\vect{k})$.
+Generally, the Floquet exponents $\xi_i$ may have a non-zero imaginary component. In this case, the $\hat{Q}_i(\vect{k}, t)$ will not be bosonic annihilation or creation operators, although such operators can be constructed from linear combinations of the $\hat{Q}_i(\pm\vect{k}, t)$. Before constructing such operators, we first consider the restrictions on the possible eigenvalues of $\mathcal{M}(\vect{k})$.
 
-First it is noted that if $\lambda_i(\vect{k})$ is an eigenvalue of $\mathcal{M}(\vect{k})$, then from \eqref{FloquetAppendix:QDaggerDefinition}--\eqref{FloquetAppendix:QDaggerEvolution} $\lambda_i^*(\vect{k})$ must be an eigenvalue of $\mathcal{M}(-\vect{k})$. However, from the reflection symmetry of $\mathcal{H}(\vect{k})$ defined by \eqref{FloquetAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\vect{k}) = \mathcal{M}(\vect{k})$ and hence $\lambda_i^*(\vect{k})$ must also be an eigenvalue of $\mathcal{M}(\vect{k})$.
+First, it is noted that if $\lambda_i(\vect{k})$ is an eigenvalue of $\mathcal{M}(\vect{k})$, then from \eqref{FloquetAppendix:QDaggerDefinition} and \eqref{FloquetAppendix:QDaggerEvolution}, $\lambda_i^*(\vect{k})$ must be an eigenvalue of $\mathcal{M}(-\vect{k})$. However, from the reflection symmetry of $\mathcal{H}(\vect{k})$ defined by \eqref{FloquetAppendix:HReflectionSymmetry} we have that $\mathcal{M}(-\vect{k}) = \mathcal{M}(\vect{k})$ and hence $\lambda_i^*(\vect{k})$ must also be an eigenvalue of $\mathcal{M}(\vect{k})$.
 
 Secondly, not all of the operators $\hat{Q}_i^{(\dagger)}(\vect{k}, t)$ can commute. As the $\hat{Q}_i^{(\dagger)}(\vect{k}, t)$ form a complete basis over the same space as the $\hat{\phi}_i^{(\dagger)}(\vect{k}, t)$ which themselves do not all commute, for every operator $\hat{Q}_i(\vect{k}, t)$ there must be at least one other operator with which it does not commute. From \eqref{FloquetAppendix:InvariantCommutator} then follows the requirement that if $\lambda_i(\vect{k})$ is an eigenvalue,   ${\lambda_i^*(\vect{k})}^{-1}$ must also be an eigenvalue.
 
@@ -90,11 +90,11 @@ Combining these two requirements gives a consistency condition for the eigenvalu
 
 For the degenerate case in which all of $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are equal, the eigenvalue $\lambda = \pm 1$. The corresponding Floquet exponent is $\xi = 0$ or $\xi = \pi\nu_0$ where $\displaystyle \nu_0 = T^{-1}$. This is not an interesting case and does not occur in \figureref{Peaks:CondensateEigenvalues}.
 
-There are two ways that two distinct eigenvalues can be used to satisfy the consistency condition for the eigenvalues. The first possibility is that $\lambda = {\lambda^*}^{-1}$ (with $\lambda^*$ being the second eigenvalue). In this case the Floquet exponents are $\xi = \pm \omega$. In this case, the operators corresponding to the eigenvalues are bosonic annihilation or creation operators as shown above. The second possibility is that $\lambda = \lambda^*$ (with $\lambda^{-1}$ being the second eigenvalue). In this case the Floquet exponents are $\xi = \pm i\gamma$ or $\xi = \pi \nu_0 \pm i\gamma$. This situation is seen in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[1.5 \times 10^6]{m}^{-1}$ and $k \approx \unit[2.25 \times 10^6]{m}^{-1}$.
+There are two ways that two distinct eigenvalues can be used to satisfy the consistency condition for the eigenvalues. The first possibility is that $\lambda = {\lambda^*}^{-1}$ (with $\lambda^*$ being the second eigenvalue). In this case, the Floquet exponents are $\xi = \pm \omega$. In this case, the operators corresponding to the eigenvalues are bosonic annihilation or creation operators as shown above. The second possibility is that $\lambda = \lambda^*$ (with $\lambda^{-1}$ being the second eigenvalue). In this case the Floquet exponents are $\xi = \pm i\gamma$ or $\xi = \pi \nu_0 \pm i\gamma$. This situation is seen in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[1.5 \times 10^6]{m}^{-1}$ and $k \approx \unit[2.25 \times 10^6]{m}^{-1}$.
 
 The final possibility is that four distinct eigenvalues are used to satisfy the consistency condition. In this case the four eigenvalues $\lambda$, $\lambda^*$, $\lambda^{-1}$, and ${\lambda^*}^{-1}$ are different and the corresponding Floquet exponents are $\xi = \omega \pm i\gamma$ and $\xi' = -\omega \pm i\gamma$. It is this situation that occurs in \figureref{Peaks:CondensateEigenvalues} around $k \approx \unit[0.75 \times 10^6]{m}^{-1}$.
 
-In summary, the Floquet exponents with nonzero real parts come in pairs $\xi(\vect{k}) = \omega(\vect{k}) \pm i\gamma(\vect{k})$. From the operators corresponding to these pairs of exponents bosonic annihilation and creation operators can be constructed.
+In summary, the Floquet exponents with nonzero real parts come in pairs $\xi(\vect{k}) = \omega(\vect{k}) \pm i\gamma(\vect{k})$. From the operators corresponding to these pairs of exponents, bosonic annihilation and creation operators can be constructed.
 
 Consider the eigenvalues $\displaystyle \lambda = e^{r + i \phi}$ and $\displaystyle \lambda' = e^{-r + i\phi}$, and the corresponding operators $\hat{Q}(\vect{k}, t)$ and $\hat{Q}'(\vect{k}, t)$. From these operators we define the following two operators which will respectively be shown to be bosonic annihilation and creation operators,
 \begin{align}

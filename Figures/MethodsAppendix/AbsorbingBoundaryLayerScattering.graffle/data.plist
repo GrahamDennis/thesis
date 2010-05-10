@@ -7,7 +7,7 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGrafflePro</string>
-		<string>137.11.0.108132</string>
+		<string>138.14.0.129428</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
@@ -401,7 +401,7 @@
 				<key>stroke</key>
 				<dict>
 					<key>HeadArrow</key>
-					<string>0</string>
+					<string>NegativeControls</string>
 					<key>TailArrow</key>
 					<string>FilledArrow</string>
 					<key>Width</key>
@@ -5864,7 +5864,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2009-06-10 11:08:49 +1000</string>
+	<string>2010-05-10 14:46:58 +1000</string>
 	<key>Modifier</key>
 	<string>Graham Dennis</string>
 	<key>NotesVisible</key>

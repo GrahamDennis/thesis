@@ -1,0 +1,14 @@
+Things to do before printing:
+
+Get a list of pages needing colour printing.
+
+Things to check before printing:
+
+View the PDF on their screen to check that it is displayed correctly.  They may need to 'print as image' for it to print correctly. Tell them this when getting it printed.
+
+Things to check when printed:
+
+Figure labels are printed correctly.
+
+Pages are correctly ordered, and none missing.  Colour pages will have been printed separately.
+

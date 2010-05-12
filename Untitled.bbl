@@ -1,4 +1,4 @@
-\begin{thebibliography}{238}
+\begin{thebibliography}{243}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -1896,6 +1896,59 @@
   \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{304}},
   \bibinfo{pages}{1476} (\bibinfo{year}{2004}),
   \eprint{http://www.sciencemag.org/cgi/reprint/304/5676/1476.pdf}.
+
+\bibitem[{\citenamefont{Mandonnet \emph{et~al.}}(2000)\citenamefont{Mandonnet,
+  Minguzzi, Dum, Carusotto, Castin, and Dalibard}}]{Mandonnet:2000lr}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Mandonnet}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Minguzzi}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Dum}},
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Carusotto}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}},
+  \bibinfo{journal}{Eur. Phys. J. D} \textbf{\bibinfo{volume}{10}},
+  \bibinfo{pages}{9} (\bibinfo{year}{2000}).
+
+\bibitem[{\citenamefont{Roos
+  \emph{et~al.}}(2003{\natexlab{a}})\citenamefont{Roos, Cren, Gu{\'e}ry-Odelin,
+  and Dalibard}}]{Roos:2003vn}
+\bibinfo{author}{\bibfnamefont{C.~F.} \bibnamefont{Roos}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Cren}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}},
+  \bibinfo{journal}{Europhys. Lett.} \textbf{\bibinfo{volume}{61}},
+  \bibinfo{pages}{187} (\bibinfo{year}{2003}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Roos
+  \emph{et~al.}}(2003{\natexlab{b}})\citenamefont{Roos, Cren, Lahaye, Dalibard,
+  and Gu{\'e}ry-Odelin}}]{Roos:2003}
+\bibinfo{author}{\bibfnamefont{C.~F.} \bibnamefont{Roos}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Cren}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Lahaye}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibinfo{journal}{Laser Phys.} \textbf{\bibinfo{volume}{13}},
+  \bibinfo{pages}{605} (\bibinfo{year}{2003}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Vogels \emph{et~al.}}(2004)\citenamefont{Vogels,
+  Lahaye, Roos, Dalibard, and Gu{\'e}ry-Odelin}}]{Vogels:2004}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Vogels}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Lahaye}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Roos}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Gu{\'e}ry-Odelin}},
+  \bibinfo{journal}{J. Phys. IV France} \textbf{\bibinfo{volume}{116}},
+  \bibinfo{pages}{259} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Lahaye \emph{et~al.}}(2005)\citenamefont{Lahaye, Wang,
+  Reinaudi, Rath, Dalibard, and Guery-Odelin}}]{Lahaye:2005uq}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Lahaye}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Wang}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Reinaudi}},
+  \bibinfo{author}{\bibfnamefont{S.~P.} \bibnamefont{Rath}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Guery-Odelin}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{033411} (\bibinfo{year}{2005}).
 
 \bibitem[{\citenamefont{Jack}(2002)}]{Jack:2002}
 \bibinfo{author}{\bibfnamefont{M.~W.} \bibnamefont{Jack}},

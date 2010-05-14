@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>KineticTheory.tex</string>
+	<string>Untitled.tex</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,31 +16,39 @@
 			<key>filename</key>
 			<string>Untitled.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-05T02:20:35Z</date>
+			<date>2010-05-14T04:38:12Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Acknowledgements.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-14T04:38:08Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Abstract.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-14T04:38:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Introduction.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-07T04:41:05Z</date>
+			<date>2010-05-14T04:37:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>BackgroundTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-07T04:41:21Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>TransverseProfile.tex</string>
-			<key>lastUsed</key>
-			<date>2010-03-23T02:47:36Z</date>
+			<date>2010-05-11T04:32:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Peaks.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-07T01:55:05Z</date>
+			<date>2010-05-13T05:48:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -52,200 +60,173 @@
 			<key>filename</key>
 			<string>KineticTheory.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-07T04:47:49Z</date>
-			<key>selected</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>FloquetAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-02-23T03:34:32Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>PenningIonisationAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-04-19T03:32:08Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>MethodsAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-04-30T04:34:35Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>ToolsAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-07T04:47:49Z</date>
+			<date>2010-05-13T12:19:50Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Conclusion.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-07T04:05:36Z</date>
+			<date>2010-05-14T04:25:40Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>FloquetAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T04:16:24Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>PenningIonisationAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T04:33:42Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>MethodsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T05:16:47Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ToolsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T05:40:33Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>StuffToCheck.txt</string>
+			<key>lastUsed</key>
+			<date>2010-05-14T04:37:43Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>215</integer>
 	<key>metaData</key>
 	<dict>
-		<key>BackgroundTheory.tex</key>
+		<key>Abstract.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>245</integer>
+				<integer>1</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>251</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>229</integer>
+			<integer>0</integer>
+		</dict>
+		<key>Acknowledgements.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>Conclusion.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>1966</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>240</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>8</integer>
 		</dict>
 		<key>Introduction.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>294</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>147</integer>
+				<integer>39</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>0</integer>
+			<integer>123</integer>
 			<key>firstVisibleLine</key>
-			<integer>140</integer>
+			<integer>25</integer>
 		</dict>
 		<key>KineticTheory.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>263</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>250</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>256</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>263</integer>
 			</dict>
 		</dict>
-		<key>OpticalPumping.tex</key>
+		<key>StuffToCheck.txt</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1102</integer>
+				<integer>44</integer>
 				<key>line</key>
-				<integer>52</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>47</integer>
-		</dict>
-		<key>Peaks.tex</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
 				<integer>2</integer>
-				<key>line</key>
-				<integer>654</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>639</integer>
-		</dict>
-		<key>ToolsAppendix.tex</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>29</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>450</integer>
-			<key>firstVisibleLine</key>
-			<integer>20</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>29</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>29</integer>
-			</dict>
+			<integer>0</integer>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>51</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>150</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>117</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
+		<string>Acknowledgements.tex</string>
+		<string>Abstract.tex</string>
 		<string>Introduction.tex</string>
-		<string>Conclusion.tex</string>
-		<string>OpticalPumping.tex</string>
-		<string>BackgroundTheory.tex</string>
 		<string>KineticTheory.tex</string>
-		<string>Peaks.tex</string>
-		<string>ToolsAppendix.tex</string>
+		<string>Conclusion.tex</string>
+		<string>StuffToCheck.txt</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -261,6 +242,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{385, 170}, {971, 832}}</string>
+	<string>{{428, 13}, {969, 902}}</string>
 </dict>
 </plist>

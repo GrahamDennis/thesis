@@ -41,9 +41,6 @@
 %\usepackage{setspace} % Useful for doublespacing for drafts
 \usepackage{relsize}
 
-%\usepackage{memhfixc}  % remove conflict between the memoir class & hyperref
-% \usepackage[activate]{pdfcprot}  % Turn on margin kerning (not in gwTeX)
-
 
 %%% PACKAGES
 \usepackage{booktabs} % for much better looking tables
@@ -55,8 +52,7 @@
 
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}
-\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
-% (This matches ConTeXt defaults)
+\allsectionsfont{\fontfamily{dop}\sffamily\selectfont}
 
 %%% ToC APPEARANCE
 \usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
@@ -143,15 +139,15 @@
   {\cleardoublepage \thispagestyle{empty} \vspace*{\stretch{1}} \begin{flushright} \em}
   {\end{flushright} \vspace*{\stretch{3}} \clearpage}
 \begin{dedication}
-In memory of those we have lost these past few months: Nikki, Elva \& Scotchie.
+In memory of those we have lost these past few months:\\ Nikki, Elva \& Scotchie.
 \end{dedication}
 
 
 \chapter*{Declaration}
 %\addcontentsline{toc}{chapter}{Declaration}
 
-%This thesis is an account of research undertaken under the supervision of Dr.\ Matthew Hole between February 2005 and November 2005 at The Department of Theoretical Physics, Research School of Physical Sciences and Engineering, The Australian National University, Canberra, Australia.
-
+% This thesis is an account of research undertaken under the supervision of Dr.\ Joseph Hope between February 2006 and May 2010 at The Department of Quantum Science, Research School of Physical Sciences and Engineering, The Australian National University, Canberra, Australia.
+% 
 Except where acknowledged in the customary manner, the material 
 presented in this thesis is, to the best of my knowledge, original and 
 has not been submitted in whole or part for a degree in any 
@@ -168,7 +164,7 @@ university.
 % They are not necessary, but are useful for organising your work.
 % They always start a  new page.
 
-\include{Acknowledgements}
+% \include{Acknowledgements}
 
 \include{Abstract}
 
@@ -183,8 +179,6 @@ university.
 \include{Introduction}
 
 \include{BackgroundTheory}
-
-%\include{TransverseProfile}
 
 \include{Peaks}
 

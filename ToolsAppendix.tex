@@ -24,12 +24,6 @@ I felt that by designing and implementing a successor to \XMDS, I could not only
 
 \section{\xpdeint}
 
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=10cm]{xpdeintWorkflow}
-%     \caption{FIXME: This is not a caption.\label{ToolsAppendix:xpdeintWorkflow}}
-% \end{figure}
-
 As discussed in the previous section, the class of problem that can be solved with \xpdeint\ (and \XMDS) is that of systems of initial-value (stochastic) partial differential equations.  To solve such problems numerically, they must be restricted to a finite domain with boundary conditions imposed at the edges.  \xpdeint\ discretises this problem by applying the pseudo-spectral method \citep{SpectralMethods}: the solution is decomposed as a weighted sum of a finite set of basis functions,
 \begin{align}
     f(x) &= \sum_{n=1}^{N} c_n g_n(x),

@@ -1,4 +1,4 @@
-\begin{thebibliography}{248}
+\begin{thebibliography}{249}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -1268,6 +1268,12 @@
   \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}}, \bibinfo{journal}{J.
   Chem. Phys.} \textbf{\bibinfo{volume}{90}}, \bibinfo{pages}{4351}
   (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Dennis and Johnsson}(2010)}]{Dennis:2010}
+\bibinfo{author}{\bibfnamefont{G.~R.} \bibnamefont{Dennis}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~T.} \bibnamefont{Johnsson}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{82}},
+  \bibinfo{pages}{033615} (\bibinfo{year}{2010}).
 
 \bibitem[{\citenamefont{Dall \emph{et~al.}}(2009)\citenamefont{Dall, Byron,
   Truscott, Dennis, Johnsson, and Hope}}]{Dall:2009}

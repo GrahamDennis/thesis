@@ -10,93 +10,93 @@
 			<key>filename</key>
 			<string>anuthesis.sty</string>
 			<key>lastUsed</key>
-			<date>2010-02-02T00:09:42Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Untitled.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-14T04:38:12Z</date>
-			<key>selected</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Acknowledgements.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-14T04:38:08Z</date>
+			<date>2010-10-28T00:57:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Abstract.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-14T04:38:12Z</date>
+			<date>2010-10-28T00:54:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>Introduction.tex</string>
+			<string>Acknowledgements.tex</string>
 			<key>lastUsed</key>
-			<date>2010-05-14T04:37:45Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>BackgroundTheory.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-11T04:32:39Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Peaks.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-13T05:48:20Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>OpticalPumping.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-07T04:47:40Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>KineticTheory.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-13T12:19:50Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>Conclusion.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-14T04:25:40Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>FloquetAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-10T04:16:24Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>PenningIonisationAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-10T04:33:42Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>MethodsAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-10T05:16:47Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>ToolsAppendix.tex</string>
-			<key>lastUsed</key>
-			<date>2010-05-10T05:40:33Z</date>
+			<date>2010-10-28T00:48:51Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>StuffToCheck.txt</string>
 			<key>lastUsed</key>
-			<date>2010-05-14T04:37:43Z</date>
+			<date>2010-10-28T00:49:00Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Untitled.tex</string>
+			<key>lastUsed</key>
+			<date>2010-10-28T00:57:14Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Introduction.tex</string>
+			<key>lastUsed</key>
+			<date>2010-10-28T00:50:41Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>BackgroundTheory.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-09T08:12:45Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Peaks.tex</string>
+			<key>lastUsed</key>
+			<date>2010-10-28T00:54:12Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>OpticalPumping.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-09T13:47:24Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>KineticTheory.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T00:36:44Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>FloquetAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-02-23T03:34:32Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>PenningIonisationAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-04-19T03:32:08Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>MethodsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-04-30T04:34:35Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>ToolsAppendix.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-07T04:47:49Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>Conclusion.tex</string>
+			<key>lastUsed</key>
+			<date>2010-05-10T13:42:20Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -108,9 +108,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>1439</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>9</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -122,111 +122,170 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>BackgroundTheory.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>424</integer>
+				<key>line</key>
+				<integer>311</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>325</integer>
+			<key>firstVisibleLine</key>
+			<integer>302</integer>
 		</dict>
 		<key>Conclusion.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1966</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>240</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>8</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Introduction.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>195</integer>
 				<key>line</key>
-				<integer>39</integer>
+				<integer>199</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>123</integer>
+			<integer>364</integer>
 			<key>firstVisibleLine</key>
-			<integer>25</integer>
+			<integer>179</integer>
 		</dict>
 		<key>KineticTheory.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>174</integer>
 				<key>line</key>
-				<integer>263</integer>
+				<integer>244</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>250</integer>
-			<key>selectFrom</key>
+			<integer>231</integer>
+		</dict>
+		<key>OpticalPumping.tex</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>397</integer>
 				<key>line</key>
-				<integer>256</integer>
+				<integer>1036</integer>
 			</dict>
-			<key>selectTo</key>
+			<key>firstVisibleColumn</key>
+			<integer>1505</integer>
+			<key>firstVisibleLine</key>
+			<integer>1025</integer>
+		</dict>
+		<key>Peaks.tex</key>
+		<dict>
+			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>130</integer>
 				<key>line</key>
-				<integer>263</integer>
+				<integer>6</integer>
 			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>StuffToCheck.txt</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>44</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>ToolsAppendix.tex</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>11</integer>
+				<key>line</key>
+				<integer>29</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>450</integer>
+			<key>firstVisibleLine</key>
+			<integer>20</integer>
 		</dict>
 		<key>Untitled.tex</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>22</integer>
 				<key>line</key>
-				<integer>150</integer>
+				<integer>159</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>117</integer>
+			<integer>132</integer>
+		</dict>
+		<key>anuthesis.sty</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>87</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>61</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>Untitled.tex</string>
-		<string>Acknowledgements.tex</string>
+		<string>anuthesis.sty</string>
 		<string>Abstract.tex</string>
-		<string>Introduction.tex</string>
-		<string>KineticTheory.tex</string>
-		<string>Conclusion.tex</string>
+		<string>Acknowledgements.tex</string>
 		<string>StuffToCheck.txt</string>
+		<string>Introduction.tex</string>
+		<string>Conclusion.tex</string>
+		<string>OpticalPumping.tex</string>
+		<string>BackgroundTheory.tex</string>
+		<string>KineticTheory.tex</string>
+		<string>Peaks.tex</string>
+		<string>ToolsAppendix.tex</string>
 	</array>
 	<key>shellVariables</key>
 	<array>
@@ -242,6 +301,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{428, 13}, {969, 902}}</string>
+	<string>{{401, 165}, {971, 832}}</string>
 </dict>
 </plist>

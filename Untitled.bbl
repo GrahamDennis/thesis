@@ -526,7 +526,7 @@
   \bibinfo{pages}{043615} (\bibinfo{year}{2002}).
 
 \bibitem[{\citenamefont{K{\"o}hl \emph{et~al.}}(2005)\citenamefont{K{\"o}hl,
-  Busch, Molmer, H{\"a}nsch, and Esslinger}}]{Kohl:2005fk}
+  Busch, Molmer, H{\"a}nsch, and Esslinger}}]{Kohl:2005}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K{\"o}hl}},
   \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Busch}},
   \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Molmer}},
@@ -870,7 +870,7 @@
   \bibinfo{journal}{Found. Phys.} \textbf{\bibinfo{volume}{21}},
   \bibinfo{pages}{353} (\bibinfo{year}{1991}).
 
-\bibitem[{\citenamefont{M{\o}lmer}(1997)}]{Molmer:1997fr}
+\bibitem[{\citenamefont{M{\o}lmer}(1997)}]{Molmer:1997}
 \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{M{\o}lmer}},
   \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{55}},
   \bibinfo{pages}{3195} (\bibinfo{year}{1997}).
@@ -1254,8 +1254,7 @@
 \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Collecutt}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{P.~D.} \bibnamefont{Drummond}},
   \bibinfo{journal}{Computer Physics Communications}
-  \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}),
-  \bibinfo{note}{see also \url{www.xmds.org}}.
+  \textbf{\bibinfo{volume}{142}}, \bibinfo{pages}{219} (\bibinfo{year}{2001}).
 
 \bibitem[{\citenamefont{Kosloff and Kosloff}(1986)}]{Kosloff:1986}
 \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kosloff}} \bibnamefont{and}
@@ -1583,8 +1582,8 @@
   \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{40}},
   \bibinfo{pages}{F77} (\bibinfo{year}{2007}).
 
-\bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1996)\citenamefont{Olshanii,
-  Castin, and Dalibard}}]{Olshanii:1996}
+\bibitem[{\citenamefont{Olshanii \emph{et~al.}}(1995)\citenamefont{Olshanii,
+  Castin, and Dalibard}}]{Olshanii:1995}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Olshanii}},
   \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Castin}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dalibard}}, in
@@ -1594,7 +1593,7 @@
   \bibinfo{editor}{\bibfnamefont{M.}~\bibnamefont{Allegrini}},
   \bibnamefont{and} \bibinfo{editor}{\bibfnamefont{A.}~\bibnamefont{Lasso}}
   (\bibinfo{organization}{World Scientific}, \bibinfo{address}{Singapore},
-  \bibinfo{year}{1996}).
+  \bibinfo{year}{1995}).
 
 \bibitem[{\citenamefont{Janicke and Wilkens}(1996)}]{Janicke:1996}
 \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Janicke}} \bibnamefont{and}
@@ -1717,7 +1716,7 @@
   \bibinfo{pages}{6741} (\bibinfo{year}{1989}).
 
 \bibitem[{\citenamefont{Dugu{\'e} \emph{et~al.}}(2007)\citenamefont{Dugu{\'e},
-  Robins, Figl, Jeppesen, Summers, Johnsson, Hope, and Close}}]{Dugue:2007fk}
+  Robins, Figl, Jeppesen, Summers, Johnsson, Hope, and Close}}]{Dugue:2007a}
 \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Dugu{\'e}}},
   \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Robins}},
   \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Figl}},
@@ -2136,7 +2135,7 @@
   \emph{\bibinfo{title}{{Cheetah --- The Python-Powered Template Engine}}},
   \urlprefix\url{www.cheetahtemplate.org}.
 
-\bibitem[{\citenamefont{Frigo and Johnson}(2005)}]{Frigo:2005}
+\bibitem[{\citenamefont{Frigo and Johnson}(2005)}]{FFTW3}
 \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Frigo}} \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{S.~G.} \bibnamefont{Johnson}},
   \bibinfo{journal}{Proceedings of the IEEE} \textbf{\bibinfo{volume}{93}},

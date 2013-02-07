@@ -1,0 +1,146 @@
+%%
+%% This is file `typedref.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% typedref.dtx  (with options: `package')
+%% 
+%%    Package `typedref' for use with LaTeX2e
+%%    Copyright (C) 2001 Gregory Seidman (email `gseidman@acm.org').
+%%    All rights reserved.  You may not alter the contents of this file unless
+%%    you also change its name. Please make a bona fide attempt to submit
+%%    patches to me before changing the name of this file.
+%% 
+%%    Modified from package `saferef'
+%%    Copyright (C) 1997 James Ashton (email `James.Ashton@anu.edu.au').
+%%    All rights reserved.  You may not alter the contents of this file unless
+%%    you also change its name.
+%% 
+%%    Modifications include proper handling of appendices which are not
+%%    chapters (i.e. in a document class other than book) and compatibility
+%%    with hyperref.
+%% 
+\def\fileversion{1.0}
+\def\filedate{2001/9/10}
+\def\docdate{2001/9/10}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{typedref}[\filedate\space\fileversion\space A Safer Cross-referencing package]
+\typeout{Package `typedref' \fileversion\space<\filedate>}
+\AtBeginDocument{%
+  \let\sr@eqnarray=\eqnarray%
+  \def\eqnarray{\def\sr@name{\sr@eq}\sr@eqnarray}%
+  \let\sr@label=\label%
+  \def\label#1{\sr@label{\sr@name:#1}}%
+  \let\ltx@label=\label%
+  \let\sr@ref=\ref%
+  \def\ref{\@latex@error{\string\ref\space disallowed with the saferefa package.}}%
+}
+\@ifpackageloaded{hyperref}{%
+  \let\sr@refstepcounter=\H@refstepcounter%
+  \def\H@refstepcounter#1{%
+    \csname sr@nm@#1\endcsname%
+    \sr@refstepcounter{#1}}%
+}{%
+  \let\sr@refstepcounter=\refstepcounter%
+  \def\refstepcounter#1{%
+    \csname sr@nm@#1\endcsname%
+    \sr@refstepcounter{#1}}%
+}
+\def\sr@refs<#1,#2>#3#4#5{%
+  \ifx\relax#2\relax
+    #4~\sr@ref{#3:#1}%
+  \else%
+    #5 \sr@ref{#3:#1}%
+    \sr@rest<#2>{#3}%
+  \fi%
+}
+\def\sr@rest<#1,#2>#3{%
+  \ifx\relax#2\relax
+    \ and~\sr@ref{#3:#1}%
+  \else%
+    , \sr@ref{#3:#1}%
+    \sr@rest<#2>{#3}%
+  \fi%
+}
+\ifx\eqref\@undefined
+  \def\eqref#1{\textup{\hbox{\m@th\normalfont(\ignorespaces\ref{#1}\unskip\@@italiccorr)}}}
+\fi
+\let\sr@eqref=\eqref
+\def\eqref#1{{\let\ref=\sr@ref\sr@eqref{equation:#1}}}
+\def\refname#1#2#3{%
+  \expandafter\def\csname#1ref\endcsname##1{\sr@refs<##1,>{#1}{#2}{#3}}}
+\def\sr@refname#1#2#3{%
+  \expandafter\def\csname sr@nm@#1\endcsname{\xdef\sr@name{#1}}%
+  \refname{#1}{#2}{#3}}
+\sr@refname{appendix}{Appendix}{Appendices}
+\sr@refname{chapter}{Chapter}{Chapters}
+\sr@refname{figure}{Figure}{Figures}
+\sr@refname{footnote}{Footnote}{Footnotes}
+\sr@refname{item}{Item}{Items}
+\sr@refname{paragraph}{Paragraph}{Paragraphs}
+\sr@refname{part}{Part}{Parts}
+\sr@refname{section}{Section}{Sections}
+\sr@refname{table}{Table}{Tables}
+\sr@refname{equation}{Equation}{Equations}
+\def\sr@nm@subsection{\xdef\sr@name{section}}
+\def\sr@nm@subsubsection{\xdef\sr@name{section}}
+\def\sr@nm@subparagraph{\xdef\sr@name{paragraph}}
+\def\sr@nm@mpfootnote{\xdef\sr@name{footnote}}
+\let\sr@appendix=\appendix
+\@ifundefined{chapter}{
+\def\appendix{\sr@appendix\def\sr@nm@section{\xdef\sr@name{appendix}}}
+}{
+\def\appendix{\sr@appendix\def\sr@nm@chapter{\xdef\sr@name{appendix}}}
+}
+\def\sr@nm@enumi{\xdef\sr@name{\sr@item}}
+\def\sr@nm@enumii{\xdef\sr@name{\sr@item}}
+\def\sr@nm@enumiii{\xdef\sr@name{\sr@item}}
+\def\sr@nm@enumiv{\xdef\sr@name{\sr@item}}
+\def\itemname#1{\def\sr@item{#1}}
+\itemname{item}
+\def\eqname#1{\def\sr@eq{#1}}
+\eqname{equation}
+\let\sr@newtheorem=\newtheorem
+\def\newtheorem{\@ifstar{\sr@xnthm*}{\sr@xnthm\relax}}
+\def\sr@oparg#1[#2]{\@ifnextchar[{#1}{#1[#2]}}
+\def\sr@unthm#1#2{\sr@newtheorem*{#1}{#2}}
+\def\sr@xnthm#1#2{%
+  \let\sr@t\relax
+  \ifx *#1% Handle the amsthm starred form of \newtheorem
+    \def\sr@t{\sr@unthm{#2}}%
+  \else
+    \def\sr@t{\sr@oparg{\sr@ynthm{#2}}[]}%
+  \fi
+  \sr@t
+}
+\def\sr@ynthm#1[#2]#3#4{%
+  \ifx\relax#2\relax
+    \def\sr@t{\sr@oparg{\sr@xthm{#1}{#3}{#4}}[]}%
+    \expandafter\def\csname sr@nm@#1\endcsname{\xdef\sr@name{#1}}
+  \else
+    \let\sr@t=\relax
+    \sr@newtheorem{#1}[#2]{#3}
+    \refname{#1}{#3}{#4}
+    \expandafter\let\expandafter\sr@th\csname #1\endcsname
+    \expandafter\let\csname sr@th@#1\endcsname\sr@th
+    \let\sr@th\relax
+    \expandafter\def\csname #1\endcsname{
+      \expandafter\def\csname sr@nm@#2\endcsname{\xdef\sr@name{#1}}
+      \csname sr@th@#1\endcsname
+    }
+  \fi
+  \sr@t
+}
+\def\sr@xthm#1#2#3[#4]{
+  \ifx\relax#4\relax
+    \sr@newtheorem{#1}{#2}
+    \refname{#1}{#2}{#3}
+  \else
+    \sr@newtheorem{#1}{#2}[#4]
+    \refname{#1}{#2}{#3}
+  \fi
+}
+\endinput
+%%
+%% End of file `typedref.sty'.
